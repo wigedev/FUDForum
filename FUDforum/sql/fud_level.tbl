@@ -1,0 +1,25 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_level.tbl 5004 2010-09-24 07:14:36Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}level;
+
+CREATE TABLE {SQL_TABLE_PREFIX}level
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name		VARCHAR(255) NOT NULL DEFAULT '',
+	post_count	INT NOT NULL DEFAULT 0,
+	img		VARCHAR(255),
+	level_opt	INT NOT NULL DEFAULT 0
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}level_i_p ON {SQL_TABLE_PREFIX}level (post_count);
+
+# 0 = pri B (display both the user's avatar and rank images)
+# 1 = pri A (give priority to the user's avatar)
+# 2 = pri L (give priority to the rank image) 

@@ -1,0 +1,29 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_jobs.tbl 5336 2011-08-04 19:42:34Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}jobs;
+
+CREATE TABLE {SQL_TABLE_PREFIX}jobs
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name		VARCHAR(32) NOT NULL,
+	start_minute	VARCHAR(64) NOT NULL DEFAULT '*',
+	start_hour	VARCHAR(64) NOT NULL DEFAULT '*',
+	start_dom	VARCHAR(64) NOT NULL DEFAULT '*',
+	start_month	VARCHAR(64) NOT NULL DEFAULT '*',
+	start_dow	VARCHAR(64) NOT NULL DEFAULT '*',
+	cmd		VARCHAR(128) NOT NULL,
+	nextrun		BIGINT NOT NULL DEFAULT 0,
+	lastrun		BIGINT NOT NULL DEFAULT 0,
+	locked		BIGINT NOT NULL DEFAULT 0,
+	job_opt		INT NOT NULL DEFAULT 0
+);
+
+# Opts
+# 1 = Disabled

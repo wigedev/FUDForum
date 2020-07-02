@@ -1,0 +1,244 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: uc.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: uc.php.t; output: uc.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_select_opt.tmpl}
+{REF: tabs.tmpl}
+{REF: draw_pager.tmpl}
+{REF: allowed_user_lnk.tmpl}
+{REF: buddy.tmpl}
+{REF: thread_notify.tmpl}
+{REF: forum_notify.tmpl}
+
+{SECTION: uc_online_indicator}
+<img src="{THEME_IMAGE_ROOT}/online.png" alt="{MSG: user_online}" title="{MSG: user_online}" />
+{SECTION: END}
+
+{SECTION: uc_offline_indicator}
+<img src="{THEME_IMAGE_ROOT}/offline.png" alt="{MSG: user_offline}" title="{MSG: user_offline}" />
+{SECTION: END}
+
+{SECTION: uc_pm_lnk}
+{ROOT}?t=ppost&toi={VAR: r[0]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_pm}
+<a href="{TEMPLATE: uc_pm_lnk}">PM</a>&nbsp;||&nbsp;
+{SECTION: END}
+
+{SECTION: uc_profile_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: r[0]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_profile_lnk2}
+{ROOT}?t=usrinfo&amp;id={VAR: r->poster_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_buddy_lnk}
+{ROOT}?t=uc&amp;ubid={VAR: r[0]}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: uc_buddy_ent}
+<tr class="RowStyleA">
+	<td class="vm">{TEMPLATE-DATA: uc_online}</td>
+	<td class="nw vm wa"><a href="{TEMPLATE: uc_profile_lnk}">{VAR: r[1]}</a></td>
+	<td class="nw vm RowStyleB SmallText">{TEMPLATE-DATA: uc_pm}<a href="{TEMPLATE: uc_buddy_lnk}">X</a></td>
+</tr>
+{SECTION: END}
+
+{SECTION: uc_new_pm_ent_lnk}
+{ROOT}?t=pmsg_view&amp;id={VAR: r[4]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_new_pm_ent}
+<tr class="RowStyleB">
+	<td><a href="{TEMPLATE: uc_new_pm_ent_lnk}">{VAR: r[3]}</a></td>
+	<td class="nw"><a href="{TEMPLATE: uc_profile_lnk}">{VAR: r[1]}</a></td>
+	<td class="DateText nw">{TEMPLATE: uc_pm_date}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: uc_new_pm}
+<tr>
+	<th class="wa">{MSG: subject}</th>
+	<th class="nw">{MSG: pmsg_author}</th>
+	<th class="nw">{MSG: pmsg_time}</th>
+</tr>
+{TEMPLATE-DATA: uc_new_pms}
+{SECTION: END}
+
+{SECTION: uc_forum_entry_lnk}
+{ROOT}?t={DEF: t_thread_view}&amp;frm_id={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_last_post_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: r->mid}&amp;{DEF: _rsid}#msg_{VAR: r->mid}
+{SECTION: END}
+
+{SECTION: uc_link_user}
+<a href="{TEMPLATE: uc_profile_lnk2}">{VAR-HTML: r->alias}</a>
+{SECTION: END}
+
+{SECTION: uc_link_anon}
+{GVAR: ANON_NICK}
+{SECTION: END}
+
+{SECTION: uc_last_post}
+<a href="{TEMPLATE: uc_last_post_lnk}" title="{VAR: r->subject}">{FUNC: substr($r->subject, 0, min(25, strlen($r->subject)))}</a>
+<br />
+<span class="DateText">{TEMPLATE: uc_last_post_date}</span>
+<br />
+{MSG: by} {IF: $r->alias}{TEMPLATE: uc_link_user}{ELSE}{TEMPLATE: uc_link_anon}{END}
+{SECTION: END}
+
+{SECTION: uc_forum_unsub}
+{ROOT}?t=uc&amp;ufid={VAR: r->id}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: uc_new_topic}
+{ROOT}?t=post&amp;frm_id={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_forum_descr}
+<br />
+{VAR: r->descr}
+{SECTION: END}
+
+{SECTION: uc_sub_forum}
+<tr>
+	<td class="RowStyleA SmallText wa"><a href="{TEMPLATE: uc_forum_entry_lnk}" class="big">{VAR-HTML: r->cat_name} &raquo; {VAR: r->name}</a>{IF: $r->descr}{TEMPLATE: uc_forum_descr}{ENDIF}<br /><a href="{TEMPLATE: uc_new_topic}">{MSG: uc_new_topic}</a> || <a href="{TEMPLATE: uc_forum_unsub}">{MSG: unsubscribe}</a></td>
+	<td class="RowStyleB ac">{VAR: r->post_count}</td>
+	<td class="RowStyleB ac">{VAR: r->thread_count}</td>
+	<td class="RowStyleA SmallText ar nw">{IF: $r->mid}{TEMPLATE: uc_last_post}{ENDIF}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: uc_sub_forums}
+<tr>
+        <th class="wa">{MSG: uc_cat_forum}</th>
+	<th class="nw">{MSG: posts}</th>
+        <th class="nw">{MSG: threads}</th>
+        <th class="nw">{MSG: last_post}</th>
+</tr>
+{TEMPLATE-DATA: uc_sub_forum}
+{SECTION: END}
+
+{SECTION: uc_first_unread_msg_link_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;th={VAR: r->id}&amp;unread=1&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_first_unread_msg_link}
+<a href="{TEMPLATE: uc_first_unread_msg_link_lnk}"><img src="{THEME_IMAGE_ROOT}/newposts.gif" title="{MSG: thread_first_unread_msg}" alt="" /></a>&nbsp;
+{SECTION: END}
+
+{SECTION: thread_row_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;th={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_mini_thread_pager}
+<span class="SmallText">(<img src="{THEME_IMAGE_ROOT}/pager.gif" alt="" />{TEMPLATE-DATA: mini_pager_data})</span>
+{SECTION: END}
+
+{SECTION: uc_mini_pager_entry_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;th={VAR: r->id}&amp;start={FUNC: ($i * $ppg)}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_mini_pager_entry}
+&nbsp;<a href="{TEMPLATE: uc_mini_pager_entry_lnk}">{FUNC: ++$i}</a>
+{SECTION: END}
+
+{SECTION: uc_mini_pager_limiter}
+&nbsp;...
+{SECTION: END}
+
+{SECTION: uc_last_msg_in_thread_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: r->last_post_id}&amp;{DEF: _rsid}#msg_{VAR: r->last_post_id}
+{SECTION: END}
+
+{SECTION: uc_thread_reply}
+{ROOT}?t=post&amp;th_id={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: uc_thread_unsub}
+{ROOT}?t=uc&amp;utid={VAR: r->id}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: uc_sub_topic}
+<tr>
+	<td class="RowStyleA">{TEMPLATE: uc_first_unread_msg_link}<a class="big" href="{TEMPLATE: thread_row_lnk}">{VAR: r->subject}</a> {TEMPLATE-DATA: mini_thread_pager}<br /><div class="ar"><a href="{TEMPLATE: uc_thread_reply}">{MSG: iemail_msg_reply}</a> || <a href="{TEMPLATE: uc_thread_unsub}">{MSG: unsubscribe}</a></div></td>
+	<td class="RowStyleB ac">{VAR: r->replies}</td>
+	<td class="RowStyleB ac">{VAR: r->views}</td>
+	<td class="RowStyleC ar nw"><span class="DateText">{TEMPLATE: uc_sub_topic_date}</span><br />{MSG: by} {IF: $r->alias}{TEMPLATE: uc_link_user}{ELSE}{TEMPLATE: uc_link_anon}{END} <a href="{TEMPLATE: uc_last_msg_in_thread_lnk}"><img src="{THEME_IMAGE_ROOT}/goto.gif" title="{MSG: last_thread_msg}" alt="" /></a></td>
+</tr>
+{SECTION: END}
+
+{SECTION: uc_sub_topics}
+<tr>
+        <th class="wa">{MSG: thread_thread}</th>
+	<th class="nw">{MSG: replies}</th>
+        <th class="nw">{MSG: views}</th>
+        <th class="nw">{MSG: last_post}</th>
+</tr>
+{TEMPLATE-DATA: uc_sub_topic}
+{SECTION: END}
+
+{PAGE: UC_PAGE user control panel}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: tabs}
+
+<table cellspacing="3" cellpadding="3" border="0" class="wa">
+<tr>
+	<td class="vt"><table border="0" cellspacing="1" cellpadding="2" class="ucPW">
+<tr>
+	<th colspan="3">{MSG: tabs_buddy_list}</th>
+</tr>
+{TEMPLATE-DATA: uc_buddy_ents}
+</table></td>
+
+	<td class="wa vt">
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="3">{MSG: uc_new_pm}</th>
+</tr>
+{TEMPLATE-DATA: uc_new_pms}
+</table>
+<br /><br />
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="4">{MSG: uc_new_cat_forum}</th>
+</tr>
+{TEMPLATE-DATA: uc_sub_forum}
+</table>
+<br /><br />
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="4">{MSG: uc_sub_topics}</th>
+</tr>
+{TEMPLATE-DATA: uc_sub_topic}
+</table></td>
+</tr>
+</table>
+
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: uc_page_title}
+{MSG: uc_page_title}
+{SECTION: END}

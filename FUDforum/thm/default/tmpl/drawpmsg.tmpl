@@ -1,0 +1,226 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: drawpmsg.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: drawpmsg.inc.t; output: drawpmsg.inc;}
+
+{SECTION: dpmsg_online_indicator}
+<img src="{THEME_IMAGE_ROOT}/online.png" alt="{MSG: user_online}" title="{MSG: user_online}" />
+{SECTION: END}
+
+{SECTION: dpmsg_offline_indicator}
+<img src="{THEME_IMAGE_ROOT}/offline.png" alt="{MSG: user_offline}" title="{MSG: user_offline}" />
+{SECTION: END}
+
+{SECTION: dpmsg_location}
+<br /><b>{MSG: location}</b> {VAR: location}
+{SECTION: END}
+
+{SECTION: dpmsg_no_location}
+{SECTION: END}
+
+{SECTION: dpmsg_msg_icon}
+<img src="{BASE}images/message_icons/{VAR: obj->icon}" alt="" />&nbsp;&nbsp;
+{SECTION: END}
+
+{SECTION: dpmsg_buddy_link_lnk}
+{ROOT}?t=buddy_list&amp;{DEF: _rsid}&amp;add={VAR: obj->user_id}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dpmsg_buddy_link}
+<a href="{TEMPLATE: dpmsg_buddy_link_lnk}">{MSG: add_to_buddy_list}</a><br />
+{SECTION: END}
+
+{SECTION: dpmsg_im_icq_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->user_id}&amp;{DEF: _rsid}#icq_msg
+{SECTION: END}
+
+{SECTION: dpmsg_im_icq}
+<a href="{TEMPLATE: dpmsg_im_icq_lnk}"><img src="{THEME_IMAGE_ROOT}/icq.png" alt="" title="{VAR: obj->icq}" /></a>&nbsp;
+{SECTION: END}
+
+{SECTION: dpmsg_im_aim}
+<a href="aim:goim?screenname={VAR: obj->aim}&amp;message=Hi.+Are+you+there?"><img src="{THEME_IMAGE_ROOT}/aim.png" title="{VAR: obj->aim}" alt="" /></a>&nbsp;
+{SECTION: END}
+
+{SECTION: dpmsg_im_yahoo}
+<a href="http://edit.yahoo.com/config/send_webmesg?.target={VAR: obj->yahoo}&amp;.src=pg"><img src="{THEME_IMAGE_ROOT}/yahoo.png" alt="" title="{VAR: obj->yahoo}" /></a>&nbsp;
+{SECTION: END}
+
+{SECTION: dpmsg_im_msnm}
+<a href="mailto:{VAR: obj->msnm}"><img src="{THEME_IMAGE_ROOT}/msnm.png" title="{VAR: obj->msnm}" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_im_jabber}
+<img src="{THEME_IMAGE_ROOT}/jabber.png" title="{VAR: obj->jabber}" alt="" />
+{SECTION: END}
+
+{SECTION: dpmsg_im_google}
+<img src="{THEME_IMAGE_ROOT}/google.png" title="{VAR: obj->google}" alt="" />
+{SECTION: END}
+
+{SECTION: dpmsg_im_skype}
+<a href="callto://{VAR: obj->skype}"><img src="{THEME_IMAGE_ROOT}/skype.png" title="{VAR: obj->skype}" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_im_twitter}
+<a href="http://twitter.com/{VAR: obj->twitter}"><img src="{THEME_IMAGE_ROOT}/twitter.png" title="{VAR: obj->twitter}" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_file_attachments the file attachments list}
+<ul class="AttachmentsList">
+	{TEMPLATE-DATA: file_attachments}
+</ul>
+{SECTION: END}
+
+{SECTION: dpmsg_file_attachment_lnk}
+{ROOT}?t=getfile&amp;id={VAR: r->id}&amp;{DEF: _rsid}&amp;private=1
+{SECTION: END}
+
+{SECTION: dpmsg_file_attachment file attachment entry row}
+<li>
+	<img alt="" src="{BASE}images/mime/{VAR: r->icon}" class="at" />
+	<span class="GenText fb">{MSG: attachment}</span> <a href="{TEMPLATE: dpmsg_file_attachment_lnk}" title="{VAR: r->original_name}">{VAR: r->original_name}</a>
+	<br />
+	<span class="SmallText">({MSG: size} {VAR: sz}, {MSG: pmsg_download_counter})</span>
+</li>
+{SECTION: END}
+
+{SECTION: dpmsg_user_profile_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_user_profile}
+<a href="{TEMPLATE: dpmsg_user_profile_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_about.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_email_link_lnk}
+{ROOT}?t=email&amp;toi={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_email_link}
+<a href="{TEMPLATE: dpmsg_email_link_lnk}" rel="nofollow"><img src="{THEME_IMAGE_ROOT}/msg_email.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_private_msg_link_lnk}
+{ROOT}?t=ppost&amp;toi={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_private_msg_link}
+<a href="{TEMPLATE: dpmsg_private_msg_link_lnk}"><img title="{MSG: send_pm_desc}" src="{THEME_IMAGE_ROOT}/msg_pm.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_edit_link_lnk}
+{ROOT}?t=ppost&amp;msg_id={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_edit_link}
+<a href="{TEMPLATE: dpmsg_edit_link_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_edit.gif" alt="" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+{SECTION: END}
+
+{SECTION: dpmsg_reply_link_lnk}
+{ROOT}?t=ppost&amp;reply={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_reply_link}
+<a href="{TEMPLATE: dpmsg_reply_link_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_reply.gif" alt="" /></a>&nbsp;
+{SECTION: END}
+
+{SECTION: dpmsg_quote_link_lnk}
+{ROOT}?t=ppost&amp;quote={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_quote_link}
+<a href="{TEMPLATE: dpmsg_quote_link_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_quote.gif" alt="" /></a>&nbsp;
+{SECTION: END}
+
+{MAIN_SECTION: private_message_entry draws a single private message}
+<tr>
+	<td>
+		<table cellspacing="0" cellpadding="0" class="MsgTable">
+		<tr>
+			<td class="MsgR1 al vt expanded">{IF: !$mini && $obj->icon}{TEMPLATE: dpmsg_msg_icon}{ENDIFI}<span class="MsgSubText">{VAR: obj->subject}</span></td>
+			<td class="MsgR1 vt ar DateText">{TEMPLATE: dmsg_post_date}</td>
+		</tr>
+		<tr class="MsgR2"><td class="MsgR2" colspan="2">
+			<table cellspacing="0" cellpadding="0" class="ContentTable">
+			<tr class="MsgR2">
+			{TEMPLATE-DATA: avatar}
+				<td class="msgud">{TEMPLATE-DATA: online_indicator}{IF: !$mini}{TEMPLATE: dpmsg_profile_link}{ELSE}{VAR-HTML: obj->alias}{ENDI}{IF: !$mini}<br /><b>{MSG: posts_c}</b> {VAR: obj->posted_msg_count}<br /><b>{MSG: registered}</b> {TEMPLATE: dmsg_join_date} {TEMPLATE-DATA: location}{ENDIFI}</td>
+				<td class="msgud">{TEMPLATE-DATA: dmsg_tags}</td>
+				<td class="msgot">{TEMPLATE-DATA: buddy_link}{TEMPLATE-DATA: dmsg_im_row}{IF: !$mini && $obj->host_name && $o1 & 268435456}<b>{MSG: from}</b> {VAR: obj->host_name}<br />{ENDIFI}</td>
+			</tr>
+			</table>
+		</tr>
+		<tr>
+			<td class="MsgR3" colspan="2">
+				{TEMPLATE-DATA: msg_body}
+				{TEMPLATE-DATA: file_attachments}
+				{IF: ($obj->sig && $o1 & 32768 && $obj->pmsg_opt & 1 && $b & 4096)}<br /><br /><div class="signature">{VAR: obj->sig}</div>{ENDIFI}
+			</td>
+		</tr>
+		{TEMPLATE-DATA: msg_toolbar}
+		<tr>
+			<td class="MsgR2 ac" colspan="2">{GVAR: dpmsg_prev_message} {GVAR: dpmsg_next_message}</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+{MAIN_SECTION: END}
+
+{SECTION: dpmsg_no_msg_body}
+{MSG: no_msg_body}
+{SECTION: END}
+
+{SECTION: dpmsg_msg_toolbar_lnk}
+{ROOT}?t=pmsg&amp;{DEF: _rsid}&amp;btn_delete=1&amp;sel={VAR: obj->id}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dpmsg_msg_toolbar_lnk2}
+{ROOT}?t=ppost&amp;forward={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_msg_toolbar buttons for replying,editing,deliting and forwarding the message}
+<tr><td colspan="2" class="MsgToolBar"><table border="0" cellspacing="0" cellpadding="0" class="wa"><tr>
+<td class="nw al">{TEMPLATE-DATA: user_profile}&nbsp;{TEMPLATE-DATA: email_link}&nbsp;{TEMPLATE-DATA: private_msg_link}</td>
+<td class="nw ar"><a href="{TEMPLATE: dpmsg_msg_toolbar_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_delete.gif" alt="" /></a>&nbsp;{IF: $obj->fldr == 4}{TEMPLATE: dpmsg_edit_link}{ENDIFI}{IF: $obj->fldr == 1}{TEMPLATE: dpmsg_reply_link}{TEMPLATE: dpmsg_quote_link}{ENDIFI}<a href="{TEMPLATE: dpmsg_msg_toolbar_lnk2}"><img src="{THEME_IMAGE_ROOT}/msg_forward.gif" alt="" /></a></td>
+</tr></table></td></tr>
+{SECTION: END}
+
+{SECTION: dpmsg_profile_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dpmsg_profile_link}
+<a href="{TEMPLATE: dpmsg_profile_link_lnk}">{VAR-HTML: obj->alias}</a>
+{SECTION: END}
+
+{SECTION: dpmsg_prev_message_lnk}
+{ROOT}?t=pmsg_view&amp;{DEF: _rsid}&amp;id={VAR: pid}
+{SECTION: END}
+
+{SECTION: dpmsg_prev_message link to the previous message}
+<a href="{TEMPLATE: dpmsg_prev_message_lnk}"><img src="{THEME_IMAGE_ROOT}/goback.gif" alt="" /> {MSG: pmsg_prev_msg}</a>
+{SECTION: END}
+
+{SECTION: dpmsg_next_message_lnk}
+{ROOT}?t=pmsg_view&amp;{DEF: _rsid}&amp;id={VAR: nid}
+{SECTION: END}
+
+{SECTION: dpmsg_next_message link to the next message}
+<a href="{TEMPLATE: dpmsg_next_message_lnk}">{MSG: pmsg_next_msg} <img src="{THEME_IMAGE_ROOT}/goto.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dpmsg_buddy_link_remove_lnk}
+{ROOT}?t=buddy_list&amp;del={VAR: obj->user_id}&amp;redr=1&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dpmsg_buddy_link_remove add this user to your buddy list link}
+<br />[<a href="{TEMPLATE: dpmsg_buddy_link_remove_lnk}">{MSG: remove_from_buddy_list}</a>]
+{SECTION: END}

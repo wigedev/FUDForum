@@ -1,0 +1,235 @@
+<?php
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: th_adm.inc.t 6103 2017-12-11 15:25:50Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+function th_add($root, $forum_id, $last_post_date, $thread_opt, $orderexpiry, $replies=0, $views=0, $lpi=0, $descr='')
+{
+	if (!$lpi) {
+		$lpi = $root;
+	}
+
+	return db_qid('INSERT INTO
+		{SQL_TABLE_PREFIX}thread
+			(forum_id, root_msg_id, last_post_date, replies, views, rating, last_post_id, thread_opt, orderexpiry, tdescr)
+		VALUES
+			('. $forum_id .', '. $root .', '. $last_post_date .', '. $replies .', '. $views .', 0, '. $lpi .', '. $thread_opt .', '. $orderexpiry.','. _esc($descr) .')');
+}
+
+function th_move($id, $to_forum, $root_msg_id, $forum_id, $last_post_date, $last_post_id, $descr)
+{
+	if (!db_locked()) {
+		if ($to_forum != $forum_id) {
+			$lock = '{SQL_TABLE_PREFIX}tv_'. $to_forum .' WRITE, {SQL_TABLE_PREFIX}tv_'. $forum_id;
+		} else {
+			$lock = '{SQL_TABLE_PREFIX}tv_'. $to_forum;
+		}
+		
+		db_lock('{SQL_TABLE_PREFIX}poll WRITE, '. $lock .' WRITE, {SQL_TABLE_PREFIX}thread WRITE, {SQL_TABLE_PREFIX}forum WRITE, {SQL_TABLE_PREFIX}msg WRITE');
+		$ll = 1;
+	}
+	$msg_count = q_singleval('SELECT count(*) FROM {SQL_TABLE_PREFIX}thread LEFT JOIN {SQL_TABLE_PREFIX}msg ON {SQL_TABLE_PREFIX}msg.thread_id={SQL_TABLE_PREFIX}thread.id WHERE {SQL_TABLE_PREFIX}msg.apr=1 AND {SQL_TABLE_PREFIX}thread.id='. $id);
+
+	q('UPDATE {SQL_TABLE_PREFIX}thread SET forum_id='. $to_forum .' WHERE id='. $id);
+	q('UPDATE {SQL_TABLE_PREFIX}forum SET post_count=post_count-'. $msg_count .' WHERE id='. $forum_id);
+	q('UPDATE {SQL_TABLE_PREFIX}forum SET thread_count=thread_count+1,post_count=post_count+'. $msg_count .' WHERE id='. $to_forum);
+	q('DELETE FROM {SQL_TABLE_PREFIX}thread WHERE forum_id='. $to_forum .' AND root_msg_id='. $root_msg_id .' AND moved_to='. $forum_id);
+	if (($aff_rows = db_affected())) {
+		q('UPDATE {SQL_TABLE_PREFIX}forum SET thread_count=thread_count-'. $aff_rows .' WHERE id='. $to_forum);
+	}
+	q('UPDATE {SQL_TABLE_PREFIX}thread SET moved_to='. $to_forum .' WHERE id!='. $id .' AND root_msg_id='. $root_msg_id);
+
+	q('INSERT INTO {SQL_TABLE_PREFIX}thread
+		(forum_id, root_msg_id, last_post_date, last_post_id, moved_to, tdescr)
+	VALUES
+		('. $forum_id .', '. $root_msg_id .', '. $last_post_date .', '. $last_post_id .', '. $to_forum .','. _esc($descr) .')');
+
+	rebuild_forum_view_ttl($forum_id);
+	rebuild_forum_view_ttl($to_forum);
+
+	$p = db_all('SELECT poll_id FROM {SQL_TABLE_PREFIX}msg WHERE thread_id='. $id .' AND apr=1 AND poll_id>0');
+	if ($p) {
+		q('UPDATE {SQL_TABLE_PREFIX}poll SET forum_id='. $to_forum .' WHERE id IN('. implode(',', $p) .')');
+	}
+
+	if (isset($ll)) {
+		db_unlock();
+	}
+}
+
+function __th_cron_emu($forum_id, $run=1)
+{
+	/* Let's see if we have sticky threads that have expired. */
+	$exp = db_all('SELECT {SQL_TABLE_PREFIX}thread.id FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .'
+			INNER JOIN {SQL_TABLE_PREFIX}thread ON {SQL_TABLE_PREFIX}thread.id={SQL_TABLE_PREFIX}tv_'. $forum_id .'.thread_id
+			INNER JOIN {SQL_TABLE_PREFIX}msg ON {SQL_TABLE_PREFIX}thread.root_msg_id={SQL_TABLE_PREFIX}msg.id
+			WHERE {SQL_TABLE_PREFIX}tv_'. $forum_id .'.seq>'. (q_singleval(q_limit('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' ORDER BY seq DESC', 1)) - 50).' 
+				AND {SQL_TABLE_PREFIX}tv_'. $forum_id .'.iss>0
+				AND {SQL_TABLE_PREFIX}thread.thread_opt>=2 
+				AND ({SQL_TABLE_PREFIX}msg.post_stamp+{SQL_TABLE_PREFIX}thread.orderexpiry)<='. __request_timestamp__);
+	if ($exp) {
+		q('UPDATE {SQL_TABLE_PREFIX}thread SET orderexpiry=0, thread_opt=(thread_opt & ~(2|4)) WHERE id IN('. implode(',', $exp) .')');
+		$exp = 1;
+	}
+
+	/* Remove expired moved thread pointers. */
+	q('DELETE FROM {SQL_TABLE_PREFIX}thread WHERE forum_id='. $forum_id .' AND moved_to>0 AND last_post_date<'.(__request_timestamp__ - 86400 * $GLOBALS['MOVED_THR_PTR_EXPIRY']));
+	if (($aff_rows = db_affected())) {
+		q('UPDATE {SQL_TABLE_PREFIX}forum SET thread_count=thread_count-'. $aff_rows .' WHERE thread_count>0 AND id='. $forum_id);
+		if (!$exp) {
+			$exp = 1;
+		}
+	}
+
+	if ($exp && $run) {
+		rebuild_forum_view_ttl($forum_id,1);
+	}
+
+	return $exp;
+}
+
+function rebuild_forum_view_ttl($forum_id, $skip_cron=0)
+{
+// 1 topic locked
+// 2 is_sticky ANNOUNCE
+// 4 is_sticky STICKY
+// 8 important (always on top)
+
+	if (!$skip_cron) {
+		__th_cron_emu($forum_id, 0);
+	}
+
+	if (!db_locked()) {
+		$ll = 1;
+		db_lock('{SQL_TABLE_PREFIX}tv_'. $forum_id .' WRITE, {SQL_TABLE_PREFIX}thread READ, {SQL_TABLE_PREFIX}msg READ');
+	}
+
+	q('DELETE FROM {SQL_TABLE_PREFIX}tv_'. $forum_id);
+
+	if (__dbtype__ == 'mssql') {
+		// Add "TOP(1000000000)" as workaround for ERROR Msg 1033:
+		// "The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP or FOR XML is also specified."
+		// See http://support.microsoft.com/kb/841845/en
+		q('INSERT INTO {SQL_TABLE_PREFIX}tv_'. $forum_id .' (seq, thread_id, iss) SELECT '. q_rownum() .', id, iss FROM
+			(SELECT TOP(1000000000) {SQL_TABLE_PREFIX}thread.id AS id, '. q_bitand('thread_opt', (2|4|8)) .' AS iss FROM {SQL_TABLE_PREFIX}thread 
+			INNER JOIN {SQL_TABLE_PREFIX}msg ON {SQL_TABLE_PREFIX}thread.root_msg_id={SQL_TABLE_PREFIX}msg.id 
+			WHERE forum_id='. $forum_id .' AND {SQL_TABLE_PREFIX}msg.apr=1 
+			ORDER BY (CASE WHEN thread_opt>=2 THEN (4294967294 + (('. q_bitand('thread_opt', 8) .') * 100000000) + {SQL_TABLE_PREFIX}thread.last_post_date) ELSE {SQL_TABLE_PREFIX}thread.last_post_date END) ASC) q1');
+	} else if (__dbtype__ == 'sqlite') {
+		// Prevent subquery flattening by adding "LIMIT -1 OFFSET 0" as it will prevent the rowid() code to work.
+		// See http://stackoverflow.com/questions/17809644/how-to-disable-subquery-flattening-in-sqlite
+		q('INSERT INTO {SQL_TABLE_PREFIX}tv_'. $forum_id .' (seq, thread_id, iss) SELECT '. q_rownum() .', id, iss FROM
+			(SELECT {SQL_TABLE_PREFIX}thread.id AS id, '. q_bitand('thread_opt', (2|4|8)) .' AS iss FROM {SQL_TABLE_PREFIX}thread 
+			INNER JOIN {SQL_TABLE_PREFIX}msg ON {SQL_TABLE_PREFIX}thread.root_msg_id={SQL_TABLE_PREFIX}msg.id 
+			WHERE forum_id='. $forum_id .' AND {SQL_TABLE_PREFIX}msg.apr=1 
+			ORDER BY (CASE WHEN thread_opt>=2 THEN (4294967294 + (('. q_bitand('thread_opt', 8) .') * 100000000) + {SQL_TABLE_PREFIX}thread.last_post_date) ELSE {SQL_TABLE_PREFIX}thread.last_post_date END) ASC LIMIT -1 OFFSET 0) q1');
+	} else {
+		//q('INSERT INTO {SQL_TABLE_PREFIX}tv_'. $forum_id .' (seq, thread_id, iss) SELECT '. q_rownum() .', id, iss FROM
+		//	(SELECT {SQL_TABLE_PREFIX}thread.id AS id, '. q_bitand('thread_opt', (2|4|8)) .' AS iss FROM {SQL_TABLE_PREFIX}thread 
+		//	INNER JOIN {SQL_TABLE_PREFIX}msg ON {SQL_TABLE_PREFIX}thread.root_msg_id={SQL_TABLE_PREFIX}msg.id 
+		//	WHERE forum_id='. $forum_id .' AND {SQL_TABLE_PREFIX}msg.apr=1 
+		//	ORDER BY (CASE WHEN thread_opt>=2 THEN (4294967294 + (('. q_bitand('thread_opt', 8) .') * 100000000) + {SQL_TABLE_PREFIX}thread.last_post_date) ELSE {SQL_TABLE_PREFIX}thread.last_post_date END) ASC) q1');
+
+		q('INSERT INTO {SQL_TABLE_PREFIX}tv_'. $forum_id .' (seq, thread_id, iss)
+			SELECT '. q_rownum() .', {SQL_TABLE_PREFIX}thread.id, '. q_bitand('thread_opt', (2|4|8)) .' FROM {SQL_TABLE_PREFIX}thread 
+			INNER JOIN {SQL_TABLE_PREFIX}msg ON {SQL_TABLE_PREFIX}thread.root_msg_id={SQL_TABLE_PREFIX}msg.id 
+			WHERE forum_id='. $forum_id .' AND {SQL_TABLE_PREFIX}msg.apr=1 
+			ORDER BY '. q_bitand('thread_opt', (2|4|8)) .' ASC, {SQL_TABLE_PREFIX}thread.last_post_date ASC');
+	}
+
+	if (isset($ll)) {
+		db_unlock();
+	}
+}
+
+function th_delete_rebuild($forum_id, $th)
+{
+	if (!db_locked()) {
+		$ll = 1;
+		db_lock('{SQL_TABLE_PREFIX}tv_'. $forum_id .' WRITE');
+	}
+
+	/* Get position. */
+	if (($pos = q_singleval('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE thread_id='. $th))) {
+		q('DELETE FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE thread_id='. $th);
+		/* Move every one down one, if placed after removed topic. */
+		q('UPDATE {SQL_TABLE_PREFIX}tv_'. $forum_id .' SET seq=seq-1 WHERE seq>'. $pos);
+	}
+
+	if (isset($ll)) {
+		db_unlock();
+	}
+}
+
+function th_new_rebuild($forum_id, $th, $sticky)
+{
+	if (__th_cron_emu($forum_id)) {
+		return;
+	}
+
+	if (!db_locked()) {
+		$ll = 1;
+		db_lock('{SQL_TABLE_PREFIX}tv_'. $forum_id .' WRITE');
+	}
+
+	list($max,$iss) = db_saq(q_limit('SELECT /* USE MASTER */ seq, iss FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' ORDER BY seq DESC', 1));
+	if ((!$sticky && $iss) || $iss >= 8) { /* Sub-optimal case, non-sticky topic and thre are stickies in the forum. */
+		/* Find oldest sticky message. */
+		if ($sticky && $iss >= 8) {
+			$iss = q_singleval(q_limit('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE seq>'. ($max - 50) .' AND iss>=8 ORDER BY seq ASC', 1));
+		} else {
+			$iss = q_singleval(q_limit('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE seq>'. ($max - 50) .' AND iss>0 ORDER BY seq ASC', 1));
+		}
+		/* Move all stickies up one. */
+		q('UPDATE {SQL_TABLE_PREFIX}tv_'. $forum_id .' SET seq=seq+1 WHERE seq>='. $iss);
+		/* We do this, since in optimal case we just do ++max. */
+		$max = --$iss;
+	}
+	q('INSERT INTO {SQL_TABLE_PREFIX}tv_'. $forum_id .' (thread_id,iss,seq) VALUES('. $th .','. (int)$sticky .','. (++$max) .')');
+
+	if (isset($ll)) {
+		db_unlock();
+	}
+}
+
+function th_reply_rebuild($forum_id, $th, $sticky)
+{
+	if (!db_locked()) {
+		$ll = 1;
+		db_lock('{SQL_TABLE_PREFIX}tv_'. $forum_id .' WRITE');
+	}
+
+	/* Get first topic of forum (highest seq). */
+	list($max,$tid,$iss) = db_saq(q_limit('SELECT /* USE MASTER */ seq,thread_id,iss FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' ORDER BY seq DESC', 1));
+
+	if ($tid == $th) {
+		/* NOOP: quick elimination, topic is already 1st. */
+	} else if (!$iss || ($sticky && $iss < 8)) { /* Moving to the very top. */
+		/* Get position. */
+		$pos = q_singleval('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE thread_id='. $th);
+		/* Move everyone ahead, 1 down. */
+		q('UPDATE {SQL_TABLE_PREFIX}tv_'. $forum_id .' SET seq=seq-1 WHERE seq>'. $pos);
+		/* Move to top of the stack. */
+		q('UPDATE {SQL_TABLE_PREFIX}tv_'. $forum_id .' SET seq='. $max .' WHERE thread_id='. $th);
+	} else {
+		/* Get position. */
+		$pos = q_singleval('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE thread_id='. $th);
+		/* Find oldest sticky message. */
+		$iss = q_singleval(q_limit('SELECT /* USE MASTER */ seq FROM {SQL_TABLE_PREFIX}tv_'. $forum_id .' WHERE seq>'. ($max - 50) .' AND iss>'. ($sticky && $iss >= 8 ? '=8' : '0') .' ORDER BY seq ASC', 1));
+		/* Move everyone ahead, unless sticky, 1 down. */
+		q('UPDATE {SQL_TABLE_PREFIX}tv_'. $forum_id .' SET seq=seq-1 WHERE seq BETWEEN '. ($pos + 1) .' AND '. ($iss - 1));
+		/* Move to top of the stack. */
+		q('UPDATE {SQL_TABLE_PREFIX}tv_'. $forum_id .' SET seq='. ($iss - 1) .' WHERE thread_id='. $th);
+	}
+
+	if (isset($ll)) {
+		db_unlock();
+	}
+}
+?>

@@ -1,0 +1,41 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_groups.tbl 4899 2010-01-26 15:26:20Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}groups;
+
+CREATE TABLE {SQL_TABLE_PREFIX}groups
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name		VARCHAR(255) NOT NULL DEFAULT '',
+	inherit_id	INT NOT NULL DEFAULT 0,
+	forum_id	INT NOT NULL DEFAULT 0,
+	groups_opt	INT NOT NULL DEFAULT 0,
+	groups_opti	INT NOT NULL DEFAULT 0
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}groups_i_f ON {SQL_TABLE_PREFIX}groups (forum_id);
+CREATE INDEX {SQL_TABLE_PREFIX}groups_i_i ON {SQL_TABLE_PREFIX}groups (inherit_id);
+
+# 1 p_VISIBLE
+# 2 p_READ
+# 4 p_POST
+# 8 p_REPLY
+# 16 p_EDIT
+# 32 p_DEL
+# 64 p_STICKY
+# 128 p_POLL
+# 256 p_FILE
+# 512 p_VOTE
+# 1024 p_RATE
+# 2048 p_SPLIT
+# 4096 p_LOCK
+# 8192 p_MOVE
+# 16384 p_SML
+# 32768 p_IMG
+# 262144 p_SEARCH

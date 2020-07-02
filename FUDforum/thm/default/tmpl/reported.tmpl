@@ -1,0 +1,92 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: reported.tmpl 5325 2011-07-15 14:14:17Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: reported.php.t; output: reported.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: drawmsg.tmpl}
+{REF: logaction.tmpl}
+
+{SECTION: reported_reg_user_link reportee profile link}
+<a href="{TEMPLATE: reported_reg_user_link_lnk}">{VAR: obj->report_user_login}</a>
+{SECTION: END}
+
+{SECTION: reported_anon_user if reportee is anon section}
+{GVAR: ANON_NICK}
+{SECTION: END}
+
+{SECTION: reported_msg_header}
+<tr>
+	<td class="RowStyleC">
+		<div class="MsgR1">
+			<b>{MSG: reported_reported_by}</b>
+			{IF: $obj->report_user_id}{TEMPLATE: reported_reg_user_link}{ELSE}{TEMPLATE: reported_anon_user}{END}
+			<b>{MSG: reported_on}</b>
+			{TEMPLATE: reported_date}
+			<b>{MSG: reported_in_thread}</b>
+			{FUNC: draw_path($obj->cat_id)}{VAR: obj->frm_name} &raquo; 
+			<a href="{TEMPLATE: reported_msg_header_lnk1}">{VAR: obj->thread_subject}</a>
+		</div>
+		<div class="MsgR2">
+			<b>{MSG: reported_reason}</b> {VAR: obj->report_reason}
+			<br />
+			[ <a href="{TEMPLATE: reported_msg_header_lnk}">{MSG: reported_del_report}</a> ]
+		</div>
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: reported_message}
+{TEMPLATE: reported_msg_header}
+{FUNC: tmpl_drawmsg($obj, $usr, $perms, false, $n, null)}
+{SECTION: END}
+
+{PAGE: REPORTED_PAGE a list of the reported messages}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<br />
+{TEMPLATE-DATA: admin_cp}
+<table cellspacing="0" cellpadding="0" class="ContentTable">
+<tr>
+	<th>{MSG: reported_reported_msg}</th>
+</tr>
+{TEMPLATE-DATA: reported_message}
+</table>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: reported_no_messages}
+<tr>
+	<td>{MSG: reported_no_messages}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: reported_reg_user_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->report_user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: reported_msg_header_lnk}
+{ROOT}?t=reported&amp;{DEF: _rsid}&amp;del={VAR: obj->report_id}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: reported_msg_header_lnk1}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: obj->id}&amp;{DEF: _rsid}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: reported_cat_path}
+{VAR: cat_cache[$cid][1]} &raquo;&nbsp;
+{SECTION: END}

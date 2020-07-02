@@ -1,0 +1,262 @@
+/**
+* copyright            : (C) 2001-2020 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: ppost.tmpl 6395 2020-05-13 10:26:54Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: ppost.php.t; output: ppost.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: stats.tmpl}
+{REF: usercp.tmpl}
+{REF: smiley.tmpl}
+{REF: postcheck.tmpl}
+{REF: spell.tmpl}
+{REF: wordwrap.tmpl}
+{REF: private.tmpl}
+{REF: post_opt.tmpl}
+{REF: rev_fmt.tmpl}
+{REF: post_proc.tmpl}
+{REF: replace.tmpl}
+{REF: get_cur_ppage.tmpl}
+{REF: tabs.tmpl}
+{REF: allowed_user_lnk.tmpl}
+{REF: post_common.tmpl}
+{REF: attach.tmpl}
+{REF: rhost.tmpl}
+{REF: return.tmpl}
+
+{SECTION: post_error}
+<h4 class="ErrorText ac">{MSG: post_error_generic}</h4>
+{SECTION: END}
+
+{SECTION: apply_spell_changes}
+<input accesskey="a" type="submit" class="button" name="btn_spell" value="{MSG: apply_spell_changes}" />&nbsp;
+{SECTION: END}
+
+{SECTION: signature}
+<br /><br /><div class="signature">{VAR: usr->sig}</div>
+{SECTION: END}
+
+{SECTION: preview_message}
+<div id="preview" class="ctb"><table cellspacing="1" cellpadding="2" class="PreviewTable">
+<tr>
+	<th colspan="2">{MSG: post_preview}</th>
+</tr>
+<tr>
+	<td class="RowStyleA MsgSubText">{VAR: subj}</td>
+</tr>
+<tr>
+        <td class="MsgR3">
+                <span class="MsgBodyText">{VAR: text}{TEMPLATE-DATA: signature}</span>
+        </td>
+</tr>
+<tr>
+	<td class="al RowStyleB">
+		{TEMPLATE-DATA: apply_spell_changes}
+		<input type="submit" class="button" name="btn_submit" value="{MSG: ppost_send}" tabindex="5" onclick="document.post_form.btn_action.value=\'send\';">&nbsp;
+		<input type="submit" tabindex="4" class="button" value="{MSG: post_preview_btn}" name="preview" />&nbsp;{TEMPLATE-DATA: spell_check_button}<input type="submit" class="button" name="btn_draft" value="{MSG: ppost_save_draft}" onclick="document.post_form.btn_action.value=\'draft\';" />
+	</td>
+</tr>
+</table></div><br />
+{SECTION: END}
+
+{SECTION: disable_smileys disable smilis checkbox}
+<tr>
+	<td><input type="checkbox" name="msg_smiley_disabled" id="msg_smiley_disabled" value="Y" {IF: $msg_smiley_disabled} checked="checked"{ENDIFI} /></td>
+	<td class="GenText"><b><label for="msg_smiley_disabled">{MSG: disable_smilies}</label></b></td>
+</tr>
+{SECTION: END}
+
+{SECTION: spell_check_button}
+<input accesskey="k" type="submit" class="button" value="{MSG: spell_check_msg}" name="spell" />&nbsp;
+{SECTION: END}
+
+{SECTION: fud_quote quote style for FUD code enabled forums}
+[quote title={MSG: ppost_quote_msg}]{VAR: msg_body}[/quote]
+{SECTION: END}
+
+{SECTION: html_quote quote style for html enabled forums}
+<cite>{MSG: ppost_quote_msg}</cite><blockquote>{VAR: msg_body}</blockquote>
+{SECTION: END}
+
+{SECTION: plain_quote quoting style for plain text forums}
+{MSG: ppost_quote} {MSG: ppost_quote_msg}<br />----------------------------------------------------<br />{VAR: msg_body}<br />----------------------------------------------------<br />
+{SECTION: END}
+
+{SECTION: reference_msg displayes the message the user is replying to}
+<br /><br />
+<div class="ac">{MSG: ppost_original_msg}</div>
+<table cellspacing="0" cellpadding="3" class="dashed wa">
+<tr>
+	<td>
+		<table cellspacing="1" cellpadding="2" class="ContentTable">
+			{FUNC: tmpl_drawpmsg($mm, $usr, true)}
+		</table>
+	</td>
+</tr>
+</table>
+{SECTION: END}
+
+{PAGE: PPOST_PAGE  form for writing private messages}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: tabs}
+<br />{FUNC: tmpl_cur_ppage('', $folders)}
+<form action="{TEMPLATE: PPOST_PAGE_lnk3}" method="post" id="post_form" name="post_form" enctype="multipart/form-data" onsubmit="document.post_form.btn_submit.disabled = true; document.post_form.btn_draft.disabled = true;">
+{DEF: _hs}
+<input type="hidden" name="btn_action" value="" />
+<input type="hidden" name="msg_id" value="{VAR: msg_id}" />
+<input type="hidden" name="reply" value="{VAR: reply}" />
+<input type="hidden" name="forward" value="{VAR: forward}" />
+<input type="hidden" name="old_subject" value="{VAR: old_subject}" />
+<input type="hidden" name="msg_ref_msg_id" value="{VAR: msg_ref_msg_id}" />
+<input type="hidden" name="prev_loaded" value="1" />
+{TEMPLATE-DATA: post_error}
+{TEMPLATE-DATA: preview_message}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="2">{MSG: post_form}<a name="ptop"> </a></th>
+</tr>
+<tr class="RowStyleB">
+	<td class="GenText nw">{MSG: post_logedin_user}</td>
+	<td class="GenText wa">{VAR-HTML: usr->alias} [<a href="{TEMPLATE: PPOST_PAGE_lnk}">{MSG: post_logout}</a>]</td>
+</tr>
+<tr class="RowStyleB">
+	<td class="GenText">{MSG: ppost_to}</td>
+	<td class="GenText"><input type="text" name="msg_to_list" id="msg_to_list" value="{VAR: msg_to_list}" tabindex="1" /> {IF: $FUD_OPT_1 & (8388608|4194304)}{TEMPLATE: pm_find_user}{ENDIF} [<a href="javascript://" onclick="window_open('{TEMPLATE: PPOST_PAGE_lnk2}', 'buddy_list',275,300);">{MSG: ppost_from_buddy_list}</a>]{FUNC: get_err('msg_to_list')}</td>
+</tr>
+<tr class="RowStyleB">
+	<td class="GenText">{MSG: post_title}</td>
+	<td class="GenText"><input type="text" spellcheck="true" maxlength="100" name="msg_subject" value="{VAR: msg_subject}" size="50" tabindex="2" /> {FUNC: get_err('msg_subject')}</td>
+</tr>
+{FUNC: draw_post_icons($msg_icon)}
+{IF: $FUD_OPT_1 & 8192}{FUNC: draw_post_smiley_cntrl()}{ENDIF}
+{IF: $FUD_OPT_1 & 4096}{TEMPLATE: fud_code_icons}{ENDIF}
+
+<tr class="RowStyleA"><td class="nw vt GenText">
+	{MSG: post_body}<br /><br />{FUNC: tmpl_post_options('private')}
+</td><td>
+	{FUNC: get_err('msg_body',1)}
+	<textarea id="txtb" name="msg_body" rows="" cols="" wrap="virtual" tabindex="3" style="width:98%; height:220px;">{VAR: msg_body}</textarea>
+</td></tr>
+
+{TEMPLATE-DATA: file_attachments}
+<tr class="RowStyleB vt">
+	<td class="GenText">{MSG: post_options}</td>
+	<td>
+		<table border="0" cellspacing="0" cellpadding="1">
+		<tr>
+			<td><input type="checkbox" name="msg_track" id="msg_track" value="Y"{IF: $msg_track} checked="checked"{ENDIF} /></td>
+			<td class="GenText fb"><label for="msg_track">{MSG: ppost_track_msg}</label></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td class="SmallText">{MSG: ppost_track_msg_desc}</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="msg_show_sig" id="msg_show_sig" value="Y"{IF: $msg_show_sig} checked="checked"{ENDIF} /></td>
+			<td class="GenText fb"><label for="msg_show_sig">{MSG: include_sig}</label></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td class="SmallText">{MSG: include_sig_desc}</td>
+		</tr>
+		{IF: $FUD_OPT_1 & 8192}{TEMPLATE: disable_smileys}{ENDIF}
+		</table>
+	</td>
+</tr>
+<tr class="RowStyleA">
+	<td class="GenText ar" colspan="2">
+		<input accesskey="r" type="submit" tabindex="4" class="button" value="{MSG: post_preview_btn}" name="preview" />&nbsp;
+		{TEMPLATE-DATA: spell_check_button}
+		<input type="submit" accesskey="d" class="button" name="btn_draft" value="{MSG: ppost_save_draft}" onclick="document.post_form.btn_action.value='draft';" />&nbsp;
+		<input type="submit" class="button" name="btn_submit" value="{MSG: ppost_send}" tabindex="5" onclick="document.post_form.btn_action.value='send';" accesskey="s" />
+	</td>
+</tr>
+</table>
+</form>
+{TEMPLATE-DATA: reference_msg}
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+
+<style>
+	.ui-autocomplete-loading { background: white url("{THEME_IMAGE_ROOT}/ajax-loader.gif") right center no-repeat; }
+</style>
+<script>
+	jQuery(function() {
+		jQuery("#msg_to_list").autocomplete({
+			source: "index.php?t=autocomplete&lookup=alias", minLength: 1
+		});
+	});
+</script>
+
+{TEMPLATE: common_javascript}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: pm_err_nopm_title}
+{MSG: pm_err_nopm_title}
+{SECTION: END}
+
+{SECTION: pm_err_nopm_msg}
+{MSG: pm_err_nopm_msg}
+{SECTION: END}
+
+{SECTION: post_err_attach_size}
+<span class="ErrorText">{MSG: post_err_attach_size}</span><br />
+{SECTION: END}
+
+{SECTION: post_err_attach_ext}
+<span class="ErrorText">{MSG: post_err_attach_ext}</span><br />
+{SECTION: END}
+
+{SECTION: post_err_attach_filelimit}
+<span class="ErrorText">{MSG: post_err_attach_filelimit}</span><br />
+{SECTION: END}
+
+{SECTION: pm_update}
+{MSG: pm_update}
+{SECTION: END}
+
+{SECTION: pm_no_space_title}
+{MSG: pm_no_space_title}
+{SECTION: END}
+
+{SECTION: pm_no_space_msg}
+{MSG: pm_no_space_msg}
+{SECTION: END}
+
+{SECTION: pm_err_disabled_title}
+{MSG: pm_err_disabled_title}
+{SECTION: END}
+
+{SECTION: pm_err_disabled_msg}
+{MSG: pm_err_disabled_msg}
+{SECTION: END}
+
+{SECTION: pm_find_user}
+[<a href="javascript://" onclick="window_open(\'{TEMPLATE: pm_find_user_lnk1}\',\'user_list\',400,250);">{MSG: ppost_find_User}</a>]
+{SECTION: END}
+
+{SECTION: PPOST_PAGE_lnk}
+{ROOT}?t=login&amp;{DEF: _rsid}&amp;logout=1&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: pm_find_user_lnk1}
+{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=post_form.msg_to_list
+{SECTION: END}
+
+{SECTION: PPOST_PAGE_lnk2}
+{ROOT}?t=qbud&amp;{DEF: _rsid}&amp;1=1
+{SECTION: END}
+
+{SECTION: PPOST_PAGE_lnk3}
+{ROOT}?t=ppost
+{SECTION: END}

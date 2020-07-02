@@ -1,0 +1,119 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: actions.tmpl 6063 2017-08-22 20:24:55Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: actions.php.t; output: actions.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: alt_var.tmpl}
+{REF: ulink.tmpl}
+{REF: is_perms.tmpl}
+
+{SECTION: last_post last by a user}
+{TEMPLATE: last_post_date}
+<br />
+<a href="{TEMPLATE: last_post_lnk}">{VAR: r[9]}</a>
+{SECTION: END}
+
+{SECTION: last_post_na no last post}
+{MSG: na}
+{SECTION: END}
+
+{SECTION: action_entry iSpy user list row}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td class="GenText">{VAR: user_login}</td>
+	<td class="GenText">{VAR: action}</td>
+	{IF: $is_a}<td class="SmallText"><a href="{TEMPLATE: action_ip_entry_url}">{VAR: ip_addr}</a></td>{ENDIF}
+	<td class="DateText">{TEMPLATE: action_entry_date}</td>
+	<td class="SmallText">{TEMPLATE-DATA: last_post}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: anon_user anon user name}
+{GVAR: ANON_NICK}
+{SECTION: END}
+
+{SECTION: reg_user_link registered user link}
+<a href="{TEMPLATE: reg_user_link_lnk}">{FUNC: draw_user_link($r[3], $r[6], $r[4])}</a>
+{SECTION: END}
+
+{PAGE: ACTION_PAGE iSpy User Action List}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<br />
+{TEMPLATE-DATA: admin_cp}
+<div class="GenText ac">
+	[ <a href="{TEMPLATE: ACTION_PAGE_lnk}" rel="nofollow">{MSG: refresh_list}</a> ]
+	[ <a href="{TEMPLATE: i_spy_lnk1}" rel="nofollow">{MSG: logedin_todays_visitors}</a> ]
+</div>
+<br />
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th><a href="{TEMPLATE: action_sort_alias_lnk}" class="thLnk" rel="nofollow">{MSG: user}</a></th>
+	<th>{MSG: action}</th>
+	{IF: $is_a}<th><a href="{TEMPLATE: action_sort_ip_lnk}" class="thLnk" rel="nofollow">{MSG: action_ip}</a></th>{ENDIFI}
+	<th><a href="{TEMPLATE: action_sort_time_lnk}" class="thLnk" rel="nofollow">{MSG: time}</a></th>
+	<th>{MSG: action_latest_post}</th>
+</tr>
+{TEMPLATE-DATA: action_data}
+</table>
+<br />
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: actions_update}
+{MSG: actions_update}
+{SECTION: END}
+
+{SECTION: no_view_perm}
+{MSG: no_view_perm}
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}?t=usrinfo&id={VAR: r[1]}&{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: last_post_lnk}
+{ROOT}?t={DEF: d_thread_view}&goto={VAR: r[8]}&{DEF: _rsid}#msg_{VAR: r[8]}
+{SECTION: END}
+
+{SECTION: ACTION_PAGE_lnk}
+{ROOT}?t=actions&rand={FUNC: get_random_value()}&{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_sort_alias_lnk}
+{ROOT}?t=actions&amp;o=alias&amp;s={IF: $o=='u.alias' && $s=='ASC'}d{ELSE}a{END}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_sort_time_lnk}
+{ROOT}?t=actions&amp;o=time&amp;s={IF: $o=='s.time_sec' && $s=='ASC'}d{ELSE}a{END}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_sort_ip_lnk}
+{ROOT}?t=actions&amp;o=ip&amp;s={IF: $o=='s.time_sec' && $s=='ASC'}d{ELSE}a{ENDI}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_ip_entry_url}
+{ROOT}?t=ip&amp;ip={VAR: ip_addr}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: logedin_todays_visitors}
+{MSG: logedin_todays_visitors}
+{SECTION: END}
+
+{SECTION: i_spy_lnk1}
+{ROOT}?t=online_today&amp;{DEF: _rsid}
+{SECTION: END}

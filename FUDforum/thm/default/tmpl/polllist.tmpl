@@ -1,0 +1,89 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: polllist.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: polllist.php.t; output: polllist.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: alt_var.tmpl}
+{REF: draw_pager.tmpl}
+{REF: stats.tmpl}
+
+{SECTION: polllist_online_indicator}
+<img src="{THEME_IMAGE_ROOT}/online.png" title="{MSG: user_online}" alt="{MSG: user_online}" />&nbsp;
+{SECTION: END}
+
+{SECTION: polllist_offline_indicator}
+<img src="{THEME_IMAGE_ROOT}/offline.png" title="{MSG: user_offline}" alt="{MSG: user_offline}" />&nbsp;
+{SECTION: END}
+
+{SECTION: poll_entry}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td class="wa">{VAR: obj->name}</td>
+	<td class="nw">{TEMPLATE: poll_date}</td>
+	<td class="nw">{TEMPLATE-DATA: online_indicator}<a href="{TEMPLATE: poll_entry_lnk}">{VAR-HTML: obj->alias}</a></td>
+	<td class="nw ac">{VAR: obj->total_votes}</td>
+	<td class="nw ac"> <b>::</b> <a href="{TEMPLATE: vote_lnk_lnk}">{MSG: polllist_vote}</a> {TEMPLATE-DATA: view_res_lnk} <b>::</b></td>
+</tr>
+{SECTION: END}
+
+{SECTION: poll_view_res_lnk}
+<b>::</b> <a href="{TEMPLATE: poll_view_res_lnk_lnk}">{MSG: polllist_view_results}</a>
+{SECTION: END}
+
+{SECTION: polllist_update}
+{MSG: polllist_update}
+{SECTION: END}
+
+{PAGE: POLLLIST_PAGE A page that lists all of the available polls in a forum}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<br />{TEMPLATE-DATA: admin_cp}<br /><br />
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th>{MSG: polllist_name}</th>
+	<th class="nw"><a class="thLnk" href="{TEMPLATE: POLLLIST_PAGE_lnk}">{MSG: polllist_date}</a></th>
+	<th class="nw">{MSG: polllist_owner}</th>
+	<th class="nw ac">{MSG: polllist_votes}</th>
+	<th class="nw ac">{MSG: polllist_action}</th>
+</tr>
+{TEMPLATE-DATA: poll_entries}
+</table>
+<br /><br />
+{TEMPLATE-DATA: pager}
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: poll_no_polls}
+<tr>
+	<td colspan="5" class="ac">{MSG: poll_no_polls}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: vote_lnk_lnk}
+{ROOT}?t=polllist&amp;goto={VAR: obj->id}&amp;{DEF: _rsid}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: poll_view_res_lnk_lnk}
+{ROOT}?t=polllist&amp;goto={VAR: obj->id}&amp;vote=1&amp;{DEF: _rsid}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: poll_entry_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->owner}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: POLLLIST_PAGE_lnk}
+{ROOT}?t=polllist&amp;start={VAR: start}&amp;oby={VAR: oby_rev_val}&amp;{DEF: _rsid}
+{SECTION: END}

@@ -1,0 +1,98 @@
+<?php
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: google_adsense.plugin 6370 2020-02-19 19:14:35Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin.
+plugin_add_hook('COMPILER_EXPAND_TEMPLATE', 'plugin_google_adsense');
+
+function plugin_google_adsense($array) {
+	list($tmpl, $tag, $sec, $name, $file) = $array;
+
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'google/google_adsense.ini') === false) {
+		die('ERROR: Please configure the google_adsense plugin from the Plugin Manager Control panel.');
+	}
+
+	if ($name == 'usercp' && $ini['GOOGLE_ADSENSE_POS'] == 0) {
+		$tmpl = $tmpl . $ini['GOOGLE_ADSENSE_CODE'];
+	} else if ($name == 'header' && $ini['GOOGLE_ADSENSE_POS'] == 1) {
+		$tmpl = $ini['GOOGLE_ADSENSE_CODE'] . $tmpl;
+	} else if ($name == 'header' && $ini['GOOGLE_ADSENSE_POS'] == 2) {
+		$tmpl = $tmpl . $ini['GOOGLE_ADSENSE_CODE'];
+	} else if ($name == 'curtime' && $ini['GOOGLE_ADSENSE_POS'] == 3) {
+		$tmpl = $ini['GOOGLE_ADSENSE_CODE'] . $tmpl;
+	} else if ($name == 'curtime' && $ini['GOOGLE_ADSENSE_POS'] == 4) {
+		$tmpl = $tmpl . $ini['GOOGLE_ADSENSE_CODE'];
+	} else if ($name == 'footer' && $ini['GOOGLE_ADSENSE_POS'] == 5) {
+		$tmpl = $ini['GOOGLE_ADSENSE_CODE'] . $tmpl;
+	} else if ($name == 'footer' && $ini['GOOGLE_ADSENSE_POS'] == 6) {
+		$tmpl = $tmpl . $ini['GOOGLE_ADSENSE_CODE'];
+	} else if ($name == 'header' && $ini['GOOGLE_ADSENSE_POS'] == 7) {
+		$tmpl = str_replace('</head>', $ini['GOOGLE_ADSENSE_CODE'] .'</head>', $tmpl);
+	}
+
+	return array($tmpl, $tag, $sec, $name, $file);
+}
+
+function google_adsense_info() {
+	return array('name' => 'Google AdSense',
+				'desc' => 'Display ads from Google AdSense on your forum\'s web pages.',
+				'cat'  => 'Third-party Integration',
+				'version' => '1.1');
+}
+
+function google_adsense_enable() {
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'google/google_adsense.ini') === false) {
+		return array(null, 'Please configure the google_adsense plugin before enabling it.');	// OK, Err.
+	}
+	@define('REBUILD_THEMES', 1);
+}
+
+function google_adsense_disable() {
+	@define('REBUILD_THEMES', 1);
+}
+
+function google_adsense_config() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'google/google_adsense.ini') === false) {
+		$ini = NULL;
+	}
+
+	if (isset($_POST['Set'])) {
+		foreach (array_keys($_POST) as $key) {
+			if (substr($key,0,15) == 'GOOGLE_ADSENSE_') {
+				$ini[$key] = trim($_POST[$key]);
+			}
+		}
+		$fp = fopen($GLOBALS['PLUGIN_PATH'] .'google/google_adsense.ini', 'w');
+		fwrite($fp, '<?php $ini = '. var_export($ini, 1) .'; ?>');
+		fclose($fp);
+		pf(successify('Settings successfully saved.'));
+		compile_themes();
+	}
+	?>
+<p>Where should it be displayed:<br />
+<select name="GOOGLE_ADSENSE_POS">
+<option value="0" <?php if($ini['GOOGLE_ADSENSE_POS']==0) echo 'selected="selected"'; ?>>After top level menu.</option>
+<option value="1" <?php if($ini['GOOGLE_ADSENSE_POS']==1) echo 'selected="selected"'; ?>>Before page header.</option>
+<option value="2" <?php if($ini['GOOGLE_ADSENSE_POS']==2) echo 'selected="selected"'; ?>>After page header.</option>
+<option value="3" <?php if($ini['GOOGLE_ADSENSE_POS']==3) echo 'selected="selected"'; ?>>Before current time.</option>
+<option value="4" <?php if($ini['GOOGLE_ADSENSE_POS']==4) echo 'selected="selected"'; ?>>After current time.</option>
+<option value="5" <?php if($ini['GOOGLE_ADSENSE_POS']==5) echo 'selected="selected"'; ?>>Before page footer.</option>
+<option value="6" <?php if($ini['GOOGLE_ADSENSE_POS']==6) echo 'selected="selected"'; ?>>After page footer.</option>
+<option value="7" <?php if($ini['GOOGLE_ADSENSE_POS']==7) echo 'selected="selected"'; ?>>In HTML header.</option>
+</select>
+</p>
+
+<p>Your AdSense unit code (get it from <a href="http://www.google.com/adsense/">google.com/adsense</a>):<br />
+<textarea name="GOOGLE_ADSENSE_CODE" cols="72" rows="10"><?php echo $ini['GOOGLE_ADSENSE_CODE'] ?></textarea>
+<font size="-1">Tip: you can add additional HTML as well. For example, use the CENTRE tag to center your ad.</font>
+</p>
+	<?php
+}
+

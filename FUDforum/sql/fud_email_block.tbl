@@ -1,0 +1,23 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_email_block.tbl 5520 2012-06-25 13:11:51Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+# TODO: Rename 'string' to 'email' for future CUBRID support.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}email_block;
+
+CREATE TABLE {SQL_TABLE_PREFIX}email_block
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	email_block_opt	INT NOT NULL DEFAULT 1,
+	string		VARCHAR(255) NOT NULL
+);
+
+CREATE UNIQUE INDEX {SQL_TABLE_PREFIX}email_block_i_s ON {SQL_TABLE_PREFIX}email_block (string);
+
+# 1 type (SIMPLE/REGEX)

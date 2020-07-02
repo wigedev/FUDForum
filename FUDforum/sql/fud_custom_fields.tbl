@@ -1,0 +1,35 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_custom_fields.tbl 5394 2011-10-03 20:27:40Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}custom_fields;
+
+CREATE TABLE {SQL_TABLE_PREFIX}custom_fields
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name		VARCHAR(255) NOT NULL,
+	descr		VARCHAR(255),
+	type_opt	INT NOT NULL,
+	choice		TEXT,
+	field_opt	INT NOT NULL,
+	vieworder	INT NOT NULL DEFAULT 0
+);
+
+# Field Opts
+# 0 optional
+# 1 mandatory
+# 2 visible in profile (all users)
+# 4 visible in profile (only to logged in users)
+# 8 only admin users can edit
+# 16 field cannot be edited
+
+# Type Opts
+# 0 single line
+# 1 text box
+# 2 select drop down
+# 4 radio buttons

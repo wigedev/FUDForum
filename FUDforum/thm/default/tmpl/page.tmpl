@@ -1,0 +1,67 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: page.tmpl 5325 2011-07-15 14:14:17Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: page.php.t; output: page.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: usercp.tmpl}
+{REF: curtime.tmpl}
+{REF: stats.tmpl}
+{REF: footer.tmpl}
+
+{PAGE: PAGE_PAGE // Display a static forum page.}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<div class="breadcrumbs">
+	<a href="{TEMPLATE: dfp_home_lnk}">{MSG: home}</a> &nbsp;&raquo;
+	{IF: empty($page)}
+		{MSG: page_list_heading}
+	{ELSE}
+		{IF: $page->page_opt&2}
+			<a href="{TEMPLATE: page_list_lnk}">{MSG: page_list_heading}</a> &nbsp;&raquo; {VAR: page->title}
+		{ELSE}
+			{VAR: page->title}
+		{ENDI}
+	{END}
+<div>
+<div class="ContentTable">
+{IF: !empty($page->title)}
+	<h2>{VAR: page->title}</h2>
+	<div class="content page-content">
+		{VAR: page->body}
+	</div>
+{ELSE}
+	<h2>{MSG: page_list_heading}</h2>
+	<ul>
+		{TEMPLATE-DATA: page_list}
+	</ul>
+	<i>{MSG: page_list_total}</i>
+{END}
+</div>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: page_list_entry}
+<li><a href="{TEMPLATE: page_list_entry_lnk}">{VAR: r->title}</a>
+{SECTION: END}
+
+{SECTION: page_list_entry_lnk}
+{ROOT}?t=page&id={VAR: r->slug}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: page_list_lnk}
+{ROOT}?t=page&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: page_update}
+{MSG: page_update}
+{SECTION: END}

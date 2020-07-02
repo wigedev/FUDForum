@@ -1,0 +1,117 @@
+/**
+* copyright            : (C) 2001-2013 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: selmsg.tmpl 6244 2019-02-10 07:07:03Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: selmsg.php.t; output: selmsg.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: drawmsg.tmpl}
+{REF: fileio.tmpl}
+{REF: is_perms.tmpl}
+
+{SECTION: status_indicator_on indicates that the particular filter option is enabled}
+<span class="selmsgInd">(<span class="GenTextRed">{MSG: on}</span>)</span>
+{SECTION: END}
+
+{SECTION: status_indicator_off indicates that the particular filter option is disabled}
+<span class="selmsgInd">({MSG: off})</span>
+{SECTION: END}
+
+{SECTION: more_unread_messages more unread messages link}
+<div class="GenText ac">[<a href="{TEMPLATE: more_unread_messages_lnk}" title="{MSG: more_unread_messages_desc}">{MSG: more_unread_messages}</a>]</div><img src="{BASE}blank.gif" alt="" height="3" />
+{SECTION: END}
+
+{SECTION: forum_row forum heading row}
+<tr>
+	<th class="SelFS">
+		{MSG: forum} <a class="thLnk" href="{TEMPLATE: forum_row_lnk}"><span class="lg">{VAR: r->name}</span></a>
+	</th>
+</tr>
+{SECTION: END}
+
+{SECTION: thread_row thread heading row}
+<tr>
+	<th class="SelTS">
+		&nbsp;{MSG: thread} <a class="thLnk" href="{TEMPLATE: thread_row_lnk}">{VAR: r->thr_subject}</a>
+	</th>
+</tr>
+{SECTION: END}
+
+{SECTION: no_result}
+<tr><th align="center">{MSG: no_posts}</th></tr>
+{SECTION: END}
+
+{PAGE: SELMSG_PAGE a form which can show today's,unread,unanswered,etc... posts}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<a href="{TEMPLATE: todays_posts_lnk}" title="{MSG: sel_todays_posts_desc}">{MSG: sel_todays_posts} {IF: isset($_GET['date'])}{TEMPLATE: status_indicator_on}{ELSE}{TEMPLATE: status_indicator_off}{ENDI}</a>
+{IF: _uid}&nbsp;| <a href="{TEMPLATE: unread_messages_lnk}" title="{MSG: sel_unread_messages_desc}">{MSG: sel_unread_messages} {IF: isset($_GET['unread'])}{TEMPLATE: status_indicator_on}{ELSE}{TEMPLATE: status_indicator_off}{ENDI}</a>{ENDIF}
+{IF: _uid}&nbsp;| <a href="{TEMPLATE: subscribed_frm_lnk}" title="{MSG: subscribed_forums_desc}">{MSG: subscribed_forums} {IF: isset($_GET['sub_forum_limit'])}{TEMPLATE: status_indicator_on}{ELSE}{TEMPLATE: status_indicator_off}{ENDI}</a>{ENDIF}
+{IF: _uid}&nbsp;| <a href="{TEMPLATE: subscribed_thr_lnk}" title="{MSG: subscribed_threads_desc}">{MSG: subscribed_threads} {IF: isset($_GET['sub_th_limit'])}{TEMPLATE: status_indicator_on}{ELSE}{TEMPLATE: status_indicator_off}{ENDI}</a>{ENDIF}
+&nbsp;| <a href="{TEMPLATE: unanswered_lnk}" title="{MSG: sel_unanswered_posts_desc}">{MSG: sel_unanswered_posts} {IF: isset($_GET['reply_count'])}{TEMPLATE: status_indicator_on}{ELSE}{TEMPLATE: status_indicator_off}{END}</a>
+<br />{TEMPLATE-DATA: admin_cp}<br />
+<table cellspacing="0" cellpadding="0" class="ContentTable">
+	{TEMPLATE-DATA: message_data}
+</table>
+{TEMPLATE-DATA: pager}
+<br /><br />
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script>
+	min_max_posts("{THEME_IMAGE_ROOT}", "{MSG: minimize_message}", "{MSG: maximize_message}");
+	format_code('{MSG: code_title}', '{MSG: code_select_all}', '{MSG: code_show_hide}');
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: selmsg_update}
+{MSG: selmsg_update}
+{SECTION: END}
+
+{SECTION: no_unread_messages}
+<tr><th class="ac">{MSG: no_unread_messages}</th></tr>
+{SECTION: END}
+
+{SECTION: todays_posts_lnk}
+{ROOT}?{VAR: dt_opt}
+{SECTION: END}
+
+{SECTION: unread_messages_lnk}
+{ROOT}?{VAR: un_opt}
+{SECTION: END}
+
+{SECTION: unanswered_lnk}
+{ROOT}?{VAR: rp_opt}
+{SECTION: END}
+
+{SECTION: subscribed_frm_lnk}
+{ROOT}?{VAR: frm_opt}
+{SECTION: END}
+
+{SECTION: subscribed_thr_lnk}
+{ROOT}?{VAR: th_opt}
+{SECTION: END}
+
+{SECTION: more_unread_messages_lnk}
+{ROOT}?{VAR: _SERVER['QUERY_STRING']}
+{SECTION: END}
+
+{SECTION: forum_row_lnk}
+{ROOT}?t={DEF: t_thread_view}&amp;frm_id={VAR: r->forum_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: thread_row_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: r->id}&amp;{DEF: _rsid}#msg_{VAR: r->id}
+{SECTION: END}

@@ -1,0 +1,290 @@
+/**
+* copyright            : (C) 2001-2013 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: calendar.tmpl 5716 2013-10-26 16:50:02Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: calendar.php.t; output: cal.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: usercp.tmpl}
+{REF: curtime.tmpl}
+{REF: stats.tmpl}
+{REF: footer.tmpl}
+
+{PAGE: CAL_PAGE display the forum's calendar}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+{IF: $view == 'y'}
+<tr>
+	<th colspan="3">
+		<h2>
+		{IF: $prev_year}&nbsp;<a href="{TEMPLATE: year_prev_lnk}" class="control" rel="nofollow">&laquo;</a>{ENDIFI}
+		&nbsp;{VAR: year}&nbsp;
+		{IF: $next_year}<a href="{TEMPLATE: year_next_lnk}" class="control" rel="nofollow">&raquo;</a>{ENDIFI}
+		</h2>
+	</th>
+</tr>
+<tr>
+	<td width="33%" class="vt"><h4>{VAR: months[0]} {VAR: year}</h4>{FUNC: draw_calendar($year, 1, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[1]} {VAR: year}</h4>{FUNC: draw_calendar($year, 2, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[2]} {VAR: year}</h4>{FUNC: draw_calendar($year, 3, 'small', $year, $month, $day)}</td>
+</tr>
+<tr>
+	<td width="33%" class="vt"><h4>{VAR: months[3]} {VAR: year}</h4>{FUNC: draw_calendar($year, 4, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[4]} {VAR: year}</h4>{FUNC: draw_calendar($year, 5, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[5]} {VAR: year}</h4>{FUNC: draw_calendar($year, 6, 'small', $year, $month, $day)}</td>
+</tr>
+<tr>
+	<td width="33%" class="vt"><h4>{VAR: months[6]} {VAR: year}</h4>{FUNC: draw_calendar($year, 7, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[7]} {VAR: year}</h4>{FUNC: draw_calendar($year, 8, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[8]} {VAR: year}</h4>{FUNC: draw_calendar($year, 9, 'small', $year, $month, $day)}</td>
+</tr>
+<tr>
+	<td width="33%" class="vt"><h4>{VAR: months[9]}  {VAR: year}</h4>{FUNC: draw_calendar($year, 10, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[10]} {VAR: year}</h4>{FUNC: draw_calendar($year, 11, 'small', $year, $month, $day)}</td>
+	<td width="33%" class="vt"><h4>{VAR: months[11]} {VAR: year}</h4>{FUNC: draw_calendar($year, 12, 'small', $year, $month, $day)}</td>
+</tr>
+{ENDIF}
+
+{IF: $view == 'm'}
+<tr>
+	<th width="35%" class="al">
+		{IF: $prev_month}<a href="{TEMPLATE: month_prev_lnk}" class="control" rel="nofollow">&laquo;</a>{ENDIFI}
+	</th>
+	<th class="ac">
+		<h2>{VAR: months[$month-1]} <a href="{TEMPLATE: year_cur_lnk}" class="control" rel="nofollow">{VAR: year}</a></h2>
+	</th>
+	<th width="35%" class="ar">
+		{IF: $next_month}<a href="{TEMPLATE: month_next_lnk}" class="control" rel="nofollow">&raquo;</a>{ENDIFI}
+	</th>
+</tr>
+<tr class="ac">
+	<td colspan="3">
+		{FUNC: draw_calendar($year, $month, 'large', $year, $month, $day)}
+	</td>
+</tr>
+<tr>
+	<td class="ac" colspan="3">
+		<form method="get" action="index.php">
+		<b>{MSG: cal_goto_date}</b><input type="hidden" name="t" value="cal" />
+		<br />{VAR: select_month_control} {VAR: select_year_control} <input type="submit" name="submit" value="{MSG: go}" />
+		</form>
+	</td>
+</tr>
+{ENDIF}
+
+{IF: $view == 'd'}
+<tr>
+	<th colspan="2">
+		<h2>
+		{IF: $prev_day}<a href="{TEMPLATE: day_prev_lnk}" class="control" rel="nofollow">&laquo;</a>{ENDIFI}
+		{VAR: day} <a href="{TEMPLATE: month_cur_lnk}"class="control" rel="nofollow">{VAR: months[$month-1]}</a> <a href="{TEMPLATE: year_cur_lnk}" class="control" rel="nofollow">{VAR: year}</a>
+		{IF: $next_day}<a href="{TEMPLATE: day_next_lnk}" class="control" rel="nofollow">&raquo;</a>{ENDIFI}
+		</h2>
+	</th>
+</tr>
+<tr>
+	<td class="RowStyleB vt" width="55%">
+		<h3>{MSG: cal_day_heading}</h3>
+		{IF: $events_for_day}<ul>{VAR: events_for_day}</ul>{ELSE}{TEMPLATE: cal_no_events}{ENDI}
+		<br /><br />
+		<form method="get" action="index.php">
+		{MSG: cal_goto_date} <input type="hidden" name="t" value="cal" /><input type="hidden" name="view" value="{VAR: view}" />
+		{VAR: select_month_control} {VAR: select_year_control} 
+		<input type="hidden" name="day" value="{VAR: day}" /><input type="submit" name="submit" value="{MSG: go}" />
+		</form>
+	</td>
+	<td class="ac" width="45%"> 
+		<h4><a href="{TEMPLATE: month_cur_lnk}" class="control">{VAR: months[$month-1]} {VAR: year}</a></h4>
+		{FUNC: draw_calendar($year, $month, 'small', $year, $month, $day)}
+	</td>
+</tr>
+{ENDIF}
+
+</table>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: calendar_title}
+{MSG: calendar}
+{SECTION: END}
+
+/* Calendar links. */
+
+{SECTION: year_cur_lnk}
+{ROOT}?t=cal&amp;view=y&amp;year={VAR: year}
+{SECTION: END}
+
+{SECTION: year_next_lnk}
+{ROOT}?t=cal&amp;view=y&amp;year={VAR: next_year}
+{SECTION: END}
+
+{SECTION: year_prev_lnk}
+{ROOT}?t=cal&amp;view=y&amp;year={VAR: prev_year}
+{SECTION: END}
+
+{SECTION: month_cur_lnk}
+{ROOT}?t=cal&amp;view=m&amp;month={VAR: month}&amp;year={VAR: year}
+{SECTION: END}
+
+{SECTION: month_next_lnk}
+{ROOT}?t=cal&amp;view=m&amp;year={VAR: next_year}&amp;month={VAR: next_month}
+{SECTION: END}
+
+{SECTION: month_prev_lnk}
+{ROOT}?t=cal&amp;view=m&amp;year={VAR: prev_year}&amp;month={VAR: prev_month}
+{SECTION: END}
+
+{SECTION: day_cur_lnk}
+{ROOT}?t=cal&amp;view=d&amp;year={VAR: year}&amp;month={VAR: month}&amp;day={VAR: day}
+{SECTION: END}
+
+{SECTION: day_next_lnk}
+{ROOT}?t=cal&amp;view=d&amp;year={VAR: next_year}&amp;month={VAR: next_month}&amp;day={VAR: next_day}
+{SECTION: END}
+
+{SECTION: day_prev_lnk}
+{ROOT}?t=cal&amp;view=d&amp;year={VAR: prev_year}&amp;month={VAR: prev_month}&amp;day={VAR: prev_day}
+{SECTION: END}
+
+/* Day and month messages. */
+
+{SECTION: sunday}
+{MSG: sunday}
+{SECTION: END}
+
+{SECTION: sunday_short}
+{MSG: sunday_short}
+{SECTION: END}
+
+{SECTION: monday}
+{MSG: monday}
+{SECTION: END}
+
+{SECTION: monday_short}
+{MSG: monday_short}
+{SECTION: END}
+
+{SECTION: tuesday}
+{MSG: tuesday}
+{SECTION: END}
+
+{SECTION: tuesday_short}
+{MSG: tuesday_short}
+{SECTION: END}
+
+{SECTION: wednesday}
+{MSG: wednesday}
+{SECTION: END}
+
+{SECTION: wednesday_short}
+{MSG: wednesday_short}
+{SECTION: END}
+
+{SECTION: thursday}
+{MSG: thursday}
+{SECTION: END}
+
+{SECTION: thursday_short}
+{MSG: thursday_short}
+{SECTION: END}
+
+{SECTION: friday}
+{MSG: friday}
+{SECTION: END}
+
+{SECTION: friday_short}
+{MSG: friday_short}
+{SECTION: END}
+
+{SECTION: saturday}
+{MSG: saturday}
+{SECTION: END}
+
+{SECTION: saturday_short}
+{MSG: saturday_short}
+{SECTION: END}
+
+{SECTION: month_1}
+{MSG: month_1}
+{SECTION: END}
+
+{SECTION: month_2}
+{MSG: month_2}
+{SECTION: END}
+
+{SECTION: month_3}
+{MSG: month_3}
+{SECTION: END}
+
+{SECTION: month_4}
+{MSG: month_4}
+{SECTION: END}
+
+{SECTION: month_5}
+{MSG: month_5}
+{SECTION: END}
+
+{SECTION: month_6}
+{MSG: month_6}
+{SECTION: END}
+
+{SECTION: month_7}
+{MSG: month_7}
+{SECTION: END}
+
+{SECTION: month_8}
+{MSG: month_8}
+{SECTION: END}
+
+{SECTION: month_9}
+{MSG: month_9}
+{SECTION: END}
+
+{SECTION: month_10}
+{MSG: month_10}
+{SECTION: END}
+
+{SECTION: month_11}
+{MSG: month_11}
+{SECTION: END}
+
+{SECTION: month_12}
+{MSG: month_12}
+{SECTION: END}
+
+{SECTION: cal_no_events}
+<p>{MSG: cal_no_events}</p>
+{SECTION: END}
+
+{SECTION: cal_event_entry}
+<li><div class="event">{VAR: event}</div></li>
+{SECTION: END}
+
+{SECTION: cal_birthday}
+{MSG: cal_birthday} {IF: $age}{MSG: cal_birthday_age}{ENDIF}
+{SECTION: END}
+
+{SECTION: cal_birthdays}
+{MSG: cal_birthdays}
+{SECTION: END}
+
+{SECTION: cal_user_link}
+<a href="{TEMPLATE: cal_user_link_lnk}">{VAR: r[1]}</a>
+{SECTION: END}
+
+{SECTION: cal_user_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: r[0]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: cal_update}
+{MSG: cal_update}
+{SECTION: END}

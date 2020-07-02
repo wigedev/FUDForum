@@ -1,0 +1,76 @@
+<?php
+/**
+* copyright            : (C) 2001-2016 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: botscout.plugin 6076 2017-09-24 07:35:54Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin.
+plugin_add_hook('PRE_REGISTER', 'plugin_botscout');
+
+// Validate registering users with BotScout
+function plugin_botscout($uent) {
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'botscout.ini') === false) {
+		$ini = array();
+	}
+
+	$apiquery = '//botscout.com/test/?multi&name='. urlencode($uent->login) .'&mail='. urlencode($uent->email) .'&ip='. $_SERVER['REMOTE_ADDR'];
+	if (isset($ini['BOTSCOUT_API_KEY'])) {
+		$apiquery .= '&key='. $ini['BOTSCOUT_API_KEY'];
+	}
+
+	$botscout_data = file_get_contents($apiquery);
+	if (substr($botscout_data, 0, 1) == '!') {	// Exclamation mark indicates an error!
+		fud_logerror('Botscout returned ['. $botscout_data .'] while validating '. $uent->email .' from '. $_SERVER['REMOTE_ADDR'] .'. User will be allowed to register.', 'fud_errors');
+		return $uent;
+	}
+
+	$botdata = explode('|', $botscout_data); 
+	if ($botdata[3] > 0 || $botdata[5] > 0 || $botdata[7] > 0) { 	// Tests email address, IP & user.
+		fud_logerror('Botscout blocked registration: '. $uent->login .', '. $uent->email .', '. $_SERVER['REMOTE_ADDR'], 'fud_errors');
+		echo '<h2>Sorry, you are listed on BotScout.com and are not allowed to register!</h2><p>'.		
+		     'Your '. $botdata[2] .' was found '. $botdata[3] .' times.<br />'.
+		     'Your '. $botdata[4] .' was found '. $botdata[5] .' times.<br />'.
+		     'Your '. $botdata[6] .' was found '. $botdata[7] .' times.</p>'.
+		     '<p>We do not blacklist users, but repeated checks against your details will get you listed!</p>';
+		exit;
+	} else if (defined('fud_debug')) {
+		fud_logerror('BotScout allowed registration: '. $uent->login .', '. $uent->email .', '. $_SERVER['REMOTE_ADDR'], 'fud_errors');
+	}
+
+	return $uent;
+}
+
+function botscout_info() {
+	return array('name' => 'BotScout',
+		     'desc' => 'This plugin integrates with the BotScout API to screen registering users and prevent known bots from creating accounts on your forum.',
+		     'cat'  => 'Anti-spam',
+		     'version' => '1.4');
+}
+
+function botscout_config() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'botscout.ini') === false) {
+		$ini = NULL;
+	}
+		
+	if (isset($_POST['Set'])) {
+		foreach (array_keys($_POST) as $key) {
+			if (substr($key, 0, 9) == 'BOTSCOUT_') {
+				$ini[$key] = $_POST[$key];
+			}
+		}
+		$fp = fopen($GLOBALS['PLUGIN_PATH'] .'botscout.ini', 'w');
+		fwrite($fp, '<?php $ini = '. var_export($ini, 1).'; ?>');
+		fclose($fp);
+		pf(successify('Settings successfully saved.'));
+	}
+	?>
+<p>Your API key (get one from <a href="//botscout.com/">botscout.com</a>):<br />
+<input name="BOTSCOUT_API_KEY" value="<?php echo $ini['BOTSCOUT_API_KEY'] ?>" size="60" /></p>
+	<?php
+}
+

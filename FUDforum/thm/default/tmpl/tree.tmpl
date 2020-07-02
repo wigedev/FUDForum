@@ -1,0 +1,255 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: tree.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: tree.php.t; output: tree.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: forumsel.tmpl}
+{REF: drawmsg.tmpl}
+{REF: fileio.tmpl}
+{REF: thread_notify.tmpl}
+{REF: alt_var.tmpl}
+{REF: is_perms.tmpl}
+{REF: show.tmpl}
+{REF: th_nav.tmpl}
+{REF: th.tmpl}
+{REF: draw_forum_path.tmpl}
+{REF: topic_rating.tmpl}
+
+{SECTION: tree_unread_message new message}
+<img id="msgIm{VAR: cur->id}" src="{THEME_IMAGE_ROOT}/unread.png" alt="{MSG: unread_message}" title="{MSG: unread_message}" />
+{SECTION: END}
+
+{SECTION: tree_read_message read message}
+<img src="{THEME_IMAGE_ROOT}/read.png" alt="{MSG: read_message}" title="{MSG: read_message}" />
+{SECTION: END}
+
+{SECTION: thread_icon}
+<img src="{BASE}images/message_icons/{VAR: cur->icon}" alt="{VAR: cur->icon}" />
+{SECTION: END}
+
+{SECTION: split_thread_lnk}
+{ROOT}?t=split_th&amp;{DEF: _rsid}&amp;th={VAR: th}
+{SECTION: END}
+
+{SECTION: split_thread}
+<a href="{TEMPLATE: split_thread_lnk}">{MSG: split_thread}</a>&nbsp;|&nbsp;
+{SECTION: END}
+
+{SECTION: mod_lock_thread_lnk}
+{ROOT}?t=mmod&amp;{DEF: _rsid}&amp;th={VAR: th}&amp;lock=1&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: mod_lock_thread}
+<a href="{TEMPLATE: mod_lock_thread_lnk}">{MSG: lock_thread}</a>&nbsp;|&nbsp;
+{SECTION: END}
+
+{SECTION: mod_unlock_thread_lnk}
+{ROOT}?t=mmod&amp;{DEF: _rsid}&amp;th={VAR: th}&amp;unlock=1&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: mod_unlock_thread}
+<a href="{TEMPLATE: mod_unlock_thread_lnk}">{MSG: unlock_thread}</a>&nbsp;|&nbsp;
+{SECTION: END}
+
+{SECTION: email_page_to_friend_lnk}
+{ROOT}?t=remail&amp;th={VAR: th}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: email_page_to_friend}
+<a href="{TEMPLATE: email_page_to_friend_lnk}" title="{MSG: email_to_friend_desc}" rel="nofollow">{MSG: email_to_friend}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: sub_from_thread_lnk}
+{ROOT}?t=tree&amp;th={VAR: th}&amp;notify={VAR: usr->id}&amp;{DEF: _rsid}&amp;opt=on&amp;mid={VAR: mid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: sub_from_thread subscribe to thread link}
+| <a href="{TEMPLATE: sub_from_thread_lnk}" title="{MSG: sub_to_thread_desc}">{MSG: sub_to_thread}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: unsub_to_thread_lnk}
+{ROOT}?t=tree&amp;th={VAR: th}&amp;notify={VAR: usr->id}&amp;{DEF: _rsid}&amp;opt=off&amp;mid={VAR: mid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: unsub_to_thread unsubscribe from thread link}
+| <a href="{TEMPLATE: unsub_to_thread_lnk}" title="{MSG: unsub_from_thread_desc}">{MSG: unsub_from_thread}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: bookmark_thread_lnk}
+{ROOT}?t=tree&amp;th={VAR: th}&amp;bookmark={VAR: usr->id}&amp;{DEF: _rsid}&amp;opt=on&amp;mid={VAR: mid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: unbookmark_thread_lnk}
+{ROOT}?t=tree&amp;th={VAR: th}&amp;bookmark={VAR: usr->id}&amp;{DEF: _rsid}&amp;opt=off&amp;mid={VAR: mid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: bookmark_thread bookmark thread link}
+| <a href="{TEMPLATE: bookmark_thread_lnk}" title="{MSG: bookmark_thread_desc}">{MSG: bookmark_thread}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: unbookmark_thread remove bookmark thread link}
+| <a href="{TEMPLATE: unbookmark_thread_lnk}" title="{MSG: unbookmark_thread_desc}">{MSG: unbookmark_thread}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: flat_view_lnk}
+{ROOT}?t=msg&amp;th={VAR: th}&amp;{DEF: _rsid}#msg_{VAR: mid}
+{SECTION: END}
+
+{SECTION: flat_view switch to flat view link}
+<a href="{TEMPLATE: flat_view_lnk}"><img alt="{MSG: flat_view}" title="{MSG: flat_view}" src="{THEME_IMAGE_ROOT}/flat_view.gif" /></a>
+{SECTION: END}
+
+{SECTION: new_thread_lnk}
+{ROOT}?t=post&amp;frm_id={VAR: frm->forum_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: new_thread new thread link}
+<a href="{TEMPLATE: new_thread_lnk}"><img alt="{MSG: new_thread}" src="{THEME_IMAGE_ROOT}/new_thread.gif" /></a>
+{SECTION: END}
+
+{SECTION: post_reply_lnk}
+{ROOT}?t=post&amp;th_id={VAR: th}&amp;reply_to={VAR: mid}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: post_reply}
+&nbsp;<a href="{TEMPLATE: post_reply_lnk}"><img alt="{MSG: submit_reply}" src="{THEME_IMAGE_ROOT}/post_reply.gif" /></a>
+{SECTION: END}
+
+{SECTION: rate_thread rate thread select}
+<form id="RateFrm" action="post">
+	<select class="SmallText" onchange="if (this.value) topicVote(this.value, {VAR: frm->id}, \'{DEF: s}\', \'{VAR: usr->sq}\');">
+		<option>{MSG: rate_thread}</option>
+		<option value="1">1 {MSG: rate_worst}</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5 {MSG: rate_best}</option>
+	</select>
+</form>
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: cur->poster_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: reg_user_link}
+<a href="{TEMPLATE: reg_user_link_lnk}">{VAR-HTML: cur->alias}</a>
+{SECTION: END}
+
+{SECTION: anon_user}
+{GVAR: ANON_NICK}
+{SECTION: END}
+
+{SECTION: tree_branch_lnk}
+{ROOT}?t=tree&amp;th={VAR: th}&amp;mid={VAR: cur->id}&amp;{DEF: _rsid}&amp;rev={VAR: rev}&amp;reveal={VAR: reveal}
+{SECTION: END}
+
+{SECTION: tree_branch message with replies}
+<tr class="{IF: $cur->id % 2}RowStyleA{ELSE}RowStyleB{ENDI}" id="b{VAR: cur->id}">
+	<td>{IF: (_uid && $cur->post_stamp > $usr->last_read && $cur->post_stamp > $frm->last_view)}{TEMPLATE: tree_unread_message}{ELSE}{TEMPLATE: tree_read_message}{END}</td>
+	<td>{IF: $cur->icon}{TEMPLATE: thread_icon}{ENDIF}</td>
+	<td class="Gentext nw wa vt" style="padding-left: {FUNC: (15 * ($lev - 1))}px">
+		<a href="{TEMPLATE: tree_branch_lnk}" onclick="fud_tree_msg_focus({VAR: cur->id}, \'{DEF: s}\', \'{CHARSET}\'); return false;" class="big">{VAR: cur->subject}</a>
+		<div class="TopBy">{MSG: by} {IF: $cur->poster_id}{TEMPLATE: reg_user_link}{ELSE}{TEMPLATE: anon_user}{END} {MSG: thread_on} {TEMPLATE: tree_msg_post_date}</div>
+	</td>
+</tr>
+{SECTION: END}
+
+{PAGE: TREE_PAGE a tree(thread) view of all the messages inside a thread}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: admin_cp}
+<a name="page_top"> </a>
+{FUNC: draw_forum_path($frm->cat_id, $frm->name, $frm->forum_id, $frm->subject)}
+{IF: $frm->tdescr} <span class="small">({VAR: frm->tdescr})</span>{ENDIF}  
+<span id="threadRating">{IF: $FUD_OPT_2 & 4096 && $frm->rating}{TEMPLATE: thread_rating}{ENDIF}</span>
+<table cellspacing="0" cellpadding="0" border="0" class="wa">
+<tr>
+	<td class="GenText al">
+		{TEMPLATE: show_links}
+		<br />
+		{IF: ($frm->replies && $perms & 2048)}{TEMPLATE: split_thread}{ENDIF}
+		{IF: $perms & 8192}{IF: $frm->replies}<a href="{ROOT}?t=movemsg&amp;th={VAR: th}">{MSG: move_messages}</a>&nbsp;|&nbsp;{ENDIFI}<a href="javascript://" onclick="window_open(\'{TEMPLATE: tree_mv_thread}\', \'th_move\', 300, 400);">{MSG: move_thread}</a>&nbsp;|&nbsp;{ENDIF}{TEMPLATE-DATA: lock_thread}
+		{IF: $FUD_OPT_2 & 1073741824}{TEMPLATE: email_page_to_friend}{ENDIF}
+		{TEMPLATE-DATA: subscribe_status}{TEMPLATE-DATA: bookmark_status}
+	</td>
+	<td class="vb ar">
+		{TEMPLATE: flat_view}&nbsp;{TEMPLATE: new_thread}{IF: (!($frm->thread_opt & 1) || $perms & 4096)}{TEMPLATE: post_reply}{ENDIF}
+	</td>
+</tr>
+</table>
+<div><table cellspacing="0" cellpadding="0" id="msgTbl" class="ContentTable">{FUNC: tmpl_drawmsg($msg_obj, $usr, $perms, false, $n, array($prev_msg, $next_msg))}</table></div>
+<div class="ac GenText">[<a href="javascript://" onclick="chng_focus('tree_view');" title="{MSG: message_index_desc}">{MSG: message_index}</a>]</div>
+<a name="tree_view">&nbsp;</a>
+<table cellspacing="1" cellpadding="2" class="MsgTable">
+	{TEMPLATE-DATA: tree_data}
+</table>
+{IF: (!empty($prev_thread_link) || !empty($next_thread_link))}
+<table border="0" cellspacing="1" cellpadding="1" align="right">
+	{TEMPLATE-DATA: prev_thread_link}
+	{TEMPLATE-DATA: next_thread_link}
+</table>
+{ENDIF}
+{IF: ($FUD_OPT_2 & 4096 && $perms & 1024 && !$frm->cant_rate)}{TEMPLATE: rate_thread}{ENDIF}
+{FUNC: tmpl_create_forum_select((isset($frm->forum_id) ? $frm->forum_id : $frm->id), $usr->users_opt & 1048576)}
+<br /><div class="wa ac">-=] <a href="javascript://" onclick="chng_focus('page_top');">{MSG: back_to_top}</a> [=-</div>
+<div class="ar SmallText">{IF: $FUD_OPT_2 & 1048576}{TEMPLATE: tree_xml_link}{ENDIF} {IF: $FUD_OPT_2 & 2097152}{TEMPLATE: tree_pdf_link}{ENDIF}</div>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script defer="defer">
+	var cur_msg = {VAR: mid};
+	jQuery('#b' + cur_msg).removeClass().addClass('RowStyleC');
+</script>
+{IF: !empty($_GET['srch'])}
+<script defer="defer">
+	highlightSearchTerms("{VAR-HTML: _GET['srch']}");
+</script>
+{ENDIF}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: tree_title}
+{MSG: tree_title}
+{SECTION: END}
+
+{SECTION: tree_update}
+{MSG: tree_update}
+{SECTION: END}
+
+{SECTION: tree_pdf_link_lnk}
+{BASE}pdf.php?msg={VAR: mid}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: tree_pdf_link}
+[ <a href="{TEMPLATE: tree_pdf_link_lnk}"><img src="{THEME_IMAGE_ROOT}/pdf.gif" title="{MSG: thread_printable_pdf}" alt="PDF" /></a> ]
+{SECTION: END}
+
+{SECTION: tree_xml_link_lnk}
+{ROOT}?t=help_index&amp;section=boardusage#syndicate
+{SECTION: END}
+
+{SECTION: tree_xml_link}
+[ <a href="{TEMPLATE: tree_xml_link_lnk}">{MSG: thread_syndicate}</a> ] [ <a href="{BASE}feed.php?mode=m&amp;th={VAR: th}&amp;basic=1"><img src="{THEME_IMAGE_ROOT}/rss.gif" title="{MSG: thread_syndicate}" alt="RSS" /></a> ]
+{SECTION: END}
+
+{SECTION: tree_RSS}
+{IF: $FUD_OPT_2 & 1048576}<link rel="alternate" type="application/rss+xml" title="{MSG: thread_syndicate}" href="{BASE}feed.php?mode=m&amp;th={VAR: th}&amp;basic=1" />
+{ENDIFI}
+{SECTION: END}
+
+{SECTION: tree_mv_thread}
+{ROOT}?t=mvthread&amp;{DEF: _rsid}&amp;th={VAR: th}
+{SECTION: END}

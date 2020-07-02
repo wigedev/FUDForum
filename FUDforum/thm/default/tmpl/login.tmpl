@@ -1,0 +1,125 @@
+/**
+* copyright            : (C) 2001-2013 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: login.tmpl 5679 2013-09-21 08:14:59Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: login.php.t; output: login.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: return.tmpl}
+{REF: users_reg.tmpl}
+{REF: logaction.tmpl}
+{REF: allowed_user_lnk.tmpl}
+
+{PAGE: LOGIN_PAGE}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<form id="login" method="post" action="{TEMPLATE: LOGIN_PAGE_lnk3}"{FUNC: ($FUD_OPT_3 & 256 ? ' autocomplete="off"' : '')}>
+<div class="ctb">
+<table cellspacing="1" cellpadding="2" class="DialogTable">
+<tr>
+	<th colspan="3">{MSG: login_title}</th>
+</tr>
+<tr>
+	<td class="RowStyleA GenText" colspan="3">
+		{IF: isset($reset_login_notify)}{VAR: reset_login_notify}{ELSE}
+		{MSG: login_not_logedin}
+		<ol>
+			<li class="GenText">{MSG: login_cookie_expired}</li>
+			<li class="GenText">{MSG: login_perm_denied}</li>
+		</ol>{END}
+	</td>
+</tr>
+<tr class="RowStyleB">
+	<td class="GenText">{MSG: login_login}</td>
+	<td>{FUNC: login_php_get_err('login')}<input type="text" tabindex="1" name="login" /></td>
+	<td class="nw">{IF: $FUD_OPT_1 & 2}<a href="{TEMPLATE: LOGIN_PAGE_lnk}">{MSG: login_want_to_register}</a>{ENDIF}</td>
+</tr>
+<tr class="RowStyleA">
+	<td class="GenText">{MSG: login_passwd}</td>
+	<td>{FUNC: login_php_get_err('password')}<input type="password" tabindex="2" name="password" /></td>
+	<td class="nw">{IF: $FUD_OPT_4 & 2}<a href="{TEMPLATE: LOGIN_PAGE_lnk1}">{MSG: login_forgot_passwd}</a>{ENDIF}</td>
+</tr>
+{IF: $FUD_OPT_1 & 128}{TEMPLATE: login_use_cookies}{ENDIF}
+<tr>
+	<td colspan="3" class="RowStyleA ar"><input type="submit" class="button" tabindex="3" value="{MSG: login_login_btn}" /></td>
+</tr>
+</table></div>{DEF: _hs}<input type="hidden" name="adm" value="{IF: isset($_GET['adm'])}1{ENDIF}" /></form>
+{TEMPLATE: curtime}
+<script>
+	document.forms['login'].login.focus();
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: login_use_cookies}
+<tr class="RowStyleB">
+	<td colspan="3" class="al">
+		<label><input type="checkbox" name="use_cookie" value="Y" checked="checked" /> {MSG: login_use_cookie}</label>
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: login_error_text}
+<span class="ErrorText">{VAR: GLOBALS['_ERROR_MSG_'][$type]}</span><br />
+{SECTION: END}
+
+{SECTION: login_name_required}
+{MSG: login_name_required}
+{SECTION: END}
+
+{SECTION: login_min_time}
+{MSG: login_min_time}
+{SECTION: END}
+
+{SECTION: login_passwd_required}
+{MSG: login_passwd_required}
+{SECTION: END}
+
+{SECTION: login_invalid_radius}
+{MSG: login_invalid_radius}
+{SECTION: END}
+
+{SECTION: login_update}
+{MSG: login_update}
+{SECTION: END}
+
+{SECTION: login_title}
+{MSG: login_title}
+{SECTION: END}
+
+{SECTION: login_unapproved_account_ttl}
+{MSG: login_unapproved_account_ttl}
+{SECTION: END}
+
+{SECTION: login_unapproved_account_msg}
+{MSG: login_unapproved_account_msg}
+{SECTION: END}
+
+{SECTION: LOGIN_PAGE_lnk}
+{ROOT}?t=register&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: LOGIN_PAGE_lnk1}
+{ROOT}?t=reset&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: LOGIN_PAGE_lnk3}
+{ROOT}?t=login
+{SECTION: END}
+
+{SECTION: ERR_emailconf_ttl_l}
+{MSG: ERR_emailconf_ttl}
+{SECTION: END}
+
+{SECTION: ERR_emailconf_msg_l}
+{MSG: ERR_emailconf_msg}
+{SECTION: END}

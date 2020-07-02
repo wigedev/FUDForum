@@ -1,0 +1,35 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: referals.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: referals.php.t; output: referals.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: alt_var.tmpl}
+{REF: tabs.tmpl}
+
+{SECTION: pm_link_lnk}
+{ROOT}/pmm/toi/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: email_link_lnk}
+{ROOT}/em/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: refered_entry_lnk}
+{ROOT}/u/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: refered_entry_lnk1}
+{ROOT}/sp/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}

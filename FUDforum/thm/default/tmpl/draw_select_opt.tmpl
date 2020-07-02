@@ -1,0 +1,19 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: draw_select_opt.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: draw_select_opt.inc.t; output: draw_select_opt.inc;}
+
+{MAIN_SECTION: option_area Standard forum select options}
+{TEMPLATE-DATA: options}
+{MAIN_SECTION: END}
+
+{SECTION: sel_option selection option definition}
+<option value="{VAR: v}"{IF: $v == $selected} selected="selected"{ENDIFI}>{VAR: nms[$k]}</option>
+{SECTION: END}

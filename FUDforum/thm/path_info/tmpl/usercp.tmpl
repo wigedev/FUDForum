@@ -1,0 +1,63 @@
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: usercp.tmpl 6201 2018-09-15 18:17:02Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: usercp.inc.t; output: @usercp.inc;}
+
+{SECTION: ucp_search_lnk}
+{ROOT}/s/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_help_lnk}
+{ROOT}/h/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_home_lnk}
+{ROOT}/i/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_login_lnk}
+{ROOT}/l/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_logout_lnk}
+{ROOT}/l/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: ucp_register_lnk}
+{ROOT}/re/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_private_msg_empty_lnk}
+{ROOT}/pdm/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_private_msg_unread_lnk}
+{ROOT}/pdm/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_blog_lnk}
+{ROOT}/blog/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_calendar_lnk}
+{ROOT}/cal/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_pages_lnk}
+{ROOT}/page/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_member_search_lnk}
+{ROOT}/ml/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_usercp_lnk}
+{ROOT}/uc/{DEF: _rsid}
+{SECTION: END}

@@ -1,0 +1,105 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: tree.tmpl 6078 2017-09-25 14:57:31Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: tree.php.t; output: tree.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: forumsel.tmpl}
+{REF: drawmsg.tmpl}
+{REF: fileio.tmpl}
+{REF: thread_notify.tmpl}
+{REF: alt_var.tmpl}
+{REF: is_perms.tmpl}
+{REF: show.tmpl}
+{REF: th_nav.tmpl}
+{REF: th.tmpl}
+{REF: draw_forum_path.tmpl}
+{REF: topic_rating.tmpl}
+
+{SECTION: split_thread_lnk}
+{ROOT}/stt/{VAR: th}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: mod_lock_thread_lnk}
+{ROOT}/lk/{VAR: th}/lock/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: mod_unlock_thread_lnk}
+{ROOT}/lk/{VAR: th}/unlock/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: email_page_to_friend_lnk}
+{ROOT}/ef/{VAR: th}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: sub_from_thread_lnk}
+{ROOT}/mn/tree/{VAR: th}/1/on/{VAR: mid}/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: unsub_to_thread_lnk}
+{ROOT}/mn/tree/{VAR: th}/1/off/{VAR: mid}/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: bookmark_thread_lnk}
+{ROOT}/bm/tree/{VAR: th}/1/on/{VAR: mid}/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: unbookmark_thread_lnk}
+{ROOT}/bm/tree/{VAR: th}/1/off/{VAR: mid}/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: flat_view_lnk}
+{ROOT}/mv/msg/{VAR: th}/{DEF: _rsid}#msg_{VAR: mid}
+{SECTION: END}
+
+{SECTION: new_thread_lnk}
+{ROOT}/r/frm_id/{VAR: frm->forum_id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: post_reply_lnk}
+{ROOT}/r/th_id/{VAR: th}/{VAR: mid}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: rate_thread_lnk3}
+{ROOT}/tr/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}/u/{VAR: cur->poster_id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: tree_branch_lnk}
+{ROOT}/m/{VAR: cur->id}/{VAR: th}/0/{VAR: rev}/{VAR: reveal}/{DEF: _rsid}#msg_{VAR: cur->id}
+{SECTION: END}
+
+{SECTION: tree_entry_lnk}
+{ROOT}/m/{VAR: cur->id}/{VAR: th}/0/{VAR: rev}/{VAR: reveal}/{DEF: _rsid}#msg_{VAR: cur->id}
+{SECTION: END}
+
+{SECTION: tree_branch_selected_lnk}
+{ROOT}/m/{VAR: cur->id}/{VAR: th}/0/{VAR: rev}/{VAR: reveal}/{DEF: _rsid}#msg_{VAR: cur->id}
+{SECTION: END}
+
+{SECTION: tree_entry_selected_lnk}
+{ROOT}/m/{VAR: cur->id}/{VAR: th}/0/{VAR: rev}/{VAR: reveal}/{DEF: _rsid}#msg_{VAR: cur->id}
+{SECTION: END}
+
+{SECTION: tree_xml_link_lnk}
+{ROOT}/h/boardusage/{DEF: _rsid}#syndicate
+{SECTION: END}
+
+{SECTION: tree_mv_thread}
+{ROOT}/mh/{VAR: th}/{DEF: _rsid}
+{SECTION: END}

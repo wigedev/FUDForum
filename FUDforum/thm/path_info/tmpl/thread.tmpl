@@ -1,0 +1,76 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: thread.tmpl 6078 2017-09-25 14:57:31Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: thread.php.t; output: thread.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: forumsel.tmpl}
+{REF: show.tmpl}
+{REF: forum_notify.tmpl}
+{REF: thread_view_common.tmpl}
+{REF: draw_forum_list.tmpl}
+
+{SECTION: mini_pager_entry_lnk}
+{ROOT}/m/0/{VAR: r[13]}/{FUNC: ($i * $ppg)}/{DEF: _rsid}#msg_{VAR: r[13]}
+{SECTION: END}
+
+{SECTION: first_unread_msg_link_lnk}
+{ROOT}/t/{VAR: r[13]}/0/unread/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}/u/{VAR: r[7]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: threaded_view_lnk}
+{ROOT}/tt/threadt/{VAR: frm->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: last_msg_in_thread_lnk}
+{ROOT}/m/{VAR: r[9]}/{DEF: _rsid}#msg_{VAR: r[9]}
+{SECTION: END}
+
+{SECTION: first_post_reg_user_link_lnk}
+{ROOT}/u/{VAR: r[6]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: admin_control_row_all_lnk}
+{ROOT}/d/{VAR: r[15]}/{VAR: r[13]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: admin_control_row_all_lnk1}
+{ROOT}/mh/{VAR: r[13]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: admin_control_row_move_lnk1}
+{ROOT}/mh/{VAR: r[13]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: admin_control_row_del_lnk}
+{ROOT}/d/{VAR: r[15]}/{VAR: r[13]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: admin_control_row_lock_lnk}
+{ROOT}/lk/{VAR: r[13]}/{IF: $r[18] & 1}unlock{ELSE}lock{ENDI}/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: thread_row_lnk}
+{ROOT}/t/{VAR: r[13]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: thread_mod_mass_lnk}
+{ROOT}/mmd/{DEF: _rsid}
+{SECTION: END}

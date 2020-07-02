@@ -1,0 +1,261 @@
+TOPIC_TITLE: <a name="style">Jak formatować tekst?</a>
+TOPIC_HELP:
+W większości wypadków wiadomości umieszczane na forum są zwyczajnym tekstem, aczkolwiek jeżeli zajdzie taka potrzeba możesz je odpowiednio sformatować pogrubiając wybrane słowa, dodając kursywę, itd...
+<p>
+W związku z tym, że na forum administrator zazwyczaj nie pozwala używać znaczników HTML w wiadomościach, możesz używać BBcode czyli ograniczonego zestawu znaczników, który pozwala formatować tekst. BBcode jest bardzo prosty i znacznie bezpieczniejszy niż HTML.
+<p>
+<b>Poniżej znajduje się lista obsługiwanych znaczników BBcode z krótkimi przykładami ich użycia</b>
+<p>
+<b>Osadzanie odnośników</b><br /><br />
+
+Forum może automatycznie odnajdywać różne formy odnośników, odpowiednio je zaznaczając:<br />
+	<div align="Center"><font color="#FF0000">http://cvs.prohost.org</font></div><br />
+zostanie automatycznie rozpoznane jako odnośnik i zostanie przekształcone do poprawnej formy, która wygląda następująco:
+	<div align="center"><a href="http://cvs.prohost.org" target=_blank>http://cvs.prohost.org</a></div><br />
+	
+
+Możesz także samodzielnie zaznaczyć odnośnik używając BBcode. Najprostszy sposó na zrobienie tego, to użycie poniższego przykładu:
+	<div align="Center"><b><font color="#ff0000">[URL]<font color="#006600">http://www.myhomepage.com</font>[/URL]</font></b></div><br />
+spowoduje to utworzenie następującego odnośnika:
+	<div align="center"><a href="http://www.myhomepage.com" target=_blank>http://www.myhomepage.com</a></div><br />
+Możesz także uzupełnić go o opis, używając takiej składni wewnątrz <font color="#ff0000"><b>[URL=<font color="#006600">http://www.myhomepage.com</font>]<font color="#006600">Moja strona domowa</font>[/URL]</b></font> przez co uzyskasz następujący odnośnik:<br />
+	<div align="center"><a href="http://www.myhomepage.com" target=_blank>Moja strona domowa</a></div><br />
+<p>
+<b>Osadzanie adresów poczty elektronicznej</b><br /><br />
+
+Aby stworzyć odnośnik do adresu poczty elektronicznej, po prostu wpisz go w następującej formie:<br />
+<div align="Center"><font color="#ff0000"><b>support@prohost.org</b></font></div><br />
+forum automatycznie go rozpozna i utworzy odpowiedni odnośnik. Oprócz tego możliwe jest dodanie opisu do podanego adresu za pomocą poniższej składni<br />
+<div align="Center"><font color="#ff0000"><b>[email=<font color="#006600">support@prohost.org</font>]</b></font>Kliknij tutaj aby się skontaktować ze wsparciem technicznym<font color="#ff0000"><b>[/email]</b></font><br /></div>
+<br />
+<b>Modyfikacja wyglądu tekstu</b><br />
+Istnieje kilka rodzajów znaczników, których można użyć:<br />
+<br />
+<ul>
+  <li><font color="#ff0000"><b>[b]</b></font>pogrubiony<font color="#ff0000"><b>
+         [/b]</b></font> tworzy <b>pogrubiony</b> tekst</li>
+  <li><font color="#ff0000"><b>[u]</b></font>podkreślony<font color="#ff0000"><b>
+         [/u]</b></font> tworzy <u>podkreślony</u> tekst</li>
+  <li><font color="#ff0000"><b>[i]</b></font>pochylony<font color="#ff0000"><b>
+         [/i]</b></font> tworzy <i>pochylony</i> tekst</li>
+</ul>
+	Oprócz tego można zmieniać rozmiar, kolor oraz czcionkę wybranego tekstu.<br />
+<ul>
+  <li><font color="#ff0000"><b>[color=red]</b></font>czerwony tekst<font color="#ff0000"><b>
+         [/color]</b></font> tworzy <font color="#ff0000">czerwony tekst</font></li>
+  <li><font color="#ff0000"><b>[size=4]</b></font>duży tekst<font color="#ff0000"><b>
+        [/size]</b></font> tworzy <font size="4">duży tekst</font></li>
+  <li><font color="#ff0000"><b>[font=courier]</b></font>tekst<font color="#ff0000"><b>
+        [/font]</b></font> tworzy <font face="Courier New, Courier, monospace">tekst</font> podaną czcionką</li>
+   <li><font color="#ff0000"><b>[sub]</b></font>subscript<font color="#ff0000"><b>
+          [/sub]</b></font> produces <sub>subscript</sub> text</li>
+   <li><font color="#ff0000"><b>[sup]</b></font>superscript<font color="#ff0000"><b>
+          [/sup]</b></font> produces <sup>superscript</sup> text</li>
+</ul>
+	Można także łączyć różne znaczniki formatujące:<br />
+<div align="Center"><font color="#ff0000"><b>[b][u][i][color=red][size=10][font=courier]</b></font>Sformatowany tekst<font color="#ff0000"><b>[/font][/size][/color][/i][/u][/b]<br /></b></font></div>
+       ten przykład tworzy:<br />
+<div align="Center"> &nbsp;&nbsp; <font color="#ff0000" size="10" face="Courier New, Courier, monospace"><u><i><b>Sformatowany tekst</b></i></u></font></div>
+<br />
+<br />
+<b>Wyrównanie tekstu</b><br />
+BBcode pozwala wyrównywać tekst za pomocą znacznika [align] na trzy sposoby:
+<ul>
+	<li><font color="#ff0000"><b>[align=center]</b></font>tekst wyśrodkowany<font color="#ff0000"><b>[/align]</b></font> tworzy:</li>
+		<div align="center">tekst wyśrodkowany</div>
+	<li><font color="#ff0000"><b>[align=left]</b></font>wyrównany do lewej<font color="#ff0000"><b>[/align]</b></font> tworzy:</li>
+		<div align="left">wyrównany do lewej</div>
+	<li><font color="#ff0000"><b>[align=right]</b></font>wyrównany do prawej<font color="#ff0000"><b>[/align]</b></font> tworzy:</li>
+		<div align="right">wyrównany do prawej</div>	
+</ul>
+<br />
+<br />
+<b>Różne listy</b><br />
+	Możesz tworzyć różnego rodzaju listy za pomocą BBcode:<br />
+<br />
+	Lista bez numeracji:<br />
+<font color="#ff0000"><b>[list]</b></font><br />
+<font color="#ff0000"><b>[*]</b></font>pierwszy element<br />
+<font color="#ff0000"><b>[*]</b></font>drugi element<br />
+<font color="#ff0000"><b>[/list]<br />
+</b></font><br />
+      stworzy<br />
+<ul>
+  <li>pierwszy element</li>
+  <li>drugi element</li>
+</ul>
+	Istnieje możliwość używania różnych rodzajów list, na przykład lista numerowana:<br />
+<font color="#ff0000"><b>[list type=1]</b></font><br />
+<font color="#ff0000"><b>[*]</b></font>pierwszy element<br />
+<font color="#ff0000"><b>[*]</b></font>drugi element<br />
+<font color="#ff0000"><b>[/list]</b></font><br />
+     stworzy<br />
+<ol>
+  <li>pierwszy element</li>
+  <li>drugi element<br />
+  </li>
+</ol>
+	aby stworzyć listę alfabetyczną:<br />
+<font color="#ff0000"><b>[list type=A]</b></font><br />
+<font color="#ff0000"><b>[*]</b></font>pierwszy element<br />
+<font color="#ff0000"><b>[*]</b></font>drugi element<br />
+<font color="#ff0000"><b>[/list]</b></font><br />
+<br />
+     co daje w efekcie:<br />
+<ol type="a">
+  <li>pierwszy element</li>
+  <li>drugi element</li>
+</ol>
+<b>Dodawanie obrazków</b><br />
+	Istnieje możliwość dodawania wewnątrz tekstów wybranych obrazków za pomocą znaczników <font color="#ff0000"><b>[img][/img]</b></font>. <br />
+<br />
+	na przykład:<br />
+<div align="Center">&nbsp;<font color="#ff0000"><b>[img]</b></font><font color="#006600">http://fudforum.org/forum/images/fudlogo.gif</font><font color="#ff0000"><b>[/img]</b></font>, <br /></div>
+	umieści następujący obrazek w wiadomości:<br />
+<div align="Center"><img src="http://fudforum.org/forum/images/fudlogo.gif" alt="http://fudforum.org/forum/images/fudlogo.gif" width="140" height="49"><br /></div>
+	oprócz tego obrazek może być jednocześnie odnośnikiem do wybranego adresu po użyciu znaczników <font color="#ff0000"><b>[url][/url]</b></font> w następujący sposób<br />
+<div align="Center"><font color="#006600"><font color="#ff0000"><b>[url=<font color="#006600">http://www.prohost.org</font>][img]</b></font>http://fudforum.org/forum/images/fudlogo.gif<b><font color="#ff0000">[/img][/url]</font></b></font><br /></div>
+	który stworzy następujący obrazkowy odnośnik<br />
+<div align="Center"><a href="http://www.prohost.org"><img src="http://fudforum.org/forum/images/fudlogo.gif" alt="obrazek" width="140" height="49" border="0"></a><br /></div><br />
+
+<br /><b>Cytowanie innych wiadomości</b><br />
+	Istnieje możliwość zacytowania czegoś, co zostało już napisane, zaznaczająć cytowany tekst znacznikami <font color="#ff0000"><b>[quote][/quote]</b></font>. 
+<br />
+<div align="Center"><font color="#ff0000"><b>[quote]</b></font>Witaj świecie<font color="#ff0000"><b>[/quote]</b></font><br /></div>
+  pojawi się jako:<br />
+
+<cite>Quote:</cite><blockquote>Witaj świecie</blockquote>
+<p>
+<b>Programy komptuerowe i uprzednio sformatowany tekst</b><br />
+ Znacznik <font color="#ff0000"><b>[code][/code]</b></font> pozwala wysyłać wiadomość z tekstem w niezmienionej postaci, bez usuwania zbędnych spacji czy tabulatorów.<br /> 
+<br />
+ można tego używać następująco:<br />
+<font color="#ff0000"><b>[code]</b></font>
+<pre>$fp = fopen('jakiśplik', 'w');<br />if ( !$fp ) {<br />	exit('nie ma takiego pliku!');<br />}<br />else { <br />	fwrite($fp, 'witaj świecie');<br />	fclose($fp);<br />}<br /></pre>
+<font color="#ff0000"><b>[/code]</b></font><br />
+<br />
+ co spowoduje ukazanie się następującego tekstu, bez zmian w formatowaniu.
+<br />
+<br />
+<pre>$fp = fopen('jakiśplik', 'w');<br />if ( !$fp ) {<br />	exit('nie ma takiego pliku!');<br />}<br />else { <br />	fwrite($fp, 'witaj świecie');<br />	fclose($fp);<br />}<br /><br /><br /></pre>
+<p>
+<b>PHP Code</b><br />
+The <font color="#ff0000"><b>[php][/php]</b></font> tag allows you to post PHP scripts
+and have the forum automatically syntax highlight the code for easier readability.<br />
+<br />it used like this: <br />
+<font color="#ff0000"><b>[php]</b></font>
+<pre>
+function hello()
+{
+	echo "Hello World!";
+}
+
+hello();
+</pre>
+<font color="#ff0000"><b>[/php]</b></font><br />
+<br />which produces:<br /><br />
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br /></font><font color="#007700">function </font><font color="#0000BB">hello</font><font color="#007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo </font><font color="#DD0000">"Hello World!"</font><font color="#007700">;<br />}<br /><br /></font><font color="#0000BB">hello</font><font color="#007700">();<br /></font><font color="#0000BB">?&gt;</font>
+
+</font>
+</code>
+<p>
+
+<b>No Tag</b><br />
+The <font color="#ff0000"><b>[notag][/notag]</b></font> tag allows you to have the text inside
+the tags not be parsed by the FUDforum's tag parser. This allows you to give examples of BBcode 
+and not have them converted to equivalent HTML.
+<p>
+
+<b>Spoiler</b><br />
+The <font color="#ff0000"><b>[spoiler][/spoiler]</b></font> tag allows you to hide a portion of message
+from being displayed. To see the hidden portion the users must click a link that will display the 
+hidden portion of the text. Internally this is accomplished by JavaScript so the page is not actually 
+reloaded, instead a hidden layer is made visible.<br />
+  <br />
+Here is an example of this tag in action: <br />
+
+Visible part of the message
+<font color="#ff0000"><b>[spoiler]</b></font>
+<br />Hidden part of the message</br>
+<font color="#ff0000"><b>[/spoiler]</b></font><br />
+More visible text.
+
+<p>and the result:<p>
+
+Visible part of the message<br />
+<div class="dashed" style="padding: 3px;" align="center" width="100%"><a href="javascript://" OnClick="javascript: layerVis('1482055279834293165', 1);">Reveal Spoiler</a><div align="left" id="1482055279834293165" style="visibility: hidden;"><br />
+Hidden part of the message<br />
+</div></div><br />
+More visible text.
+
+<p>
+
+<p>
+<b>Acronym</b><br />
+The <font color="#ff0000"><b>[notag][/notag]</b></font> tag allows you to identify the text as an
+acronym and provide a full name when the user moves their mouse over the tag.
+<font color="#ff0000"><b>[acronym=Fast Uncompromising Discussion Forum]</b></font>FUDforum<font color="#ff0000"><b>[/acronym]</b></font> produces <acronym title="Fast Uncompromising Discussion Forum">FUDforum</acronym>.
+<p>
+
+Możesz także sprawdzić czy administrator zezwolił na uśmieszki, które są
+niewielkimi obrazkami symbolizującymi Twój nastrój oraz znacznik [img]
+pozwalający osadzać w tekście własne obrazki.
+
+TOPIC_TITLE: <a name="sml">Co to są uśmieszki?</a> 
+TOPIC_HELP:
+Uśmieszki są to małe ikony, które możesz wstawiać do tekstu, aby zobrazować
+swoje emocje i uczucia. Jeśli forum ma włączone uśmieszki, ich lista pojawi
+się ponad formularzem, w którym wpisujesz treść wiadomości.<br />
+Po kliknięciu w wybrany uśmieszek zostanie on wstawiony do Twojej wiadomości.<br />
+Popularne uśmieszki umieszczane w tekście mogą być automatycznie zamieniane na odpowiednie obrazki. Jeśli nie chcesz aby tak było zaznacz <b>Wyłącz uśmieszki w tej wiadomości</b>.<p>
+
+TOPIC_TITLE: <a name="polls">Jak używać głosowań?</a>
+TOPIC_HELP:
+W niektórych forach istnieje możliwość tworzenia głosowań wewnątrz wysyłanych wiadomości. Głosowania pozwalają zadać pytanie i dostarczyć listę odpowiedzi do wybrania. Aby uniknąć zafałszowania wyników, głosować mogą tylko zarejestrowani użytkownicy.<br />
+Po kliknięciu w odnośnik <b>UTWÓRZ GŁOSOWANIE</b> znajdujący się na stronie, gdzie wpisujesz wiadomość, pojawi się osobne okno, gdzie będzie można stworzyć głosowanie z kilkoma możliwymi odpowiedziami. Po skończeniu tworzenia głosowania kliknij <b>Utwórz</b>, dzięki czemu wrócisz do edycji wiadomości, a stworzone głosowanie zostanie do niej załączone.<br />
+Możesz modyfikować istniejące głosowanie, klikając odnośnik <b>EDYTUJ</b> lub po prostu je skasować wybierając <b>SKASUJ</b>.
+<p>
+W każdym głosowaniu masz możliwość wziąć udział tylko jeden raz, dlatego starannie przemyśl swoją decyzją - później swojego głosu nie możesz zmienić.
+
+TOPIC_TITLE: <a name="attach">Jak dołączać pliki do wiadomości?</a>
+TOPIC_HELP:
+Jeśli zostało to zezwolone przez administratora, możesz dołączać jeden lub więcej plików do swoich wiadomości. Ta funkcja jest aktywowana dla każdego forum osobno, dlatego na jednym może to działać a na innym już nie.
+<br />
+Formularz wiadomości, do której chcesz dołączyć plik przedstawi trzy zasady, których musisz się trzymać dodając plik:<p>
+<b>Dozwolone typy plików</b> - lista rodzajów plików, jakie wolno dołączać do wiadomości, np. jpg, gif, png<br />
+<b>Maksymalny rozmiar pliku</b> - maksymalny rozmiar pliku, jaki można dołączyć<br />
+<b>Maksymalna liczba plików w wiadomości</b> - ilość plików, które można dołączyć do jednej wiadomości<br />
+<p>
+Aby dodać plik do wiadomości, kliknij przycisk <b>Browse...</b>. Otworzy się okno, które pozwoli Ci wybrać odpowiedni plik. Po jego wybraniu kliknij <b>Dodaj plik</b> aby plik został dołączony do wiadomości.<br />
+Jeśli chcesz usunąć dodany plik, kliknij przycisk <b>Usuń</b> znajdujący się obok nazwy pliku.
+
+TOPIC_TITLE: <a name="msgico">Co to ikona wiadomości?</a>
+TOPIC_HELP:
+Ikony wiadomości to małe obrazki, które możesz wybrać aby zostały umieszczone
+obok wysyłanej przez Ciebie wiadomości. Są one używane aby określić nastrój
+umieszczonego tekstu. Jeśli nie widać tych obrazków w formularzu wiadomości,
+oznacza to, że administrator zablokował możliwość ich ustawiania.
+
+TOPIC_TITLE: <a name="edit">Czy mogę modyfikować uprzednio wysłaną wiadomość?</a>
+TOPIC_HELP:
+Jeśli jesteś zarejestrowanym użytkownikiem, możesz modyfikować poprzednio napisane wiadomości. Ta funkcja może być ograniczona czasowo, dlatego może się okazać, że możesz modyfikować swoje ostatnie wiadomości, a tych starszych już nie.<br />
+Jeśli zmodyfikujesz jakąś wiadomość, zostanie do jej końca dodana informacja z datą i czasem zmian.<br />
+W przypadku, gdy wiadomość została zmodyfikowana przez moderatora lub administratora, pojawi się informacja o zmianach, chyba że forum zostało skonfigurowane aby o tym nie informować.
+
+TOPIC_TITLE: <a name="mod">Kim są moderatorzy i administratorzy?</a> 
+TOPIC_HELP:
+Moderatorzy to użytkownicy, którzy mają specjalne uprawnienia pozwalające zarządać wybranymi forami. Mają możliwość modyfikacji, usuwania oraz zatwierdzania wiadomości a także nadawania ogłoszeń. Z tymi osobami powinieneś się kontaktować, jeśli dzieje się coś niepoprawnego na forum, którym zarządza dany moderator. Możesz się także z nimi kontaktować jeśli masz pytania dotyczące ich forum.<p>
+Administratorzy to osoby, które kontrolują forum, mogą one robić WSZYSTKO, dlatego rozmawiaj z nimi uprzejmie ;-). Oprócz tego administratorzy mogą zatwierdzać avatary, tworzyć i przydzielać prywatne znaczniki, blokować dostęp niechcianym użytkownikom i odpowiadać na różne pytania dotyczące forum. Jeśli znajdziesz jakieś błędy w jego funkcjonowaniu, powinieneś się skontaktować właśnie z administratorem.
+
+TOPIC_TITLE: <a name="cens">Cenzura?</a>
+TOPIC_HELP:
+Administrator może wprowadzić cenzurę wybranych słów, które zostaną zastąpione innym tekstem. Cenzura dotyczy całego forum, dlatego jeśli widzisz coś ocenzurowane, tak samo zobaczą to inni.
+
+TOPIC_TITLE: <a name="not">Czy mogę otrzymywać powiadomienia o odpowiedziach na moje wiadomości?</a> 
+TOPIC_HELP:
+Podczas pisania nowego wątku lub odpowiedzi, możesz wybrać aby zostać powiadomionym poprzez pocztę elektroniczną lub ICQ (wybór dokonywany w profilu), kiedy ktoś odpisze na Twoją wiadomość. Możesz także zapisać się na forum lub wybrany wątek, aby dostawać z nich nowe wiadomośći. Dokonuje się tego za pomocą odnośnika <b>Subskrybuj</b>.
+<p>
+Jeśli nie chcesz dostawać dalszych powiadomień o nowych wiadomościach na forum, możesz kliknąć odnośnik <b>Odsubskrybuj</b> znajdujący się w wybranym forum lub wątku. Inna możliwość to wybranie zakładki <b>Subskrybcje</b> w Twoim profilu, a następnie usunięcie wybranej opcji z tamtego miejsca.
+<p>
+Możliwość otrzymywania powiadomień dostępna jest tylko dla zarejestrowanych użytkowników.

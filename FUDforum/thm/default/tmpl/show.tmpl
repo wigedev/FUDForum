@@ -1,0 +1,50 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: show.tmpl 6289 2019-05-25 15:57:23Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: show.inc.t; output: @show.inc;}
+
+{MAIN_SECTION: show_links the links that you see on index/thread/msg page that allow you to access selmsg}
+<span id="ShowLinks">
+<span class="GenText fb">{MSG: show_show}</span>
+<a href="{TEMPLATE: show_links_lnk}" title="{MSG: todays_posts_desc}" rel="nofollow">{MSG: todays_posts}</a>
+{IF: _uid}{TEMPLATE: unread_posts}{ENDIF}
+{IF: !$th}{TEMPLATE: unanswered_posts}{ENDIF}
+<b>::</b> <a href="{TEMPLATE: show_links_lnk1}" rel="nofollow">{MSG: show_pollist}</a>
+<b>::</b> <a href="{TEMPLATE: show_links_lnk2}" rel="nofollow">{MSG: mnav_title}</a>
+</span>
+{MAIN_SECTION: END}
+
+{SECTION: unread_posts}
+<b>::</b> <a href="{TEMPLATE: unread_posts_lnk}" title="{MSG: unread_posts_desc}" rel="nofollow">{MSG: unread_posts}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: unanswered_posts}
+<b>::</b> <a href="{TEMPLATE: unanswered_posts_lnk}" title="{MSG: unanswered_posts_desc}" rel="nofollow">{MSG: unanswered_posts}</a>&nbsp;
+{SECTION: END}
+
+{SECTION: unread_posts_lnk}
+{ROOT}?t=selmsg&amp;unread=1&amp;{DEF: _rsid}&amp;frm_id={IF: isset($frm->forum_id)}{VAR: frm->forum_id}{ELSE}{VAR: frm->id}{ENDI}
+{SECTION: END}
+
+{SECTION: unanswered_posts_lnk}
+{ROOT}?t=selmsg&amp;reply_count=0&amp;{DEF: _rsid}&amp;frm_id={IF: isset($frm->forum_id)}{VAR: frm->forum_id}{ELSE}{VAR: frm->id}{ENDI}
+{SECTION: END}
+
+{SECTION: show_links_lnk}
+{ROOT}?t=selmsg&amp;date=today&amp;{DEF: _rsid}&amp;frm_id={IF: isset($frm->forum_id)}{VAR: frm->forum_id}{ELSE}{VAR: frm->id}{ENDI}&amp;th={VAR: th}
+{SECTION: END}
+
+{SECTION: show_links_lnk1}
+{ROOT}?t=polllist&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: show_links_lnk2}
+{ROOT}?t=mnav&amp;{DEF: _rsid}
+{SECTION: END}

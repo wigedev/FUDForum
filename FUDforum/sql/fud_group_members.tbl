@@ -1,0 +1,41 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_group_members.tbl 5337 2011-08-05 17:39:49Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}group_members;
+
+CREATE TABLE {SQL_TABLE_PREFIX}group_members
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	user_id		INT NOT NULL DEFAULT 0,
+	group_id	INT NOT NULL DEFAULT 0,
+	group_members_opt INT NOT NULL DEFAULT 65536
+);
+
+CREATE UNIQUE INDEX {SQL_TABLE_PREFIX}group_members_i_gu  ON {SQL_TABLE_PREFIX}group_members (group_id, user_id);
+CREATE        INDEX {SQL_TABLE_PREFIX}group_members_i_gmo ON {SQL_TABLE_PREFIX}group_members (group_members_opt);
+
+# 1 up_VISIBLE
+# 2 up_READ
+# 4 up_POST
+# 8 up_REPLY
+# 16 up_EDIT
+# 32 up_DEL
+# 64 up_STICKY
+# 128 up_POLL
+# 256 up_FILE
+# 512 up_VOTE
+# 1024 up_RATE
+# 2048 up_SPLIT
+# 4096 up_LOCK
+# 8192 up_MOVE
+# 16384 up_SML
+# 32768 up_IMG
+# 65536 approved
+# 131072 group_leader
+# 262144 up_SEARCH

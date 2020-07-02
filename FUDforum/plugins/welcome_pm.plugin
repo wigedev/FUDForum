@@ -1,0 +1,74 @@
+<?php
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: welcome_pm.plugin 6245 2019-02-11 18:20:33Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin.
+plugin_add_hook('EMAILCONFIRMED', 'plugin_welcome_pm');
+
+// Send user a welcome private message
+function plugin_welcome_pm($usr) {
+	fud_use('private.inc');
+	fud_use('wordwrap.inc');
+
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'welcome_pm.ini') === false) {
+		die('ERROR: Please configure the Welcome PM plugin from the Plugin Manager Control panel.');
+	}
+
+	$msg_p = new fud_pmsg;
+	$msg_p->fldr = 1;
+	$msg_p->subject = $ini['WELCOME_SUBJECT'];
+	$msg_p->body = $ini['WELCOME_BODY'];
+	$msg_p->body = char_fix(nl2br(htmlspecialchars($msg_p->body)));
+	fud_wordwrap($msg_p->body);
+	$msg_p->read_stamp = 0;
+	$msg_p->ouser_id   = 2;	// admin
+	$msg_p->duser_id   = $usr;
+	$msg_p->pmsg_opt   = 49;
+	$msg_p->add(1);
+}
+
+function welcome_pm_info() {
+	return array('name' => 'Welcome Private Message',
+	             'desc' => 'This plugin, if enabled, will send a welcome PM (private message) to users when they confirm their E-mail addresses.',
+		     'version' => '1.2');
+}
+
+function welcome_pm_enable() {
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'welcome_pm.ini') === false) {
+		return array(null, 'Please configure the welcome_pm plugin before enabling it.');	// OK, Err.
+	}
+}
+
+function welcome_pm_config() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'welcome_pm.ini') === false) {
+	  $ini = NULL;
+	}
+
+	if (isset($_POST['Set'])) {
+		foreach (array_keys($_POST) as $key) {
+			if (substr($key,0,8) == 'WELCOME_') {
+				$ini[$key] = $_POST[$key];
+			}
+		}
+		$fp = fopen($GLOBALS['PLUGIN_PATH'] .'/welcome_pm.ini', 'w');
+		fwrite($fp, '<?php $ini = '. var_export($ini, 1) .'; ?>');
+		fclose($fp);
+		pf(successify('Settings successfully saved.'));
+	}
+	?>
+<p>Subject for welcome message:<br />
+<input name="WELCOME_SUBJECT" value="<?php echo $ini['WELCOME_SUBJECT'] ?>" size="60" /></p>
+
+<p>Body of welcome message:<br />
+<textarea name="WELCOME_BODY" cols="72" rows="8"><?php echo $ini['WELCOME_BODY'] ?></textarea></p>
+
+	<?php
+}
+

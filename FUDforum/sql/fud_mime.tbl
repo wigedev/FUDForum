@@ -1,0 +1,21 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_mime.tbl 5004 2010-09-24 07:14:36Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}mime;
+
+CREATE TABLE {SQL_TABLE_PREFIX}mime
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	fl_ext		VARCHAR(10) NOT NULL DEFAULT '',
+	mime_hdr	VARCHAR(255) NOT NULL DEFAULT '',
+	descr		VARCHAR(255),
+	icon		VARCHAR(100) NOT NULL DEFAULT 'unknown.gif'
+);
+
+CREATE UNIQUE INDEX {SQL_TABLE_PREFIX}mime_f ON {SQL_TABLE_PREFIX}mime (fl_ext);

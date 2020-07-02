@@ -1,0 +1,25 @@
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: captcha.tmpl 6171 2018-07-02 19:47:44Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: captcha.inc.t; output: captcha.inc;}
+
+{SECTION: register_err_turing}
+{MSG: register_err_turing}
+{SECTION: END}
+
+{SECTION: captcha_img_help}
+{MSG: captcha_img_help}
+{SECTION: END}
+
+{SECTION: image_captcha_link}
+<br />
+<img src="index.php?t=captchaimg" alt="{MSG: captcha_img_alt}" />
+{SECTION: END}
+

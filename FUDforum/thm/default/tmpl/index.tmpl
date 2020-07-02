@@ -1,0 +1,75 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: index.tmpl 6078 2017-09-25 14:57:31Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: index.php.t; output: index.php;}
+{REF: security.tmpl}
+{REF: logedin.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: show.tmpl}
+{REF: quicklogin.tmpl}
+{REF: draw_forum_list.tmpl}
+
+{PAGE: INDEX_PAGE}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{IF: _uid}<span class="GenText">{MSG: welcome_message}</span><br />{ENDIF}
+{TEMPLATE: show_links}{TEMPLATE-DATA: admin_cp}
+{TEMPLATE-DATA: cat_path}
+{INJECTION_POINT: before_index}
+{TEMPLATE-DATA: announcements}
+{TEMPLATE: forum_list}
+{IF: _uid}<div class="SmallText ar">[ <a href="{TEMPLATE: mark_all_read_lnk}" title="{MSG: mark_all_read_desc}">{MSG: mark_all_read}</a> ]
+{IF: $FUD_OPT_2 & 1048576}[ <a href="{BASE}feed.php?mode=m&amp;l=1&amp;basic=1"><img src="{THEME_IMAGE_ROOT}/rss.gif" title="{MSG: thread_syndicate}" alt="{MSG: thread_syndicate}"/></a> ]{ENDIFI}
+</div>{ENDIF}
+{IF: __fud_real_user__}{TEMPLATE: quick_login_logged_in}{ELSE}{TEMPLATE: quick_login_logged_out}{END}
+{IF: $logedin || $forum_info}{TEMPLATE: loged_in_list}{ENDIF}
+<br /><fieldset>
+<legend>{MSG: legend}</legend>
+<img src="{THEME_IMAGE_ROOT}/new_content.png" alt="{MSG: index_new_posts}" /> {MSG: index_new_posts}&nbsp;&nbsp;
+<img src="{THEME_IMAGE_ROOT}/existing_content.png" alt="{MSG: index_no_new_posts}" /> {MSG: index_no_new_posts}&nbsp;&nbsp;
+<img src="{THEME_IMAGE_ROOT}/moved.png" alt="{MSG: index_url_redirection}" /> {MSG: index_url_redirection}
+</fieldset>
+<div><br />{INJECTION_POINT: after_index}</div>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script>
+	min_max_cats("{THEME_IMAGE_ROOT}", "{MSG: minimize_category}", "{MSG: maximize_category}", "{VAR: usr->sq}", "{DEF: s}");
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: index_RSS}
+{IF: $FUD_OPT_2 & 1048576}<link rel="alternate" type="application/rss+xml" title="{MSG: thread_syndicate}" href="{BASE}feed.php?mode=m&amp;l=1&amp;basic=1" />
+{ENDIFI}
+{SECTION: END}
+
+{SECTION: index_update}
+{MSG: index_update}
+{SECTION: END}
+
+{SECTION: index_title}
+{MSG: index_title}
+{SECTION: END}
+
+{SECTION: mark_all_read_lnk}
+{ROOT}?t=markread&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}&amp;cat={VAR: cat_id}
+{SECTION: END}
+
+{SECTION: announce_entry Announcement row}
+<fieldset class="AnnText">
+	<legend class="AnnSubjText">{VAR: announce_subj}</legend>
+	{VAR: announce_body}
+</fieldset>
+{SECTION: END}

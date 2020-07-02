@@ -1,0 +1,1173 @@
+# Messages for Swedish (svenska)
+# Exported from translatewiki.net
+# Author: Ainali
+# Author: Bengtsson96
+# Author: Ernesto
+# Author: Jopparn
+# Author: Josve05a
+# Author: Lokal Profil
+# Author: Macofe
+# Author: McDutchie
+# Author: Naudefj
+# Author: Nghtwlkr
+# Author: Poxnar
+# Author: Rockyfelle
+# Author: Tobulos1
+# Author: Warrakkk
+# Author: WikiPhoenix
+
+action:Handling
+add_to_buddy_list:lägg till kompislistan
+admin:Admin
+admin_control_panel:Administration
+administrator:Administratör
+attachment:Bilaga:
+avatar:Avatar:
+average_post_count:{PLURAL: u->posted_msg_count|$1 inlägg|$1 inlägg} ({PLURAL: avg|$1 inlägg|$1 inlägg}  i genomsnitt per dag)
+biography:Biografi:
+birth_date:Födelsedatum:
+by:Av:
+by_mod:av moderatorn
+current_time:Klockan just nu
+custom_avatar_queue:Egna avatarer i kö
+date_posted:Postningsdatum
+date_registered:Registreringsdatum:
+download_counter:Hämtad {PLURAL: v[3]|$1 gång|$1 gånger}
+pmsg_download_counter:Hämtad {PLURAL: r->dlcount|$1 gång|$1 gånger}
+email:E-post:
+email_to_friend:E-posta till en vän
+email_to_friend_desc:Skicka den här sidans URL till en vän per e-post
+email_user:Skicka användare ett e-postmeddelande
+faq:Hjälp
+first_unread_msg:Till olästa inlägg
+first_unread_msg_desc:Gå till det första olästa inlägget i den här diskussionen
+flat_view:Tillbaka till platt vy
+forum:Forum:
+forum_icon:Forumikon
+forum_new_messages:Nya inlägg
+forum_none_messages:Endast registrerade medlemmar kan följa upp lästa och olästa inlägg
+forum_old_messages:Inga nya inlägg
+from:Från:
+gender:Kön:
+go:Gå
+goto_next_msg:Till nästa inlägg
+goto_prev_msg:Till föregående inlägg
+home:Hem
+homepage:Hemsida:
+icq_control_panel:ICQ Online-meddelandepanel
+icq_message_form:ICQ meddelandeformulär:
+ignore_user:ignorera alla inlägg av den här medlemmen
+im_aim:AIM användarnamn:
+im_msnm:MSN Messenger:
+im_yahoo:Yahoo Messenger:
+image:Bild-URL:
+index_forum:Forum
+index_new_posts:Nya inlägg sedan senaste besök
+index_no_new_posts:Inga nya inlägg sedan senaste besök
+index_url_redirection:Omdirigering
+interests:Intressen:
+last_post:Senaste inlägg
+last_thread_msg:Gå till det sista inlägget i den här diskussionen
+legend:Teckenförklaring:
+location:Ort:
+lock_thread:Lås diskussionen
+locked:Låst
+locked_with_new_posts:Låst (med olästa inlägg)
+logged_in_list:Lista över inloggade medlemmar
+login:Logga in
+login_header:Logga in:
+logout:Logga ut
+mark_all_read:Markera alla meddelanden som lästa
+mark_all_read_desc:Alla olästa inlägg kommer att markeras som lästa
+members:Medlemmar
+calendar:Kalender
+cal_goto_date:Gå till:
+cal_day_heading:Dagens aktiviteter
+cal_no_events:Inga händelser för dagen.
+cal_update:Läser forumets kalender
+cal_birthday:Födelsedag: {VAR: user}
+cal_birthdays:{PLURAL: födelsedagar|$1 födelsedag|$1 födelsedagar}
+cal_birthday_age:({PLURAL: age|$1 år|$1 år} gammal).
+message:Inlägg
+message_counter:Våra användare har skrivit totalt <b>{PLURAL: post_count|$1 inlägg|$1 inlägg}</b> i <b>{PLURAL: thread_count|$1 ämne|$1 ämnen}</b>
+message_index:Inläggsindex
+message_index_desc:Visa en lista över inlägg
+minimize_category:Minimera kategori
+minimize_message:Minimera inlägg
+moderation_queue:Moderationskö
+moderator:Moderator
+moderator_of:Moderator av:
+moderator_options:Moderatoralternativ
+moderators:Moderatorer
+more_unread_messages:flera olästa inlägg
+more_unread_messages_desc:Visa fler olästa inlägg och markera de nu visade inläggen som lästa
+move_thread:Flytta
+moved:Flyttad till ett annat forum
+moved_thread_message:Den här diskussionen har blivit flyttad till ett annat forum
+na:inget
+new_posts:Nya inlägg
+new_private_messages:Du har <span class="GenText" style="color: #ff0000">({VAR: c})</span> olästa privata meddelanden
+new_thread:Börja en ny diskussion
+newest_user:Den senast registrerade medlemmen är
+next_page:Nästa sida
+next_thread:Nästa diskussion:
+no_messages:Det finns inga inlägg i det här forumet.<br />Bli den första som skriver ett inlägg i detta forumet.
+no_msg_body:Ingen text i inlägget
+no_new_posts:Inga nya inlägg
+no_posts:Inga inlägg
+no_subscribed_forums:Inga beställda forum
+no_subscribed_threads:Inga beställda diskussioner
+no_bookmarked_threads:Inga bokärkta ämnen
+no_unread_locked:Den här diskussionen har låsts
+no_unread_msg:Den här diskussionen innehåller inga olästa meddelanden
+no_unread_msg_unreg:Lästa och olästa meddelanden följs upp endast för registrerade medlemmar
+num_pages:Sidor ({VAR: ttl_pg}):
+num_votes:{VAR: obj->total_votes} röster
+occupation:Yrke:
+off:AV
+on:PÅ
+page_timings:Total tid för att skapa sidan: {PLURAL: page_gen_time|$1 sekunder}
+pm:Privata meddelanden
+poll:Gallup:
+post_count:Antal inlägg {VAR: u_pcount}
+post_count_l:Antal inlägg:
+posts:Inlägg
+posts_c:Inlägg:
+prev_thread:Föregående diskussion:
+usrinfo_private_message:Privat meddelande:
+profile:Profil
+profile_desc:Tillgång till kontrollpanelen
+rate_thread:Bedöm diskussionen
+rating:Betyg
+rating_track:Administrera betyg i tråd <b>{VAR: thr->subject}</b>:
+refresh_list:Uppdatera listan
+register:Registrera
+registered:Registrerad:
+registered_on:Registrerad den {TEMPLATE: registered_on_date}
+replies:Svar
+report_to_mod:Rapportera inlägg till en moderator
+reported_messages:Rapporterade inlägg
+reveal_all_posts:visa alla inlägg av {VAR: user_login}
+reveal_post:visa inlägg
+search:Sök
+sel_todays_posts:Dagens inlägg
+sel_todays_posts_desc:Koppla om filtret för dagens inlägg (visar endast inlägg gjorda idag)
+sel_unanswered_posts:Obesvarade inlägg
+sel_unanswered_posts_desc:Koppla om filtret för obesvarade inlägg (visar endast inlägg som inte besvarats)
+sel_unread_messages:Olästa inlägg
+sel_unread_messages_desc:Koppla om filtret för olästa inlägg (visar endast olästa inlägg)
+send:Sänd
+send_pm_desc:Sänd ett privat meddelande till den här medlemmen
+sender_email:Avsändarens e-postadress:
+sender_name:Avsändarens namn:
+show_posts_by:Visa inlägg av: {VAR: u_alias}
+size:Storlek:
+status:Status:
+status_line:Det finns <b>{PLURAL: st_obj->online_users_reg|$1 medlem|$1 medlemmar}</b>, <b>{PLURAL: st_obj->online_users_hidden|$1 osynlig medlem|$1 osynliga medlemmar}</b> och <b>{PLURAL: st_obj->online_users_anon|$1 gäst|$1 gäster}</b> som besöker detta forum.
+sticky:klibbig:
+stop_ignoring:sluta ignorera den här medlemmen
+sub_to_thread:Beställ den här diskussionen
+sub_to_thread_desc:Du får meddelande om nya inlägg i den här diskussionen
+bookmark_thread:Bokmärk ämne
+bookmark_thread_desc:Lägg till ämnet till din lista av bokmärken
+subject:Rubrik
+subscribe:Beställ det här forumet
+subscribe_desc:Du får meddelande om nya diskussioner i det här forumet
+subscribed_forums:Beställda forum
+subscribed_forums_desc:Koppla om filtret för beställda forum (visar inlägg endast från beställda forum)
+subscribed_threads:Beställda diskussioner
+subscribed_threads_desc:Koppla om filtret för beställda diskussioner (visar inlägg endast från beställda diskussioner)
+bookmarked_threads:Bokmärkta ämnen
+switch_to_thread_view:Visa inläggen trådade
+thread:Diskussion:
+thread_announcement:meddelande:
+thread_first_unread_msg:Gå till det första olästa inlägget i den här diskussionen
+thread_thread:Diskussion
+threads:Diskussioner
+time:Tid
+todays_posts:Dagens inlägg
+todays_posts_desc:Visa alla inlägg som postats idag
+un_ignore_user:sluta ignorera den här medlemmens inlägg
+unanswered_posts:Obesvarade inlägg
+unanswered_posts_desc:Visa alla inlägg som saknar svar
+unlock_thread:Lås upp diskussionen
+unread_msg:Den här diskussionen innehåller inlägg som du ännu inte har läst
+unread_msg_locked:Låst diskussion med olästa inlägg
+unread_posts:Olästa inlägg
+unread_posts_desc:Visa alla olästa inlägg
+unsub_from_thread:Avbeställ diskussionen
+unsub_from_thread_desc:Avbeställ meddelanden om nya inlägg i den här diskussionen
+unbookmark_thread:Ta bort från bokmärken
+unbookmark_thread_desc:Ta bort ämnet från listan med bokmärken
+unsubscribe:Avbeställ
+unsubscribe_desc:Avbeställ meddelanden om nya diskussioner i det här forumet
+updated_on:Uppdaterad:
+user:Medlem
+user_counter:Vi har <b>{VAR: st_obj->user_count}</b> registrerade användare.
+user_info:Användarinformation
+user_info_l:Användarinformation {VAR: u->alias}
+user_offline:{VAR: obj->login} är för tillfället offline
+user_online:{VAR: obj->login} är för tillfället online
+usrinfo_last_post:Senaste inlägg:
+view_results:Visa resultat
+views:Visningar
+vote:{PLURAL: frm->n_rating|$1 Röst|$1 Röster}
+vote_button:Rösta
+vote_for_thread:Rösta
+was_moved_msg:<a href="{TEMPLATE: was_moved_msg_lnk}">{VAR: r[2]}</a> är flyttat till <a href="{TEMPLATE: was_moved_msg_lnk2}">{VAR: r[12]}</a> av en moderator.
+welcome_message:Välkommen <b>{VAR: usr->alias}</b>! Ditt senaste besök var {TEMPLATE: welcome_message_date}
+what_ppl_doing:Användaraktivitet
+reported_del_report:Radera rapport
+reported_reason:Anledning:
+reported_on:Tid:
+reported_reported_by:Rapporterad av:
+reported_reported_msg:Rapporterade inlägg
+modque_pending_approval:Inlägg som väntar på godkännande
+modque_approve:Godkänn
+modque_delete:Radera
+modque_deleteall:Radera allting från användaren
+modque_no_message:Inga inlägg väntar på godkännande
+pmsg_new_messages:Oläst privat meddelande
+pmsg_old_messages:Läst privat meddelande
+deny_recipt:neka kvittering
+deny_recipt_desc:Skicka inte en kvittering på att du har läst detta meddelande
+restore_to:Återställ till:
+move_to:Flytta till:
+list_referes_referrals:Refererade medlemmar
+list_referes_members:Refererade medlemmar
+list_referes_member:Medlem
+referals_none:Inga referade medlemmar ännu.
+referals_refered_by:Forummedlemmar refererade av: <b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b>
+referals_post_count:Antal inlägg
+referals_registered_on:Registrerad den
+referals_action:Handling
+pmsg_all:alla
+pmsg_none:inga
+folder:Mapp:
+pmsg_replied:besvarat
+pmsg_forwarded:vidareskickat
+pmsg_subject:Rubrik
+pmsg_author:Avsändare
+pmsg_time:Tid
+pmsg_selected:Välj
+pmsg_delete:Radera
+cur_ppage_pm:Privata meddelanden
+writing_pm:Att skriva ett privat meddelande
+browsing_folder:Visar mappen <b>{VAR: folders[$folder_id]}</b>
+inbox:INKOMMANDE
+draft:UTKAST
+sent:SÄNDA
+trash:SKRÄPKORG
+msg_author:Författare
+avatar_sel_form:Val av avatar
+no_avatars:Inga tillgängliga avatarer
+month_1:januari
+month_2:februari
+month_3:mars
+month_4:april
+month_5:maj
+month_6:juni
+month_7:juli
+month_8:augusti
+month_9:september
+month_10:oktober
+month_11:november
+month_12:december
+sunday:Söndag
+sunday_short:S
+monday:Måndag
+monday_short:M
+tuesday:Tisdag
+tuesday_short:Ti
+wednesday:Onsdag
+wednesday_short:O
+thursday:Torsdag
+thursday_short:To
+friday:Fredag
+friday_short:F
+saturday:Lördag
+saturday_short:L
+male:man
+female:kvinna
+unspecified:OSPECIFICERAD
+register_tree_view:Trådad vy
+register_msg_tree_view:Platt diskussionsvy/Trådad inläggsvy
+register_tree_msg_view:Trådad diskussionsvy/Platt inläggsvy
+register_flat_view:Platt vy
+use_forum_default:Använd forumets inställning
+finduser_user_info:Användarinformation
+finduser_by_login:Enligt användarnamn:
+finduser_submit:Sök
+finduser_no_such_user:Ingen sådan medlem
+finduser_user:Medlem
+finduser_postcount:Antal inlägg
+finduser_joindate:Registreringsdatum
+finduser_action:Handling
+yes:Ja
+no:Nej
+register_email:Epost
+edit_time_limit:<b>Tidsgräns för editering</b>: {GVAR: EDIT_TIME_LIMIT} minuter
+no_edit_time_limit:<b>Tidsgräns för editering</b>: Obegränsad
+pmuserloc_login:Logga in:
+pmuserloc_submit:Skicka
+pmuserloc_user:Medlem
+pmuserloc_no_result:Inget resultat
+register_builtin:Inbyggd
+register_specify_url:Ge URL
+register_uploaded:Skicka avatar
+register_login:Logga in:
+register_login_desc:Namnet du vill logga in med och bli känd som på denna webbplats.
+register_login_available:Tillgänglig
+register_login_taken:Redan taget
+register_password:Lösenord:
+register_password_desc:Lösenord för ditt konto. Lösenord är skiftlägeskänsliga och måste vara minst 6 tecken långt.
+register_conf_pass:Bekräfta lösenord:
+register_conf_pass_desc:Var god ange ditt lösenord igen.
+register_email_desc:Din e-postadress. Du kan välja att dölja den nedan i avsnittet Inställningar.
+register_name:Namn:
+register_name_desc:Ditt riktiga namn.
+register_your_pass:Ditt lösenord:
+register_update:Uppdatera
+register_avatar_type:Avatartyp:
+register_del_avatar:Radera avatar
+register_avatar:Visningsbild:
+register_sel_avatar:Välj avatar
+register_custom_avatar_rules:Din egen avatar kommer inte att synas före den har godkänts av administratorn.<br /><font class="SmallText">Avataren bör inte vara större än <b>{GVAR: CUSTOM_AVATAR_MAX_DIM} pixlar</b> och måste vara i <b>jpg-</b>, <b>gif-</b> eller <b>png-</b>format.</font>
+register_custom_avatar_url:URL till egen avatar:
+register_preview:Förhandsgranska
+register_custom_avatar_upload:Fil med egen avatar:
+register_register:Registrera
+register_required:Nödvändig information
+register_required_desc:Alla fält är obligatoriska.
+register_optional:Frivillig information
+register_optional_desc:Vi rekommenderar att du inte avslöjar några personliga uppgifter i din profil. All information kan ses av andra medlemmar.
+register_location:Ort:
+register_occupation:Yrke:
+register_interests:Intressen:
+register_image:Bild:
+register_icq:ICQ
+register_aim:AIM användarnamn:
+register_yahoo:Yahoo Messenger:
+register_msnm:MSN Messenger:
+register_homepage:Hemsida:
+register_bday:Födelsedatum:
+register_bday_desc:Om du ger ditt födelsedatum kan andra medlemmar se det i din profil
+register_day:Dag
+register_month:Månad
+register_year:År
+register_gender:Kön:
+register_bio:Biografi:
+register_bio_desc:Några detaljer om dig själv, t.ex. dina intressen, ditt job, dina husdjur etc...
+register_prefs:Inställningar
+register_sig:Signatur:
+register_sig_desc:Valbar signatur som kan bifogas längst ner i dina inlägg.
+register_reset:Återställ
+register_def_thread_view:Förvald vy av diskussion:
+register_msg_per_page:Antal inlägg per sida:
+register_show_sig:Visa signaturer:
+register_show_sig_desc:Du kan välja om du vill se de andra medlemmarnas signaturer eller inte
+register_use_sig_default:Bifoga signaturen automatiskt:
+register_use_sig_default_desc:Bifoga din signatur automatiskt till alla inlägg du skriver
+register_timezone:Tidszon:
+register_ignore_admin:Ignorera administrativa meddelanden:
+register_invisible_mode:Osynligt läge:
+register_invisible_mode_desc:Visar inte om du är online.
+register_show_email:Visa e-postadress:
+register_show_email_desc:Välj det här alternativet om du vill att din e-postadress skall vara offentlig.
+register_notification:Förvälj meddelande om nya inlägg:
+register_notification_desc:Om meddelande om nya inlägg är förvalt (kan väljas bort när man skriver inlägg) får du automatiskt meddelande om nya inlägg i de diskussioner du deltar i.
+register_notify_method:Välj metod för meddelande om nya inlägg:
+register_notify_method_desc:Ange hur du vill bli notifierad eller inaktivera notifikationer (till exempel när du åker på semester).
+register_allow_email_msg:Tillåt privata meddelanden:
+register_allow_email_msg_desc:Tillåt andra medlemmar att skicka dig privata meddelanden via forumet.
+buddy_status:Status
+my_buddies:Mina kompisar
+add_buddy:Lägg till kompis
+add:Lägg till
+buddy_search:Ange användarnamnet på peronen du vill lägga till.
+member_search:Eller använd <a href="javascript://" onclick="javascript: window_open('{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1', 'user_list', 400,250);">Användarsökningsfunktionen</a> för att hitta en person.
+buddy_remove:ta bort
+post_normal:Normal
+post_sticky:Klibbig
+post_annoncement:Meddelande
+post_size:Storlek
+post_color:Färg
+post_font:Typsnitt
+create_thread:Börja diskussion
+submit_reply:Skicka svar
+edit_message:Editera inlägg
+apply_spell_changes:Godta stavningskontrollens ändringar
+post_preview:Förhandsgranska inlägget
+post_logedin_user:Inloggad medlem:
+post_logout:logga ut
+post_passwd:Lösenord för att skriva inlägg:
+post_poll:Gallup:
+post_create_poll:GÖR EN GALLUP
+post_poll_delete:RADERA
+post_poll_edit:EDITERA
+post_mod_opt:Moderatoralternativ:
+post_thread_type:Diskussionstyp:
+post_thread_expiry:Diskussionen förfaller:
+post_locked:Lås diskussionen
+post_icons:Inläggsikon:
+post_no_icon:Ingen ikon
+post_smiley:Smilisgenvägar:
+post_format_tools:Formateringsredskap:
+post_upload_file:Skicka fil
+post_file_del:Radera
+post_file_name:Namn
+post_file_size:Storlek
+file_attachments:Filbilagor:
+allowed_files:Godkända filtyper:
+max_file_size:Maximal filstorlek
+max_files_per_msg:Maximalt antal filer per inlägg:
+post_notification:Meddelande om nya inlägg
+include_sig:Inkludera signatur
+include_sig_desc:Inkludera din profilsignatur.
+disable_smilies:Stäng av smilisar i det här inlägget
+spell_check_msg:Stavningskontroll
+post_form:Skriv inlägg
+post_forum:Forum:
+post_title:Rubrik:
+post_body:Text:
+post_options:Alternativ:
+post_preview_btn:Förhandsgranska meddelande
+post_cancel_btn:Avbryt
+ignore_users:Ignorerade medlemmar
+add_ignore:Ignorera medlem
+forum_terms:Villkor för forumet
+forum_rules:<p>Att registrera sig till detta forum kostar ingenting! Vi insisterar att du följa de regler och principer som anges nedan. Om du accepterar villkoren, tryck på knappen <b>Godkänn</b> i slutet av sidan.</p><p>Trots att administratörer och moderatorer på detta forum kommer att försöka hålla alla stötande meddelanden från detta forum, är det omöjligt för oss att granska alla meddelanden. Alla meddelanden uttrycker åsikter av författaren, och varken ägarna till forumet eller utvecklarna kommer att hållas ansvarig för innehållet i ett meddelande.</p><p>Genom att klicka på knappen Godkänn, garanterar du att du inte kommer att bokföra eventuella meddelanden som är obscent vulgärt, sexuellt orienterade, hatiskt, hotande, eller på annat sätt bryter mot några lagar.</p><p>Ägarna till detta forum har rätt att ta bort, redigera, flytta eller stänga ett ämne av någon anledning.</p>
+forum_rules_13:<p>Alla användare som är under 13 år måste ha tillstånd från sin förälder eller målsman för att få rätt till medlemskap i detta forum. Vi välkomnar medlemmar som är under 13 år, men kräver att en förälder eller målsman faxar eller mailar tillbaka ett undertecknat godkännande innan vi beviljar medlemskap.</p><p>Om du vill påbörja registrering innan vi har fått godkännandet kan du trycka på knappen <b>Acceptera</b> nedan. Om du vill avbryta registreringen, trycker du <b>Accepterar inte</b> för att återgå till forumets första sida.</p><p>En kopia av formuläret för godkännande kommer att visas efter registreringen. För mer information om registreringen, vänligen skicka ett e-postmeddelande till <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>.</p>
+coppa_conf:COPPA-bekräftelse
+coppa_before:Före {TEMPLATE: coppa_date}
+coppa_after:Efter {TEMPLATE: coppa_date}
+coppa_link:Tryck på länken som motsvarar ditt födelsedatum
+coppa:<p>En förälder eller målsman måste skicka ett e-post eller ett fax med en underskrift till administratören av detta forum innan en användare under 13 år kan slutföra registreringen.</p><p>För ytterligare information kontakta <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a></p>
+prereg_info:Information
+prereg_agree:Jag godkänner
+prereg_disagree:Avbryt registreringen
+prereg_update:Läser forumreglerna
+coppa_fax_instructions:Instruktioner för en förälder eller förmyndare
+coppa_fax_instructions2:Vänligen skriv ut denna sida, underteckna den och faxa tillbaka den till oss.
+coppa_fax_reg_form:Registreringsformulär
+coppa_fax_sign:Vänligen underteckna formuläret och sänd det till oss
+coppa_fax_conf:Jag har läst genom den information mitt barn har gett mig och jag har läst webplatsens allmänna villkor. Jag förstår att användarprofilen kan ändras med ett lösenord. Jag förstår att jag kan begära att användarprofilen permanent raderas.
+coppa_fax_permission:Underteckna här om du ger ditt tillstånd
+coppa_fax_no_permission:Underteckna här om du vill radera användarprofilen permanent
+coppa_fax_parent_name:Förälders/förmyndares hela namn:
+coppa_fax_relation:Relation till barnet:
+coppa_fax_telephone:Telefonnummer:
+coppa_fax_email:E-postadress:
+coppa_fax_date:Datum:
+coppa_fax_questions:Vänligen kontakta <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a> om har några frågor
+coppa_fax_login:Logga in
+coppa_fax_passwd:Lösenord
+coppa_fax_remail:E-postadress
+coppa_fax_name:Namn
+login_not_logedin:Du måste logga in. Det här kan bero på flere olika saker:
+login_cookie_expired:Din kaka har gått ut, och du måste logga in på nytt för att aktivera kakan.
+login_perm_denied:Du har inte rätt att använda den efterfrågade resursen som anonym användare och måste därför logga in.
+login_want_to_register:Vill du registrera dig?
+login_forgot_passwd:Jag har glömt mitt lösenord
+login_use_cookie:Använd kakor<br /><font class="SmallText">Om du använder en offentlig terminal, som t.ex. en dator i  ett bibliotek, skola eller internetkafé, rekommenderar vi att du väljer bort det här alternativet för bättre säkerhet. Om du väljer detta alternative kommer du vara automatiskt inloggad på forumet nästa gång du besöker det från den här datorn.</span>
+login_login:Logga in:
+login_login_btn:Logga in
+login_name_required:Användarnamnet är obligatoriskt
+login_passwd_required:Lösenordet är obligatoriskt
+login_invalid_radius:Ogiltig kombination av användarnamn och lösenord
+reset_confirmation:Tack för din registrering!\n\nFör att aktivera ditt konto skall du gå till följande URL:\n\n{VAR: url}\n\nNär ditt konto har aktiverats blir du inloggad i forumet och\nvidaresänd till forumets första sida.
+reset_reset:Hej!\n\nDu har begärt att ditt lösenord nollställs. För att verkligen NOLLSTÄLLA ditt lösenord\nvänligen besök denna URL\n\n{VAR: url}\n\nNOTERA: Forumet sparar lösenorden med enkelriktade krypteringsmekanismer vilket innebär att\nnär du väl har skrivit ditt lösenord krypteras det så att det inte går att dekryptera.\nDet här fungerar genom att helt enkelt kryptera lösenordet varje gång du skriver in det. Sedan jämförs resultatet för att se om den nya och den sparade versionen\nstämmer överens. (Om du är intresserad av att veta hur det hela fungerar kan du läsa om "MD5 HASH"-algoritmen)
+rpasswd_invalid_passwd:Ogiltigt lösenord
+rpasswd_passwd_nomatch:Lösenorden stämmer inte överens
+rpasswd_passwd_length:Lösenordet måste vara minst 6 tecken långt
+reset_remind_pass:Lösenordspåminnare
+reset_reset_conf:Ditt lösenord kommer att nollställas och ett nytt skickas åt dig. Om du inte har bekräftat din registrering kommer bekräftelsemeddelandet att skickas istället.
+reset_error:E-postadressen hittades inte i databasen
+reset_update:Återställ lösenord
+rpasswd_change_pass:Byt lösenord
+rpasswd_login:Logga in
+rpasswd_cur_pass:Nuvarande lösenord:
+rpasswd_new_pass:Nytt lösenord:
+rpasswd_conf_pass:Bekräfta lösenord:
+ruser_title:Ända inloggningsfält
+ruser_change_user:Ändra ditt inloggningsnamn
+ruser_cur_login:Nuvarande inloggningsnamn:
+ruser_new_login:Nytt inloggningsnamn:
+ruser_cur_pass:Nuvarande lösenord:
+login_passwd:Lösenord:
+reset_email:E-post:
+reset_reset_button:Nollställ lösenord
+rate_this_thread:Bedöm
+report_reporting_about:Rapport om:
+report_subject:Rubrik:
+report_by:Av:
+report_posted_on:Postningsdatum:
+report_give_reason:Ange orsaken till att du rapporterar det här inlägget:
+report_submit_report:Skicka rapport
+search_entire_msg:Hela inlägget
+search_subject_only:Endast rubriken
+search_forum:Forum
+search_posted_on:Postningsdatum
+search_no_results:Inga resultat
+search_all_forums:Sök i alla forum
+search_in_forum:Sök i forum:
+search_forum_search:Sök
+move_thread_to:Flytta diskussionen <b>{VAR: thr->subject}</b> till:
+remail_email_topic:Skicka den här diskussionen till en vän per e-post
+remail_your_name:Ditt namn:
+remail_your_email:Din e-postadress:
+remail_friends_name:Din väns namn:
+remail_friends_email:Din väns e-postadress:
+remail_required:obligatorisk
+remail_subject:Rubrik:
+remail_message:Meddelande:
+remail_send_now:Skicka e-post nu
+remail_anon_opt:Kopiera det här meddelandet till en valbar e-postklient för att sända till dina vänner.
+remail_done:Klart
+remail_sent_conf:E-postmeddelandet till din vän med adressen {VAR-HTML: _POST['femail']} om ämnet {VAR: data->subject} har skickats.
+remail_error:Ett fel har uppstått
+mklist_type:Typ:
+mklist_option:Alternativ:
+mklist_additem:Lägg till element
+mklist_apply:Verkställ
+mklist_delete:Radera
+qbud_nick_name:Smeknamn
+qbud_add_selected:Lägg till valda
+qbud_selected:Välj
+qbud_no_buddies:Inga kompisar att välja mallen
+mklist_numerical:Numerisk
+mklist_aplha:Alfa
+mklist_square:Fyrkant
+mklist_disc:Skiva
+mklist_circle:Cirkel
+mklist_close:Nära
+email_to:Till:
+email_pg_title:E-post
+email_subject:Rubrik:
+email_body:Meddelande:
+email_submit:Skicka
+ppost_quote_msg:{VAR: msg_to_list} skrev {TEMPLATE: ppost_quote_msg_date}
+ppost_quote:Citat:
+ppost_to:Till:
+ppost_from_buddy_list:Välj från kompislistan
+ppost_find_User:Sök medlem
+ppost_track_msg:Följ upp det här meddelandet
+ppost_track_msg_desc:Meddela mig när mottagaren läser meddelandet.
+ppost_send:Sänd
+ppost_save_draft:Spara utkast
+poll_blank_option:Du kan inte lägga till ett tomt alternativ.
+poll_del_conf:Tryck OK om du vill radera det här alternativet
+poll_name:Ämne för gallupen:
+poll_timelimit:Tidsgräns:
+poll_maxiumvotes:Maximalt antal röster:
+poll_create:Skapa
+poll_update:Uppdatera
+poll_disablesmilies:Stäng av smilisar
+poll_create_poll:Gör en gallup
+poll_update_poll:Uppdatera gallup
+poll_delete:Radera
+poll_updateoption:Uppdatera alternativ
+poll_addoption:Lägg till alternativ
+poll_unlimited:Obegränsad
+poll_day:dag
+poll_days:dagar
+poll_hour:timme
+poll_hours:timmar
+poll_month:månad
+poll_year:år
+poll_week:vecka
+tabs_register:Inställningar
+tabs_subscriptions:Beställningar
+tabs_bookmarkes:Bokmärken
+tabs_referrals:Refererade medlemmar
+tabs_buddy_list:Kompislista
+tabs_ignore_list:Ignorerade medlemmar
+tabs_private_messaging:Privata meddelanden
+single_msg_delete:Du är på väg att <span class="ErrorText">radera</span> meddelandet med titeln: <b>{VAR: data[3]}</b>
+thread_delete:Du är på väg att <span class="ErrorText">radera</span> <span class="ErrorText">hela ämnet</span> med titeln: <b>{VAR: data[3]}</b>
+delete_proceed:<font size="3"><b>Vill du fortsätta?</b></font>
+delete_yes:Ja
+delete_no:Nej
+error_invalidurl:Ogiltig URL
+error_error:Fel
+usrinfo_profile:{VAR: u->alias}s profil
+usrinfo_show_all_posts:Visa alla inlägg av {VAR: u->alias}
+actions_update:Spionerar på andra medlemmar, precis som du
+err_info:Info
+buddy_list_err_cantadd:Du kan lägga dig själv till kompislistan
+buddy_list_err_dup:Den här medlemmen finns redan på din kompislista
+buddy_list_err_nouser:Medlemmen du försökte lägga till kompislistan går inte att hitta bland detta forums medlemmar.
+buddy_list_err_nouser_title:Kan inte lägga till medlemmen
+buddy_list_err_ignore:Kan inte lägga till användare som ignorerar dig till din lista över vänner
+buddy_list_update:Visar egen kompislista
+core_err_invinp_title:Ogiltig input
+core_err_invinp_err:Du har följt en felaktig länk, vänligen meddela <a href="mailto:{GVAR: ADMIN_EMAIL}">webmastern</a>
+core_adm_login_msg:Administratörer kan logga in <a href="{BASE}adm/admloginuser.php">här</a>.
+email_err_unabletoemail_title:FEL: Kan inte skicka e-post
+email_err_unabletoemail_msg:E-postsystemet har stängts av av administratorn.
+email_error_unabletolocaddr:Systemet kunde tyvärr inte skicka e-post till {VAR-HTML: _POST['tx_name']} eftersom det inte hittade hans/hennes e-postadress
+email_error_body:Du kan inte skicka ett tomt meddelande
+email_error_subject:Rubriken är obligatorisk
+email_error_namerequired:Namnet är obligatoriskt
+email_error_invaliduser:Ogiltig medlem
+emailconf_err_invkey_title:Fel
+emailconf_err_invkey_msg:Ogiltig bekräftelsekod. Vänligen kontrollera i din e-post att du verkligen gått till rätt URL
+err_inc_criticaltitle:Kritiskt fel
+err_inc_criticalmsg:Du har stött på ett fel, men tyvärr har vi problem med felrapporteringssystemet
+finduser_update:Söker efter medlemmar
+help_index_update:Läser <a href="{TEMPLATE: help_index_update_lnk}">hjälpen.</a>
+iemail_thr_subject:Nytt svar på {VAR: thr_subject} av {VAR: poster_login}
+iemail_thr_bodyemail:Gå till {VAR: goto_url['email']} för att visa olästa svar\n\nIfall du i fortsättningen inte vill få meddelande om svar den här diskussionen kan du gå hit: {VAR: unsub_url['email']}
+iemail_frm_subject:Ny diskussion av {VAR: poster_login} med rubriken {VAR: thr_subject} i forumet {VAR: frm_name}
+iemail_frm_bodyemail:För att visa diskussionen gå till:\n{VAR: goto_url['email']}\n\nIfall du i fortsättningen inte vill få meddelande om nya diskussioner i detta forum kan du gå hit: {VAR: unsub_url['email']}
+iemail_participate:För att delta i diskussionen, gå hit:
+ignore_list_err_info_title:Info
+ignore_list_err_dup_msg:Du har redan den här medlemmen på din lista
+ignore_list_err_nu_title:Kan inte hitta medlemmen
+ignore_list_err_nu_msg:Kan inte hitta medlemmen du försökte lägga till din lista i det här forumet.
+ignore_list_cantign_msg:Du kan inte ignorera den här medlemmen
+ignore_list_update:Visar egen lista över ignorerade medlemmar
+index_update:Visar <a href="{TEMPLATE: index_update_lnk}">listan över forum</a>
+list_referers_update:Visar refererade medlemmar
+login_update:Logga in
+msg_update:Läser diskussionen med rubriken <a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+pm_err_nopm_title:FEL: Privata meddelanden är inte tillåtna
+pm_err_nopm_msg:Du kan inte använda systemet för privata meddelanden, eftersom administratorn har stängt av det.
+pm_update:Använder privatmeddelanden
+post_err_lockedthread_title:FEL: Låst diskussion
+post_err_lockedthread_msg:Den här diskussionen är låst och inga fler inlägg tas emot
+err_coppa_title:FEL: Ditt konto är inte bekräftat ännu
+err_coppa_msg:Vi har inte fått en bekräftelse av din förälder eller förmyndare, vilket skulle tillåtit dig att skriva inlägg. Om du tappat bort ditt COPPA-formulär kan du <a href="{TEMPLATE: err_coppa_msg_lnk}">se det här</a>.
+err_banned_acct_title:FEL: Du har blivit avstängd.
+err_banned_acct_msg:Ditt konto blev {IF: $ban_expiry}temporärt avstängt till {DATE: ban_expiry %a, %d %B %Y %H:%M}{ELSE}permanent avstängt{ENDI} för tillgång till websidan på grund av överträdelser av forumets regler.
+post_err_edttimelimit_title:FEL
+post_err_edttimelimit_msg:Du kan inte editera det här meddelandet längre
+post_err_noannontopics_msg2:<legend>FEL: Otillräckliga privilegier</legend>Anonyma användare får inte skapa ämnen.
+post_err_noannonposts_msg2:<legend>FEL: Otillräckliga privilegier</legend>Anonyma användare får inte svara.
+post_err_floodtrig_title:FEL: Flödesstopp påslaget
+post_err_floodtrig_msg:Var vänlig försök på nytt om {PLURAL: tm|$1 sekund|$1 sekunder}
+post_err_attach_size:Bilagan är för stor (över gränsen på {VAR: MAX_F_SIZE} byte)
+post_err_attach_ext:Filen du försöker skicka är inte av tillåten typ.
+post_err_attach_filelimit:Du försöker skicka fler filer än vad som är tillåtet.
+post_err_passwd:Fel lösenord
+post_reply_update:Svarar på <a href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a> i {VAR: frm->name}
+post_topic_update:Skapar nytt ämne i <a href="{TEMPLATE: post_topic_update_lnk}">{VAR: frm->name}</a>
+post_error_generic:Ett fel har uppstått
+postcheck_max_images_err:Maximalt {GVAR: MAX_IMAGE_COUNT} bilder är tillåtna per inlägg, vänligen minska antalet bilder
+postcheck_no_links_allowed:Du kan inte använda länkar innan du har skrivit minst {PLURAL: posts_before_links|$1 meddelande|$1 meddelanden}.
+postcheck_subj_needed:Rubrik obligatorisk
+postcheck_no_such_user:Medlemmen "{FUNC: char_fix(htmlspecialchars($v))}" finns inte i detta forum
+postcheck_ignored:Du kan inte skicka ett privat meddelande till "{FUNC: char_fix(htmlspecialchars($v))}", eftersom han/hon har valt att ignorera dig.
+postcheck_no_recepient:Kan inte skicka meddelandet, ingen mottagare
+postcheck_invalid_email:Ge en riktig e-postadress till din vän.
+postcheck_email_subject:Kan inte skicka e-post utan rubrik.
+postcheck_email_body:Kan inte skicka e-post utan text.
+private_msg_notify_subj:Kvittering för: {VAR: m->subject}
+private_msg_notify_body:Hej!<br />Den {TEMPLATE: private_msg_notify_body_date} läste {VAR: usr->login} ditt privata meddelande med rubriken "{VAR: m->subject}"<br />
+referals_update:Visar refererade medlemmar
+register_err_short_login:Det användarnamn du valt är för kort. Användarnamn måste vara minst 2 tecken långa.
+register_err_login_notallowed:Det här användarnamnet är inte tillåtet
+register_err_loginunique:Användarnamnen måste vara unika. Det finns redan en medlem med detta användarnamn
+register_err_emailexists:Den här e-postadressen finns redan i vår databas. Om du försöker registrera dig på nytt för att du har glömt ditt lösenord kan du använda återställningsfunktionen istället.
+register_err_shortpasswd:Lösenordet måste vara minst 6 tecken långt
+register_err_passwdnomatch:Lösenorden är inte likadana.
+register_err_invalidemail:E-postadressen du angett verkar inte vara korrekt.
+register_err_needname:Du måste ange ditt namn för att fullfölja registreringen.
+register_err_enterpasswd:Du måste ge ditt nuvarande lösenord för att fullfölja förändringarna
+register_err_adminpasswd:Du måste ange ditt <b>administratorlösenord</b> för att slutföra ändringarna.
+register_err_notyouremail:Någon har redan registrerat sig med den här e-postadressen, och denna någon är INTE du
+register_err_avatartobig:Filen du försöker skicka är för stor, över gränsen på {GVAR: CUSTOM_AVATAR_MAX_SIZE} byte
+register_err_avatarnotallowed:Avataren du försöker skicka är inte tillåten. Kontrollera att den är av godkänd filtyp.
+register_conf_subject:Bekräftelse av forumregistrering
+register_conf_msg:Tack för din registrering!\nGå till adressen nedan för att aktivera ditt medlemskonto:\n\n{FULL_ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\nEfter att ditt konto blivit aktiverat blir du inloggad på forumet och \nvidareskickad till huvudsidan.
+register_welcome_subject:Välkommen till forumet
+register_welcome_msg:Tack för din registrering!\n\nHär är dina inloggningsuppgifter för forumet:\n\nForumets adress: {TEMPLATE: index_update_lnk}\nAnvändarnamn: {VAR: uent->login}\nLösenord: {VAR: _POST['reg_plaintext_passwd']}\n\nObservera att det är skillnad på små och stora bokstäver i lösenordet!\nVill du ändra inställningarna och din profil ska du gå till den här sidan:\n{FULL_ROOT}?t=register
+register_err_cantreg_title:FEL: kan inte registrera
+regsiter_err_cantreg_msg:Kan inte skapa användarkonto, vänligen kontakta administratorn på adressen <a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a>
+register_profile_update:Visar sin egen profil
+register_register_update:Registreringssida
+report_err_nosuchmsg_title:FEL
+report_err_nosuchmsg_msg:Inget sådant inlägg
+reset_err_invalidkey_title:FEL
+reset_err_invalidkey_msg:Ogiltig kod får återställning av lösenord
+reset_err_rstconf_title:Information
+reset_err_rstconf_msg:Du torde få instruktioner per e-post inom ett par minuter
+reset_newpass_title:Nollställ lösenord
+reset_newpass_msg:Hej!\n\nEnligt önskemål har ditt användarnamn och ditt lösenord skickats till dig. Här är dina inloggningsuppgifter:\n\nAnvändarnamn: {VAR: ui[1]}\nLösenord: {VAR: passwd}\n\nNotera att ditt lösenord har ändrats till ovanstående. Om du vill ändra ditt lösenord kan du göra det på kontrollpanelen:\n{FULL_ROOT}?t=register
+reset_login_notify:Ditt lösenord har skickats åt dig per e-post och borde komma fram inom ett par minuter.
+search_update:Söker bland inläggen
+selmsg_update:Läser <a href="{TEMPLATE: selmsg_update_lnk}">Dagens inlägg</a>
+showposts_update:Visar inlägg av: <a href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a>
+subscribed_update:Visar egna beställningar
+bookmarked_update:Ser över sin bokmärkeslista
+thread_update:Läser i forumet <a href="{TEMPLATE: thread_update_lnk}">{VAR: frm->name}</a>
+tree_update:Läser diskussionen (trådad vy) <a href="{TEMPLATE: tree_update_lnk}">{VAR: frm->subject}</a>
+userinfo_update:Ser på <a href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}s</a> profil
+ERR_login_msg2:<legend>FEL: Du är inte inloggad</legend>För att få tillgång till den här sidan måste du vara en medlem av det här forumet.
+ERR_disabled_ttl:Avstängd funktion
+ERR_disabled_msg:Den här funktionen är inaktiverad av systemadministratören.
+ERR_access_ttl:FEL: Otillräckliga rättigheter
+ERR_access_msg:Du har inte behörighet att utföra åtgärden.
+ERR_registration_disabled_ttl:Registrering avstängd
+ERR_registration_disabled_msg:Administratorn har stäng av registreringen, försök på nytt senare
+ERR_emailconf_ttl:FEL: Ditt användarkonto är ännu inte bekräftat
+ERR_emailconf_msg:Du har inte bekräftat ditt användarkonto via e-post <br /><table border="0"><tr><td><ol><li>Om du inte har fått ett bekräftelsemeddelande per e-post <a href="{TEMPLATE: ERR_emailconf_msg_lnk}">tryck här</a><li>Om {VAR: usr_d->email} inte är din rätta e-postadress <a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">tryck här</a></ol></td></tr></table>
+ERR_user_ttl:FEL: Ingen sådan medlem
+ERR_user_msg:Det finns ingen sådan medlem
+ERR_systemerr_ttl:FEL: Systemfel
+ERR_systemerr_msg:Ett systemfel har uppstått, vänligen rapportera felet till <a href="mailto:{GVAR: ADMIN_EMAIL}">webmastern</a>.
+email_title:Skicka e-post
+finduser_title:Sök efter medlemmar
+help_title:Hjälp
+login_title:Logga in
+poll_title:Gallupeditor
+register_title:Registrering
+reset_title:Återställ lösenord
+rpasswd_title:Ändra lösenord
+error_title:FEL
+index_title:Välkommen till forumet
+search_title:Sök {VAR-HTML: srch}
+remail_emailsent:E-posten skickad
+remail_email:Hej,\n\nDet finns ett intressant ämne om "{VAR: data->subject}" på forumet {GVAR: FORUM_TITLE} som du kanske vill läsa. Du kan se ämnet här:\n {FULL_ROOT}?t=rview&amp;th={VAR: data->id}&amp;rid={DEF: _uid}\n\nDin vän,\n\n{VAR: usr->alias}
+poll_add_option:Lägg till alternativ:
+post_opt_html_on:<b>HTML</b>-kod är <b>PÅ</b>
+post_opt_fud_on:<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>FUD-kod</b> är <b>PÅ</b></a>
+post_opt_images_on:<b>Bilder</b> är <b>PÅ</b>
+post_opt_smilies_on:<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>Smilisar</b> är <b>PÅ</b></a>
+post_opt_html_off:<b>HTML</b>-kod är <b>AV</b>
+post_opt_fud_off:<b>FUD-kod</b> är <b>AV</b>
+post_opt_images_off:<b>Bilder</b> är <b>AV</b>
+post_opt_smilies_off:<b>Smilisar</b> är <b>AV</b>
+post_opt:Forumalternativ:
+register_change_passwd:byt lösenord
+register_change_login:ändra inloggningsnamn
+approved_avatar_title:Din egen avatar godkändes.
+approved_avatar_msg:Din avatar godkändes av administratorn. Den borde nu synnas som din avatar i alla dina inlägg. Om du inte ser den, eller ser din gamla avatar, beror det på att din webbläsare har sidan i sitt minne. Du kan ladda om sidan en eller ett par gånger, det borde åtgärda saken.
+unapproved_avatar_title:Din egen avatar blev inte godkänd.
+unapproved_avatar_msg:Administratorn godkände inte din avatar. De vanligast skälen är att avataren är för stor (filstorlek och/eller bildstorlek) eller tvivelaktigt innehåll. Om du vill ha mer information om varför din avatar inte godkändes kan du kontakta administratorn.
+mvthread_request_move:anhåll om flyttning
+move_request_reason:Varför vill ha flytta diskussionen?
+mvthread_submit_req:Sänd anhållan
+thread_exchange:Diskussionsbyte
+move_request_by:Diskussionsbytet önskat av:
+move_reason:Orsak till flyttningen:
+thr_exch_accept:godkänn diskussion
+thr_exch_decline:godkänn inte diskussion
+thr_exch_orig_forum:Ursprungligt forum:
+thr_exch_dest_forum:Nytt forum:
+thr_exch_no_threads:Inga diskussioner att granska.
+thr_exch_decl_reason:Orsak till att avslå ämnet <b>{VAR: data->subject}</b> i forumet <b>{VAR: data->f2_name}</b>
+thr_exch_submit:Sänd
+exch_decline_ttl:Flyttningen av ämnet {VAR: data->subject} till forumet {VAR: data->f2_name} avlogs.
+ppost_original_msg:meddelande som du skickar vidare eller svarar på
+split_thread:Splittra diskussion
+groupmgr_no_user:Det finns ingen medlem med användarnamnet "{FUNC: char_fix(htmlspecialchars($gr_member))}"
+groupmgr_already_exists:Medlemmen "{FUNC: char_fix(htmlspecialchars($gr_member))}" finns redan i den här gruppen.
+groupmgr_yes:Ja
+groupmgr_no:Nej
+groupmgr_action:Handling
+groupmgr_member:Medlem
+groupmgr_cancel:Tillbaka
+groupmgr_add_member:Lägg till medlem
+groupmgr_update_member:Uppdatera medlem
+groupmgr_edit:Editera
+groupmgr_delete:Radera
+group_mgr_anon:Anonym
+group_mgr_reged:Alla registrerade medlemmar
+show_show:Visa:
+group_mgr:Gruppmanager
+group_mgr_edit_btn:Editera grupp
+group_mgr_heading:Välj grupp att editera
+group_mgr_group:Grupp:
+permission_denied_title:Inte tillåtet!
+permission_denied_msg:Dina användarrättigheter tillåter inte att du gör det du nyss försökte.
+p_READ:Läst
+p_POST:Skriva
+p_REPLY:Svara
+p_EDIT:Editera
+p_DEL:Radera
+p_STICKY:Klibbiga inlägg
+p_POLL:Gör en gallup
+p_FILE:Bifoga filer
+p_VOTE:Rösta
+p_RATE:Betygsätt ämnen/medlemmar
+p_SPLIT:Splittra diskussioner
+p_LOCK:Lås diskussioner
+p_MOVE:Flytta diskussioner
+p_SML:Tillåt smilisar
+p_IMG:Tillåt bild-URL
+p_SEARCH:Kan Söka
+group_mgr_search:Sök medlem
+group_mgr_indicator:Editeras just nu: <b>{VAR: grp->name}</b>
+rate_worst:Sämst
+rate_best:Bäst
+post_quote_msg:Den {TEMPLATE: make_report_date} skrev {VAR: msg->login}:
+post_quote:Citat:
+post_quote_selected:Citera vald text
+userinfo_referals:Refererade medlemmar:
+userinfo_referals_count:{VAR: referals} medlemmar
+pm_no_space_title:Inget utrymme kvar!
+pm_no_space_msg:Dina privata meddelanden tar för tillfället för mycket utrymme. Maximalt tillåtet utrymme är <b>{GVAR: MAX_PMSG_FLDR_SIZE} byte</b>, och dina meddelanden tar nu <b>{VAR: fldr_size} byte</b>.<br /><br /><font class="ErrorText">Ta bort några gamla meddelanden för att friöra lite utrymme</font>.
+pm_space_indct_msg:Dina mappar för privata meddelanden är fyllda till {VAR: percent_full}%.
+th_expr_never:Aldrig
+th_expr_one_hr:1 timme
+th_expr_three_hr:3 timmar
+th_expr_four_hr:4 timmar
+th_expr_eight_hr:8 timmar
+th_expr_sixteen_hr:16 timmar
+th_expr_one_day:1 dag
+th_expr_two_day:2 dagar
+th_expr_four_day:4 dagar
+th_expr_one_week:1 vecka
+th_expr_two_week:2 veckor
+th_expr_one_month:1 månad
+th_expr_two_month:2 månader
+th_expr_four_month:4 månader
+th_expr_one_year:1 år
+thread_mod_delete:Radera
+action_ip:IP
+action_latest_post:Senaste inlägg
+online_today_last_visit:Senaste besök
+online_today_update:Tittar på listan över personer som besökt forumet idag.
+logedin_todays_visitors:dagens besökare
+logedin_latest_post:Senaste inlägg:
+register_show_avatar:Visa avatarer:
+register_show_avatar_desc:Du kan låta bli att visa andra medlemmars avatarer när du läser deras inägg
+drawmsg_view_rest_post:Visa resten av inlägget
+post_re:Re:
+forumsel_goto_forum:Gå till forum:
+minimsg_thread_view:Tidigare inlägg i diskussionen
+split_th_post_by:Skrivet av:
+split_th_posted_on:Postningsdatum:
+split_th_subject:Rubrik:
+split_th_new_thread_title:Ny rubrik för diskussionen:
+split_th_forum:Forum:
+split_th_split_sel:Flytta valda inlägg
+split_th_split_unsel:Flytta icke-valda inlägg
+split_th_messages:Inlägg
+split_th_select:Välj
+report_report_post:Rapportera inlägg
+quicklogin_login:Inloggningsnamn:
+quicklogin_password:Lösenord:
+quicklogin_use_cookies:Använd kakor?
+quicklogin_login_btn:Logga in
+quick_reply:Snabbt svar
+quick_reply_post:Posta snabbsvar
+quick_reply_preview:Förhandsgranska snabbsvar
+post_notification_desc:Meddela mig när någon svarar på detta inlägg.
+post_all_ext_allowed:(oinskränkt)
+maximize_category:Maximera kategori
+maximize_message:Maximera meddelande
+no_view_perm:Du har inte tillräckliga rättigheter för att läsa den här diskussionen.
+report_empty_report:Du kan inte sända en tom rapport. Var vänlig ange orsak till rapporten.
+report_already_reported_title:Inlägget redan rapporterat
+report_already_reported_msg:Det har inlägget har redan rapporterats och väntar på att granskas av moderatorerna.
+register_err_toomanyimages:Du försöker använda fler bilder än det tillåtna antalet {GVAR: FORUM_IMG_CNT_SIG} bilder i din signatur.
+pmsg_next_msg:Nästa meddelande
+pmsg_prev_msg:Föregående meddelande
+post_proc_reveal_spoiler:Visa gömd text
+register_jabber:Jabber-användarnamn:
+register_skype:Skype användarnamn:
+register_twitter:Twitter användarnamn:
+register_google:Google Chat/IM användarnamn:
+im_jabber:Jabber:
+im_google:Google Talk:
+im_skype:Skype:
+im_twitter:Twitter:
+forum_contact:Ta kontakt
+forum_home:Hem
+post_cur_attached:bifogat: {VAR: i} {PLURAL: i|fil|filee}
+ignored_anon_post:{GVAR: ANON_NICK} ignoreras
+ignored_user_post:Inlägg av <a href="{TEMPLATE: ignored_user_post_lnk}">{VAR: obj->login}</a> ignoreras
+smladd_close_window:stäng fönstret
+post_list_smilies:visa alla smilisar
+p_VISIBLE:Synlig
+reported_in_thread:I:
+help_back_to_top:tillbaka till början
+help_return_to_index:tillbaka till hjälpindex
+imsg_err_message_title:Ogiltigt inlägg
+imsg_err_message_msg:Inlägget du försöker visa finns inte.
+poll_edit:Editera
+register_err_not_valid_img:Den valda url:en innehåller inte en giltig bild
+pmsg_recepient:Mottagare
+register_err_taken_alias:Aliasen du försöker använda är redan upptagen, vauml;nligen välj en annan.
+register_alias:Alias
+register_alias_desc:Om du vill kallas något annat än ditt användarnamn kan du skriva in ditt smeknamn här.
+register_allow_pm_msg:Tillåt privata meddelanden
+register_allow_pm_msg_desc:Tillåt att andra användare skickar privata meddelanden åt dig via FUDforum.
+postcheck_pm_disabled:Du kan inte skicka ett privat meddelande åt "{VAR-HTML: v}" eftersom han/hon inte tar emot privata meddelanden.
+polllist_vote:Rösta
+polllist_view_results:Visa resultat
+polllist_name:Gallupens namn
+polllist_date:Datum
+polllist_owner:Gjord av
+polllist_votes:Totalt antal röster
+polllist_action:Aktion
+polllist_update:<a href="{TEMPLATE: polllist_update_lnk}">Tittar på tillgängliga gallupar</a>
+userinfo_polls:Gallupar:
+show_pollist:Omröstningar
+search_and:OCH
+search_or:ELLER
+search_desc_order:Senaste först
+search_asc_order:Äldst först
+search_relevance_order:Relevans
+search_logic:Söklogik:
+search_sorting:Sortera efter:
+search_attach:Bilagor:
+search_attach_all:Med eller utan
+search_attach_with:Med bilagor
+post_proceed:Gå vidare
+post_moderated_forum:Du har skrivit ett inlägg i ett modererat forum, vilket innebär att inlägget syns först när forumets moderator och/eller administrator har godkänt det.
+post_moderated_forum_ttl:Meddelande om modererat forum
+buddy_list_bday:Idag fyller {VAR: r[2]} {VAR: age} år
+email_warning_msg:Om du ändrar din nuvarande e-postadress kommer ditt användarkonto att räknas som obekräftat tills du bekräftar den nya e-postadressen.
+register_show_im:Visa IM-indikatorer
+register_show_im_desc:Avgör om författarens IM-indikatorer syns bredvid inlägget.
+unread_message:Oläst inlägg
+read_message:Läs inlägg
+threadt_more:&lt;mer&gt;
+threadt_disabled_ttl:Trådad vy av diskussionerna är inte tillgänglig.
+threadt_disabled_desc:Administratorn har stängt av den trådade vyn av diskussionerna, använd den platta vyn istället.
+threadt_update:Läser forumet (trävy) <a href="{TEMPLATE: threadt_update_lnk}">{VAR: frm->name}</a>
+mmod_delete_cofirm_ttl:Bekräfta radering av diskussion/inlägg
+spell_alts:inga alternativ
+insert_uploaded_image:Sätt in bild i texten
+finduser_help:Sökmotorn kommer automatiskt att lägga till ett * tecken till din fråga. t ex. för att söka efter alla personer vars användarnamn startar med ett 'a', skriv 'a' i sökrutan.
+back_to_top:Tillbaka till början
+pm_err_disabled_title:Privata meddelanden är inte tillåtna
+pm_err_disabled_msg:Du kan inte skicka privata meddelanden om du inte tillåter privata meddelanden i din profil.
+err_mod_acc_ttl:Obekräftad användare
+err_mod_acc_msg:Administratorn har valt att själv granska alla användare innan aktivering. Du kommer inte att ha fulla rättigheter i forumet innan administratorn har godkänt ditt anv&uml;ndarnamn.
+accounts_pending_approval:Ej granskade användare
+saved:Sparade
+register_err_time_limit:Registreringsbegränsningen av en registrering per {GVAR: REG_TIME_LIMIT} sekunder har överskridits. Vänligen vänta {PLURAL: reg_limit_reached|$1 sekund|$1 sekunder}, och försök sedan registrera er igen.
+register_err_avatardimtobig:Visningsbildens dimensiontioner på <b>({VAR: img_info[0]}x{VAR: img_info[1]})</b> överskrider den maximala storleken på <b>({GVAR: CUSTOM_AVATAR_MAX_DIM})</b>.
+buddy_offline:{VAR: r[2]} är för tillfället nedkopplad
+buddy_online:{VAR: r[2]} är för tillfället uppkopplad
+sml_no_smilies:Inga humörgubbar finns tillgängliga.
+login_unapproved_account_ttl:Inaktiverat Konto
+login_unapproved_account_msg:Administratören på forumet har valt att verifiera samtliga registreringar manuellt innan de aktiveras. Dit konto har inte aktiverats ännu, därför kommer du inte kunna använda vissa av funktionerna som finns tillgängliga för registrerade medlemmar innan ditt konto aktiveras.
+remove_from_buddy_list:ta bort från kompislistan
+iemail_msg_author:<b>Skribent:</b> {VAR: obj->alias}
+iemail_msg_subject:<b>Ämne:</b> {VAR: obj->subject}
+iemail_msg_date:<b>Datum:</b> {TEMPLATE: dmsg_post_date}
+iemail_msg_reply:Svara
+iemail_msg_quote:Citera
+iemail_msg_view:Visa Ämne/Meddelande
+threadt_sticky:klistrig
+threadt_announce:tillkännagivande
+reported_no_messages:Det finns inga rapporterade meddelanden.
+poll_no_polls:Det finns inga tillgängliga gallupar.
+no_unread_messages:Det finns inga olästa meddelanden som matchade din förfrågan.
+thread_mark_all_read:markera alla olästa forums meddelanden lästa
+thread_mark_all_read_desc:Alla olästa meddelanden i detta forum kommer att markeras som lästa.
+private_no_messages:Det finns inga meddelanden i denna mapp
+register_email_change_subject:Verifiering av ändrad e-postadress
+register_email_change_msg:Verifiera gärna din nya e-postadres "{VAR: uent->email}" som ersätter din gamla adress "{VAR: old_email}" genom att besöka:\n{FULL_ROOT}?t=emailconf&conf_key={VAR: conf_key}\n\nDitt konto kommer aktiveras igen när du verifierat din nya adress.
+iemail_thread_unsub:Avbeställ denna tråd
+iemail_forum_unsub:Avbeställ detta forum
+primary_group_prefix:Primär grupp för forum:
+group_resources:Denna grupp kontrollerar rättigheterna för följande forum
+register_admin_newuser_title:En ny medlem har registrerat sig och väntar på att kontot skall bekräftas
+# Fuzzy
+register_admin_newuser_msg:Den nya medlemmen {VAR: uent->login} har just registrerat sig på forumet. Eftersom kontobekräftelsefunktionen är på måste du eller någon annan av forumadministratörerna bekräfta konto innan det kan aktiveras. Gå till {FULL_ROOT}adm/admuserapr.php för att kontrollera kontot.\n\nDet här är en automatiserad process. Svara inte på detta meddelande.\nOm du inte vill ha ytterligare meddelanden om nya medlemmar som registrerar sig kan du koppla bort dem i Administratörens kontrollpanel. Funktionen heter "New Account Notification".
+post_mod_msg_notify_title:Ett nytt meddelande i forumet "{VAR: frm->name}" väntar på godkännande
+post_mod_msg_notify_msg:Ett nytt meddelande med rubriken "{VAR: msg_post->subject}" skrevs nyligen på ett forum som du modererar. Gå till {FULL_ROOT}?t=modque#{VAR: msg_post->id} för att se meddelandet.\n\nDet här är ett automatiskt meddelande. Svara inte på det.
+thread_printable_pdf:Gör utskriftsvänlig PDF
+thread_syndicate:Syndikera det här forumet (XML)
+reg_conf_title:Registreringsverifiering
+reg_conf_email:<b>E-postsverifiering</b><br />Ett e-postmeddelande har skickats till dig med en unik web-adress som du måste besöka för att få ditt konto aktiverat. Om du inte får detta meddelande inom de kommande minuterna, vänligen logga in med ditt konto och verifiera att e-postadressen du angett stämmer. När du verifierat ditt konto kommer du att kunna använda forumets funktioner för registrerade användare.
+reg_conf_account:<b>Kontoverifiering</b><br />Innan ditt konto aktiveras, måste det godkännas av en administratör, när väl det sker kommer du att få ett e-postmeddelande vilket meddelar dig om att ditt konto aktiverats. Medan kontot är oaktiverat kan du logga in med ditt konto, du kommer dock inte att kunna nyttja alla funktioner.
+forum_banned_user:Handligar gjorda av dig har resulterat i att du permanent bannlysts från detta forum. Adjö.
+mnav_description:Meddelandenavigatorn
+mnav_date_limit:Ålder:
+mnav_forum_limit:Sök bara i:
+mnav_all_forums:Sök alla forum
+mnav_submit:Starta Sökning
+mnav_no_range:Du måste ange en gilig ålder. Detta värde kan kan vara under 1 (t ex 0.12) men det måste vara mer än noll.
+mnav_invalid_unit:Du måste ange en gilitg tidsenhet.
+mnav_invalid_date:Åldern du angett är större än den administratören godkännt, vänligen gör åldern mindre.
+mnav_no_results:Inga meddelanden hittades matchande din förfrågan.
+mnav_posted_by:Postat Av:
+mnav_more:Mer &raquo;&raquo;
+mnav_minute:Minut(er)
+mnav_hour:Timme/ar
+mnav_day:Dag(ar)
+mnav_week:Vecka/or
+mnav_month:Månad(er)
+mnav_title:Meddelandenavigatorn
+mnav_update:Bläddra Meddelanden användandes <a href="{TEMPLATE: mnav_update_lnk}">Meddelandenavigatorn</a>
+pm_notify_subject:[{GVAR: FORUM_TITLE}] Notifikation om nytt privat meddelande
+pm_notify_body_email:Du har ett nytt privat meddelande med rubriken "{VAR: subject}" från "{VAR: from}" på forumet "{GVAR: FORUM_TITLE}".\nKlicka här för att läsa detta meddelande: {FULL_ROOT}?t=pmsg_view&id={VAR: pid}\n\nFör att inte få meddelanden som detta i framtiden stänger du av "Notifikation om nytt privat meddelande" på din profil.
+register_pm_notification:Meddela mig när jag får Privata Meddelanden
+register_pm_notification_desc:Välj det här alternativet för att få ett meddelande med vald metod när ett privat meddelande skickas till dig.
+findu_admin_opts_header:Admin Alternativ.
+findu_unban:Upphäv Bannlysning
+findu_ban:Bannlys
+findu_edit:Redigera
+findu_delete:Radera
+dmsg_reply_to:är ett svar på
+dmsg_reply_num:meddelande #{VAR: obj->reply_to}
+merge_topics:Sammanfoga Ämnen
+merge_topics_cp:Inställningar för Sammanfogade Ämnen
+merge_topics_tpl:Välj Ämnen Att Sammanfoga <font class="SmallText">(du måste välja mer än 1 ämne)</font>
+merge_merge:Sammanfoga Valda Ämnen
+merge_next:Nästa Ämnen
+merge_prev:Föregående Ämnen
+merge_another:Gå till <a href="{TEMPLATE: merge_another_lnk}">senast sammanslagna ämne</a> eller sammanfoga ett annat:
+split_cp:Inställningar för Splittade Ämnen
+groups_perms_header:Rättigheter <font size="-1">(flytta musen över rättigheten för att se rättighetstypen)</font>
+register_err_sig_too_long:Din signatur överskrider maxlängden på {GVAR: FORUM_SIG_ML} characters tecken.
+register_sig_limit:{GVAR: FORUM_SIG_ML} characters <a href="javascript: alert('Din Signatur är '+document.forms['fud_register'].reg_sig.value.length+' tecken lång. Maxlängden är {GVAR: FORUM_SIG_ML}');" class="SmallText">Kontrollera Signaturlängd</a>
+adm_account_accepted:Ditt konto '{VAR: login}' godkänndes av administratören och är nu aktivt. Du kan nu komma åt {GVAR: FORUM_TITLE}' forumet som en verifierad registrerad användare.
+adm_account_accepted_s:Din kontoförfrågan för '{GVAR: FORUM_TITLE}' accepterades.
+adm_account_rejected:Ditt konto '{VAR: login}' nekades av administratören och är inte aktivt. Om du vill veta varför detta beslut fattades, kontakta administratören på '{GVAR: ADMIN_EMAIL}'.
+adm_account_rejected_s:Din kontoförfrågan på '{GVAR: FORUM_TITLE}' nekades.
+thread_on:på
+userinfo_buddy:Vän:
+register_email_addr:E-postadress:
+reset_suffix:Om du har fått detta meddelande av misstag, vänligen ignorera det. Om du får flera oönskade kopior av detta e-postmeddelande, ta kontakt med forumets administratör på {GVAR: ADMIN_EMAIL}\n\nDenna begäran inleddes från: {VAR: _SERVER['REMOTE_ADDR']}.
+usrinfo_last_visit:Senaste besök:
+mnav_newer:nyare än
+mnav_older:äldre än
+ip_search_by_ip:Sök användare efter IP
+ip_search_syntax:Stödda syntax: 1.2.3.4, 1.2.3, 1.2, 1
+ip_search:Sök
+ip_analyze_usage:Analysera IP användande
+ip_analyze_usage_descr:Ange användarens exakta inloggningsnamn.
+ip_users_using:Användare som använder '{VAR: ip}' IP-adressen
+ip_all_ips:Alla IP-adresser som används av '{VAR: user}'
+ip_title:IP-läsare
+userinfo_real_name:Riktigt namn:
+register_err_alias_notallowed:Detta alias är inte tillåtet
+post_err_mod_forum_edit_ttl:FEL
+post_err_mod_forum_edit_msg:Du kan inte redigera meddelanden i ett modererat forum.
+dmsg_num:meddelande #{VAR: obj->id}
+postcheck_session_invalid:Din session har löpt ut. Skicka in formuläret igen. Beklagar det inträffade.
+delete_message_extra_desc:<b>Valfritt</b><br />Ange en anledning för raderingen av meddelandet som skickas till författaren genom ett privat meddelande.
+delete_message_extra_body:Inkludera det raderade meddelandet i beskedet som skickas till författaren.
+delete_msg_removed_ttl:Ditt meddelande har blivit borttaget av administrationen.
+delete_msg_pm_body:Orginalmeddelande
+delete_msg_pm_subject:Ämne: {VAR: data[15]}
+ip_no_whois:Whois-information för <b>{VAR: ip}</b> är inte tillgänglig.
+ip_whois_title:Information om internetleverantör
+register_theme:Tema:
+pmsg_trash:Töm papperskorgen
+uc_new_pm:Nya privata meddelanden
+uc_new_topic:Nytt ämne
+uc_new_cat_forum:Prenumererade forum med nya meddelanden
+uc_cat_forum:Kategori &raquo; Forum
+uc_sub_topics:Prenumererade ämnen med nya meddelanden
+uc_page_title:Tittar på personliga kontrollpanelen.
+search_options:Sökalternativ
+search_user_filter:Filtrerar efter användare:
+register_none:Meddela mig inte
+findu_no_conf:obekräftad användare
+register_max_sig_len:Maximal längd:
+register_turing:Verifiering:
+register_err_turing:Verifiering misslyckades. Var god försök igen.
+modque_cat:Kategori
+modque_forum:Forum
+idx_compact_forum_row:Tillgängliga forum:
+mmd_del_title:Radera ämnen
+mmd_mov_title:Flytta ämnen
+mmd_move_threads_to:Målforum:
+mmd_abort_move:Avbryt
+mmd_move:Flytta ämnen
+pmsg_pdf_btn:Skapa PDF-arkiv
+search_results_hdr:{VAR: total} sökresultat funna
+thread_del_all:Ta bort markerade
+thread_mov_all:Flytta markerade
+thread_merge_all:Sammanfoga markerade
+thread_loc_all:Lås/Lås upp markerade
+dmsg_ip:IP:
+err_blockedaccnt_title:FEL: Ditt konto har filtrerats bort.
+err_blockedaccnt_msg:Ditt konto har spärrats från att komma åt forumet på grund av något av de installerade användarfiltren.
+merge_th_page_list:Ämnesidesval
+most_users_online:Flest användare online samtidigt var <b>{VAR: st_obj->most_online}</b> on <b>{DATE: st_obj->most_online_time %a, %d %B %Y %H:%M}</b>
+sub_unsub_all_forums:Avsluta Prenumeration Från Alla Forum
+sub_unsub_all_topics:Avsluta Prenumeration Från Alla Ämnen
+unbookmark_all_topics:Ta bort alla bokmärken
+tabs_own_posts:Visa Egna Inlägg
+sml_emoticon:Emotikon
+sml_code:Kod
+mnav_sub_only:Sök endast i prenumererade forum
+register_topics_per_page:Ämnen per sida:
+login_min_time:Detta forum tillåter ett inloggningsförsök var {VAR: MIN_TIME_BETWEEN_LOGIN}:e sekund, var god vänta {FUNC: ($usr_d->last_login + $MIN_TIME_BETWEEN_LOGIN - __request_timestamp__)} sekunder innan du försöker igen.
+post_not_logged_in:Du är inte inloggad, medellandet kommer bli postat anonymt.
+post_common_bold:Fet
+post_common_italics:Kursiv
+post_common_underline:Understruken
+post_common_align_left:Vänsterjsutera
+post_common_align_center:Centrera
+post_common_align_right:Högerjustera
+post_common_link:Infoga en länk
+post_common_link_popup:Länkadress:
+post_common_email:Infoga en e-postadress
+post_common_email_popup:E-postadress:
+post_common_image:Infoga en bild
+post_common_image_popup:Bild-URL:
+post_common_nlist:Lägg till numrerad lista
+post_common_blist:Lägg till punktlista
+post_common_quote:Lägg till citat
+post_common_code:Lägg till kod
+rating_delete:Radera
+post_always_on_top:Gör så att ämnet alltid visas överst i ämnesöversikten
+topic_rating:{VAR: frm->rating} från {PLURAL: frm->n_rating|$1 röst|$1 röster}
+topic_list_rating:{VAR: r[17]} från {PLURAL: r[21]|$1 röst|$1 röster}
+tabs_notifications:Notifikationer
+finduser_flag:Flagga
+post_descr:Ämnesbeskrivning:
+pmsg_on:på
+pmsg_download_dump:Hämta meddelande som text
+move_messages:Flytta meddelanden
+move_msg_btn:Flytta valda meddelanden
+move_msg_th_expl:Specificera ID på destinationsämnet (kan vara i andra fora)
+captcha_img_alt:Caotcha verifiering: du måste tolka texten i denna bild.
+captcha_img_help:Det finns ingen nolla eller etta i bilden.
+powered-by:Drivs av: FUDforum {GVAR: FORUM_VERSION}.
+copyright:Copyright &copy;2001–2020 <a href="http://fudforum.org/">FUDforum Bulletin Board Software</a>
+code_title:Kod:
+code_select_all:Välj alla
+code_show_hide:Visa / dölj
+social_sites:Sociala nätverk:
+postcheck_min_len_err:Ditt meddelande är för kort. Minimilängden är {PLURAL: post_min_len|$1 tecken|$1 tecken}.
+postcheck_dup_err:Var snäll och skapa inte duplicerade ämnen.
+btn_new_topic:Nytt ämne
+btn_new_pm:Nytt priv. meddelande
+btn_post_reply:Svara
+btn_tree_view:Trävy
+btn_flat_view:Platt vy
+btn_about:Profil
+btn_small_pm:PM
+btn_delete:ta bort
+btn_edit:redigera
+btn_reply:svara
+btn_forward:skicka vidare
+btn_quote:citera
+btn_email:E-post
+btn_show_posts:inlägg
+btn_homepage:www
+feed_no_data:Ingen matchande data hittades.
+feed_rdf:RDF-flöde
+feed_rss:RSS2-flöde
+feed_atom:ATOM-flöde
+ip_whois_connect_err:Kan inte ansluta till WHOIS servern ({VAR: whois_server}): {VAR: errstr}
+custom_filed_required:Detta fält är obligatoriskt
+pages:Sidor
+page_list_heading:Tillgängliga sidor
+page_list_total:{PLURAL: i|$1 sida|$1 sidor} listade.
+page_update:Visar sida
+pm_export_header:Privata meddelanden för {VAR: usr->alias}
+pm_export_footer:Exporterad:
+karma:Karma
+karma_track:Hantera rykte för användare:
+karma_delete:Radera
+rate_author:Betygsätt författare:
+blog_update:Läser forumbloggen
+blog:Blogg
+blog_new_members:Nya medlemmar
+blog_new_posts:Nya inlägg
+blog_rated_posts:Bäst betyg
+blog_viewed_posts:Mest lästa
+blog_comments:{PLURAL: topic->replies|$1 kommentar|$1 kommentarer}

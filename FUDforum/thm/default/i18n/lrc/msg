@@ -1,0 +1,343 @@
+# Messages for Northern Luri (لۊری شومالی)
+# Exported from translatewiki.net
+# Author: Lorestani
+# Author: Mogoeilor
+
+action:اْقدامؽا
+admin:دیوڤونداری
+admin_control_panel:مودیریٱت
+administrator:دیوڤوندار
+avatar:آواتار
+birth_date:ڤیرگار ڤ دیر اوماین
+by:ڤا
+current_time:زموݩ ایسنی
+date_registered:ڤیرگار سٱبت نوم:
+email:ایماٛیلٛ:
+email_to_friend:ایماٛیلٛ سی رفیق
+faq:هومياری
+first_unread_msg:رٱتن ڤ پاٛغومؽا نٱڤٱنٱ
+forum_new_messages:پاٛغومؽا تازٱ
+forum_old_messages:هیچ پاٛغوم تازاٛ نؽ
+from:د
+gender:جنس
+go:رۉ
+home:سرآسونٱ
+homepage:بٱلگٱ سرآسونٱ
+im_yahoo:فرسنٱ یاهۊ:
+image:عٱسگ
+index_url_redirection:ڤاگٱردونی
+last_post:آخری پاٛغوم
+location:جاگٱ
+lock_thread:سٱرتال قلف بیٱ
+locked:قلف بيٱ
+login:اوماین ڤ سیستم
+login_header:اوماین ڤ سیستم
+logout:د سيستم دراوماین
+mark_all_read:همٱ پاٛغومؽا ڤٱنٱ ناْ نشوݩ دار کو
+members:ٱندومؽا
+calendar:تٱقڤیم
+cal_goto_date:پرسن د
+cal_birthday:رۊز ڤ دیر اومایاْ: {VAR: user}
+message:پاٛغوم
+move_thread:جا ڤ جا بۊؽئت
+na:ن/آ
+new_posts:پاٛغومؽا تازٱ
+next_page:بٱلگٱ دمایی
+off:کۊر
+on:رۊشنا
+posts:پاٛغومؽا
+posts_c:پاٛغومؽا:
+rating:اْمتؽاز
+register:سٱبت نوم کردن
+registered:سٱبت نوم بیٱ:
+replies:جوئاویا
+search:پاٛجۊری
+send:کلٛ کردن
+size:ٱندازٱ
+sticky:دیس:
+subscribe:ٱندوم بیئن
+user:كاریار
+views:ديئنؽا
+vote_button:رٱی باٛیتو
+vote_for_thread:رٱی باٛتو
+reported_on:رۊشنا:
+modque_delete:پاک كردن
+list_referes_member:ٱندوم
+referals_action:کنش
+pmsg_all:همٱ
+pmsg_none:هيچ كوم
+folder:فولدر
+pmsg_replied:جوئاو داٛیٱ
+pmsg_forwarded:ری ڤ نوئا
+pmsg_author:نڤيسیار
+pmsg_time:ڤٱخت
+# Fuzzy
+pmsg_selected:انتخاو بیه
+pmsg_delete:پاک كردن
+cur_ppage_pm:هوئال خوسۊسی
+writing_pm:یاٛ پاٛغوم خوسۊسی بٱنیسؽد
+inbox:د جٱڤٱ
+sent:کلٛ بیٱ
+trash:سٱتل زوبالٱ
+msg_author:نڤیسیار
+month_1:ژانڤیٱ
+month_2:فڤریٱ
+month_3:مارس
+month_4:آڤریلٛ
+month_5:ماٛی
+month_6:ژوئٱن
+month_7:جۊلای
+month_8:آگوست
+month_9:سپتامر
+month_10:اوکتوبر
+month_11:نوڤامر
+month_12:دسامر
+sunday:یاٛ شٱمٱ
+sunday_short:شٱمٱ
+monday:دۏشٱمٱ
+monday_short:دۏشٱمٱ
+tuesday:ساْشٱمٱ
+tuesday_short:ساْشٱمٱ
+wednesday:چارشٱمٱ
+wednesday_short:چارشٱمٱ
+thursday:پٱن شٱمٱ
+thursday_short:پٱن شٱمٱ
+friday:جۏمٱ
+friday_short:جۏمٱ
+saturday:شٱمٱ
+saturday_short:شٱمٱ
+male:پؽا
+female:زؽنٱ
+finduser_by_login:ڤا اوماین د سیستم:
+finduser_submit:پاٛدا کردن
+finduser_no_such_user: چنی کاریارؽ نؽ
+finduser_user:كاریار
+finduser_joindate:زموݩ پاٛڤٱسن
+finduser_action:کنش
+yes:عٱ
+no:نٱ
+register_email:ایماٛیلٛ
+pmuserloc_login:اوماین د سیستم
+pmuserloc_submit:کلٛ كردن
+pmuserloc_user:كاریار
+register_builtin:دۏرس بیٱ د
+register_login:اوماؽن د سیستم
+register_password:پٱسڤورد:
+register_conf_pass:رٱمز تٱیید کو
+register_name:نوم:
+register_your_pass:پٱسڤورد شما:
+register_update:رۊزآمد كردن
+register_del_avatar:آواتار ناْ پاک بٱکؽت
+register_avatar:آواتار:
+register_preview:پيش ساٛلٛ
+register_register:سٱبت نوم کردن
+register_required:دونسمنیا لٛازم
+register_location:جاگٱ:
+register_occupation:کسم
+register_image:عٱسگ
+register_icq:آی سی کیۊ:
+register_yahoo:فرسنٱ یاهۊ:
+register_msnm:فرسنٱ اْم اْس اْن:
+register_homepage:بٱلگٱ سرآسونٱ
+register_bday:ڤٱخت ڤ دیر اوماین:
+register_day:رۊز
+register_month:ما
+register_year:سال
+register_gender:جنس:
+register_prefs:خوسۊسیات هنی
+register_sig:اْمزا
+register_reset:د نۊ شرۊ كردن
+register_timezone:راساگٱ ڤٱخت
+register_invisible_mode:شلک ناْ دیئنی:
+register_show_email:نشونی ایماٛیلٛ نشوݩ باٛیٱ:
+add:اْزاف كو
+buddy_remove:ڤرداشتن
+post_normal:عادی
+post_sticky:دیس
+post_size:ٱندازٱ
+post_color:رٱنڳ
+post_font:فونت
+post_preview:پیش ساٛلٛ پاٛغوم
+post_logedin_user:کاریار اومایٱ د سیستم
+post_logout:د سيستم دراوماین
+post_poll_delete:پاک کردن
+post_poll_edit:ڤیرایش
+post_file_del:پاک کردن
+post_file_name:نوم
+post_file_size:ٱندازٱ
+post_body:لٛٱش
+post_options:گوزینٱيا هنی:
+post_preview_btn:پیش ساٛلٛ پاٛغوم
+post_cancel_btn:رٱد کردن
+coppa_fax_telephone:تلٛفوݩ:
+coppa_fax_email:نشونی ایماٛیلٛ:
+coppa_fax_date:ڤٱخت:
+coppa_fax_login:اوماین ڤ سیستم
+coppa_fax_passwd:پٱسڤورد
+coppa_fax_remail:ایماٛیلٛ
+coppa_fax_name:نوم
+login_want_to_register:مؽهایت سٱبت نوم بٱکؽت؟
+login_forgot_passwd:پٱسڤورد د ڤیرتو رٱتٱ
+login_login:اوماین ڤ سیستم:
+login_login_btn:اومابن ڤ سیستم
+login_name_required:اوماین ڤ سیستم لٛازمٱ
+login_passwd_required:پٱسڤورد لٛازم هؽ
+rpasswd_invalid_passwd:پٱسڤورد ناموعتٱبٱر
+rpasswd_passwd_nomatch:پٱسڤورد تٱتبیق نارٱ
+reset_update:د نۊ ڤارد کردن پٱسڤورد
+rpasswd_change_pass:پٱسڤورد ناْ آلشت بٱکؽت
+rpasswd_login:اوماین ڤ سیستم
+rpasswd_cur_pass:پٱسڤورد تازٱ:
+rpasswd_new_pass:پٱسڤورد تازٱ:
+rpasswd_conf_pass:پٱسڤورد ناْ تٱیید کو:
+ruser_new_login:اوماین مؽن سیستم تازٱ
+ruser_cur_pass:پٱسڤورد ایسنی:
+login_passwd:پٱسڤورد:
+reset_email:ایماٛیلٛ:
+reset_reset_button:پاسڤورد ناْ دوئارٱ ڤارد بٱکؽت
+report_by:ڤا:
+remail_your_name:نومتو:
+remail_your_email:ایماٛیلٛ تو:
+remail_friends_name:نوم رفیقتو:
+remail_friends_email:ایماٛیلٛ رفیقتو:
+remail_required:لٛازم
+remail_message:پاٛغوم:
+remail_send_now:ایساْ ایماٛلٛ ناْ کلٛ کو
+remail_done:ٱنجوم بیٱ
+mklist_type:نوع:
+mklist_option:گوزینٱيا هنی:
+mklist_additem:یاٛ قلٱم اْزاف بٱکؽت
+mklist_apply:ڤ کار بوردن
+mklist_delete:پاک کردن
+# Fuzzy
+qbud_selected:انتخاو بیه
+mklist_numerical:عدٱدی
+mklist_aplha:آلفا
+mklist_circle:غراتی
+mklist_close:بٱستن
+email_to:سی:
+email_pg_title:ایماٛیلٛ
+email_body:لٱش:
+email_submit:ایماٛیلٛ
+ppost_to:سی:
+ppost_send:کلٛ کردن
+poll_create:دۏرس کردن
+poll_delete:پاک کردن
+poll_unlimited:نا مٱهدۊد
+poll_day:رۊز
+poll_days:رۊزؽا
+poll_hour:ساعٱت
+poll_hours:ساعٱتؽا
+poll_month:ما
+poll_year:سال
+poll_week:هٱفتٱ
+delete_yes:عٱ
+delete_no:نٱ
+error_error:خٱتا
+err_info:دونسمنیا
+buddy_list_err_nouser_title:نمۊئٱ یاٛ کاریار اْزاف بٱکؽت
+emailconf_err_invkey_title:خٱتا
+err_inc_criticaltitle:خٱتا موهلک
+ignore_list_err_info_title:دونسمنیا
+ignore_list_err_nu_title:کاریار پاٛدا ناٛی
+post_err_edttimelimit_title:خٱتا
+post_err_passwd:پٱسڤورد غلٱت
+report_err_nosuchmsg_title:خٱتا
+reset_err_invalidkey_title:خٱتا
+reset_err_rstconf_title:دونسمنيا
+reset_newpass_title:پٱسڤورد ناْ دوئرٱ ڤارد بٱکؽت
+help_title:هومياری
+remail_emailsent:ایماٛیلٛ کلٛ بیٱ
+groupmgr_yes:عٱ
+groupmgr_no:نٱ
+groupmgr_action:کنش
+groupmgr_member:شمارٱ
+groupmgr_cancel:رٱد کردن
+groupmgr_add_member:یاٛ شمارٱ اْزاف بٱکؽت
+groupmgr_edit:ڤيرايش
+groupmgr_delete:پاک کردن
+group_mgr_anon:ناشناس
+show_show:نشوݩ داٛئن:
+group_mgr_edit_btn:گورۊ ناْ ڤیرایش بٱکؽت
+group_mgr_group:گورۊ:
+p_READ:ڤٱنن
+p_REPLY:جوئاو داٛئن
+p_EDIT:ڤیرايش
+p_DEL:پاک کردن
+rate_worst:گٱنترین
+rate_best:بؽترین
+th_expr_never:هیچ ڤٱخت
+th_expr_one_hr:یاٛ ساعٱت
+th_expr_three_hr:ساْ ساعٱت
+th_expr_four_hr:چار ساعٱت
+th_expr_eight_hr:هٱش ساعٱت
+th_expr_sixteen_hr:شومزٱ ساعٱت
+th_expr_one_day:یاٛ رۊز
+th_expr_two_day:دۏ رۊز
+th_expr_four_day:چار رۊ
+th_expr_one_week:یاٛ هٱفتٱ
+th_expr_two_week:دۏ هٱفتٱ
+th_expr_one_month:یاٛ ما
+th_expr_two_month:دۏ ما
+th_expr_four_month:چار ما
+th_expr_one_year:یاٛ سال
+thread_mod_delete:پاک کردن
+action_ip:آی پی
+logedin_todays_visitors:ساٛلٛ کنؽا اؽمرۊ
+post_re:د نۊ:
+split_th_messages:پاٛغومؽا
+split_th_select:اْنتخاو كردن
+quicklogin_login:اوماین ڤ سیستم:
+quicklogin_password:پٱسڤورد:
+quicklogin_login_btn:اوماین ڤ سیستم
+quick_reply:جوئاو سٱریع داٛئن
+im_jabber:جابر
+im_google:گۊگل چٱک چنٱ
+im_skype:اسکایپ:
+im_twitter:تۊیتر:
+forum_contact:تٱماس
+forum_home:سرآسونٱ
+smladd_close_window:نیمدری ناْ بڤٱن
+p_VISIBLE:دیئنی
+reported_in_thread:د:
+poll_edit:ڤيرايش
+search_and:ۉ
+search_or:یا
+saved:زٱخیرٱ کردن
+iemail_msg_reply:جوئاو داٛئن
+iemail_msg_quote:پورس
+threadt_sticky:دیس
+findu_edit:ڤيرايش
+findu_delete:پاک کردن
+dmsg_reply_to:د جوئاو ڤ
+thread_on:رۊشنا
+register_email_addr:نشونی ایماٛیلٛ:
+mnav_newer:تازٱ تر د
+mnav_older:قاٛیمی تر د
+ip_search:پاٛ جۊری
+userinfo_real_name:نوم راسٱکی:
+post_err_mod_forum_edit_ttl:خٱتا
+register_none:ماْ ناْ خڤٱر نٱکو
+modque_cat:دٱسٱ
+mmd_abort_move:رٱد کراٛن
+dmsg_ip:آی پی:
+sml_code:کود
+post_common_bold:مؽن پور
+post_common_italics:هٱلٛاْ هار
+post_common_underline:زیرخط
+rating_delete:پاک کردن
+finduser_flag:باٛرٱق
+pmsg_on:رۊشنا
+code_title:کود:
+code_select_all:همٱ ناْ اْنتخاو كو
+btn_small_pm:اؽڤارٱ
+btn_delete:پاک کردن
+btn_edit:ڤیرایش
+btn_reply:جوئاو داٛئن
+btn_forward:ری ڤ نوئا
+btn_quote:پورس
+btn_email:ایماٛیلٛ
+btn_homepage:دٱبلٛیۊ دٱبلٛیۊ دٱبلٛیۊ
+pages:بٱلگٱیا
+karma:کارما
+karma_delete:پاک کردن

@@ -1,0 +1,57 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: post.tmpl 6078 2017-09-25 14:57:31Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: post.php.t; output: post.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_select_opt.tmpl}
+{REF: draw_radio_opt.tmpl}
+{REF: rev_fmt.tmpl}
+{REF: post_opt.tmpl}
+{REF: post_proc.tmpl}
+{REF: replace.tmpl}
+{REF: wordwrap.tmpl}
+{REF: spell.tmpl}
+{REF: thread_notify.tmpl}
+{REF: postcheck.tmpl}
+{REF: ipoll.tmpl}
+{REF: imsg_edt.tmpl}
+{REF: return.tmpl}
+{REF: minimsg.tmpl}
+{REF: allowed_user_lnk.tmpl}
+{REF: logaction.tmpl}
+{REF: post_common.tmpl}
+{REF: th.tmpl}
+{REF: is_perms.tmpl}
+{REF: captcha.tmpl}
+
+{SECTION: loged_in_user_lnk}
+{ROOT}/l/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: create_poll_lnk1}
+{ROOT}/po/{VAR: frm->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: edit_poll_lnk1}
+{ROOT}/po/{VAR: frm->id}/{VAR: poll[0]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: moderated_forum_post_lnk3}
+{ROOT}/r/moderated_redr/1/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: POST_PAGE_lnk3}
+{ROOT}/r/prev_loaded/1/{DEF: _rsid}
+{SECTION: END}

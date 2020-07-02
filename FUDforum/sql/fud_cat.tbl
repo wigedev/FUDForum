@@ -1,0 +1,26 @@
+#   copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_cat.tbl 6191 2018-09-06 05:38:21Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}cat;
+
+CREATE TABLE {SQL_TABLE_PREFIX}cat
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name		VARCHAR(50) NOT NULL DEFAULT '',
+	description	VARCHAR(255),
+	cat_opt		INT NOT NULL DEFAULT 0,
+	view_order	INT NOT NULL DEFAULT 3,
+	parent		INT NOT NULL DEFAULT 0
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}cat_p ON {SQL_TABLE_PREFIX}cat (parent);
+
+# 1 allow_collapse (ON/OFF)
+# 2 default_view (OPEN/COLLAPSED)
+# 4 default_view (COMPACT)

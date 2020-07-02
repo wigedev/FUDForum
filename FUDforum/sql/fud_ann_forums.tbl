@@ -1,0 +1,19 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_ann_forums.tbl 5049 2010-10-19 20:47:38Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}ann_forums;
+
+CREATE TABLE {SQL_TABLE_PREFIX}ann_forums
+(
+	ann_id		INT NOT NULL DEFAULT 0,
+	forum_id	INT NOT NULL DEFAULT 0,
+	PRIMARY KEY (forum_id, ann_id)
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}ann_forums_i_a ON {SQL_TABLE_PREFIX}ann_forums (ann_id);

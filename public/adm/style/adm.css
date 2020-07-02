@@ -1,0 +1,364 @@
+body {
+	color: #555;
+	background: url(adm_grd.gif) repeat-x top #dfe0df;
+	font-family: Tahoma, Verdana, "Myriad Web", Syntax, sans-serif;
+	font-size: medium;
+	font-size-adjust: 0.50;
+}
+
+body.popup {
+	vertical-align: top;
+}
+
+input:focus, textarea:focus, select:focus {
+	background-color: #fffff0;
+}
+
+h2 {
+	color: #444;
+	text-shadow: 0px 2px 3px #888;
+}
+
+pre {
+	border: 1px blue dashed;
+	padding: 5px;
+} 
+
+a {
+	text-decoration: none;
+}
+
+.maindata a:link, .maindata a:visited {
+	border-bottom: 1px dotted #888;
+}
+
+a:visited, a:link {
+	color: #242;
+}
+
+a:active, a:hover, .headtable a:hover {
+	color: red;
+}
+
+.admin_fixed {
+	font-family: courier;
+	text-decoration: none;
+	font-size: small;
+}
+
+table.headtable {
+	color: #bbb;
+	width: 100%;
+	height: 50px;
+	margin-bottom:5px;
+}
+
+table.headtable a {
+	color: #8c8;
+}
+
+table.maintable {
+	background: #eee;
+	border-spacing: 0;
+	border: 0;
+	padding: 0;
+	width: 100%;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+	border-radius: 0.75em;
+
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+table.linktable {
+	text-align: left;
+	border: 0;
+	border-spacing: 0;
+	padding: 5px;
+	font-size: small;
+}
+
+table.linktable td {
+	vertical-align:top;
+	padding:3px;
+}
+
+table.linktable h2, 
+table.linktable h3, 
+table.linktable p {
+	padding: 0px 0px 5px 3px;
+	margin: 0px;
+}
+
+table.linktable h4 {
+	padding: 0px 0px 5px 3px;
+	margin: 0px;
+}
+ 
+table.linktable a b {
+	color:#396;
+}
+
+.linkdata {
+	vertical-align: text-top;
+	padding-top: 0;
+}
+
+.maindata {
+	vertical-align: top;
+	background: #cde;
+	width: 100%;
+	padding-left: 5px;
+	background-color: #fff;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+	border-radius: 0.75em;
+}
+
+span.linkhead {
+	color: #fff;
+	font-weight: bold;
+	font-size: xx-large;
+}
+
+span.linkgroup {
+	color: #396;
+	font-weight: bold;
+	font-size: medium;
+}
+
+.linktable a {
+	font-size: small;
+}
+
+.datatable {
+	border: 0px;
+	border-spacing: 2px;
+	padding: 3px;
+}
+
+.resulttable {
+	border: 0px;
+	border-spacing: 1px;
+	padding: 1px;
+}
+
+.fulltable {
+	border: 1px solid #ddd;
+	width: 100%;
+}
+
+.solidtable {
+	border-spacing: 0px;
+	padding-top: 0px;
+}
+
+.field {
+	vertical-align: top;
+	background: #f7f7ff;
+}
+
+.field .fieldtopic {
+	background: #cddeed;
+}
+
+.field .field {
+	background: #dddeed;
+}
+
+.field:hover {
+	background: #eeeffe;
+	border-bottom: 1px solid red;
+} 
+
+.field td {
+	border-bottom: 2px inset #fff;
+	padding: 2px;
+	margin: 3px;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+	-webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+	-miz-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+fieldset legend {
+	padding-left: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	background: transparent url(expanded.gif) no-repeat center left;
+}
+
+fieldset.collapsed {
+	border: 0;
+	border-top: 1px solid #aaa;
+}
+
+fieldset.collapsed legend {
+	background: transparent url(collapsed.gif) no-repeat center left;
+}
+
+.small {
+	font-size: small;
+}
+
+.tiny {
+	font-size: x-small;
+}
+
+.fieldaction {
+	background: transparent;
+}
+
+.fieldtopic {
+	background: transparent;
+}
+
+.resulttopic {
+	background: url(adm_th.gif) repeat #deefef 0 -1px;
+	height:21px;
+	overflow:hidden;
+}
+
+.resultrow1 {
+	background: #fff;
+}
+
+.resultrow2 {
+	background: #f0f0f0;
+}
+
+.resultrow3 {
+	background: #ffe7c7;
+}
+
+.tutor {
+	padding: 5px;
+	margin: 7px;
+	background: #eeeffe;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+	border-radius: 0.75em;
+	
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.alert {
+	padding: 5px;
+	margin: 7px;
+	color: red;
+	background-color: #ffe6cc;
+	font-size: large;
+	text-align: center;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+	border-radius: 0.75em;
+
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.file_name {
+	font-weight: bold;
+	color: #f00;
+	font-size: small;
+	text-decoration: none;
+}
+
+.deps {
+	color: #0a0;
+	font-size: small;
+	text-decoration: dashed;
+	border-bottom: 1px dashed #0a0;
+}
+
+.depson {
+	color: #c60;
+	font-size: small;
+	border-bottom: 1px dashed #060;
+}
+
+.msec {
+	color: #b08;
+	font-size: small;
+	text-decoration: underline;
+}
+
+.sec {
+	color: #464;
+	font-size: small;
+	text-decoration: underline;
+}
+
+/* Style PHPinfo() output. */
+#phpinfo {border-collapse: collapse;}
+#phpinfo .center {}
+#phpinfo .p {text-align: left;}
+#phpinfo .e {background-color: #e5e5ff; font-weight: normal; color: #000;}
+#phpinfo .h {background-color: #b0b0c6; font-weight: bold; color: #000;}
+#phpinfo .v {background-color: #eaf4e9; color: #000;}
+#phpinfo .vr {background-color: #eaf4e9; text-align: right; color: #000;}
+#phpinfo hr {width: 600px; background-color: #ccc; border: 0px; height: 1px; color: #000;}
+
+/* JQuery tablesorter. */
+th.header {
+	background: url(bg.gif) no-repeat center right;
+	cursor: pointer;
+	padding-right: 15px;
+	white-space: nowrap;
+	text-align: left;
+	font-weight: normal;
+}
+th.headerSortUp {
+	background: url(asc.gif) no-repeat center right #c0c0c0;
+}
+th.headerSortDown {
+	background: url(desc.gif) no-repeat center right #d0d0d0;
+}
+
+/* Jquery Charts. */
+.chartscontainer {
+	border: 1px solid #336699;
+	padding: 3px;
+	width: 80%; 
+}
+.chartscontainer ul {
+	padding-left: 0;
+}
+.chartscontainer li {
+	list-style: none;
+}
+
+/* JQuery UI. */
+.ui-widget { font-size: small !important; }
+
+/* Make textareas's resizable (jQuery UI). */
+.ui-resizable-se {
+	bottom: 14px;
+}
+.ui-resizable-s {
+	height: 9px;
+	background: #eaf4e9 url("../../theme/default/images/grippie.gif") no-repeat center 2px;
+ 	border: 1px solid #ddd;
+	border-top-width: 0;
+	height: 9px;
+	bottom: 6px;
+}
+.ui-resizable-resizing textarea {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	zoom: 1;
+}
+
+/* jQuery UI Sortable: Drag and drop to reorder items. */
+#sortable td { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; cursor:move; }
+#sortable td span { position: absolute; margin-left: -1.3em; }

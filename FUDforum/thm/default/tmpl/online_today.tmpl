@@ -1,0 +1,97 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: online_today.tmpl 6063 2017-08-22 20:24:55Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: online_today.php.t; output: online_today.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: alt_var.tmpl}
+{REF: ulink.tmpl}
+
+{SECTION: last_post last by a user}
+{TEMPLATE: online_today_last_post_date}<br />
+<a href="{TEMPLATE: online_today_last_post_lnk}">{VAR: r[6]}</a>
+{SECTION: END}
+
+{SECTION: last_post_na no last post}
+{MSG: na}
+{SECTION: END}
+
+{SECTION: user_entry info about a user who was online today}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td class="GenText">{TEMPLATE: reg_user_link}</td>
+	<td class="DateText">{TEMPLATE: online_today_visit_date}</td>
+	<td class="SmallText">{TEMPLATE-DATA: last_post}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: reg_user_link registered user link}
+<a href="{TEMPLATE: reg_user_link_lnk}">{FUNC: draw_user_link($r[0], $r[1], $r[4])}</a>
+{SECTION: END}
+
+{PAGE: ONLINE_TODAY_PAGE List of users who were online today}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<br />{TEMPLATE-DATA: admin_cp}
+<div class="GenText ac">
+	[ <a href="{TEMPLATE: online_today_lnk}" rel="nofollow">{MSG: refresh_list}</a> ]
+	[ <a href="{TEMPLATE: i_spy_lnk}" rel="nofollow">{MSG: what_ppl_doing}</a> ]
+</div>
+<br />
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th><a href="{TEMPLATE: online_today_sort_alias_lnk}" class="thLnk" rel="nofollow">{MSG: user}</a></th>
+	<th><a href="{TEMPLATE: online_today_sort_time_lnk}" class="thLnk" rel="nofollow">{MSG: online_today_last_visit}</a></th>
+	<th>{MSG: action_latest_post}</th>
+</tr>
+{TEMPLATE-DATA: user_entries}
+</table>
+<br />
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: online_today_update}
+{MSG: online_today_update}
+{SECTION: END}
+
+{SECTION: online_today_lnk}
+{ROOT}?t=online_today&rand={FUNC: get_random_value()}&{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: no_view_perm}
+{MSG: no_view_perm}
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: r[2]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: online_today_last_post_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: r[5]}&amp;{DEF: _rsid}#msg_{VAR: r[5]}
+{SECTION: END}
+
+{SECTION: online_today_sort_alias_lnk}
+{ROOT}?t=online_today&amp;o=alias&amp;s={IF: $o=='u.alias' && $s=='ASC'}d{ELSE}a{END}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: online_today_sort_time_lnk}
+{ROOT}?t=online_today&amp;{DEF: _rsid}&amp;o=last_visit&amp;s={IF: $o=='u.last_visit' && $s=='ASC'}d{ELSE}a{END}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: what_ppl_doing}
+{MSG: what_ppl_doing}
+{SECTION: END}
+

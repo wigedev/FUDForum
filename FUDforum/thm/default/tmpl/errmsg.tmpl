@@ -1,0 +1,42 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: errmsg.tmpl 5348 2011-08-19 13:06:51Z janrei $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: errmsg.inc.t; output: errmsg.inc;}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+
+{SECTION: errmsg_CHARSET}
+{CHARSET}
+{SECTION: END}
+
+{SECTION: forum_disabled_html}
+{TEMPLATE: header}
+<br />
+<h2>{GVAR: DISABLED_REASON}</h2>
+<br />
+<small>{MSG: core_adm_login_msg}</small>
+<br /><br />
+{TEMPLATE: footer}
+{SECTION: END}
+
+{SECTION: forum_disabled_xml}
+<?xml version="1.0" encoding="{CHARSET}"?>
+<error>
+	<message>{GVAR: DISABLED_REASON}</message>
+</error>
+{SECTION: END}
+
+{SECTION: forum_banned_user}
+{TEMPLATE: header}
+<br />
+{MSG: forum_banned_user}
+<br /><br />
+{TEMPLATE: footer}
+{SECTION: END}

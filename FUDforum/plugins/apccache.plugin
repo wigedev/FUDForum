@@ -1,0 +1,53 @@
+<?php
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: apccache.plugin 5770 2014-04-02 07:30:23Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin.
+plugin_add_hook('CACHEGET', 'plugin_apccache_get');
+plugin_add_hook('CACHESET', 'plugin_apccache_set');
+
+// Read value from cache.
+function plugin_apccache_get($key) {
+	// echo "<hr>Get $key from cache</hr>";
+	// return xcache_get($key)
+	return apc_fetch($key);
+}
+
+// Write value from cache.
+function plugin_apccache_set($key, $val) {
+	// echo "<hr>Set $key to $val in cache</hr>";
+	// xcache_set($key, $val)
+	apc_store($key, $val);
+}
+
+function apccache_info() {
+	return array('name' => 'APC Cache',
+	             'desc' => 'Use <a href="http://pecl.php.net/package/APC">APC (Alternative PHP Cache)</a> to cache forum data in-memory. This plugin should only be enabled on high-traffic sites.
+			       Currently only topic view counters are cached and will be written to the DB in batches.',
+		     'cat'  => 'Caching',
+	             'version' => '1.0');
+}
+
+function apccache_enable() {
+	// if (!extension_loaded('xcache')) {
+	if (!extension_loaded('APC')) {
+		return array(null, 'You PHP installation doesn\'t support APC. Please install it before you enable this plugin.');	// OK, Err.
+	}
+	return;	// Good to go.
+}
+
+function apccache_check() {
+	// if (!extension_loaded('xcache')) {
+	if (!extension_loaded('APC')) {
+		return array(null, 'You PHP installation doesn\'t support APC. Please install APC or disable the apccache.plugin.');	// OK, Err.
+	}
+	return;	// Good to go.
+}
+

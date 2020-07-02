@@ -1,0 +1,45 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: ignore_list.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: ignore_list.php.t; output: ignore_list.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: ignore.tmpl}
+{REF: return.tmpl}
+{REF: tabs.tmpl}
+{REF: alt_var.tmpl}
+
+{SECTION: email_link_lnk}
+{ROOT}/em/{VAR: r[2]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ignore_user_lnk}
+{ROOT}/u/{VAR: r[2]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ignore_user_lnk1}
+{ROOT}/il/{VAR: r[0]}/0/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: ignore_user_lnk2}
+{ROOT}/sp/{VAR: r[2]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ignore_anon_user_lnk}
+{ROOT}/il/{VAR: r[1]}/0/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: IGNORELIST_PAGE_lnk3}
+{ROOT}/il/{DEF: _rsid}
+{SECTION: END}

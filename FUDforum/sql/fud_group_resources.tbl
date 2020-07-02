@@ -1,0 +1,20 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_group_resources.tbl 5337 2011-08-05 17:39:49Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}group_resources;
+
+CREATE TABLE {SQL_TABLE_PREFIX}group_resources
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	group_id	INT NOT NULL DEFAULT 0,
+	resource_id	INT NOT NULL DEFAULT 0
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}group_resources_i_gr ON {SQL_TABLE_PREFIX}group_resources (group_id, resource_id);
+CREATE INDEX {SQL_TABLE_PREFIX}group_resources_i_r  ON {SQL_TABLE_PREFIX}group_resources (resource_id);

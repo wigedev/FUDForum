@@ -1,0 +1,24 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_msg_store.tbl 6273 2019-05-25 15:10:16Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+# TODO: Rename 'data' to 'message' for future CUBRID support.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}msg_store;
+
+CREATE TABLE {SQL_TABLE_PREFIX}msg_store
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	data		TEXT
+);
+
+# TODO: allow storage of larger messages:
+# The maximum amount of data that can be stored in each data type is as follows:
+# TEXT 	65,535 bytes 	~64kb
+# MEDIUMTEXT 	 16,777,215 bytes 	~16MB
+# LONGTEXT 	4,294,967,295 bytes 	~4GB

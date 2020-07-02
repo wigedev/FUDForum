@@ -1,0 +1,187 @@
+<?php
+/**
+* copyright            : (C) 2001-2013 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: ldap.plugin 5770 2014-04-02 07:30:23Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize me as an authentication plugin if LDAP extension is loaded.
+plugin_add_hook('AUTHENTICATE', 'plugin_ldap_auth');
+
+// Authenticate users from LDAP directory.
+function plugin_ldap_auth() {
+	$login    = $_POST['login'];
+	$password = $_POST['password'];
+
+	if ($login == 'admin') {	// Always allow admin through.
+		return 1;
+	}
+
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'ldap/ldap.ini') === false) {
+		echo 'ERROR: Please configure the LDAP plugin from the Plugin Manager Control panel.';
+		return 0;
+	}
+
+	if (defined('fud_debug')) {
+		ldap_set_option(NULL, LDAP_OPT_DEBUG_LEVEL, 7);
+	}
+	if ($ini['LDAP_SSL'] == '1') {
+		$connection = ldap_connect('ldaps://'. $ini['LDAP_HOST'] .':'. $ini['LDAP_PORT']);
+	} else {
+		$connection = ldap_connect($ini['LDAP_HOST'], $ini['LDAP_PORT']);
+	}
+
+	if (!$connection) {
+		echo 'Unable to connect to an LDAP server. Contact the forum administrator! (Debug 1)';
+		return 0;
+	}
+
+	@ldap_set_option($connection, LDAP_OPT_PROTOCOL_VERSION, 3);
+	@ldap_set_option($connection, LDAP_OPT_REFERRALS, 0);
+	if ($ini['LDAP_START_TLS']) {
+ 		if (!ldap_start_tls($connection)) {
+ 			echo 'Unable to connect to LDAP server via TLS! (Debug 2)';
+ 			return 0;
+ 		}
+	}
+
+	// Connection made -- bind anonymously and get dn for username.
+	if (!empty($ini['LDAP_PROXY_DN'])) {
+		$bind = @ldap_bind($connection, $ini['LDAP_PROXY_DN'], $ini['LDAP_PROXY_DN_PASS']);
+	} else {
+		$bind = @ldap_bind($connection);
+	}
+
+	if (!$bind) {
+ 		echo 'Anonymous bind to LDAP failed:', ldap_error($connection), ' Contact the forum administrator! (Debug 3)';
+		return 0;
+	}
+
+	$search = ldap_search($connection, $ini['LDAP_DN'], $ini['LDAP_UID'] .'='. $login);
+
+	// Ensure only 1 result was returned - if not, there may be a * in the username.
+	if (ldap_count_entries($connection, $search) != 1) {
+		// echo 'Unknown username. Please try to login again. (Debug 4)';
+		return 0;
+	}
+
+	$info = ldap_get_entries($connection, $search);
+
+	// Now, try to rebind with their full dn and password.
+	$bind = @ldap_bind($connection, $info[0][dn], $password);
+	if (!$bind || !isset($bind)) {
+		// echo 'Wrong password! Please try again. (Debug 5)';
+		return 0;
+	}
+
+	// Now verify the previous search using their credentials.
+	$search = ldap_search($connection, $ini['LDAP_DN'], $ini['LDAP_UID'] .'='. $login);
+
+	$info = ldap_get_entries($connection, $search);
+
+	// Some LDAP servers store case but are case insensitive, i.e. Active Directory.
+	// If insensitive is on, force everything to lower case.
+	if ($ini['LDAP_CASE_INSENSITIVE']) {
+		$login = strtolower($login);
+		$ldap_login = strtolower($info[0][ $ini['LDAP_UID'] ][0]);
+	} else {
+		$ldap_login = $info[0][ $ini['LDAP_UID'] ][0];
+	}
+
+	if ($login == $ldap_login) {
+		// Let user through, but first regsister in FUDforum's DB.
+
+		if (!($usr_d = db_sab('SELECT id, passwd, salt FROM '. $GLOBALS['DBHOST_TBL_PREFIX'] .'users WHERE login='. _esc($login)))) {
+			// Register new FUDforum user.
+			$uent = new fud_user_reg;
+			$uent->users_opt = -1;
+			$uent->login = $login;
+			$uent->plaintext_passwd = $password;
+			$uent->email = $login .'@'. $ini['LDAP_HOST'];
+			$uent->add_user();
+		} else if ( !((empty($usr_d->salt) && $usr_d->passwd == md5($password)) || $usr_d->passwd == sha1($usr_d->salt . sha1($password)))) {
+			// Sync password.
+			$salt = substr(md5(uniqid(mt_rand(), true)), 0, 9);
+			$sec_pass = sha1($salt . sha1($password));
+			q('UPDATE '. $GLOBALS['DBHOST_TBL_PREFIX'] .'users SET passwd='. _esc($sec_pass) .', salt='. _esc($salt) .' WHERE id='. $usr_d->id);
+		}
+
+		return 1;	// Allow access.
+	} else {
+		return 0;	// Deny access.
+	}
+
+	ldap_close($connection);
+}
+
+function ldap_info() {
+	return array('name' => 'LDAP Authentication',
+	             'desc' => 'Authenticate forum users from an LDAP server. You may want to disable "<i>Allow Registration</i>" from the <i>Global Settings Manager</i> after enabling this plugin.',
+		     'cat'  => 'Authentication',
+		     'version' => '1.4');
+}
+
+function ldap_enable() {
+	if (!extension_loaded('ldap')) {
+		return array(null, 'You PHP installation doesn\'t support LDAP.');	// OK, Err.
+	}
+	return;	// Good to go.
+}
+
+function ldap_config() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'ldap/ldap.ini') === false) {
+		$ini = NULL;
+	}
+
+	if (isset($_POST['Set'])) {
+		foreach (array_keys($_POST) as $key) {
+			if (substr($key,0,5) == 'LDAP_') {
+				$ini[$key] = $_POST[$key];
+			}
+		}
+
+		// Array key from ldap_get_entries() must be lowercase.
+		$ini['LDAP_UID'] = strtolower($ini['LDAP_UID']);
+
+		$fp = fopen($GLOBALS['PLUGIN_PATH'] .'ldap/ldap.ini', 'w');
+		fwrite($fp, '<?php $ini = '. var_export($ini, 1) .'; ?>');
+		fclose($fp);
+		pf(successify('Settings successfully saved.'));
+	}
+	?>
+<p>Space-separated list of LDAP server names:<br />
+<input name="LDAP_HOST" value="<?php echo $ini['LDAP_HOST'] ?>" /></p>
+
+<p>LDAP server port. Default is 389:<br />
+<input type="number" name="LDAP_PORT" value="<?php echo $ini['LDAP_PORT'] ?>" /></p>
+
+<p>Enable TLS (Transport Layer Security) mode:<br />
+<label><input type="radio" name="LDAP_START_TLS" value="1" <?php echo $ini['LDAP_START_TLS'] ? 'checked="checked"' : '' ?> /> True<br /></label>
+<label><input type="radio" name="LDAP_START_TLS" value=""  <?php echo $ini['LDAP_START_TLS'] ? '' : 'checked="checked"' ?> /> False</label></p>
+
+<p>Use LDAP+SSL (LDAPS):<br />
+<label><input type="radio" name="LDAP_SSL" value="1" <?php echo $ini['LDAP_SSL'] ? 'checked="checked"' : '' ?> /> True<br /></label>
+<label><input type="radio" name="LDAP_SSL" value=""  <?php echo $ini['LDAP_SSL'] ? '' : 'checked="checked"' ?> /> False</label></p>
+
+<p>Is the LDAP server case insensitive (like Active Directory):<br />
+<label><input type="radio" name="LDAP_CASE_INSENSITIVE" value="1" <?php echo $ini['LDAP_CASE_INSENSITIVE'] ? 'checked="checked"' : '' ?> /> True<br /></label>
+<label><input type="radio" name="LDAP_CASE_INSENSITIVE" value=""  <?php echo $ini['LDAP_CASE_INSENSITIVE'] ? '' : 'checked="checked"' ?> /> False</label></p>
+
+<p>Proxy user (if required to bind via proxy):<br />
+<input name="LDAP_PROXY_DN" value="<?php echo $ini['LDAP_PROXY_DN'] ?>" /></p>
+
+<p>Proxy password (if required to bind via proxy):<br />
+<input name="LDAP_PROXY_DN_PASS" value="<?php echo $ini['LDAP_PROXY_DN_PASS'] ?>" /></p>
+
+<p>Look for usernames in namespace:<br />
+<input name="LDAP_DN" value="<?php echo $ini['LDAP_DN'] ?>" /></p>
+
+<p>Property to query:<br />
+<input name="LDAP_UID" value="<?php echo $ini['LDAP_UID'] ?>" /></p>
+	<?php
+}
+

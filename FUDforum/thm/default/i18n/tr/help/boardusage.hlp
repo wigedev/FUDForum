@@ -1,0 +1,160 @@
+TOPIC_TITLE: <a name="bsearch">Nasıl arama yapabilirim?</a>
+TOPIC_HELP: Yönetici tarafından engellenmediği sürece forumdaki <a href="{ROOT}?t=search&%_rsid%">iletilerde arama</a> yapabilirsiniz.
+İleti aramayı kullanırken, aranmasını istediğiniz anahtar sözcükleri belirttikten sonra, bu sözcüklerin nerede aranmasını belirtmeniz
+de mümkün. İsterseniz iletinin sadece konu kısmında, isterseniz iletinin hem konu hem de gövde bölümlerinde arama yapabilirsiniz.
+Aramanızın tüm forumlarda yapılmasını istemiyorsanız, arama yapmak istediğiniz forumu da belirtebilirsiniz.
+<br />
+Ayrıca forumun diğer üyelerini kullanıcı isimleri veya e-posta adreslerini ile <a href="{ROOT}?t=finduser&%_rsid%">kullanıcı arama formunu</a>
+kullanarak arayabilirsiniz.
+
+
+TOPIC_TITLE: <a name="email">Diğer forum üyelerine e-posta gönderebilir miyim?</a>
+TOPIC_HELP: 
+Yönetici tarafından engellenmediği sürece, diğer forum üyeleri ile e-posta yoluyla iletişim kurabilirsiniz.<br />
+Bir üyeye e-posta göndermek için, üye listesinden bulup <b>İletişim</b> düğmesine, veya basitçe gönderilen
+iletilerdeki <b>e-posta</b> düğmesine tıklatabilirsiniz. Bu sizi yeni bir sayfaya yönlendirir, ve göndereceğiniz
+e-mektubunu konu ve gövde kısmını oluşturabilirsiniz. Bitirdiğinizde, basitce <b>Gönder</b> düğmesine tıklatın, ve e-mektubunuz
+gönderilecektir.
+<br /><br />
+Forum üyelerine e-posta göndermeye ek olarak, beğendiğiniz bir sayfayının linkini arkadaşınıza bir açıklama ile birlikte <b>Arkadaşına gönder</b>
+linkini kullanarak gönderebilirsiniz. Bu link forumun konu ve ileti görüntüleme sayfalarında bulunabilir.
+
+
+TOPIC_TITLE: <a name="pmsg">Özel ileti nedir ve nasıl özel ileti gönderebilirim?</a> 
+TOPIC_HELP: Eğer yönetici Özel İleti sistemini engellemediyse, forumdaki bir veya daha fazla kullanıcıya özel iletiler gönderebilirsiniz.
+Özel İleti sistemine erişmek için, basitçe sayfanın üst köşesinde bulunan <a href="{ROOT}?t=pmsg&%_rsid%">özel İletiler</a> linkine
+tıklatabilirsiniz. Eğer okunmamış özel iletileriniz varsa, bu link size kaç tane okunmamış iletiniz olduğunu bildirecektir.
+<p>
+<b>Özel İleti Yollama</b><br />
+Özel ileti yollama, e-posta yollamaya çok benziyor, iletiyi yollamak istediğniz kişiyi belirtin, konuyu ve iletiyi yazdıktan sonra Gönder'i
+tıklatın. İki link daha var, bunlardan  <b>Arkadaş Listesinden Seç</b> linki iletiyi göndermek istediğiniz üyeyi arkadaş listenizden
+seçerek kolayca bulabilmenizi, <b>Kullanıcı Bul</b> linki ise tüm forum üyeleri arasından iletinizi göndermek istediğiniz üyeyi
+belirlemenizi sağlıyor. Gönderdiğiniz her iletinin bir kopyası <b>Giden</b> klasörüne daha sonra hatırlayabilmeniz için kopyalanacak, isterseniz
+daha sonra bu iletileri silebilirsiniz.
+<p>
+Farkında olmanız gereken 3 klasör daha var:
+<p>
+<b>Gelen</b> klasörü size gönderilen iletilerin bulunduğu posta kutunuz görevindeki klasördür. Her ileti, okunup okunmadığını belirten bir
+göstergeye sahiptir. İletinin kim tarafından gönderildiği, gönderen kişinin o anda bağlı olup olmadığı, iletinin gönderildiği tarih gibi bilgiler de
+ek olarak belirtilir.
+<p>
+<b>Taslak</b> klasörü henüz gönderilmemiş iletileri bulundurur. İletinin üzerine tıklattığınızda düzeltme moduna geçersiniz, böylece
+göndermeden önce iletinin üzerinde değişiklik yapma olanağınız olur. İleti gönderildikten sonra TASLAK klasöründen silinip GİDEN klasörüne
+taşınır.
+<p>
+<b>Çöp</b> klasörü sildiğiniz iletilerin bulunduğu klasördür. Diğer klasörlerden sildiğiniz iletiler önce çöp kutusuna taşınır, çöp kutusundan
+silinen iletiler, kalıcı olarak silinir.
+<p>
+<b>İleti Takibi</b><p>
+Herhangi bir ileti gönderdiğinizde bir alındı bilgisi isteğinde bulunma olanığınız var. Alıcı iletiyi okuduğunda bunu size haber veren bir sistem iletisi
+alırsınız.
+<br />
+Bununla birlikte, böyle bir istekte bulunduğunuzda alıcının bu isteği reddetme seçeneği var, dolayısıyla bir alındı bilgisi isteğinde bulunmanıza
+rağmen bu bilgi gelmemesi iletinizin okunmadığı anlamına gelmeyebilir.
+
+
+TOPIC_TITLE: <a name="mlist">Üye Listesi nedir?</a>
+TOPIC_HELP: Üye Listesi forum üzerindeki tüm üyelerin bir listesidir. Üye listesini 3 değişik şekilde sıralayabilirsiniz:
+Kullanıcı isimlerine göre alfabetik olarak, gönderilen ileti sayısına göre ve kayıt tarihine göre.
+<br /><br />
+Üye Listesinde ayrıca arama yapabilmeniz de mümkün, belirli bir üyeyi kullanıcı ismine veya e-posta adresine göre arayabilirsiniz.
+
+TOPIC_TITLE:<a name="ann">Duyurular ve Yapışkan iletiler nedir?</a>
+TOPIC_HELP: Yöneticiler ve denetmenler tarafından oluşturulabilen bazı özel iletiler vardır. Bu iletiler belirli bir süre boyunca forumun en üst kısmında
+dururlar. Genellikle kullanıcıları belirli bir olay veya kurallar hakkında bilgilendirmek amacıyla kullanılırlar.
+
+
+TOPIC_TITLE: <a name="rate">Konuları değerlendirebilir miyim?</a>
+TOPIC_HELP: Bazı konular için bir "Beğeni" durumunun görüntülendiğini farketmişsinizdir. Eğer yönetici tarafından izin verildiyse, bir konunun değerlendirilmesine
+katkıda bulunabilirsiniz. İletinin görüntülendiği sayfanın alt kısmında yer alan <b>Konuyu Değerlendir</b> seçim kutusunu kullanarak 1-5 (5 en yüksek derece olmak üzere) arasinda bir değerlendirme yapabilirsiniz.
+
+
+TOPIC_TITLE: <a name="ref">Tanıtımlar nedir?</a>
+TOPIC_HELP: Tanıtımlar bölümünde, sizin veya diğer forum üyeleri tarafından forumun tanıtımının/önerisinin yapıldığı üyeleri görebilirsiniz. Bu tanıtımlar
+otomatik olarak takip edilir, eğer birine forumun tanıtımını yapan bir URL gönderdiyseniz, ve o kişi bu URL'yi kullanarak kayıt olduysa, o kişiye
+tanıtım yapan kişi siz olmuş olacaksınız. Tanıtım yaptığınız kişilerin listesi denetim masanızda yer alan Tanıtımlar bölümünden
+görüntülenebilir.
+
+TOPIC_TITLE: <a name="syndicate">Bu forumdan haber başlıkları yayınlamak</a>
+TOPIC_HELP:
+Yönetici tarafından izin verilmişse, FUDforum XML (rdf/ atom/ rss) yoluyla bu forumdaki veriyi haber başlıkları şeklinde yayınlamanızı sağlar. XML temel olarak
+3 kipte çalışır, ileti yayınlama, konu yayınlama ve kullanıcı bilgisi yayınlama. Her işlem kipinde, çekmek istediğiniz verinin
+tipi ile ilgili belirtebileceğiniz bir kaç parametre vardır. Aşağıda her bir kip için kullanılabilecek parametrelerin açıklamasını
+bulabilirsiniz.<br />
+<br /><br />
+<h4><u><b>'m' kipi (iletiler)</b></u></h4>
+<blockquote>
+	<table border="0" cellspacing="1" cellpadding="3">
+		<tr><td class="GenText"><i>cat</i></td><td class="GenText">Sadece bu numaralı kategorideki iletileri al.</td></tr>
+		<tr><td class="GenText"><i>frm</i></td><td class="GenText">Sadece bu numaralı forumdaki iletileri al.</td></tr>
+		<tr><td class="GenText"><i>th</i></td><td class="GenText">Sadece bu numaralı konudaki iletileri al.</td></tr>
+		<tr><td class="GenText"><i>id</i></td><td class="GenText">Bu numaralı iletiyi al (Tek bir ileti)</td></tr>
+		<tr><td class="GenText"><i>ds</i></td><td class="GenText">Sadece bu tarihten sonra gönderilmiş iletileri al (unix timestamp biçimi).</td></tr>
+		<tr><td class="GenText"><i>de</i></td><td class="GenText">Sadece bu tarihten önce gönderilmiş iletileri al (unix timestamp biçimi).</td></tr>
+		<tr><td class="GenText"><i>n</i></td><td class="GenText">En fazla <i>n</i> tane ileti al.</td></tr>
+		<tr><td class="GenText"><i>o</i></td><td class="GenText">İletilerin alınmaya başlanacağı ofset.</td></tr>
+		<tr><td class="GenText"><i>l</i></td><td class="GenText">İletileri en yeniden en eskiye sırala.</td></tr>
+	</table>
+</blockquote>
+<h4><u><b>'t' kipi (konular)</b></u></h4>
+<blockquote>
+	<table border="0" cellspacing="1" cellpadding="3">
+		<tr><td class="GenText"><i>cat</i></td><td class="GenText">Sadece bu numaralı kategorideki konuları al.</td></tr>
+		<tr><td class="GenText"><i>frm</i></td><td class="GenText">Sadece bu numaralı forumdaki konuları al.</td></tr>
+		<tr><td class="GenText"><i>id</i></td><td class="GenText">Bu numaralı konuyu al (Tek bir konu)</td></tr>
+		<tr><td class="GenText"><i>ds</i></td><td class="GenText">Sadece son ileti gönderilme tarihi bu tarihten sonra olan konuları al (unix timestamp biçimi).</td></tr>
+		<tr><td class="GenText"><i>de</i></td><td class="GenText">Sadece son ileti gönderilme tarihi bu tarihten önce olan konuları al (unix timestamp biçimi)</td></tr>
+		<tr><td class="GenText"><i>n</i></td><td class="GenText">En fazla <i>n</i> tane konu al.</td></tr>
+		<tr><td class="GenText"><i>o</i></td><td class="GenText">konuların alınmaya başlanacağı ofset.</td></tr>
+		<tr><td class="GenText"><i>l</i></td><td class="GenText">konuları en yeniden en eskiye sırala.</td></tr>
+	</table>
+</blockquote>
+<h4><u><b>'u' kipi (kullanıcılar) <i>**engellenmiş olabilir**</i></b></u></h4>
+<blockquote>
+	<table border="0" cellspacing="1" cellpadding="3">
+		<tr><td class="GenText"><i>pc</i></td><td class="GenText">Kullanıcıları gönderdikleri ileti sayısına göre en çoktan en aza sırala.</td></tr>
+		<tr><td class="GenText"><i>rd</i></td><td class="GenText">Kullanıcıları kayıt tarihlerine göre en yeniden en eskiye sırala.</td></tr>
+		<tr><td class="GenText"><i>cl</i></td><td class="GenText">Sadece şu anda bağlı olan kullanıcıları göster.</td></tr>
+		<tr><td class="GenText"><i>n</i></td><td class="GenText">En fazla <i>n</i> tane kullanıcı al.</td></tr>
+		<tr><td class="GenText"><i>o</i></td><td class="GenText">Kullanıcıların alınmaya başlanacağı ofset.</td></tr>
+	</table>
+</blockquote>
+<b>Örnek:</b><br />
+Bu link bu forumdaki 10 en yeni iletiyi alacaktır:<br />
+<a href="rdf.php?mode=m&l=1&n=10" target="_blank">rdf.php?mode=m&l=1&n=10</a>
+
+TOPIC_TITLE: <a name="accesskeys">Access Keys</a>
+TOPIC_HELP:
+Access keys are keyboard shortcuts intended to simplify keyboard navigation. FUDforum uses this functionality
+to simplify several tasks primary used for message posting forms.<br />
+
+<fieldset style="width: 350px;">
+	<legend><b>Browser Support</b></legend>
+	<b>Mozilla/Netscape:</b> CTRL + ALT + [accesskey]<br />
+	<b>Mozilla/IE:</b> ALT + [accesskey]<br />
+	<b>Opera:</b> SHIFT + ESC + [accesskey]<br />
+</fieldset>
+
+<b>Supported Access Keys:</b>
+<blockquote>
+	<b>H</b> - Redirect to forum help.<br />
+	<b>N</b> - On pages with a pager, redirect to the next page (if one is available).<br />
+	<b>P</b> - On pages with a pager, redirect to the previous page (if one is available).<br />
+	<b>S</b> - Submit message on public or private posting form.<br />
+	<b>R</b> - Preview message on public or private posting form.<br />
+	<b>K</b> - Spell check message.<br />
+	<b>A</b> - Apply spelling changes.<br />
+	<b>D</b> - Save private message as draft.<br />
+	<br /><br /><b>BBcode Shortcuts:</b>
+	<blockquote>
+		<b>B</b> - Bold<br />
+		<b>I</b> - Italics<br />
+		<b>U</b> - Underline<br />
+		<b>Q</b> - Quote<br />
+		<b>C</b> - Code<br />
+		<b>L</b> - List<br />
+		<b>M</b> - Image<br />
+		<b>W</b> - URL<br />
+		<b>E</b> - E-mail
+	</blockquote>
+</blockquote>

@@ -1,0 +1,105 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: subscribed.tmpl 5325 2011-07-15 14:14:17Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: subscribed.php.t; output: subscribed.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: forum_notify.tmpl}
+{REF: thread_notify.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: tabs.tmpl}
+{REF: alt_var.tmpl}
+
+{PAGE: SUBSCRIBED_PAGE subscribed forums and threads list}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: tabs}
+<form method="post" id="subscribe" action="{TEMPLATE: subscribed_action}">
+{DEF: _hs}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="3">{MSG: subscribed_forums}<a name="fff"></a></th>
+</tr>
+{IF: $subscribed_forum_data}
+{VAR: subscribed_forum_data}
+<tr class="RowStyleC">
+	<td class="ac" colspan="2"><input type="submit" class="button" name="f_unsub_sel" value="{MSG: unsubscribe}" /></td>
+	<td class="ar"><input type="submit" class="button" name="f_unsub_all" value="{MSG: sub_unsub_all_forums}" /></td>
+</tr>
+{ELSE}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td colspan="3">{MSG: no_subscribed_forums}</td>
+</tr>
+{END}
+<tr>
+	<th colspan="3">{MSG: subscribed_threads}</th>
+</tr>
+{IF: $subscribed_thread_data}
+{VAR: subscribed_thread_data}
+<tr class="RowStyleC">
+	<td class="ac" colspan="2"><input type="submit" class="button" name="t_unsub_sel" value="{MSG: unsubscribe}" /></td>
+	<td class="ar"><input type="submit" class="button" name="t_unsub_all" value="{MSG: sub_unsub_all_topics}" /></td>
+</tr>
+{ELSE}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td colspan="3">{MSG: no_subscribed_threads}</td>
+</tr>
+{END}
+</table>
+</form>
+{TEMPLATE-DATA: pager}
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: subscribed_forum_entry}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td><input type="checkbox" name="fe[]" value="{VAR: r[0]}" /></td>
+	<td class="nw"><a href="{TEMPLATE: subscribed_forum_entry_lnk1}">{MSG: unsubscribe}</a></td>
+	<td class="wa"><a href="{TEMPLATE: subscribed_forum_entry_lnk}">{VAR: r[1]}</a></td>
+</tr>
+{SECTION: END}
+
+{SECTION: subscribed_thread_entry}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td><input type="checkbox" name="te[]" value="{VAR: r[0]}" /></td>
+	<td class="nw"><a href="{TEMPLATE: subscribed_thread_entry_lnk1}">{MSG: unsubscribe}</a></td>
+	<td class="wa">{VAR: r[2]} &raquo; <a href="{TEMPLATE: subscribed_thread_entry_lnk}">{VAR: r[1]}</a></td>
+</tr>
+{SECTION: END}
+
+{SECTION: subscribed_update}
+{MSG: subscribed_update}
+{SECTION: END}
+
+{SECTION: subscribed_forum_entry_lnk}
+{ROOT}?t={DEF: t_thread_view}&amp;frm_id={VAR: r[0]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: subscribed_forum_entry_lnk1}
+{ROOT}?t=subscribed&amp;frm_id={VAR: r[0]}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: subscribed_thread_entry_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;th={VAR: r[0]}&amp;unread=1&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: subscribed_thread_entry_lnk1}
+{ROOT}?t=subscribed&amp;th={VAR: r[0]}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: subscribed_action}
+{ROOT}?t=subscribed
+{SECTION: END}

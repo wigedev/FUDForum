@@ -1,0 +1,234 @@
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: pmsg.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: pmsg.php.t; output: pmsg.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_select_opt.tmpl}
+{REF: get_cur_ppage.tmpl}
+{REF: tabs.tmpl}
+{REF: private.tmpl}
+{REF: draw_pager.tmpl}
+{REF: allowed_user_lnk.tmpl}
+
+{SECTION: action_buttons_inbox}
+<a href="{TEMPLATE: action_buttons_inbox_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_reply.gif" alt="" /></a>&nbsp;<a href="{TEMPLATE: action_buttons_inbox_lnk1}"><img src="{THEME_IMAGE_ROOT}/msg_quote.gif" alt="" /></a>&nbsp;<a href="{TEMPLATE: action_buttons_inbox_lnk2}"><img src="{THEME_IMAGE_ROOT}/msg_forward.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: action_buttons_sent_trash}
+<a href="{TEMPLATE: action_buttons_sent_trash_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_forward.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: action_buttons_draft}
+<a href="{TEMPLATE: action_buttons_draft_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_edit.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: pmsg_read private message read}
+<img src="{THEME_IMAGE_ROOT}/pmsg_unread.png" alt="{MSG: pmsg_new_messages}" title="{MSG: pmsg_new_messages}" />
+{SECTION: END}
+
+{SECTION: pmsg_unread private message unread}
+<img src="{THEME_IMAGE_ROOT}/pmsg_read.png" alt="{MSG: pmsg_old_messages}" title="{MSG: pmsg_old_messages}" />
+{SECTION: END}
+
+{SECTION: deny_recipt deny recipt link}
+<span class="SmallText">&nbsp;&nbsp;[<a href="{TEMPLATE: deny_recipt_lnk}" title="{MSG: deny_recipt_desc}">{MSG: deny_recipt}</a>]</span>
+{SECTION: END}
+
+{SECTION: pmsg_online_indicator}
+<img src="{THEME_IMAGE_ROOT}/online.png" alt="{MSG: user_online}" title="{MSG: user_online}" />&nbsp;
+{SECTION: END}
+
+{SECTION: pmsg_offline_indicator}
+<img src="{THEME_IMAGE_ROOT}/offline.png" alt="{MSG: user_offline}" title="{MSG: user_offline}" />&nbsp;
+{SECTION: END}
+
+{SECTION: replied_msg replied message indicator}
+<span class="SmallText">({MSG: pmsg_replied})</span>&nbsp;
+{SECTION: END}
+
+{SECTION: forwarded_msg forwarded message indicator}
+<span class="SmallText">({MSG: pmsg_forwarded})</span>&nbsp;
+{SECTION: END}
+
+{SECTION: normal_msg normal message indicator}
+{SECTION: END}
+
+{SECTION: private_msg_entry}
+<tr class="RowStyleB">
+	<td class="ac GenText"><input type="checkbox" name="sel[]" value="{VAR: obj->id}" /></td>
+	<td>{IF: $obj->read_stamp}{TEMPLATE: pmsg_unread}{ELSE}{TEMPLATE: pmsg_read}{END}</td>
+	<td width="100%" class="GenText">{TEMPLATE-DATA: msg_type}<a href="{VAR: goto}">{VAR: obj->subject}</a>{IF: ($obj->pmsg_opt & 4 && $obj->pmsg_opt & 16 && $obj->duser_id == _uid && $obj->ouser_id != _uid)}{TEMPLATE: deny_recipt}{ENDIF}</td>
+	<td class="nw GenText">{TEMPLATE-DATA: online_indicator}<a href="{TEMPLATE: normal_msg_lnk}" title="{FUNC: char_fix(htmlspecialchars($obj->to_list))}">{VAR-HTML: obj->alias}</a></td>
+	<td class="nw DateText">{TEMPLATE: dmsg_post_date}</td>
+	<td class="nw ac GenText">{TEMPLATE-DATA: action}</td>
+</tr>
+{SECTION: END}
+
+{PAGE: PMSG_PAGE private messages control panel}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: tabs}
+<br />{FUNC: tmpl_cur_ppage($folder_id, $folders)}
+<table cellspacing="1" cellpadding="2" class="pmDu">
+<tr>
+	<td colspan="3" class="RowStyleA wa nw SmallText">{MSG: pm_space_indct_msg}</td>
+</tr>
+<tr>
+	<td colspan="3" class="RowStyleB wa"><table cellspacing="0" cellpadding="1" border="0"><tr>{TEMPLATE-DATA: full_indicator}</tr></table></td>
+</tr>
+<tr class="RowStyleA">
+	<td class="SmallText" width="58">0%</td>
+	<td class="SmallText ac" width="58">50%</td>
+	<td class="SmallText ar" width="58">100%</td>
+</tr>
+</table>
+<div class="ar"><a href="{TEMPLATE: PMSG_PAGE_lnk}"><img src="{THEME_IMAGE_ROOT}/new_pm.gif" alt="" /></a></div>
+<form action="{TEMPLATE: PMSG_PAGE_lnk3}" method="post" id="priv_frm">{DEF: _hs}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr class="RowStyleB">
+	<td class="SmallText al" colspan="3">{IF: $private_tools}<a href="{ROOT}?t=pmsg_dump&amp;{DEF: _rsid}">{MSG: pmsg_download_dump}</a>{ELSE}&nbsp;{ENDI}</td>
+	<td colspan="3" class="SmallText ar nw">
+		{MSG: folder}
+		<select name="folder_id" onchange="document.forms[\'priv_frm\'].submit();">
+		{TEMPLATE-DATA: select_options_cur_folder}
+		</select> <input type="submit" class="button" name="sel_folder" value="{MSG: go}" />
+	</td>
+</tr>
+<tr>
+	<th class="nw">{MSG: pmsg_selected} <input type="checkbox" name="toggle" title="{TEMPLATE: pmsg_all}/{TEMPLATE: pmsg_none}" onclick="jQuery(\'input:checkbox\').prop(\'checked\', this.checked);" /> </th>
+	<th>&nbsp;</th>
+	<th class="wa"><a href="{ROOT}?t=pmsg&amp;folder_id={VAR: folder_id}&amp;{DEF: _rsid}&amp;o=subject&amp;s={IF: $o=='p.subject' && $s=='ASC'}d{ELSE}a{END}" class="thLnk">{MSG: pmsg_subject}</a></th>
+	<th class="ac"><a href="{ROOT}?t=pmsg&amp;folder_id={VAR: folder_id}&amp;{DEF: _rsid}&amp;o={IF: $folder_id == 3}alias2{ELSE}alias{ENDI}&amp;s={IF: ($o=='u.alias' || $o=='u2.alias') && $s=='ASC'}d{ELSE}a{ENDI}" class="thLnk">{IF: $folder_id == 3}{TEMPLATE: pmsg_recepient}{ELSE}{TEMPLATE: pmsg_author}{END}</a></th>
+	<th class="ac"><a href="{ROOT}?t=pmsg&amp;folder_id={VAR: folder_id}&amp;{DEF: _rsid}&amp;o=post_stamp&amp;s={IF: $o=='p.post_stamp' && $s=='ASC'}d{ELSE}a{END}" class="thLnk">{MSG: pmsg_time}</a></th>
+	<th class="ac">{MSG: action}</th>
+</tr>
+{TEMPLATE-DATA: private_msg_entry}
+{TEMPLATE-DATA: private_tools}
+</table></form>
+{TEMPLATE-DATA: page_pager}
+<div class="ar pmL"><a href="{TEMPLATE: PMSG_PAGE_lnk}"><img src="{THEME_IMAGE_ROOT}/new_pm.gif" alt="" /></a></div>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: pm_err_nopm_title}
+{MSG: pm_err_nopm_title}
+{SECTION: END}
+
+{SECTION: pm_err_nopm_msg}
+{MSG: pm_err_nopm_msg}
+{SECTION: END}
+
+{SECTION: pm_update}
+{MSG: pm_update}
+{SECTION: END}
+
+{SECTION: pmsg_all}
+{MSG: pmsg_all}
+{SECTION: END}
+
+{SECTION: pmsg_none}
+{MSG: pmsg_none}
+{SECTION: END}
+
+{SECTION: restore_to}
+{MSG: restore_to}
+{SECTION: END}
+
+{SECTION: move_to}
+{MSG: move_to}
+{SECTION: END}
+
+{SECTION: normal_full_indicator normal indicator of space in PM}
+<td class="pmSn"><img src="{BASE}blank.gif" alt="" width="{VAR: full_indicator}" height="8" /></td>
+{SECTION: END}
+
+{SECTION: alert_full_indicator alert indicator, when user approaches limit}
+<td class="pmSa"><img src="blank.gif" alt="" width="{VAR: full_indicator}" height="8" /></td>
+{SECTION: END}
+
+{SECTION: full_full_indicator full indicator, the user has reached or surpassed the limit}
+<td class="pmSf"><img src="blank.gif" alt="" width="{VAR: full_indicator}" height="8" /></td>
+{SECTION: END}
+
+{SECTION: pmsg_author}
+{MSG: pmsg_author}
+{SECTION: END}
+
+{SECTION: pmsg_recepient}
+{MSG: pmsg_recepient}
+{SECTION: END}
+
+{SECTION: private_no_messages}
+<tr class="RowStyleC"><td colspan="6" class="ac">{MSG: private_no_messages}</td></tr>
+{SECTION: END}
+
+{SECTION: private_tools}
+<tr class="RowStyleB">
+	<td class="SmallText al" colspan="3"><a href="{ROOT}?t=pmsg_dump&amp;{DEF: _rsid}">{MSG: pmsg_download_dump}</a></td>
+	<td colspan="3" class="SmallText ar">
+		<input type="submit" class="button" name="btn_move" value="{VAR: btn_action}" />
+		<select name="moveto">{TEMPLATE-DATA: moveto_list}</select>
+		<input type="hidden" name="old_folder_id" value="{VAR: folder_id}" />
+		&nbsp;&nbsp;&nbsp;<input type="submit" class="button" name="{VAR: btn_del_name}" value="{VAR: btn_del_title}" />{IF: $FUD_OPT_2 & 2097152}&nbsp;&nbsp;&nbsp;<input type="submit" class="button" name="btn_pdf" value="{MSG: pmsg_pdf_btn}" />{ENDIFI}
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: action_buttons_inbox_lnk}
+{ROOT}?t=ppost&amp;{DEF: _rsid}&amp;reply={VAR: obj->id}
+{SECTION: END}
+
+{SECTION: action_buttons_inbox_lnk1}
+{ROOT}?t=ppost&amp;quote={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_buttons_inbox_lnk2}
+{ROOT}?t=ppost&amp;forward={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_buttons_sent_trash_lnk}
+{ROOT}?t=ppost&amp;{DEF: _rsid}&amp;forward={VAR: obj->id}
+{SECTION: END}
+
+{SECTION: action_buttons_draft_lnk}
+{ROOT}?t=ppost&amp;{DEF: _rsid}&amp;msg_id={VAR: obj->id}
+{SECTION: END}
+
+{SECTION: deny_recipt_lnk}
+{ROOT}?t=pmsg_view&amp;{DEF: _rsid}&amp;dr=1&amp;id={VAR: obj->id}
+{SECTION: END}
+
+{SECTION: normal_msg_lnk}
+{ROOT}?t=usrinfo&amp;{DEF: _rsid}&amp;id={VAR: obj->ouser_id}
+{SECTION: END}
+
+{SECTION: PMSG_PAGE_lnk}
+{ROOT}?t=ppost&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: PMSG_PAGE_lnk3}
+{ROOT}?t=pmsg
+{SECTION: END}
+
+{SECTION: pmsg_delete}
+{MSG: pmsg_delete}
+{SECTION: END}
+
+{SECTION: pmsg_trash}
+{MSG: pmsg_trash}
+{SECTION: END}

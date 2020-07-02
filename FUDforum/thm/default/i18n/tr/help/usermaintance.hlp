@@ -1,0 +1,100 @@
+TOPIC_TITLE: <a name="register">Neden kayıt olunmalı?</a>
+TOPIC_HELP:
+Çoğu forumda yeni konu açamadığınızı veya konulara yanıt yazamadığınızı farkedeceksiniz, tabii
+eğer yönetici açıkça izin vermemişse. Tartışmaya katılabilmek için, büyük olasılıkla kayıt olmanız gerekecek.
+Kayıt olduğunuzda, ayrıca diğer bir çok forum özelliğini de kullanabilir duruma geleceksiniz. Bu özellikler arasında:
+<ul>
+	<li>İletilerinize yanıt yazıldığında gönderilen E-posta/ICQ uyarısı
+	<li>Özel imza, avatar, kişisel takılar vb.
+	<li>Forumdaki diğer üyelere özel ileti gönderebilme
+	<li>Yaşadığınız yerin saat dilimini belirterek, forumdaki zamanın size uygun şekilde görüntülenmesini sağlayabilme
+</ul>
+sayılabilir. Aksi belirtilmediği sürece, kayıt işlemi tamamen ücretsizdir, ve sadece e-posta adresiniz ve takma isminiz
+gibi en az düzeydeki bilgiyi gerektirir.
+<br />
+COPPA engellenmemiş durumdaysa ve 13 yaşın altındaysanız, ileti gönderebilmek için yasal koruyucunuzun/velinizin izin vermesi
+gerekecek. COPPA'nın engellenmediği forumlarda kayıt işlemi tamamlandığında, 13 yaşından küçük kullanıcılar başka bir forma
+yönlendirilecek, bu formun yasal koruyucu tarafından doldurulması ve o sayfada verilen uygun adrese gönderilmesi gerekiyor.
+
+
+TOPIC_TITLE: <a name="cookies">FUDforum çerezleri nasıl kullanıyor?</a>
+TOPIC_HELP:
+Olağan olarak FUDforum çerezleri, daha önce giriş yapıp yapmadığınız gibi küçük bir bilgiyi saklamak için tutar. Eğer
+tarayıcınız çerezleri desteklemiyorsa, FUDforum bunun yerine oturumları kullanacaktır. Oturum kullanıldığında, bilgisayarınızda
+herhangi bir bilgi tutulmaz. Giriş işlemi sırasında çerez kullanılma seçeneğini atlayabilir ve oturum sisteminin kullanılmasını
+tercih edebilirsiniz. Halka açık bilgisayarlardan bağlanıyorsanız bu yöntemi uygulamanız önerilir, böylelikle kimliğinizin izinsiz
+kullanılmasını engelleyebilirsiniz. Aynı tehlike forumdan çıkış yapmadığınız zaman da mevcuttur. Bununla birlikte çoğu durumda
+çerezleri kullanmak isteyeceksiniz, çünkü bu şekilde forumun kullanılması daha rahat olacaktır, örneğin çerez kullandığınızda
+forumu her ziyaret edişinizde yeniden giriş yapmanız gerekmez.
+
+
+TOPIC_TITLE: <a name="clrcookie">FUDforum çerezi nasıl kaldırılabilir?</a>
+TOPIC_HELP:
+FUDforum tarafından bırakılan çerezi kaldırmak için, basitçe Çıkış yap linkine tıklatın, bu otomatik olarak çerezi silecektir.
+
+
+TOPIC_TITLE: <a name="updprofile">Kullanıcı Denetim Masası nedir?</a>
+TOPIC_HELP: Forumun bir üyesi olarak, içinde kendiniz ile ilgili bilgileri (ICQ veya MSN numaranız, imzanız, özgeçmişiniz vb.) saklayabileceğiniz bir kişisel
+bilgiler bölümüne sahipsiniz. Kullanıcı Denetim Masası bölümü ayrıca forum ile ilgili bazı ayarların da belirtildiği bölümdür. Giriş yaptığınız herhangi bir zaman
+kişisel bilgilerinizde değişiklik yapabilirsiniz. Ayrıca unutmamalısınız ki kişisel bilgilerinizde yer alan bilgiler diğer forum üyeleri tarafından
+görünebilir durumdadır. Dolayısıyla, diğerlerinin görmesini istemediğiniz, sizin için hassas olan bilgileri bu bölüme koymamalısınız.
+<br />
+Denetim masanızda <b>E-posta adresini göster</b> seçeneği eğer <b>HAYIR</b> olarak seçilmişse e-posta adresiniz gizlenir. E-posta adresinizin
+diğerleri tarafından görüntülenmesini istemiyorsanız bu seçeneği kullanabilirsiniz.
+
+
+TOPIC_TITLE: <a name="sigs">İmza nedir?</a>
+TOPIC_HELP:
+İmza, gönderdiğiniz her iletinin alt kısmına otomatik olarak eklenen bir yazıdır. denetim masanızda bulunan <b>"Varsayılan olarak imzayı ekle"</b>
+seçeneğini kullanarak imzanızın eklenip/eklenmeyeceğini belirleyebilirsiniz. Buradaki ayar ne olursa olsun, göndermek istediğiniz tüm iletilerin alt kısmında
+da aynı seçenek çıkar, bunu kullanarak belirli bir ileti için de bu seçeneği değiştirebilirsiniz.
+.<br />
+Düz metne ek olarak, yönetici tarafından izin verildiyse, imzanız diğer bazı şeyler de içerebilir, örneğin sevdiğiniz URL'lere linkller, kişisel
+fotoğraflar vb.
+<br />
+Eğer diğer üyelerin imzalarını görmek istemiyorsanız, denetim masanızdaki <b>"İmzaları göster"</b> seçeneğini kapatarak bunu sağlayabilirsiniz.
+
+
+TOPIC_TITLE: <a name="rstpasswd">Parolanızı kaybettiyseniz ne yapmalısınız?</a>
+TOPIC_HELP:
+Eğer FUDforum parolanızı hatırlayamıyorsanız, <a href="{ROOT}?t=reset&%_rsid%">parola belirleme sayfasına</a> giderek
+e-posta adresinizi belirtip Gönder düğmesini tıklatmallısınız. Bu sayede size özel bir URL e-posta ile gönderilecek, o URL'ye eriştiğinizde
+parolanız yeniden belirlenecek ve yeni parolanızı söyleyen bir e-posta alacaksınız.<br />
+<br />
+<b>Not:</b>Parolalarınız, MD5 sağlama toplamı adı verilen tek yönlü bir şifreleme biçimiyle saklanır. Bu, askeri düzeyde 128-bitlik bir
+şifreleme olup, parolalarınızı geri getirmenin bir yolu yoktur. Bu şifrelemede parolanızın doğrulanması, her girişinizde belirttiğiniz
+parolanın MD5 toplamının veritabanındaki MD5 toplamı ile karşılaştırılması şeklinde olur. Dolayısıyla, parolanızı unuttuğunuzda, ne olduğunun
+bulunmasının herhangi bir yolu yoktur. Bu yüzden, parolanızı yeniden belirlediğinizde, forum sizin için rastgele yeni bir parola üretecektir.
+
+
+TOPIC_TITLE: <a name="cstat">Özel takılar nedir &amp; nasıl kullanabilirim?</a>
+TOPIC_HELP:
+Özel takılar sadece yönetici tarafından eklenebilir, dolayısıyla özel bir takı istiyorsanız, forumun yöneticinden istemelisiniz.
+
+
+TOPIC_TITLE: <a name="avatars">Avatar nedir?</a>
+TOPIC_HELP:
+Avatarlar, kullanıcı bilgilerinizin bulunduğu yerde ve gönderdiğiniz her iletide kullanıcı isminizin altında görüntülenen resimlerdir.
+FUDforum 3 tip avatarı destekler, bazılarına yönetici tarafından izin verilmemiş olabilir. Kendiniz için denetim masanızdan bir
+avatar seçebilirsiniz.
+<ul>
+	<li><b>Kurulu</b> - Bu avatarlar yönetici tarafından hazırlanır, bu avatarlardan birini seçtiğinizde sayfadaki değişiklikleri sakladığınız
+anda kullanılmaya hazır hale gelir.
+	<li><b>Avatar yükle</b> - Eğer izin verildiyse, sunucuya kendi avatarınızı yüklemeniz mümkündür. Fakat yüklendikten kullanabilmeniz için yönetici
+tarafından onaylanmayı gerektirir.
+	<li><b>URL belirt</b> - Eğer izin verildiyse, avatarınız olacak resmin URL'sini belirtebilirsiniz. Yönetici tarafından onaylandığı takdirde
+avatarınız olarak kullanabilirsiniz.
+</ul>
+<b>not:</b> Avatarınızı istediğiniz zaman değiştirebilirsiniz, bununla birlikte yüklenen avatarlar ve URL avatarları her zaman öncelikle onay gerektirecektir. 
+
+TOPIC_TITLE: <a name="blist">Arkadaş listesi nedir?</a>
+TOPIC_HELP:
+Arkadaş listesi, daha sık diyalog kurmak isteyeceğiniz forum üyelerinin sizin tarafınızdan oluşturulan bir listesidir. Birini arkadaş listenize
+eklediğinizde, o kişinin doğum gününü görebileceksiniz (eğer doğum günü belirtilmişse). Ayrıca özel ileti yollamak istediğinizde bunu daha kolay şekilde
+yapabileceksiniz.
+
+
+TOPIC_TITLE: <a name="ignlist">Gözardı listesi ne işe yarar?</a>
+TOPIC_HELP:
+Gözardı listesi, iletilerini görmek istemediğiniz ve size özel ileti göndermesini engellemek istediğiniz forum üyelerinin bir listesidir. Gönderilen
+her iletide, iletinin yazarını gözardı listesine eklemenize olanak tanıyan bir link bulunur.

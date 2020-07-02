@@ -1,0 +1,57 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: pmsg_dump.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: pmsg_dump.php.t; output: pmsg_dump.php;}
+{REF: security.tmpl}
+{REF: private.tmpl}
+{REF: allowed_user_lnk.tmpl}
+
+{PAGE: PMSG_DUMP_PAGE private messages control panel}
+{TEMPLATE: pmsg_dump_header}
+<body>
+	<div class="content">
+		<h1>{MSG: pm_export_header}</h1>
+		{VAR: pm_data}
+		<small>{MSG: pm_export_footer} {TEMPLATE: current_date}</small>
+	</div>
+</body>
+</html>
+{PAGE: END}
+
+{SECTION: pmsg_dump_header header for message dump}<!DOCTYPE html>
+<html lang="{LANG}">
+<head>
+	<meta charset="{CHARSET}">
+	<title>{GVAR: FORUM_TITLE}{VAR: TITLE_EXTRA}</title>
+	<style>
+		{FUNC: file_get_contents($GLOBALS["WWW_ROOT_DISK"] ."theme/". $GLOBALS["usr"]->theme_name ."/forum.css")}
+	</style>
+</head>
+{SECTION: END}
+
+{SECTION: pmsg_dump_msg_entry single private message entry for message dump}
+<table cellspacing="0" cellpadding="0" class="MsgTable">
+<tr>
+	<td class="MsgR1 al vt"><b>{MSG: subject}:</b> {VAR: obj->subject}</td>
+	<td class="MsgR1 ar vt DateText"><b>{MSG: by}</b> {VAR-HTML: obj->alias} <b>{MSG: pmsg_on}</b> {TEMPLATE: dmsg_post_date}</td>
+</tr>
+<tr>
+	<td class="MsgR3" colspan="2">{FUNC: read_pmsg_body($obj->foff, $obj->length)}
+</tr>
+</table>
+{SECTION: END}
+
+{SECTION: pm_err_nopm_title}
+{MSG: pm_err_nopm_title}
+{SECTION: END}
+
+{SECTION: pm_err_nopm_msg}
+{MSG: pm_err_nopm_msg}
+{SECTION: END}

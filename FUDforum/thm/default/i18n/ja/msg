@@ -1,0 +1,1171 @@
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Author: Aotake
+# Author: Fryed-peach
+# Author: Gulpin
+# Author: Hina
+# Author: Iwai.masaharu
+# Author: Kanon und wikipedia
+# Author: Macofe
+# Author: Naudefj
+# Author: Object＊tofu
+# Author: Omotecho
+# Author: Otokoume
+# Author: Shirayuki
+# Author: Sujiniku
+# Author: ネイ
+
+action:操作
+add_to_buddy_list:仲間リストに追加
+admin:管理者
+admin_control_panel:管理
+administrator:管理者
+attachment:添付:
+avatar:アバター:
+average_post_count:{PLURAL: u->posted_msg_count|$1 通のメッセージ } (平均一日{PLURAL: avg|$1 通})
+biography:自己紹介:
+birth_date:生年月日:
+by:投稿者:
+by_mod:モデレーターによる
+current_time:現在日時
+custom_avatar_queue:カスタムアバターの待ち
+date_posted:投稿日
+date_registered:登録日:
+download_counter:{PLURAL: v[3]|$1 回}ダウンロード
+pmsg_download_counter:{PLURAL: r->dlcount|$1 回}ダウンロード
+email:メール:
+email_to_friend:友達にメールを送信
+email_to_friend_desc:このページの URL を友達にメールで送信
+email_user:利用者にメールで連絡
+faq:ヘルプ
+first_unread_msg:未読メッセージに移動
+first_unread_msg_desc:このトピックの1件目の未読メッセージに移動
+flat_view:既定のフラット表示に戻る
+forum:フォーラム:
+forum_icon:フォーラムアイコン
+forum_new_messages:新しいメッセージ
+forum_none_messages:既読と未読メッセージの追跡ができるのはフォーラムに登録済みのメンバーだけです。
+forum_old_messages:新しいメッセージはありません
+from:差出人:
+gender:性別:
+go:表示
+goto_next_msg:次のメッセージに進む
+goto_prev_msg:前のメッセージに戻る
+home:ホーム
+homepage:ホームページ:
+icq_control_panel:ICQ オンラインメッセージパネル
+icq_message_form:ICQ メッセージ フォーム:
+ignore_user:この利用者のメッセージはすべて無視
+im_aim:AIM ハンドル:
+im_msnm:MSN メッセンジャー:
+im_yahoo:Yahoo! メッセンジャー:
+image:画像:
+index_forum:フォーラム
+index_new_posts:新しい未読メッセージがあります
+index_no_new_posts:新しい未読メッセージはありません
+index_url_redirection:リダイレクト
+interests:興味:
+last_post:最新のメッセージ
+last_thread_msg:このトピックの最新のメッセージに進む
+legend:凡例
+location:場所:
+lock_thread:トピックをロック
+locked:ロック済み
+locked_with_new_posts:ロック済み (未読メッセージあり)
+logged_in_list:ログイン済み利用者一覧
+login:ログイン
+login_header:ログイン名:
+logout:ログアウト
+mark_all_read:すべてのメッセージを既読にする
+mark_all_read_desc:すべての未読メッセージを既読にする
+members:メンバー一覧
+calendar:カレンダー
+cal_goto_date:移動:
+cal_day_heading:この日のイベント
+cal_no_events:この日のイベントはありません。
+cal_update:フォーラムカレンダーの参照
+cal_birthday:誕生日: {VAR: user}
+cal_birthdays:{PLURAL: birthdays|$1 人の誕生日}
+cal_birthday_age:({PLURAL: age|$1 歳})。
+message:メッセージ
+message_counter:<b>{PLURAL: thread_count|$1 件}のトピック</b>内に合計で<b>{PLURAL: post_count|$1 通}のメッセージ</b>が投稿されました。
+message_index:メッセージ索引
+message_index_desc:メッセージ一覧を表示
+minimize_category:カテゴリを最小化
+minimize_message:メッセージを最小化
+moderation_queue:モデレーション待ち
+moderator:モデレーター
+moderator_of:モデレーター担当:
+moderator_options:モデレーター用設定
+moderators:{PLURAL: modcount|モデレーター}
+more_unread_messages:未読メッセージあり
+more_unread_messages_desc:表示中のメッセージを既読にして、未読メッセージを表示
+move_thread:移動
+moved:別のフォーラムに移動しました。
+moved_thread_message:このトピックは別のフォーラムに移動済
+na:該当なし
+new_posts:新規メッセージ
+new_private_messages:<span class="GenTextRed">({VAR: c})</span>件の未読{PLURAL: c|プライベートメッセージ}があります。
+new_thread:トピックを新規作成
+newest_user:最新の登録利用者:
+next_page:次のページ
+next_thread:次のトピック:
+no_messages:このフォーラムにはメッセージがありません。<br />このフォーラムで最初のトピックを投稿してください。
+no_msg_body:メッセージに本文がありません。
+no_new_posts:新規メッセージなし
+no_posts:メッセージなし
+no_subscribed_forums:購読済みフォーラムがありません
+no_subscribed_threads:購読済みトピックはありません
+no_bookmarked_threads:ブックマークしたトピックなし
+no_unread_locked:このトピックはロックされました
+no_unread_msg:このトピックには未読のメッセージがありません。
+no_unread_msg_unreg:既読と未読メッセージを追跡できるのは登録済利用者だけです
+num_pages:({VAR: ttl_pg}) ページ:
+num_votes:{VAR: obj->total_votes} {PLURAL: obj->total_votes|票}
+occupation:職業:
+off:切
+on:入
+page_timings:ページの生成にかかった合計時間: {PLURAL: page_gen_time|$1 秒}
+pm:プライベートメッセージ
+poll:投票:
+post_count:メッセージ数 {VAR: u_pcount}
+post_count_l:メッセージ数:
+posts:メッセージ数
+posts_c:メッセージ数:
+prev_thread:前のトピック:
+usrinfo_private_message:プライベートメッセージ:
+profile:コントロール パネル
+profile_desc:利用者コントロール パネルにアクセス
+rate_thread:トピックの評価
+rating:レーティング
+rating_track:トピック「<b>{VAR: thr->subject}</b>」のレーティングを管理する:
+refresh_list:一覧を更新
+register:登録
+registered:登録日:
+registered_on:登録日: {TEMPLATE: registered_on_date}
+replies:返信数
+report_to_mod:モデレーターにメッセージを報告する
+reported_messages:報告済みメッセージ
+reveal_all_posts:{VAR: user_login}の投稿をすべて開く
+reveal_post:メッセージを表示
+search:検索
+sel_todays_posts:今日のメッセージ
+sel_todays_posts_desc:今日のメッセージフィルターの切り替え (今日作成されたメッセージのみ表示します)
+sel_unanswered_posts:未返答メッセージ
+sel_unanswered_posts_desc:未返答メッセージフィルターの切り替え (返信していないメッセージのみ表示します)
+sel_unread_messages:未読メッセージ
+sel_unread_messages_desc:未読メッセージフィルターの切り替え (未読メッセージのみ表示します)
+send:送信
+send_pm_desc:この利用者にプライベートメッセージを送信します
+sender_email:送信者のメール:
+sender_name:送信者名:
+show_posts_by:{VAR: u_alias} が書いたメッセージを見る
+size:サイズ:
+status:状態:
+status_line:この掲示板には現在、<b>{PLURAL: st_obj->online_users_reg|$1人のメンバー}</b>、<b>{PLURAL: st_obj->online_users_hidden|$1人の不可視メンバー}</b>、<b>{PLURAL: st_obj->online_users_anon|$1人のゲスト}</b>がいます。
+sticky:常に先頭に表示するトピック:
+stop_ignoring:この利用者の無視をやめる
+sub_to_thread:トピックを購読
+sub_to_thread_desc:このトピック内での新規メッセージに関する通知を受信します
+bookmark_thread:トピックをブックマーク
+bookmark_thread_desc:このトピックをあなたのブックマークリストに加えます
+subject:件名
+subscribe:購読
+subscribe_desc:誰かがこのフォーラムで新しいトピックを作成する場合、通知を受信します
+subscribed_forums:購読済みフォーラム一覧
+subscribed_forums_desc:購読済みフォーラムフィルターの切り替え (購読しているフォーラムのメッセージのみを表示します)
+subscribed_threads:購読済みトピック一覧
+subscribed_threads_desc:購読済みトピックフィルターの切り替え (購読しているトピックのメッセージのみを表示します)
+bookmarked_threads:ブックマークしたトピック
+switch_to_thread_view:このトピックをスレッド表示に切り替える
+thread:トピック:
+thread_announcement:告知:
+thread_first_unread_msg:このトピックの最初の未読メッセージを読む
+thread_thread:トピック
+threads:トピック数
+time:時間
+todays_posts:今日のメッセージ
+todays_posts_desc:今日投稿されたすべてのトピックを表示します
+un_ignore_user:この利用者のメッセージの無視をやめる
+unanswered_posts:未返答メッセージ
+unanswered_posts_desc:返信のないすべてのメッセージを表示します
+unlock_thread:トピックをロック解除
+unread_msg:このトピックにはあなたがまだ読んでいないメッセージが含まれています
+unread_msg_locked:未読メッセージのあるロック済みトピック
+unread_posts:未読メッセージ
+unread_posts_desc:すべての未読メッセージを表示します
+unsub_from_thread:トピックの購読停止
+unsub_from_thread_desc:このトピック内の新規メッセージに関する通知の受信を停止します
+unbookmark_thread:ブックマークから除去
+unbookmark_thread_desc:このトピックをあなたのブックマークリストから除きます
+unsubscribe:購読停止
+unsubscribe_desc:フォーラム内の新規トピックに関する通知の受信を停止します
+updated_on:更新日:
+user:利用者
+user_counter:<b>{VAR: st_obj->user_count}</b>{PLURAL: st_obj->user_count|人の登録済み利用者}がいます。
+user_info:利用者情報
+user_info_l:利用者情報 {VAR: u->alias}
+user_offline:{VAR: obj->login} は今オフラインです。
+user_online:{VAR: obj->login} は今オンラインです。
+usrinfo_last_post:最後のメッセージ:
+view_results:結果を見る
+views:閲覧数
+vote:{PLURAL: frm->n_rating|$1票}
+vote_button:投票
+vote_for_thread:投票
+was_moved_msg:<a href="{TEMPLATE: was_moved_msg_lnk}">{VAR: r[2]}</a> はモデレーターによって <a href="{TEMPLATE: was_moved_msg_lnk2}">{VAR: r[12]}</a> に移動されました。
+welcome_message:<b>{VAR: usr->alias}</b> さん、ようこそ。前回の訪問は{TEMPLATE: welcome_message_date}でした。
+what_ppl_doing:人々が何をしているのか表示する
+reported_del_report:報告を削除
+reported_reason:理由:
+reported_on:日付:
+reported_reported_by:報告者:
+reported_reported_msg:報告メッセージ
+modque_pending_approval:承認待ちメッセージ
+modque_approve:承認
+modque_delete:削除
+modque_deleteall:このユーザの該当する投稿を全て削除
+modque_no_message:承認待ちのメッセージはありません
+pmsg_new_messages:未読プライベートメッセージ
+pmsg_old_messages:既読プライベートメッセージ
+deny_recipt:受信非通知
+deny_recipt_desc:このメッセージを読んだという確認を送りません
+restore_to:復元先:
+move_to:移動先:
+list_referes_referrals:紹介
+list_referes_members:紹介されたメンバー
+list_referes_member:メンバー
+referals_none:紹介された人はまだいません。
+referals_refered_by:次の利用者によって紹介されたフォーラム・メンバー: <b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b>
+referals_post_count:メッセージ数
+referals_registered_on:登録日
+referals_action:操作
+pmsg_all:すべて
+pmsg_none:なし
+folder:フォルダー:
+pmsg_replied:返信済み
+pmsg_forwarded:転送済み
+pmsg_subject:件名
+pmsg_author:著者
+pmsg_time:時間
+pmsg_selected:選択済み
+pmsg_delete:削除
+cur_ppage_pm:プライベートメッセージ
+writing_pm:プライベートメッセージを書く
+browsing_folder:<b>{VAR: folders[$folder_id]}</b> フォルダー閲覧中
+inbox:受信箱
+draft:下書き
+sent:送信済み
+trash:ごみ箱
+msg_author:著者
+avatar_sel_form:アバター選択画面
+no_avatars:有効なアバターがありません。
+month_1:1月
+month_2:2月
+month_3:3月
+month_4:4月
+month_5:5月
+month_6:6月
+month_7:7月
+month_8:8月
+month_9:9月
+month_10:10月
+month_11:11月
+month_12:12月
+sunday:日曜日
+sunday_short:日
+monday:月曜日
+monday_short:月
+tuesday:火曜日
+tuesday_short:火
+wednesday:水曜日
+wednesday_short:水
+thursday:木曜日
+thursday_short:木
+friday:金曜日
+friday_short:金
+saturday:土曜日
+saturday_short:土
+male:男
+female:女
+unspecified:非公開
+register_tree_view:メッセージとトピックの一覧ともにツリー表示
+register_msg_tree_view:トピック一覧はフラット表示、メッセージ一覧はツリー表示
+register_tree_msg_view:トピック一覧はツリー表示、メッセージ一覧はフラット表示
+register_flat_view:メッセージとトピックの一覧ともにフラット表示
+use_forum_default:フォーラムの既定値を使用
+finduser_user_info:利用者情報
+finduser_by_login:ログイン名:
+finduser_submit:検索
+finduser_no_such_user:利用者が存在しません
+finduser_user:利用者
+finduser_postcount:メッセージ数
+finduser_joindate:参加日
+finduser_action:操作
+yes:はい
+no:いいえ
+register_email:メール
+edit_time_limit:<b>編集時間制限</b>: {GVAR: EDIT_TIME_LIMIT} 分
+no_edit_time_limit:<b>編集時間制限</b>: 無制限
+pmuserloc_login:ログイン名:
+pmuserloc_submit:送信
+pmuserloc_user:利用者
+pmuserloc_no_result:結果なし
+register_builtin:組み込み
+register_specify_url:URL を指定
+register_uploaded:アバターをアップロード
+register_login:ログイン名:
+register_login_desc:ログインの際に使われ、このサイト上で表示される名前です。
+register_login_available:使用可能
+register_login_taken:使用されています
+register_password:パスワード:
+register_password_desc:アカウントのパスワードです。パスワードは大文字と小文字が区別され、少なくとも6文字以上である必要があります。
+register_conf_pass:パスワード (確認):
+register_conf_pass_desc:パスワードを再入力してください。
+register_email_desc:メールアドレスを入力してください。下の設定セクションでこれを非公開にできます。
+register_name:名前:
+register_name_desc:あなたの本名です。
+register_your_pass:パスワード:
+register_update:更新
+register_avatar_type:アバタータイプ:
+register_del_avatar:アバター削除
+register_avatar:アバター:
+register_sel_avatar:アバター選択
+register_custom_avatar_rules:カスタム アバターは、管理者に承認されるまで表示されません。<br /><span class="SmallText">アバターは <b>{GVAR: CUSTOM_AVATAR_MAX_DIM} ピクセル</b>以下の大きさで、<b>jpg</b>、<b>gif</b>、<b>png</b> のいずれかの形式である必要があります。</span>
+register_custom_avatar_url:カスタム アバターの URL:
+register_preview:プレビュー
+register_custom_avatar_upload:カスタム アバター ファイル:
+register_register:登録
+register_required:必須情報
+register_required_desc:すべて必須項目です。
+register_optional:オプション情報
+register_optional_desc:自己紹介にはあなたの個人情報や個人を特定できる情報を載せないことをお勧めします。すべての情報は他のフォーラム・メンバーから見ることができます。
+register_location:所在地:
+register_occupation:職業:
+register_interests:興味:
+register_image:画像:
+register_icq:ICQ
+register_aim:AIM ハンドル:
+register_yahoo:Yahoo! メッセンジャー:
+register_msnm:MSN メッセンジャー:
+register_homepage:ホームページ:
+register_bday:誕生日:
+register_bday_desc:誕生日を入力するとあなたの自己紹介とともに、他のフォーラム・メンバーから見ることができます。
+register_day:日
+register_month:月
+register_year:年
+register_gender:性別:
+register_bio:自己紹介:
+register_bio_desc:あなたについて、例えば興味があることや職業などなど…
+register_prefs:設定
+register_sig:署名:
+register_sig_desc:署名を設定すると、あなたのメッセージの末尾に表示されるようになります。
+register_reset:リセット
+register_def_thread_view:既定のトピック表示:
+register_msg_per_page:ページ毎のメッセージ数:
+register_show_sig:署名を表示:
+register_show_sig_desc:フォーラムの他のメンバーの署名を表示するかどうか選択することができます
+register_use_sig_default:署名を既定で使う:
+register_use_sig_default_desc:あなたの投稿に毎回自動的に署名を追加します。
+register_timezone:タイムゾーン:
+register_ignore_admin:管理メッセージを無視する:
+register_invisible_mode:非可視モード:
+register_invisible_mode_desc:オンライン状況を隠します
+register_show_email:メールアドレスを表示:
+register_show_email_desc:メールアドレスを公開表示する場合はこのオプションを選択します。
+register_notification:通知を既定で選択:
+register_notification_desc:通知が既定で有効の場合も、投稿の際に無効にできます。
+register_notify_method:通知方法を選択:
+register_notify_method_desc:通知の方式を設定するか、通知を無効にしてください (長期休暇の際など)。
+register_allow_email_msg:メールメッセージを許可:
+register_allow_email_msg_desc:このフォーラムを通して他の利用者からのメールを受け取ります。
+buddy_status:状態
+my_buddies:自分の仲間
+add_buddy:仲間を追加
+add:追加
+buddy_search:追加したい利用者のログイン名を入力してください。
+member_search:または、 <a href="javascript://" onclick="javascript: window_open('{FULL_ROOT}{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1', 'user_list', 400,250);">ユーザを探す</a> 機能を利用してください。.
+buddy_remove:除去
+post_normal:通常
+post_sticky:常に先頭に表示するトピック
+post_annoncement:告知
+post_size:サイズ
+post_color:色
+post_font:フォント
+create_thread:トピックを作成
+submit_reply:返信を送信
+edit_message:メッセージ変更を適用する
+apply_spell_changes:スペル変更を適用する
+post_preview:メッセージのプレビュー
+post_logedin_user:ログイン利用者:
+post_logout:ログアウト
+post_passwd:投稿パスワード:
+post_poll:投票:
+post_create_poll:投票を作成
+post_poll_delete:削除
+post_poll_edit:編集
+post_mod_opt:モデレーター用設定:
+post_thread_type:トピックタイプ:
+post_thread_expiry:トピック終了期限:
+post_locked:トピックロック済み
+post_icons:メッセージアイコン:
+post_no_icon:アイコンなし
+post_smiley:絵文字ショートカット:
+post_format_tools:書式設定ツール:
+post_upload_file:ファイルをアップロード
+post_file_del:削除
+post_file_name:名前
+post_file_size:サイズ
+file_attachments:ファイル添付:
+allowed_files:許可されたファイル拡張子:
+max_file_size:最大ファイルサイズ:
+max_files_per_msg:メッセージごとの最大ファイル数:
+post_notification:投稿通知
+include_sig:署名を含む
+include_sig_desc:あなたの署名を含めます。
+disable_smilies:このメッセージ中では絵文字を無効にする
+spell_check_msg:メッセージのスペルチェック
+post_form:投稿フォーム
+post_forum:フォーラム:
+post_title:表題:
+post_body:本文:
+post_options:オプション:
+post_preview_btn:メッセージをプレビュー
+post_cancel_btn:キャンセル
+ignore_users:無視している利用者の一覧
+add_ignore:無視する利用者を追加する
+forum_terms:フォーラム用語
+forum_rules:<p>このフォーラムへの登録は自由です! 利用者は下記の規則と方針に従う必要があります。利用規約に同意する場合は、ページの末尾の「<b>同意する</b>」ボタンを押してください。</p><p>フォーラム管理者およびモデレーターは、フォーラム内に不適切なメッセージが掲載されないように努力しますが、メッセージすべての監視はできません。各メッセージはすべて投稿者の意見を表現したものであり、フォーラム所有者および開発者は、いかなるメッセージの内容にも責任を負いません。</p><p>「同意する」ボタンをクリックすることで、あなたは、卑猥、性的、差別的、脅迫的、その他、法に違反するメッセージを投稿しないと保証したと見なします。</p><p>フォーラム所有者は、任意の理由でいかなるトピックも削除、編集、移動、あるいは閉鎖する権利を保持します。</p>
+forum_rules_13:<p>13歳以下の利用者はフォーラムへの参加資格を得るために保護者からの許可が必要です。13歳以下の参加者を歓迎しますが、参加資格を与えるためには、保護者が許可証用紙に署名してファックスか郵便にて送付する必要があります。</p><p>当方に許可証が届く前に登録手続きを始めたい場合は、下の「<b>同意する</b>」ボタンを押してください。登録を取り止めたい場合は、「<b>同意しない</b>」ボタンを押してフォーラムの一覧に戻ってください。</p><p>許可証用紙は登録後にお渡しします。登録手続きについてさらに詳しく知りたい場合は、<a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a> にメールを送信してください。</p>
+coppa_conf:COPPA 確認
+coppa_before:{TEMPLATE: coppa_date} 以前
+coppa_after:{TEMPLATE: coppa_date} 以後
+coppa_link:あなたの生年月日に一致するリンクをクリックしてください。
+coppa:<p>13歳以下の利用者は、登録を完了するために、保護者から署名済みの許可証をこのフォーラムの管理者へ郵送またはFAXにて送信しなければなりません。</p><p>詳しくは <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL} までお問い合わせください。</a>
+prereg_info:情報
+prereg_agree:同意する
+prereg_disagree:同意しない
+prereg_update:フォーラム規則の閲覧
+coppa_fax_instructions:親や保護者のための手順説明
+coppa_fax_instructions2:このページを印刷して署名し、それを私たちへメールまたはファックスで返送してください。
+coppa_fax_reg_form:登録用紙
+coppa_fax_sign:以下の用紙に署名し、私たち宛てに送ってください
+coppa_fax_conf:私の子供が提供している情報を確認し、このウェブサイトの個人情報保護方針を読みました。パスワードがあればプロフィール情報の変更ができることを理解しました。またこの登録情報が掲示板から完全に削除してもらうように依頼できることを理解しました。
+coppa_fax_permission:許可を与える場合、ここに署名します
+coppa_fax_no_permission:アカウントを削除してほしい場合、ここに署名します
+coppa_fax_parent_name:親か保護者のフルネーム:
+coppa_fax_relation:子供との関係:
+coppa_fax_telephone:電話:
+coppa_fax_email:メールアドレス:
+coppa_fax_date:日付:
+coppa_fax_questions:質問があれば、<a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a> に問い合わせてください
+coppa_fax_login:ログイン
+coppa_fax_passwd:パスワード
+coppa_fax_remail:メール
+coppa_fax_name:名前
+login_not_logedin:あなたはログインしていません。いくつかの理由が考えられます:
+login_cookie_expired:Cookie の有効期限が切れました。Cookie を更新するにはログインする必要があります。
+login_perm_denied:匿名利用者であるため、あなたは要求されたリソースにアクセスする許可がありません。許可を得るためにはログインしなければなりません。
+login_want_to_register:登録しませんか?
+login_forgot_passwd:パスワードを忘れました
+login_use_cookie:Cookie を使用する<br /><span class="SmallText">図書館や学校、インターネットカフェにあるコンピューターなど、公衆端末を使用している場合、セキュリティーを高めるためにこのオプションは選択しないことをお勧めします。<br />このオプションを選択しておくと、次回の訪問時にフォーラムに自動的にログインされます。</span>
+login_login:ログイン名:
+login_login_btn:ログイン
+login_name_required:ログイン名が必要です。
+login_passwd_required:パスワードが必要です。
+login_invalid_radius:ログイン名とパスワードの組み合わせが正しくありません。
+reset_confirmation:登録ありがとうございます。\n\nあなたのアカウントを有効化するには下記の URL にアクセスしてください。\n\n{VAR: url}\n\nアカウントが有効化されると、フォーラムにログインし、\nメインページに転送されます。
+reset_reset:パスワード再発行の依頼を受け付けました。再発行手続きを完了するには\n以下のURLにアクセスしてください。\n\n{VAR: url}\n\n付記: この掲示板では一方向暗号化の仕組みを使用してパスワードを保存しています。このため、いったん\nパスワードを入力されるとすぐに暗号化され、これを再度確認する方法は一切ありません。\nパスワードの確認は、登録パスワードの暗号化された結果と、ログイン画面に入力されるパスワードの\n暗号化の結果との比較によって行われます。\n(この暗号化の仕組みについて関心があれば、MD5 ハッシュアルゴリズムについて読むことをお勧めします。)
+rpasswd_invalid_passwd:無効なパスワードです。
+rpasswd_passwd_nomatch:パスワードが一致しません。
+rpasswd_passwd_length:パスワードは 6文字以上の長さが必要です
+reset_remind_pass:パスワード・リマインダー
+reset_reset_conf:パスワードを再設定してあなたに送信します。もしまだメールアドレスを確認していなければ、確認請求を再度お送りすることになります。
+reset_error:メールアドレスがデータベース内にありません。
+reset_update:パスワードを再設定
+rpasswd_change_pass:パスワードを変更
+rpasswd_login:ログイン
+rpasswd_cur_pass:現在のパスワード:
+rpasswd_new_pass:新しいパスワード:
+rpasswd_conf_pass:パスワード (確認):
+ruser_title:ログイン名変更フォーム
+ruser_change_user:フォーラムでのログイン名を変更します
+ruser_cur_login:現在のログイン名:
+ruser_new_login:新しいログイン名:
+ruser_cur_pass:現在のパスワード:
+login_passwd:パスワード:
+reset_email:メールアドレス:
+reset_reset_button:パスワードを再設定
+rate_this_thread:評価
+report_reporting_about:報告内容:
+report_subject:件名:
+report_by:著者:
+report_posted_on:投稿日:
+report_give_reason:このメッセージをなぜ報告しようとしたか理由を書いてください。
+report_submit_report:報告を提出
+search_entire_msg:メッセージ全体
+search_subject_only:件名のみ
+search_forum:フォーラム
+search_posted_on:投稿日
+search_no_results:結果なし
+search_all_forums:すべてのフォーラムを検索
+search_in_forum:検索するフォーラム:
+search_forum_search:フォーラム検索
+move_thread_to:トピック「<b>{VAR: thr->subject}</b>」を次へ移動:
+remail_email_topic:友達にこのトピックをメールで送信
+remail_your_name:あなたの名前:
+remail_your_email:あなたのメール:
+remail_friends_name:友達の名前:
+remail_friends_email:友達のメール:
+remail_required:必須
+remail_subject:件名:
+remail_message:メッセージ:
+remail_send_now:今すぐメールを送信
+remail_anon_opt:友人に送るためにはこのメッセージをご使用のメールクライアントにコピーしてください。
+remail_done:完了
+remail_sent_conf:トピック「{VAR: data->subject}」に関する {VAR-HTML: _POST['femail']} のご友人あてのメールは正しく送信されました。
+remail_error:エラーがありました。
+mklist_type:種類:
+mklist_option:オプション:
+mklist_additem:項目追加
+mklist_apply:適用
+mklist_delete:削除
+qbud_nick_name:ニックネーム
+qbud_add_selected:選択済みのものを追加
+qbud_selected:選択済み
+qbud_no_buddies:選択できる友達はいません
+mklist_numerical:数字
+mklist_aplha:英字
+mklist_square:四角
+mklist_disc:丸
+mklist_circle:円
+mklist_close:閉じる
+email_to:宛先:
+email_pg_title:メール
+email_subject:件名:
+email_body:本文:
+email_submit:メール
+ppost_quote_msg:{VAR: msg_to_list} が {TEMPLATE: ppost_quote_msg_date} に書きました
+ppost_quote:引用:
+ppost_to:宛先:
+ppost_from_buddy_list:仲間リストから選択
+ppost_find_User:利用者検索
+ppost_track_msg:このメッセージを追跡
+ppost_track_msg_desc:このメッセージが読まれたときに、プライベートメッセージであなたに通知します。
+ppost_send:送信
+ppost_save_draft:下書きを保存
+poll_blank_option:空の選択肢は追加できません。
+poll_del_conf:もしこの選択肢を削除してもいいなら「OK」を押してください。
+poll_name:投票名:
+poll_timelimit:期限:
+poll_maxiumvotes:最大票数:
+poll_create:作成
+poll_update:更新
+poll_disablesmilies:絵文字無効
+poll_create_poll:投票を作成
+poll_update_poll:投票を更新
+poll_delete:削除
+poll_updateoption:選択肢を更新
+poll_addoption:選択肢を追加
+poll_unlimited:無期限
+poll_day:日
+poll_days:日
+poll_hour:時間
+poll_hours:時間
+poll_month:月
+poll_year:年
+poll_week:週
+tabs_register:アカウント設定
+tabs_subscriptions:購読
+tabs_bookmarkes:ブックマーク
+tabs_referrals:紹介
+tabs_buddy_list:仲間リスト
+tabs_ignore_list:無視リスト
+tabs_private_messaging:プライベートメッセージ
+single_msg_delete:次のタイトルのメッセージを<span class="ErrorText">削除</span>します: <b>{VAR: data[3]}</b>
+thread_delete:<b>{VAR: data[3]}</b>という題の<span class="ErrorText">トピック全体</span>を<span class="ErrorText">削除</span>しようとしています。
+delete_proceed:<span class="fb">続行しますか?</span>
+delete_yes:はい
+delete_no:いいえ
+error_invalidurl:無効な URL
+error_error:エラー
+usrinfo_profile:{VAR: u->alias} のプロフィール
+usrinfo_show_all_posts:{VAR: u->alias} の書いたメッセージをすべて見る
+actions_update:あなたと同じように、他の人についてかぎ回っているところです。
+err_info:情報
+buddy_list_err_cantadd:自分自身は仲間リストに追加できません
+buddy_list_err_dup:この利用者は既に仲間リストに入っています
+buddy_list_err_nouser:友達リストに加えようとした利用者は見つかりませんでした
+buddy_list_err_nouser_title:利用者を加えることができません
+buddy_list_err_ignore:あなたを無視している利用者を友達リストに加えることはできません。
+buddy_list_update:自分の友達リストを見ています
+core_err_invinp_title:無効な入力
+core_err_invinp_err:無効なリンクを辿りました。どうやってここに着いたか<a href="mailto:{GVAR: ADMIN_EMAIL}">サイト管理者</a>に知らせてください。
+core_adm_login_msg:管理者は<a href="{GVAR: WWW_ROOT}adm/admloginuser.php">ここ</a>でログインできます。
+email_err_unabletoemail_title:エラー: メールを送信できません
+email_err_unabletoemail_msg:管理者がメールシステムを無効にしています。
+email_error_unabletolocaddr:申し訳ありません。メールアドレスを確定できなかったため、システムから {VAR-HTML: _POST['tx_name']} さんへメールを送信することができませんでした。
+email_error_body:本文が必要です。
+email_error_subject:件名が必要です。
+email_error_namerequired:名前が必要です。
+email_error_invaliduser:無効な利用者です
+emailconf_err_invkey_title:エラー
+emailconf_err_invkey_msg:確認キーが無効です。あなたが URL を正しく入力したか、メールを確認してください。
+err_inc_criticaltitle:致命的エラー
+err_inc_criticalmsg:エラーが発生しました。残念ながらエラー報告システムにも問題が発生したためエラー内容はお伝えできません。
+finduser_update:利用者の検索中
+help_index_update:<a href="{TEMPLATE: help_index_update_lnk}">FAQ</a> を読んでいます
+iemail_thr_subject:{VAR: thr_subject} へ {VAR: poster_login} から新しい返信が来ました
+iemail_thr_bodyemail:未読メッセージを読むには {VAR: goto_url['email']} にアクセスしてください。\n\nこのトピックに関する投稿についての通知を今後受け取らない場合は、{VAR: unsub_url['email']} にアクセスしてください。
+iemail_frm_subject:{VAR: poster_login} がフォーラム「{VAR: frm_name}」にて「{VAR: thr_subject}」という題名で新規トピックを始めました
+iemail_frm_bodyemail:このトピックについて見るには以下にアクセスしてください。\n{VAR: goto_url['email']}\n\nこのフォーラムに投稿される新しいトピックについての通知を今後受け取らない場合、{VAR: unsub_url['email']} にアクセスしてください。
+iemail_participate:議論に参加する場合は以下にアクセスしてください:
+ignore_list_err_info_title:情報
+ignore_list_err_dup_msg:この利用者は既に無視リストに入っています
+ignore_list_err_nu_title:利用者が見つかりません
+ignore_list_err_nu_msg:無視リストに追加しようとした利用者は見つかりませんでした。
+ignore_list_cantign_msg:この利用者は無視できません
+ignore_list_update:自分の無視リストを閲覧中
+index_update:<a href="{TEMPLATE: index_update_lnk}">フォーラム一覧</a>を閲覧中
+list_referers_update:推薦人を見ています
+login_update:ログインフォーム
+msg_update:トピック「<a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>」を閲覧中
+pm_err_nopm_title:エラー: プライベートメッセージは無効です。
+pm_err_nopm_msg:プライベートメッセージシステムは使用できません。管理者により無効化されています。
+pm_update:プライベートメッセージを使用中
+post_err_lockedthread_title:エラー: ロックされたトピックです
+post_err_lockedthread_msg:このトピックはロックされています。投稿はもう許可されていません。
+err_coppa_title:エラー: あなたのアカウントは確認が済んでいません
+err_coppa_msg:保護者の方から、あなたのメッセージ投稿の許可を受け取っていません。 COPPA フォームを紛失された場合は、 <a href="{TEMPLATE: err_coppa_msg_lnk}">再確認</a>してください。
+err_banned_acct_title:エラー: あなたは入室が禁止されています。
+err_banned_acct_msg:あなたのアカウントは、フォーラムの規則への違反のため、{IF: $ban_expiry}{DATE: ban_expiry %a, %d %B %Y %H:%M}まで一時的に{ELSE}永久に{ENDI}サイトへのアクセスが禁止されています。
+post_err_edttimelimit_title:エラー
+post_err_edttimelimit_msg:もうこのメッセージを編集することができません
+post_err_noannontopics_msg2:<legend>エラー: 特権不十分</legend>匿名利用者はトピックの作成を許可されていません。
+post_err_noannonposts_msg2:<legend>エラー: 特権不十分</legend>匿名利用者は返信を許可されていません。
+post_err_floodtrig_title:エラー: 投稿が集中しています
+post_err_floodtrig_msg:{PLURAL: tm|$1 秒}後にもう一度試してください。
+post_err_attach_size:添付ファイルが大きすぎます (許可された制限である{VAR: MAX_F_SIZE}バイトを超えています)
+post_err_attach_ext:あなたがアップロードしようと試みているファイルは許可されているファイル形式に一致しません。
+post_err_attach_filelimit:許可されたファイル数より多くのファイルをアップロードしようとしています。
+post_err_passwd:パスワードが違います。
+post_reply_update:「{VAR: frm->name}」内の「<a href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a>」に返信中
+post_topic_update:「<a href="{TEMPLATE: post_topic_update_lnk}">{VAR: frm->name}</a>」に新規トピックを作成中
+post_error_generic:エラーがありました。
+postcheck_max_images_err:メッセージあたりの画像は {GVAR: MAX_IMAGE_COUNT}個まで許可されています。画像の数を減らしてください。
+postcheck_no_links_allowed:あなたは {PLURAL: posts_before_links|$1個}を超えるメッセージを投稿するまで、リンクを使うことができません。
+postcheck_subj_needed:件名が必要です。
+postcheck_no_such_user:このフォーラムに "{FUNC: char_fix(htmlspecialchars($v))}" という名前の利用者はいません。
+postcheck_ignored:この人はあなたを無視しているので、プライベートメッセージを "{FUNC: char_fix(htmlspecialchars($v))}" に送信できませんでした。
+postcheck_no_recepient:メッセージを送信できません。受取人が見当たりません。
+postcheck_invalid_email:友達の有効なメールアドレスを入力してください。
+postcheck_email_subject:件名がないメールは送信できません。
+postcheck_email_body:メッセージ本文がないメールは送信できません。
+private_msg_notify_subj:既読通知: {VAR: m->subject}
+private_msg_notify_body:こんにちは。<br />{VAR: usr->login} さんがあなたのプライベートメッセージ「{VAR: m->subject}」を読みました。<br />これは{TEMPLATE: private_msg_notify_body_date}に生成された自動通知です。
+referals_update:推薦人をみています。
+register_err_short_login:選択したログイン名は短すぎます。ログイン名は2文字以上でなければいけません。
+register_err_login_notallowed:このログイン名は許可していません。
+register_err_loginunique:フォーラムのログイン名は一意でなければなりません。この名前を持った利用者が既にいます。
+register_err_emailexists:このメールアドレスに関連付けられたアカウントが既に存在します。パスワードを忘れた場合は、再登録の代わりにパスワード再発行オプションを使用してください。
+register_err_shortpasswd:パスワードは 6 文字以上必要です。
+register_err_passwdnomatch:パスワードが一致しません。もう一度試してください。
+register_err_invalidemail:指定したメールアドレスは有効ではないようです。
+register_err_needname:この登録を完了するには、あなたの名前を入力しなければなりません。
+register_err_enterpasswd:現在のパスワードを入力しなければ変更は完了しません。
+register_err_adminpasswd:変更を完了するには<b>管理者</b>パスワードの入力が必要です。
+register_err_notyouremail:誰か他の人がこのメールアドレスで既に登録しています。
+register_err_avatartobig:アップロードしようとしたファイルは {GVAR: CUSTOM_AVATAR_MAX_SIZE}バイト以上であり、大きすぎます。
+register_err_avatarnotallowed:アップロードしようとしているアバターは許可されません。許可されているファイル形式を確認してください。
+register_conf_subject:登録確認
+register_conf_msg:登録ありがとうございます。\nあなたのアカウントを有効化するには下記の URL にアクセスしてください。\n\n{FULL_ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\nアカウントが有効化されると、フォーラムにログインし、\nメインページに転送されます。
+register_welcome_subject:フォーラム登録確認
+register_welcome_msg:登録ありがとうございます。\n\n下記がフォーラムへのログインに関する詳細です。\n\nフォーラムの URL: {TEMPLATE: index_update_lnk}\nログイン名: {VAR: uent->login}\nパスワード: {VAR: _POST['reg_plaintext_passwd']}\n\nパスワードは大文字・小文字を区別することに注意してください!\nあなたの設定や自己紹介を変更したい場合は、次のページを使用してください:\n{FULL_ROOT}?t=register
+register_err_cantreg_title:エラー: 登録できません
+regsiter_err_cantreg_msg:利用者アカウントを作成できませんでした。<a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a> で管理者に連絡してください。
+register_profile_update:自分のプロフィールを閲覧中
+register_register_update:登録ページ
+report_err_nosuchmsg_title:エラー
+report_err_nosuchmsg_msg:存在しないメッセージです
+reset_err_invalidkey_title:エラー
+reset_err_invalidkey_msg:パスワード再設定キーが無効です。メールクライアントが既にこのページを自動的に開いてしまい再設定キーを無効にしてしまった可能性があります。この場合、新しいパスワードを書いたメールがあなたに間もなく届くはずです。そのようなメールが届かない場合は、パスワードの再設定をもう一度試してください。
+reset_err_rstconf_title:情報
+reset_err_rstconf_msg:数分で手順説明がメールで届くはずです。
+reset_newpass_title:パスワードの再設定
+reset_newpass_msg:こんにちは。\n\n申請いただいた、あなたのログイン情報は下記となります。\n\nログイン名: {VAR: ui[1]}\nパスワード: {VAR: passwd}\n\nパスワードが上記の値に再設定されたことに注意してください。\nパスワードを変更したい場合、利用者情報コントロールパネルによって行います:\n{FULL_ROOT}?t=register
+reset_login_notify:パスワードをメールでお送りしました。数分以内に届くはずです。
+search_update:メッセージ検索中
+selmsg_update:<a href="{TEMPLATE: selmsg_update_lnk}">今日の投稿</a>を閲覧中
+showposts_update:<a href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a> の投稿を表示中
+subscribed_update:自分の購読を閲覧中
+bookmarked_update:自分のブックマークリストを閲覧中
+thread_update:フォーラム「<a href="{TEMPLATE: thread_update_lnk}">{VAR: frm->name}</a>」を閲覧中
+tree_update:トピック「<a href="{TEMPLATE: tree_update_lnk}">{VAR: frm->subject}</a>」をツリー表示で閲覧中
+userinfo_update:<a href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}</a> のプロフィールを見ています
+ERR_login_msg2:<legend>エラー: ログインしていません</legend>このページにアクセスするには、このフォーラムのメンバーでなければなりません。
+ERR_disabled_ttl:無効化された機能
+ERR_disabled_msg:この機能はシステム管理者により無効化されています。
+ERR_access_ttl:エラー: 許可不十分
+ERR_access_msg:この操作を行なうために必要な許可がありません。
+ERR_registration_disabled_ttl:登録は無効です。
+ERR_registration_disabled_msg:管理者は登録を無効にしています。後で確認してください。
+ERR_emailconf_ttl:エラー: あなたのアカウントはまだ確認されていません
+ERR_emailconf_msg:メールによるアカウントの確認が完了していません。<br /><table border="0"><tr><td><ol><li>確認メールを受け取っていなければ、<a href="{TEMPLATE: ERR_emailconf_msg_lnk}">ここをクリック</a>してください。<li>{VAR: usr_d->email} があなたの正しいメールアドレスではない場合は、<a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">ここをクリック</a>してください。</ol></td></tr></table>
+ERR_user_ttl:エラー: 利用者が存在しません
+ERR_user_msg:その利用者は存在しません
+ERR_systemerr_ttl:エラー: システムエラー
+ERR_systemerr_msg:システムエラーが発生しました。<a href="mailto:{GVAR: ADMIN_EMAIL}">ウェブ管理者</a>に報告してください。
+email_title:メールフォーム
+finduser_title:利用者検索
+help_title:ヘルプ
+login_title:ログインフォーム
+poll_title:投票エディター
+register_title:登録フォーム
+reset_title:パスワード再設定
+rpasswd_title:パスワード変更フォーム
+error_title:エラーフォーム
+index_title:フォーラムへようこそ
+search_title:{VAR-HTML: srch} を検索する
+remail_emailsent:メールを送信しました
+remail_email:こんにちは。\n\n「{GVAR: FORUM_TITLE}」フォーラムに、あなたが興味を持っていただけるかもしれない「{VAR: data->subject}」についてのトピックがあります。このトピックは {FULL_ROOT}?t=rview&amp;th={VAR: data->id}&amp;rid={DEF: _uid} で表示できます。\n\nあなたの友より。\n\n{VAR: usr->alias}
+poll_add_option:追加する選択肢:
+post_opt_html_on:<b>HTML</b> は<b>有効</b>です
+post_opt_fud_on:<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>FUDコード</b>は<b>有効</b></a>です
+post_opt_images_on:<b>画像</b>は<b>有効</b>です
+post_opt_smilies_on:<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>絵文字</b>は<b>有効</b></a>です
+post_opt_html_off:<b>HTML</b> コードは<b>無効</b>です
+post_opt_fud_off:<b>FUDコード</b>は<b>無効</b>です
+post_opt_images_off:<b>画像</b>は<b>無効</b>です
+post_opt_smilies_off:<b>絵文字</b>は<b>無効</b>です
+post_opt:フォーラムオプション:
+register_change_passwd:パスワードを変更
+register_change_login:ログイン名を変更
+approved_avatar_title:カスタムアバターは承認されました。
+approved_avatar_msg:あなたのアバターは管理者に承認されました。それはあなたのすべてのメッセージにアバターとして表示されるはずです。それが見えないか、古いアバターが見えるのは、ブラウザーがページをキャッシュしているからです。ページを1・2回再読み込みしてみてください。ほとんどの場合、これでキャッシュ問題が解決するでしょう。
+unapproved_avatar_title:カスタムアバターは拒否されました。
+unapproved_avatar_msg:管理者はあなたのアバターを承認しませんでした。最もよくある理由は、あなたのアバターが大きすぎる (サイズおよび寸法) か、あるいは不適当な主題を含んでいます。なぜあなたのアバターが拒否されたかについてさらに情報が欲しい場合、管理者と連絡をとってください。
+mvthread_request_move:移動を要求
+move_request_reason:トピックを本当に移動しますか?
+mvthread_submit_req:送信要求
+thread_exchange:トピック交換
+move_request_by:トピックの移動要求を出したのは:
+move_reason:トピック移動の理由:
+thr_exch_accept:トピックを許可
+thr_exch_decline:トピックを拒否
+thr_exch_orig_forum:移動元フォーラム:
+thr_exch_dest_forum:移動先フォーラム:
+thr_exch_no_threads:承認待ちのトピックはありません。
+thr_exch_decl_reason:トピック「<b>{VAR: data->subject}</b>」のフォーラム「<b>{VAR: data->f2_name}</b>」への移動を断った理由
+thr_exch_submit:送信
+exch_decline_ttl:トピック「{VAR: data->subject}」のフォーラム「{VAR: data->f2_name}」への移動は拒否されました。
+ppost_original_msg:あなたが転送あるいは返信しようとしている元のメッセージ
+split_thread:トピックを分割
+groupmgr_no_user:「{FUNC: char_fix(htmlspecialchars($gr_member))}」というアカウントの利用者はいません
+groupmgr_already_exists:利用者「{FUNC: char_fix(htmlspecialchars($gr_member))}」は既にこのグループに居ます。
+groupmgr_yes:はい
+groupmgr_no:いいえ
+groupmgr_action:操作
+groupmgr_member:メンバー
+groupmgr_cancel:キャンセル
+groupmgr_add_member:メンバー追加
+groupmgr_update_member:メンバー更新
+groupmgr_edit:編集
+groupmgr_delete:削除
+group_mgr_anon:匿名
+group_mgr_reged:すべての登録利用者
+show_show:表示:
+group_mgr:グループ管理
+group_mgr_edit_btn:グループ編集
+group_mgr_heading:グループエディタ選択
+group_mgr_group:グループ:
+permission_denied_title:許可されていません!
+permission_denied_msg:あなたの利用者権限では、あなたが試みている行為は許可されません。
+p_READ:読む
+p_POST:投稿
+p_REPLY:返信
+p_EDIT:編集
+p_DEL:削除
+p_STICKY:常に先頭に表示するメッセージ
+p_POLL:投票作成
+p_FILE:ファイル添付
+p_VOTE:投票
+p_RATE:トピック/メンバーを評価
+p_SPLIT:トピック分割
+p_LOCK:トピックロック
+p_MOVE:トピック移動
+p_SML:絵文字使用
+p_IMG:画像タグ使用
+p_SEARCH:検索可能
+group_mgr_search:利用者検索
+group_mgr_indicator:現在編集中: <b>{VAR: grp->name}</b>
+rate_worst:最低
+rate_best:最高
+post_quote_msg:{VAR: msg->login} が {TEMPLATE: make_report_date} に書きました
+post_quote:引用:
+post_quote_selected:選択した文章を引用
+userinfo_referals:推薦された利用者:
+userinfo_referals_count:{VAR: referals} メンバー
+pm_no_space_title:空き領域がありません!
+pm_no_space_msg:プライベートメッセージ用フォルダーが <b>{GVAR: MAX_PMSG_FLDR_SIZE}バイトの保管容量限界を超えました。現在 <b>{VAR: fldr_size}バイト</b>のメッセージが入っています。<br /><br /><span class="ErrorText">空き領域を確保するために古いメッセージをいくつか削除してください。</span>
+pm_space_indct_msg:プライベートメッセージ用フォルダーは {VAR: percent_full}% 使用しています。
+th_expr_never:永久
+th_expr_one_hr:1時間
+th_expr_three_hr:3時間
+th_expr_four_hr:4時間
+th_expr_eight_hr:8時間
+th_expr_sixteen_hr:16時間
+th_expr_one_day:1日
+th_expr_two_day:2日
+th_expr_four_day:4日
+th_expr_one_week:1週間
+th_expr_two_week:2週間
+th_expr_one_month:1か月
+th_expr_two_month:2か月
+th_expr_four_month:4か月
+th_expr_one_year:1 年間
+thread_mod_delete:削除
+action_ip:IP
+action_latest_post:最後のメッセージ
+online_today_last_visit:最終訪問日時
+online_today_update:今日フォーラム上に居た人々を閲覧中
+logedin_todays_visitors:今日の訪問者
+logedin_latest_post:最終メッセージがあるフォーラム:
+register_show_avatar:アバター表示:
+register_show_avatar_desc:他の利用者のメッセージを閲覧する際に、そのアバターを非表示にできます。
+drawmsg_view_rest_post:メッセージの残りを表示する
+post_re:返:
+forumsel_goto_forum:次のフォーラムへ移動:
+minimsg_thread_view:トピック閲覧
+split_th_post_by:投稿者:
+split_th_posted_on:投稿日:
+split_th_subject:件名:
+split_th_new_thread_title:新規トピック表題:
+split_th_forum:フォーラム:
+split_th_split_sel:選択済みメッセージを分割
+split_th_split_unsel:未選択メッセージを分割
+split_th_messages:メッセージ数
+split_th_select:選択
+report_report_post:メッセージ報告
+quicklogin_login:ログイン名:
+quicklogin_password:パスワード:
+quicklogin_use_cookies:Cookie を使用しますか?
+quicklogin_login_btn:ログイン
+quick_reply:迅速返信
+quick_reply_post:迅速返信を投稿
+quick_reply_preview:迅速返信をプレビュー
+post_notification_desc:誰かがこのメッセージに返信したとき、あなたに通知します
+post_all_ext_allowed:(無制限)
+maximize_category:カテゴリを最大化
+maximize_message:メッセージを最大化
+no_view_perm:あなたはこのトピックを見るために必要な許可をもっていません。
+report_empty_report:空の報告を送ることができません。報告の理由を入力してください。
+report_already_reported_title:既に報告済み
+report_already_reported_msg:このメッセージは既に報告されており、報告は現在モデレーターのキューに入っています。
+register_err_toomanyimages:あなたは署名中に許可されている{GVAR: FORUM_IMG_CNT_SIG}個を超える画像を使用しようと試みています。
+pmsg_next_msg:次のメッセージ
+pmsg_prev_msg:前のメッセージ
+post_proc_reveal_spoiler:ネタバレを表示
+register_jabber:Jabber ハンドル:
+register_skype:Skype のハンドル:
+register_twitter:Twitter のハンドル:
+register_google:Google Chat/IM のハンドル:
+im_jabber:Jabber:
+im_google:Google Talk:
+im_skype:Skype:
+im_twitter:Twitter:
+forum_contact:連絡先
+forum_home:ホーム
+post_cur_attached:現在 {VAR: i}{PLURAL: i|個のファイル}が添付されています
+ignored_anon_post:{GVAR: ANON_NICK} を無視しました。
+ignored_user_post:<a href="{TEMPLATE: ignored_user_post_lnk}">{VAR: obj->login}</a> のメッセージを無視しました。
+smladd_close_window:ウィンドウを閉じる
+post_list_smilies:絵文字をすべて列挙する
+p_VISIBLE:可視
+reported_in_thread:所属トピック:
+help_back_to_top:トップに戻る
+help_return_to_index:ヘルプ索引に戻る
+imsg_err_message_title:無効なメッセージ
+imsg_err_message_msg:閲覧しようとしているメッセージは存在しません。
+poll_edit:編集
+register_err_not_valid_img:指定された URL は有効な画像を含んでいません。
+pmsg_recepient:受取人
+register_err_taken_alias:あなたが使おうとした別名は既にフォーラムの他のメンバーによって使われています。他のものを選んでください。
+register_alias:別名:
+register_alias_desc:あなたのログイン名以外のニックネームをフォーラムで表示したい場合は、ここにそれを入力してください。
+register_allow_pm_msg:プライベートメッセージを許可:
+register_allow_pm_msg_desc:このフォーラムで他の利用者があなたにプライベートメッセージを送信することを許可します。
+postcheck_pm_disabled:「{VAR-HTML: v}」はプライベートメッセージを受け取らないため、この人に送信できませんでした。
+polllist_vote:投票
+polllist_view_results:結果を見る
+polllist_name:投票名
+polllist_date:作成日
+polllist_owner:作成者
+polllist_votes:総投票数
+polllist_action:操作
+polllist_update:<a href="{TEMPLATE: polllist_update_lnk}">有効な投票を確認中</a>
+userinfo_polls:投票一覧:
+show_pollist:投票を表示
+search_and:論理積
+search_or:論理和
+search_desc_order:降順
+search_asc_order:昇順
+search_relevance_order:関連度順
+search_logic:検索ロジック:
+search_sorting:並び順:
+search_attach:添付:
+search_attach_all:不問
+search_attach_with:添付あり
+post_proceed:続行
+post_moderated_forum:あなたはモデレーションがあるフォーラムに投稿をしました。あなたのメッセージはフォーラムのモデレーターあるいは管理者の誰か1人によって承認されるまで、他の利用者に公開されません。
+post_moderated_forum_ttl:モデレーション済フォーラムの通知
+buddy_list_bday:{VAR: r[2]} は今日{VAR: age}歳になります
+email_warning_msg:現在のメールアドレスを変更した場合、メールで確認されるまでアカウントは未確認に設定されます。
+register_show_im:IM 状態の表示:
+register_show_im_desc:メッセージの横にその著者の IM 状態を表示するかどうか
+unread_message:未読メッセージ
+read_message:既読メッセージ
+threadt_more:&lt;もっと&gt;
+threadt_disabled_ttl:トピックのツリー表示での一覧は無効になっています。
+threadt_disabled_desc:トピック一覧のツリー表示は管理者が無効にしました。代わりにフラット表示を使用してください。
+threadt_update:フォーラム「<a href="{TEMPLATE: threadt_update_lnk}">{VAR: frm->name}</a>」をツリー表示で閲覧中
+mmod_delete_cofirm_ttl:トピックまたはメッセージの削除を確認
+spell_alts:代替なし
+insert_uploaded_image:メッセージ本文に画像を挿入
+finduser_help:検索エンジンは問い合わせに自動的に「*」を付加します。<b>検索は大文字・小文字、全角・半角を区別します</b>。<br />例: ログイン名が「a」から始まるすべての利用者を検索するなら検索ボックスに「a」を入力します。
+back_to_top:トップに戻る
+pm_err_disabled_title:プライベートメッセージが無効
+pm_err_disabled_msg:プロフィール中のオプション「プライベートメッセージを許可」を有効にするまで、プライベートメッセージは送信できません。
+err_mod_acc_ttl:未検証アカウント
+err_mod_acc_msg:管理者が、すべてのアカウントをその有効化前に手動で審査するという設定にしています。あなたのアカウントが管理者によって検証されるまで、アカウントの機能は完全には利用できません。
+accounts_pending_approval:承認保留アカウント
+saved:保存済み
+register_err_time_limit:{GVAR: REG_TIME_LIMIT}秒に1回の登録しか認められないという制限に達しました。{PLURAL: reg_limit_reached|$1秒}待ってからもう一度登録を試みてください。
+register_err_avatardimtobig:アバターの大きさ <b>({VAR: img_info[0]}x{VAR: img_info[1]})</b> は許可されている大きさである <b>({GVAR: CUSTOM_AVATAR_MAX_DIM})</b> ピクセルを越えています。
+buddy_offline:{VAR: r[2]} は現在オフラインです
+buddy_online:{VAR: r[2]} は現在オンラインです
+sml_no_smilies:絵文字は利用できません。
+login_unapproved_account_ttl:未承認アカウント
+login_unapproved_account_msg:フォーラムの管理者が、新しいアカウントはすべてその有効化前に手動で確認するという設定にしています。あなたのアカウントはまだ確認されておらず、確認が完了したメンバーが利用できるいくつかの機能が利用できません。
+remove_from_buddy_list:仲間リストから除去する
+iemail_msg_author:<b>著者:</b> {VAR: obj->alias}
+iemail_msg_subject:<b>件名:</b> {VAR: obj->subject}
+iemail_msg_date:<b>日付:</b> {TEMPLATE: dmsg_post_date}
+iemail_msg_reply:返信
+iemail_msg_quote:引用
+iemail_msg_view:トピックまたはメッセージを表示
+threadt_sticky:常に先頭に表示するトピック
+threadt_announce:告知
+reported_no_messages:報告済みメッセージはありません。
+poll_no_polls:アクセス可能な投票はありません。
+no_unread_messages:照会と一致する未読メッセージはありません。
+thread_mark_all_read:このフォーラムの未読メッセージをすべて既読とする
+thread_mark_all_read_desc:このフォーラムにあるすべての未読メッセージを既読とします。
+private_no_messages:このフォルダーにメッセージはありません。
+register_email_change_subject:メール変更の確認
+register_email_change_msg:下記の URL にアクセスして、あなたの古いメールアカウント "{VAR: old_email}" を置き換える新しいメールアカウント "{VAR: uent->email}" を確認してください。\n{FULL_ROOT}?t=emailconf&conf_key={VAR: conf_key}\n\n新しいメールアドレスを確認すれば、フォーラムのアカウントは再有効化されます。
+iemail_thread_unsub:このトピックの購読停止
+iemail_forum_unsub:このフォーラムの購読停止
+primary_group_prefix:フォーラムの第一グループ:
+group_resources:このグループは次のフォーラムの権限を制御します
+register_admin_newuser_title:新規利用者が登録しました。アカウントは確認待ちです。
+register_admin_newuser_msg:新規利用者 ({VAR: uent->login}) がただ今登録しました。アカウントの確認が有効になっているため、その利用者のアカウントはあなたか他のフォーラム管理者によって確認されるまで有効化されません。このアカウントを審査するには、{BASE}adm/admuserapr.php にアクセスしてください。\n\nこれは自動化された処理です。このメッセージに返信しないでください。\n新規利用者の登録に関するメール通知を今後受け取りたくない場合は、管理者コントロールパネルで止めることができます。「新規アカウント通知」設定で変更します。
+post_mod_msg_notify_title:フォーラム「{VAR: frm->name}」で承認待ちの新規メッセージ
+post_mod_msg_notify_msg:新規メッセージ「{VAR: msg_post->subject}」が、あなたがモデレーションを担当するフォーラムにただ今投稿されました。このメッセージを検査するには、{FULL_ROOT}?t=modque#{VAR: msg_post->id} にアクセスしてください。\n\nこれは自動化された処理です。このメッセージに返信しないでください。
+thread_printable_pdf:印刷用 PDF を生成する
+thread_syndicate:このフォーラムを配信する (XML)
+reg_conf_title:登録確認
+reg_conf_email:<b>メールアドレスの確認</b><br />特別な URL を含んだメールをあなたにお送りしました。アカウントを有効にするには、メール内の URL をクリックする必要があります。数分経ってもこのメールが届かない場合は、あなたのアカウントにログインして、指定したメールアドレスが正しいか確認してください。一度アカウントを確認すれば、確認済みの登録利用者のみが利用できるフォーラム機能を利用できます。
+reg_conf_account:<b>アカウント確認</b><br />あなたのアカウントが有効になる前に、管理者によって承認される必要があります。それが完了すれば、あなたのアカウントが承認されたということを知らせるメールが届きます。承認の完了前でもアカウントにはログインできますが、一部に利用できない機能があります。
+forum_banned_user:以前の行為によって、あなたはこのフォーラムへ永久に入室禁止になるという結果になりました。さようなら。
+mnav_description:メッセージナビゲーター
+mnav_date_limit:日付範囲:
+mnav_forum_limit:この中だけ検索:
+mnav_all_forums:全フォーラム検索
+mnav_submit:検索開始
+mnav_no_range:正しい日付の範囲を指定しなければなりません。この値は小数点を含むことができます (例: 0.12) が、0 より大きくなければなりません。
+mnav_invalid_unit:正しい時間単位を指定しなければなりません。
+mnav_invalid_date:指定された日付範囲は管理者によって許可されたものより大きくなっています。より小さな日付範囲を試してください。
+mnav_no_results:照会に一致するメッセージはありません。
+mnav_posted_by:投稿者:
+mnav_more:もっと &raquo;&raquo;
+mnav_minute:分
+mnav_hour:時間
+mnav_day:日
+mnav_week:週
+mnav_month:月
+mnav_title:メッセージナビゲーター
+mnav_update:<a href="{TEMPLATE: mnav_update_lnk}">メッセージナビゲーター</a>を使ってメッセージを閲覧中
+pm_notify_subject:[{GVAR: FORUM_TITLE}] 新規プライベートメッセージ通知
+pm_notify_body_email:フォーラム「{GVAR: FORUM_TITLE}」の「{VAR: from}」さんより「{VAR: subject}」という件名のプライベートメッセージが届いています。\nメッセージを表示するには下記をクリックしてください:\n{FULL_ROOT}?t=pmsg_view&id={VAR: pid}\n\nこれ以降の通知を停止するには、プロフィールで「プライベートメッセージ通知」を無効にしてください。
+register_pm_notification:プライベートメッセージ通知:
+register_pm_notification_desc:有効にした場合、プライベートメッセージがあなたに送られたことを常に通知します。
+findu_admin_opts_header:管理者オプション
+findu_unban:入室禁止解除
+findu_ban:入室禁止
+findu_edit:編集
+findu_delete:削除
+dmsg_reply_to:は次のメッセージへの返信です:
+dmsg_reply_num:#{VAR: obj->reply_to}
+merge_topics:トピック統合
+merge_topics_cp:トピック統合コントロール パネル
+merge_topics_tpl:統合するトピックを選択します<span class="SmallText">(複数のトピックを選択しなければなりません)</span>
+merge_merge:選択したトピックを統合
+merge_next:次のトピック一覧
+merge_prev:前のトピック一覧
+merge_another:<a href="{TEMPLATE: merge_another_lnk}">最後に統合されたトピック</a>を表示、または別のトピックを統合:
+split_cp:トピック分割コントロール パネル
+groups_perms_header:許可権限一覧 <span class="small">(マウスを上に乗せるとその許可権限の種類を参照できます)</span>
+register_err_sig_too_long:あなたの署名は許可された最大長である {GVAR: FORUM_SIG_ML}文字を超えています。
+register_sig_limit:{GVAR: FORUM_SIG_ML} 文字<a href="javascript: alert('あなたの署名の長さは '+document.forms['fud_register'].reg_sig.value.length+'文字です。許可された最大長は {GVAR: FORUM_SIG_ML}文字です。');" class="SmallText">署名の長さを検査</a>
+adm_account_accepted:あなたのアカウント「{VAR: login}」は管理者により承認され、現在有効になりました。「{GVAR: FORUM_TITLE}」フォーラムに承認された登録利用者として入室できるようになりました。
+adm_account_accepted_s:「{GVAR: FORUM_TITLE}」におけるあなたのアカウントの申請は受理されました。
+adm_account_rejected:あなたのアカウント「{VAR: login}」は管理者により却下されました。この決定の理由を知りたければ、自由に "{GVAR: ADMIN_EMAIL}" で管理者に連絡してください。
+adm_account_rejected_s:「{GVAR: FORUM_TITLE}」におけるあなたのアカウントの申請は却下されました。
+thread_on:日付
+userinfo_buddy:仲間:
+register_email_addr:メールアドレス:
+reset_suffix:このメッセージを間違って受信した場合は無視してください。要求していないのにこのメールを複数回受け取った場合、フォーラム管理者に {GVAR: ADMIN_EMAIL} で連絡をとってください。\n\nこの申請は {VAR: _SERVER['REMOTE_ADDR']} から起動されました。
+usrinfo_last_visit:最終訪問日時:
+mnav_newer:より新しい
+mnav_older:より古い
+ip_search_by_ip:IP アドレスで利用者を検索
+ip_search_syntax:対応する構文: 1.2.3.4, 1.2.3, 1.2, 1
+ip_search:検索
+ip_analyze_usage:IP 使用解析
+ip_analyze_usage_descr:利用者の正確なログイン名を指定してください。
+ip_users_using:IP アドレス「{VAR: ip}」を使用する利用者
+ip_all_ips:「{VAR: user}」が使用したすべての IP アドレス
+ip_title:IP ブラウザー
+userinfo_real_name:本名:
+register_err_alias_notallowed:この別名は許可されません。
+post_err_mod_forum_edit_ttl:エラー
+post_err_mod_forum_edit_msg:あなたはモデレーションのあるフォーラムのメッセージは編集できません。
+dmsg_num:メッセージ #{VAR: obj->id}
+postcheck_session_invalid:セッションが失効しました。大変不便をおかけ致しますが、フォームを再送信してください。
+delete_message_extra_desc:<b>任意</b><br />メッセージの削除の理由を指定してください。これはプライベートメッセージによって著者の元へ送信されます。
+delete_message_extra_body:著者のもとへ送られる、削除したメッセージの本文を含んでいます。
+delete_msg_removed_ttl:あなたのメッセージを管理者スタッフが削除しました。
+delete_msg_pm_body:元メッセージ
+delete_msg_pm_subject:件名: {VAR: data[15]}
+ip_no_whois:<b>{VAR: ip}</b> の WHOIS 情報は利用できません。
+ip_whois_title:ISP 情報
+register_theme:テーマ:
+pmsg_trash:ごみ箱を空に
+uc_new_pm:新着プライベート メッセージ
+uc_new_topic:新規トピック
+uc_new_cat_forum:新着メッセージがある購読中フォーラム
+uc_cat_forum:カテゴリ &raquo; フォーラム
+uc_sub_topics:新着メッセージがある購読中トピック
+uc_page_title:個人コントロール パネルを表示中。
+search_options:検索オプション
+search_user_filter:利用者で絞り込み:
+register_none:通知しない
+findu_no_conf:未確認利用者
+register_max_sig_len:最大長:
+register_turing:下記に表示されているコードを入力してください:
+register_err_turing:確認コードが正しくありません。もう一度トライしてください。
+modque_cat:カテゴリ
+modque_forum:フォーラム
+idx_compact_forum_row:利用可能なフォーラム:
+mmd_del_title:トピックを削除
+mmd_mov_title:トピックを移動
+mmd_move_threads_to:対象フォーラム:
+mmd_abort_move:キャンセル
+mmd_move:トピックを移動
+pmsg_pdf_btn:PDF アーカイブを作成
+search_results_hdr:{VAR: total} 個の検索結果が見つかりました。
+thread_del_all:選択したものを削除
+thread_mov_all:選択したものを移動
+thread_merge_all:選択したものを統合
+thread_loc_all:選択したものをロックまたはロック解除
+dmsg_ip:IP:
+err_blockedaccnt_title:エラー: あなたのアカウントは排除されています。
+err_blockedaccnt_msg:あなたのアカウントは、インストールされた利用者フィルターの 1つにより、フォーラムへのアクセスを遮断されました。
+merge_th_page_list:トピックページ選択
+most_users_online:オンラインの利用者が最も多かったのは、<b>{DATE: st_obj->most_online_time %a, %d %B %Y %H:%M}</b>の<b>{VAR: st_obj->most_online}</b>人のときです
+sub_unsub_all_forums:すべてのフォーラムの購読を停止
+sub_unsub_all_topics:すべてのトピックの購読を停止
+unbookmark_all_topics:すべてのブックマークを削除
+tabs_own_posts:自分の投稿を表示
+sml_emoticon:顔文字
+sml_code:コード
+mnav_sub_only:購読しているフォーラムのみで検索する
+register_topics_per_page:ページあたりのトピック数:
+login_min_time:このフォーラムでは{VAR: MIN_TIME_BETWEEN_LOGIN}秒に1回ほどログイン要求を許可しています。再びログイン要求を行うまで{FUNC: ($usr_d->last_login + $MIN_TIME_BETWEEN_LOGIN - __request_timestamp__)}秒待ってください。
+post_not_logged_in:あなたは現在ログインしていません。そのため、メッセージは匿名として投稿されます。
+post_common_bold:太字
+post_common_italics:斜体
+post_common_underline:下線
+post_common_align_left:左寄せ
+post_common_align_center:中央揃え
+post_common_align_right:右寄せ
+post_common_link:リンクを挿入
+post_common_link_popup:リンクの場所:
+post_common_email:メールアドレスを挿入
+post_common_email_popup:メールアドレス:
+post_common_image:画像を挿入
+post_common_image_popup:画像URL:
+post_common_nlist:番号付き箇条書きを追加
+post_common_blist:番号なし箇条書きを追加
+post_common_quote:引用を追加
+post_common_code:コードを追加
+rating_delete:削除
+post_always_on_top:このトピックが常にトピック一覧の先頭にくるようにする
+topic_rating:{PLURAL: frm->n_rating|$1票}中{VAR: frm->rating}票
+topic_list_rating:{PLURAL: r[21]|$1票}中{VAR: r[17]}票
+tabs_notifications:通知
+finduser_flag:国旗
+post_descr:トピック説明:
+pmsg_on:投稿日:
+pmsg_download_dump:メッセージ・ダンプのダウンロード
+move_messages:メッセージを移動
+move_msg_btn:選択したメッセージを移動
+move_msg_th_expl:移動先トピックのIDを指定してください (他のフォーラムのものも可です)
+captcha_img_alt:CAPTCHA検証: この画像中の文字列を認識する必要があります。
+captcha_img_help:画像内には 0 も 1 もありません。
+powered-by:提供: FUDforum {GVAR: FORUM_VERSION}
+copyright:Copyright &copy;2001-2018 <a href="http://fudforum.org/">FUDforum Bulletin Board Software</a>
+code_title:コード:
+code_select_all:すべて選択
+code_show_hide:表示/非表示
+social_sites:ソーシャルネットワークのサイト:
+postcheck_min_len_err:メッセージが短すぎます。最低の長さは {PLURAL: post_min_len|$1文字}です。
+postcheck_dup_err:重複したトピックは作らないでください。
+btn_new_topic:新規トピック
+btn_new_pm:新規プライベートメッセージ
+btn_post_reply:返信投稿
+btn_tree_view:ツリー表示
+btn_flat_view:フラット表示
+btn_about:プロフィール
+btn_small_pm:プライベートメッセージ
+btn_delete:削除
+btn_edit:編集
+btn_reply:返信
+btn_forward:転送
+btn_quote:引用
+btn_email:メール
+btn_show_posts:投稿表示
+btn_homepage:ウェブ
+feed_no_data:一致するデータは見つかりません。
+feed_rdf:RDF フィード
+feed_rss:RSS2 フィード
+feed_atom:ATOM フィード
+ip_whois_connect_err:WHOIS サーバーに接続できません ({VAR: whois_server}): {VAR: errstr}
+custom_filed_required:この欄は必須です。
+pages:ページ
+page_list_heading:利用できるページ
+page_list_total:一覧には {PLURAL: i|$1 ページ}あります。
+page_update:ページを参照
+pm_export_header:{VAR: usr->alias} の非公開メッセージ
+pm_export_footer:エクスポート:
+karma:カルマ
+karma_track:このユーザの評判を管理:
+karma_delete:削除
+rate_author:著者を評価:
+blog_update:フォーラムのブログ閲覧
+blog:ブログ
+blog_new_members:新規参加者
+blog_new_posts:最近の投稿
+blog_rated_posts:最高評価
+blog_viewed_posts:最多閲覧
+blog_comments:{PLURAL: topic->replies|$1 comment|コメント$1件}

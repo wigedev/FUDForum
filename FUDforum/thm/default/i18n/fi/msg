@@ -1,0 +1,1178 @@
+# Messages for Finnish (suomi)
+# Exported from translatewiki.net
+# Author: Crt
+# Author: Cxz
+# Author: ElmA
+# Author: Lliehu
+# Author: Macofe
+# Author: Mikahama
+# Author: Naudefj
+# Author: Nedergard
+# Author: Nike
+# Author: Olli
+# Author: Pyscowicz
+# Author: SMAUG
+# Author: Samoasambia
+# Author: Silvonen
+
+action:Toiminto
+add_to_buddy_list:lisää kaverilistaan
+admin:Ylläpito
+admin_control_panel:Ylläpito
+administrator:Ylläpitäjä
+attachment:Liitetiedosto:
+avatar:Avatar:
+average_post_count:{PLURAL: u->posted_msg_count|$1 viesti|$1 viestiä} (keskimäärin {PLURAL: avg|$1 viesti|$1 viestiä} päivässä)
+biography:Biografia:
+birth_date:Syntymäaika:
+by:Lähettäjä:
+by_mod:Moderaattori
+current_time:Paikallinen aika
+custom_avatar_queue:Hyväksymättömät avatarit
+date_posted:Lähetetty
+date_registered:Rekisteröitynyt:
+download_counter:Ladattu {PLURAL: v[3]|$1 kerta|$1 kertaa}
+pmsg_download_counter:Ladattu {PLURAL: r->dlcount|$1 kerta|$1 kertaa}
+email:Sähköposti:
+email_to_friend:Kerro kaverille
+email_to_friend_desc:Lähetä kaverille linkki tälle sivulle sähköpostilla
+email_user:Lähetä käyttäjälle sähköpostiviesti
+faq:Ohje
+first_unread_msg:Siirry lukemattomiin viesteihin
+first_unread_msg_desc:Siirry tämän aiheen ensimmäiseen lukemattomaan viestiin
+flat_view:Palaa oletustasonäkymään
+forum:Foorumi:
+forum_icon:Foorumin kuvake
+forum_new_messages:Uudet viestit
+forum_none_messages:Vain rekisteröityneet käyttäjät näkevät onko luettuja ja lukemattomia viestejä
+forum_old_messages:Ei uusia viestejä
+from:Lähettäjä:
+gender:Sukupuoli:
+go:Siirry
+goto_next_msg:Siirry seuraavaan viestiin
+goto_prev_msg:Siirry edelliseen viestiin
+home:Etusivu
+homepage:Kotisivu:
+icq_control_panel:ICQ Online -viestipaneeli
+icq_message_form:ICQ-viestilomake:
+ignore_user:torju kaikki tämän käyttäjän viestit
+im_aim:AIM-tunnus:
+im_msnm:MSN Messenger:
+im_yahoo:Yahoo Messenger:
+image:Kuva:
+index_forum:Foorumi
+index_new_posts:Uudet viestit edellisen käynnin jälkeen
+index_no_new_posts:Ei uusia viestejä edellisen käynnin jälkeen
+index_url_redirection:Ohjaus
+interests:Harrastukset:
+last_post:Viimeisin viesti
+last_thread_msg:Siirry tämän aiheen viimeiseen viestiin
+legend:Selite
+location:Sijainti:
+lock_thread:Lukitse aihe
+locked:Lukittu
+locked_with_new_posts:Lukittu (sisältää lukemattomia viestejä)
+logged_in_list:Kirjautuneet käyttäjät
+login:Kirjaudu sisään
+login_header:Käyttäjätunnus:
+logout:Kirjaudu ulos
+mark_all_read:Merkitse kaikki viestit luetuiksi
+mark_all_read_desc:Kaikki lukemattomat viestisi merkitään luetuiksi
+members:Käyttäjät
+calendar:Kalenteri
+cal_goto_date:Loikkaa:
+cal_day_heading:Tapahtumat tänään
+cal_no_events:Ei tapahtumia päivälle.
+cal_update:Selataan keskustelualueen kalenteria
+cal_birthday:Syntymäpäivä: {VAR: user}
+cal_birthdays:{PLURAL: birthdays|$1 syntymäpäivä|$1 syntymäpäivää}
+cal_birthday_age:({PLURAL: age|$1 vuotta|$1 vuotta}).
+message:Viesti
+message_counter:Yhteensä <b>{PLURAL: post_count|$1 viesti|$1 viestiä}</b> <b>{PLURAL: thread_count|$1 aiheesta|$1 aiheesta}</b>.
+message_index:Viestiluettelo
+message_index_desc:Näytä viestiluettelo
+minimize_category:Pienennä luokka
+minimize_message:Pienennä viesti
+moderation_queue:Moderointijono
+moderator:Moderaattori
+moderator_of:Moderaattori:
+moderator_options:Moderaattorin valinnat
+moderators:{PLURAL: modcount|Moderaattori|Moderaattorit}
+more_unread_messages:näytä lisää lukemattomia viestejä
+more_unread_messages_desc:Näytä lisää lukemattomia viestejä ja merkitse parhaillaan näkyvät viestit luetuiksi
+move_thread:Siirrä
+moved:Siirretty toiseen foorumiin
+moved_thread_message:Tämä aihe on siirretty toiseen foorumiin
+na:ei saatavilla
+new_posts:Uusia viestejä
+new_private_messages:Sinulla on <span class="GenTextRed">({VAR: c})</span> {PLURAL: c|lukematon yksityisviesti|lukematonta yksityisviestiä}
+new_thread:Luo uusi aihe
+newest_user:Viimeisin rekisteröitynyt käyttäjä on
+next_page:Seuraava sivu
+next_thread:Seuraava aihe:
+no_messages:Tässä foorumissa ei ole viestejä.<br />Ole ensimmäinen, joka lähettää viestin tähän foorumiin.
+no_msg_body:Ei viestin tekstiä
+no_new_posts:Ei uusia viestejä
+no_posts:Ei viestejä
+no_subscribed_forums:Ei tilattuja foorumeita
+no_subscribed_threads:Ei tilattuja aiheita
+no_bookmarked_threads:Ei kirjanmerkittyjä aiheita
+no_unread_locked:Tämä aihe on lukittu
+no_unread_msg:Tämä aihe ei sisällä lukemattomia viestejä
+no_unread_msg_unreg:Luetut ja lukemattomat viestit näytetään vain rekisteröityneille käyttäjille
+num_pages:Sivut ({VAR: ttl_pg}):
+num_votes:{VAR: obj->total_votes} {PLURAL: obj->total_votes|ääni|ääntä}
+occupation:Ammatti:
+off:ei
+on:kyllä
+page_timings:Sivun luominen kesti {PLURAL: page_gen_time|$1 sekuntia}.
+pm:Yksityisviestit
+poll:Gallup:
+post_count:Viestejä yhteensä {VAR: u_pcount}
+post_count_l:Lähetetyt viestit:
+posts:Viestejä
+posts_c:Lähetetyt:
+prev_thread:Edellinen aihe:
+usrinfo_private_message:Yksityisviesti:
+profile:Hallintapaneeli
+profile_desc:Siirry käyttäjän hallintapaneeliin
+rate_thread:Arvostele aihe
+rating:Arviot
+rating_track:Hallinnoi aiheen <b>{VAR: thr->subject}</b> arvioita:
+refresh_list:Päivitä lista
+register:Rekisteröidy
+registered:Rekisteröitynyt:
+registered_on:Rekisteröitynyt {TEMPLATE: registered_on_date}
+replies:Vastauksia
+report_to_mod:Ilmoita viestistä moderaattoreille
+reported_messages:Ilmoitetut viestit
+reveal_all_posts:näytä kaikki käyttäjän {VAR: user_login} viestit
+reveal_post:näytä viesti
+search:Haku
+sel_todays_posts:Päivän viestit
+sel_todays_posts_desc:Valitse Päivän viestit -suodatin (näyttää vain tänään lähetetyt viestit)
+sel_unanswered_posts:Vastaamattomat viestit
+sel_unanswered_posts_desc:Valitse Vastaamattomat viestit -suodatin (näyttää vain viestit, joihin ei ole vastattu)
+sel_unread_messages:Lukemattomat viestit
+sel_unread_messages_desc:Valitse Lukemattomat viestit -suodatin (näyttää vain viestit joita et ole lukenut)
+send:Lähetä
+send_pm_desc:Lähetä yksityisviesti tälle käyttäjälle
+sender_email:Lähettäjän sähköpostiosoite:
+sender_name:Lähettäjän nimi:
+show_posts_by:Näytä käyttäjän {VAR: u_alias} viestit
+size:Koko:
+status:Tila:
+status_line:Tällä hetkellä paikalla <b>{PLURAL: st_obj->online_users_reg|$1 jäsen|$1 jäsentä}</b>, <b>{PLURAL: st_obj->online_users_hidden|$1 näkymätön jäsen|$1 näkymätöntä jäsentä}</b> ja <b>{PLURAL: st_obj->online_users_anon|$1 vieras|$1 vierasta}</b>.
+sticky:kiinnitetty:
+stop_ignoring:huomioi jälleen tämän käyttäjän viestit
+sub_to_thread:Tilaa aihe
+sub_to_thread_desc:Vastaanota ilmoitukset tämän aiheen uusista viesteistä
+bookmark_thread:Kirjanmerkitty aihe
+bookmark_thread_desc:Lisää tämä aihe kirjanmerkkilistaasi
+subject:Otsikko
+subscribe:Tilaa
+subscribe_desc:Vastaanota ilmoitukset tämän foorumin uusista viesteistä
+subscribed_forums:Tilatut foorumit
+subscribed_forums_desc:Valitse Tilatut foorumit -suodatin (näyttää viestit vain tilaamistasi foorumeista)
+subscribed_threads:Tilatut aiheet
+subscribed_threads_desc:Valitse Tilatut aiheet -suodatin (näyttää viestit vain tilaamistasi aiheista)
+bookmarked_threads:Kirjanmerkityt aiheet
+switch_to_thread_view:Vaihda puunäkymään
+thread:Aihe:
+thread_announcement:Tiedote:
+thread_first_unread_msg:Siirry tämän aiheen ensimmäiseen lukemattomaan viestiin
+thread_thread:Aihe
+threads:Aiheita
+time:Aika
+todays_posts:Päivän viestit
+todays_posts_desc:Näytä kaikki tänään lähetetyt viestit
+un_ignore_user:poista tämän käyttäjän torjunta
+unanswered_posts:Vastaamattomat viestit
+unanswered_posts_desc:Näytä kaikki viestit, joihin ei ole vastattu
+unlock_thread:Vapauta aihe
+unread_msg:Tämä aihe sisältää viestejä, joita et ole vielä lukenut
+unread_msg_locked:Lukittu aihe, joka sisältää lukemattomia viestejä
+unread_posts:Lukemattomat viestit
+unread_posts_desc:Näytä kaikki lukemattomat viestit
+unsub_from_thread:Peruuta aiheen tilaus
+unsub_from_thread_desc:Lopettaa ilmoitusten vastaanoton tämän aiheen uusista viesteistä
+unbookmark_thread:Poista kirjanmerkeistä
+unbookmark_thread_desc:Poista tämä aihe kirjanmerkeistäsi
+unsubscribe:Peruuta tilaus
+unsubscribe_desc:Lopettaa ilmoitusten vastaanoton tämän foorumin uusista viesteistä
+updated_on:Päivitetty:
+user:Käyttäjä
+user_counter:Yhteensä <b>{VAR: st_obj->user_count}</b> {PLURAL: st_obj->user_count|rekisteröitynyt käyttäjä|rekisteröitynyttä käyttäjää}.
+user_info:Käyttäjätiedot
+user_info_l:Käyttäjätiedot – {VAR: u->alias}
+user_offline:{VAR: obj->login} ei ole kirjautuneena
+user_online:{VAR: obj->login} on kirjautuneena
+usrinfo_last_post:Viimeisin viesti:
+view_results:Näytä tulokset
+views:Luettu
+vote:{PLURAL: frm->n_rating|$1 ääni|$1 ääntä}
+vote_button:Äänestä
+vote_for_thread:Arvioi
+was_moved_msg:Moderaattori on siirtänyt aiheen <a href="{TEMPLATE: was_moved_msg_lnk}">{VAR: r[2]}</a> foorumiin <a href="{TEMPLATE: was_moved_msg_lnk2}">{VAR: r[12]}</a>
+welcome_message:Tervetuloa <b>{VAR: usr->alias}</b>. Kävit viimeksi {TEMPLATE: welcome_message_date}
+what_ppl_doing:Käyttäjän toiminta
+reported_del_report:Poista ilmoitus
+reported_reason:Syy:
+reported_on:Ilmoitettu:
+reported_reported_by:Ilmoittaja:
+reported_reported_msg:Ilmoitetut viestit
+modque_pending_approval:Hyväksymättömät viestit
+modque_approve:Hyväksy
+modque_delete:Poista
+modque_deleteall:Poista kaikki käyttäjältä
+modque_no_message:Ei hyväksymättömiä viestejä
+pmsg_new_messages:Lukematon yksityisviesti
+pmsg_old_messages:Luettu yksityisviesti
+deny_recipt:ei kuittausta
+deny_recipt_desc:Ei lähetetä vahvistusta viestin lukemisesta
+restore_to:Palauta kansioon:
+move_to:Siirrä kansioon:
+list_referes_referrals:Suosittelut
+list_referes_members:Suositellut käyttäjät
+list_referes_member:Käyttäjä
+referals_none:Ei suositeltuja käyttäjiä.
+referals_refered_by:Käyttäjän <b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b> suosittelemat foorumin käyttäjät
+referals_post_count:Viestejä yhteensä
+referals_registered_on:Rekisteröitynyt
+referals_action:Toiminto
+pmsg_all:kaikki
+pmsg_none:ei yhtään
+folder:Kansio:
+pmsg_replied:vastattu
+pmsg_forwarded:välitetty
+pmsg_subject:Otsikko
+pmsg_author:Lähettäjä
+pmsg_time:Aika
+# Fuzzy
+pmsg_selected:Valittu
+pmsg_delete:Poista
+cur_ppage_pm:Yksityisviestit
+writing_pm:Yksityisviestin kirjoitus
+browsing_folder:Selataan kansiota <b>{VAR: folders[$folder_id]}</b>
+inbox:Saapuneet
+draft:Luonnokset
+sent:Lähetetyt
+trash:Roskakori
+msg_author:Lähettäjä
+avatar_sel_form:Avatarin valinta
+no_avatars:Avatareja ei ole saatavilla
+month_1:Tammikuu
+month_2:Helmikuu
+month_3:Maaliskuu
+month_4:Huhtikuu
+month_5:Toukokuu
+month_6:Kesäkuu
+month_7:Heinäkuu
+month_8:Elokuu
+month_9:Syyskuu
+month_10:Lokakuu
+month_11:Marraskuu
+month_12:Joulukuu
+sunday:Sunnuntai
+sunday_short:Su
+monday:Maanantai
+monday_short:Ma
+tuesday:Tiistai
+tuesday_short:Ti
+wednesday:Keskiviikko
+wednesday_short:Ke
+thursday:Torstai
+thursday_short:To
+friday:Perjantai
+friday_short:Pe
+saturday:Lauantai
+saturday_short:La
+male:Mies
+female:Nainen
+unspecified:Määrittelemätön
+register_tree_view:Puunäkymä viesti- ja aihelistalle
+register_msg_tree_view:Tasonäkymä aihelistalle ja puunäkymä viestilistalle
+register_tree_msg_view:Puunäkymä aihelistalle ja tasonäkymä viestilistalle
+register_flat_view:Tasonäkymä viesti- ja aihelistalle
+use_forum_default:Käytä oletusarvoa
+finduser_user_info:Profiili
+finduser_by_login:Hae käyttäjätunnuksella:
+finduser_submit:Hae käyttäjä
+finduser_no_such_user:Käyttäjää ei löytynyt
+finduser_user:Käyttäjä
+finduser_postcount:Viestejä yhteensä
+finduser_joindate:Rekisteröitynyt
+finduser_action:Toiminto
+yes:Kyllä
+no:Ei
+register_email:Sähköposti
+edit_time_limit:<b>Muokkausaikaraja</b>: {GVAR: EDIT_TIME_LIMIT} minuuttia
+no_edit_time_limit:<b>Muokkausaikaraja</b>: Ei rajoitettu
+pmuserloc_login:Käyttäjätunnus:
+pmuserloc_submit:Hae
+pmuserloc_user:Käyttäjä
+pmuserloc_no_result:Käyttäjiä ei löytynyt
+register_builtin:Sisäänrakennettu
+register_specify_url:Määritä URL
+register_uploaded:Lähetä avatar
+register_login:Käyttäjätunnus:
+register_login_desc:Nimi, jolla haluat kirjautua sisään ja olla tunnettu tällä sivustolla.
+register_login_available:Saatavilla
+register_login_taken:Jo otettu
+register_password:Salasana:
+register_password_desc:Tilisi salasana. Salasana sisältää isoja ja pieniä kirjaimia, ja sen on oltava vähintään 6 merkkiä pitkä.
+register_conf_pass:Vahvista salasana:
+register_conf_pass_desc:Syötä salasana uudelleen.
+register_email_desc:Sähöpostiosoitteesi. Voit piilottaa sen Asetukset-osiossa.
+register_name:Nimi:
+register_name_desc:Oikea nimesi.
+register_your_pass:Salasanasi:
+register_update:Päivitä
+register_avatar_type:Avatar-tyyppi:
+register_del_avatar:Poista avatar
+register_avatar:Avatar:
+register_sel_avatar:Valitse avatar
+register_custom_avatar_rules:Oma avatar näytetään vasta kun ylläpitäjä on hyväksynyt sen.<br /><span class="SmallText">Kuva saa olla enintään <b>{GVAR: CUSTOM_AVATAR_MAX_DIM} kuvapistettä</b>. Sallitut tiedostomuodot ovat <b>jpg</b>, <b>gif</b> ja <b>png</b>.</span>
+register_custom_avatar_url:Oman avatarin URL:
+register_preview:Esikatselu
+register_custom_avatar_upload:Oma avatar-tiedosto
+register_register:Rekisteröidy
+register_required:Pakolliset tiedot
+register_required_desc:Kaikki kentät ovat pakollisia.
+register_optional:Vapaaehtoiset tiedot
+register_optional_desc:Huom! Harkitse tarkoin mitä tietoja annat, sillä kaikki tässä osiossa annetut tiedot ovat muiden foorumin käyttäjien nähtävissä.
+register_location:Sijainti:
+register_occupation:Ammatti:
+register_interests:Harrastukset:
+register_image:Kuva:
+register_icq:ICQ:
+register_aim:AIM-tunnus:
+register_yahoo:Yahoo Messenger:
+register_msnm:MSN Messenger:
+register_homepage:Kotisivu:
+register_bday:Syntymäaika:
+register_bday_desc:Jos asetat syntymäaikasi, muut foorumin käyttäjät näkevät sen profiilissasi.
+register_day:päivä
+register_month:kuukausi
+register_year:vuosi
+register_gender:Sukupuoli:
+register_bio:Biografia:
+register_bio_desc:Muutama yksityiskohta itsestäsi, kuten harrastukset, työ, jne...
+register_prefs:Asetukset
+register_sig:Allekirjoitus:
+register_sig_desc:Valinnainen allekirjoitus, jonka voit liittää viesteihisi.
+register_reset:Tyhjennä
+register_def_thread_view:Aiheiden oletusnäkymä:
+register_msg_per_page:Viestejä sivulla:
+register_show_sig:Näytä allekirjoitukset:
+register_show_sig_desc:Määrittää näytetäänkö muiden foorumin käyttäjien allekirjoitukset.
+register_use_sig_default:Käytä allekirjoitusta oletuksena:
+register_use_sig_default_desc:Määrittää liitetäänkö allekirjoituksesi automaattisesti jokaiseen lähettämääsi viestiin.
+register_timezone:Aikavyöhyke:
+register_ignore_admin:Torju ylläpidolliset viestit:
+register_invisible_mode:Näkymätöntila:
+register_invisible_mode_desc:Määrittää näytetäänkö muille, kun olet kirjautuneena.
+register_show_email:Näytä sähköpostiosoite:
+register_show_email_desc:Määrittää näytetäänkö sähköpostiosoitteesi julkisesti.
+register_notification:Ilmoitukset uusista viesteistä oletuksena:
+register_notification_desc:Jos ilmoitukset uusista viesteistä vastaanotetaan oletuksena, voit silti estää ne lähettäessäsi uutta viestiä.
+register_notify_method:Valitse ilmoitusten välitystapa:
+register_notify_method_desc:Aseta haluamasi ilmoitusmenetelmä tai poista käytöstä ilmoitukset (esimerkiksi lomalle lähtiessä).
+register_allow_email_msg:Sähköpostin vastaanotto muilta käyttäjiltä:
+register_allow_email_msg_desc:Salli muiden käyttäjien lähettää sinulle sähköpostia tämän foorumin kautta.
+buddy_status:Tila
+my_buddies:Kaverit
+add_buddy:Lisää kaveri
+add:Lisää
+buddy_search:Anna käyttäjätunnus, jonka haluat lisätä.
+# Fuzzy
+member_search:Tai käytä <a href="javascript://" onclick="javascript: window_open('{FULL_ROOT}{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1', 'user_list', 400,250);">Hae käyttäjä</a> -toimintoa löytääksesi henkilön.
+buddy_remove:poista
+post_normal:Normaali
+post_sticky:Kiinnitetty
+post_annoncement:Tiedote
+post_size:Koko
+post_color:Väri
+post_font:Kirjasin
+create_thread:Luo aihe
+submit_reply:Lähetä vastaus
+edit_message:Tallenna muutokset
+apply_spell_changes:Tallenna oikeinkirjoituksen muutokset
+post_preview:Viestin esikatselu
+post_logedin_user:Sisäänkirjautunut käyttäjä:
+post_logout:kirjaudu ulos
+post_passwd:Viestin salasana:
+post_poll:Gallup:
+post_create_poll:Luo gallup
+post_poll_delete:Poista
+post_poll_edit:Muokkaa
+post_mod_opt:Moderaattorin valinnat:
+post_thread_type:Aiheen tyyppi:
+post_thread_expiry:Aihe vanhenee:
+post_locked:Aihe lukittu
+post_icons:Viestin kuvake:
+post_no_icon:Ei kuvaketta
+post_smiley:Pikahymiöt:
+post_format_tools:Tekstin muotoilut:
+post_upload_file:Lisää tiedosto
+post_file_del:Poista
+post_file_name:Nimi
+post_file_size:Tiedoston koko
+file_attachments:Tiedostoliitteet:
+allowed_files:Sallitut tiedostopäätteet:
+max_file_size:Suurin sallittu tiedostokoko:
+max_files_per_msg:Tiedostoja enintään per viesti:
+post_notification:Ilmoitus vastauksista
+include_sig:Liitä allekirjoitus
+include_sig_desc:Liitä profiilini allekirjoitus viestiin.
+disable_smilies:Poista hymiöt käytöstä tässä viestissä
+spell_check_msg:Tarkista oikeinkirjoitus
+post_form:Viestin kirjoitus
+post_forum:Foorumi:
+post_title:Otsikko:
+post_body:Teksti:
+post_options:Valinnat:
+post_preview_btn:Viestin esikatselu
+post_cancel_btn:Peruuta
+ignore_users:Torjutut käyttäjät
+add_ignore:Lisää torjuttu
+forum_terms:Foorumin ehdot
+forum_rules:<p>Rekisteröityminen on ilmaista. Edellytämme, että hyväksyt alla mainitut ehdot ja säännöt. Jos hyväksyt nämä ehdot – napsauta <b>Hyväksyn</b>-nappia sivun alareunassa.</p><p>Vaikka tämän sivuston ylläpito ja moderaattorit pyrkivät poistamaan arveluttavan sisällön niin nopeasti kuin mahdollista, on kuitenkin mahdotonta tarkistaa jokaista viestiä. Kaikki viestit ilmaisevat kirjoittajiensa mielipiteitä, joten ylläpito, moderaattorit tai foorumin kehittäjät eivät ole vastuussa näistä kirjoituksista.</p><p>Napsauttamalla Hyväksyn-nappia – suostut olemaan esittämättä mitään loukkaavaa, vihamielistä, epämoraalista tai muutakaan materiaalia, joka voisi loukata voimassa olevia lakeja.</p><p>Tämän foorumin omistajat ovat oikeutettuja poistamaan, muokkaamaan, siirtämään tai sulkemaan minkä tahansa aiheen milloin tahansa.</p>
+forum_rules_13:<p>Kaikkien alle 13-vuotiaiden täytyy hankkia lupa vanhemmaltaan tai huoltajaltaan voidakseen liittyä foorumien käyttäjäksi. Toivotamme tervetulleiksi alle 13-vuotiaat jäsenet, mutta vaadimme, että vanhempi tai huoltaja faksaa tai postittaa allekirjoitetun suostumuslomakkeen ennen käyttöoikeuden myöntämistä.</p><p>Paina <b>Hyväksyn</b>-nappia, jos haluat aloittaa rekisteröitymisprosessin ennen kuin olemme vastaanottaneet suostumuslomakkeen. Paina <b>En hyväksy</b>, jos haluat peruuttaa rekisteröitymisen ja palata etusivulle.</p><p>Suostumuslomakkeen voi ladata rekisteröitymisen jälkeen. Lisätietoja rekisteröitymisprosessista saat lähettämällä ylläpidolle sähköpostia: <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>.</p>
+coppa_conf:COPPA-varmistus
+coppa_before:Ennen {TEMPLATE: coppa_date}
+coppa_after:Jälkeen {TEMPLATE: coppa_date}
+coppa_link:Napsauta linkkiä, joka vastaa syntymäaikaasi
+coppa:<p>Vanhempasi tai huoltajasi täytyy postittaa tai faksata allekirjoitettu suostumuslomake tämän foorumin ylläpitäjälle ennen kuin alle 13-vuotias käyttäjä voi jatkaa rekisteröitymistä.</p><p>Lisätietoja: <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a></p>
+prereg_info:Foorumin käyttöehdot
+prereg_agree:Hyväksyn
+prereg_disagree:En hyväksy
+prereg_update:Lukee keskustelualueen sääntöjä
+coppa_fax_instructions:Ohjeet vanhemmille tai huoltajille
+coppa_fax_instructions2:Tulostakaa tämä sivu, allekirjoittakaa se ja lähettäkää kirjeenä tai faksatkaa takaisin meille.
+coppa_fax_reg_form:Rekisteröityminen
+coppa_fax_sign:Allekirjoittakaa alla oleva lomake ja lähettäkää se meille
+coppa_fax_conf:Olen tarkistanut tiedot, jotka lapseni on antanut ja olen lukenut tämän sivuston tietosuojaperiaatteista. Ymmärrän, että käyttäjätiedot voi muuttaa salasanaa käyttämällä. Ymmärrän, että voin vaatia että tämä käyttäjätunnus poistetaan kokonaan.
+coppa_fax_permission:Allekirjoitus tähän, jos annatte suostumuksenne
+coppa_fax_no_permission:Allekirjoitus tähän, jos haluatte että käyttäjätunnus poistetaan
+coppa_fax_parent_name:Vanhemman tai huoltajan koko nimi:
+coppa_fax_relation:Suhde lapseen:
+coppa_fax_telephone:Puhelin:
+coppa_fax_email:Sähköpostiosoite:
+coppa_fax_date:Päiväys:
+coppa_fax_questions:Jos teillä on kysymyksiä, olkaa hyvä ja ottakaa yhteyttä: <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>
+coppa_fax_login:Käyttäjätunnus
+coppa_fax_passwd:Salasana
+coppa_fax_remail:Sähköpostiosoite
+coppa_fax_name:Nimi
+login_not_logedin:Et ole sisäänkirjautunut. Tämä voi johtua monista syistä:
+login_cookie_expired:Eväste on vanhentunut. Päivitä eväste kirjautumalla sisään.
+login_perm_denied:Sinulla ei ole oikeuksia käyttää pyydettyä resurssia anonyyminä käyttäjänä.
+login_want_to_register:Haluatko rekisteröityä?
+login_forgot_passwd:Unohditko salasanasi?
+login_use_cookie:Käytä evästeitä.<br /><span class="SmallText">Jos käytät yhteiskäytössä olevaa tietokonetta, kuten kirjastossa, koulussa tai Internet-kahvilassa on suositeltavaa, että poistat valinnan tästä paremman tietoturvan takia.<br />Jättämällä tämän valinnan päälle kirjaudut automaattisesti foorumille.</span>
+login_login:Käyttäjätunnus
+login_login_btn:Kirjaudu sisään
+login_name_required:Käyttäjätunnus on pakollinen
+login_passwd_required:Salasana on pakollinen
+login_invalid_radius:Käyttäjätunnus/salasana-yhdistelmä oli virheellinen
+reset_confirmation:Kiitos rekisteröitymisestä.\n\nAktivoidaksesi käyttäjätunnuksesi siirry alla olevaan osoitteeseen:\n\n{VAR: url}\n\nKun käyttäjätunnuksesi on aktivoitu, sisäänkirjautuminen tapahtuu automaattisesti\nja sinut ohjataan foorumin etusivulle.
+reset_reset:Hei, olet pyytänyt salasanasi vaihtamista. Siirry alla olevaan osoitteeseen jatkaaksesi:\n\n{VAR: url}\n\nHuomaa: Tämä foorumi tallentaa salasanat yhdensuuntaisella salausmekanismilla, eli antamasi salasana salataan menetelmällä, joka estää sen näkemisen selväkielisenä. Tämä toimii yksinkertaisuudessaan siten, että aina kun annat salasanasi – se salataan samalla salausmenetelmällä ja verrataan tietokantaan tallennettuun salattuun salasanaan. (Jos olet kiinnostunut kuinka tämä salausmenetelmä toimii, etsi tietoja MD5 HASH -algoritmista)
+rpasswd_invalid_passwd:Virheellinen salasana
+rpasswd_passwd_nomatch:Salasanat eivät täsmää
+rpasswd_passwd_length:Salasanan täytyy olla vähintään 6 merkkiä pitkä
+reset_remind_pass:Unohtunut salasana
+reset_reset_conf:Salasanasi vaihdetaan ja lähetetään sinulle, tai jos et ole vahvistanut sähköpostiosoitettasi, vahvistussähköposti lähetetään uudestaan.
+reset_error:Sähköpostiosoitetta ei löytynyt tietokannasta
+reset_update:Salasanan vaihto
+rpasswd_change_pass:Vaihda salasana
+rpasswd_login:Käyttäjätunnus:
+rpasswd_cur_pass:Nykyinen salasana:
+rpasswd_new_pass:Uusi salasana:
+rpasswd_conf_pass:Vahvista salasana:
+ruser_title:Muuta kirjautumislomaketta
+ruser_change_user:Muuta keskustelualueen kirjautumista
+ruser_cur_login:Nykyinen tunnus:
+ruser_new_login:Uusi tunnus:
+ruser_cur_pass:Nykyinen salasana:
+login_passwd:Salasana:
+reset_email:Sähköpostiosoite:
+reset_reset_button:Vaihda salasana
+rate_this_thread:Arvioi aihe
+report_reporting_about:Ilmoitettavan viestin tiedot:
+report_subject:Otsikko:
+report_by:Lähettäjä:
+report_posted_on:Lähetetty:
+report_give_reason:Syy, miksi ilmoitat tästä viestistä:
+report_submit_report:Lähetä ilmoitus
+search_entire_msg:Koko viesti
+search_subject_only:Vain otsikko
+search_forum:Foorumi
+search_posted_on:Lähetetty
+search_no_results:Ei tuloksia
+search_all_forums:Hae kaikista foorumeista
+search_in_forum:Hae foorumista:
+search_forum_search:Hae foorumilta
+move_thread_to:Siirrä aihe <b>{VAR: thr->subject}</b>:
+remail_email_topic:Lähetä tämä aihe kaverille
+remail_your_name:Nimesi:
+remail_your_email:Sähköpostiosoitteesi:
+remail_friends_name:Kaverin nimi:
+remail_friends_email:Kaverin sähköpostiosoite:
+remail_required:pakollinen
+remail_subject:Otsikko:
+remail_message:Viesti:
+remail_send_now:Lähetä sähköposti
+remail_anon_opt:Kopioi tämä viesti käyttämääsi sähköpostiohjelmaan lähettääksesi sen kaverillesi
+remail_done:Valmis
+remail_sent_conf:Sähköposti kaverillesi osoitteeseen {VAR-HTML: _POST['femail']} aiheesta {VAR: data->subject} on lähetetty.
+remail_error:Virhe
+mklist_type:Luettelon tyyppi:
+mklist_option:Rivi:
+mklist_additem:Lisää rivi
+mklist_apply:Käytä
+mklist_delete:Poista
+qbud_nick_name:Nimi
+qbud_add_selected:Lisää valitut
+# Fuzzy
+qbud_selected:Valitut
+qbud_no_buddies:Ei kavereita, joista valita
+mklist_numerical:Numerot
+mklist_aplha:Aakkoset
+mklist_square:Neliö
+mklist_disc:Pallo
+mklist_circle:Ympyrä
+mklist_close:Sulje
+email_to:Vastaanottaja:
+email_pg_title:Sähköposti
+email_subject:Otsikko:
+email_body:Teksti:
+email_submit:Lähetä
+ppost_quote_msg:{VAR: msg_to_list} kirjoitti {TEMPLATE: ppost_quote_msg_date}
+ppost_quote:Lainaus:
+ppost_to:Vastaanottaja:
+ppost_from_buddy_list:Valitse kaverilistalta
+ppost_find_User:Hae käyttäjä
+ppost_track_msg:Pyydä kuittaus
+ppost_track_msg_desc:Ilmoitus yksityisviestinä, kun tämä viesti luetaan.
+ppost_send:Lähetä
+ppost_save_draft:Tallenna luonnos
+poll_blank_option:Et voi lisätä tyhjää valintaa.
+poll_del_conf:Paina OK, jos haluat poistaa tämän valinnan
+poll_name:Gallupin nimi:
+poll_timelimit:Aikarajoitus:
+poll_maxiumvotes:Ääniä enintään:
+poll_create:Luo
+poll_update:Päivitä
+poll_disablesmilies:Ei hymiöitä
+poll_create_poll:Luo gallup
+poll_update_poll:Päivitä gallup
+poll_delete:Poista
+poll_updateoption:Päivitä valinta
+poll_addoption:Lisää valinta
+poll_unlimited:Ääretön
+poll_day:päivä
+poll_days:päivää
+poll_hour:tunti
+poll_hours:tuntia
+poll_month:kuukausi
+poll_year:vuosi
+poll_week:viikko
+tabs_register:Asetukset
+tabs_subscriptions:Tilatut
+tabs_bookmarkes:Kirjanmerkit
+tabs_referrals:Suosittelut
+tabs_buddy_list:Kaverit
+tabs_ignore_list:Torjutut
+tabs_private_messaging:Yksityisviestit
+single_msg_delete:Olet <span class="ErrorText">poistamassa</span> viestiä otsikolla: <b>{VAR: data[3]}</b>
+thread_delete:Olet <span class="ErrorText">poistamassa</span> kokonaista <span class="ErrorText">aihetta</span> otsikolla: <b>{VAR: data[3]}</b>
+delete_proceed:<span class="fb">Haluatko jatkaa?</span>
+delete_yes:Kyllä
+delete_no:Ei
+error_invalidurl:Virheellinen URL
+error_error:Virhe
+usrinfo_profile:Profiili: {VAR: u->alias}
+usrinfo_show_all_posts:Näytä käyttäjän {VAR: u->alias} kaikki viestit
+actions_update:Vakoilee muita käyttäjiä, kuten sinäkin
+err_info:Tiedot
+buddy_list_err_cantadd:Et voi lisätä itseäsi omalle kaverilistallesi
+buddy_list_err_dup:Tämä käyttäjä on jo kaverilistallasi
+buddy_list_err_nouser:Käyttäjää, jonka yritit lisätä, ei löydy foorumilta
+buddy_list_err_nouser_title:Käyttäjän lisääminen ei onnistunut
+buddy_list_err_ignore:Kaverilistaan ei voi lisätä käyttäjiä, jotka ovat torjuneet sinut.
+buddy_list_update:Selaa omaa kaverilistaansa
+core_err_invinp_title:Virheellinen syöte
+core_err_invinp_err:Yritit ladata virheellistä linkkiä, ole hyvä ja ilmoita tästä <a href="mailto:{GVAR: ADMIN_EMAIL}">sivuston ylläpitäjälle</a>.
+core_adm_login_msg:Ylläpitäjät voivat kirjautua <a href="{BASE}adm/admloginuser.php">täällä</a>.
+email_err_unabletoemail_title:Virhe: Sähköpostin lähetys ei onnistunut
+email_err_unabletoemail_msg:Ylläpitäjä on estänyt sähköpostin lähetyksen.
+email_error_unabletolocaddr:Järjestelmä ei pystynyt lähettämään sähköpostia {VAR-HTML: _POST['tx_name']}, koska sähköpostiosoitetta ei löytynyt
+email_error_body:Viestin teksti on pakollinen
+email_error_subject:Otsikko on pakollinen
+email_error_namerequired:Nimi on pakollinen
+email_error_invaliduser:Virheellinen käyttäjä
+emailconf_err_invkey_title:Virhe
+emailconf_err_invkey_msg:Virheellinen vahvistusavain. Tarkista sähköpostistasi, että olet valinnut linkin oikein.
+err_inc_criticaltitle:Kriittinen virhe
+err_inc_criticalmsg:Tapahtui virhe. Valitettavasti myös virheiden raportoinnissa on ongelmia.
+finduser_update:Etsii käyttäjiä
+help_index_update:Lukee <a href="{TEMPLATE: help_index_update_lnk}">ohjeita</a>
+iemail_thr_subject:Uusi viesti aiheessa {VAR: thr_subject} käyttäjältä: {VAR: poster_login}
+iemail_thr_bodyemail:Lue uudet lukemattomat viestit: {VAR: goto_url['email']}\n\nJos et halua vastaanottaa ilmoituksia uusista viesteistä tässä aiheessa – käy sivulla: {VAR: unsub_url['email']}
+iemail_frm_subject:Uusi aihe foorumissa {VAR: frm_name} otsikolla {VAR: thr_subject} käyttäjältä: {VAR: poster_login}
+iemail_frm_bodyemail:Lue aihe täällä:\n{VAR: goto_url['email']}\n\nJos et halua vastaanottaa ilmoituksia uusista aiheista tässä foorumissa – käy sivulla: {VAR: unsub_url['email']}
+iemail_participate:Osallistuaksesi keskusteluun – siirry tänne:
+ignore_list_err_info_title:Tiedot
+ignore_list_err_dup_msg:Tämä käyttäjä on jo torjuttujen listalla
+ignore_list_err_nu_title:Käyttäjää ei löydy
+ignore_list_err_nu_msg:Käyttäjää, jonka yritit torjua ei löytynyt.
+ignore_list_cantign_msg:Et voi torjua tätä käyttäjää
+ignore_list_update:Selaa omaa torjuttujen listaa
+index_update:Selaa <a href="{TEMPLATE: index_update_lnk}">foorumilistaa</a>
+list_referers_update:Selaa suosittelujaan
+login_update:Sisäänkirjautuminen
+msg_update:Selaa aihetta <a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+pm_err_nopm_title:Virhe: Yksityisviestit poistettu käytöstä
+pm_err_nopm_msg:Et voi käyttää yksityisviestejä koska ylläpitäjä on poistanut ne käytöstä.
+pm_update:Käyttää yksityiviestintää
+post_err_lockedthread_title:Virhe: Aihe lukittu
+post_err_lockedthread_msg:Tämä aihe on lukittu, uusia viestejä ei sallita
+err_coppa_title:Virhe: Käyttäjätunnusta ei ole vielä hyväksytty
+err_coppa_msg:Emme ole vastaanottaneet varmistusta vanhemmiltasi tai lailliselta huoltajaltasi, joten et voi vielä lähettää viestejä foorumille. Jos olet hukannut COPPA-lomakkeen – <a href="{TEMPLATE: err_coppa_msg_lnk}">voit hakea sen uudelleen</a>.
+err_banned_acct_title:Virhe: Olet estetty.
+err_banned_acct_msg:Tunnuksesi oli {IF: $ban_expiry}väliaikaisesti estettynä {DATE: ban_expiry %e %Bta %Y kello %H.%M} saakka{ELSE}pysyvästi estettynä{ENDI} johtuen keskustelualueen sääntöjen rikkomisesta.
+post_err_edttimelimit_title:Virhe
+post_err_edttimelimit_msg:Et voi enää muokata tätä viestiä.
+post_err_noannontopics_msg2:<legend>Virhe: Riittämättömät käyttöoikeudet</legend>Anonyymit käyttäjät eivät ole oikeutettuja luomaan aiheita.
+post_err_noannonposts_msg2:<legend>Virhe: Riittämättömät käyttöoikeudet</legend>Anonyymit käyttäjät eivät ole oikeutettuja vastaamaan.
+post_err_floodtrig_title:Virhe: Viestitulva.
+post_err_floodtrig_msg:Odota {PLURAL: tm|$1 sekunti|$1 sekuntia} ja yritä uudelleen.
+post_err_attach_size:Liitetiedoston koko ylittää suurimman sallitun {VAR: MAX_F_SIZE} tavun rajan
+post_err_attach_ext:Lähetetyn tiedoston tyyppi ei vastaa sallittuja tiedostotyyppejä.
+post_err_attach_filelimit:Yritit lähettää sallittua enemmän tiedostoja.
+post_err_passwd:Virheellinen salasana.
+post_reply_update:Vastaa viestiin otsikolla <a href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a> foorumissa {VAR: frm->name}
+post_topic_update:Kirjoittaa uutta aihetta foorumille <a href="{TEMPLATE: post_topic_update_lnk}">{VAR: frm->name}</a>
+post_error_generic:Tapahtui virhe
+postcheck_max_images_err:Enintään {GVAR: MAX_IMAGE_COUNT} kuvaa sallittu viestiä kohden. Ole hyvä ja vähennä kuvien määrää.
+postcheck_no_links_allowed:Sinun täytyy lähettää {PLURAL: posts_before_links|$1 viesti|$1 viestiä} ennen kuin voit käyttää linkkejä.
+postcheck_subj_needed:Otsikko on pakollinen
+postcheck_no_such_user:Käyttäjää nimellä "{FUNC: char_fix(htmlspecialchars($v))}" ei löydy tältä foorumilta
+postcheck_ignored:Et voi lähettää yksityisviestiä käyttäjälle "{FUNC: char_fix(htmlspecialchars($v))}", koska hän on torjunut sinut.
+postcheck_no_recepient:Viestiä ei voida lähettää, koska vastaanottaja puuttuu
+postcheck_invalid_email:Virheellinen sähköpostiosoite.
+postcheck_email_subject:Et voi lähettää sähköpostia ilman otsikkoa.
+postcheck_email_body:Et voi lähettää sahköpostia ilman viestiä.
+private_msg_notify_subj:Viesti otsikolla {VAR: m->subject} on luettu
+private_msg_notify_body:Hei,<br />{VAR: usr->login} on lukenut viestisi otsikolla ”{VAR: m->subject}”.<br />Tämä automaattinen ilmoitus luotiin {TEMPLATE: private_msg_notify_body_date}<br />
+referals_update:Selaa suosittelujaan
+register_err_short_login:Valitsemasi käyttäjätunnus on liian lyhyt. Käyttäjätunnuksien täytyy olla vähintään 2 merkkiä pitkiä.
+register_err_login_notallowed:Tätä tunnusta ei hyväksytty.
+register_err_loginunique:Foorumin käyttäjätunnusten täytyy olla uniikkeja ja annettu käyttäjätunnus on jo käytössä.
+register_err_emailexists:Tämä sähköpostiosoite on jo käytössä. Jos olet unohtanut salasanasi, ole hyvä ja käytä salasanan lähetys toimintoa uudelleen rekisteröitymisen sijaan.
+register_err_shortpasswd:Salasanan täytyy olla vähintään 6 merkkiä pitkä.
+register_err_passwdnomatch:Salasanat eivät täsmää. Yritä uudelleen.
+register_err_invalidemail:Antamasi sähköpostiosoite on virheellinen.
+register_err_needname:Sinun on annettava nimesi voidaksesi rekisteröityä.
+register_err_enterpasswd:Sinun on annettava tämänhetkinen salasanasi muuttaaksesi tietoja
+register_err_adminpasswd:Sinun on annettava <b>ylläpitosalasana</b> muuttaaksesi tietoja.
+register_err_notyouremail:Tämä sähköpostiosoite on jo käytössä
+register_err_avatartobig:Lähetetyn tiedoston koko ylittää suurimman sallitun {GVAR: CUSTOM_AVATAR_MAX_SIZE} tavun rajan
+register_err_avatarnotallowed:Lähetetyn tiedoston tyyppi ei ole sallittu. Tarkista sallitut tiedostotyypit.
+register_conf_subject:Rekisteröintivahvistus
+register_conf_msg:Kiitos rekisteröitymisestä.\nAktivoi käyttäjätunnuksesi napsauttamalla alla olevaa linkkiä:\n\n{FULL_ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\nKun käyttäjätunnuksesi on aktivoitu, sisäänkirjautuminen tapahtuu automaattisesti ja sinut ohjataan foorumin etusivulle.
+register_welcome_subject:Rekisteröintivahvistus
+register_welcome_msg:Kiitos rekisteröitymisestä.\n\nTässä ovat kirjautumistietosi foorumille.\n\nFoorumin osoite: {TEMPLATE: index_update_lnk}\nKäyttäjätunnus: {VAR: uent->login}\nSalasana: {VAR: _POST['reg_plaintext_passwd']}\n\nSalasanat ovat kirjainkokoherkkiä.\nVoit muuttaa asetuksia ja käyttäjätietojasi sivulla:\n{FULL_ROOT}?t=register
+register_err_cantreg_title:Virhe: Rekisteröityminen epäonnistui
+regsiter_err_cantreg_msg:Rekisteröityminen epäonnistui, ole hyvä ja ota yhteyttä ylläpitäjään: <a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a>
+register_profile_update:Selaa omia käyttäjätietojaan
+register_register_update:Rekisteröitymissivu
+report_err_nosuchmsg_title:Virhe
+report_err_nosuchmsg_msg:Viestiä ei ole
+reset_err_invalidkey_title:Virhe
+reset_err_invalidkey_msg:Virheellinen salasanan varmistusavain
+reset_err_rstconf_title:Tiedot
+reset_err_rstconf_msg:Ohjeiden pitäisi saapua sähköpostiisi muutaman minuutin kuluessa
+reset_newpass_title:Salasana vaihdettu
+reset_newpass_msg:Hei.\n\nSalasanasi on nyt vaihdettu uuteen:\n\nKäyttäjätunnus: {VAR: ui[1]}\nSalasana: {VAR: passwd}\n\nJos haluat vaihtaa yllä olevan salasanan toiseksi, voit tehdä sen profiilisivulla:\n{FULL_ROOT}?t=register
+reset_login_notify:Uusi salasanasi on lähetetty sinulle sähköpostilla, jonka pitäisi saapua muutaman minuutin kuluessa.
+search_update:Etsii viestejä
+selmsg_update:Selaa <a href="{TEMPLATE: selmsg_update_lnk}">Päivän Viestejä</a>
+showposts_update:Selaa käyttäjän <a href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a> viestejä
+subscribed_update:Selaa omia tilauksiaan
+bookmarked_update:Selaa omaa kirjanmerkkilistaa
+thread_update:Selaa foorumia <a href="{TEMPLATE: thread_update_lnk}">{VAR: frm->name}</a>
+tree_update:Selaa aihetta (puunäkymä) <a href="{TEMPLATE: tree_update_lnk}">{VAR: frm->subject}</a>
+userinfo_update:Tarkastelee käyttäjän <a href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}</a> profiilia.
+ERR_login_msg2:<legend>Virhe: Et ole sisäänkirjautunut</legend>Voidaksesi käyttää tätä toimintoa, tulee sinun ensin kirjautua sisään.
+ERR_disabled_ttl:Toiminto ei ole käytössä
+ERR_disabled_msg:Ylläpitäjä on poistanut tämän toiminnon käytöstä.
+ERR_access_ttl:Virhe: Käyttöoikeudet riittämättömät
+ERR_access_msg:Sinulla ei ole vaadittuja käyttöoikeuksia suorittaaksesi tätä toimintoa.
+ERR_registration_disabled_ttl:Rekisteröinti ei ole käytössä
+ERR_registration_disabled_msg:Ylläpitäjä on poistanut rekisteröinnin käytöstä. Yritä myöhemmin uudelleen
+ERR_emailconf_ttl:Virhe: Käyttäjätunnustasi ei ole vahvistettu
+ERR_emailconf_msg:Et ole vielä vahvistanut käyttäjätunnustasi.<br /><table border="0"><tr><td><ol><li>Jos et ole saanut vahvistussähköpostia – <a href="{TEMPLATE: ERR_emailconf_msg_lnk}">pyydä se uudelleen</a>.</li><li>Jos {VAR: usr_d->email} ei ole oikea sähköpostiosoitteesi – <a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">määritä oikea osoite</a>.</li></ol></td></tr></table>
+ERR_user_ttl:Virhe: Käyttäjää ei ole
+ERR_user_msg:Käyttäjää ei ole olemassa
+ERR_systemerr_ttl:Virhe: Järjestelmävirhe
+ERR_systemerr_msg:Tapahtui järjestelmävirhe. Ole hyvä ja raportoi se <a href="mailto:{GVAR: ADMIN_EMAIL}">sivuston ylläpitäjälle</a>.
+email_title:Sähköpostilomake
+finduser_title:Hae käyttäjä
+help_title:Ohje
+login_title:Sisäänkirjautuminen
+poll_title:Gallup-editori
+register_title:Rekisteröityminen
+reset_title:Vaihda salasana
+rpasswd_title:Vaihda salasana
+error_title:Virhe
+index_title:Tervetuloa foorumille
+search_title:Haku {VAR-HTML: srch}
+remail_emailsent:Sähköposti on lähetetty
+# Fuzzy
+remail_email:Hei, löysin foorumilta {GVAR: FORUM_TITLE} mielenkiintoisen aiheen otsikolla ”{VAR: data->subject}”, joka ehkä kiinnostaa sinua. Löydät sen täältä:\n{FULL_ROOT}{ROOT}?t=rview&amp;th={VAR: data->id}&amp;rid={DEF: _uid}\n\nTerveisin,\n\n{VAR: usr->alias}
+poll_add_option:Lisää valinta:
+post_opt_html_on:<b>HTML</b>-koodit: <b>Käytössä</b>
+post_opt_fud_on:<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>BBcode</b>: <b>Käytössä</b></a>
+post_opt_images_on:<b>Kuvat</b>: <b>Käytössä</b>
+post_opt_smilies_on:<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>Hymiöt</b>: <b>Käytössä</b></a>
+post_opt_html_off:<b>HTML</b>-koodit: <b>Ei käytössä</b>
+post_opt_fud_off:<b>BBcode</b>: <b>Ei käytössä</b>
+post_opt_images_off:<b>Kuvat</b>: <b>Ei käytössä</b>
+post_opt_smilies_off:<b>Hymiöt</b>: <b>Ei käytössä</b>
+post_opt:Foorumin asetukset:
+register_change_passwd:vaihda salasana
+register_change_login:vaihda tunnusta
+approved_avatar_title:Oma avatarisi on hyväksytty.
+approved_avatar_msg:Ylläpitäjän on hyväksynyt oman avatarisi. Sen pitäisi nyt näkyä kaikissa viesteissäsi. Jos et näe sitä tai näet vanhan avatarisi, se johtuu siitä että selaimesi on tallentanut sivun välimuistiin. Päivitä sivu kerran tai pari ja oikean kuvan pitäisi näkyä.
+unapproved_avatar_title:Oma avatarisi on hylätty.
+unapproved_avatar_msg:Ylläpitäjä ei hyväksynyt avatariasi. Yleisimmät hylkäämisen syyt ovat: kuvan koko oli liian suuri (tiedostokoko ja/tai kuvan mitat) tai kuva sisälsi sopimatonta materiaalia. Jos haluat tietää enemmän hylkäämisen syystä, ota yhteyttä ylläpitäjään.
+mvthread_request_move:siirtopyyntö
+move_request_reason:Miksi haluat että tämä aihe siirretään?
+mvthread_submit_req:Lähetä pyyntö
+thread_exchange:Aiheiden siirtopyynnöt
+move_request_by:Aiheen siirtopyyntö käyttäjältä:
+move_reason:Siirron syy:
+thr_exch_accept:hyväksy aihe
+thr_exch_decline:hylkää aihe
+thr_exch_orig_forum:Alkuperäinen foorumi:
+thr_exch_dest_forum:Kohdefoorumi:
+thr_exch_no_threads:Ei aiheiden siirtopyyntöjä.
+thr_exch_decl_reason:Hylkäyksen syy aiheen <b>{VAR: data->subject}</b> siirtopyynnölle foorumille <b>{VAR: data->f2_name}</b>
+thr_exch_submit:Lähetä
+exch_decline_ttl:Aiheen {VAR: data->subject} siirtopyyntö foorumille {VAR: data->f2_name} on hylätty.
+ppost_original_msg:viesti, johon olet vastaamassa tai välittämässä
+split_thread:Jaa aihe
+groupmgr_no_user:Käyttäjätunnuksella "{FUNC: char_fix(htmlspecialchars($gr_member))}" ei löydy käyttäjää
+groupmgr_already_exists:Käyttäjä "{FUNC: char_fix(htmlspecialchars($gr_member))}" on jo tämän ryhmän jäsen.
+groupmgr_yes:Kyllä
+groupmgr_no:Ei
+groupmgr_action:Toiminto
+groupmgr_member:Jäsen
+groupmgr_cancel:Peruuta
+groupmgr_add_member:Lisää jäsen
+groupmgr_update_member:Päivitä jäsen
+groupmgr_edit:Muokkaa
+groupmgr_delete:Poista
+group_mgr_anon:Anonyymi
+group_mgr_reged:Kaikki rekisteröityneet käyttäjät
+show_show:Näytä:
+group_mgr:Ryhmien hallinta
+group_mgr_edit_btn:Muokkaa ryhmää
+group_mgr_heading:Valitse muokattava ryhmä
+group_mgr_group:Ryhmä:
+permission_denied_title:Käyttö estetty.
+permission_denied_msg:Sinulla ei ole vaadittuja käyttöoikeuksia suorittaaksesi tätä toimintoa.
+p_READ:Viestien luku
+p_POST:Luoda uusia aiheita
+p_REPLY:Vastata viesteihin
+p_EDIT:Muokata viestejä
+p_DEL:Poistaa viestejä
+p_STICKY:Luoda kiinnitettyjä aiheita
+p_POLL:Luoda galluppeja
+p_FILE:Liittää tiedostoja
+p_VOTE:Äänestää
+p_RATE:Arvioi aiheita/jäseniä
+p_SPLIT:Jakaa aiheita
+p_LOCK:Lukita/avata aiheita
+p_MOVE:Siirtää aiheita
+p_SML:Käyttää hymiöitä
+p_IMG:Käyttää kuvia
+p_SEARCH:Hakea viestejä
+group_mgr_search:Hae käyttäjä
+group_mgr_indicator:Muokkaat tällä hetkellä: <b>{VAR: grp->name}</b>
+rate_worst:Huonoin
+rate_best:Paras
+post_quote_msg:{VAR: msg->login} kirjoitti {TEMPLATE: make_report_date}
+post_quote:Lainaus:
+post_quote_selected:Lainaa valittu teksti
+userinfo_referals:Suositellut käyttäjät:
+userinfo_referals_count:{VAR: referals} käyttäjää
+pm_no_space_title:Ei tilaa jäljellä!
+pm_no_space_msg:Yksityisviestikansiosi sisältävät yhteensä <b>{VAR: fldr_size} tavun verran viestejä, joka ylittää suurimman sallitun <b>{GVAR: MAX_PMSG_FLDR_SIZE} tavun rajan.<br /><br /><span class="ErrorText">Vapauta tilaa poistamalla vanhoja viestejä.</span>
+pm_space_indct_msg:Kansioiden käyttämä tila: {VAR: percent_full}%
+th_expr_never:Ei koskaan
+th_expr_one_hr:1 tunnissa
+th_expr_three_hr:3 tunnissa
+th_expr_four_hr:4 tunnissa
+th_expr_eight_hr:8 tunnissa
+th_expr_sixteen_hr:16 tunnissa
+th_expr_one_day:1 päivässä
+th_expr_two_day:2 päivässä
+th_expr_four_day:4 päivässä
+th_expr_one_week:1 viikossa
+th_expr_two_week:2 viikossa
+th_expr_one_month:1 kuukaudessa
+th_expr_two_month:2 kuukaudessa
+th_expr_four_month:4 kuukaudessa
+th_expr_one_year:1 vuodessa
+thread_mod_delete:Poista
+action_ip:IP
+action_latest_post:Viimeisin viesti
+online_today_last_visit:Käytti viimeksi
+online_today_update:Selaa listaa käyttäjistä, jotka ovat tänään käyneet foorumilla.
+logedin_todays_visitors:Kävijät tänään
+logedin_latest_post:Viimeisin viesti foorumeilla:
+register_show_avatar:Näytä avatarit:
+register_show_avatar_desc:Määrittää näytetäänkö muiden käyttäjien avatarit heidän viesteissään.
+drawmsg_view_rest_post:Näytä loput viestistä
+post_re:Re:
+forumsel_goto_forum:Siirry foorumiin:
+minimsg_thread_view:Viestilistaus
+split_th_post_by:Lähettäjä:
+split_th_posted_on:Lähetetty:
+split_th_subject:Otsikko:
+split_th_new_thread_title:Uusi otsikko aiheelle:
+split_th_forum:Foorumi:
+split_th_split_sel:Jaa valitut viestit
+split_th_split_unsel:Jaa valitsemattomat viestit
+split_th_messages:Viestit
+split_th_select:Valitse
+report_report_post:Ilmoita viestistä
+quicklogin_login:Käyttäjätunnus:
+quicklogin_password:Salasana:
+quicklogin_use_cookies:Käytä evästeitä?
+quicklogin_login_btn:Kirjaudu
+quick_reply:Nopea vastaus
+quick_reply_post:Lähetä nopea vastaus
+quick_reply_preview:Nopean vastauksen esikatselu
+post_notification_desc:Ilmoita minulle, kun joku vastaa tähän viestiin.
+post_all_ext_allowed:(rajoittamaton)
+maximize_category:Suurenna luokka
+maximize_message:Suurenna viesti
+no_view_perm:Sinulla ei ole tarvittavia oikeuksia nähdäksesi tätä aihetta.
+report_empty_report:Et voi lähettää ilmiantoa ilman syytä. Ole hyvä ja anna ilmiannon syy.
+report_already_reported_title:On jo ilmiannettu
+report_already_reported_msg:Tämä viesti on jo ilmiannettu ja on tällä hetkellä moderaattoreiden tarkastuslistalla.
+register_err_toomanyimages:Yritit käyttää enemmän kuin sallitut {GVAR: FORUM_IMG_CNT_SIG} kuvaa allekirjoituksessasi.
+pmsg_next_msg:Seuraava viesti
+pmsg_prev_msg:Edellinen viesti
+post_proc_reveal_spoiler:Näytä piilotettu teksti
+register_jabber:Jabber-tunnus:
+register_skype:Skype-tunnus:
+register_twitter:Twitter-tunnus:
+register_google:Google Chat/IM:
+im_jabber:Jabber:
+im_google:Google Talk:
+im_skype:Skype:
+im_twitter:Twitter:
+forum_contact:Ota yhteyttä
+forum_home:Etusivu
+post_cur_attached:tällä hetkellä liitteenä: {VAR: i} {PLURAL: i|tiedosto|tiedostoa}
+ignored_anon_post:{GVAR: ANON_NICK} viestit on torjuttu
+ignored_user_post:Käyttäjän <a href="{TEMPLATE: ignored_user_post_lnk}">{VAR: obj->login}</a> viesti on torjuttu
+smladd_close_window:sulje ikkuna
+post_list_smilies:näytä kaikki hymiöt
+p_VISIBLE:Näkee foorumin
+reported_in_thread:Aiheessa:
+help_back_to_top:takaisin alkuun
+help_return_to_index:Palaa ohjehakemistoon
+imsg_err_message_title:Virheellinen viesti
+imsg_err_message_msg:Viestiä ei ole olemassa.
+poll_edit:Muokkaa
+register_err_not_valid_img:Valittu linkki ei johda kelvolliseen kuvaan.
+pmsg_recepient:Vastaanottaja
+register_err_taken_alias:Alias, jonka valitsit on jo käytössä. Ole hyvä ja valitse toinen.
+register_alias:Alias
+register_alias_desc:Anna lempinimi (muu kuin käyttäjätunnus), jonka haluat näkyvän foorumilla.
+register_allow_pm_msg:Salli yksityisviestit:
+register_allow_pm_msg_desc:Salli muiden käyttäjien lähettää sinulle yksityisviestejä.
+postcheck_pm_disabled:Et voi lähettää yksityisviestiä, koska {VAR-HTML: v} ei halua vastaanottaa yksityisviestejä.
+polllist_vote:Äänestä
+polllist_view_results:Näytä tulokset
+polllist_name:Gallupin nimi
+polllist_date:Laadittu
+polllist_owner:Laatija
+polllist_votes:Ääniä yhteensä
+polllist_action:Toiminnot
+polllist_update:Selaa <a href="{TEMPLATE: polllist_update_lnk}">galluppeja</a>
+userinfo_polls:Gallupit:
+# Fuzzy
+show_pollist:Gallupit
+search_and:JA
+search_or:TAI
+# Fuzzy
+search_desc_order:Uusin ensin
+# Fuzzy
+search_asc_order:Vanhin ensin
+search_logic:Hakulogiikka:
+# Fuzzy
+search_sorting:Järjestä tulokset päivämäärän mukaan:
+search_attach:Liitteet:
+search_attach_all:Kanssa tai ilman
+search_attach_with:Liitteiden kanssa
+post_proceed:Jatka
+post_moderated_forum:Lähetit viestin moderoidulle foorumille. Viestisi ei näy foorumilla ennen kuin joku foorumin moderaattoreista tai ylläpidosta hyväksyy sen.
+post_moderated_forum_ttl:Moderoitu foorumi
+buddy_list_bday:{VAR: r[2]} täyttää tänään {VAR: age}-vuotta
+email_warning_msg:Jos vaihdat nykyisen sähköpostiosoitteesi, käyttäjätunnuksesi merkitään vahvistamattomaksi, kunnes olet vahvistanut sen sähköpostilla.
+register_show_im:Näytä IM-ilmaisimet:
+register_show_im_desc:Määrittää näytetäänkö viesteissä kirjoittajan IM-ilmaisimet.
+unread_message:Lukematon viesti
+read_message:Luettu viesti
+threadt_more:&lt;lisää&gt;
+threadt_disabled_ttl:Aiheiden puunäkymä on poistettu käytöstä.
+threadt_disabled_desc:Ylläpitäjä on poistanut aiheiden puunäkymän käytöstä. Käytä tasonäkymää sen sijaan.
+threadt_update:Selaa foorumia (puunäkymä) <a href="{TEMPLATE: threadt_update_lnk}">{VAR: frm->name}</a>
+mmod_delete_cofirm_ttl:Aiheen tai viestin poiston varmistus
+spell_alts:ei vaihtoehtoja
+insert_uploaded_image:Lisää kuva viestin tekstiin
+finduser_help:Hakukone lisää automaattisesti hakuun merkin *. Esimerkiksi, jos haluat etsiä kaikki käyttäjät, joiden käyttäjätunnus alkaa a-kirjaimella – syötä 'a' hakukenttään.
+back_to_top:Takaisin alkuun
+pm_err_disabled_title:Yksityisviestit poissa käytöstä
+pm_err_disabled_msg:Et voi lähettää yksityisviestejä ennenkuin otat ne käyttöön asetuksissasi.
+err_mod_acc_ttl:Vahvistamaton käyttäjätunnus
+err_mod_acc_msg:Ylläpitäjä tarkistaa kaikki käyttäjätunnukset ennen niiden aktivoimista. Et voi käyttää kaikkia foorumin toimintoja ennen kuin ylläpitäjä on tarkistanut käyttäjätunnuksesi.
+accounts_pending_approval:Hyväksymättömät käyttäjät
+saved:Tallennetut
+register_err_time_limit:Rekisteröitymiset on rajoitettu {GVAR: REG_TIME_LIMIT} sekuntiin per rekisteröinti. Odota {PLURAL: reg_limit_reached|$1 sekunti|$1 sekuntia} ja yritä rekisteröityä uudelleen.
+register_err_avatardimtobig:Avatarin kuvakoko <b>({VAR: img_info[0]}x{VAR: img_info[1]})</b> ylittää suurimman sallitun koon <b>({GVAR: CUSTOM_AVATAR_MAX_DIM})</b>.
+buddy_offline:{VAR: r[2]} ei ole sisäänkirjautunut
+buddy_online:{VAR: r[2]} on sisäänkirjautunut
+sml_no_smilies:Hymiöitä ei käytettävissä.
+login_unapproved_account_ttl:Hyväksymätön käyttäjätunnus
+login_unapproved_account_msg:Ylläpitäjän täytyy hyväksyä kaikki käyttäjätunnukset ennen niiden aktivoimista. Käyttäjätunnustasi ei ole vielä hyväksytty, joten jotkin foorumin rekisteröityneille käyttäjille tarkoitetuista ominaisuuksista eivät ole vielä käytössäsi.
+remove_from_buddy_list:poista kaverilistalta
+iemail_msg_author:<b>Lähettäjä:</b> {VAR: obj->alias}
+iemail_msg_subject:<b>Otsikko:</b> {VAR: obj->subject}
+iemail_msg_date:<b>Päiväys:</b> {TEMPLATE: dmsg_post_date}
+iemail_msg_reply:Vastaa
+iemail_msg_quote:Lainaa
+iemail_msg_view:Näytä aihe tai viesti
+threadt_sticky:kiinnitetty
+threadt_announce:tiedote
+reported_no_messages:Ei ilmoitettuja viestejä.
+poll_no_polls:Ei galluppeja saatavilla.
+no_unread_messages:Ei hakua vastaavia lukemattomia viestejä.
+thread_mark_all_read:Merkitse lukemattomat viestit luetuiksi
+thread_mark_all_read_desc:Kaikki tämän foorumin viestit merkitään luetuiksi
+private_no_messages:Ei viestejä tässä kansiossa.
+register_email_change_subject:Sähköpostiosoitteen vaihdon vahvistus
+register_email_change_msg:Vahvista uusi sähköpostiosoitteesi {VAR: uent->email}, joka korvaa vanhan sähköpostiosoitteesi {VAR: old_email} napsauttamalla alla olevaa linkkiä:\n{FULL_ROOT}?t=emailconf&conf_key={VAR: conf_key}\n\nKäyttäjätunnuksesi aktivoituu uudelleen, kun olet vahvistanut uuden sähköpostiosoitteesi.
+iemail_thread_unsub:Lopeta tämän aiheen tilaus
+iemail_forum_unsub:Lopeta tämän foorumin tilaus
+primary_group_prefix:Foorumin pääryhmä:
+group_resources:Tämä ryhmä hallinnoi seuraavien foorumien käyttöoikeuksia
+register_admin_newuser_title:Uusi rekisteröitynyt käyttäjä
+# Fuzzy
+register_admin_newuser_msg:Uusi käyttäjä ({VAR: uent->login}) on juuri rekisteröitynyt foorumille.\nTarkista ja hyväksy tai hylkää käyttäjätunnus: {GVAR: WWW_ROOT}adm/admuserapr.php\n\nTämä on automatisoitu prosessi. Älä vastaa tähän viestiin.\nJos et enää halua vastaanottaa sähköpostitse ilmoituksia uusista rekisteröitymisistä,\nvaihda "New Account Notification" -asetus ylläpitäjän hallintapaneelissa.
+post_mod_msg_notify_title:Uusi viesti foorumilla "{VAR: frm->name}" odottaa hyväksyntää
+# Fuzzy
+post_mod_msg_notify_msg:Uusi viesti otsikolla ”{VAR: msg_post->subject}” lähetettiin foorumille, jonka moderaattori olet. Tarkistaaksesi tämän viestin siirry osoitteeseen: {FULL_ROOT}{ROOT}?t=modque#{VAR: msg_post->id}\n\nTämä on automatisoitu prosessi. Älä vastaa tähän sähköpostiin.
+thread_printable_pdf:Luo tulostettava PDF-tiedosto
+thread_syndicate:Foorumin syndikointi (XML)
+reg_conf_title:Rekisteröinnin vahvistus
+reg_conf_email:<b>Sähköpostivahvistus</b><br />Sinulle on lähetetty sähköposti sisältäen erityisen linkin, jossa sinun täytyy käydä ennen kuin käyttäjätunnuksesi aktivoidaan. Jos et saa tätä sähköpostia muutaman minuutin kuluttua, kirjaudu sisään tunnuksellasi ja varmista että sähköpostiosoite, jonka annoit on oikein. Pääset käyttämään foorumin rekisteröityneille käyttäjille tarkoitettuja toimintoja vasta kun olet vahvistanut käyttäjätunnuksesi.
+reg_conf_account:<b>Käyttäjätunnuksen hyväksyminen</b><br />Ylläpidon täytyy hyväksyä käyttäjätunnuksesi ennen sen aktivoitumista. Saat sähköpostitse ilmoituksen, kun ylläpito on hyväksynyt käyttäjätunnuksesi. Ennen tätä pystyt kuitenkin kirjautumaan sisään, mutta et voi käyttää toimintoja, jotka on varattu hyväksytyille käyttäjille.
+forum_banned_user:Sinut on lopullisesti estetty tältä foorumilta aikaisemman käytöksesi perusteella. Hyvästi.
+mnav_description:Viestiselain
+mnav_date_limit:Aikarajaus:
+mnav_forum_limit:Hae vain:
+mnav_all_forums:Kaikista foorumeista
+mnav_submit:Aloita haku
+mnav_no_range:Virheellinen aikaraja. Tämä arvo voi olla desimaaliluku (0.12) mutta täytyy olla suurempi kuin nolla.
+mnav_invalid_unit:Virheellinen aikayksikkö.
+mnav_invalid_date:Aikarajaus on suurempi kuin ylläpitäjän sallima suurin rajaus. Kokeile pienempää rajausta.
+mnav_no_results:Ei hakua vastaavia viestejä.
+mnav_posted_by:Lähettäjä:
+mnav_more:Koko viesti &raquo;&raquo;
+mnav_minute:Minuutti(a)
+mnav_hour:Tunti(a)
+mnav_day:Päivä(ä)
+mnav_week:Viikko(a)
+mnav_month:Kuukautta
+mnav_title:Viestiselain
+mnav_update:Selaa viestejä käyttäen <a href="{TEMPLATE: mnav_update_lnk}">viestiselainta</a>
+pm_notify_subject:[{GVAR: FORUM_TITLE}] – Ilmoitus uudesta yksityisviestistä
+# Fuzzy
+pm_notify_body_email:Sinulle on uusi yksityisviesti käyttäjältä "{VAR: from}" otsikolla "{VAR: subject}" foorumilla "{GVAR: FORUM_TITLE}".\nNäet viestin napsauttamalla tätä: {FULL_ROOT}{ROOT}?t=pmsg_view&id={VAR: pid}\n\nJos et halua ilmoituksia uusista viesteistä, voit poistaa ne käytöstä asetuksissasi.
+register_pm_notification:Ilmoitukset uusista yksityisviesteistä:
+register_pm_notification_desc:Määrittää lähetetäänkö uusista yksityisviesteistä viesti määrittelemälläsi ilmoitusten lähetystavalla.
+findu_admin_opts_header:Ylläpidon toiminnot
+findu_unban:Poista esto
+findu_ban:Estä
+findu_edit:Muokkaa
+findu_delete:Poista
+dmsg_reply_to:on vastaus viestiin
+dmsg_reply_num:viesti {VAR: obj->reply_to}
+merge_topics:Yhdistä aiheita
+merge_topics_cp:Aiheiden yhdistäminen
+merge_topics_tpl:Valitse yhdistettävät aiheet <span class="SmallText">(sinun täytyy valita enemmän kuin yksi aihe)</span>
+merge_merge:Yhdistä valitut aiheet
+merge_next:Seuraavat aiheet
+merge_prev:Edelliset aiheet
+merge_another:Siirry <a href="{TEMPLATE: merge_another_lnk}">viimeisimpään yhdistettyyn aiheeseen</a> tai yhdistä toinen:
+split_cp:Aiheiden jakaminen
+groups_perms_header:Käyttöoikeudet <span class="small">(näet käyttöoikeuden tyypin laittamalla hiiren osoittimen sen päälle)</span>
+register_err_sig_too_long:Allekirjoituksesi ylittää suurimman sallitun pituuden {GVAR: FORUM_SIG_ML} merkkiä.
+register_sig_limit:{GVAR: FORUM_SIG_ML} merkkiä <a href="javascript: alert('Allekirjoituksesi on '+document.forms['fud_register'].reg_sig.value.length+' merkkiä pitkä. Allekirjoituksen suurin sallittu pituus on {GVAR: FORUM_SIG_ML} merkkiä.');" class="SmallText">Tarkista allekirjoituksen pituus</a>
+adm_account_accepted:Ylläpitäjä on hyväksynyt ja aktivoinut tunnuksen '{VAR: login}'.\nVoit nyt käyttää foorumia '{GVAR: FORUM_TITLE}' rekisteröityneenä käyttäjänä.
+adm_account_accepted_s:Tunnusanomuksesi foorumille '{GVAR: FORUM_TITLE}' on hyväksytty.
+adm_account_rejected:Ylläpitäjä on hylännyt tunnuksen '{VAR: login}'.\nJos haluat tietää syyn tähän päätökseen, ota yhteyttä ylläpitäjään: '{GVAR: ADMIN_EMAIL}'.
+adm_account_rejected_s:Tunnusanomuksesi foorumille '{GVAR: FORUM_TITLE}' on hylätty.
+thread_on:päivänä
+userinfo_buddy:Kaveri:
+register_email_addr:Sähköpostiosoite:
+reset_suffix:Jos vastaanotit tämän viestin virheellisesti, jätä se huomiotta. Jos saat useita kopioita tästä viestistä, ja jos et ole asiaa pyytänyt, ota yhteyttä keskustelualueen ylläpitäjään sähköpostiosoitteella {GVAR: ADMIN_EMAIL}\n\nTämä pyyntö tehtiin IP-osoitteesta: {VAR: _SERVER['REMOTE_ADDR']}.
+usrinfo_last_visit:Käytti viimeksi:
+mnav_newer:uudempia kuin
+mnav_older:vanhempia kuin
+ip_search_by_ip:Etsi käyttäjiä IP-osoitteen perusteella
+ip_search_syntax:Tuettu syntaksi: 1.2.3.4, 1.2.3, 1.2, 1
+ip_search:Etsi
+ip_analyze_usage:Analysoi IP-käyttöä
+ip_analyze_usage_descr:Ilmoita käyttäjän tarkka tunnus.
+ip_users_using:Käyttäjät, jotka käyttävät IP-osoitetta {VAR: ip}
+ip_all_ips:Kaikki IP-osoitteet, joita '{VAR: user}' on käyttänyt
+ip_title:IP-selain
+userinfo_real_name:Oikea nimi:
+register_err_alias_notallowed:Tämä alias ei ole sallittu
+post_err_mod_forum_edit_ttl:Virhe
+post_err_mod_forum_edit_msg:Et voi muokata moderoidun foorumin viestejä.
+dmsg_num:viesti {VAR: obj->id}
+postcheck_session_invalid:Istuntosi oli päättynyt, syötä lomakkeen tiedot uudelleen.
+delete_message_extra_desc:<b>Valinnainen</b><br />Määritä syy viestin poistoon, joka lähetetään yksityisviestinä viestin aloittajalle.
+delete_message_extra_body:Liitä mukaan poistettu viesti, joka lähetetään tekijälle.
+delete_msg_removed_ttl:Ylläpito on poistanut viestisi.
+delete_msg_pm_body:Alkuperäinen viesti
+delete_msg_pm_subject:Otsikko: {VAR: data[15]}
+ip_no_whois:IP-osoitteen <b>{VAR: ip}</b> WHOIS-tiedot eivät ole saatavilla.
+ip_whois_title:ISP-tiedot
+register_theme:Teema:
+pmsg_trash:Tyhjennä roskat
+uc_new_pm:Uudet yksityisviestit
+uc_new_topic:Uusi aihe
+uc_new_cat_forum:Tilattujen foorumien uudet viestit
+uc_cat_forum:Luokka &raquo; Foorumi
+uc_sub_topics:Tilattujen aiheiden uudet viestit
+uc_page_title:Tarkastelee henkilökohtaista hallintapaneelia.
+search_options:Hakuasetukset
+search_user_filter:Suodata käyttäjän mukaan:
+register_none:Älä ilmoita minulle
+findu_no_conf:vahvistamaton käyttäjä
+register_max_sig_len:Maksimipituus:
+register_turing:Varmistus:
+register_err_turing:Varmistus epäonnistui. Yritä uudelleen.
+modque_cat:Luokka
+modque_forum:Foorumi
+idx_compact_forum_row:Saatavilla olevat foorumit:
+mmd_del_title:Poista aiheet
+mmd_mov_title:Siirrä aiheet
+mmd_move_threads_to:Kohdefoorumi:
+mmd_abort_move:Peruuta
+mmd_move:Siirrä aiheet
+pmsg_pdf_btn:Luo PDF-arkisto
+search_results_hdr:Haku löysi {VAR: total} viestiä
+thread_del_all:Poista valitut
+thread_mov_all:Siirrä valitut
+thread_merge_all:Yhdistä valitut
+thread_loc_all:Lukitse tai avaa valitut
+dmsg_ip:IP:
+err_blockedaccnt_title:Virhe: Tunnuksesi on suodatettu pois.
+err_blockedaccnt_msg:Tätä sivustoa ei voi käyttää tunnuksellasi johtuen käyttäjäsuodattimista.
+merge_th_page_list:Aihesivun valinta
+most_users_online:Eniten yhtaikaisia käyttäjiä (<b>{VAR: st_obj->most_online}</b>) oli <b>{DATE: st_obj->most_online_time %a, %d %B %Y %H:%M}</b>
+sub_unsub_all_forums:Peruuta liittyminen kaikille foorumeille
+sub_unsub_all_topics:Peruuta kaikkiin ketjuihin liittyminen
+unbookmark_all_topics:Poista kaikki kirjanmerkit
+tabs_own_posts:Näytä omat viestit
+sml_emoticon:Hymiö
+sml_code:Koodi
+mnav_sub_only:Etsi vain foorumeista, joihin olen liittynyt
+register_topics_per_page:Aiheita sivua kohti:
+login_min_time:Tämä foorumi sallii yhden kirjautumisyrityksen {VAR: MIN_TIME_BETWEEN_LOGIN} sekunnin välein. Odota {FUNC: ($usr_d->last_login + $MIN_TIME_BETWEEN_LOGIN - __request_timestamp__)} sekuntia ennen kuin yrität uudelleen.
+post_not_logged_in:Et ole kirjautuneena sisään, joten viesti lähetetään anonyyminä.
+post_common_bold:Lihavointi
+post_common_italics:Kursivointi
+post_common_underline:Alleviivaus
+post_common_align_left:Tasaa vasemmalle
+post_common_align_center:Keskitä
+post_common_align_right:Tasaa oikealle
+post_common_link:Lisää linkki
+post_common_link_popup:Linkin sijainti:
+post_common_email:Lisää sähköpostiosoite
+post_common_email_popup:Sähköpostiosoite:
+post_common_image:Lisää kuva
+post_common_image_popup:Kuvan osoite:
+post_common_nlist:Lisää numeroitu lista
+post_common_blist:Lisää luettelomerkitty lista
+post_common_quote:Lisää lainaus
+post_common_code:Lisää koodi
+rating_delete:Poista
+post_always_on_top:Laita aihe näkymään aina aihelistauksen ylimmäisenä
+topic_rating:{VAR: frm->rating} {PLURAL: frm->n_rating|$1 äänestä|$1 äänestä}
+topic_list_rating:{VAR: r[17]} {PLURAL: r[21]|$1 äänestä|$1 äänestä}
+tabs_notifications:Ilmoitukset
+finduser_flag:Lippu
+post_descr:Aiheen kuvaus:
+pmsg_on:Päivämäärä:
+pmsg_download_dump:Lataa viestivedos
+move_messages:Siirrä viestit
+move_msg_btn:Siirrä valitut viestit
+move_msg_th_expl:Ilmoita kohdeaiheen tunnistenumero (voi olla toisella foorumilla)
+captcha_img_alt:Captcha-varmistus: Sinun täytyy tunnistaa teksti tästä kuvasta.
+captcha_img_help:Kuvassa ei ole nollaa tai ykköstä.
+powered-by:Palvelun mahdollistaa: FUDforum {GVAR: FORUM_VERSION}.
+# Fuzzy
+copyright:Copyright &copy;2001–2019 <a href="http://fudforum.org/">FUDforum Bulletin Board Software</a>
+code_title:Koodi:
+code_select_all:Valitse kaikki
+code_show_hide:Näytä tai piilota
+social_sites:Sosiaaliset verkkosivustot:
+postcheck_min_len_err:Viestisi on liian lyhyt. Minimipituus on {PLURAL: post_min_len|$1 merkki|$1 merkkiä}.
+postcheck_dup_err:Älä luo päällekkäisiä aiheita.
+btn_new_topic:Uusi aihe
+btn_new_pm:Uusi yksityisviesti
+btn_post_reply:Lähetä vastaus
+btn_tree_view:Puunäkymä
+btn_flat_view:Tasonäkymä
+btn_about:Profiili
+btn_small_pm:Yksityisviesti
+btn_delete:poista
+btn_edit:muokkaa
+btn_reply:vastaa
+btn_forward:välitä
+btn_quote:lainaa
+btn_email:Sähköposti
+btn_show_posts:viestit
+btn_homepage:www
+feed_no_data:Vastaavia tietoja ei löytynyt.
+feed_rdf:RDF-syöte
+feed_rss:RSS2-syöte
+feed_atom:Atom-syöte
+ip_whois_connect_err:WHOIS-palvelimeen ({VAR: whois_server}) ei saada yhteyttä: {VAR: errstr}
+custom_filed_required:Tämä kenttä on pakollinen.
+pages:Sivut
+page_list_heading:Saatavilla olevat sivut
+page_list_total:Näytetään {PLURAL: i|$1 sivu|$1 sivua}.
+page_update:Selailee sivua
+pm_export_header:Yksityisviestit käyttäjälle {VAR: usr->alias}
+pm_export_footer:Viety:
+karma:Karma
+karma_track:Hallinnoi käyttäjän mainetta:
+karma_delete:Poista
+rate_author:Arvostele tekijä:
+blog:Blogi
+blog_new_members:Uudet jäsenet
+blog_comments:{PLURAL: topic->replies|$1 kommentti|$1 kommenttia}

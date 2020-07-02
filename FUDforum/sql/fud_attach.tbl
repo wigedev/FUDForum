@@ -1,0 +1,25 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_attach.tbl 5081 2010-11-22 18:00:24Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}attach;
+
+CREATE TABLE {SQL_TABLE_PREFIX}attach
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	location	VARCHAR(255),
+	original_name	VARCHAR(255),
+	owner		INT NOT NULL DEFAULT 0,
+	attach_opt	INT NOT NULL DEFAULT 0,
+	message_id	INT NOT NULL DEFAULT 0,
+	dlcount		INT NOT NULL DEFAULT 0,
+	mime_type	INT NOT NULL DEFAULT 0,
+	fsize		INT NOT NULL DEFAULT 0
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}attach_i_mp ON {SQL_TABLE_PREFIX}attach (message_id, attach_opt);

@@ -1,0 +1,166 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: finduser.tmpl 6249 2019-02-24 15:48:09Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: finduser.php.t; output: finduser.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: rev_fmt.tmpl}
+{REF: alt_var.tmpl}
+{REF: ulink.tmpl}
+
+{PAGE: FINDUSER_PAGE user search form}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+<br />{TEMPLATE-DATA: admin_cp}
+<form method="get" id="fufrm" action="{TEMPLATE: FINDUSER_PAGE_lnk3}">{DEF: _hs}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="3">{MSG: finduser_user_info}</th>
+</tr>
+<tr class="RowStyleA">
+	<td class="GenText">{MSG: finduser_by_login}</td>
+	<td class="GenText">
+		<input type="text" name="usr_login" tabindex="1" value="{FUNC: char_fix(htmlspecialchars($usr_login))}" />
+		<input type="submit" class="button" tabindex="2" name="btn_submit" value="{MSG: finduser_submit}" /></td>
+		<td class="RowStyleC SmallText vt">{MSG: finduser_help}
+	</td>
+</tr>
+</table>
+<input type="hidden" name="t" value="finduser" />
+</form>
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	{IF: $GLOBALS['FUD_OPT_3'] & 524288}<th width="1"><a class="thLnk" href="{TEMPLATE: FINDUSER_PAGE_lnk4}" rel="nofollow">{MSG: finduser_flag}</a></th>{ENDIF}
+	<th class="wa"><a class="thLnk" href="{TEMPLATE: FINDUSER_PAGE_lnk}" rel="nofollow">{MSG: finduser_user}</a></th>
+	<th class="nw hide2"><a href="{TEMPLATE: FINDUSER_PAGE_lnk1}" class="thLnk" rel="nofollow">{MSG: finduser_postcount}</a></th>
+	<th class="nw hide2"><div class="ac"><a href="{TEMPLATE: FINDUSER_PAGE_lnk2}" class="thLnk" rel="nofollow">{MSG: finduser_joindate}</a></div></th>
+	<th class="ac">{MSG: finduser_action}</th>
+	{IF: $is_a}{TEMPLATE: findu_admin_opts_header}{ENDIF}
+</tr>
+{TEMPLATE-DATA: find_user_data}
+</table>
+{TEMPLATE-DATA: pager}
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script>
+	document.forms['fufrm'].usr_login.focus();
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: find_user_no_results}
+<tr class="RowStyleA">
+	<td colspan="{IF: $is_a}5{ELSE}4{ENDI}" class="wa GenText">{MSG: finduser_no_such_user}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: find_user_entry}
+<tr class="{ALT-VAR: finduser_alt RowStyleA RowStyleB}">
+	{IF: $GLOBALS['FUD_OPT_3'] & 524288}<td>{IF: $r->flag_cc}<img src="{BASE}images/flags/{VAR: r->flag_cc}.png" border="0" width="16" height="11" alt="{VAR: r->flag_country}" title="{VAR: r->flag_country}" />{ENDIFI}</td>{ENDIFI}
+	<td class="nw GenText"><a href="{TEMPLATE: find_user_entry_lnk}">{FUNC: draw_user_link($r->alias, $r->users_opt, $r->custom_color)}</a>{IF: $r->users_opt & 131072}{ELSE}{TEMPLATE: findu_no_conf}{END}</td>
+	<td class="ac nw hide2">{VAR: r->posted_msg_count}</td>
+        <td class="DateText nw hide2">{TEMPLATE: finduser_join_date}</td>
+        <td class="nw GenText">{TEMPLATE: action_field}</td>
+	{IF: $is_a}{TEMPLATE: findu_admin_opts}{ENDIF}
+</tr>
+{SECTION: END}
+
+{SECTION: action_field lists things that can be done with a user}
+<a href="{TEMPLATE: action_field_lnk}"><img alt="" src="{THEME_IMAGE_ROOT}/show_posts.gif" /></a>
+{IF: ($FUD_OPT_2 & 1073741824 && $r->users_opt & 16)}{TEMPLATE: email_link}{ENDIF}
+{IF: ($FUD_OPT_1 & 1024 && _uid)}{TEMPLATE: pm_link}{ENDIF}
+{IF: $r->home_page}{TEMPLATE: homepage_link}{ENDIF}
+{SECTION: END}
+
+{SECTION: pm_link}
+<a href="{TEMPLATE: pm_link_lnk}"><img src="{THEME_IMAGE_ROOT}/msg_pm.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: homepage_link}
+<a href="{VAR: r->home_page}" rel="nofollow"><img alt="" src="{THEME_IMAGE_ROOT}/homepage.gif" /></a>
+{SECTION: END}
+
+{SECTION: email_link}
+<a href="{TEMPLATE: email_link_lnk}" rel="nofollow"><img src="{THEME_IMAGE_ROOT}/msg_email.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: finduser_title}
+{MSG: finduser_title}
+{SECTION: END}
+
+{SECTION: finduser_update}
+{MSG: finduser_update}
+{SECTION: END}
+
+{SECTION: findu_admin_opts_header}
+<th class="nw">{MSG: findu_admin_opts_header}</th>
+{SECTION: END}
+
+{SECTION: findu_unban}
+<a href="{BASE}adm/admuser.php?act=block&amp;usr_id={VAR: r->id}&amp;S={DEF: s}&amp;SQ={GVAR: sq}">{MSG: findu_unban}</a>
+{SECTION: END}
+
+{SECTION: findu_ban}
+<a href="{BASE}adm/admuser.php?act=block&amp;usr_id={VAR: r->id}&amp;S={DEF: s}&amp;SQ={GVAR: sq}">{MSG: findu_ban}</a>
+{SECTION: END}
+
+{SECTION: findu_admin_opts}
+<td class="SmallText nw">
+	<a href="{BASE}adm/admuser.php?usr_id={VAR: r->id}&amp;S={DEF: s}&amp;act=1&amp;SQ={GVAR: sq}">{MSG: findu_edit}</a> ||
+	<a href="{BASE}adm/admuser.php?usr_id={VAR: r->id}&amp;S={DEF: s}&amp;act=del&amp;f=1&amp;SQ={GVAR: sq}">{MSG: findu_delete}</a> ||
+	{IF: $r->users_opt & 65536}{TEMPLATE: findu_unban}{ELSE}{TEMPLATE: findu_ban}{END}
+</td>
+{SECTION: END}
+
+{SECTION: find_user_entry_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: pm_link_lnk}
+{ROOT}?t=ppost&amp;{DEF: _rsid}&amp;toi={VAR: r->id}
+{SECTION: END}
+
+{SECTION: email_link_lnk}
+{ROOT}?t=email&amp;toi={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk}
+{ROOT}?t=finduser&amp;usr_login={VAR-URL: usr_login}&amp;us={IF: isset($_GET['us']) && !($_GET['us'] % 2)}1{ELSE}2{ENDI}&amp;btn_submit=Find&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk1}
+{ROOT}?t=finduser&amp;usr_login={VAR-URL: usr_login}&amp;{DEF: _rsid}&amp;pc={IF: isset($_GET['pc']) && !($_GET['pc'] % 2)}1{ELSE}2{ENDI}&amp;btn_submit=Find
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk2}
+{ROOT}?t=finduser&amp;usr_login={VAR-URL: usr_login}&amp;{DEF: _rsid}&amp;rd={IF: isset($_GET['rd']) && !($_GET['rd'] % 2)}1{ELSE}2{ENDI}&amp;btn_submit=Find
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk4}
+{ROOT}?t=finduser&amp;usr_login={VAR-URL: usr_login}&amp;{DEF: _rsid}&amp;fl={IF: isset($_GET['fl']) && !($_GET['fl'] % 2)}1{ELSE}2{ENDI}&amp;btn_submit=Find
+{SECTION: END}
+
+{SECTION: action_field_lnk}
+{ROOT}?t=showposts&amp;id={VAR: r->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk3}
+{ROOT}
+{SECTION: END}
+
+{SECTION: findu_no_conf}
+&nbsp;&nbsp;({MSG: findu_no_conf})
+{SECTION: END}

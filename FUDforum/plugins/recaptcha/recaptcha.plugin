@@ -1,0 +1,93 @@
+<?php
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: recaptcha.plugin 6145 2018-04-09 18:36:38Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin.
+plugin_add_hook('CAPTCHA',          'plugin_recaptcha_display');
+plugin_add_hook('CAPTCHA_VALIDATE', 'plugin_recaptcha_validate');
+
+// Display recaptcha image
+function plugin_recaptcha_display() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'recaptcha/recaptcha.ini') === false) {
+		die('ERROR: Please configure the Recaptcha plugin from the Plugin Manager Control panel.');
+	}
+
+	$html = '<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<div class="g-recaptcha" data-sitekey="'. $ini['RECAPTCHA_PUBKEY'] .'"></div>';
+
+	return $html;
+}
+
+// Validate user response
+function plugin_recaptcha_validate($array) {
+	require_once($GLOBALS['PLUGIN_PATH'] .'recaptcha/recaptcha.ini');
+
+	$url = 'https://www.google.com/recaptcha/api/siteverify';
+	$data = array(
+		'secret' => $ini['RECAPTCHA_PRIVKEY'],
+		'response' => $_POST['g-recaptcha-response']
+	);
+	$options = array(
+		'http' => array (
+			'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+			'method' => 'POST',
+			'content' => http_build_query($data)
+		)
+	);
+	$context = stream_context_create($options);
+	$verify = file_get_contents($url, false, $context);
+	$captcha_success = json_decode($verify);
+
+	if ($captcha_success->success == TRUE) {
+		return 1;
+	}
+	return 0;
+}
+
+function recaptcha_info() {
+	return array('name' => 'Recaptcha',
+	             'desc' => 'This plugin, if enabled, will use the recaptcha service instead of FUDforum\'s default captcha challenge.',
+		     'cat'  => 'Anti-spam',
+		     'version' => '2.0');
+}
+
+function recaptcha_enable() {
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'recaptcha/recaptcha.ini') === false) {
+		return array(null, 'Please configure the recaptcha plugin before enabling it.');	// OK, Err.
+	}
+}
+
+// Configuration via the Admin Control Panel
+function recaptcha_config() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'recaptcha/recaptcha.ini') === false) {
+		$ini = NULL;
+	}
+		
+	if (isset($_POST['Set'])) {
+		foreach (array_keys($_POST) as $key) {
+			if (substr($key,0,10) == 'RECAPTCHA_') {
+				$ini[$key] = $_POST[$key];
+			}
+		}
+		$fp = fopen($GLOBALS['PLUGIN_PATH'] .'recaptcha/recaptcha.ini', 'w');
+		fwrite($fp, '<?php $ini = '. var_export($ini, 1) .'; ?>');
+		fclose($fp);
+		pf(successify('Settings successfully saved.'));
+	}
+	?>
+<p>Your Recaptcha secret key (get one from <a href="https://www.google.com/recaptcha/admin/create">recaptcha.net</a>):<br />
+<input name="RECAPTCHA_PRIVKEY" value="<?php echo $ini['RECAPTCHA_PRIVKEY'] ?>" size="50" /></p>
+
+<p>Your Recaptcha public site key:<br />
+<input name="RECAPTCHA_PUBKEY" value="<?php echo $ini['RECAPTCHA_PUBKEY'] ?>" size="50" /></p>
+
+	<?php
+}
+

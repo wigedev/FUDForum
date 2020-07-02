@@ -1,0 +1,29 @@
+#   copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_themes.tbl 6103 2017-12-11 15:25:50Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}themes;
+
+CREATE TABLE {SQL_TABLE_PREFIX}themes
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name		VARCHAR(255),
+	theme		VARCHAR(255),
+	lang		VARCHAR(255),
+	locale		VARCHAR(32),
+	pspell_lang	VARCHAR(32),
+	theme_opt	INT NOT NULL DEFAULT 1
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}themes_i_t ON {SQL_TABLE_PREFIX}themes (theme_opt);
+
+# 1 enabled
+# 2 t_default
+# 4 path_info
+# 8 no_index_url
+

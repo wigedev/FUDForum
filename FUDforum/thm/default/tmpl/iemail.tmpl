@@ -1,0 +1,130 @@
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: iemail.tmpl 6244 2019-02-10 07:07:03Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: iemail.inc.t; output: iemail.inc;}
+{REF: rev_fmt.tmpl}
+{REF: smtp.tmpl}
+
+{SECTION: iemail_body}
+{TEMPLATE: header_plain}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr class="RowStyleB">
+	<td width="33%">{MSG: iemail_msg_subject}</td>
+	<td width="33%">{MSG: iemail_msg_author}</td>
+	<td width="33%">{MSG: iemail_msg_date}</td>
+</tr>
+<tr class="RowStyleA">
+	<td colspan="3">
+		{TEMPLATE-DATA: iemail_poll}
+		{TEMPLATE-DATA: body}
+		{TEMPLATE-DATA: iemail_attach}
+	</td>
+</tr>
+<tr class="RowStyleB">
+	<td colspan="3">
+		[ <a href="{TEMPLATE: iemail_body_lnk}">{MSG: iemail_msg_reply}</a> ][ <a href="{TEMPLATE: iemail_body_lnk}&quote=true">{MSG: iemail_msg_quote}</a> ][ <a href="{TEMPLATE: iemail_body_lnk1}">{MSG: iemail_msg_view}</a> ]{TEMPLATE-DATA: iemail_unsub}
+	</td>
+</tr>
+</table>
+{TEMPLATE: footer_plain}
+{SECTION: END}
+
+{SECTION: iemail_poll_tbl}
+<table cellspacing="1" cellpadding="2" class="PollTable">
+<tr>
+	<th colspan="3">{VAR: obj->poll_name}
+		<img src="{BASE}blank.gif" alt="" height="1" width="10" class="nw" />
+		<span class="small">[ {MSG: num_votes} ]</span>
+	</th>
+</tr>
+{TEMPLATE-DATA: iemail_poll}
+</table>
+<br /><br />
+{SECTION: END}
+
+{SECTION: iemail_poll_result}
+<tr class="{ALT-VAR: msg_poll_alt_clr RowStyleB RowStyleA}">
+	<td>{VAR: k}.</td>
+	<td>{VAR: v[0]}</td>
+	<td>
+		<img src="{THEME_IMAGE_ROOT}/poll_pix.gif" alt="" height="10" width="{VAR: length}" />
+		{VAR: v[1]} / {VAR: length}%
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: iemail_attach the file attachments list}
+<br /><br />
+<table border="0" cellspacing="0" cellpadding="2">
+	{TEMPLATE-DATA: iemail_attach}
+</table>
+{SECTION: END}
+
+{SECTION: iemail_attach_entry file attachment entry row}
+<tr>
+	<td class="vm"><a href="{TEMPLATE: iemail_attach_entry_lnk}"><img alt="" src="{BASE}images/mime/{VAR: v[4]}" /></a></td>
+	<td>
+		<span class="GenText fb">{MSG: attachment}</span> <a href="{TEMPLATE: iemail_attach_entry_lnk}">{VAR: v[1]}</a><br />
+		<span class="SmallText">({MSG: size} {VAR: sz}, {MSG: download_counter})</span>
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: iemail_thr_subject}
+{MSG: iemail_thr_subject}
+{SECTION: END}
+
+{SECTION: iemail_thr_bodyemail}
+{MSG: iemail_thr_bodyemail}
+{SECTION: END}
+
+{SECTION: iemail_frm_subject}
+{MSG: iemail_frm_subject}
+{SECTION: END}
+
+{SECTION: iemail_frm_bodyemail}
+{MSG: iemail_frm_bodyemail}
+{SECTION: END}
+
+{SECTION: iemail_participate}
+{MSG: iemail_participate}
+{SECTION: END}
+
+{SECTION: iemail_thread_unsub}
+[ <a href="{TEMPLATE: iemail_thread_unsub_lnk}">{MSG: iemail_thread_unsub}</a> ]
+{SECTION: END}
+
+{SECTION: iemail_forum_unsub}
+[ <a href="{TEMPLATE: iemail_forum_unsub_lnk}">{MSG: iemail_forum_unsub}</a> ]
+{SECTION: END}
+
+{SECTION: iemail_thread_unsub_lnk}
+{FULL_ROOT}?t=rview&th={VAR: id}
+{SECTION: END}
+
+{SECTION: iemail_forum_unsub_lnk}
+{FULL_ROOT}?t=rview&frm_id={VAR: id}
+{SECTION: END}
+
+{SECTION: iemail_body_lnk}
+{FULL_ROOT}?t=post&reply_to={VAR: obj->id}
+{SECTION: END}
+
+{SECTION: iemail_body_lnk1}
+{FULL_ROOT}?t=rview&goto={VAR: obj->id}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: iemail_attach_entry_lnk}
+{FULL_ROOT}?t=getfile&amp;id={VAR: v[0]}
+{SECTION: END}
+
+{SECTION: iemail_CHARSET}
+{CHARSET}
+{SECTION: END}

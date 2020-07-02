@@ -1,0 +1,28 @@
+#   copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_announce.tbl 6179 2018-07-25 10:56:59Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}announce;
+
+CREATE TABLE {SQL_TABLE_PREFIX}announce
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	date_started	BIGINT NOT NULL DEFAULT 0,
+	date_ended	BIGINT NOT NULL DEFAULT 0,
+
+	subject		VARCHAR(255) NOT NULL DEFAULT '',
+	text		TEXT NOT NULL,
+	ann_opt		INT NOT NULL DEFAULT 0
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}announce_i_dd ON {SQL_TABLE_PREFIX}announce (date_started, date_ended);
+
+# Opts
+# 1 show on front page (ON/OFF)
+# 2 show to logged in users
+# 4 show to anonymous users

@@ -1,0 +1,146 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: ignore_list.tmpl 5363 2011-08-26 00:36:25Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: ignore_list.php.t; output: ignore_list.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: ignore.tmpl}
+{REF: return.tmpl}
+{REF: tabs.tmpl}
+{REF: alt_var.tmpl}
+
+{SECTION: homepage_link}
+<a href="{VAR: r[6]}"><img src="{THEME_IMAGE_ROOT}/homepage.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: email_link}
+<a href="{TEMPLATE: email_link_lnk}" rel="nofollow"><img src="{THEME_IMAGE_ROOT}/msg_email.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: ignore_user info about an ignored user}
+<tr class="{ALT-VAR: ignore_alt RowStyleA RowStyleB}">
+	<td class="GenText wa"><a href="{TEMPLATE: ignore_user_lnk}">{VAR: r[3]}</a>&nbsp;<span class="SmallText">(<a href="{TEMPLATE: ignore_user_lnk1}">{MSG: buddy_remove}</a>)</span></td>
+	<td class="ac">{VAR: r[5]}</td>
+	<td class="ac nw">{TEMPLATE: ignore_list_date}</td>
+	<td class="GenText nw"><a href="{TEMPLATE: ignore_user_lnk2}"><img src="{THEME_IMAGE_ROOT}/show_posts.gif" alt="" /></a> {IF: $FUD_OPT_2 & 1073741824}{TEMPLATE: email_link}{ENDIF}{IF: $r[6]}{TEMPLATE: homepage_link}{ENDIF}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: ignore_anon_user info about an ignored user}
+<tr class="{ALT-VAR: ignore_alt RowStyleA RowStyleB}">
+	<td colspan="4" class="wa GenText"><span class="anon">{GVAR: ANON_NICK}</span>&nbsp;<span class="SmallText">(<a href="{TEMPLATE: ignore_anon_user_lnk}">{MSG: buddy_remove}</a>)</span></td>
+</tr>
+{SECTION: END}
+
+{SECTION: ignore_list}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th>{MSG: ignore_users}</th>
+	<th class="nw ac">{MSG: referals_post_count}</th>
+	<th class="nw ac">{MSG: referals_registered_on}</th>
+	<th class="nw ac">{MSG: referals_action}</th>
+</tr>
+{TEMPLATE-DATA: ignore_list}
+</table>
+{SECTION: END}
+
+{PAGE: IGNORELIST_PAGE ignore users control panel}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: tabs}
+{TEMPLATE-DATA: ignore_list}
+<br /><br />
+<form id="buddy_add" action="{TEMPLATE: IGNORELIST_PAGE_lnk3}" method="post">{DEF: _hs}<div class="ctb">
+<table cellspacing="1" cellpadding="2" class="MiniTable">
+<tr>
+	<th class="nw">{MSG: add_ignore}</th>
+</tr>
+<tr class="RowStyleA">
+	<td class="GenText nw Smalltext">
+		{MSG: buddy_search}{IF: ($FUD_OPT_1 & (8388608|4194304))}{TEMPLATE: ignore_member_search}{ENDIF}<br /><br />
+		<input type="text" name="add_login" id="add_login" tabindex="1" value="" maxlength="100" size="25" />
+		<input tabindex="2" type="submit" class="button" name="submit" value="{MSG: add}" />
+	</td>
+</tr>
+</table></div></form>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script>
+	document.forms['buddy_add'].add_login.focus();
+</script>
+
+<style>
+	.ui-autocomplete-loading { background: white url("{THEME_IMAGE_ROOT}/ajax-loader.gif") right center no-repeat; }
+</style>
+<script>
+	jQuery(function() {
+		jQuery("#add_login").autocomplete({
+			source: "index.php?t=autocomplete&lookup=alias", minLength: 1
+		});
+	});
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: ignore_list_err_info_title}
+{MSG: ignore_list_err_info_title}
+{SECTION: END}
+
+{SECTION: ignore_list_err_dup_msg}
+{MSG: ignore_list_err_dup_msg}
+{SECTION: END}
+
+{SECTION: ignore_list_err_nu_title}
+{MSG: ignore_list_err_nu_title}
+{SECTION: END}
+
+{SECTION: ignore_list_err_nu_msg}
+{MSG: ignore_list_err_nu_msg}
+{SECTION: END}
+
+{SECTION: ignore_list_cantign_msg}
+{MSG: ignore_list_cantign_msg}
+{SECTION: END}
+
+{SECTION: ignore_list_update}
+{MSG: ignore_list_update}
+{SECTION: END}
+
+{SECTION: ignore_member_search}
+<br />{MSG: member_search}
+{SECTION: END}
+
+{SECTION: email_link_lnk}
+{ROOT}?t=email&amp;toi={VAR: r[2]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ignore_user_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: r[2]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ignore_user_lnk1}
+{ROOT}?t=ignore_list&amp;del={VAR: r[0]}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: ignore_user_lnk2}
+{ROOT}?t=showposts&amp;{DEF: _rsid}&amp;id={VAR: r[2]}
+{SECTION: END}
+
+{SECTION: ignore_anon_user_lnk}
+{ROOT}?t=ignore_list&amp;del={VAR: r[1]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: IGNORELIST_PAGE_lnk3}
+{ROOT}?t=ignore_list
+{SECTION: END}

@@ -1,0 +1,58 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: finduser.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: finduser.php.t; output: finduser.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: rev_fmt.tmpl}
+{REF: alt_var.tmpl}
+{REF: ulink.tmpl}
+
+{SECTION: FINDUSER_PAGE_lnk}
+{ROOT}/ml/{IF: isset($_GET['us']) && !($_GET['us'] % 2)}3{ELSE}4{ENDI}/0/{VAR: ul}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk1}
+{ROOT}/ml/{IF: isset($_GET['pc']) && !($_GET['pc'] % 2)}1{ELSE}2{ENDI}/0/{VAR: ul}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk2}
+{ROOT}/ml/{IF: isset($_GET['rd']) && !($_GET['rd'] % 2)}5{ELSE}6{ENDI}/0/{VAR: ul}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk4}
+{ROOT}/ml/{IF: isset($_GET['fl']) && !($_GET['fl'] % 2)}7{ELSE}8{ENDI}/0/{VAR: ul}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: FINDUSER_PAGE_lnk3}
+{ROOT}
+{SECTION: END}
+
+{SECTION: find_user_entry_lnk}
+{ROOT}/u/{VAR: r->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: action_field_lnk}
+{ROOT}/sp/{VAR: r->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: pm_link_lnk}
+{ROOT}/pmm/toi/{VAR: r->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: email_link_lnk}
+{ROOT}/em/{VAR: r->id}/{DEF: _rsid}
+{SECTION: END}

@@ -1,0 +1,58 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_pmsg.tbl 5505 2012-06-06 17:38:29Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}pmsg;
+
+CREATE TABLE {SQL_TABLE_PREFIX}pmsg
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	to_list		TEXT,
+	ouser_id	INT NOT NULL DEFAULT 0,
+	duser_id	INT NOT NULL DEFAULT 0,
+	pdest		INT NOT NULL DEFAULT 0,
+	ip_addr		VARCHAR(46) NOT NULL DEFAULT '::1',
+	host_name	VARCHAR(255),
+	post_stamp	BIGINT NOT NULL DEFAULT 0,
+	read_stamp	BIGINT NOT NULL DEFAULT 0,
+
+	icon		VARCHAR(100),
+
+	subject		VARCHAR(255) NOT NULL DEFAULT '',
+	attach_cnt	INT NOT NULL DEFAULT 0,
+
+	foff		BIGINT NOT NULL DEFAULT 0,
+	length		INT NOT NULL DEFAULT 0,
+
+	ref_msg_id	VARCHAR(11),
+	fldr		INT NOT NULL DEFAULT 0,
+	pmsg_opt	INT NOT NULL DEFAULT 49
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}pmsg_i_dfr ON {SQL_TABLE_PREFIX}pmsg (duser_id, fldr, read_stamp); # general message retrival
+CREATE INDEX {SQL_TABLE_PREFIX}pmsg_i_dfi ON {SQL_TABLE_PREFIX}pmsg (duser_id, fldr, id); # used for the previous/next links on drawpmsg
+
+# Forum lock table for PM's.
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}fl_pm;
+CREATE TABLE {SQL_TABLE_PREFIX}fl_pm (id INT);
+
+# folder_id -> fldr
+# 0 PROC
+# 1 INBOX
+# 2 SAVED
+# 3 SENT
+# 4 DRAFT
+# 5 TRASH
+
+# 1 show_sig
+# 2 smiley_disabled
+# 4 track
+# 8 track SENT
+# 16 mailed
+# 32 new message?
+# 64 reply/forwarded message?

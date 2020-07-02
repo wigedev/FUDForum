@@ -1,0 +1,43 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: search.tmpl 6295 2019-06-09 17:38:49Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: search.php.t; output: search.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: show.tmpl}
+{REF: rev_fmt.tmpl}
+{REF: draw_pager.tmpl}
+{REF: alt_var.tmpl}
+{REF: draw_radio_opt.tmpl}
+{REF: draw_select_opt.tmpl}
+{REF: fileio.tmpl}
+{REF: search_forum_sel.tmpl}
+{REF: isearch.tmpl}
+
+{SECTION: search_entry_lnk}
+{ROOT}/m/{VAR: r->id}/{DEF: _rsid}?srch={VAR-URL: srch}#msg_{VAR: r->id}
+{SECTION: END}
+
+{SECTION: search_entry_lnk1}
+{ROOT}/f/{VAR: r->forum_id}-{VAR-SEO: r->forum_name}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: registered_poster_lnk}
+{ROOT}/u/{VAR: r->poster_id}-{VAR-SEO: r->alias}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: SEARCH_PAGE_lnk3}
+{ROOT}/s/
+{SECTION: END}

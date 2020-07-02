@@ -1,0 +1,45 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: buddy_list.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: buddy_list.php.t; output: buddy_list.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: buddy.tmpl}
+{REF: return.tmpl}
+{REF: tabs.tmpl}
+{REF: alt_var.tmpl}
+
+{SECTION: pm_link_lnk}
+{ROOT}/pmm/toi/{VAR: r[0]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: email_link_lnk}
+{ROOT}/em/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: buddy_lnk}
+{ROOT}/bl/{VAR: r[0]}/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: buddy_lnk1}
+{ROOT}/u/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: buddy_lnk2}
+{ROOT}/sp/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: BUDDYLIST_PAGE_lnk3}
+{ROOT}/bl/{DEF: _rsid}
+{SECTION: END}

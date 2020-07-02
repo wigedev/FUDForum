@@ -1,0 +1,57 @@
+/**
+* copyright            : (C) 2001-2016 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: usrinfo.tmpl 6013 2016-12-30 18:04:56Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: usrinfo.php.t; output: usrinfo.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: rev_fmt.tmpl}
+{REF: is_perms.tmpl}
+{REF: alt_var.tmpl}
+{REF: allowed_user_lnk.tmpl}
+
+{SECTION: userinfo_last_post_lnk}
+{ROOT}/m/{VAR: r[1]}/{DEF: _rsid}#msg_{VAR: r[1]}
+{SECTION: END}
+
+{SECTION: email_form_link_lnk}
+{ROOT}/em/{VAR: u->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: usrinfo_last_ip_lnk}
+{ROOT}/ip/i/{VAR: u->last_used_ip}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: usrinfo_private_msg_lnk}
+{ROOT}/pmm/toi/{VAR: u->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: referals_lnk}
+{ROOT}/lr/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: moderation_entry_lnk}
+{ROOT}/f/{VAR: r[0]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: USERINFO_PAGE_lnk}
+{ROOT}/sp/{VAR: u->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: polls_lnk}
+{ROOT}/pl/{VAR: u->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ui_buddy_lnk}
+{ROOT}/bl/{VAR: u->id}/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}

@@ -1,0 +1,36 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: polllist.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: polllist.php.t; output: polllist.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: alt_var.tmpl}
+{REF: draw_pager.tmpl}
+{REF: stats.tmpl}
+
+{SECTION: vote_lnk_lnk}
+{ROOT}/pv/{VAR: obj->id}/0/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: poll_entry_lnk}
+{ROOT}/u/{VAR: obj->owner}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: poll_view_res_lnk_lnk}
+{ROOT}/pv/{VAR: obj->id}/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: POLLLIST_PAGE_lnk}
+{ROOT}/pl/0/{VAR: start}/{VAR: oby_rev_val}/{DEF: _rsid}
+{SECTION: END}

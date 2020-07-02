@@ -1,0 +1,55 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: smladd.tmpl 5325 2011-07-15 14:14:17Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: smladd.php.t; output: smladd.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: alt_var.tmpl}
+
+{PAGE: SMLLIST_PAGE}
+{TEMPLATE: header_plain}
+<table cellspacing="1"  cellpadding="0" width="100%" class="dashed">
+<tr>
+	<th>{MSG: sml_emoticon}</th>
+	<th>{MSG: sml_code}</th>
+</tr>
+{IF: $smileys}{TEMPLATE-DATA: smileys}{ELSE}{MSG: sml_no_smilies}{END}
+<tr>
+	<td colspan="2" class="ac RowStyleC">[<a href="javascript://" onclick="window.close();">{MSG: smladd_close_window}</a>]</td>
+</tr>
+</table>
+<script>
+function insertSmiley(txt)
+{
+	var t = window.opener.document.getElementById('txtb');
+	if (window.opener.document.selection) { // IE
+		window.opener.document.selection.createRange();	
+		if (t.createTextRange && t.caretPos) {
+			var caretPos = t.caretPos;
+			caretPos.text = txt + caretPos.text;
+		} else {
+			t.value += txt;
+		}
+	} else {
+		var n = t.value.substring(0, t.selectionStart) + txt + t.value.substring(t.selectionStart, t.value.length);
+		t.value = n;
+	}
+}
+</script>
+{TEMPLATE: footer_plain}
+{PAGE: END}
+
+{SECTION: sml_smiley_row}
+<tr class="vb {ALT-VAR: sml_alt RowStyleA RowStyleB}">
+	<td><a href="javascript: insertSmiley(\' {VAR: PS_DST[$k]} \',\'\');">{VAR: v}</a></td>
+	<td>{VAR: PS_DST[$k]}</td>
+</tr>
+{SECTION: END}

@@ -1,0 +1,83 @@
+<?php
+/**
+* copyright            : (C) 2001-2013 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: google_analytics.plugin 6370 2020-02-19 19:14:35Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin.
+plugin_add_hook('COMPILER_FINALIZE_PAGE', 'plugin_google_analytics');
+
+function plugin_google_analytics($array) {
+	list($html, $page) = $array;
+
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'google/google_analytics.ini') === false) {
+		die('ERROR: Please configure the google_analytics plugin from the Plugin Manager Control panel.');
+	}
+
+	$google_code = '
+<script>
+// Google analytics.
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "'. $ini['GOOGLE_ANALYTICS_CODE'] .'"]);
+  _gaq.push(["_trackPageview"]);
+  (function() {
+    var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+    ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+';
+
+	// Change HTML and send it back to the compiler.
+	$html = str_replace('</body>', $google_code .'</body>', $html);
+
+	return array($html, $page);
+}
+
+function google_analytics_info() {
+	return array('name' => 'Google Analytics',
+				'desc' => 'Insert Google Anlytics tracking code into your forum\'s Web pages.',
+				'cat'  => 'Third-party Integration',
+				'version' => '1.0');
+}
+
+function google_analytics_enable() {
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'google/google_analytics.ini') === false) {
+		return array(null, 'Please configure the google_analytics plugin before enabling it.');	// OK, Err.
+	}
+	@define('REBUILD_THEMES', 1);
+}
+
+function google_analytics_disable() {
+	@define('REBUILD_THEMES', 1);
+}
+
+function google_analytics_config() {
+	if ((@include $GLOBALS['PLUGIN_PATH'] .'google/google_analytics.ini') === false) {
+		$ini = NULL;
+	}
+
+	if (isset($_POST['Set'])) {
+		foreach (array_keys($_POST) as $key) {
+			if (substr($key, 0 ,17) == 'GOOGLE_ANALYTICS_') {
+				$ini[$key] = trim($_POST[$key]);
+			}
+		}
+		$fp = fopen($GLOBALS['PLUGIN_PATH'] .'google/google_analytics.ini', 'w');
+		fwrite($fp, '<?php $ini = '. var_export($ini, 1) .'; ?>');
+		fclose($fp);
+		pf(successify('Settings successfully saved.'));
+		compile_themes();
+	}
+	?>
+<p>Your site's tracking code (get one from <a href="http://www.google.com/analytics/">google.com/analytics</a>):<br />
+<input name="GOOGLE_ANALYTICS_CODE" value="<?php echo $ini['GOOGLE_ANALYTICS_CODE'] ?>" size="60" /><br />
+<font size="-1">For example UA-9999999-9.</font></p>
+	<?php
+}
+

@@ -1,0 +1,145 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: threadt.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: threadt.php.t; output: threadt.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: forumsel.tmpl}
+{REF: show.tmpl}
+{REF: forum_notify.tmpl}
+{REF: thread_view_common.tmpl}
+
+{SECTION: flat_view_lnk}
+{ROOT}?t=thread&amp;frm_id={VAR: frm->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: flat_view switch to flat view link}
+<a href="{TEMPLATE: flat_view_lnk}"><img alt="{MSG: flat_view}" title="{MSG: flat_view}" src="{THEME_IMAGE_ROOT}/flat_view.gif" /></a>
+{SECTION: END}
+
+{SECTION: thread_icon}
+<img src="{BASE}images/message_icons/{VAR: cur->icon}" alt="{VAR: cur->icon}" />
+{SECTION: END}
+
+{SECTION: unreg_user_link}
+{GVAR: ANON_NICK}
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: cur->poster_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: reg_user_link}
+<a href="{TEMPLATE: reg_user_link_lnk}">{VAR-HTML: cur->alias}</a>
+{SECTION: END}
+
+{SECTION: thread_row_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: cur->id}&amp;{DEF: _rsid}#msg_{VAR: cur->id}
+{SECTION: END}
+
+{SECTION: thread_row}
+<tr>
+	<td class="RowStyleB">{TEMPLATE-DATA: thread_read_status}</td>
+	<td class="RowStyleB">{IF: $cur->icon}{TEMPLATE: thread_icon}{ELSE}{TEMPLATE: thread_icon_none}{END}</td>
+	<td title="{VAR: cur->tdescr}" class="tt" style="padding-left: {FUNC: (20 * ($lev - 1))}px">
+		{IF: $cur->poll_id}{TEMPLATE: thread_poll_indicator}{ENDIF}
+		{IF: $cur->attach_cnt}{TEMPLATE: thread_attach_indicator}{ENDIF}
+		<a href="{TEMPLATE: thread_row_lnk}" class="big">{VAR: cur->subject}</a>
+		{IF: ($lev == 1 && $cur->thread_opt > 1)}{IF: $cur->thread_opt & 4}{TEMPLATE: sticky}{ELSE}{TEMPLATE: announcement}{END}{ENDIF}
+		<div class="TopBy">{MSG: by} {IF: $cur->poster_id}{TEMPLATE: reg_user_link}{ELSE}{TEMPLATE: unreg_user_link}{END} {MSG: thread_on} {TEMPLATE: threadt_msg_post_date}</div>
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: thread_row_moved a row indicating that the thread has been moved}
+<tr>
+	<td class="RowStyleB">&nbsp;</td>
+	<td class="RowStyleB"><img src="{THEME_IMAGE_ROOT}/moved.png" title="{MSG: moved_thread_message}" alt="" /></td>
+	<td class="tt">{MSG: was_moved_msg}</td>
+</tr>
+{SECTION: END}
+
+{SECTION: max_depth_reached_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: cur->id}&amp;{DEF: _rsid}#msg_{VAR: cur->id}
+{SECTION: END}
+
+{SECTION: max_depth_reached maximum allowed depth of thread reached}
+<tr>
+	<td class="RowStyleB" colspan="2">&nbsp;</td>
+	<td class="tt" style="padding-left: {FUNC: ($width += 20)}px"><a href="{TEMPLATE: max_depth_reached_lnk}" class="big">{MSG: threadt_more}</a></td>
+</tr>
+{SECTION: END}
+
+{SECTION: thread_list}
+<table cellspacing="0" cellpadding="2" class="ContentTable">
+	{TEMPLATE-DATA: announcements}
+	{TEMPLATE-DATA: thread_list_table_data}
+</table>
+{SECTION: END}
+
+{SECTION: thread_sep_e}
+</table></td></tr>
+{SECTION: END}
+
+{SECTION: thread_sep_s}
+<tr>
+	<td><table border="0" cellspacing="0" cellpadding="0" class="tt">
+{SECTION: END}
+
+{PAGE: THREAD_PAGE shows the threads in a particular forum}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: admin_cp}
+<table class="wa" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td class="al wa">{FUNC: draw_forum_path($frm->cat_id, $frm->name)}<br />{TEMPLATE: show_links}<br />{IF: _uid}{IF: $frm->subscribed}{TEMPLATE: unsubscribe_link}{ELSE}{TEMPLATE: subscribe_link}{ENDI}{ENDIF}{IF: (_uid && ($MOD || $frm->group_cache_opt & 2048))}{TEMPLATE: thread_merge_t}{ENDIF}</td>
+	<td class="GenText nw vb ar">{TEMPLATE: flat_view}&nbsp;{TEMPLATE: new_thread_link}</td>
+</tr>
+</table>
+{TEMPLATE: thread_list}
+<table border="0" cellspacing="0" cellpadding="0" class="wa">
+<tr>
+	<td class="vt">{TEMPLATE-DATA: page_pager}&nbsp;</td>
+	<td class="GenText nw vb ar">{TEMPLATE: flat_view}&nbsp;{TEMPLATE: new_thread_link}</td>
+</tr>
+</table>
+{FUNC: tmpl_create_forum_select((isset($frm->forum_id) ? $frm->forum_id : $frm->id), $usr->users_opt & 1048576)}
+{IF: _uid}{TEMPLATE: thread_mark_all_read}{ELSE}{TEMPLATE: thread_pdf_xml}{END}
+{TEMPLATE: thread_legend}
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: threadt_update}
+{MSG: threadt_update}
+{SECTION: END}
+
+{SECTION: threadt_disabled_ttl}
+{MSG: threadt_disabled_ttl}
+{SECTION: END}
+
+{SECTION: threadt_disabled_desc}
+{MSG: threadt_disabled_desc}
+{SECTION: END}
+
+{SECTION: sticky}
+<span class="StClr"> ({MSG: threadt_sticky})</span>
+{SECTION: END}
+
+{SECTION: announcement}
+<span class="AnClr"> ({MSG: threadt_announce})</span>
+{SECTION: END}

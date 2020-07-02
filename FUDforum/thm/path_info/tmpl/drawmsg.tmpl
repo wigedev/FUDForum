@@ -1,0 +1,126 @@
+/**
+* copyright            : (C) 2001-2012 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: drawmsg.tmpl 5460 2012-04-23 06:35:36Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: drawmsg.inc.t; output: drawmsg.inc;}
+{REF: fileio.tmpl}
+{REF: alt_var.tmpl}
+{REF: karma_show.tmpl}
+
+{SECTION: dmsg_prev_message_prev_page_lnk}
+{ROOT}/m/0/{VAR: obj->thread_id}/{FUNC: ($misc[0] - $misc[1])}/prevloaded{DEF: reveal_lnk}{DEF: unignore_tmp}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_tree_prev_message_prev_page_lnk}
+{ROOT}/mv/tree/{VAR: obj->thread_id}/{VAR: misc[0]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_next_message_next_page_lnk}
+{ROOT}/m/0/{VAR: obj->thread_id}/{FUNC: ($misc[0] + $misc[1])}/prevloaded{DEF: reveal_lnk}{DEF: unignore_tmp}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_tree_next_message_next_page_lnk}
+{ROOT}/mv/tree/{VAR: obj->thread_id}/{VAR: misc[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_lnk}
+{ROOT}/il/{VAR: obj->poster_id}/0/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_lnk2}
+{ROOT}{FUNC:  make_reveal_link($obj->id)}
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_lnk3}
+{ROOT}{FUNC: make_tmp_unignore_lnk($obj->poster_id)}
+{SECTION: END}
+
+{SECTION: dmsg_reg_user_link_lnk}
+{ROOT}/u/{VAR: obj->user_id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_buddy_link_add_lnk}
+{ROOT}/bl/{VAR: obj->user_id}/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_buddy_link_remove_lnk}
+{ROOT}/bl/{VAR: obj->user_id}/0/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_remove_user_ignore_list_lnk}
+{ROOT}/il/{VAR: obj->user_id}/0/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_add_user_ignore_list_lnk}
+{ROOT}/il/{VAR: obj->user_id}/1/{DEF: _rsid}?SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_im_icq_lnk}
+{ROOT}/u/{VAR: obj->poster_id}/{DEF: _rsid}#icq_msg
+{SECTION: END}
+
+{SECTION: dmsg_poll_lnk}
+{ROOT}{VAR: _SERVER['QUERY_STRING']}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: dmsg_drawmsg_file_attachment_lnk}
+{ROOT}/fa/{VAR: v[0]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_report_to_mod_link_lnk}
+{ROOT}/rm/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_user_profile_lnk}
+{ROOT}/u/{VAR: obj->user_id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_email_link_lnk}
+{ROOT}/em/{VAR: obj->user_id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_private_msg_link_lnk}
+{ROOT}/pmm/toi/{VAR: obj->user_id}/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_next_msg_page_lnk}
+{ROOT}/m/0/{VAR: obj->thread_id}/{FUNC: ($misc[0] + $misc[1])}/prevloaded{DEF: reveal_lnk}{DEF: unignore_tmp}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_delete_link_lnk}
+{ROOT}/d/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END} 
+
+{SECTION: dmsg_edit_link_lnk}
+{ROOT}/r/msg_id/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_reply_link_lnk}
+{ROOT}/r/reply_to/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_quote_link_lnk}
+{ROOT}/r/quote/true/{VAR: obj->id}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_short_message_body_lnk}
+{ROOT}{FUNC: make_reveal_link($obj->id)}
+{SECTION: END}
+
+{SECTION: dmsg_ip_address_url}
+{ROOT}/ip/i/{VAR: obj->ip_addr}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_reply_to_lnk}
+{ROOT}/mv/{VAR: lnk}/{VAR: obj->thread_id}/{VAR: obj->reply_to}/{DEF: _rsid}#msg_{VAR: obj->reply_to}
+{SECTION: END}
+
+{SECTION: dmsg_num_lnk}
+{ROOT}/mv/{VAR: lnk}/{VAR: obj->thread_id}/{VAR: obj->id}/{DEF: _rsid}#msg_{VAR: obj->id}
+{SECTION: END}

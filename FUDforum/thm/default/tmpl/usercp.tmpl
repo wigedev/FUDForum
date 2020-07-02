@@ -1,0 +1,129 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: usercp.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: usercp.inc.t; output: @usercp.inc;}
+
+{MAIN_SECTION: usercp Top level menu (User control panel).}
+<div id="UserControlPanel">
+<ul>
+	{TEMPLATE-DATA: ucp_private_msg}
+	{IF: $FUD_OPT_4 & 16}{TEMPLATE: ucp_blog}{ENDIF}
+	{IF: $FUD_OPT_4 & 8}{TEMPLATE: ucp_pages}{ENDIF}
+	{IF: $FUD_OPT_3 & 134217728}{TEMPLATE: ucp_calendar}{ENDIF}
+	{IF: $FUD_OPT_1 & 16777216} {TEMPLATE: ucp_search}{ENDIF}
+	<li><a accesskey="h" href="{TEMPLATE: ucp_help_lnk}" title="{MSG: faq}"><img src="{THEME_IMAGE_ROOT}/top_help.png" alt="" /> {MSG: faq}</a></li>
+	{IF: ($FUD_OPT_1 & 8388608 || (_uid && $FUD_OPT_1 & 4194304) || $usr->users_opt & 1048576)}{TEMPLATE: ucp_member_search}{ENDIF}
+	{IF: __fud_real_user__}{TEMPLATE: ucp_usercp}{ELSE}{IF: $FUD_OPT_1 & 2}{TEMPLATE: ucp_register}{ENDIF}{END}
+	{IF: __fud_real_user__}{TEMPLATE: ucp_logout}{ELSE}{TEMPLATE: ucp_login}{END}
+	<li><a href="{TEMPLATE: ucp_home_lnk}" title="{MSG: home}"><img src="{THEME_IMAGE_ROOT}/top_home.png" alt="" /> {MSG: home}</a></li>
+	{IF: $is_a || ($usr->users_opt & 268435456)}{TEMPLATE: ucp_admin_control_panel}{ENDIF}
+</ul>
+</div>
+{MAIN_SECTION: END}
+
+{SECTION: ucp_home_lnk Home URL}
+{ROOT}?t=index&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_help_lnk FAQ/Help URL}
+{ROOT}?t=help_index&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_search_lnk Forum search URL}
+{ROOT}?t=search{IF: isset($frm->forum_id)}&amp;forum_limiter={FUNC: (int)$frm->forum_id}{ENDIFI}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_search Forum search}
+<li><a href="{TEMPLATE: ucp_search_lnk}" title="{MSG: search}"><img src="{THEME_IMAGE_ROOT}/top_search.png" alt="" /> {MSG: search}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_login_lnk User Login URL}
+{ROOT}?t=login&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_login User Login}
+<li><a href="{TEMPLATE: ucp_login_lnk}" title="{MSG: login}"><img src="{THEME_IMAGE_ROOT}/top_login.png" alt="" /> {MSG: login}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_logout_lnk User Logout URL}
+{ROOT}?t=login&amp;{DEF: _rsid}&amp;logout=1&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: ucp_logout logout link User Logout}
+<li><a href="{TEMPLATE: ucp_logout_lnk}" title="{MSG: logout}"><img src="{THEME_IMAGE_ROOT}/top_logout.png" alt="" /> {MSG: logout} [ {VAR-HTML: usr->alias} ]</a></li>
+{SECTION: END}
+
+{SECTION: ucp_register_lnk User Registration URL}
+{ROOT}?t=register&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_register User Registration}
+<li><a href="{TEMPLATE: ucp_register_lnk}" title="{MSG: register}"><img src="{THEME_IMAGE_ROOT}/top_register.png" alt="" /> {MSG: register}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_usercp_lnk User Contrrol Panel URL}
+{ROOT}?t=uc&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_usercp User Control Panel}
+<li><a href="{TEMPLATE: ucp_usercp_lnk}" title="{MSG: profile_desc}"><img src="{THEME_IMAGE_ROOT}/top_profile.png" alt="" /> {MSG: profile}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_admin_control_panel Admin Control Panel}
+<li><a href="{BASE}adm/index.php?S={DEF: s}&amp;SQ={GVAR: sq}" title="{MSG: admin_control_panel}"><img src="{THEME_IMAGE_ROOT}/top_admin.png" alt="" /> {MSG: admin_control_panel}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_private_msg_empty_lnk No PM URL}
+{ROOT}?t=pmsg&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_private_msg_empty No PM messages}
+<li><a href="{TEMPLATE: ucp_private_msg_empty_lnk}" title="{MSG: pm}"><img src="{THEME_IMAGE_ROOT}/top_pm.png" alt="" /> {MSG: pm}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_private_msg_unread_lnk Unread PM URL}
+{ROOT}?t=pmsg&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_private_msg_unread Unread PM indicator}
+<li><a href="{TEMPLATE: ucp_private_msg_unread_lnk}" title="{MSG: pm}"><img src="{THEME_IMAGE_ROOT}/top_pm.png" alt="" /> {MSG: new_private_messages}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_blog_lnk Blog URL}
+{ROOT}?t=blog&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_blog Blog}
+<li><a href="{TEMPLATE: ucp_blog_lnk}" title="{MSG: blog}"><img src="{THEME_IMAGE_ROOT}/blog.png" alt="" /> {MSG: blog}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_calendar_lnk Calendar URL}
+{ROOT}?t=cal&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_calendar Calendar}
+<li><a href="{TEMPLATE: ucp_calendar_lnk}" title="{MSG: calendar}"><img src="{THEME_IMAGE_ROOT}/calendar.png" alt="" /> {MSG: calendar}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_pages_lnk Pages URL}
+{ROOT}?t=page&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_pages List of Forum Pages}
+<li><a href="{TEMPLATE: ucp_pages_lnk}" title="{MSG: pages}"><img src="{THEME_IMAGE_ROOT}/pages.png" alt="" /> {MSG: pages}</a></li>
+{SECTION: END}
+
+{SECTION: ucp_member_search_lnk Member Search URL}
+{ROOT}?t=finduser&amp;btn_submit=Find&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: ucp_member_search Member Search}
+<li><a href="{TEMPLATE: ucp_member_search_lnk}" title="{MSG: members}"><img src="{THEME_IMAGE_ROOT}/top_members.png" alt="" /> {MSG: members}</a></li>
+{SECTION: END}

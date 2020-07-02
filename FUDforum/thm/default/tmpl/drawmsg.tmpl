@@ -1,0 +1,451 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: drawmsg.tmpl 6251 2019-03-03 08:46:58Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: drawmsg.inc.t; output: drawmsg.inc;}
+{REF: fileio.tmpl}
+{REF: alt_var.tmpl}
+{REF: karma_show.tmpl}
+
+{SECTION: dmsg_prev_message previous page arrow drawn on the message}
+<a href="javascript://" onclick="chng_focus(\'#msg_num_{VAR: m_num}\');"><img alt="{MSG: goto_prev_msg}" title="{MSG: goto_prev_msg}" src="{THEME_IMAGE_ROOT}/up.png" width="16" height="11" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_prev_message_prev_page_lnk}
+{ROOT}?t={VAR: _GET['t']}&amp;{DEF: _rsid}&amp;prevloaded=1&amp;th={VAR: obj->thread_id}&amp;start={FUNC: ($misc[0] - $misc[1])}{DEF: reveal_lnk}{DEF: unignore_tmp}
+{SECTION: END}
+
+{SECTION: dmsg_prev_message_prev_page previous page arrrow drawn on the message}
+<a href="{TEMPLATE: dmsg_prev_message_prev_page_lnk}"><img src="{THEME_IMAGE_ROOT}/up.png" title="{MSG: goto_prev_msg}" alt="{MSG: goto_prev_msg}" width="16" height="11" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_tree_prev_message_prev_page previous page (tree view) arrrow drawn on the message}
+<a href="javascript://" onclick="fud_tree_msg_focus({VAR: misc[0]}, \'{DEF: s}\', \'{CHARSET}\'); return false;"><img src="{THEME_IMAGE_ROOT}/up.png" title="{MSG: goto_prev_msg}" alt="{MSG: goto_prev_msg}" width="16" height="11" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_next_message next message arrow drawn on the message}
+<a href="javascript://" onclick="chng_focus(\'#msg_num_{FUNC: ($m_num + 2)}\');"><img alt="{MSG: goto_next_msg}" title="{MSG: goto_next_msg}" src="{THEME_IMAGE_ROOT}/down.png" width="16" height="11" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_next_message_next_page_lnk}
+{ROOT}?t={VAR: _GET['t']}&amp;{DEF: _rsid}&amp;prevloaded=1&amp;th={VAR: obj->thread_id}&amp;start={FUNC: ($misc[0] + $misc[1])}{DEF: reveal_lnk}{DEF: unignore_tmp}
+{SECTION: END}
+
+{SECTION: dmsg_next_message_next_page next page arrow drawn on the message}
+<a href="{TEMPLATE: dmsg_next_message_next_page_lnk}"><img alt="{MSG: goto_prev_msg}" title="{MSG: goto_next_msg}" src="{THEME_IMAGE_ROOT}/down.png" width="16" height="11" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_tree_next_message_next_page next page (tree view) arrow drawn on the message}
+<a href="javascript://" onclick="fud_tree_msg_focus({VAR: misc[1]}, \'{DEF: s}\', \'{CHARSET}\'); return false;"><img alt="{MSG: goto_prev_msg}" title="{MSG: goto_next_msg}" src="{THEME_IMAGE_ROOT}/down.png" width="16" height="11" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_lnk}
+{ROOT}?t=ignore_list&amp;del={VAR: obj->poster_id}&amp;redr=1&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_lnk2}
+{ROOT}?{FUNC:  make_reveal_link($obj->id)}
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_lnk3}
+{ROOT}?{FUNC: make_tmp_unignore_lnk($obj->poster_id)}
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message ignored message row (this gets draw if this message is ignored due to ignored user)}
+<tr>
+	<td>
+		<table border="0" cellspacing="0" cellpadding="0" class="MsgTable">
+		<tr>
+			<td class="MsgIg al">
+				<a name="msg_num_{VAR: m_num}"></a>
+				<a name="msg_{VAR: obj->id}"></a>
+				{IF: $obj->user_id}{MSG: ignored_user_post}{ELSE}{MSG: ignored_anon_post}{ENDI}&nbsp;
+				[<a href="{TEMPLATE: dmsg_ignored_user_message_lnk2}">{MSG: reveal_post}</a>]&nbsp;
+				[<a href="{TEMPLATE: dmsg_ignored_user_message_lnk3}">{MSG: reveal_all_posts}</a>]&nbsp;
+				[<a href="{TEMPLATE: dmsg_ignored_user_message_lnk}">{MSG: stop_ignoring}</a>]</td>
+				<td class="MsgIg" align="right">{TEMPLATE-DATA: prev_message}{TEMPLATE-DATA: next_message}
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: dmsg_ignored_user_message_static used as ignore message row on the post form in the thread preview}
+<tr class="MsgR1 GenText">
+	<td><a name="msg_num_{VAR: m_num}"></a> <a name="msg_{VAR: obj->id}"></a>Post by {VAR: user_login} is ignored&nbsp;</td>
+</tr>
+{SECTION: END}
+
+{SECTION: dmsg_online_indicator}
+<img src="{THEME_IMAGE_ROOT}/online.png" alt="{MSG: user_online}" title="{MSG: user_online}" />&nbsp;
+{SECTION: END}
+
+{SECTION: dmsg_offline_indicator}
+<img src="{THEME_IMAGE_ROOT}/offline.png" alt="{MSG: user_offline}" title="{MSG: user_offline}" />&nbsp;
+{SECTION: END}
+
+{SECTION: dmsg_level_image}
+&nbsp;<img src="{BASE}images/{VAR: obj->level_img}" alt="" />
+{SECTION: END}
+
+{SECTION: dmsg_avatar}
+<td class="avatarPad wo">{VAR: obj->avatar_loc}{TEMPLATE-DATA: level_image}</td>
+{SECTION: END}
+
+{SECTION: dmsg_reg_user_link_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_reg_user_link}
+<a href="{TEMPLATE: dmsg_reg_user_link_lnk}">{VAR: user_login}</a>
+{SECTION: END}
+
+{SECTION: dmsg_reg_user_no_link}
+{VAR: user_login}
+{SECTION: END}
+
+{SECTION: dmsg_anon_user}
+{VAR: user_login}
+{SECTION: END}
+
+{SECTION: dmsg_ip_address_url}
+{ROOT}?t=ip&amp;ip={VAR: obj->ip_addr}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_location}
+<br /><b>{MSG: location} </b>{FUNC: (strlen($obj->location) > $GLOBALS['MAX_LOCATION_SHOW'] ? substr($obj->location, 0, $GLOBALS['MAX_LOCATION_SHOW']) . '...' : $obj->location)}
+{SECTION: END}
+
+{SECTION: dmsg_no_location}
+{SECTION: END}
+
+{SECTION: dmsg_tags}
+<div class="ctags">{VAR: level_name}{VAR: custom_tag}</div>
+{SECTION: END}
+
+{SECTION: dmsg_custom_tags}
+<br />{VAR: obj->custom_status}
+{SECTION: END}
+
+{SECTION: dmsg_no_custom_tags}
+{SECTION: END}
+
+{SECTION: dmsg_buddy_link_add_lnk}
+{ROOT}?t=buddy_list&amp;add={VAR: obj->user_id}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_bd_il}
+{TEMPLATE-DATA: buddy_link}{TEMPLATE-DATA: ignore_link}<br />
+{SECTION: END}
+
+{SECTION: dmsg_buddy_link_add add this user to your buddy list link}
+<a href="{TEMPLATE: dmsg_buddy_link_add_lnk}">{MSG: add_to_buddy_list}</a><br />
+{SECTION: END}
+
+{SECTION: dmsg_buddy_link_remove_lnk}
+{ROOT}?t=buddy_list&amp;del={VAR: obj->user_id}&amp;redr=1&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_buddy_link_remove add this user to your buddy list link}
+<a href="{TEMPLATE: dmsg_buddy_link_remove_lnk}">{MSG: remove_from_buddy_list}</a><br />
+{SECTION: END}
+
+{SECTION: dmsg_remove_user_ignore_list_lnk}
+{ROOT}?t=ignore_list&amp;del={VAR: obj->user_id}&amp;redr=1&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_remove_user_ignore_list remove user from ignore list link}
+<a href="{TEMPLATE: dmsg_remove_user_ignore_list_lnk}">{MSG: un_ignore_user}</a>
+{SECTION: END}
+
+{SECTION: dmsg_add_user_ignore_list_lnk}
+{ROOT}?t=ignore_list&amp;add={VAR: obj->user_id}&amp;{DEF: _rsid}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: dmsg_add_user_ignore_list add user to ignore list link}
+<a href="{TEMPLATE: dmsg_add_user_ignore_list_lnk}">{MSG: ignore_user}</a>
+{SECTION: END}
+
+{SECTION: dmsg_im_icq_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->poster_id}&amp;{DEF: _rsid}#icq_msg
+{SECTION: END}
+
+{SECTION: dmsg_im_icq}
+<a href="{TEMPLATE: dmsg_im_icq_lnk}"><img title="{VAR: obj->icq}" src="{THEME_IMAGE_ROOT}/icq.png" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_im_aim}
+<a href="aim:goim?screenname={VAR: obj->aim}&amp;message=Hi.+Are+you+there?"><img alt="" src="{THEME_IMAGE_ROOT}/aim.png" title="{VAR: obj->aim}" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_im_yahoo}
+<a href="http://edit.yahoo.com/config/send_webmesg?.target={VAR: obj->yahoo}&amp;.src=pg"><img alt="" src="{THEME_IMAGE_ROOT}/yahoo.png" title="{VAR: obj->yahoo}" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_im_msnm}
+<a href="mailto: {VAR: obj->msnm}"><img alt="" src="{THEME_IMAGE_ROOT}/msnm.png" title="{VAR: obj->msnm}" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_im_jabber}
+<img src="{THEME_IMAGE_ROOT}/jabber.png" title="{VAR: obj->jabber}" alt="" />
+{SECTION: END}
+
+{SECTION: dmsg_im_google}
+<img src="{THEME_IMAGE_ROOT}/google.png" title="{VAR: obj->google}" alt="" />
+{SECTION: END}
+
+{SECTION: dmsg_im_skype}
+<a href="callto://{VAR: obj->skype}"><img src="{THEME_IMAGE_ROOT}/skype.png" title="{VAR: obj->skype}" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_im_twitter}
+<a href="http://twitter.com/{VAR: obj->twitter}"><img src="{THEME_IMAGE_ROOT}/twitter.png" title="{VAR: obj->twitter}" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_poll_option}
+<tr class="{ALT-VAR: msg_poll_alt_clr RowStyleB RowStyleA}">
+	<td>{VAR: i}.</td>
+	<td colspan="2"><label><input type="radio" name="poll_opt" value="{VAR: k}" />&nbsp;&nbsp;{VAR: v[0]}</label></td>
+</tr>
+{SECTION: END}
+
+{SECTION: dmsg_poll_result}
+<tr class="{ALT-VAR: msg_poll_alt_clr RowStyleB RowStyleA}">
+	<td>{VAR: i}.</td>
+	<td>{VAR: v[0]}</td>
+	<td><img src="{THEME_IMAGE_ROOT}/poll_pix.gif" alt="" height="10" width="{VAR: length}" /> {VAR: v[1]} / {VAR: length}%</td>
+</tr>
+{SECTION: END}
+
+{SECTION: mini_dmsg_poll}
+<br />
+<table cellspacing="1" cellpadding="2" class="PollTable">
+<tr>
+	<th class="nw" colspan="3">{VAR: obj->poll_name}<span class="vt">[ {MSG: num_votes} ]</span></th>
+</tr>
+{TEMPLATE-DATA: poll_data}
+</table>
+<br />
+{SECTION: END}
+
+{SECTION: dmsg_poll_lnk}
+{ROOT}?{FUNC: htmlspecialchars($_SERVER['QUERY_STRING'])}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: dmsg_poll}
+<br />
+<form action="{TEMPLATE: dmsg_poll_lnk}" method="post">{DEF: _hs}
+<table cellspacing="1" cellpadding="2" class="PollTable">
+<tr>
+	<th class="nw" colspan="3">{VAR: obj->poll_name}<span class="ptp">[ {MSG: num_votes} ]</span></th>
+</tr>
+{TEMPLATE-DATA: poll_data}
+<tr class="{ALT-VAR: msg_poll_alt_clr RowStyleB RowStyleA} ar">
+	<td colspan="3">
+		<input type="submit" class="button" name="pl_vote" value="{MSG: vote_button}" />
+		&nbsp;{IF: $obj->total_votes}<input type="submit" class="button" name="pl_res" value="{MSG: view_results}" />{ENDIFI}
+	</td>
+</tr>
+</table>
+<input type="hidden" name="pl_view" value="{VAR: obj->poll_id}" />
+</form>
+<br />
+{SECTION: END}
+
+{SECTION: dmsg_drawmsg_file_attachments the file attachments list}
+<ul class="AttachmentsList">
+	{TEMPLATE-DATA: drawmsg_file_attachments}
+</ul>
+{SECTION: END}
+
+{SECTION: dmsg_drawmsg_file_attachment_lnk}
+{ROOT}?t=getfile&amp;id={VAR: v[0]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_drawmsg_file_attachment file attachment entry row}
+<li>
+	<img alt="" src="{BASE}images/mime/{VAR: v[4]}" class="at" />
+	<span class="GenText fb">{MSG: attachment}</span> <a href="{TEMPLATE: dmsg_drawmsg_file_attachment_lnk}" title="{VAR: v[1]}">{VAR: v[1]}</a>
+	<br />
+	<span class="SmallText">({MSG: size} {FUNC: ($sz < 1000 ? number_format($sz, 2).'KB' : number_format($sz/1024, 2).'MB')}, {MSG: download_counter})</span>
+</li>
+{SECTION: END}
+
+{SECTION: dmsg_modified_message_mod modified message indicator}
+<p class="fl">[{MSG: updated_on} {TEMPLATE: dmsg_update_on_date}] {MSG: by_mod}</p>
+{SECTION: END}
+
+{SECTION: dmsg_modified_message modified by the moderator message}
+<p class="fl">[{MSG: updated_on} {TEMPLATE: dmsg_update_on_date}]</p>
+{SECTION: END}
+
+{SECTION: dmsg_report_to_mod_link_lnk}
+{ROOT}?t=report&amp;msg_id={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_report_to_mod_link}
+<p class="fr"><a href="{TEMPLATE: dmsg_report_to_mod_link_lnk}" rel="nofollow">{MSG: report_to_mod}</a></p>
+{SECTION: END}
+
+{SECTION: dmsg_user_profile_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_email_link_lnk}
+{ROOT}?t=email&amp;toi={VAR: obj->user_id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_private_msg_link_lnk}
+{ROOT}?t=ppost&amp;toi={VAR: obj->user_id}&amp;rmid={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_next_msg_page_lnk}
+{ROOT}?t={VAR: _GET['t']}&amp;{DEF: _rsid}&amp;prevloaded=1&amp;th={VAR: obj->thread_id}&amp;start={FUNC: ($misc[0] + $misc[1])}{DEF: reveal_lnk}{DEF: unignore_tmp}
+{SECTION: END}
+
+{SECTION: dmsg_next_msg_page next page link that appears in the message}
+<a href="{TEMPLATE: dmsg_next_msg_page_lnk}">{MSG: next_page} <img src="{THEME_IMAGE_ROOT}/goto.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_no_next_msg_page}
+&nbsp;
+{SECTION: END}
+
+{SECTION: dmsg_delete_link_lnk}
+{ROOT}?t=mmod&amp;del={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_edit_link_lnk}
+{ROOT}?t=post&amp;msg_id={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_edit_link}
+<a href="{TEMPLATE: dmsg_edit_link_lnk}"><img alt="" src="{THEME_IMAGE_ROOT}/msg_edit.gif" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+{SECTION: END}
+
+{SECTION: dmsg_reply_link_lnk}
+{ROOT}?t=post&amp;reply_to={VAR: obj->id}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_reply_link}
+<a href="{TEMPLATE: dmsg_reply_link_lnk}"><img alt="" src="{THEME_IMAGE_ROOT}/msg_reply.gif" /></a>&nbsp;
+{SECTION: END}
+
+{SECTION: dmsg_quote_link_lnk}
+{ROOT}?t=post&amp;reply_to={VAR: obj->id}&amp;quote=true&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: dmsg_quote_link}
+<a href="{TEMPLATE: dmsg_quote_link_lnk}"><img alt="" src="{THEME_IMAGE_ROOT}/msg_quote.gif" /></a>
+{SECTION: END}
+
+{SECTION: dmsg_message_toolbar message toolbar, normally contains post/quote type buttons}
+<tr>
+	<td colspan="2" class="MsgToolBar">
+		<table border="0" cellspacing="0" cellpadding="0" class="wa">
+		<tr>
+			<td class="al nw">
+				{IF: $obj->user_id}<a href="{TEMPLATE: dmsg_user_profile_lnk}"><img alt="" src="{THEME_IMAGE_ROOT}/msg_about.gif" /></a>&nbsp;{IF: ($o1 & 4194304 && $a & 16)}<a href="{TEMPLATE: dmsg_email_link_lnk}" rel="nofollow"><img alt="" src="{THEME_IMAGE_ROOT}/msg_email.gif" /></a>&nbsp;{ENDIFI}{IF: $o1 & 1024}<a href="{TEMPLATE: dmsg_private_msg_link_lnk}"><img alt="{MSG: send_pm_desc}" title="{MSG: send_pm_desc}" src="{THEME_IMAGE_ROOT}/msg_pm.gif" /></a>{ENDIFI}{ENDIFI}
+				{TEMPLATE: karma_change}
+			</td>
+			<td class="GenText wa ac">{TEMPLATE-DATA: next_page}</td>
+			<td class="nw ar">
+				{IF: $perms & 32}<a href="{TEMPLATE: dmsg_delete_link_lnk}"><img alt="" src="{THEME_IMAGE_ROOT}/msg_delete.gif" /></a>&nbsp;{ENDIFI}
+				{TEMPLATE-DATA: edit_link}
+				{TEMPLATE-DATA: reply_link}
+				{TEMPLATE-DATA: quote_link}
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: dmsg_normal_message_body}
+<span class="MsgBodyText">{FUNC: read_msg_body($obj->foff, $obj->length, $obj->file_id)}</span>
+{SECTION: END}
+
+{SECTION: dmsg_short_message_body_lnk}
+{ROOT}?{FUNC: make_reveal_link($obj->id)}
+{SECTION: END}
+
+{SECTION: dmsg_short_message_body}
+<span class="MsgBodyText">{FUNC: read_msg_body($obj->offset_preview, $obj->length_preview, $obj->file_id_preview)}</span>
+...<br /><br /><div class="ac">[ <a href="{TEMPLATE: dmsg_short_message_body_lnk}">{MSG: drawmsg_view_rest_post}</a> ]</div>
+{SECTION: END}
+
+{SECTION: dmsg_im_row a row displaying various instant messenger links}
+{TEMPLATE-DATA: im}<br />
+{SECTION: END}
+
+{MAIN_SECTION: message_entry Message Entry (a single message)}
+<tr>
+	<td class="MsgSpacer">
+		<table cellspacing="0" cellpadding="0" class="MsgTable">
+		<tr>
+			<td class="MsgR1 vt al expanded"><a name="msg_num_{VAR: m_num}"></a><a name="msg_{VAR: obj->id}"></a>{IF: $obj->icon && !$hide_controls}<img src="{BASE}images/message_icons/{VAR: obj->icon}" alt="{VAR: obj->icon}" />&nbsp;&nbsp;{ENDIFI}{TEMPLATE: dmsg_subject}</td>
+			<td class="MsgR1 vt ar"><span class="DateText">{TEMPLATE: dmsg_post_date}</span> {TEMPLATE-DATA: prev_message}{TEMPLATE-DATA: next_message}</td>
+		</tr>
+		<tr class="MsgR2">
+			<td class="MsgR2" colspan="2">
+				<table cellspacing="0" cellpadding="0" class="ContentTable">
+				<tr class="MsgR2">
+				{TEMPLATE-DATA: avatar}
+					<td class="msgud">
+						{TEMPLATE-DATA: online_indicator}
+						{TEMPLATE-DATA: user_link}
+						{IF: !$hide_controls}{IF: $obj->disp_flag_cc && $GLOBALS['FUD_OPT_3'] & 524288}&nbsp;&nbsp;<img src="{BASE}images/flags/{VAR: obj->disp_flag_cc}.png" border="0" width="16" height="11" title="{VAR: obj->flag_country}" alt="{VAR: obj->flag_country}"/>{ENDIFI}{IF: $obj->user_id}<br /><b>{MSG: posts_c}</b> {VAR: obj->posted_msg_count}<br /><b>{MSG: registered}</b> {TEMPLATE: dmsg_join_date} {TEMPLATE-DATA: location}{ENDIFI}{ENDIFI}
+						{TEMPLATE: karma_show}</div>
+					</td>
+					<td class="msgud">{TEMPLATE-DATA: dmsg_tags}</td>
+					<td class="msgot">{TEMPLATE-DATA: dmsg_bd_il}{TEMPLATE-DATA: dmsg_im_row}{IF: !$hide_controls}{IF: ($obj->host_name && $o1 & 268435456)}<b>{MSG: from}</b> {VAR: obj->host_name}<br />{ENDIFI}{IF: ($b & 1048576 || $usr->md || $o1 & 134217728)}<b>{MSG: dmsg_ip}</b> <a href="{TEMPLATE: dmsg_ip_address_url}">{VAR: obj->ip_addr}</a>{ENDIFI}{ENDIFI}</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" class="MsgR3">
+		{TEMPLATE-DATA: msg_body}
+		{TEMPLATE-DATA: drawmsg_file_attachments}
+		{IF: !$hide_controls}{IF: ($obj->sig && $o1 & 32768 && $obj->msg_opt & 1 && $b & 4096 && !($a & 67108864))}<br /><br /><div class="signature" />{VAR: obj->sig}</div>{ENDIFI}
+		<div class="SmallText clear">{TEMPLATE-DATA: modified_message}{TEMPLATE: dmsg_report_to_mod_link}{ENDIFI}</div>
+</td></tr>
+{IF: !$hide_controls}{TEMPLATE: dmsg_message_toolbar}{ENDIFI}
+</table>
+</td></tr>
+{MAIN_SECTION: END}
+
+{SECTION: dmsg_subject}
+<span class="MsgSubText"><a href="{TEMPLATE: dmsg_num_lnk}" class="MsgSubText">{VAR: obj->subject}</a></span> {TEMPLATE-DATA: rpl}
+{SECTION: END}
+
+{SECTION: dmsg_no_msg_body}
+{MSG: no_msg_body}
+{SECTION: END}
+
+{SECTION: dmsg_reply_to_lnk}
+{ROOT}?t={VAR: lnk}&amp;th={VAR: obj->thread_id}&amp;goto={VAR: obj->reply_to}&amp;{DEF: _rsid}#msg_{VAR: obj->reply_to}
+{SECTION: END}
+
+{SECTION: dmsg_reply_to}
+<span class="SmallText">[{TEMPLATE: dmsg_num} {MSG: dmsg_reply_to} <a href="{TEMPLATE: dmsg_reply_to_lnk}">{MSG: dmsg_reply_num}</a>]</span>
+{SECTION: END}
+
+{SECTION: dmsg_num_lnk}
+{ROOT}?t={VAR: lnk}&amp;th={VAR: obj->thread_id}&amp;goto={VAR: obj->id}&amp;{DEF: _rsid}#msg_{VAR: obj->id}
+{SECTION: END}
+
+{SECTION: dmsg_num}
+<a href="{TEMPLATE: dmsg_num_lnk}">{MSG: dmsg_num}</a>
+{SECTION: END}
+
+{SECTION: dmsg_num_wrap}
+<span class="SmallText">[{TEMPLATE: dmsg_num}]</span>
+{SECTION: END}

@@ -1,0 +1,520 @@
+{{{FORUM_TITLE
+The title of the forum. This title will appear inside the forum header and HTML <title> tag.}}}
+
+{{{FORUM_DESCR
+Description of the forum. This description will appear inside the forum and HTML header (description meta tag).}}}
+
+{{{FORUM_ENABLED	FUD_OPT_1	1
+Enable/disable the forum. Use this while you are upgrading or performing maintenance on the forum.}}}
+
+{{{DISABLED_REASON
+This message will be shown to users when the forum is disabled.}}}
+
+{{{ALLOW_REGISTRATION	FUD_OPT_1	2
+Enable/disable new user registration. Disable if you don't want new users to register or if you have a plugin that auto registers uses from an external system.}}}
+
+{{{WWW_ROOT
+This is the URL of your forum. Use a protocol-relative URL if you want run the forum on HTTP and HTTPS.}}}
+
+#CUSTOM AVATAR SETTINGS
+
+{{{CUSTOM_AVATARS	FUD_OPT_1	"OFF\nBuilt In Only\nURL Only\nUploaded Only\nBuilt In & URL\nBuilt In & Uploaded\nURL & Uploaded\nALL"	"0\n16\n4\n8\n20\n24\n12\n28"
+Enable/disable to use of avatars. Definitions of the options:
+
+URL - Users will need to give a URL to their avatar.
+Uploaded - The avatar will be uploaded to the server.
+Built In - A user can choose an avatar from the avatars available in the forum.
+ALL - A user can use a URL or an uploaded/built-in avatar.
+OFF - Avatars are disabled.}}}
+
+{{{CUSTOM_AVATAR_MAX_SIZE
+This is the maximum size (in bytes) of the custom avatar image (uploaded to server).}}}
+
+{{{CUSTOM_AVATAR_MAX_DIM
+This is the maximum dimension that a custom avatar can be. Format of this setting is WIDTHxHEIGHT, ex. 100x200}}}
+
+{{{CUSTOM_AVATAR_APPROVAL	FUD_OPT_1	32
+If set to yes the administrator will have to approve every custom avatar the user uploads or provides a URL to.}}}
+
+{{{CUSTOM_AVATAR_ALLOW_SWF	FUD_OPT_1	64
+Allow users to upload Macromedia Flash avatars, not recommended unless you trust your users implicitly, since Flash animation can potentially trigger various browser events.}}}
+
+#COOKIE & SESSION SETTINGS
+
+{{{COOKIE_PATH
+The cookie path for the forum. This can be left blank.}}}
+
+{{{COOKIE_TIMEOUT
+The cookie timeout in seconds. When the user's cookie expires, the user will have to login again.}}}
+
+{{{SESSION_TIMEOUT
+The session timeout in seconds. When the user's session expires, the user will have to login again.}}}
+
+{{{COOKIE_DOMAIN
+The domain of the cookie that will be used by the forum. For example, if your site is at http://www.mysite.com/forum/, this would be .mysite.com.}}}
+
+{{{COOKIE_NAME
+The name of the cookie that will be used by the forum. Use different cookies if you have multiple forums on one site.}}}
+
+{{{SESSION_USE_URL	FUD_OPT_1	128
+Allow session IDs to be passed via URL variables (as well as cookies). This should normally be disabled. Enable if your users cannot use cookies in their browsers, but if you do, use a small SESSION TIMEOUT value (for security).}}}
+
+#DATABASE SETTINGS
+
+{{{DBHOST
+The name or IP address of the system where the database is located, or a Unix domain socket (such as :/tmp/mysql.sock). An optional port number can be appended, for example dbhost:3306. When specifying a numerical IPv6 address, you must enclose the IP in square brackets - for example, [fe80::1]:5432.}}}
+
+{{{DBHOST_SLAVE_HOST
+Optional slave database hostname or IP address. It is assumed that the slave database is replicated from the master, and that the same username, password and table prefix is used.}}}
+
+{{{DBHOST_USER
+The username for the database that contains the database tables.}}}
+
+{{{DBHOST_PASSWORD
+The password for the username.}}}
+
+{{{DBHOST_DBNAME
+Database name for the forum.}}}
+
+{{{DBHOST_PERSIST	FUD_OPT_1	256
+Whether or not to use persistent connections. Slight performance increase, but may cause problems on some systems.}}}
+
+{{{DBHOST_TBL_PREFIX
+Prefix for the forum's database tables. Do not modify this option (unless you manually renamed all your tables).}}}
+
+{{{DBHOST_DBTYPE
+Database driver to load.}}}
+
+# SMTP SETTINGS
+
+{{{USE_SMTP	FUD_OPT_1	512
+Whether or not to use FUDforum SMTP gateway to send E-mail instead of standard PHP mail() function. Not recommended, unless you need SMTP AUTH or wish to use alternate SMTP server on UNIX systems.}}}
+
+{{{FUD_SMTP_SERVER
+The IP address or host name of the SMTP server.}}}
+
+{{{FUD_SMTP_PORT
+The port to use to connect to the SMTP server.}}}
+
+{{{FUD_SMTP_TIMEOUT
+The number of seconds to wait for the SMTP server to respond to a request.}}}
+
+{{{FUD_SMTP_LOGIN
+If your SMTP server requires SMTP Authentication, enter the login name here.}}}
+
+{{{FUD_SMTP_PASS
+If your SMTP server requires SMTP Authentication, enter the password here.}}}
+
+#PRIVATE MESSAGE SETTINGS
+
+{{{PM_ENABLED	FUD_OPT_1	1024
+Enable/disable private messaging. Enabled by default.}}}
+
+{{{PRIVATE_ATTACHMENTS
+This is how many attachments you want to allow per private message. Setting this to 0 will disable file attachments completely.}}}
+
+{{{PRIVATE_ATTACH_SIZE
+The maximum size of an attached file (in bytes).}}}
+
+{{{PRIVATE_TAGS	FUD_OPT_1	"BBCode\nHTML\nNone"	"4096\n0\n2048"
+This setting specifies what kind of text formatting to allow in private messages.}}}
+
+{{{PRIVATE_MSG_SMILEY	FUD_OPT_1	8192
+Enable/disable smilies in private messages.}}}
+
+{{{PRIVATE_IMAGES	FUD_OPT_1	16384
+Enable/disable images in private messages.}}}
+
+{{{MAX_PMSG_FLDR_SIZE
+The maximum number of bytes of private messages that a user can have at a time.}}}
+
+{{{MAX_PMSG_FLDR_SIZE_PM
+The maximum number of bytes of private messages that a moderator can have at a time.}}}
+
+{{{MAX_PMSG_FLDR_SIZE_AD
+The maximum number of bytes of private messages that an administrator can have at a time.}}}
+
+#SIGNATURE SETTINGS
+
+{{{ALLOW_SIGS	FUD_OPT_1	32768
+Enable/disable user signatures in posts.}}}
+
+{{{FORUM_CODE_SIG	FUD_OPT_1	"BBCode\nHTML\nNone"	"131072\n0\n65536"
+This setting specifies what kind of text formatting to allow in signatures.}}}
+
+{{{FORUM_SML_SIG	FUD_OPT_1	262144
+Enable/disable smilies in signatures.}}}
+
+{{{FORUM_IMG_SIG	FUD_OPT_1	524288
+Enable/disable images in signatures.}}}
+
+{{{FORUM_IMG_CNT_SIG
+The maximum number of images to allow inside a signature. Set to 0 to allow unlimited images.}}}
+
+{{{FORUM_SIG_ML
+Maximum length of the signature a user may have (0 for unlimited).}}}
+
+#OTHER FORUM OPTIONS 
+
+{{{ADMIN_EMAIL
+E-mail address of the forum administrator.}}}
+
+{{{COPPA	FUD_OPT_1	1048576
+Enable/disable the Children's Online Privacy Protection Act of 1998 (COPPA) check during new user registration.}}}
+
+{{{SPELL_CHECK_ENABLED	FUD_OPT_1	2097152
+Enable/disable the built-in spell checker.}}}
+
+{{{POSTS_PER_PAGE
+The default number of messages to display per page.}}}
+
+{{{THREADS_PER_PAGE
+The default number of topics per page. NOTE: This value also represents the maximum value a user can set this setting to in their profile.}}}
+
+{{{WORD_WRAP
+This setting defines on how many character to wrap message bodies on, any text string longer than the number of character in this option will be broken down into 1 or more strings using a space as a separator. Set this to 0 to disable word wrapping. For multibyte configurations disable wordwrap, since wrapping is done on a byte and not character bases.}}}
+
+{{{FLOOD_CHECK_TIME
+The minimum time delay before a user can post a message.}}}
+
+{{{MOD_FIRST_N_POSTS
+Queue user's first N posts for approval. If a user's post count exceeds this number his/her posts will be automatically approved (unless posted to a moderated forum). Set to 0 to disable.}}}
+
+{{{POST_MIN_LEN
+Prevent users from posting empty or very short messages. Messages must be longer than this amount of characters before it will be accepted.}}}
+
+{{{POSTS_BEFORE_LINKS
+Prevent new users from posting spam. Users are required to post more than this amount of messages before they can embed links into their signatures and posts.}}}
+
+{{{SERVER_TZ
+The time zone of the web server.}}}
+
+{{{MEMBER_SEARCH_ENABLED	FUD_OPT_1	"Enabled\nDisabled\nOnly for registered users"	"8388608\n0\n4194304"
+Enable/disable the forum member search.}}}
+
+{{{FORUM_SEARCH	FUD_OPT_1	16777216
+Enable/disable the ability to do a full text search of the forum. Disable this option if you have little CPU power and/or wish to conserve SQL space. If option is disabled the search database will NOT be populated during posting. If you decide to enable the search at a later point, you will need to rebuild the search index. This may take a while, and is entirely dependent on the speed of your server and the number of messages your forum has.}}}
+
+{{{MEMBERS_PER_PAGE
+The number of members to show per page in the search result.}}}
+
+{{{THREAD_MSG_PAGER
+The pager that appears near every topic.}}}
+
+{{{GENERAL_PAGER_COUNT
+This is the number of direct links to pages that will be shown in the pager, excluding << < > >>.}}}
+
+{{{SHOW_EDITED_BY	FUD_OPT_1	33554432
+Enable/disable the text that will reveal if a post was edited.}}}
+
+{{{EDITED_BY_MOD	FUD_OPT_1	67108864
+Enable/disable the text that will reveal if an edited post was edited by a moderator.}}}
+
+{{{EDIT_AFTER_REPLY	FUD_OPT_3	1024
+If enabled, users will be able to edit their own posts, even after someone replied to it. Disable to prevent users from changing questions that are already answered.}}}
+
+{{{EDIT_TIME_LIMIT
+This sets the length of time a message can be edited before message editing is disabled.
+Set the value to 0 to allow unlimited editing time or -1 to disable.}}}
+
+{{{DISPLAY_IP	FUD_OPT_1	134217728
+Publicly display the IP address that the message was posted from. The administrators will always see the IPs and so will the forum moderators in the forums they moderate.}}}
+
+{{{LOGEDIN_TIMEOUT
+The length of time of non-activity before the forum considers a user no longer active in the forum.}}}
+
+{{{MAX_IMAGE_COUNT
+The maximum number of images allowed per post. Set to 0 to allow unlimited images.}}}
+
+{{{NOTIFY_FROM
+The E-mail address that all of the forum-generated email, such as notifications and welcome messages, should be sent as. This MUST be a valid E-mail address that you have access to.}}}
+
+{{{ANON_NICK
+The username that is attached to anonymous posts if anonymous posting is allowed.}}}
+
+{{{MAX_LOGIN_SHOW
+The maximum length of the user's login/alias.}}}
+
+{{{MAX_LOCATION_SHOW
+The maximum number of characters of a user's location to show on all forms except userinfo.}}}
+
+{{{PUBLIC_RESOLVE_HOST	FUD_OPT_1	268435456
+Enable/disable the showing of the partially resolved hostname of the poster to all users (ex. me.myself.com will be shown as .myself.com). This option does not affect the showing of IP addresses.}}}
+
+{{{ACTION_LIST_ENABLED	FUD_OPT_1	536870912
+Enable/disable the ability for forum users to see what other forum users are doing.}}}
+
+{{{LOGEDIN_LIST	FUD_OPT_1	1073741824
+Enable/disable the list of users who are currently using the forum on the front page. This option is a MUST be enabled if you want to enable the Allow Action List.}}}
+
+{{{EMAIL_CONFIRMATION	FUD_OPT_2	1
+Enable/disable E-mail confirmation of new registered accounts. A special URL will be sent in the welcome E-mail upon registration.}}}
+
+{{{PUBLIC_STATS	FUD_OPT_2	2
+Enable/disable the showing of how long it took to generate the page.}}}
+
+{{{DEFAULT_THREAD_VIEW	FUD_OPT_2	"Flat View thread and message list\nTree View thread and message list\nFlat thread listing/Tree message listing\nTree thread listing/Flat message listing"	"12\n0\n4\n8"
+The default view of the topic's contents and topic listing.}}}
+
+{{{FORUM_INFO	FUD_OPT_2	16
+Enable/disable the showing of forum statistics on the front page. Statistics include the total number of approved posts, number of topics and registered users and the last registered user.}}}
+
+{{{ONLINE_OFFLINE_STATUS	FUD_OPT_2	32
+Enable/disable the online/offline status indicator for the poster on messages.}}}
+
+{{{UNCONF_USER_EXPIRY 
+The number of days unconfirmed forum members are held in the database. They will be removed from the database after this period of time.}}}
+
+{{{MOVED_THR_PTR_EXPIRY
+The number of days to show a pointer of a moved topic from the original forum to the new forum. The pointer will be removed after this period of time.}}}
+
+{{{DATA_DIR
+The directory where the forum's data files are stored (cache, backups, and other data).}}}
+
+{{{WWW_ROOT_DISK
+The directory where the forum's web browseable files are stored (*.php, images, etc.).}}}
+
+{{{SHOW_N_MODS
+Up to how many moderators per forum to show on the front page.}}}
+
+{{{MAX_SMILIES_SHOWN
+Maximum number of smilies to display on the post forms.}}}
+
+{{{NOTIFY_WITH_BODY	FUD_OPT_2	64
+Include the message body and subject inside the E-mail notification.}}}
+
+{{{USE_ALIASES	FUD_OPT_2	128
+Allow users to specify a nick name, that will be used instead of a login name to identify those users on the forum.}}}
+
+{{{MULTI_HOST_LOGIN	FUD_OPT_2	256
+This option allows users to login into the forum from different computers/browsers and not terminate their existing sessions on other computers/browsers. WARNING: If you enable this option it is highly recommended that you disable URL sessions.}}}
+
+{{{POLLS_PER_PAGE
+How many polls to display per page on the poll listing.}}}
+
+{{{TREE_THREADS_ENABLE	FUD_OPT_2	512
+Whether or not to allow the tree view of the topic listing. This is a fairly CPU intensive page compared to all other forum pages, so use this option with caution.}}}
+
+{{{TREE_THREADS_MAX_DEPTH
+Maximum depth of the tree to allow, this option will prevent long trees from scrolling far of the users screen making the page unreadable.}}}
+
+{{{TREE_THREADS_MAX_SUBJ_LEN
+At which point to cut-off subjects of messages on topic listing in tree mode. This options allows you to save on screen space if you want to show large topic trees.}}}
+
+{{{THREAD_DUP_CHECK	FUD_OPT_3	67108864 
+Double post protection. Prevent users from posting duplicate topics.}}}
+
+{{{MODERATE_USER_REGS	FUD_OPT_2	1024
+Whether or not every new registration will need to be approved by the administrator before the new account is activated.}}}
+
+{{{REG_TIME_LIMIT
+This limit allows you to define how often can a registration can occur (in seconds). Set the value of this field to -1 if you do not wish to limit registrations.}}}
+
+{{{ENABLE_AFFERO	FUD_OPT_2	2048
+Previously used to enable affero, this resulted in an Affero button being shown beside each message, allowing users to give feedback via the Affero system. Removed in FUDforum 3.0.7.}}}
+
+{{{SEARCH_CACHE_EXPIRY
+Due to the complexity of the searching process the search results are being cached. This option allows you to define the maximum age of entries (in seconds) stored inside this cache. By default the cache age is set to 2 days.}}}
+
+{{{STATS_CACHE_AGE
+Generating forum statistics is somewhat expensive (CPU wise) therefore the results are being cached for a small period of time, which should significantly reduce the front page load on popular forums. This option allows you to define (in seconds) the maximum time for which the forum stats will be cached.}}}
+
+{{{ENABLE_THREAD_RATING	FUD_OPT_2	4096
+Whether or not to allow users to rate topics.}}}
+
+{{{TRACK_REFERRALS	FUD_OPT_2	8192
+Whether or not to try to track forum referrals by setting a cookie with referral id to new incoming users.}}}
+
+{{{POST_ICONS_PER_ROW
+Number of message icons to show per row on message posting form.}}}
+
+{{{MAX_LOGGEDIN_USERS
+Maximum number of currently logged-in users to show on the front page.}}}
+
+{{{PHP_COMPRESSION_ENABLE	FUD_OPT_2	16384
+Whether or not to use PHP to compress forum's output. By turning this option you are likely to save a fair bit of bandwidth. However, for performance reasons it is recommended that you use native compression built-in into most webservers like mod_gzip or mod_deflate for Apache.}}}
+
+{{{PHP_COMPRESSION_LEVEL
+If PHP's compression is used, this indicates how extensively should the data be compressed, the values can range from 1-9.}}}
+
+{{{USE_PATH_INFO	FUD_OPT_2	32768
+Use PATH_INFO based URLs that looks like http://forum.com/index.php/a/b/c/. This makes the URLs easier to remember and more search engine friendly. Check if your web server supports it by clicking on the above test link. If you see the forum's front page, you can enable it. Note that you also need to enable a theme based on the 'path_info' template set.}}}
+
+{{{ALLOW_PROFILE_IMAGE	FUD_OPT_2	65536
+Whether or not to allow users to enter a URL to an image in their profile that will be displayed on the user info page for that user. The danger of this feature is that the user could potentially link to a page other then an image and insecure browsers like Internet Explorer will parse that page executing any potentially hostile Javascript that may be present.}}}
+
+{{{NEW_ACCOUNT_NOTIFY	FUD_OPT_2	131072
+This setting will only be used if you have chosen to manually approve all new registrations. If enabled, then every time a new user is registered all forum administrators will receive a notification via e-mail.}}}
+
+{{{MODERATED_POST_NOTIFY	FUD_OPT_2	262144
+Notify forum moderators via e-mail when a new message is posted in a forum where a message must first be approved by the moderator before shown to the rest of the visitors.}}}
+
+{{{BUST_A_PUNK	FUD_OPT_2	524288
+When a user is banned set a special cookie that will try to make sure that this user remains banned.}}}
+
+{{{MNAV_MAX_DATE
+The maximum amount of days the users may go back in history when using the message navigator. Set to -1 for unlimited.}}}
+
+{{{MNAV_MAX_LEN
+The maximum length of the message body to show on the search page & message navigator.}}}
+
+{{{SHOW_XML_LINK	FUD_OPT_2	1048576
+Whether or not to show a syndication link, linking to help on how get XML (RDF, Atom and RSS) feeds of the forum's data.}}}
+
+{{{SHOW_PDF_LINK	FUD_OPT_2	2097152
+Whether or not to show a link allowing users to generate a printable PDF of the page they are viewing.}}}
+
+{{{DWLND_REF_CHK	FUD_OPT_2	4194304
+Check HTTP_REFERER of users before allowing users to download file attachments. If enabled, users who's HTTP_REFERER does not contain WWW_ROOT will be prevented from downloading the attachments.}}}
+
+{{{FILE_LOCK	FUD_OPT_2	8388608
+Whether or not to use secure file permissions (0600/0711).}}}
+
+{{{FEED_ENABLED	FUD_OPT_2	16777216
+Whether to allow XML (RDF, Atom and RSS) feeds of the forum's data.}}}
+
+{{{FEED_AUTH	FUD_OPT_2	33554432
+Whether or not to perform permission checks to determine if the user has access the requested data.
+If disabled, messages from restricted forums may be publicly visible in your forum's XML feed.}}}
+
+{{{FEED_AUTH_ID
+When performing authentication, the forum will treat the user as anonymous. However, to increase or lower security you can specify exactly which user the feed will be authenticated as. This field allows you to enter the id of that user (0=Anonymous).}}}
+
+{{{FEED_MAX_N_RESULTS
+The maximum number of results that can be fetched within a single request through the feed.}}}
+
+{{{FEED_ALLOW_USER_DATA	FUD_OPT_2	67108864
+Whether or not to allow user profile data to be fetched and presented as a feed.}}}
+
+{{{FEED_CACHE_AGE
+Duration of time for which to cache XML feeds (in seconds). Set to 0 to disable caching.}}}
+
+{{{PDF_ENABLED	FUD_OPT_2	134217728
+Whether or not to enable PDF output.}}}
+
+{{{PDF_ALLOW_FULL	FUD_OPT_2	268435456
+Whether or not to allow users to generate a PDF containing ALL the messages in a particular forum.}}}
+
+{{{PDF_PAGE
+The sizes are in points, each point is 1/72 of an inch.}}}
+
+{{{PDF_WMARGIN
+Number of pixels to reserve for white space at the right & left side of the page.}}}
+
+{{{PDF_HMARGIN
+Number of pixels to reserve for white space at the top &amp; bottom of the page.}}}
+
+{{{PDF_MAX_CPU
+The PDF generation process can be fairly CPU intensive. This setting allows you to limit the number of seconds the PHP script may spend trying to generate the PDF document.}}}
+
+{{{SHOW_REPL_LNK	FUD_OPT_2	536870912
+Whether or not to show a link (beside the message subject) to the message that the current message is a reply to.}}}
+
+{{{ALLOW_EMAIL	FUD_OPT_2	1073741824
+Enable/disable the forum's built-in E-mail client (allowing members to send other members mail).}}}
+
+{{{SESSION_COOKIES	FUD_OPT_3	1
+Make the cookie last only for as long as the browser window is open. If a security is a major concern, turn this option on.}}}
+
+{{{DISABLE_TREE_MSG	FUD_OPT_3	2
+Disable the threaded view of the contents for a single topic.}}}
+
+{{{ENABLE_REFERRER_CHECK	FUD_OPT_3	4
+Always check to make sure that the referring URL is on the same domain as the forum.}}}
+
+{{{NNTP_OBFUSCATE_EMAIL	FUD_OPT_3	8
+Whether or not to obfuscate user e-mails when sending e-mails from FUDforum to newsgroups.}}}
+
+{{{SESSION_IP_CHECK	FUD_OPT_3	16
+Whether or not to validate session's against user IP While this may increase security it will cause annoyances for users who's IP address frequently changes as they will need to re-login each time their IP changes.}}}
+
+{{{HIDE_PROFILES_FROM_ANON	FUD_OPT_3	32
+If enabled, anonymous and unconfirmed forum members will not be able to view profiles of registered users.}}}
+
+{{{SMART_EMAIL_NOTIFICATION	FUD_OPT_3	64
+Enable 'smart' e-mail notification mechanism that would only notify users if they read previous notification. This prevents filling up of the user's mailbox with notifications if they are not reading them.}}}
+
+{{{DISABLE_TURING_TEST	FUD_OPT_3	128
+If disabled users will not need to complete a turing test intended to prevent automated account creation bots. Captcha test involves identifying a series of random letters that are displayed in ASCII form.}}}
+
+{{{DISABLE_AUTOCOMPLETE	FUD_OPT_3	256
+If disabled the browser will not attempt to 'remember' the values for the login form.}}}
+
+{{{NNTP_MIME_POSTS	FUD_OPT_3	512
+Format forum messages as MIME encoded posts before sending them to a newsgroup. If disabled, messages will be UUencoded.}}}
+
+{{{DISABLE_WELCOME_EMAIL	FUD_OPT_3	2048
+If enabled the forum will no longer send welcome e-mails when new users register.}}}
+
+{{{USE_TEMP_TABLES	FUD_OPT_3	4096
+Use temporary SQL tables to optimize some operations (dependent on the ability to create temp tables).}}}
+
+{{{USE_ANON_TURING	FUD_OPT_3	8192
+When anonymous users post messages perform captcha test.}}}
+
+{{{FORUM_NOTIFY_ALL	FUD_OPT_3	16384
+If enabled, subscribers to a forum will receive notifications about every new message in the forum, rather then just new topics in the forum.}}}
+
+{{{DB_MESSAGE_STORAGE	FUD_OPT_3	32768
+If enabled, regular and private messages will be stored inside the database. If disabled, they will be stored in files on disk. For performance reasons we recommend you keep it disabled, especially on large forums!}}}
+
+{{{DISABLE_ANON_CACHE	FUD_OPT_3	65536
+Disable sending of page-cache headers to anonymous users, this may solve extended caching by browsers non-complaint with web specs.}}}
+
+{{{FUD_WHOIS_SERVER
+Hostname or IP address of the WHOIS server to use for IP address analysis.}}}
+
+{{{MIN_TIME_BETWEEN_LOGIN
+Minimum time between login attempts in seconds. This option is intended as a throttle mechanism against dictionary attacks on forum passwords.}}}
+
+{{{NO_ANON_ACTION_LIST	FUD_OPT_3	131072
+Disable displaying of the action list to anonymous users.}}}
+
+{{{NO_ANON_WHO_ONLINE	FUD_OPT_3	262144
+Disable displaying of who's online to anonymous users.}}}
+
+{{{ENABLE_GEO_LOCATION	FUD_OPT_3	524288
+Enable country identifier flags beside each message poster, requires import of Geolocation database, see the Geolocation Management control panel for more details.}}}
+
+{{{DISABLE_NOTIFICATION_EMAIL	FUD_OPT_3	1048576
+Disable the system for sending e-mail notification pertaining to new messages and topics being posted to the forums regardless of the user's settings.}}}
+
+{{{UPDATE_GEOLOC_ON_LOGIN	FUD_OPT_3	2097152
+If enabled then user's country (name and flag) will be updated each time they login. This option depends on Geo Location being enabled.}}}
+
+{{{PLUGINS_ENABLED	FUD_OPT_3	4194304
+Enable/disable forum plugins. Plugins are typically created by third-party developers to extended the default capabilities of FUDforum.}}}
+
+{{{QUICK_REPLY	FUD_OPT_3	"Disabled\nExpanded\nCollapsed"	"0\n8388608\n16777216"
+Quick reply display mode: disabled, collapsed or expanded.}}}
+
+{{{GRAPHICAL_TURING	FUD_OPT_3	33554432
+Use a graphical captcha instead of a text captcha (only if your PHP has GD support).}}}
+
+{{{PHP_CLI
+Full path to the command line PHP executable on your system. This command will be used to run periodic and ad hoc tasks.}}}
+
+{{{CALENDAR_ENABLED	FUD_OPT_3	134217728
+Enable or disable the forum's built-in calendar.}}}
+
+{{{CALENDAR_SHOW_BIRTHDAYS	FUD_OPT_3	268435456
+Show forum member's birthdays on the built-in calendar.}}}
+
+{{{FORUM_DEBUG	FUD_OPT_3	"Disabled\nDetailed logging\nFull debugging"	"0\n536870912\n1073741824"
+Debug the forum. Under normal conditions this should remain disabled.}}}
+
+{{{ALLOW_USERID_CHANGES	FUD_OPT_4	1
+Allow users to change their own logins. Disable if you authenticate users externally (i.e. via a plugin).}}}
+
+{{{ALLOW_PASSWORD_RESET	FUD_OPT_4	2
+Allow users to reset their own passwords.}}}
+
+{{{KARMA	FUD_OPT_4	4
+Enable karma / user reputation system. If enabled, member can upvote or downvote other members.}}}
+
+{{{PAGES_ENABLED	FUD_OPT_4	8
+Display pages icon on menu. This setting will automatically be enaled if there are pages that should be shown in the List of Pages.}}}
+
+{{{BLOG_ENABLED	FUD_OPT_4	16
+Enable the forum's blog/ portal page.}}}
+

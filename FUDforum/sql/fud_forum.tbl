@@ -1,0 +1,49 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_forum.tbl 5264 2011-05-16 16:29:13Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}forum;
+
+CREATE TABLE {SQL_TABLE_PREFIX}forum
+(
+	id			INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cat_id			INT NOT NULL DEFAULT 0,
+	name			VARCHAR(255) NOT NULL DEFAULT '',
+	descr			TEXT,
+	parent			INT NOT NULL DEFAULT 0,
+	url_redirect		VARCHAR(255),
+	post_passwd		VARCHAR(32),
+	forum_icon		VARCHAR(255),
+	date_created		BIGINT NOT NULL DEFAULT 0,
+	thread_count		INT NOT NULL DEFAULT 0,
+	post_count		INT NOT NULL DEFAULT 0,
+	last_post_id		INT NOT NULL DEFAULT 0,
+	view_order		INT NOT NULL DEFAULT 0,
+	max_attach_size		INT NOT NULL DEFAULT 0,
+	max_file_attachments 	INT NOT NULL DEFAULT 1,
+	moderators 		TEXT,
+	message_threshold 	INT NOT NULL DEFAULT 0,
+	forum_opt		INT NOT NULL DEFAULT 16
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}forum_i_c ON {SQL_TABLE_PREFIX}forum (cat_id);
+
+# This index should be UNIQUE, but cannot because of the DEFAULT 0 and UPDATE to 0 in consist.php.
+CREATE INDEX {SQL_TABLE_PREFIX}forum_i_lpi ON {SQL_TABLE_PREFIX}forum (last_post_id);
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}fl_1;
+CREATE TABLE {SQL_TABLE_PREFIX}fl_1 (id INT);
+
+# Opts
+# 1 anon_forum (ON/OFF)
+# 2 moderated (ON/OFF)
+# 4 passwd_posting (ON/OFF)
+# 8 tag_style NONE
+# 16 tag_style (BBCode/HTML)
+# 32 mod_attach (ON/OFF)
+# 64 always_notify_mods (ON/OFF)

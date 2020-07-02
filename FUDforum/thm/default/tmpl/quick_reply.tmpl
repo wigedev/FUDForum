@@ -1,0 +1,59 @@
+/**
+* copyright            : (C) 2001-2020 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: quick_reply.tmpl 6395 2020-05-13 10:26:54Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: quick_reply.inc.t; output: !quick_reply.inc;}
+{REF: post_common.tmpl}
+
+{SECTION: quick_reply}
+<form action="{TEMPLATE: POST_PAGE_lnk}" method="post" id="post_form" name="post_form" enctype="multipart/form-data" onsubmit="document.forms[\'post_form\'].btn_submit.disabled = true;">
+<table cellspacing="0" cellpadding="0" class="ContentTable">
+<tr>
+	<td class="MsgSpacer">
+		<table cellspacing="0" cellpadding="0" class="MsgTable">
+		<tr>
+			<td class="MsgR1 fb {IF: $quick_reply_collapsed}collapsed{ELSE}expanded{ENDI}">
+				{MSG: quick_reply}
+			</td>
+		</tr>
+		<tr>
+			<td class="MsgR3" {IF: $quick_reply_collapsed}style="display:none;"{ENDIFI}>
+				<table>{TEMPLATE: fud_code_icons}</table>
+				<textarea wrap="virtual" id="txtb" cols="" rows="" name="msg_body" style="width:99%; height:100px;"></textarea>
+				{DEF: _hs}
+				<input type="hidden" name="submitted" value="" />
+				<input type="hidden" name="msg_subject" value="{VAR: quick_reply_subject}" />
+				<input type="hidden" name="reply_to" value="{VAR: obj2->last_post_id}" />
+				<input type="hidden" name="th_id" value="{VAR: obj2->thread_id}" />
+				<input type="hidden" name="frm_id" value="{VAR: obj2->forum_id}" />
+				<input type="hidden" name="prev_loaded" value="1" />
+				<input type="hidden" name="msg_show_sig" value="{IF: $usr->users_opt & 2048}Y{ENDIFI}" />
+				<input type="hidden" name="msg_poster_notif" value="{IF: $usr->users_opt & 2}Y{ENDIFI}" />
+			</td>
+		</tr>
+		<tr>
+			<td class="MsgToolBar" {IF: $quick_reply_collapsed}style="display:none;"{ENDIFI}>
+				<input type="submit" accesskey="r" class="button" value="{MSG: quick_reply_preview}" tabindex="4" name="preview" />
+				<input type="submit" accesskey="s" class="button" tabindex="5" name="btn_submit" value="{MSG: quick_reply_post}" onclick="javascript: document.post_form.submitted.value=1;" />
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</form>
+{SECTION: END}
+
+{SECTION: POST_PAGE_lnk}
+{ROOT}?t=post
+{SECTION: END}
+
+{SECTION: quick_reply_prefix used to check if the subject needs it added}
+{MSG: post_re}
+{SECTION: END}

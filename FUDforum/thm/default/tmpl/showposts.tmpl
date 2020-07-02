@@ -1,0 +1,81 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: showposts.tmpl 6325 2019-11-14 14:56:39Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: showposts.php.t; output: showposts.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: is_perms.tmpl}
+{REF: alt_var.tmpl}
+{REF: tabs.tmpl}
+
+{SECTION: post_entry}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td class="GenText"><a href="{TEMPLATE: post_entry_lnk}">{VAR: r[2]}</a></td>
+	<td class="GenText nw"><a href="{TEMPLATE: post_entry_lnk1}">{VAR: r[0]}</a></td>
+	<td class="DateText nw">{TEMPLATE: showposts_ent_date}</td>
+</tr>
+{SECTION: END}
+
+{PAGE: SHOWPOSTS_PAGE show all posts by a user}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{IF: isset($_GET['id']) && _uid == $_GET['id']}{TEMPLATE-DATA: tabs}{ENDIF}
+{TEMPLATE-DATA: admin_cp}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="3">{MSG: user_info}</th>
+</tr>
+<tr class="RowStyleA">
+	<td class="GenText wa">{MSG: login_header} <a href="{TEMPLATE: SHOWPOSTS_PAGE_lnk}">{VAR-HTML: u_alias}</a></td>
+	<td class="GenText nw">{MSG: registered_on}</td>
+	<td class="GenText nw">{MSG: post_count}</td>
+</tr>
+<tr>
+	<th class="wa">{MSG: subject}</th>
+	<th class="nw">{MSG: forum}</th>
+	<th class="nw"><a class="thLnk" href="{TEMPLATE: SHOWPOSTS_PAGE_lnk1}" rel="nofollow">{MSG: date_posted}</a></th>
+</tr>
+{TEMPLATE-DATA: post_entry}
+</table>
+{TEMPLATE-DATA: pager}
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: show_posts_by}
+{MSG: show_posts_by}
+{SECTION: END}
+
+{SECTION: showposts_update}
+{MSG: showposts_update}
+{SECTION: END}
+
+{SECTION: post_entry_lnk}
+{ROOT}?t={DEF: d_thread_view}&amp;goto={VAR: r[3]}&amp;{DEF: _rsid}#msg_{VAR: r[3]}
+{SECTION: END}
+
+{SECTION: post_entry_lnk1}
+{ROOT}?t={DEF: t_thread_view}&amp;frm_id={VAR: r[1]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: SHOWPOSTS_PAGE_lnk}
+{ROOT}?t=usrinfo&amp;id={VAR: uid}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: SHOWPOSTS_PAGE_lnk1}
+{ROOT}?t=showposts&amp;so={VAR: SORT_ORDER_R}&amp;id={VAR: uid}&amp;{DEF: _rsid}
+{SECTION: END}

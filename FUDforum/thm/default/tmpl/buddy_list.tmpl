@@ -1,0 +1,173 @@
+/**
+* copyright            : (C) 2001-2013 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: buddy_list.tmpl 6244 2019-02-10 07:07:03Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: buddy_list.php.t; output: buddy_list.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: buddy.tmpl}
+{REF: return.tmpl}
+{REF: tabs.tmpl}
+{REF: alt_var.tmpl}
+
+{SECTION: homepage_link}
+<a href="{VAR: r[7]}"><img src="{THEME_IMAGE_ROOT}/homepage.gif" alt="" /></a>
+{SECTION: END}
+
+{SECTION: online_indicator}
+<img src="{THEME_IMAGE_ROOT}/online.png" title="{MSG: buddy_online}" alt="{MSG: buddy_online}" />
+{SECTION: END}
+
+{SECTION: offline_indicator}
+<img src="{THEME_IMAGE_ROOT}/offline.png" title="{MSG: buddy_offline}" alt="{MSG: buddy_offline}" />
+{SECTION: END}
+
+{SECTION: bday_indicator}
+<img src="{BASE}blank.gif" alt="" width="10" height="1" /><img src="{THEME_IMAGE_ROOT}/bday.gif" alt="" />{MSG: buddy_list_bday}
+{SECTION: END}
+
+{SECTION: pm_link}
+<a href="{TEMPLATE: pm_link_lnk}">{VAR: r[2]}</a>
+{SECTION: END}
+
+{SECTION: email_link}
+<a href="{TEMPLATE: email_link_lnk}" rel="nofollow">{VAR: r[2]}</a>
+{SECTION: END}
+
+{SECTION: buddy buddy row entry}
+<tr class="{ALT-VAR: search_alt RowStyleA RowStyleB}">
+	<td class="ac">{TEMPLATE-DATA: online_status}</td>
+	<td class="GenText wa">
+		{IF: $FUD_OPT_1 & 1024}{TEMPLATE: pm_link}{ELSE}{TEMPLATE: email_link}{END}&nbsp;
+		<span class="SmallText">(<a href="{TEMPLATE: buddy_lnk}">{MSG: buddy_remove}</a>)</span>&nbsp;
+		{TEMPLATE-DATA: bday_indicator}
+	</td>
+	<td class="ac">{VAR: r[6]}</td>
+	<td class="ac nw">{TEMPLATE: buddy_date}</td>
+	<td class="GenText nw">
+		<a href="{TEMPLATE: buddy_lnk1}"><img src="{THEME_IMAGE_ROOT}/msg_about.gif" alt="" /></a>&nbsp;
+		<a href="{TEMPLATE: buddy_lnk2}"><img src="{THEME_IMAGE_ROOT}/show_posts.gif" alt="" /></a>
+		{IF: $r[7]}{TEMPLATE: homepage_link}{ENDIF}
+	</td>
+</tr>
+{SECTION: END}
+
+{SECTION: buddy_list the buddy list table}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th>{MSG: buddy_status}</th>
+	<th>{MSG: my_buddies}</th>
+	<th class="nw ac">{MSG: referals_post_count}</th>
+	<th class="ac nw">{MSG: referals_registered_on}</th>
+	<th class="ac nw">{MSG: referals_action}</th>
+</tr>
+{TEMPLATE-DATA: buddies}
+</table>
+{SECTION: END}
+
+{PAGE: BUDDYLIST_PAGE Buddy list}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{TEMPLATE-DATA: tabs}
+{TEMPLATE-DATA: buddies}
+<br /><br />
+<form id="buddy_add" action="{TEMPLATE: BUDDYLIST_PAGE_lnk3}" method="post">{DEF: _hs}<div class="ctb">
+<table cellspacing="1" cellpadding="2" class="MiniTable">
+<tr>
+	<th class="nw">{MSG: add_buddy}</th>
+</tr>
+<tr class="RowStyleA">
+	<td class="GenText nw Smalltext">
+		{MSG: buddy_search}
+		{IF: ($FUD_OPT_1 & 8388608 || (_uid && $FUD_OPT_1 & 4194304))}{TEMPLATE: buddy_member_search}{ENDIF}
+		<br /><br />
+		<input type="text" tabindex="1" name="add_login" id="add_login" value="" maxlength="100" size="25" />
+		<input tabindex="2" type="submit" class="button" name="submit" value="{MSG: add}" />
+	</td>
+</tr>
+</table>
+</div></form>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script>
+	document.forms['buddy_add'].add_login.focus();
+</script>
+
+<style>
+	.ui-autocomplete-loading { background: white url("{THEME_IMAGE_ROOT}/ajax-loader.gif") right center no-repeat; }
+</style>
+<script>
+	jQuery(function() {
+		jQuery("#add_login").autocomplete({
+			source: "index.php?t=autocomplete&lookup=alias", minLength: 1
+		});
+	});
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: err_info}
+{MSG: err_info}
+{SECTION: END}
+
+{SECTION: buddy_list_err_cantadd}
+{MSG: buddy_list_err_cantadd}
+{SECTION: END}
+
+{SECTION: buddy_list_err_dup}
+{MSG: buddy_list_err_dup}
+{SECTION: END}
+
+{SECTION: buddy_list_err_nouser_title}
+{MSG: buddy_list_err_nouser_title}
+{SECTION: END}
+
+{SECTION: buddy_list_err_nouser}
+{MSG: buddy_list_err_nouser}
+{SECTION: END}
+
+{SECTION: buddy_list_update}
+{MSG: buddy_list_update}
+{SECTION: END}
+
+{SECTION: buddy_member_search}
+<br />{MSG: member_search}
+{SECTION: END}
+
+{SECTION: pm_link_lnk}
+{ROOT}?t=ppost&amp;{DEF: _rsid}&amp;toi={VAR-URL: r[0]}
+{SECTION: END}
+
+{SECTION: email_link_lnk}
+{ROOT}?t=email&amp;toi={VAR: r[1]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: buddy_lnk}
+{ROOT}?t=buddy_list&amp;{DEF: _rsid}&amp;del={VAR: r[0]}&amp;SQ={GVAR: sq}
+{SECTION: END}
+
+{SECTION: buddy_lnk1}
+{ROOT}?t=usrinfo&amp;id={VAR: r[1]}&amp;{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: buddy_lnk2}
+{ROOT}?t=showposts&amp;{DEF: _rsid}&amp;id={VAR: r[1]}
+{SECTION: END}
+
+{SECTION: BUDDYLIST_PAGE_lnk3}
+{ROOT}?t=buddy_list
+{SECTION: END}
+
+{SECTION: buddy_list_err_ignore}
+{MSG: buddy_list_err_ignore}
+{SECTION: END}

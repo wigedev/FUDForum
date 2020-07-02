@@ -1,0 +1,1172 @@
+# Messages for Serbian (Latin script) (srpski (latinica)‎)
+# Exported from translatewiki.net
+# Author: KWiki
+# Author: Macofe
+# Author: McDutchie
+# Author: Naudefj
+# Author: Obsuser
+# Author: Rancher
+# Author: Zoranzoki21
+# Author: Сербијана
+
+action:Radnja
+add_to_buddy_list:dodaj na listu prijatelja
+admin:Administrator
+admin_control_panel:Administracija
+administrator:Administrator
+attachment:Prilog:
+avatar:Avatar:
+average_post_count:{PLURAL: u->posted_msg_count|$1 poruka|$1 poruke|$1 poruka} (u proseku {PLURAL: avg|$1 poruka|$1 poruke|$1 poruka} po danu)
+biography:Biografija:
+birth_date:Datum rođenja:
+by:Od:
+by_mod:od moderatora
+current_time:Trenutno vreme
+custom_avatar_queue:Red prilagođenih avatara
+date_posted:Datum postavljanja
+date_registered:Datum registracije:
+download_counter:preuzeto {PLURAL: v[3]|$1 put|$1 puta|$1 puta}
+pmsg_download_counter:preuzeto {PLURAL: r->dlcount|$1 put|$1 puta|$1 puta}
+email:Imejl:
+email_to_friend:Pošalji imejl prijatelju
+email_to_friend_desc:Pošaljite URL adresu ove stranice svojim prijateljima putem imejla
+email_user:Pošalji imejl-poruku korisniku
+faq:Pomoć
+first_unread_msg:Idi na nepročitane poruke
+first_unread_msg_desc:Idi na prvu nepročitanu poruku u ovoj temi
+flat_view:Nazad na podrazumevani ravni prikaz
+forum:Forum:
+forum_icon:Ikona foruma
+forum_new_messages:Nove poruke
+forum_none_messages:Samo registrovani članovi foruma mogu da označe poruku kao pročitanu ili nepročitanu
+forum_old_messages:Nema novih poruka.
+from:Od:
+gender:Pol:
+go:Idi
+goto_next_msg:Idi na sledeću poruku
+goto_prev_msg:Idi na prethodnu poruku
+home:Početna
+homepage:Početna stranica:
+icq_control_panel:Tabla prisutnih korisnika ICQ-a
+icq_message_form:Obrazac za poruke sa ICQ-a:
+ignore_user:ignoriši sve poruke ovog korisnika
+im_aim:AIM Handle:
+im_msnm:MSN Messenger:
+im_yahoo:Yahoo Messenger:
+image:Slika:
+index_forum:Forum
+index_new_posts:Nove poruke od poslednjeg čitanja
+index_no_new_posts:Nema novih poruka od poslednjeg čitanja
+index_url_redirection:Preusmerenje
+interests:Interesovanja:
+last_post:Poslednja poruka
+last_thread_msg:Idi na poslednju poruku ove teme
+legend:Legenda
+location:Mesto:
+lock_thread:Zaključaj temu
+locked:Zaključana
+locked_with_new_posts:Zaključana (ima nepročitanih poruka)
+logged_in_list:Lista prijavljenih korisnika
+login:Prijava
+login_header:Korisničko ime:
+logout:Odjavi me
+mark_all_read:Označi sve poruke kao pročitane
+mark_all_read_desc:Sve vaše nepročitane poruke biće označene kao pročitane
+members:Članovi
+calendar:Kalendar
+cal_goto_date:Idi na:
+cal_day_heading:Događaji dana
+cal_no_events:Nema događaja ovog dana.
+cal_update:Pregledanje forumskog kalendara
+cal_birthday:Rođendan: {VAR: user}
+cal_birthdays:{PLURAL: birthdays|$1 rođendan|$1 rođendana|$1 rođendana}
+cal_birthday_age:(ima {PLURAL: age|$1 godinu|$1 godine|$1 godina}).
+message:Poruka
+message_counter:Naši korisnici su napisali ukupno <b>{PLURAL: post_count|$1 poruku|$1 poruke|$1 poruka}</b> u <b>{PLURAL: thread_count|$1 temi|$1 teme|$1 tema}</b>
+message_index:Indeks poruka
+message_index_desc:Prikaži listu poruka
+minimize_category:Spusti kategoriju
+minimize_message:Spusti poruku
+moderation_queue:Red za moderisanje
+moderator:Moderator
+moderator_of:Moderator foruma:
+moderator_options:Mogućnosti moderatora
+moderators:{PLURAL: modcount|Moderator|Moderatori}
+more_unread_messages:više nepročitanih poruka
+more_unread_messages_desc:Prikaži više nepročitanih poruka i označi trenutno vidljive poruke kao pročitane
+move_thread:Premesti
+moved:Premešteno u drugi forum
+moved_thread_message:Ova tema je premeštena u drugi forum
+na:nepoznato
+new_posts:Nove poruke
+new_private_messages:Imate <span class="GenTextRed">({VAR: c})</span> {PLURAL: c|nepročitanu privatnu poruku|nepročitane privatne poruke}
+new_thread:Napravi novu temu
+newest_user:Najnoviji registrovani korisnik je
+next_page:Sledeća stranica
+next_thread:Sledeća tema:
+no_messages:U ovom forumu nema poruka.<br />Budite prvi koji će otvoriti temu.
+no_msg_body:Poruka nema sadržinu
+no_new_posts:Nema novih poruka
+no_posts:Nema poruka.
+no_subscribed_forums:Nema nadgledanih foruma.
+no_subscribed_threads:Nema nadgledanih tema.
+no_bookmarked_threads:Nema zabeleženih tema.
+no_unread_locked:Ova tema je zaključana.
+no_unread_msg:Ova tema nema nepročitanih poruka.
+no_unread_msg_unreg:Pravo na praćenje pročitanih i nepročitanih poruka imaju samo registrovani korisnici
+num_pages:Stranice ({VAR: ttl_pg}):
+num_votes:{VAR: obj->total_votes} {PLURAL: obj->total_votes|glas|glasa|glasova}
+occupation:Zanimanje:
+off:isključeno
+on:uključeno
+page_timings:Ukupno vreme potrošeno na pravljenje stranice: {PLURAL: page_gen_time|$1 sekund|$1 sekunde|$1 sekundi}
+pm:Privatna pošta
+poll:Anketa:
+post_count:Broj poruka {VAR: u_pcount}
+post_count_l:Broj poruka:
+posts:Poruke
+posts_c:Poruka:
+prev_thread:Prethodna tema:
+usrinfo_private_message:Privatna poruka:
+profile:Kontrolna tabla
+profile_desc:Pristup korisničkoj kontrolnoj tabli
+rate_thread:ocenite temu
+rating:Ocena
+rating_track:Upravljaj ocenama za temu <b>{VAR: thr->subject}</b>:
+refresh_list:Osveži listu
+register:Registracija
+registered:Registrovan:
+registered_on:Datum registracije: {TEMPLATE: registered_on_date}
+replies:Odgovora
+report_to_mod:Prijavi poruku moderatoru
+reported_messages:Prijavljene poruke
+reveal_all_posts:otkrij sve poruke korisnika {VAR: user_login}
+reveal_post:otkrij poruku
+search:Pretraga
+sel_todays_posts:Današnje poruke
+sel_todays_posts_desc:Uključite/isključite filter za današnje poruke (prikazivaće samo poruke napisane danas)
+sel_unanswered_posts:Neodgovorene poruke
+sel_unanswered_posts_desc:Uključite/isključite filter za neodgovorene poruke (prikazivaće samo poruke bez odgovora)
+sel_unread_messages:Nepročitane poruke
+sel_unread_messages_desc:Uključite/isključite filter za nepročitane poruke (prikazivaće samo nepročitane poruke)
+send:Pošalji
+send_pm_desc:Pošalji korisniku privatnu poruku
+sender_email:Imejl pošiljaoca:
+sender_name:Ime pošiljaoca:
+show_posts_by:Prikaži poruke korisnika {VAR: u_alias}
+size:Veličina:
+status:Status:
+status_line:Na forumu ima <b>{PLURAL: st_obj->online_users_reg|$1 član|$1 člana|$1 članova}</b>, <b>{PLURAL: st_obj->online_users_hidden|$1 nevidljivi korisnik|$1 nevidljiva korisnika|$1 nevidljivih korisnika}</b> i <b>{PLURAL: st_obj->online_users_anon|$1 gost|$1 gosta|$1 gostiju}</b>.
+sticky:lepljiva:
+stop_ignoring:prestani sa ignorisanjem korisnika
+sub_to_thread:Nadgledaj temu
+sub_to_thread_desc:Obaveštavaj me o novim porukama u ovoj temi
+bookmark_thread:Zabeleži temu
+bookmark_thread_desc:Dodaj ovu temu na listu obeleživača
+subject:Naslov
+subscribe:Nadgledaj
+subscribe_desc:Primaj obaveštenja kada se otvori nova tema unutar ovog foruma
+subscribed_forums:Nadgledani forumi
+subscribed_forums_desc:Promeni filter za nadgledane forume (prikazivaće samo poruke iz foruma koji nadgledate)
+subscribed_threads:Nadgledane teme
+subscribed_threads_desc:Promeni filter za nadgledane teme (prikazivaće samo poruke iz tema koje nadgledate)
+bookmarked_threads:Zabeležene teme
+switch_to_thread_view:Prebaci na nitni prikaz teme
+thread:Tema:
+thread_announcement:Saopštenje:
+thread_first_unread_msg:Idi na prvu nepročitanu poruku ove teme
+thread_thread:Tema
+threads:Tema
+time:Vreme
+todays_posts:Današnje poruke
+todays_posts_desc:Prikaži sve današnje poruke
+un_ignore_user:prekini zanemarivanje poruka ovog člana
+unanswered_posts:Neodgovorene poruke
+unanswered_posts_desc:Prikaži sve poruke koje nemaju odgovore
+unlock_thread:Otključaj temu
+unread_msg:Ova tema sadrži poruke koje još uvek niste pročitali
+unread_msg_locked:Zaključana tema s nepročitanim porukama
+unread_posts:Nepročitane poruke
+unread_posts_desc:Prikaži sve nepročitane poruke
+unsub_from_thread:Prekini nadgledanje ove teme
+unsub_from_thread_desc:Prekini primanje obaveštenja o novim porukama unutar ove teme
+unbookmark_thread:Ukloni iz zabeleški
+unbookmark_thread_desc:Ukloni ovu temu sa spiska zabeleški
+unsubscribe:Prekini nadgledanje
+unsubscribe_desc:Prekini primanje obaveštenja o novim temama u forumu
+updated_on:Ažurirano:
+user:Korisnik
+user_counter:Trenutno imamo <b>{VAR: st_obj->user_count}</b> {PLURAL: st_obj->user_count|upisanog korisnika|upisana korisnika|upisanih korisnika}
+user_info:Korisničke informacije
+user_info_l:Podaci člana {VAR: u->alias}
+user_offline:{VAR: obj->login} je trenutno van mreže
+user_online:{VAR: obj->login} je trenutno na mreži
+usrinfo_last_post:Poslednja poruka:
+view_results:Prikaži rezultate
+views:Pregleda
+vote:{PLURAL: frm->n_rating|$1 glas|$1 glasa|$1 glasova}
+vote_button:Glasaj
+vote_for_thread:Glasaj
+was_moved_msg:<a href="{TEMPLATE: was_moved_msg_lnk}">{VAR: r[2]}</a> je premešten u <a href="{TEMPLATE: was_moved_msg_lnk2}">{VAR: r[12]}</a> od strane urednika.
+welcome_message:Dobro došli, <b>{VAR: usr->alias}</b>. Vaša poslednja poseta je bila u {TEMPLATE: welcome_message_date}
+what_ppl_doing:Aktivnost korisnika
+reported_del_report:Izbriši izveštaj
+reported_reason:Razlog:
+reported_on:U:
+reported_reported_by:Izvestilac:
+reported_reported_msg:Prijavljene poruke
+modque_pending_approval:Poruke koje čekaju odobrenje
+modque_approve:Odobri
+modque_delete:Izbriši
+modque_deleteall:Izbriši sve od korisnika
+modque_no_message:Nema poruka koje čekaju odobrenje
+pmsg_new_messages:Nepročitana privatna poruka
+pmsg_old_messages:Pročitana privatna poruka
+deny_recipt:odbij potvrdu
+deny_recipt_desc:Ne šalji potvrdu da ste pročitali ovu poruku
+restore_to:Vrati u:
+move_to:Premesti u:
+list_referes_referrals:Upućivači
+list_referes_members:Upućeni članovi
+list_referes_member:Član
+referals_none:Još uvek nema upućivača.
+referals_refered_by:Članovi upućeni od: <b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b>
+referals_post_count:Broj poruka
+referals_registered_on:Registrovan na datum
+referals_action:Radnja
+pmsg_all:sve
+pmsg_none:ništa
+folder:Fascikla:
+pmsg_replied:odgovoreno
+pmsg_forwarded:prosleđeno
+pmsg_subject:Tema
+pmsg_author:Autor
+pmsg_time:Vreme
+# Fuzzy
+pmsg_selected:Izabrano
+pmsg_delete:Izbriši
+cur_ppage_pm:Privatne poruke
+writing_pm:Pisanje privatne poruke
+browsing_folder:Pregledanje <b>{VAR: folders[$folder_id]}</b> fascikle
+inbox:Primljene
+draft:Sačuvane
+sent:Poslate
+trash:Otpad
+msg_author:Autor
+avatar_sel_form:Obrazac za izbor avatara
+no_avatars:Avatari nisu dostupni
+month_1:januar
+month_2:februar
+month_3:mart
+month_4:april
+month_5:maj
+month_6:jun
+month_7:jul
+month_8:avgust
+month_9:septembar
+month_10:oktobar
+month_11:novembar
+month_12:decembar
+sunday:nedelja
+sunday_short:ned
+monday:ponedeljak
+monday_short:pon
+tuesday:utorak
+tuesday_short:uto
+wednesday:sreda
+wednesday_short:sre
+thursday:četvrtak
+thursday_short:čet
+friday:petak
+friday_short:pet
+saturday:subota
+saturday_short:sub
+male:muško
+female:žensko
+unspecified:neodređeno
+register_tree_view:stablasti prikaz poruka i tema
+register_msg_tree_view:ravna lista tema/stablasta lista poruka
+register_tree_msg_view:stablasta lista tema/ravna lista poruka
+register_flat_view:ravan prikaz poruka i tema
+use_forum_default:podrazumevano
+finduser_user_info:Korisničke informacije
+finduser_by_login:Korisničko ime:
+finduser_submit:Pronađi
+finduser_no_such_user:Nema takvog korisnika
+finduser_user:Korisnik
+finduser_postcount:Broj poruka:
+finduser_joindate:Datum pridruživanja
+finduser_action:Radnja
+yes:Da
+no:Ne
+register_email:Imejl
+edit_time_limit:<b>Uređivanje vremenskog ograničenja</b>: {GVAR: EDIT_TIME_LIMIT} minuta
+no_edit_time_limit:<b>Uređivanje vremenskog ograničenja</b>: neograničeno
+pmuserloc_login:Korisničko ime:
+pmuserloc_submit:Pošalji
+pmuserloc_user:Korisnik
+pmuserloc_no_result:Nema rezultata
+register_builtin:Ugrađeno
+register_specify_url:unos URL adrese
+register_uploaded:otpremanje
+register_login:Korisničko ime:
+register_login_desc:Ime kojim želite da se prijavite biće poznato na ovom sajtu.
+register_login_available:Dostupno
+register_login_taken:Zauzet
+register_password:Lozinka:
+register_password_desc:Lozinka za tvoj nalog. Lozinka je osetljiva na veličinu slova i mora sadržati bar 6 karaktera.
+register_conf_pass:Potvrdite lozinku:
+register_conf_pass_desc:Unesite ponovo svoju lozinku.
+register_email_desc:Tvoja imejl adresa. Možete je sakriti u odeljku „Postavke“.
+register_name:Pravo ime:
+register_name_desc:Tvoje pravo ime
+register_your_pass:Lozinka:
+register_update:Ažuriraj
+register_avatar_type:Tip avatara:
+register_del_avatar:Izbriši avatar
+register_avatar:Avatar:
+register_sel_avatar:Izaberite korisničku sličicu
+register_custom_avatar_rules:Prilagođena korisnička sličica neće biti prikazana dok je ne odobri administrator.<br /><span class="SmallText">Ona ne sme biti veća od <b>{GVAR: CUSTOM_AVATAR_MAX_DIM} tačaka</b> i mora biti <b>JPG</b>, <b>GIF</b> ili <b>PNG</b> formata.</span>
+register_custom_avatar_url:URL adresa prilagođenog autora:
+register_preview:Pregled
+register_custom_avatar_upload:Datoteka korisničke sličice:
+register_register:Otvori nalog
+register_required:Obavezni podaci
+register_required_desc:Sva polja su obavezna.
+register_optional:Neobavezni podaci
+register_optional_desc:Preporučljivo je da ne odajete nikakve lične podatke. Svi podaci biće vidljivi od strane drugih članova.
+register_location:Mesto:
+register_occupation:Zanimanje:
+register_interests:Hobi:
+register_image:Slika:
+register_icq:ICQ:
+register_aim:AIM:
+register_yahoo:Jahu mesendžer:
+register_msnm:MSN mesendžer:
+register_homepage:Početna stranica:
+register_bday:Datum rođenja:
+register_bday_desc:Vidljivo drugim članovima.
+register_day:dan
+register_month:mesec
+register_year:godina
+register_gender:Pol:
+register_bio:Životopis:
+register_bio_desc:Nekoliko detalja o sebi: omiljena muzika, filmovi, itd.
+register_prefs:Postavke
+register_sig:Potpis:
+register_sig_desc:Neobavezno. Potpis će biti smešten na dnu vaših poruka.
+register_reset:Poništi
+register_def_thread_view:Podrazumevani prikaz tema:
+register_msg_per_page:Poruka po stranici:
+register_show_sig:Prikazati potpise:
+register_show_sig_desc:Omogućava vam da sakrijete ili prikažete potpise drugih članova.
+register_use_sig_default:Koristiti potpise po podrazumevanom:
+register_use_sig_default_desc:Kačenje potpisa na svaku poruku.
+register_timezone:Vremenska zona:
+register_ignore_admin:Zanemariti administrativne poruke:
+register_invisible_mode:Nevidljivi režim:
+register_invisible_mode_desc:Sakriva da li ste na mreži.
+register_show_email:Prikazati imejl adresu:
+register_show_email_desc:Izaberite ovu opciju ako želite da vaša e-adresa bude dostupna svima.
+register_notification:Izabrati obaveštenje po podrazumevanom:
+register_notification_desc:Ako je obaveštenje omogućeno, ono se može isključiti pri postavljanju poruka.
+register_notify_method:Način obaveštavanja:
+register_notify_method_desc:Postavite željeni način obaveštavanja ili ih onemogućite.
+register_allow_email_msg:Dozvoliti imejl poruke:
+register_allow_email_msg_desc:Dozvolite drugim korisnicima da vam šalju e-poruke putem foruma.
+buddy_status:Status
+my_buddies:Prijatelji
+add_buddy:Dodavanje prijatelja
+add:Dodaj
+buddy_search:Unesite korisničko ime korisnika koga želite da dodate.
+member_search:Možete koristiti i <a href="javascript://" onclick="javascript: window_open('{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1', 'user_list', 400,250);">pretragu članova</a> da pronađete korisnika.
+buddy_remove:ukloni
+post_normal:Obična
+post_sticky:Lepljiva
+post_annoncement:Saopštenje
+post_size:Veličina
+post_color:boja
+post_font:font
+create_thread:Napravi temu
+submit_reply:Pošalji odgovor
+edit_message:Sačuvaj
+apply_spell_changes:Primeni pravopisne izmene
+post_preview:Pregled poruke
+post_logedin_user:Prijavljeni korisnik:
+post_logout:odjavi me
+post_passwd:Lozinka za postavljanje poruka:
+post_poll:Anketa:
+post_create_poll:NAPRAVI ANKETU
+post_poll_delete:IZBRIŠI
+post_poll_edit:UREDI
+post_mod_opt:Postavke urednika:
+post_thread_type:Tip teme:
+post_thread_expiry:Istek teme:
+post_locked:Tema je zaključana
+post_icons:Ikonica poruke:
+post_no_icon:bez ikonice
+post_smiley:Smešci:
+post_format_tools:Alatke za oblikovanje:
+post_upload_file:Otpremi datoteku
+post_file_del:Izbriši
+post_file_name:Naziv
+post_file_size:Veličina
+file_attachments:Prilozi:
+allowed_files:Dozvoljene vrste datoteka:
+max_file_size:Najveća veličina datoteke:
+max_files_per_msg:Najviše datoteka po poruci:
+post_notification:Postavljanje obaveštenja
+include_sig:Uključi potpis
+include_sig_desc:Uključi potpis s profila.
+disable_smilies:Onemogući smeške u ovoj poruci
+spell_check_msg:Proveri pravopis poruke
+post_form:Postavljanje
+post_forum:Forum:
+post_title:Naslov:
+post_body:Tekst:
+post_options:Postavke:
+post_preview_btn:Pregledaj
+post_cancel_btn:Otkaži
+ignore_users:Zanemareni korisnici
+add_ignore:Zanemareni korisnici
+forum_terms:Pravilnik
+forum_rules:<p>Registracija na ovom forumu je besplatna! Ipak, nastojite da se pridržavate dolenavedenih pravila i normi. Ako se slažete sa uslovima, kliknite na dugme „<b>Prihvatam</b>“ na kraju stranice.</p><p>Iako administratori i urednici ulažu napore da ne dopuste nepristojne i neumesne poruke na forumu, ipak je nemoguće da ih sve pregledamo. Sve poruke izražavaju mišljenje njenih autora, te vlasnici foruma ni programeri nisu odgovorni za sadržaj bilo koje poruke.</p><p>Klikom na dugme „Prihvatam“ garantujete da nećete da objavljujete poruke koje su sramotne, vulgarne, preteće, koje sadrže reči mržnje ili krše bilo koji zakon.</p><p>Vlasnici ovog foruma imaju pravo da uklone, izmene, premeste ili zatvore bilo koju temu iz bilo kog razloga.</p>
+forum_rules_13:<p>Svi korisnici ispod 13 godina moraju da zatraže dozvolu od roditelja/staratelja kako bi se pridružili forumu. Lica ispod 13 godina su dobrodošla da učestvuju kod nas, ali pre registracije treba da dobijemo dozvolu preko e-pošte ili faksa koju je potpisao roditelj/staratelj.</p><p>Ako želite da započnete postupak registracije pre nego što dobijemo dozvolu, kliknite na dugme „<b>Prihvatam</b>“. Ako želite da otkažete registraciju, kliknite na „<b>Ne prihvatam</b>“ da biste se vratili na početnu stranicu.</p><p>Nakon registracije ćete moći da preuzmete primerak obrasca za davanje dozvole. Za više informacija o postupku registracije, pošaljite e-poruku na adresu <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>.</p>
+coppa_conf:COPPA potvrda
+coppa_before:Pre {TEMPLATE: coppa_date}
+coppa_after:Posle {TEMPLATE: coppa_date}
+coppa_link:Kliknite na vezu koja odgovara vašem datumu rođenja
+coppa:<p>Roditelj ili staratelj preko faksa ili e-pošte mora da pošalje potpisan obrazac administratoru pre nego što korisnik ispod 13 godina može da završi postupak upisa.</p><p>Za više informacija kontaktirajte <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a></p>
+prereg_info:Pravilnik
+prereg_agree:Prihvatam
+prereg_disagree:Ne prihvatam
+prereg_update:Čitanje pravilnika
+coppa_fax_instructions:Uputstva za roditelja ili staratelja
+coppa_fax_instructions2:Odštampajte ovu stranicu, potpišite je i pošaljite nam je nazad faksom ili poštom.
+coppa_fax_reg_form:Otvaranje naloga
+coppa_fax_sign:Potpišite obrazac ispod i pošaljite nam ga
+coppa_fax_conf:Pogledah podatke koje mi je moje dete dalo i pročitah politiku privatnosti. Razumem da se podaci na profilu mogu promeniti putem lozinke i da se profil može obrisati na zahtev.
+coppa_fax_permission:Potpišite ovde ako dajete dozvolu
+coppa_fax_no_permission:Potpišite ovde ako želite da zatvorite nalog
+coppa_fax_parent_name:Ime i prezime roditelja ili staratelja:
+coppa_fax_relation:Srodstvo:
+coppa_fax_telephone:Telefon:
+coppa_fax_email:Imejl adresa:
+coppa_fax_date:Datum:
+coppa_fax_questions:Kontaktirajte <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a> za bilo koje pitanje
+coppa_fax_login:Korisničko ime
+coppa_fax_passwd:Lozinka
+coppa_fax_remail:Imejl
+coppa_fax_name:Ime
+login_not_logedin:Niste prijavljeni. Ovo može biti zbog sledećih razloga:
+login_cookie_expired:Kolačići su istekli. Prijavite se da biste ih obnovili.
+login_perm_denied:Nemate dozvolu da pristupite ovom delu foruma kao anoniman korisnik. Morate da budete prijavljeni za dobijanje pristupa.
+login_want_to_register:Želite nalog?
+login_forgot_passwd:Zaboravili ste lozinku?
+login_use_cookie:Korišćenje kolačića<br /><span class="SmallText">Ako koristite javno dostupan računar (biblioteka, škola ili internet kafe), deštriklirajte ovu opciju radi veće sigurnosti. Ako ova opcija ostane omogućena, bićete automatski prijavljeni sledeći put kada posetite forum.</span>
+login_login:Korisničko ime:
+login_login_btn:Prijavi me
+login_name_required:Korisničko ime je obavezno
+login_passwd_required:Lozinka je obavezna
+login_invalid_radius:Korisničko ime ili lozinka su neispravni.
+reset_confirmation:Hvala vam što ste otvorili nalog.\n\nDa biste ga omogućili, posetite sledeću vezu:\n\n{VAR: url}\n\nKada završite s ovim postupkom, bićete prijavljeni\nna forum i preusmereni na naslovnu stranu.
+reset_reset:Zdravo,\n\nZatražili ste poništavanje lozinke.\nDa biste završili postupak, posetite sledeću vezu:\n\n{VAR: url}\n\nNapomena: ovaj forum smešta lozinke preko jednosmernog šifrovanja.\nTo znači da, kada prvi put unesete lozinku, ona će biti šifrovana tako da nema povratka.\nOvo radi poređenjem šifrovanog izdanja koje imamo u bazi sa šifrovanim izdanjem koje unesete.\n(Ako vas zanima kako ovaj mehanizam radi, pročitajte MD5 algoritam o disperziji.)
+rpasswd_invalid_passwd:Neispravna lozinka
+rpasswd_passwd_nomatch:Lozinke se ne poklapaju
+rpasswd_passwd_length:Lozinka mora imati najmanje 6 znakova
+reset_remind_pass:Podsetnik za lozinku
+reset_reset_conf:Lozinka će biti poništena i poslata vama. Ako još uvek niste potvrdili svoju e-adresu, poslaćemo obrazac za to.
+reset_error:Imejl adresa nije pronađena u bazi podataka
+reset_update:Resetuj lozinku
+rpasswd_change_pass:Promena lozinke
+rpasswd_login:Korisničko ime:
+rpasswd_cur_pass:Lozinka:
+rpasswd_new_pass:Nova lozinka:
+rpasswd_conf_pass:Potvrdite lozinku:
+ruser_title:Promena korisničkog imena
+ruser_change_user:Promena korisničkog imena
+ruser_cur_login:Korisničko ime:
+ruser_new_login:Novo korisničko ime:
+ruser_cur_pass:Lozinka:
+login_passwd:Lozinka:
+reset_email:Imejl:
+reset_reset_button:Poništi lozinku
+rate_this_thread:Oceni
+report_reporting_about:Opis:
+report_subject:Naslov:
+report_by:Od:
+report_posted_on:Postavljeno:
+report_give_reason:Navedite razlog zašto prijavljujete poruku:
+report_submit_report:Pošalji prijavu
+search_entire_msg:cela poruka
+search_subject_only:samo naslov
+search_forum:Forum
+search_posted_on:Postavljeno
+search_no_results:Nema rezultata
+search_all_forums:Pretraži sve forume
+search_in_forum:Pretraži u forumu:
+search_forum_search:Pretraga foruma
+move_thread_to:Premesti temu <b>{VAR: thr->subject}</b> u:
+remail_email_topic:Pošalji ovu temu prijatelju
+remail_your_name:Ime:
+remail_your_email:Vaš imejl:
+remail_friends_name:Ime prijatelja:
+remail_friends_email:Imejl prijatelja:
+remail_required:obavezno
+remail_subject:Naslov:
+remail_message:Poruka:
+remail_send_now:Pošalji imejl sada
+remail_anon_opt:Kopirajte ovu poruku u vaš klijent e-pošte za slanje prijateljima.
+remail_done:Završeno
+remail_sent_conf:Pošaljite imejl prijatelju na {VAR-HTML: _POST['femail']} oko {VAR: data->subject} teme koja je uspešno poslata.
+remail_error:Došlo je do greške
+mklist_type:Tip:
+mklist_option:Opcija:
+mklist_additem:Dodaj stavku
+mklist_apply:Primeni
+mklist_delete:Izbriši
+qbud_nick_name:Nadimak
+qbud_add_selected:Dodaj izabrano
+# Fuzzy
+qbud_selected:Izabrano
+qbud_no_buddies:Nema prijatelja
+mklist_numerical:numerički
+mklist_aplha:alfa
+mklist_square:kvadrat
+mklist_disc:disk
+mklist_circle:krug
+mklist_close:Zatvori
+email_to:Za:
+email_pg_title:Imejl
+email_subject:Naslov:
+email_body:Tekst:
+email_submit:Imejl
+ppost_quote_msg:{VAR: msg_to_list} je napisao dana {TEMPLATE: ppost_quote_msg_date}
+ppost_quote:Citat:
+ppost_to:Za:
+ppost_from_buddy_list:Izaberite sa spiska prijatelja
+ppost_find_User:Pronađi korisnika
+ppost_track_msg:Nadgledaj ovu poruku
+ppost_track_msg_desc:Obavesti me putem privatne poruke kada se ova poruka pročita.
+ppost_send:Pošalji
+ppost_save_draft:Sačuvaj
+poll_blank_option:Ne možete da dodate praznu opciju.
+poll_del_conf:Ako želite da uklonite ovu opciju, kliknite na „U redu“
+poll_name:Naziv ankete:
+poll_timelimit:Vremensko ograničenje:
+poll_maxiumvotes:Najviše glasova:
+poll_create:Napravi
+poll_update:Ažuriraj
+poll_disablesmilies:Onemogući smeške
+poll_create_poll:Napravi anketu
+poll_update_poll:Ažuriraj anketu
+poll_delete:Izbriši
+poll_updateoption:Ažuriraj opciju
+poll_addoption:Dodaj opciju
+poll_unlimited:neograničeno
+poll_day:dan
+poll_days:dana
+poll_hour:sat
+poll_hours:sati
+poll_month:mesec
+poll_year:godina
+poll_week:nedelja
+tabs_register:Postavke naloga
+tabs_subscriptions:Nadgledanja
+tabs_bookmarkes:Zabeleške
+tabs_referrals:Upućivači
+tabs_buddy_list:Lista prijatelja
+tabs_ignore_list:Lista zanemarivanja
+tabs_private_messaging:Privatne poruke
+single_msg_delete:Upravo ćete <span class="ErrorText">obrisati</span> poruku pod nazivom: <b>{VAR: data[3]}</b>
+thread_delete:Upravo ćete <span class="ErrorText">obrisati</span> <span class="ErrorText">celu temu</span> pod nazivom: <b>{VAR: data[3]}</b>
+delete_proceed:<span class="fb">Želite li da nastavite?</span>
+delete_yes:Da
+delete_no:Ne
+error_invalidurl:Neispravna URL adresa
+error_error:Greška
+usrinfo_profile:Profil člana {VAR: u->alias}
+usrinfo_show_all_posts:Prikaži sve poruke od člana {VAR: u->alias}
+actions_update:Njuškam druge ljude, kao i ti
+err_info:Podaci
+buddy_list_err_cantadd:Ne možete sebe dodati na listu prijatelja
+buddy_list_err_dup:Ovaj član se već nalazi na vašem spisku prijatelja
+buddy_list_err_nouser:Korisnik koga ste pokušali da dodate na listu prijatelja nije pronađen.
+buddy_list_err_nouser_title:Nije moguće dodati člana
+buddy_list_err_ignore:Ne možete dodati korisnike koji vas ignorišu na spisak prijatelja.
+buddy_list_update:Pregledanje spiska prijatelja
+core_err_invinp_title:Neispravan ulaz
+core_err_invinp_err:Pratili ste neispravnu vezu. Obavestite <a href="mailto:{GVAR: ADMIN_EMAIL}">administratora</a> o grešci.
+core_adm_login_msg:Administratori se mogu prijaviti <a href="{BASE}adm/admloginuser.php">ovde</a>.
+email_err_unabletoemail_title:Greška: nije moguće poslati imejl
+email_err_unabletoemail_msg:Imejl je onemogućen od strane administratora.
+email_error_unabletolocaddr:Sistem ne može da kontaktira {VAR-HTML: _POST['tx_name']} preko e-pošte jer e-adresa nije pronađena
+email_error_body:Tekst poruke je obavezan
+email_error_subject:Naslov je obavezan
+email_error_namerequired:Ime je obavezno
+email_error_invaliduser:Pogrešan korisnik
+emailconf_err_invkey_title:Greška
+emailconf_err_invkey_msg:Potvrdni kod je neispravan. Proverite poruku i vidite da li ste ispravno uneli adresu. Ako ste dvaput kliknuli na vezu, nalog je verovatno već potvrđen. Prijavite se na forum da zatražite drugi kod.
+err_inc_criticaltitle:Kritična greška
+err_inc_criticalmsg:Došlo je do greške. Nažalost, postoji i problem sa sistemom za prijavljivanje grešaka.
+finduser_update:Traženje korisnika
+help_index_update:Čitanje <a href="{TEMPLATE: help_index_update_lnk}">pomoći</a>
+iemail_thr_subject:Novi odgovor na {VAR: thr_subject} od {VAR: poster_login}
+iemail_thr_bodyemail:Za pregled nepročitanih odgovora, idite na {VAR: goto_url['email']}\n\nUkoliko ne želite da primate buduća obaveštenja o odgovorima ove teme, posetite: {VAR: unsub_url['email']}
+iemail_frm_subject:Nova tema u forumu {VAR: frm_name} pod nazivom {VAR: thr_subject} od {VAR: poster_login}
+iemail_frm_bodyemail:Za pregled teme idite na:\n{VAR: goto_url['email']}\n\nDa biste prekinuli primanje obaveštenja o novim temama u forumu, posetite: {VAR: unsub_url['email']}
+iemail_participate:Da biste učestvovali u raspravi, posetite:
+ignore_list_err_info_title:Podaci
+ignore_list_err_dup_msg:Ovaj član se već nalazi na vašem spisku ignorisanih korisnika
+ignore_list_err_nu_title:Korisnik nije pronađen
+ignore_list_err_nu_msg:Korisnik koga ste pokušali da dodate na listu zanemarivanja nije pronađen.
+ignore_list_cantign_msg:Ne možete da ignorišete ovog korisnika
+ignore_list_update:Pregledanje spiska zanemarenih korisnika
+index_update:Pregledanje <a href="{TEMPLATE: index_update_lnk}">spiska foruma</a>
+list_referers_update:Pregledanje upućivača
+login_update:Prijava
+msg_update:Pregledanje teme <a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+pm_err_nopm_title:Greška: privatne poruke su onemogućene
+pm_err_nopm_msg:Ne možete da koristite sistem privatnih poruka. On je onemogućen od strane administratora.
+pm_update:Korišćenje privatnih poruka
+post_err_lockedthread_title:Greška: zaključana tema
+post_err_lockedthread_msg:Ova tema je zaključana. Postavljanje poruka nije dozvoljeno.
+err_coppa_title:Greška: vaš nalog još uvek nije potvrđen
+err_coppa_msg:Nismo primili potvrdu od vašeg roditelja ili staratelja koja vam daje pravo da postavljate poruke na forum. Ako ste izgubili COPPA obrazac, <a href="{TEMPLATE: err_coppa_msg_lnk}">pogledajte ga ponovo</a>.
+err_banned_acct_title:Greška: zabranjen vam je pristup.
+err_banned_acct_msg:Vama je {IF: $ban_expiry}privremeno zabranjen pristup do {DATE: ban_expiry %a, %d %B %Y %H:%M}{ELSE}trajno zabranjen pristup{ENDI} zbog kršenja pravilnika.
+post_err_edttimelimit_title:Greška
+post_err_edttimelimit_msg:Ne možete da izmenite ovu poruku
+post_err_noannontopics_msg2:<legend>Greška: nedovoljno privilegija</legend>Anonimnim korisnicima nije dozvoljeno otvaranje tema.
+post_err_noannonposts_msg2:<legend>Greška: nedovoljno privilegija</legend>Anonimnim korisnicima nije dozvoljeno odgovaranje na temu.
+post_err_floodtrig_title:Greška: prešli ste vremensko ograničenje između postavljanja poruka.
+post_err_floodtrig_msg:Pokušajte ponovo za {PLURAL: tm|$1 sekundu|$1 sekunde|$1 sekundi}
+post_err_attach_size:Prilog je preveliki (prelazi ograničenje od {VAR: MAX_F_SIZE} bajtova)
+post_err_attach_ext:Datoteka koju pokušavate da otpremite ne odgovara dozvoljenim tipovima datoteka.
+post_err_attach_filelimit:Pokušavate da otpremite više datoteka nego što je dozvoljeno.
+post_err_passwd:Neispravna lozinka.
+post_reply_update:Odgovaranje na <a href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a> u {VAR: frm->name}
+post_topic_update:Pisanje nove teme u <a href="{TEMPLATE: post_topic_update_lnk}">{VAR: frm->name}</a>
+post_error_generic:Došlo je do greške
+postcheck_max_images_err:Nije dozvoljeno više od {GVAR: MAX_IMAGE_COUNT} slika po poruci. Smanjite broj slika.
+postcheck_no_links_allowed:Ne možete da koristite veze dok god ne postavite više od {PLURAL: posts_before_links|$1 poruke|$1 poruke|$1 poruka}.
+postcheck_subj_needed:Naslov je obavezan
+postcheck_no_such_user:Ne postoji korisnik s imenom „{FUNC: char_fix(htmlspecialchars($v))}“ u ovom forumu.
+postcheck_ignored:Ne možete poslati privatnu poruku članu „{FUNC: char_fix(htmlspecialchars($v))}“ jer vas on/ona ignoriše.
+postcheck_no_recepient:Ne možete poslati poruku jer nedostaje primalac.
+postcheck_invalid_email:Unesite ispravnu e-adresu za vašeg prijatelja.
+postcheck_email_subject:Ne možete poslati imejl bez naslova.
+postcheck_email_body:Ne možete poslati imejl bez teksta.
+private_msg_notify_subj:Pročitaj obaveštenje za: {VAR: m->subject}
+private_msg_notify_body:Zdravo,<br />{VAR: usr->login} otvori vašu privatnu poruku pod nazivom „{VAR: m->subject}“.<br />Ovo je automatsko obaveštenje napravljeno {TEMPLATE: private_msg_notify_body_date}<br />
+referals_update:Pregledanje upućivača
+register_err_short_login:Korisničko ime je prekratko. Ono mora imati najmanje 2 znaka.
+register_err_login_notallowed:Korisničko ime nije dozvoljeno.
+register_err_loginunique:Korisničko ime mora biti jedinstveno. Već postoji korisnik s ovim imenom.
+register_err_emailexists:Ova e-adresa je već dodeljena drugom korisniku. Ako ste zaboravili lozinku, koristite podsetnik da je vratite umesto otvaranja novog naloga.
+register_err_shortpasswd:Lozinka mora imati najmanje 6 znakova.
+register_err_passwdnomatch:Lozinke se ne poklapaju. Pokušajte ponovo.
+register_err_invalidemail:E-adresa koju ste uneli nije ispravna.
+register_err_needname:Morate uneti svoje ime da biste otvorili nalog.
+register_err_enterpasswd:Morate uneti svoju lozinku da bi se izmene sačuvale.
+register_err_adminpasswd:Morate uneti svoju <b>administrativnu</b> lozinku da bi se izmene sačuvale.
+register_err_notyouremail:Neko drugi je već upisan preko ove e-adrese.
+register_err_avatartobig:Datoteka koju želite da otpremite je prevelika, veća od {GVAR: CUSTOM_AVATAR_MAX_SIZE} bajtova.
+register_err_avatarnotallowed:Avatar koga pokušavate da otpremite nije dozvoljen. Pogledajte  listu dozvoljenih tipova datoteka.
+register_conf_subject:Potvrda registacije
+register_conf_msg:Hvala vam što ste otvorili nalog.\nPosetite vezu ispod da biste ga potvrdili:\n\n{FULL_ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\nKada ga omogućite, bićete prijavljeni na\nforum i preusmereni na naslovnu stranu.
+register_welcome_subject:Potvrda registacije
+register_welcome_msg:Hvala vam što ste otvorili nalog.\n\nIspod se nalaze podaci za prijavljivanje na forum:\n\nAdresa: {TEMPLATE: index_update_lnk}\nKorisničko ime: {VAR: uent->login}\nLozinka: {VAR: _POST['reg_plaintext_passwd']}\n\nUpamtite da su lozinke osetljive na mala i velika slova!\nDa biste promenili svoje postavke ili profil, posetite:\n{FULL_ROOT}?t=register
+register_err_cantreg_title:Greška: nije moguće registrovati se
+regsiter_err_cantreg_msg:Nalog nije otvoren. Kontaktirajte administratora <a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a>
+register_profile_update:Pregleda sopstveni profil
+register_register_update:Stranica za registraciju
+report_err_nosuchmsg_title:Greška
+report_err_nosuchmsg_msg:Nema takve poruke
+reset_err_invalidkey_title:Greška
+reset_err_invalidkey_msg:Kod za obnavljanje lozinke je neispravan. Verovatno je vaš klijent za e-poštu samostalno otvorio ovu stranicu, poništavajući kod. Ako je to slučaj, trebalo bi da uskoro primite poruku s novom lozinkom. Ako vam ona ne stigne, probajte da poništite lozinku.
+reset_err_rstconf_title:Podaci
+reset_err_rstconf_msg:Trebalo bi da primite uputstva putem e-pošte u sledećih nekoliko minuta.
+reset_newpass_title:Obnavljanje lozinke
+reset_newpass_msg:Zdravo,\n\nKao što ste i tražili, vaši podaci za prijavljivanje se nalaze ispod:\n\nKorisničko ime: {VAR: ui[1]}\nLozinka: {VAR: passwd}\n\nUpamtite da vam je lozinka poništena na vrednost iznad. Ako želite da je\npromenite, posetite korisnički upravljački panel preko sledeće veze:\n{FULL_ROOT}?t=register
+reset_login_notify:Poslata vam je lozinka. Trebalo bi da je primite u roku od nekoliko minuta.
+search_update:Traženje poruka
+selmsg_update:Pregledanje <a href="{TEMPLATE: selmsg_update_lnk}">današnjih poruka</a>
+showposts_update:Pregledanje poruka od: <a href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a>
+subscribed_update:Pregledanje nadgledanih tema
+bookmarked_update:Pregledanje zabeleški
+thread_update:Pregledanje foruma <a href="{TEMPLATE: thread_update_lnk}">{VAR: frm->name}</a>
+tree_update:Pregledanje teme (stablasti prikaz) <a href="{TEMPLATE: tree_update_lnk}">{VAR: frm->subject}</a>
+userinfo_update:Posmatranje <a href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}'s</a> profila
+ERR_login_msg2:<legend>GREŠKA: Niste prijavljeni</legend>Morate biti član foruma da biste pristupili ovoj stranici.
+ERR_disabled_ttl:Onemogućena mogućnost
+ERR_disabled_msg:Ova mogućnost je onemogućena od strane administratora.
+ERR_access_ttl:Greška: nedovoljno dozvola
+ERR_access_msg:Nemate potrebne dozvole da izvršite ovu radnju.
+ERR_registration_disabled_ttl:Otvaranje naloga je onemogućeno
+ERR_registration_disabled_msg:Administrator je onemogućio otvaranje naloga. Pokušajte kasnije.
+ERR_emailconf_ttl:Greška: vaš nalog još uvek nije potvrđen
+ERR_emailconf_msg:Još uvek niste potvrdili svoj nalog.<br /><table border="0"><tr><td><ol><li>Ako niste primili imejl, <a href="{TEMPLATE: ERR_emailconf_msg_lnk}">zatražite je</a>.</li><li>Ako {VAR: usr_d->email} imejl adresa nije ispravna, <a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">unesite je još jedanput</a>.</li></ol></td></tr></table>
+ERR_user_ttl:Greška: korisnik ne postoji
+ERR_user_msg:Ne postoji takav korisnik
+ERR_systemerr_ttl:Greška: sistemska greška
+ERR_systemerr_msg:Došlo je do sistemske greške. Prijavite je <a href="mailto:{GVAR: ADMIN_EMAIL}">administratoru</a>.
+email_title:Obrazac e-pošte
+finduser_title:Traženje korisnika
+help_title:Pomoć
+login_title:Prijava
+poll_title:Uređivač anketa
+register_title:Otvaranje naloga
+reset_title:Obnavljanje lozinke
+rpasswd_title:Promena lozinke
+error_title:Greška
+index_title:Dobro došli na forum
+search_title:Traženje „{VAR-HTML: srch}“
+remail_emailsent:Imejl je poslat
+remail_email:Zdravo,\n\nOtvorena je zanimljiva tema „{VAR: data->subject}“ u {GVAR: FORUM_TITLE} forumu koju biste možda želeli da vidite. Temu možete videti na:\n {FULL_ROOT}?t=rview&amp;th={VAR: data->id}&amp;rid={DEF: _uid}\n\nVaš prijatelj,\n\n{VAR: usr->alias}
+poll_add_option:Dodaj mogućnost:
+post_opt_html_on:<b>HTML</b> je <b>uključen</b>
+post_opt_fud_on:<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>BBcode</b> je <b>uključen</b></a>
+post_opt_images_on:<b>Slike</b> su <b>uključene</b>
+post_opt_smilies_on:<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>Smešci</b> su <b>uključeni</b></a>
+post_opt_html_off:<b>HTML</b> je <b>isključen</b>
+post_opt_fud_off:<b>BBcode</b> je <b>isključen</b>
+post_opt_images_off:<b>Slike</b> su <b>isključene</b>
+post_opt_smilies_off:<b>Smešci</b> su <b>isključeni</b>
+post_opt:Mogućnosti foruma:
+register_change_passwd:promeni lozinku
+register_change_login:promeni korisničko ime
+approved_avatar_title:Vaša korisnička sličica je odobrena.
+approved_avatar_msg:Vaša korisnička sličica je odobrena od strane administratora. Ona će od sada biti prikazivana na svim vašim porukama. Ako je ne vidite ili vidite staru sličicu, ponovo učitajte stranicu. To bi trebalo da reši problem.
+unapproved_avatar_title:Vaša korisnička sličica je odbijena.
+unapproved_avatar_msg:Administrator nije odobrio vašu korisničku sličicu. Verovatno je prevelika ili sadrži neprikladan sadržaj. Ako želite da saznate više informacija o tome zašto je sličica odbijena, kontaktirajte administratora.
+mvthread_request_move:zatraži premeštanje
+move_request_reason:Zašto želite da premestimo temu?
+mvthread_submit_req:Pošalji zahtev
+thread_exchange:Razmena tema
+move_request_by:Premeštanje teme je zatraženo od:
+move_reason:Razlog za premeštanje teme:
+thr_exch_accept:prihvati temu
+thr_exch_decline:odbij temu
+thr_exch_orig_forum:Prvobitni forum:
+thr_exch_dest_forum:Odredišni forum:
+thr_exch_no_threads:Nijedna tema ne čeka za odobrenje.
+thr_exch_decl_reason:Razlog za odbijanje teme <b>{VAR: data->subject}</b> u forum <b>{VAR: data->f2_name}</b>
+thr_exch_submit:Pošalji
+exch_decline_ttl:Premeštanje teme {VAR: data->subject} u forum {VAR: data->f2_name} je odbijen.
+ppost_original_msg:poruka koju prosleđujete ili na koju odgovarate
+split_thread:Razdvoji temu
+groupmgr_no_user:Ne postoji član s korisničkim imenom „{FUNC: char_fix(htmlspecialchars($gr_member))}“
+groupmgr_already_exists:Korisnik „{FUNC: char_fix(htmlspecialchars($gr_member))}“ već postoji u ovoj grupi.
+groupmgr_yes:Da
+groupmgr_no:Ne
+groupmgr_action:Radnja
+groupmgr_member:Član
+groupmgr_cancel:Otkaži
+groupmgr_add_member:Dodaj člana
+groupmgr_update_member:Ažuriraj člana
+groupmgr_edit:Uredi
+groupmgr_delete:Izbriši
+group_mgr_anon:Anoniman korisnik
+group_mgr_reged:Svi registrovani korisnici
+show_show:Prikaži:
+group_mgr:Upravljanje grupama
+group_mgr_edit_btn:Uredi grupu
+group_mgr_heading:Izbor uređivača grupe
+group_mgr_group:Grupa:
+permission_denied_title:Pristup je odbijen!
+permission_denied_msg:Nemate dozvolu da izvršite željenu radnju.
+p_READ:Pročitaj
+p_POST:Postavi
+p_REPLY:Odgovori
+p_EDIT:Uredi
+p_DEL:Izbriši
+p_STICKY:Lepljive poruke
+p_POLL:Napravi ankete
+p_FILE:Zakači datoteke
+p_VOTE:Glasaj
+p_RATE:Oceni teme/članove
+p_SPLIT:Razdvoji teme
+p_LOCK:Zaključaj teme
+p_MOVE:Premesti teme
+p_SML:Koristi smeške
+p_IMG:Koristi oznake za slike
+p_SEARCH:Mogućnost pretrage
+group_mgr_search:Pronađi korisnika
+group_mgr_indicator:Trenutno se uređuje: <b>{VAR: grp->name}</b>
+rate_worst:(najgore)
+rate_best:(najbolje)
+post_quote_msg:{VAR: msg->login} je napisao dana {TEMPLATE: make_report_date}
+post_quote:Citat:
+post_quote_selected:Citiraj izabrani tekst
+userinfo_referals:Upućeni korisnici:
+userinfo_referals_count:{VAR: referals} članovi
+pm_no_space_title:Nema dovoljno prostora!
+pm_no_space_msg:Vaše fascikle za privatne poruke prelaze ograničenje od <b>{GVAR: MAX_PMSG_FLDR_SIZE} bajtova</b>. One trenutno sadrže <b>{VAR: fldr_size} bajtova</b>.<br /><br /><span class="ErrorText">Obrišite stare poruke da biste oslobodili malo prostora.</span>
+pm_space_indct_msg:Vaše fascikle za privatne poruke su {VAR: percent_full}% popunjene.
+th_expr_never:Nikad
+th_expr_one_hr:sat vremena
+th_expr_three_hr:tri sata
+th_expr_four_hr:četiri sata
+th_expr_eight_hr:osam sati
+th_expr_sixteen_hr:šesnaest sati
+th_expr_one_day:jedan dan
+th_expr_two_day:dva dana
+th_expr_four_day:četiri dana
+th_expr_one_week:nedelju dana
+th_expr_two_week:dve nedelje
+th_expr_one_month:mesec dana
+th_expr_two_month:dva meseca
+th_expr_four_month:četiri meseca
+th_expr_one_year:godinu dana
+thread_mod_delete:Izbriši
+action_ip:IP adresa
+action_latest_post:Poslednja poruka
+online_today_last_visit:Poslednja poseta
+online_today_update:Pregled spiska korisnika koji su danas posetili forum.
+logedin_todays_visitors:današnji posetioci
+logedin_latest_post:Poslednja poruka na forumu:
+register_show_avatar:Prikazati korisničke sličice:
+register_show_avatar_desc:Omogućava vam da sakrijete korisničke sličice drugih članova.
+drawmsg_view_rest_post:Prikaži ostatak poruke
+post_re:Odg:
+forumsel_goto_forum:Idi na forum:
+minimsg_thread_view:Pregled teme
+split_th_post_by:Poruka od:
+split_th_posted_on:Postavljeno:
+split_th_subject:Naslov:
+split_th_new_thread_title:Novi naslov teme:
+split_th_forum:Forum:
+split_th_split_sel:Razdvoji izabrane poruke
+split_th_split_unsel:Razdvoji neizabrane poruke
+split_th_messages:Poruke
+split_th_select:Izaberi
+report_report_post:Prijavljivanje poruke
+quicklogin_login:Korisničko ime:
+quicklogin_password:Lozinka:
+quicklogin_use_cookies:Koristiti kolačiće?
+quicklogin_login_btn:Prijavi me
+quick_reply:Brz odgovor
+quick_reply_post:Pošalji
+quick_reply_preview:Pregledaj
+post_notification_desc:Obavesti me kada neko odgovori na ovu poruku.
+post_all_ext_allowed:(neograničeno)
+maximize_category:Uvećaj kategoriju
+maximize_message:Uvećaj poruku
+no_view_perm:Nemate potrebne dozvole za čitanje ove teme.
+report_empty_report:Ne možete poslati praznu prijavu. Unesite razlog zašto nam je šaljete.
+report_already_reported_title:Već je prijavljeno
+report_already_reported_msg:Ova poruka je već prijavljena i čeka na odobrenje.
+register_err_toomanyimages:Prešli ste ograničenje od {GVAR: FORUM_IMG_CNT_SIG} slika u potpisu.
+pmsg_next_msg:Sledeća poruka
+pmsg_prev_msg:Prethodna poruka
+post_proc_reveal_spoiler:Promeni spojler
+register_jabber:Džaber:
+register_skype:Skajp:
+register_twitter:Tviter:
+register_google:Gugl razgovor:
+im_jabber:Džaber:
+im_google:Gugl razgovor:
+im_skype:Skajp:
+im_twitter:Tviter:
+forum_contact:Kontakt
+forum_home:Početna
+post_cur_attached:zakačeno: {VAR: i} {PLURAL: i|datoteka|datoteke|datoteka}
+ignored_anon_post:{GVAR: ANON_NICK} je ignorisan/a
+ignored_user_post:Poruka od člana <a href="{TEMPLATE: ignored_user_post_lnk}">{VAR: obj->login}</a> je zanemarena
+smladd_close_window:zatvori prozor
+post_list_smilies:prikaži sve smeške
+p_VISIBLE:Vidljivo
+reported_in_thread:U:
+help_back_to_top:nazad na vrh
+help_return_to_index:Nazad na stranicu za pomoć
+imsg_err_message_title:Neispravna poruka
+imsg_err_message_msg:Poruka ne postoji.
+poll_edit:Uredi
+register_err_not_valid_img:Navedena adresa ne sadrži ispravnu sliku.
+pmsg_recepient:Primalac
+register_err_taken_alias:Pseudonim se već koristi od strane drugog člana. Izaberite drugi.
+register_alias:Pseudonim:
+register_alias_desc:Ako želite nadimak drugačiji od korisničkog imena, unesite ga ovde.
+register_allow_pm_msg:Dozvoliti privatne poruke:
+register_allow_pm_msg_desc:Dozvolite drugim korisnicima da vam šalju privatne poruke na forumu.
+postcheck_pm_disabled:Ne možete poslati privatnu poruku za „{VAR-HTML: v}“ jer ih ova osoba ne prihvata.
+polllist_vote:Glasaj
+polllist_view_results:Pogledaj rezultate
+polllist_name:Naziv ankete
+polllist_date:Napravljeno
+polllist_owner:Napravio/la
+polllist_votes:Ukupno glasova
+polllist_action:Radnja
+polllist_update:<a href="{TEMPLATE: polllist_update_lnk}">Pregledanje dostupnih anketa</a>
+userinfo_polls:Ankete:
+# Fuzzy
+show_pollist:Ankete
+search_and:I
+search_or:ILI
+# Fuzzy
+search_desc_order:opadajućem nizu
+# Fuzzy
+search_asc_order:rastućem nizu
+search_logic:Logika:
+# Fuzzy
+search_sorting:Poređaj rezultate u:
+search_attach:Prilozi:
+search_attach_all:sa i bez priloga
+search_attach_with:sa prilozima
+post_proceed:Nastavi
+post_moderated_forum:Postavili ste poruku na urednički forum. Ona će biti vidljiva kada je odobri urednik ili administrator.
+post_moderated_forum_ttl:Obaveštenje o uredničkom forumu
+buddy_list_bday:{VAR: r[2]} danas puni {VAR: age}. godinu
+email_warning_msg:Ako promenite Vašu imejl adresu, Vaš nalog će biti označen kao neproveren dok ga ponovo ne potvrdite putem imejla.
+register_show_im:Prikazati IM pokazatelje:
+register_show_im_desc:Omogućava vam da prikažete ili sakrijete IM pokazatelje autora pored njegove/njene poruke.
+unread_message:Označi poruku kao nepročitanu
+read_message:Pročitaj poruku
+threadt_more:&lt;više&gt;
+threadt_disabled_ttl:Stablasti prikaz spiska tema je onemogućen.
+threadt_disabled_desc:Administrator je onemogućio stablasti prikaz spiska tema. Koristite ravan prikaz.
+threadt_update:Pregledanje foruma (stablasti prikaz) <a href="{TEMPLATE: threadt_update_lnk}">{VAR: frm->name}</a>
+mmod_delete_cofirm_ttl:Potvrđivanje tema / brisanje poruka
+spell_alts:nema alternativa
+insert_uploaded_image:Ubaci sliku u telo poruke
+finduser_help:Pregledač će samostalno dodati * masku na vaš upit. <b>Pretraga je osetljiva na mala i velika slova</b>.<br />Na primer, da biste pretražili sve članove čije korisničko ime počinje slovom A, unesite to slovo u polje za pretragu.
+back_to_top:Nazad na vrh
+pm_err_disabled_title:Privatne poruke su onemogućene
+pm_err_disabled_msg:Ne možete slati privatne poruke dok ne omogućite opciju „Dozvoli privatne poruke“ na svom profilu.
+err_mod_acc_ttl:Neproveren nalog
+err_mod_acc_msg:Administrator je izabrao da ručno pregleda sve naloge pred aktivaciju. Nećete moći da iskoristite najviše od svog naloga dok vam ga administrator ne odobri.
+accounts_pending_approval:Nalozi koji čekaju odobrenje
+saved:Sačuvano
+register_err_time_limit:Ograničenje od jednog upisa svakih {GVAR: REG_TIME_LIMIT} sekundi je pređeno. Sačekajte {PLURAL: reg_limit_reached|$1 sekund|$1 sekunde|$1 sekundi} i pokušajte ponovo.
+register_err_avatardimtobig:Korisnička sličica dimenzija <b>({VAR: img_info[0]}x{VAR: img_info[1]})</b> prelazi ograničenje od <b>({GVAR: CUSTOM_AVATAR_MAX_DIM})</b> tačaka.
+buddy_offline:{VAR: r[2]} je trenutno van mreže
+buddy_online:{VAR: r[2]} je trenutno na mreži
+sml_no_smilies:Nema dostupnih smešaka.
+login_unapproved_account_ttl:Nepotvrđeni nalog
+login_unapproved_account_msg:Administrator foruma zahteva da se novi nalozi ručno provere pre aktivacije. Vaš nalog još uvek nije potvrđen, i zato nećete moći da koristite neke mogućnosti koje imaju provereni članovi.
+remove_from_buddy_list:ukloni sa spiska prijatelja
+iemail_msg_author:<b>Autor:</b> {VAR: obj->alias}
+iemail_msg_subject:<b>Naslov:</b> {VAR: obj->subject}
+iemail_msg_date:<b>Datum:</b> {TEMPLATE: dmsg_post_date}
+iemail_msg_reply:Odgovori
+iemail_msg_quote:Citat
+iemail_msg_view:Prikaži temu/poruku
+threadt_sticky:lepljiva
+threadt_announce:saopštenje
+reported_no_messages:Nema prijavljenih poruka.
+poll_no_polls:Nema anketa.
+no_unread_messages:Nema poklapanja.
+thread_mark_all_read:označi sve nepročitane poruke kao pročitane
+thread_mark_all_read_desc:Sve nepročitane poruke ovog foruma biće označene kao pročitane
+private_no_messages:Nema poruka u ovoj fascikli.
+register_email_change_subject:Potvrda o promeni imejla
+register_email_change_msg:Potvrdite novi nalog e-pošte „{VAR: uent->email}“ koji menja stari nalog „{VAR: old_email}“ prateći vezu ispod:\n{FULL_ROOT}?t=emailconf&conf_key={VAR: conf_key}\n\nKada potvrdite novu e-adresu, vaš nalog na forumu biće ponovo omogućen.
+iemail_thread_unsub:Prekini nadgledanje ove teme
+iemail_forum_unsub:Prekini nadgledanje ovog foruma
+primary_group_prefix:Glavna grupa foruma:
+group_resources:Ova grupa upravlja dozvolama sledećih foruma
+register_admin_newuser_title:Novi korisnik je otvorio nalog koji čeka na potvrdu
+# Fuzzy
+register_admin_newuser_msg:Novi korisnik ({VAR: uent->login}) je upravo otvorio nalog. S obzirom na to da je potvrda naloga omogućena, nalog neće biti aktivan dok ga ne potvrdi administrator. Za pregled naloga posetite: {FULL_ROOT}adm/admuserapr.php\n\nOvo je automatizovani proces. Ne odgovarajte na ovu poruku.\nAko želite da onemogućite obaveštenja o novim korisnicima, promenite postavku „Obaveštenje o novim nalozima“ u administrativnom upravljačkom panelu.
+post_mod_msg_notify_title:Nova poruka u forumu „{VAR: frm->name}“ čeka na odobrenje
+post_mod_msg_notify_msg:Nova poruka pod nazivom „{VAR: msg_post->subject}“ je upravo postavljena na forum koji uređujete. Za pregled ove poruke posetite: {FULL_ROOT}?t=modque#{VAR: msg_post->id}\n\nOvo je automatizovana poruka. Ne odgovarajte na nju.
+thread_printable_pdf:Napravi PDF dokument
+thread_syndicate:prikupi podatke ovog foruma (XML)
+reg_conf_title:Potvrda registacije
+reg_conf_email:<b>Potvrda e-pošte</b><br />E-poruka vam je poslata koja sadrži posebnu URL adresu koja će vam biti potrebna za overavanje naloga. Ako ne primite ovu poruku u sledećih nekoliko minuta, prijavite se na nalog i proverite da li je uneta e-adresa ispravna. Kada potvrdite nalog, bićete u mogućnosti da pristupite dodatnim mogućnostima.
+reg_conf_account:<b>Potvrda naloga</b><br />Pre nego što vaš nalog bude omogućen, on mora da bude odobren od strane administratora. Kada se to dogodi, primićete e-poruku s naznakom o tome. U međuvremenu se možete prijaviti na nalog, ali nećete imati pristup određenim mogućnostima.
+forum_banned_user:Vaše prethodne radnje su dovele do zabrane pristupa ovog foruma. Zbogom.
+mnav_description:Traženje poruka
+mnav_date_limit:Opseg datuma:
+mnav_forum_limit:Traži samo u:
+mnav_all_forums:pretraži sve forume
+mnav_submit:Pretraži
+mnav_no_range:Morate uneti ispravan opseg vremena. Ova vrednost može sadržati decimalu, ali mora biti veća od nule.
+mnav_invalid_unit:Morate navesti ispravnu vremensku jedinicu.
+mnav_invalid_date:Opseg datuma koji ste naveli je veći od dozvoljenog. Probajte manji opseg.
+mnav_no_results:Nema poklapanja.
+mnav_posted_by:Postavljeno od:
+mnav_more:Više &raquo;&raquo;
+mnav_minute:minuti
+mnav_hour:sati
+mnav_day:dani
+mnav_week:nedelje
+mnav_month:meseci
+mnav_title:Traženje poruka
+mnav_update:Pregledanje poruka koristeći <a href="{TEMPLATE: mnav_update_lnk}">Traženje poruka</a>
+pm_notify_subject:[{GVAR: FORUM_TITLE}] Obaveštenje o novim privatnim porukama
+pm_notify_body_email:Primili ste novu privatnu poruku pod nazivom „{VAR: subject}“ od člana „{VAR: from}“ u forumu „{GVAR: FORUM_TITLE}“.\nZa pregled, kliknite ovde: {FULL_ROOT}?t=pmsg_view&id={VAR: pid}\n\nDa biste prekinuli slanje obaveštenja, onemogućite „Obaveštenje o privatnim porukama“ u vašem profilu.
+register_pm_notification:Obaveštenje o privatnoj poruci:
+register_pm_notification_desc:Ako je omogućeno, bićete obavešteni svaki put kada primite privatnu poruku.
+findu_admin_opts_header:Administrativne mogućnosti
+findu_unban:Vrati pristup
+findu_ban:Zabrani pristup
+findu_edit:Uredi
+findu_delete:Izbriši
+dmsg_reply_to:je odgovor na
+dmsg_reply_num:poruka #{VAR: obj->reply_to}
+merge_topics:Spoji teme
+merge_topics_cp:Spajanje tema
+merge_topics_tpl:Izaberite teme za spajanje <span class="SmallText">(morate izabrati više od jedne)</span>
+merge_merge:Spoji izabrane teme
+merge_next:Sledeće teme
+merge_prev:Prethodne teme
+merge_another:Idi na <a href="{TEMPLATE: merge_another_lnk}">poslednje spojenu temu</a> ili spoji drugu:
+split_cp:Razdvajanje tema
+groups_perms_header:Dozvole <span class="small">(prevucite miš preko dozvole da joj vidite vrstu)</span>
+register_err_sig_too_long:Vaš potpis prelazi ograničenje od {GVAR: FORUM_SIG_ML} znakova.
+register_sig_limit:{GVAR: FORUM_SIG_ML} znakova <a href="javascript: alert('Vaš potpis sadrži '+document.forms['fud_register'].reg_sig.value.length+' znakova. Najveća dužina potpisa je {GVAR: FORUM_SIG_ML}.');" class="SmallText">(proveri dužinu potpisa)</a>
+adm_account_accepted:Vaš nalog „{VAR: login}“ je odobren od strane administratora. Sada možete pristupiti „{GVAR: FORUM_TITLE}“ forumu kao proveren, upisan član.
+adm_account_accepted_s:Vaš zahtev za nalog za „{GVAR: FORUM_TITLE}“ je prihvaćen.
+adm_account_rejected:Vaš nalog „{VAR: login}“ je odbijen od strane administratora. Ako želite da znate razlog ove odluke, kontaktirajte administratora na {GVAR: ADMIN_EMAIL}.
+adm_account_rejected_s:Vaš zahtev za nalog za „{GVAR: FORUM_TITLE}“ je odbijen.
+thread_on:u
+userinfo_buddy:Prijatelj:
+register_email_addr:Imejl adresa:
+reset_suffix:Ako ste greškom primili ovu poruku, zanemarite je. Ukoliko ste primili više primeraka ove poruke, kontaktirajte administratora: {GVAR: ADMIN_EMAIL}\n\nOvaj zahtev je pokrenut od: {VAR: _SERVER['REMOTE_ADDR']}.
+usrinfo_last_visit:Poslednja poseta:
+mnav_newer:novije od
+mnav_older:starije od
+ip_search_by_ip:Traži korisnike po IP adresi
+ip_search_syntax:Podržana sintaksa: 1.2.3.4, 1.2.3, 1.2, 1
+ip_search:Pretraži
+ip_analyze_usage:Analiziraj upotrebu IP adrese
+ip_analyze_usage_descr:Navedite tačno korisničko ime korisnika.
+ip_users_using:Korisnici koji koriste '{VAR: ip}' IP adresu
+ip_all_ips:Sve IP adrese korišćene od člana „{VAR: user}“
+ip_title:Pregledač IP adrese
+userinfo_real_name:Pravo ime:
+register_err_alias_notallowed:Ovaj pseudonim nije dozvoljen
+post_err_mod_forum_edit_ttl:Greška
+post_err_mod_forum_edit_msg:Ne možete da menjate poruke u uredničkom forumu.
+dmsg_num:poruka #{VAR: obj->id}
+postcheck_session_invalid:Vaša sesija je istekla. Ponovo unesite podatke.
+delete_message_extra_desc:<b>Neobavezno</b><br />Unesite razlog za brisanje poruke koji će biti poslat autoru preko privatne poruke.
+delete_message_extra_body:Unesite tekst uklonjene poruke koji će biti poslat autoru.
+delete_msg_removed_ttl:Vaša poruka je uklonjena od strane administracije.
+delete_msg_pm_body:Izvorna poruka
+delete_msg_pm_subject:Naslov: {VAR: data[15]}
+ip_no_whois:Whois podaci za <b>{VAR: ip}</b> nisu dostupni.
+ip_whois_title:ISP podaci
+register_theme:Tema:
+pmsg_trash:Isprazni otpad
+uc_new_pm:Nove privatne poruke
+uc_new_topic:Nova tema
+uc_new_cat_forum:Nadgledani forumi s novim porukama
+uc_cat_forum:Kategorija &raquo; foruma
+uc_sub_topics:Nadgledane teme s novim porukama
+uc_page_title:Pregledanje ličnog upravljačkog panela.
+search_options:Postavke pretrage
+search_user_filter:Filtriraj po korisniku:
+register_none:ne obaveštavaj me
+findu_no_conf:nepotvrđen korisnik
+register_max_sig_len:Najveća dužina:
+register_turing:Verifikacija:
+register_err_turing:Verifikacija neuspešna. Pokušajte ponovo.
+modque_cat:Kategorija
+modque_forum:Forum
+idx_compact_forum_row:Dostupni forumi:
+mmd_del_title:Izbriši teme
+mmd_mov_title:Premesti teme
+mmd_move_threads_to:Odredišni forum:
+mmd_abort_move:Otkaži
+mmd_move:Premesti teme
+pmsg_pdf_btn:Napravi PDF arhivu
+search_results_hdr:Broj pronađenih rezultata pretrage: {VAR: total}
+thread_del_all:Izbriši izabrano
+thread_mov_all:Premesti izabrano
+thread_merge_all:Spoji izabrano
+thread_loc_all:Zaključaj/otključaj izabrano
+dmsg_ip:IP:
+err_blockedaccnt_title:Greška: vaš nalog je izbačen.
+err_blockedaccnt_msg:Vama je zabranjen pristup forumu zbog nekog od instaliranih korisničkih filtera.
+merge_th_page_list:Izbor stranice teme
+most_users_online:Najviše korisnika na mreži bilo je <b>{VAR: st_obj->most_online}</b> u <b>{DATE: st_obj->most_online_time %a, %d %B %Y %H:%M}</b>
+sub_unsub_all_forums:Ukloni sve nadgledane forume
+sub_unsub_all_topics:Ukloni sve nadgledane teme
+unbookmark_all_topics:Ukloni sve zabeleške
+tabs_own_posts:Prikaz sopstvenih poruka
+sml_emoticon:Smešak
+sml_code:Kod
+mnav_sub_only:Traži samo u nadgledanim forumima
+register_topics_per_page:Tema po stranici:
+login_min_time:Ovaj forum dozvoljava jedan pokušaj prijavljivanja svakih {VAR: MIN_TIME_BETWEEN_LOGIN} sekundi. Sačekajte {FUNC: ($usr_d->last_login + $MIN_TIME_BETWEEN_LOGIN - __request_timestamp__)} sek. pre sledećeg pokušaja.
+post_not_logged_in:Niste prijavljeni. Poruka će biti postavljena anonimno.
+post_common_bold:Podebljaj
+post_common_italics:Iskosi
+post_common_underline:Podvuci
+post_common_align_left:Poravnaj ulevo
+post_common_align_center:Poravnaj po sredini
+post_common_align_right:Poravnaj udesno
+post_common_link:Ubaci vezu
+post_common_link_popup:Lokacija veze:
+post_common_email:Ubacite imejl adresu
+post_common_email_popup:Imejl adresa:
+post_common_image:Ubaci sliku
+post_common_image_popup:Adresa slike:
+post_common_nlist:Dodaj numerisanu listu
+post_common_blist:Dodaj listu sa znakovima za nabrajanje
+post_common_quote:Dodaj citat
+post_common_code:Dodaj kod
+rating_delete:Izbriši
+post_always_on_top:Učini da se tema uvek pojavljuje na vrhu spiska tema
+topic_rating:{VAR: frm->rating} od {PLURAL: frm->n_rating|$1 glas|$1 glasa|$1 glasova}
+topic_list_rating:{VAR: r[17]} od {PLURAL: r[21]|$1 glas|$1 glasa|$1 glasova}
+tabs_notifications:Obaveštenja
+finduser_flag:Zastava
+post_descr:Opis teme:
+pmsg_on:datuma
+pmsg_download_dump:Preuzmi skup poruka
+move_messages:Premesti poruke
+move_msg_btn:Premesti izabrane poruke
+move_msg_th_expl:Navedite IB odredišne teme (može biti i u drugim forumima)
+captcha_img_alt:Potvrdna slika: moraćete da prepoznate tekst na ovoj slici.
+captcha_img_help:Ne postoji nula ili jedinica na slici.
+powered-by:Pokreće FUDforum {GVAR: FORUM_VERSION}. Prevod: Rancher
+# Fuzzy
+copyright:Autorska prava &copy;2001–2018 <a href="http://fudforum.org/">FUDforum Bulletin Board</a>
+code_title:Kod:
+code_select_all:Izaberi sve
+code_show_hide:Prikaži/sakrij
+social_sites:Društvene mreže
+postcheck_min_len_err:Poruka je prekratka. Najmanja dužina je {PLURAL: post_min_len|$1 znak|$1 znaka|$1 znakova}.
+postcheck_dup_err:Ne pravite duplikate tema.
+btn_new_topic:Nova tema
+btn_new_pm:Nova PP
+btn_post_reply:Odgovori
+btn_tree_view:Nitni prikaz
+btn_flat_view:Ravan prikaz
+btn_about:Profil
+btn_small_pm:PP
+btn_delete:izbriši
+btn_edit:uredi
+btn_reply:odgovori
+btn_forward:prosledi
+btn_quote:citiraj
+btn_email:Imejl
+btn_show_posts:poruke
+btn_homepage:www
+feed_no_data:Nema poklapanja.
+feed_rdf:RDF dovod
+feed_rss:RSS2 dovod
+feed_atom:Atom dovod
+ip_whois_connect_err:Nije moguće povezati se na WHOIS server ({VAR: whois_server}): {VAR: errstr}
+custom_filed_required:Ovo polje je obavezno.
+pages:Stranice
+page_list_heading:Dostupne stranice
+page_list_total:{PLURAL: i|Prikazana je $1 stranica|Prikazane su $1 stranice|Prikazano je $1 stranica}.
+page_update:Pregleda stranicu
+pm_export_header:Privatne poruke za {VAR: usr->alias}
+pm_export_footer:Izvezeno:
+karma:Karma
+karma_track:Upravljanje ugledom korisnika:
+karma_delete:Izbriši
+rate_author:Ocena autora:
+blog_update:Čitanje forumskog portala
+blog:Blog
+blog_new_members:Novi članovi
+blog_new_posts:Skorašnje objave
+blog_rated_posts:Najbolje ocenjeno
+blog_viewed_posts:Najviše pregledano
+blog_comments:{PLURAL: topic->replies|$1 komentar|$1 komentara}

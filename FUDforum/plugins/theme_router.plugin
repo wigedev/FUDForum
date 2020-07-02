@@ -1,0 +1,86 @@
+<?php
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: theme_router.plugin 6076 2017-09-24 07:35:54Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+// Initialize plugin
+plugin_add_hook('INITUSER', 'plugin_theme_router');
+plugin_add_hook('COMPILER_INJECT', '_plugin_theme_router_selection');
+
+/** Override default theme. */
+function plugin_theme_router($usr) {
+	$theme = 'default';	// Fallback theme - hard coded!
+
+	if ((@include_once $GLOBALS['PLUGIN_PATH'] .'theme_router.ini') === false) {
+		echo 'ERROR: Cannot locate the "theme router" plugin\'s cache file. Please rebuild your themes.<hr />';
+	}
+
+	if (isset($_GET['theme']) && in_array($_GET['theme'], $themes, true)) {
+		$theme = $_GET['theme'];
+		setcookie('theme', $theme, time()+2592000, $GLOBALS['COOKIE_PATH'], $GLOBALS['COOKIE_DOMAIN']);
+	} elseif (isset($_COOKIE['theme']) && in_array($_COOKIE['theme'], $themes, true)) {
+		$theme = $_COOKIE['theme'];
+	} else {
+		if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+			$lang  = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+			if (isset($themes[$lang])) {
+				$theme = $themes[$lang];
+			}
+		}
+	}
+
+	defined('fud_theme') or define('fud_theme', 'theme/'. $theme .'/');
+}
+
+/** Compile theme selection into the theme. */
+function _plugin_theme_router_selection($array) {
+	list($tmpl, $name) = $array;
+
+	// Cache themes.
+	$c = uq('SELECT lang, name FROM '. $GLOBALS['DBHOST_TBL_PREFIX'] .'themes WHERE '. q_bitand('theme_opt', 1) .' > 0 ORDER BY name');
+	while ($r = db_rowarr($c)) {
+		$themes[$r[0]] = $r[1];
+	}
+	$fp = fopen($GLOBALS['PLUGIN_PATH'] .'theme_router.ini', 'w');
+	fwrite($fp, '<?php $themes = '. var_export($themes, 1) .'; ?>');
+	fclose($fp);
+
+	// Insert selection into the forum's HTML.
+	$select = '<div id="theme_selection">
+<form method="GET" action="'. $GLOBALS['WWW_ROOT'] .'">
+<select name="theme" id="theme" onchange="this.form.submit()">';
+	foreach($themes as $lang => $theme) {
+		if ($theme == $GLOBALS['__COMPILER__']['tname']) {
+			$select .= '<option value="'. $theme .'" selected="selected">'. str_replace('_', ' ', $theme) .'</option>';
+		} else {
+			$select .= '<option value="'. $theme .'">'. str_replace('_', ' ', $theme) .'</option>';
+		}
+	}
+	$select .= '</select>&nbsp;<input name="themeSubmit" type="submit" value="Switch Theme" /></form></div>';
+
+	if ($name == 'after_index') {
+		$tmpl .= $select;
+	}
+
+	return array($tmpl, $name);
+}
+
+function theme_router_info() {
+	return array('name' => 'Theme Router',
+				'desc' => 'Direct users to a suitable theme based on their browser language. It also shows a drop down box on the front page so users can switch between different themes. Simply enable it and create a theme for each of the languages you want to support.',
+				'version' => '1.1');
+}
+
+function theme_router_enable() {
+	@define('REBUILD_THEMES', 1);
+}
+
+function theme_router_disable() {
+	@define('REBUILD_THEMES', 1);
+}

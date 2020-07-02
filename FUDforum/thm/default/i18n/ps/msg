@@ -1,0 +1,377 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+# Author: Amjad Khan
+# Author: Baloch Khan
+# Author: Ibrahim khashrowdi
+
+action:کړنه
+admin:پازوال
+admin_control_panel:اداره
+administrator:پازوال
+attachment:مښلن:
+avatar:اواتار:
+biography:ژوندليک:
+birth_date:زېږون نېټه
+by:لخوا د:
+current_time:اوسينی وخت
+date_posted:د خپرولو نېټه
+date_registered:د ثبتېدلو نېټه:
+download_counter:{PLURAL: v[3]|$1 ځل|$1 ځله} ښکته شوی
+pmsg_download_counter:{PLURAL: r->dlcount|$1 ځل|$1 ځله} ښکته شوی
+email:برېښليک:
+email_to_friend:ملگري ته برېښليک لېږل
+email_user:دې کارن ته يو برېښليک لېږل
+faq:لارښود
+forum:فورم:
+forum_icon:د فورم نښه
+forum_new_messages:نوي پيغامونه
+forum_old_messages:نوي پيغامونه نشته
+gender:جنس:
+go:ورځه
+home:کور
+homepage:وېبپاڼه:
+im_msnm:MSN مسېنجر:
+im_yahoo:ياهو مسېنجر:
+image:انځور:
+index_forum:فورم
+interests:لېوالتياوې:
+last_post:وروستی پيغام
+location:استوگنځی:
+lock_thread:سرليک تړل
+locked:تړل شوی
+login:ننوتل
+login_header:ننوتل:
+logout:وتل
+members:غړي
+calendar:کاليزه
+cal_goto_date:ورټوپ کړه:
+cal_day_heading:د نن پېښې
+cal_birthday:زېږون ورځ: {VAR: user}
+message:پيغام
+message_index:د پيغام ليکلړ
+message_index_desc:د پيغامونو لړليک کتل
+minimize_category:وېشنيزه وړوکې کول
+minimize_message:پيغام وړوکی کول
+move_thread:لېږدول
+new_posts:نوي پيغامونه
+new_thread:يو نوی بحث پيلول
+next_page:بل مخ
+next_thread:راتلونکی سرليک:
+no_new_posts:نوي پيغامونه نشته
+no_posts:پيغامونه نشته
+occupation:دنده:
+off:گول
+on:بل
+post_count_l:د پيغامونو شمېر:
+posts:پيغامونه
+posts_c:پيغامونه:
+prev_thread:پخوانی سرليک:
+usrinfo_private_message:شخصي پيغام:
+rate_thread:سرليک ارزول
+rating:ارزښت
+register:ثبتول
+replies:ځوابونه
+reveal_post:پيغام ښکاره کول
+search:پلټل
+sel_todays_posts:د نن ورځې پيغامونه
+sel_unanswered_posts:ناځوابه پيغامونه
+sel_unread_messages:نالوستي پيغامونه
+send:لېږل
+sender_email:د لېږونکي برېښليک:
+sender_name:د لېږونکي نوم:
+size:کچه:
+status:دريځ:
+subject:موضوع
+subscribe:ونډه جوړول
+thread:سرليک:
+thread_announcement:خبرتيا:
+thread_thread:سرليک
+threads:سرليکونه
+time:وخت
+todays_posts:د نن ورځې پيغامونه
+unanswered_posts:ناځوابه پيغامونه
+unanswered_posts_desc:ټول هغه پيغامونه، چې ځوابونه نلري، ښکاره کول
+unread_posts:نالوستي پيغامونه
+user:کارن
+user_info:د کارن مالومات
+usrinfo_last_post:وروستی پيغام:
+view_results:پايلې کتل
+views:کتنې
+vote_button:رايه ورکول
+vote_for_thread:رايه ورکول
+what_ppl_doing:د کارن فعالیتونه
+reported_reason:سبب:
+modque_delete:ړنگول
+list_referes_member:غړی
+pmsg_all:ټول
+pmsg_none:هېڅ
+pmsg_replied:ځواب شو
+pmsg_author:ليکوال
+pmsg_time:وخت
+# Fuzzy
+pmsg_selected:ټاکلی
+pmsg_delete:ړنگول
+inbox:ليکبکس
+draft:گارليک
+sent:لېږل شوي
+msg_author:ليکوال
+month_1:جنوري
+month_2:فبروري
+month_3:مارچ
+month_4:اپرېل
+month_5:مې
+month_6:جون
+month_7:جولای
+month_8:اگسټ
+month_9:سېپتمبر
+month_10:اکتوبر
+month_11:نومبر
+month_12:ډيسمبر
+sunday:يونۍ
+sunday_short:ا
+monday:دونۍ
+monday_short:د
+tuesday:درې نۍ
+wednesday_short:م
+thursday:پينځنۍ
+thursday_short:ش
+friday:جمعه
+friday_short:ج
+saturday:خالي
+saturday_short:خ
+male:نارينه
+female:ښځه
+unspecified:ناټاکلی
+finduser_user_info:د کارن مالومات
+finduser_submit:موندل
+finduser_no_such_user:پدې نوم کارن نشته
+finduser_user:کارن
+finduser_joindate:د گډون نېټه
+yes:هو
+no:نه
+register_email:برېښليک
+pmuserloc_login:ننوتل:
+pmuserloc_submit:سپارل
+pmuserloc_user:کارن
+register_login:ننوتل:
+register_password:پټنوم:
+register_name:نوم:
+register_name_desc:ستاسې اصلي نوم.
+register_your_pass:ستاسې پټنوم:
+register_update:اوسمهالول
+register_preview:مخليدنه
+register_register:ثبتول
+register_required:اړين مالومات
+register_required_desc:ټولو ډاگونو ته اړتيا ده.
+register_location:ځای:
+register_occupation:دنده:
+register_interests:لېوالتياوې:
+register_image:انځور:
+register_yahoo:ياهو مسېنجر:
+register_msnm:MSN مسېنجر:
+register_homepage:وېبپاڼه:
+register_bday:زېږون نېټه:
+register_day:ورځ
+register_month:مياشت
+register_year:کال
+register_gender:جنسيت:
+register_bio:ژوندليک:
+register_prefs:غوره توبونه
+register_sig:لاسليک:
+register_show_sig:لاسليکونه ښکاره کول:
+register_timezone:د وخت سيمه:
+buddy_status:دريځ
+add:ورگډول
+post_normal:نورمال
+post_annoncement:خبرتيا
+post_size:کچه
+post_color:رنگ
+post_font:ليکبڼه
+create_thread:سرليک جوړول
+post_preview:مخليدنه
+post_logout:وتل
+post_poll_delete:ړنگول
+post_poll_edit:سمول
+post_file_del:ړنگول
+post_file_name:نوم
+post_file_size:کچه
+post_forum:فورم:
+post_title:سرليک:
+post_options:خوښنې:
+post_preview_btn:مخليدنه
+post_cancel_btn:ناگارل
+forum_terms:د فورم شرطونه
+prereg_info:د فورم قوانين
+prereg_agree:منل
+prereg_disagree:نه منل
+coppa_fax_telephone:ټيليفون:
+coppa_fax_email:برېښليک پته:
+coppa_fax_date:نېټه:
+coppa_fax_login:ننوتل
+coppa_fax_passwd:پټنوم
+coppa_fax_remail:برېښليک
+coppa_fax_name:نوم
+login_want_to_register:ځان ثبتول غواړې؟
+login_forgot_passwd:پټنوم مې هېر شوی
+login_login:ننوتل:
+login_login_btn:ننوتل
+rpasswd_invalid_passwd:ناسم پټنوم
+rpasswd_change_pass:پټنوم بدلول
+rpasswd_login:ننوتل
+rpasswd_cur_pass:اوسنی پټنوم:
+rpasswd_new_pass:نوی پټنوم:
+login_passwd:پټنوم:
+reset_email:برېښليک:
+rate_this_thread:ارزول
+report_subject:سکالو:
+search_forum:فورم
+search_all_forums:ټول فورمونه پلټل
+search_in_forum:په فورم کې پلټنه:
+remail_your_name:ستاسې نوم:
+remail_your_email:ستاسې برېښليک:
+remail_friends_name:د ملگري نوم:
+remail_friends_email:د ملگري برېښليک:
+remail_message:پيغام:
+remail_done:ترسره شو
+mklist_option:خوښنې:
+mklist_delete:ړنگول
+qbud_nick_name:کورنی نوم
+qbud_add_selected:ټاکلي ورگډول
+# Fuzzy
+qbud_selected:ټاکلي
+mklist_close:تړل
+email_pg_title:برېښليک
+email_submit:برېښليک
+ppost_find_User:کارن موندل
+ppost_send:لېږل
+ppost_save_draft:گارليک خوندي کول
+poll_create:جوړول
+poll_update:اوسمهالول
+poll_delete:ړنگول
+poll_day:ورځ
+poll_days:ورځې
+poll_hour:ساعت
+poll_hours:ساعتونه
+poll_month:مياشت
+poll_year:کال
+poll_week:اونۍ
+delete_yes:هو
+delete_no:نه
+error_error:تېروتنه
+err_info:مالومات
+email_error_invaliduser:ناسم کارن
+ignore_list_err_info_title:مالومات
+ignore_list_err_nu_title:کارن و نه موندل شو
+post_err_passwd:ناسم پټنوم.
+report_err_nosuchmsg_title:تېروتنه
+reset_err_invalidkey_title:تېروتنه
+reset_err_rstconf_title:مالومات
+finduser_title:کارن موندل
+help_title:لارښود
+index_title:فورم ته ښه راغلاست
+post_opt:د فورم خوښنې:
+register_change_passwd:پټنوم بدلول
+thr_exch_submit:سپارل
+groupmgr_yes:هو
+groupmgr_no:نه
+groupmgr_member:غړی
+groupmgr_cancel:ناگارل
+groupmgr_add_member:غړی ورگډول
+groupmgr_edit:سمول
+groupmgr_delete:ړنگول
+group_mgr_anon:ورکنومی
+show_show:ښکاره کول:
+group_mgr_group:ډله:
+p_READ:لوستل
+p_REPLY:ځوابول
+p_EDIT:سمول
+p_DEL:ړنگول
+p_VOTE:رايه ورکول
+group_mgr_search:کارن موندل
+th_expr_never:هېڅکله
+th_expr_one_day:۱ ورځ
+th_expr_two_day:۲ ورځې
+th_expr_four_day:۴ ورځې
+th_expr_one_week:۱ اونۍ
+th_expr_two_week:۲ اونۍ
+th_expr_one_month:۱ مياشت
+th_expr_two_month:۲ مياشتې
+th_expr_four_month:۴ مياشتې
+th_expr_one_year:۱ کال
+thread_mod_delete:ړنگول
+action_latest_post:وروستی پيغام
+split_th_forum:فورم:
+split_th_messages:پيغامونه
+split_th_select:ټاکل
+quicklogin_login:ننوتل:
+quicklogin_password:پټنوم:
+quicklogin_login_btn:ننوتل
+quick_reply:چټک ځواب
+quick_reply_post:چټک ځوابول
+quick_reply_preview:د چټک ځواب مخليدنه
+pmsg_next_msg:راتلونکی پيغام
+pmsg_prev_msg:پخوانی پيغام
+im_skype:سکايپ:
+im_twitter:ټوېټر:
+forum_contact:اړيکه
+forum_home:کور
+smladd_close_window:کړکۍ تړل
+poll_edit:سمول
+polllist_vote:رايه ورکول
+polllist_view_results:پايلې کتل
+polllist_votes:ټولې رايې
+unread_message:نالوستی پيغام
+read_message:پيغام لوستل
+iemail_msg_reply:ځوابول
+threadt_announce:خبرتيا
+mnav_hour:ساعت (ساعتونه)
+mnav_day:ورځ (ورځې)
+mnav_week:اونۍ
+mnav_month:مياشت (مياشتې)
+findu_edit:سمول
+findu_delete:ړنگول
+merge_next:راتلونکي سرليکونه
+merge_prev:پخواني سرليکونه
+register_email_addr:برېښليک پته:
+ip_search:پلټل
+userinfo_real_name:اصلي نوم:
+post_err_mod_forum_edit_ttl:تېروتنه
+delete_msg_pm_body:آرنی پيغام
+delete_msg_pm_subject:سکالو: {VAR: data[15]}
+uc_new_pm:نوي شخصي پيغامونه
+uc_new_topic:نوی سرليک
+search_options:د پلټلو خوښنې
+modque_cat:وېشنيزه
+modque_forum:فورم
+mmd_abort_move:ناگارل
+pmsg_pdf_btn:د PDF خونديځ جوړول
+thread_del_all:ټاکل شوی ړنگول
+thread_mov_all:ټاکلي لېږدول
+dmsg_ip:آی پي:
+post_common_bold:زغرد
+post_common_italics:رېوند
+post_common_align_left:کيڼه پرليکتيا
+post_common_align_right:ښي پرليکتيا
+post_common_link:يوه تړنه ورټومبل
+post_common_email:يوه برېښليک پته ورکړۍ
+post_common_image:يو انځور ورټومبل
+post_common_blist:گولۍ داره لړليک ورگډول
+rating_delete:ړنگول
+finduser_flag:رپی
+move_messages:پيغامونه لېږدول
+code_title:کوډ:
+code_select_all:ټول ټاکل
+code_show_hide:ښکاره کول/ پټول
+btn_new_topic:نوی سرليک
+btn_delete:ړنگول
+btn_edit:سمول
+btn_reply:ځوابول
+btn_email:برېښليک
+custom_filed_required:د دغو ډاگونو ډکولو ته اړتيا ده.
+pages:مخونه
+page_list_heading:شته مخونه
+page_list_total:{PLURAL: i|$1 مخ|$1 مخونه} لړليک.
+page_update:مخ سپړنه
+karma_delete:ړنگول
+rate_author:ليکوال ارزول:

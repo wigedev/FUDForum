@@ -1,0 +1,1177 @@
+# Messages for Portuguese (português)
+# Exported from translatewiki.net
+# Author: Athena in Wonderland
+# Author: Crazymadlover
+# Author: Dianakc
+# Author: Fryed-peach
+# Author: GTNS
+# Author: Giro720
+# Author: Hamilton Abreu
+# Author: Imperadeiro98
+# Author: Luckas
+# Author: Luckas Blade
+# Author: Macofe
+# Author: Malafaya
+# Author: Mansil
+# Author: McDutchie
+# Author: Naudefj
+# Author: Tark
+# Author: Vitorvicentevalente
+# Author: Waldir
+# Author: Waldyrious
+
+action:Ação
+add_to_buddy_list:adicionar à lista de amigos
+admin:Admin.
+admin_control_panel:Administração
+administrator:Administrador
+attachment:Anexo:
+avatar:Avatar:
+average_post_count:{PLURAL: u->posted_msg_count|$1 Mensagem|$1 Mensagens} ({PLURAL: avg|$1 mensagem em média|$1 mensagens em média} por dia)
+biography:Biografia:
+birth_date:Data de nascimento:
+by:Por:
+by_mod:pelo Moderador
+current_time:Hora atual
+custom_avatar_queue:Fila de avatares personalizados
+date_posted:Data de Publicação
+date_registered:Data do Registo:
+download_counter:Transferido {PLURAL: v[3]|$1 vez|$1 vezes}
+pmsg_download_counter:Transferido {PLURAL: r->dlcount|$1 vez|$1 vezes}
+email:Correio electrónico:
+email_to_friend:Enviar correio a um amigo
+email_to_friend_desc:Enviar a URL desta página a um ou mais amigos por correio electrónico
+email_user:Enviar mensagem ao utilizador por correio electrónico
+faq:Ajuda
+first_unread_msg:Ir para mensagens não lidas
+first_unread_msg_desc:Ir para a primeira mensagem não lida neste tópico
+flat_view:Voltar para a vista plana predefinida
+forum:Fórum:
+forum_icon:Ícone do Fórum
+forum_new_messages:Novas mensagens
+forum_none_messages:Só membros registados do fórum mantêm registo das mensagens lidas e não lidas
+forum_old_messages:Não há novas mensagens
+from:De:
+gender:Sexo:
+go:Avançar
+goto_next_msg:Ir para a mensagem seguinte
+goto_prev_msg:Ir para a mensagem anterior
+home:Início
+homepage:Página inicial:
+icq_control_panel:Painel de mensagens do ICQ Online
+icq_message_form:Formulário de mensagem ICQ:
+ignore_user:Ignorar todas as mensagens deste utilizador
+im_aim:Identificador AIM:
+im_msnm:MSN Messenger:
+im_yahoo:Yahoo Messenger:
+image:Imagem:
+index_forum:Fórum
+index_new_posts:Mensagens novas desde a última lida
+index_no_new_posts:Não há mensagens novas desde a última lida
+index_url_redirection:Redirecionamento
+interests:Interesses:
+last_post:Última mensagem
+last_thread_msg:Ir para a última mensagem neste tópico
+legend:Legenda:
+location:Localização:
+lock_thread:Fechar Tópico
+locked:Fechado
+locked_with_new_posts:Fechado(com mensagens não lidas)
+logged_in_list:Lista de utilizadores a visitar o forum
+login:Entrar
+login_header:Utilizador:
+logout:Sair
+mark_all_read:Marcar todas as mensagens como lidas
+mark_all_read_desc:Todas a suas mensagens serão marcadas como lidas
+members:Membros
+calendar:Calendário
+cal_goto_date:Ir para:
+cal_day_heading:Eventos para o dia
+cal_no_events:Não há eventos para este dia.
+cal_update:Consultando o calendário do fórum
+cal_birthday:Aniversário: {VAR: user}
+cal_birthdays:{PLURAL: birthdays|$1 aniversário|$1 aniversários}
+cal_birthday_age:({PLURAL: age|$1 ano|$1 anos}).
+message:Mensagem
+message_counter:Os nossos utilizadores colocaram um total de <b>{PLURAL: post_count|$1 mensagem|$1 mensagens}</b> em <b>{PLURAL: thread_count|$1 tópico|$1 tópicos}</b>.
+message_index:Indice da mensagem
+message_index_desc:Ver lista de mensagens
+minimize_category:Minimizar Categoria
+minimize_message:Minimizar Mensagem
+moderation_queue:Moderação
+moderator:Moderador
+moderator_of:Moderador ausente:
+moderator_options:Opcções do Moderador
+moderators:{PLURAL: modcount|Moderador|Moderadores}
+more_unread_messages:mais mensagens não lidas
+more_unread_messages_desc:Mostrar mais mensagens não lidas e marcar as mensagens correntes como lidas
+move_thread:Mover
+moved:Movida para outro forum
+moved_thread_message:Este tópico foi movido para outro Forum
+na:n/d
+new_posts:Novos Posts
+new_private_messages:Tem <span class="GenTextRed">({VAR: c})</span> {PLURAL: c|mensagem privada não lida|mensagens privadas não lidas}
+new_thread:Criar um novo tópico
+newest_user:O último utilizador registado é
+next_page:Página Seguinte
+next_thread:Próximo Tópico:
+no_messages:Não há mensagens neste fórum.<br />Seja o primeiro a postar um tópico neste fórum.
+no_msg_body:mensagem vazia
+no_new_posts:Não há novos posts
+no_posts:Não há mensagens
+no_subscribed_forums:Não há forums subscritos
+no_subscribed_threads:Não há topicos subscritos
+no_bookmarked_threads:Não há nenhum tópico nos favoritos
+no_unread_locked:Este tópico foi fechado
+no_unread_msg:Neste tópico não há mensagens não lidas
+no_unread_msg_unreg:As mensagens lidas e não lidas só podem ser localizadas por membros registados
+num_pages:Páginas ({VAR: ttl_pg}):
+num_votes:{VAR: obj->total_votes} {PLURAL: obj->total_votes|voto|votos}
+occupation:Ocupação:
+off:DES
+on:LIG
+page_timings:Tempo total usado para gerar a página: {VAR: page_gen_time} segundos
+pm:Mensagens Privadas
+poll:Sondagem:
+post_count:Contador de posts {VAR: u_pcount}
+post_count_l:Contador de posts:
+posts:Mensagens
+posts_c:Mensagens:
+prev_thread:Tópico anterior:
+usrinfo_private_message:Mensagem Privada:
+profile:Perfil
+profile_desc:Aceder ao painel de controlo de membro
+rate_thread:Votar Tópico
+rating:Avaliação
+rating_track:Gerir as avaliações do tópico <b>{VAR: thr->subject}</b>:
+refresh_list:Atualizar a lista
+register:Registar-se
+registered:Registado:
+registered_on:Registado em {TEMPLATE: registered_on_date}
+replies:Respostas
+report_to_mod:Informar mensagem ao moderator
+reported_messages:mensagens informadas
+reveal_all_posts:Revelar todos os posts por {VAR: user_login}
+reveal_post:revelar posts
+search:Pesquisar
+sel_todays_posts:Posts de hoje
+sel_todays_posts_desc:Filtro para posts de hoje (só serão mostrados os posts colocados hoje)
+sel_unanswered_posts:Posts não respondidos
+sel_unanswered_posts_desc:Filtro de posts não respondidos (só serão mostrados os posts não respondidos)
+sel_unread_messages:Mensagens não lidas
+sel_unread_messages_desc:Filtro de mensagens não lidas (só serão mostradas as mensagens não lidas)
+send:Enviar
+send_pm_desc:Enviar uma mensagem privada para este utilizador
+sender_email:Email do remetente:
+sender_name:Nome do remetente:
+show_posts_by:Mostrar posts por: {VAR: u_alias}
+size:Tamanho:
+status:Estado:
+status_line:Há <b>{PLURAL: st_obj->online_users_reg|$1 membro|$1 membros}</b>, <b>{PLURAL: st_obj->online_users_hidden|$1 membro invisível|$1 membros invisíveis}</b> e <b>{PLURAL: st_obj->online_users_anon|$1 visitante|$1 visitantes}</b> a visitar esta página .
+sticky:fixo:
+stop_ignoring:parar de ignorar este utilizador
+sub_to_thread:Subscrever o tópico
+sub_to_thread_desc:Receber notificação sobre novos posts neste tópico
+bookmark_thread:Adicionar tópico aos favoritos
+bookmark_thread_desc:Adicione este tópico à sua lista de favoritos
+subject:Assunto
+subscribe:Subscrever
+subscribe_desc:Rceber notificações quando alguem criar novos tópicos neste forum
+subscribed_forums:Foruns subscritos
+subscribed_forums_desc:Filtro de foruns subscritos (só serão mostrados os posts dos forums que tem subscritos)
+subscribed_threads:Tópico subscritos
+subscribed_threads_desc:Filtro de tópicos subscritos (só serão mostrados os posts dos tópicos que tem subscritos)
+bookmarked_threads:Tópicos Favoritos
+switch_to_thread_view:Mudar para a visualização do assunto deste tópico
+thread:Tópico:
+thread_announcement:anuncio:
+thread_first_unread_msg:Ir à primeira mensagem neste tópico
+thread_thread:Tópico
+threads:Tópicos
+time:Hora
+todays_posts:Posts de hoje
+todays_posts_desc:Mostrar todas as mensagens que foram colocadas hoje
+un_ignore_user:parar de ignorar posts deste utilizador
+unanswered_posts:Posts não respondidos
+unanswered_posts_desc:Mostrar todas as mensagens sem resposta
+unlock_thread:Tópico aberto
+unread_msg:Este tópico contém mensagens que não foram lidas
+unread_msg_locked:Tópico com mensagens não lidas fechado
+unread_posts:Posts não lidos
+unread_posts_desc:Mostrar todas as mensagens não lidas
+unsub_from_thread:Anular subscrição do tópico
+unsub_from_thread_desc:Parar de receber notificações sobre novos posts neste tópico
+unbookmark_thread:Remover dos favoritos
+unbookmark_thread_desc:Remover este tópico da sua lista de favoritos
+unsubscribe:Anular subscrição
+unsubscribe_desc:Parar de receber notificações sobre novos posts neste forum
+updated_on:Atualizado em:
+user:Utilizador
+user_counter:Temos <b>{VAR: st_obj->user_count}</b> {PLURAL: st_obj->user_count|utilizador registado|utilizadores registados}.
+user_info:Informação do utilizador
+user_info_l:Informação do utilizador {VAR: u->alias}
+user_offline:{VAR: obj->login}  está neste momento offline
+user_online:{VAR: obj->login} está neste momento online
+usrinfo_last_post:Ultimo Post:
+view_results:Ver resultados
+views:Vistas
+vote:{PLURAL: frm->n_rating|$1 Voto|$1 Votos}
+vote_button:Voto
+vote_for_thread:Voto
+was_moved_msg:<a href="{TEMPLATE: was_moved_msg_lnk}">{VAR: r[2]}</a> foi movido para <a href="{TEMPLATE: was_moved_msg_lnk2}">{VAR: r[12]}</a> pelo moderador.
+welcome_message:Bem vindo <b>{VAR: usr->alias}</b>, a sua ultima visita foi em {TEMPLATE: welcome_message_date}
+what_ppl_doing:Atividade do utilizador
+reported_del_report:Apagar relatório
+reported_reason:Motivo:
+reported_on:Em:
+reported_reported_by:Reportado por:
+reported_reported_msg:Mensagens reportadas
+modque_pending_approval:Mensagens pendentes de aprovação
+modque_approve:Aprovar
+modque_delete:Apagar
+modque_deleteall:Apagar tudo do utilizador
+modque_no_message:Não há mensagens pendentes de aprovação
+pmsg_new_messages:Mensagen privada não lida
+pmsg_old_messages:Mensagem privada lida
+deny_recipt:Negar recibo
+deny_recipt_desc:Não enviar confirmação de mensagem lida;
+restore_to:Reposição para:
+move_to:Mover para:
+list_referes_referrals:Indicação
+list_referes_members:Membros indicados
+list_referes_member:Membro
+referals_none:Ainda sem indicações.
+referals_refered_by:Membros do forum indicados por: <b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b>
+referals_post_count:Contador de posts
+referals_registered_on:Registado em
+referals_action:Ação
+pmsg_all:todos
+pmsg_none:nenhum
+folder:Pasta:
+pmsg_replied:respondido
+pmsg_forwarded:reencaminhado
+pmsg_subject:Assunto
+pmsg_author:Autor
+pmsg_time:Hora
+pmsg_selected:Selecionar
+pmsg_delete:Apagar
+cur_ppage_pm:Mensagens privadas
+writing_pm:Escrever uma mensagem privada
+browsing_folder:Escolher <b>{VAR: folders[$folder_id]}</b> pasta
+inbox:Recebidas
+draft:Rascunho
+sent:Enviado
+trash:Lixo
+msg_author:Autor
+avatar_sel_form:Formulário de seleção de avatar
+no_avatars:Não há Avatars disponiveis
+month_1:Janeiro
+month_2:Fevereiro
+month_3:Março
+month_4:Abril
+month_5:Maio
+month_6:Junho
+month_7:Julho
+month_8:Agosto
+month_9:Setembro
+month_10:Outubro
+month_11:Novembro
+month_12:Dezembro
+sunday:Domingo
+sunday_short:D
+monday:Segunda-feira
+monday_short:S
+tuesday:Terça-feira
+tuesday_short:T
+wednesday:Quarta-feira
+wednesday_short:Q
+thursday:Quinta-feira
+thursday_short:Qui
+friday:Sexta-feira
+friday_short:S
+saturday:Sábado
+saturday_short:Sa
+male:Masculino
+female:Feminino
+unspecified:NÃO ESPECIFICADO
+register_tree_view:Mensagens e assuntos listados em arvore
+register_msg_tree_view:Listagem de assuntos/Listagem de mensagens em árvore
+register_tree_msg_view:Listagem de assuntos/Listagem de mensagens
+register_flat_view:Listagem normal de assuntos e mensagens
+use_forum_default:Usar o forum padrão
+finduser_user_info:Informação sobre o utilizador
+finduser_by_login:Por Login:
+finduser_submit:Encontrar
+finduser_no_such_user:Esse utilizador não existe
+finduser_user:Utilizador
+finduser_postcount:Contador de posts
+finduser_joindate:Data de adesão
+finduser_action:Ação
+yes:Sim
+no:Não
+register_email:Email
+edit_time_limit:<b>Limite de tempo de edição</b>: {GVAR: EDIT_TIME_LIMIT} minutos
+no_edit_time_limit:<b>Limite de tempo de edição</b>: Ilimitado
+pmuserloc_login:Utilizador:
+pmuserloc_submit:Enviar
+pmuserloc_user:Utilizador
+pmuserloc_no_result:Sem resultado
+register_builtin:Embutido
+register_specify_url:Especificar URL
+register_uploaded:Adicionar Avatar
+register_login:Utilizador:
+register_login_desc:O nome para entrar e pelo qual gostaria de ser conhecido neste ''site''.
+register_login_available:Disponível
+register_login_taken:Já utilizado
+register_password:Palavra-passe:
+register_password_desc:A palavra-passe para a sua conta. As palavras-passe são sensíveis a maiúsculas e minúsculas e devem ter pelo menos 6 carateres.
+register_conf_pass:Confirmar senha:
+register_conf_pass_desc:Introduza novamente a sua palavra-passe, por favor.
+register_email_desc:O seu endereço de e-mail. Pode escolher em ocultá.lo em baixo, na secção das Preferências.
+register_name:Nome:
+register_name_desc:O seu nome verdadeiro.
+register_your_pass:A sua Palavra-chave:
+register_update:Atualizar
+register_avatar_type:Tipo de Avatar:
+register_del_avatar:Apagar Avatar
+register_avatar:Avatar:
+register_sel_avatar:Selecionar Avatar
+register_custom_avatar_rules:O Avatar escolhido não aparecerá até que seja aprovado pelo administrador.<br /><font class="SmallText">O Avatar não poderá ter mais de <b>{GVAR: CUSTOM_AVATAR_MAX_DIM} pixels</b> de largura e terá de estar no formato.<b>jpg</b>, <b>gif</b> ou <b>png</b></font>
+register_custom_avatar_url:URL do Avatar escolhido:
+register_preview:Previsualização
+register_custom_avatar_upload:Ficheiro do Avatar escolhido:
+register_register:Registar
+register_required:Informação requerida
+register_required_desc:Todos os campos são requeridos.
+register_optional:Informação opcional
+register_optional_desc:É recomendado que não revele a identificação ou alguma informação pessoal no seu perfil.  Toda a informação será visivel para todos os membros do forum.
+register_location:Localidade:
+register_occupation:Ocupação:
+register_interests:Interesses:
+register_image:Imagem:
+register_icq:ICQ
+register_aim:AIM:
+register_yahoo:Yahoo Messenger:
+register_msnm:MSN Messenger:
+register_homepage:Página Pessoal:
+register_bday:Data de nascimento:
+register_bday_desc:Se selecionar a data de nascimento todos os membros a poderão ver no seu perfil
+register_day:Dia
+register_month:Mês
+register_year:Ano
+register_gender:Sexo:
+register_bio:Biografia:
+register_bio_desc:Alguns detalhes acerca de si, tais como interesses, trabalho, etc...
+register_prefs:Preferências
+register_sig:Assinatura:
+register_sig_desc:Texto que poderá usar no final dos seus posts.
+register_reset:Reiniciar
+register_def_thread_view:Vista Predefinida Para Tópicos:
+register_msg_per_page:Mensagens por página:
+register_show_sig:Mostrar assinaturas:
+register_show_sig_desc:Permite mostrar ou ocultar assinaturas de outros membros
+register_use_sig_default:Usar assinatura como padrão:
+register_use_sig_default_desc:Adicionar automáticamente a assinatura no final dos posts
+register_timezone:Hora Local:
+register_ignore_admin:Ignorar mensagens do administrador:
+register_invisible_mode:Modo Invisivel:
+register_invisible_mode_desc:Ocultar o estado online.
+register_show_email:Mostrar Correio Electrónico:
+register_show_email_desc:Escolha esta opção se quiser que o seu endereço de e-mail seja publicado.
+register_notification:Seleccionar Notificação por Omissão:
+register_notification_desc:Se a notificação estiver ativada por omissão, pode ser desativada ao publicar mensagens.
+register_notify_method:Escolher Método de Notificação:
+register_notify_method_desc:Defina o seu método de notificação preferido ou desative as notificações (por exemplo, quando vai de férias).
+register_allow_email_msg:Autorizar Mensagens por Correio Electrónico:
+register_allow_email_msg_desc:Autorizar que outros membros lhe enviem correio electrónico através do fórum.
+buddy_status:Estado
+my_buddies:Os meus amigos
+add_buddy:Adicionar Amigo
+add:Adicionar
+buddy_search:Introduza o nome do utilizador que pretende adicionar.
+member_search:Ou utilize a funcionalidade <a href="javascript://" onclick="javascript: window_open('{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1', 'user_list', 400,250);">Encontrar Utilizador</a> para localizar a pessoa.
+buddy_remove:remover
+post_normal:Normal
+post_sticky:Fixo
+post_annoncement:Anunciar
+post_size:Tamanho
+post_color:Cor
+post_font:Fonte
+create_thread:Criar Tópico
+submit_reply:Submeter resposta
+edit_message:Aplicar Alterações nas Mensagens
+apply_spell_changes:Aplicar Alterações de ortografia
+post_preview:Visualisar o Post
+post_logedin_user:Membro Logado:
+post_logout:sair
+post_passwd:Password para fazer posts:
+post_poll:Votação:
+post_create_poll:CRIAR VOTAÇÃO
+post_poll_delete:APAGAR
+post_poll_edit:EDITAR
+post_mod_opt:Opções do Moderador:
+post_thread_type:Tipo de Tópico:
+post_thread_expiry:Tópico expirado:
+post_locked:Tópico fechado
+post_icons:Icon do Post:
+post_no_icon:Nenhum Icon
+post_smiley:Atalhos para os smiles:
+post_format_tools:Ferramentas de formatação:
+post_upload_file:Carregar Ficheiro
+post_file_del:Apagar
+post_file_name:Nome
+post_file_size:Tamanho
+file_attachments:Acessórios de ficheiros:
+allowed_files:Permitir extenções de ficheiros:
+max_file_size:Tamanho máximo do ficheiro:
+max_files_per_msg:Máximo de ficheiros por mensagem:
+post_notification:Notificação de Publicação
+include_sig:Incluir assinatura
+include_sig_desc:Incluir a minha assinatura no perfil.
+disable_smilies:Cancelar smilies nesta mensagem
+spell_check_msg:Accionar ortografia na mensagem
+post_form:Formulário de Publicação
+post_forum:Fórum:
+post_title:Título:
+post_body:Corpo:
+post_options:Opções:
+post_preview_btn:Visualisar mensagem
+post_cancel_btn:Cancelar
+ignore_users:Utilizadores ignorados
+add_ignore:Adicionar ignorados
+forum_terms:Termos de uso do Forum
+forum_rules:O registo neste fórum é gratuito! Insistimos no respeito pelas regras e normas detalhadas abaixo. Se concordar com estes termos, clique o botão <b>Concordo</b> no final da página, por favor.</p><p>Embora os administradores e moderadores deste fórum tentem mantê-lo livre de mensagens ofensivas, é-nos impossível fazer a revisão de todas as mensagens. Todas as mensagens expressam unicamente o ponto de vista do seu autor. Nem os proprietários do fórum nem os programadores, poderão ser responsabilizados pelo conteúdo de qualquer mensagem.</p><p>Ao clicar o botão Concordo, garante que não colocará mensagens obscenas, ordinárias, de natureza sexual, racistas ou ameaçadoras, nem que de qualquer outra forma constituam uma violação da lei.</p><p>Os proprietários deste fórum têm o direito de remover, editar, mover ou fechar qualquer tópico por qualquer motivo.<p>
+forum_rules_13:<p>Todos os utilizadores de idade inferior a 13 anos necessitam da autorização dos pais ou do encarregado de educação, para serem membros do fórum. Apesar de acolhermos a participação de membros com idade inferior a 13 anos, é necessário que um dos pais ou o encarregado de educação envie um formulário de autorização assinado, por fax ou email, antes de permitirmos a sua participação.</p><p>Se quiser iniciar o processo de inscrição antes de recebermos um formulário de autorização, clique no botão <b>Concordo</b>, abaixo. Se quiser cancelar o registo, clique em <b>Não concordo</b>, para voltar ao índice do fórum.</p><p>Uma cópia do formulário de autorização será apresentada após a inscrição. Para mais informações sobre o processo de registo, envie um email para <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>.</p>
+coppa_conf:Confirmação COPPA
+coppa_before:Antes de {TEMPLATE: coppa_date}
+coppa_after:Depois de {TEMPLATE: coppa_date}
+coppa_link:Clique no link que corresponde à sua data de nascimento
+coppa:<p>Para que um utilizador de idade inferior a 13 anos possa completar o processo de registo, um dos pais ou o encarregado de educação deve enviar um formulário de autorização assinado, por fax ou correio electrónico, para o administrador deste fórum.</p><p>Para mais informações contacte <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a></p>
+prereg_info:Informação
+prereg_agree:Concordo
+prereg_disagree:Não concordo
+prereg_update:Lendo as regras do fórum
+coppa_fax_instructions:Instruções para o encarregado de educação
+coppa_fax_instructions2:Por favor imprima esta página, assine-a, e envie-a por email ou fax de volta para nós.
+coppa_fax_reg_form:Formulário de registo
+coppa_fax_sign:Por favor assine e envie-nos o formulário abaixo
+coppa_fax_conf:Vi toda a informação que o meu filho(a) me forneceu e li a Politica de Privacidade para o site. Compreendo que a informação no perfil pode ser alterada por uma pessoa que tenha a password. Eu compreendo que posso pedir para que a informação deste perfil seja removida por completo.
+coppa_fax_permission:Assine aqui se autorizar
+coppa_fax_no_permission:Assine aqui se quiser que a conta seja removida
+coppa_fax_parent_name:Nome completo do encarregado de educação:
+coppa_fax_relation:Parentesco com a criança:
+coppa_fax_telephone:Telefone:
+coppa_fax_email:Endereço de Email:
+coppa_fax_date:Data:
+coppa_fax_questions:Por favor contacte <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a> para qualquer questão
+coppa_fax_login:Utilizador
+coppa_fax_passwd:Palavra-passe
+coppa_fax_remail:Email
+coppa_fax_name:Nome
+login_not_logedin:Não fez o login. Isto pode ter acontecido por diversas razões:
+login_cookie_expired:O seu cookie expirou, e precisa de fazer novamente o login para renovar o cookie.
+login_perm_denied:Não tem permissão para aceder em modo anónimo, terá de fazer o login para aceder.
+login_want_to_register:Quer registar-se?
+login_forgot_passwd:Esqueceu a password
+login_use_cookie:Usar cookies<br /><span class="SmallText">Se está a usar um terminal público, como um computador numa biblioteca, escola, ou cibercafé, é recomendado que desative esta opção para maior segurança. Se deixar esta opção ativa, será automaticamente autenticado no fórum da próxima vez que o visitar.</span>
+login_login:Entrar
+login_login_btn:Submeter
+login_name_required:Login requer nome
+login_passwd_required:Password requerida
+login_invalid_radius:Combinação inválida de Login/password
+reset_confirmation:Obrigado por se registar,\n\nPara ativar a sua conta aceda à URL:\n\n{VAR: url}\n\nAssim que a conta esteja ativa, será autenticado no fórum e\nredirecionado para a página principal.
+reset_reset:Ola,\n\nPediu para que a sua password seja restaurada, para restaurar a sua password\npor favor vá a URL\n\n{VAR: url}\n\nNOTE: Este forum guarda as passwords com um sistema de encriptação não reversível o que quer dizer, que\uma vez entrada a password será codificada e não haverá possibilidade de a recuperar.\nIsto funciona por simples codificação da password e comparada cada vez que é introduzida com a versão codificada e\nverificando se são iguais.
+rpasswd_invalid_passwd:Password Inválida
+rpasswd_passwd_nomatch:As Passwords não são iguais
+rpasswd_passwd_length:A Password deve ter pelo menos 6 caracteres de tamanho
+reset_remind_pass:Recuperador de Password
+reset_reset_conf:A sua password será restaurada e enviada, no caso de não ter confirmado o seu email um formulário de pedido de confimação ser-lhe-á enviado.
+reset_error:O email não foi encontrado na base de dados
+reset_update:Reiniciar palavra-chave
+rpasswd_change_pass:Alterar password
+rpasswd_login:Utilizador
+rpasswd_cur_pass:Palavra-chave atual:
+rpasswd_new_pass:Nova Password:
+rpasswd_conf_pass:Confirma Password:
+ruser_title:Formulário de alteração de nome de utilizador
+ruser_change_user:Muda o teu nome de utilizador no fórum
+ruser_cur_login:Nome de utilizador atual
+ruser_new_login:Novo nome de utilizador:
+ruser_cur_pass:Palavra-chave Actual:
+login_passwd:Palavra-passe:
+reset_email:Email:
+reset_reset_button:Alterar Password
+rate_this_thread:Taxa
+report_reporting_about:Reportar acerca de:
+report_subject:Assunto:
+report_by:Por:
+report_posted_on:Afixado Em:
+report_give_reason:Por favor informe a razão pela pela qual está a reportar esta mensagem:
+report_submit_report:Submeter
+search_entire_msg:Mensagem completa
+search_subject_only:Apenas o assunto
+search_forum:Fórum
+search_posted_on:Afixado em
+search_no_results:Sem resultados
+search_all_forums:Procurar em todos os foruns
+search_in_forum:Procurar no fórum:
+search_forum_search:Procura no forum
+move_thread_to:Mover tópico <b>{VAR: thr->subject}</b> para:
+remail_email_topic:Enviar este tópico por Email a um amigo
+remail_your_name:O seu Nome:
+remail_your_email:O seu Email:
+remail_friends_name:Nome do Amigo:
+remail_friends_email:Email do Amigo:
+remail_required:requerido
+remail_subject:Assunto:
+remail_message:Mensagem:
+remail_send_now:Enviar Email agora
+remail_anon_opt:Copiar esta mensagem para um cliente de email á sua escolha e envie-o aos seus amigos
+remail_done:Concluído
+remail_sent_conf:O email para o seu amigo {VAR-HTML: _POST['femail']} sobre {VAR: data->subject} foi enviado com sucesso.
+remail_error:Tem um erro
+mklist_type:Tipo:
+mklist_option:Opção:
+mklist_additem:Adicionar item
+mklist_apply:Aplicar
+mklist_delete:Apagar
+qbud_nick_name:Nick
+qbud_add_selected:Adicionar seleção
+qbud_selected:Selecionar
+qbud_no_buddies:Não há amigos para escolha
+mklist_numerical:Numérico
+mklist_aplha:Alfabética
+mklist_square:Quadrado
+mklist_disc:Disco
+mklist_circle:Circulo
+mklist_close:Fechar
+email_to:Para:
+email_pg_title:Email
+email_subject:Assunto:
+email_body:Mensagem:
+email_submit:Email
+ppost_quote_msg:{VAR: msg_to_list} escrita em {TEMPLATE: ppost_quote_msg_date}
+ppost_quote:Disse:
+ppost_to:Para:
+ppost_from_buddy_list:Escolha amigo a partir da lista
+ppost_find_User:Procurar Utilizador
+ppost_track_msg:Seguir esta mensagem
+ppost_track_msg_desc:Notificar-me (via mensagem privada) quando esta mensagem for lida.
+ppost_send:Enviar
+ppost_save_draft:Guardar rascunho
+poll_blank_option:Não pode adicionar uma opção em branco.
+poll_del_conf:Se quiser apagar esta opção, carregue em OK
+poll_name:Nome da Votação:
+poll_timelimit:Tempo limite:
+poll_maxiumvotes:Máximo de votos:
+poll_create:Criar
+poll_update:Atualizar
+poll_disablesmilies:desativar smilies
+poll_create_poll:Criar Votação
+poll_update_poll:Atualizar votação
+poll_delete:Apagar
+poll_updateoption:Atualizar opção
+poll_addoption:Adicionar Opção
+poll_unlimited:Ilimitados
+poll_day:dia
+poll_days:dias
+poll_hour:hora
+poll_hours:horas
+poll_month:mês
+poll_year:ano
+poll_week:semana
+tabs_register:Configurações
+tabs_subscriptions:Subscrições
+tabs_bookmarkes:Favoritos
+tabs_referrals:Referências
+tabs_buddy_list:Lista de amigos
+tabs_ignore_list:Lista de ignorados
+tabs_private_messaging:Mensagens Privadas
+single_msg_delete:Está prestes a <span class="ErrorText">apagar</span> a mensagem intitulada: <b>{VAR: data[3]}</b>
+thread_delete:Está prestes a <span class="ErrorText">eliminar</span> o <span class="ErrorText">tópico inteiro</span> intitulado: <b>{VAR: data[3]}</b>
+delete_proceed:<font size="3"><b>quer continuar?</b></font>
+delete_yes:Sim
+delete_no:Não
+error_invalidurl:URL Inválido
+error_error:Erro
+usrinfo_profile:Ficha de {VAR: u->alias}
+usrinfo_show_all_posts:Mostrar todos os comentários por {VAR: u->alias}
+actions_update:A bisbilhotar outras pessoas, é mesmo seu :P
+err_info:Informação
+buddy_list_err_cantadd:Não se pode adicionar á sua própria lista de amigos
+buddy_list_err_dup:Já tem este utilizador na lista de amigos
+buddy_list_err_nouser:O utilizador que tentou adicionar á sua lista de amigos não foi encontrado no forum.
+buddy_list_err_nouser_title:Não foi possivel adicionar utilizador
+buddy_list_err_ignore:Não se podem acrescentar utilizadores que te ignoram à tua lista de amigos.
+buddy_list_update:A ver a sua lista de amigos
+core_err_invinp_title:Entrada inválida
+core_err_invinp_err:Seguiu uma ligação inválida, por favor contacte o <a href="mailto:{GVAR: ADMIN_EMAIL}">webmaster</a>
+core_adm_login_msg:Os administradores podem iniciar sessão <a href="{BASE}adm/admloginuser.php">aqui</a>.
+email_err_unabletoemail_title:ERRO: Impossível usar o email
+email_err_unabletoemail_msg:O sistema de E-mail foi desabilitado pelo administrador.
+email_error_unabletolocaddr:Desculpe, o sistema não conseguiu enviar o E-mail {VAR-HTML: _POST['tx_name']} porque não conseguiu localizar o endereço de E-mail
+email_error_body:O conteudo é obrigatório
+email_error_subject:O assunto é obrigatório
+email_error_namerequired:O nome é obrigatório
+email_error_invaliduser:Utilizador inválido
+emailconf_err_invkey_title:Erro
+emailconf_err_invkey_msg:Chave de confirmação inválida.  Por favor confirme no seu E-mail se seguiu o url correctamente
+err_inc_criticaltitle:Erro crítico
+err_inc_criticalmsg:Encontriu um erro, mas infelizmente existe um erro com o sistema de reportagem de erros
+finduser_update:A procurar utilizadores
+help_index_update:A ler o  <a href="{TEMPLATE: help_index_update_lnk}">F.A.Q.</a>
+iemail_thr_subject:Nova resposta para {VAR: thr_subject} por {VAR: poster_login}
+iemail_thr_bodyemail:Para ver todas as respostas não lidas vá a {VAR: goto_url['email']}\n\nSe não quer receber mais notificações acerca de respostas neste tópico, por favor vá aqui: {VAR: unsub_url['email']}
+iemail_frm_subject:Novo tópico no forum {VAR: frm_name} chamado {VAR: thr_subject} by {VAR: poster_login}
+iemail_frm_bodyemail:Para ver o tópico vá a:\n{VAR: goto_url['email']}\n\nPara parar de receber notificações acerca de novos tópicos neste forum, vá aqui: {VAR: unsub_url['email']}
+iemail_participate:Para participar na discussão vá aqui
+ignore_list_err_info_title:Informação
+ignore_list_err_dup_msg:Já tem este utilizador na lista de ignorados
+ignore_list_err_nu_title:Utilizador não encontrado
+ignore_list_err_nu_msg:O utilizador que tentou adicionar á sua lista de ignorados, não existe neste forum
+ignore_list_cantign_msg:Não pode ignorar este utilizador
+ignore_list_update:A visualisar a sua lista de ignorados
+index_update:A visualisar a <a href="{TEMPLATE: index_update_lnk}">lista de foruns</a>
+list_referers_update:A visualisar referências
+login_update:Formulário de Login
+msg_update:A visualisar tópico <a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+pm_err_nopm_title:ERRO: Mensgens privadas desabilitadas
+pm_err_nopm_msg:Não pode utilizar o sistema de mensagens privadas, uma vez que foi desabilitado pelo administrador.
+pm_update:A utilizar mensagens privadas
+post_err_lockedthread_title:ERRO: Tópico Bloqueado
+post_err_lockedthread_msg:Este tópico está bloqueado, não é permitido colocar comentários
+err_coppa_title:ERRO: A sua conta ainda não foi confirmada
+err_coppa_msg:Ainda não recebemos uma confirmação dos teus pais ou tutores legais, o que te permitiria publicar mensagens. Se perdeste o teu formulário COPPA, <a href="{TEMPLATE: err_coppa_msg_lnk}">consulta-o novamente</a>.
+err_banned_acct_title:ERRO: Você foi banido.
+err_banned_acct_msg:Your account was {IF: $ban_expiry}temporarily banned until {DATE: ban_expiry %a, %d %B %Y %H:%M}{ELSE}permanently{ENDI} from accessing the site, due to a violation of the forum&#39s rules.
+post_err_edttimelimit_title:ERRO
+post_err_edttimelimit_msg:Já não pode editar esta mensagem
+post_err_noannontopics_msg2:<legend>ERRO: Privilégios Insuficientes</legend>Utilizadores anónimos não têm permissão para criar tópicos.
+post_err_noannonposts_msg2:<legend>ERROR: Insufficient Privileges</legend>Anonymous users aren't allowed to reply.
+post_err_floodtrig_title:ERRO: Segurança contra floods activada.
+post_err_floodtrig_msg:Por favor tente novamente em {PLURAL: tm|$1 segundo|$1 segundos}
+post_err_attach_size:O ficheiro em anexo é demasido grande (está em cima do limite por {VAR: MAX_F_SIZE} bytes)
+post_err_attach_ext:O ficheiro que está a tentar fazer upload não condiz com os tipos de ficheiros permitidos.
+post_err_attach_filelimit:Está a tentar fazer o upload de mais ficheiros do que o permitido.
+post_err_passwd:Senha incorreta.
+post_reply_update:Responder a <a href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a> em {VAR: frm->name}
+post_topic_update:A escrever um tópico novo em <a href="{TEMPLATE: post_topic_update_lnk}">{VAR: frm->name}</a>
+post_error_generic:tem um erro
+postcheck_max_images_err:No máximo são permitidas {GVAR: MAX_IMAGE_COUNT} imagens por comentário, por favor diminua o n.º de imagens
+postcheck_no_links_allowed:Não podes usar links até que tenhas publicado pelo menos {PLURAL: posts_before_links|$1 mensagem|$1 mensagens}.
+postcheck_subj_needed:Assunto obrigatório
+postcheck_no_such_user:Não existe um utlizador chamado "{FUNC: char_fix(htmlspecialchars($v))}" neste forum
+postcheck_ignored:Não pode enviar uma mensagem privada  para "{FUNC: char_fix(htmlspecialchars($v))}", porque a pessoa está a ignora-lo.
+postcheck_no_recepient:Impossivel enviar mensagem, recipiente inexistente
+postcheck_invalid_email:Por favor introduza um E-mail válido para o seu amigo.
+postcheck_email_subject:Não pode mandar um E-mail sem conter um assunto.
+postcheck_email_body:Não pode mandar um E-mail sem conter uma mensagem
+private_msg_notify_subj:Notificação de leitura para: {VAR: m->subject}
+private_msg_notify_body:Olá,<br />{VAR: usr->login} Leu a sua mensagem privada, "{VAR: m->subject}", em {TEMPLATE: private_msg_notify_body_date}<br />
+referals_update:A visualisar referências
+register_err_short_login:O login que escolheu é demasiado curto. O login tem que ter pelo menos 2 caracteres de tamanho
+register_err_login_notallowed:Este login não é permitido
+register_err_loginunique:O login do forum deve ser unico, já existe um utilizador com este nome registado neste forum.
+register_err_emailexists:Este E-mail já existe, se esqueceu a password por favor use a opção de restauro em vez de se voltar a registar
+register_err_shortpasswd:A Password deve ter pelo menos 6 caracteres de tamanho
+register_err_passwdnomatch:As Passwords não condizem.
+register_err_invalidemail:O endereço de Email que colocou, não parece ser um Email válido.
+register_err_needname:Para completar com sucesso o registo tem que introduzir o seu nome.
+register_err_enterpasswd:tem que introduzir a sua Password corrente para completar as alterações
+register_err_adminpasswd:Tem de introduzir a sua palavra-chave de <b>administrador</b> para concluir as alterações.
+register_err_notyouremail:Alguém já se registou utilizando este Email, e esse alguem não é você.
+register_err_avatartobig:O Ficheiro que está a tentar enviar para o servidor é demasiado grande, passa {GVAR: CUSTOM_AVATAR_MAX_SIZE} bytes do limite
+register_err_avatarnotallowed:O avatar que está a tentar enviar para o servidor não é permitido, verifique os tipos de ficheiro permitidos.
+register_conf_subject:Confirmação de Registo
+register_conf_msg:Obrigado por se registar,\nPara ativar a sua conta aceda à URL:\n\n{FULL_ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\nAssim que a conta esteja ativa, será autenticado no fórum e redirecionado para a pagina principal.
+register_welcome_subject:Confirmação de registo no forum
+register_welcome_msg:Agradecemos por registar-se,\n\nAqui estão os seus dados de iniciar sessão para o fórum:\n\nEndereço do fórum: {TEMPLATE: index_update_lnk}\nNome de utilizador: {VAR: uent->login}\nPalavra-passe: {VAR: _POST['reg_plaintext_passwd']}\n\nPor favor note que as palavras-passe diferenciam maiúsculas de minúsculas!\nPara modificar as suas configurações ou os dados do seu perfil, vá a esta página:\n{FULL_ROOT}?t=register
+register_err_cantreg_title:ERRO: Não foi possível efetuar registo
+regsiter_err_cantreg_msg:Conta de utilizador não foi criada, por favor contacte o administrador em <a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a>
+register_profile_update:A ver a sua ficha
+register_register_update:Página de Registo
+report_err_nosuchmsg_title:ERRO
+report_err_nosuchmsg_msg:Não existe essa mensagem
+reset_err_invalidkey_title:ERRO
+reset_err_invalidkey_msg:Chave de cancelamento de Password inválida
+reset_err_rstconf_title:Informação
+reset_err_rstconf_msg:Deve receber instruções no seu Email nos próximos minutos
+reset_newpass_title:Cancelar Password
+reset_newpass_msg:Olá,\n\na seu pedido os seus dados de login estão a ser enviados para si.\nAqui está a sua informação de login:\n\nLogin: {VAR: ui[1]}\nPassword: {VAR: passwd}\n\nA sua Password foi alterada para o valor em baixo, se quiser altera-la pode fazê-lo através do painel de controlo do utilizador em : \n{FULL_ROOT}?t=register
+reset_login_notify:A sua password foi enviada por email para si. Deverá recebê-la nos próiximos minutos.
+search_update:A procurar posts
+selmsg_update:A visualisar <a href="{TEMPLATE: selmsg_update_lnk}">posts de Hoje</a>
+showposts_update:A ver posts por: <a href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a>
+subscribed_update:A visualisar as próprias subscrições
+bookmarked_update:Consultando a sua própria lista de favoritos
+thread_update:A ver o fórum <a href="{TEMPLATE: thread_update_lnk}">{VAR-HTML: frm->name}</a>
+tree_update:A visualisar tópico (vista de árvore) <a href="{TEMPLATE: tree_update_lnk}">{VAR: frm->subject}</a>
+userinfo_update:Procurar em <a href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}'s</a> perfil
+ERR_login_msg2:<legend>ERRO: Você não está autenticado</legend>Para aceder a esta página, você tem que ser um membro deste fórum.
+ERR_disabled_ttl:Possibilidade desabilitada
+ERR_disabled_msg:Esta funcionalidade foi desativada pelo administrador do sistema.
+ERR_access_ttl:ERRO: Permissões insuficientes
+ERR_access_msg:Você não tem as permissões necessárias para executar esta ação.
+ERR_registration_disabled_ttl:Registo de utilizadores desabilitado
+ERR_registration_disabled_msg:O administrador desabiliotu o registo de utilizadores novos, por favor tenta mais tarde
+ERR_emailconf_ttl:ERRO: A sua conta ainda não está confirmada
+ERR_emailconf_msg:Ainda não confirmou a sua conta via email.<br /><table border="0"><tr><td><ol><li>Se não recebeu um email de confirmação <a href="{TEMPLATE: ERR_emailconf_msg_lnk}">peça-o novamente</a>.</li><li>Se {VAR: usr_d->email} não é o seu endereço de email, <a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">indique o endereço correto</a>.</li></ol></td></tr></table>
+ERR_user_ttl:ERRO: Utilizador inexistente
+ERR_user_msg:Utilizador não existe
+ERR_systemerr_ttl:ERRO: Erro de sistema
+ERR_systemerr_msg:Ocorreu um erro de sistema. Por favor reporte-o ao <a href="mailto:{GVAR: ADMIN_EMAIL}">webmaster</a>.
+email_title:Formulário de Email
+finduser_title:Procurar Utilizador
+help_title:Ajuda
+login_title:Formmulário de Login
+poll_title:Editor de comentários
+register_title:Formulário de Registo
+reset_title:Cancelar Password
+rpasswd_title:Formulário de alteração de Password
+error_title:Formulário de erro
+index_title:Bem vindo ao forum
+search_title:Procurar por {VAR-HTML: srch}
+remail_emailsent:Email enviado
+remail_email:Olá,\n\nHá um tópico interessante sobre "{VAR: data->subject}" no fórum {GVAR: FORUM_TITLE} que talvez queira ler. Pode ver este tópico em:\n {FULL_ROOT}?t=rview&amp;th={VAR: data->id}&amp;rid={DEF: _uid}\n\nO seu amigo,\n\n{VAR: usr->alias}
+poll_add_option:Adicionar Opção:
+post_opt_html_on:<b>HTML LIGADO</b>
+post_opt_fud_on:<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>BBcode</b> está <b>LIGADO</b></a>
+post_opt_images_on:<b>Imagens</b> estão <b>Ligadas</b>
+post_opt_smilies_on:<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>Smilies</b> estão <b>Ligados</b></a>
+post_opt_html_off:<b>Codigo</b> HTML está <b>Desligado</b>
+post_opt_fud_off:<b>O BBcode</b> está <b>Desligado</b>
+post_opt_images_off:<b>As imagens</b> estão <b>Desligadas</b>
+post_opt_smilies_off:<b>Os smilies</b> estão <b>Desligados</b>
+post_opt:Opções do Fórum:
+register_change_passwd:Alterar Password
+register_change_login:Alterar o nome de utilizador
+approved_avatar_title:O seu avatar foi aprovado.
+approved_avatar_msg:O seu avatar foi aprovado pelo administrador. Aparecerá agora em todas as suas mensagens. Se não o vê, ou se vê o seu antigo avatar, é porque o seu browser está a ler esta página a partir da cache. Tente refrescar uma ou duas vezes, isto, na maioria dos casos resolve o problema com a cache.
+unapproved_avatar_title:O seu avatar foi rejeitado.
+unapproved_avatar_msg:O administrador não aprovou o seu avatar. As razões mais comuns são : o  seu avatar ser muito grande (tamanho e/ou dimensões) ou conteve um assunto desapropriado. Se quer mais informação acerca da rejeição do seu avatar, contacte o administrador.
+mvthread_request_move:Pedir uma mudança
+move_request_reason:Porque quer que o tópico seja movido ?
+mvthread_submit_req:Submeter pedido
+thread_exchange:Troca de tópicos
+move_request_by:A mudança de tópico foi pedida por:
+move_reason:Razão para mover tópico:
+thr_exch_accept:aceitar tópico
+thr_exch_decline:recusar tópico
+thr_exch_orig_forum:Forum original:
+thr_exch_dest_forum:Forum de destino:
+thr_exch_no_threads:Não há tópicos á espera de aprovação.
+thr_exch_decl_reason:Razão para recusa de tópico <b>{VAR: data->subject}</b> no fórum <b>{VAR: data->f2_name}</b>
+thr_exch_submit:Enviar
+exch_decline_ttl:A mudança do tópico {VAR: data->subject} para o fórum {VAR: data->f2_name} foi recusada.
+ppost_original_msg:mensagem que está a encaminhar ou a responder a
+split_thread:Dividir Tópico
+groupmgr_no_user:Não há nenhum utilizador com login de "{FUNC: char_fix(htmlspecialchars($gr_member))}"
+groupmgr_already_exists:Utilizador "{FUNC: char_fix(htmlspecialchars($gr_member))}" já existe neste grupo.
+groupmgr_yes:Sim
+groupmgr_no:Não
+groupmgr_action:Ação
+groupmgr_member:Membro
+groupmgr_cancel:Cancelar
+groupmgr_add_member:Adicionar Membro
+groupmgr_update_member:Atualizar membro
+groupmgr_edit:Editar
+groupmgr_delete:Apagar
+group_mgr_anon:Anónimo
+group_mgr_reged:Todos os utilizadores registados
+show_show:Mostrar:
+group_mgr:Manager de Grupos
+group_mgr_edit_btn:Editar Grupo
+group_mgr_heading:Seleção de editor de grupo
+group_mgr_group:Grupo:
+permission_denied_title:Não tem Permissões!
+permission_denied_msg:As suas permissões de utilizador não permitem que faça o que está a tentar fazer.
+p_READ:Ler
+p_POST:Colocar
+p_REPLY:Responder
+p_EDIT:Editar
+p_DEL:Apagar
+p_STICKY:posts persistentes
+p_POLL:Criar mensagens
+p_FILE:adiccionar ficheiros
+p_VOTE:Votar
+p_RATE:Votar tópicos/membros
+p_SPLIT:Dividir tópicos
+p_LOCK:Trancar tópicos
+p_MOVE:Mover tópicos
+p_SML:Usar smilies
+p_IMG:Usar imagem como tag
+p_SEARCH:Pode fazer pesquisas
+group_mgr_search:Encontrar Utilizador
+group_mgr_indicator:Está a Editar: <b>{VAR: grp->name}</b>
+rate_worst:Pior
+rate_best:Melhor
+post_quote_msg:{VAR: msg->login} escreveu em {TEMPLATE: make_report_date}
+post_quote:- Disse - :
+post_quote_selected:Citar o texto selecionado
+userinfo_referals:Utilizadores Referidos:
+userinfo_referals_count:{VAR: referals} Membros
+pm_no_space_title:Não há espaço suficiente!
+pm_no_space_msg:A pasta de mensagens privadas excedeu o espaço em disco por <b>{GVAR: MAX_PMSG_FLDR_SIZE} bytes</b>, neste momento contém <b>{VAR: fldr_size} bytes</b> em mensagens.<br /><br /><font class="ErrorText">Remova mensagens antigas para ganhar espaço</font>.
+pm_space_indct_msg:A pasta Mp está {VAR: percent_full}% cheia.
+th_expr_never:Nunca
+th_expr_one_hr:1 Hora
+th_expr_three_hr:3 Horas
+th_expr_four_hr:4 Horas
+th_expr_eight_hr:8 Horas
+th_expr_sixteen_hr:16 Horas
+th_expr_one_day:1 Dia
+th_expr_two_day:2 Dias
+th_expr_four_day:4 Dias
+th_expr_one_week:1 Semana
+th_expr_two_week:2 Semanas
+th_expr_one_month:1 Mês
+th_expr_two_month:2 Mêses
+th_expr_four_month:4 Mêses
+th_expr_one_year:1 Ano
+thread_mod_delete:Apagar
+action_ip:IP
+action_latest_post:Ultima mensagem colocada
+online_today_last_visit:Ultimo Visitado
+online_today_update:Ver a lista de pessoas que estiveram no forum hoje.
+logedin_todays_visitors:Visitantes de Hoje
+logedin_latest_post:A última mensagem colocada no fórum é
+register_show_avatar:Mostrar Avatars:
+register_show_avatar_desc:Permite-lhe esconder avatars de outros utilizadores enquanto vê as mensagens deles
+drawmsg_view_rest_post:Mostrar o resto da mensagem
+post_re:Res:
+forumsel_goto_forum:Ir para Forum:
+minimsg_thread_view:Vista por Tópico
+split_th_post_by:Colocado por:
+split_th_posted_on:Colocado em:
+split_th_subject:Assunto:
+split_th_new_thread_title:Novo titulo do Tópico:
+split_th_forum:Fórum:
+split_th_split_sel:Dividir mensagens selecionadas
+split_th_split_unsel:Dividir mensagens não selecionadas
+split_th_messages:Mensagens
+split_th_select:Selecionar
+report_report_post:Colocar Relatório
+quicklogin_login:Utilizador:
+quicklogin_password:Palavra-passe:
+quicklogin_use_cookies:Usa Cookies?
+quicklogin_login_btn:Entrar:
+quick_reply:Resposta rápida
+quick_reply_post:Publicar resposta rápida
+quick_reply_preview:Pré-visualizar resposta rápida
+post_notification_desc:Notificar quando alguém responder a esta mensagem.
+post_all_ext_allowed:(sem restrição)
+maximize_category:Maximizar Categoria
+maximize_message:Maximizar mensagem
+no_view_perm:Não tem as permissões necessárias para ver este tópico.
+report_empty_report:Não pode enviar um relatório vazio, por favor coloque uma razão para o seu relatório.
+report_already_reported_title:Já foi reportada
+report_already_reported_msg:Esta mensagem já foi reportada e já está em lista de espera na equipa de moderação.
+register_err_toomanyimages:está a tentar utilizar uma ou mais imagens do que as permitidas {GVAR: FORUM_IMG_CNT_SIG} na sua assinatura.
+pmsg_next_msg:Mensagem Seguinte
+pmsg_prev_msg:Mensagem Anterior
+post_proc_reveal_spoiler:- Mostrar Spoiler -
+register_jabber:- Jabber Handle - :
+register_skype:Nome de utilizador no Skype:
+register_twitter:Nome de utilizador no Twitter:
+register_google:Nome de utilizador no Google Chat/IM:
+im_jabber:- Jabber - :
+im_google:Google Talk:
+im_skype:Skype:
+im_twitter:Twitter:
+forum_contact:Contacto
+forum_home:Início
+post_cur_attached:atualmente anexados: {VAR: i} {PLURAL: i|ficheiro|ficheiros}
+ignored_anon_post:{GVAR: ANON_NICK} vai ser ignorado
+ignored_user_post:Colocado por <a href="{TEMPLATE: ignored_user_post_lnk}">{VAR: obj->login}</a> vai ser ignorado
+smladd_close_window:fechar janela
+post_list_smilies:listar todos os smilies
+p_VISIBLE:Visivel
+reported_in_thread:Em:
+help_back_to_top:voltar ao topo
+help_return_to_index:voltar ao inicio da ajuda
+imsg_err_message_title:Mensagem inválida
+imsg_err_message_msg:A mensagem que está a tentar visualisar não existe.
+poll_edit:Editar
+register_err_not_valid_img:O Url especificado não contém uma imagem valida
+pmsg_recepient:Recipiente
+register_err_taken_alias:O alias que está a tentar usar já está a ser utilizado por outro membro do forum, por favor escolha outro.
+register_alias:Alcunha/Apelido
+register_alias_desc:Se quer utilizar a sua alcunha em vez do seu nome de utilizador seja mostrada no forum, coloque a alcunha que quer que seja mostrada aqui.
+register_allow_pm_msg:Permitir mensagens Privadas
+register_allow_pm_msg_desc:Permitir que outros utilizadores hee enviem mensagens privadas via FUDForum.
+postcheck_pm_disabled:Não pode mandar uma mensagem privada a "{VAR-HTML: v}", porque esta pessoa não esta a aceitar mensagens privadas.
+polllist_vote:Votar
+polllist_view_results:Ver Resultados
+polllist_name:Nome do Comentário
+polllist_date:Criado Em
+polllist_owner:Criado Por
+polllist_votes:Total de Votos
+polllist_action:Ação
+polllist_update:<a href="{TEMPLATE: polllist_update_lnk}">A ver Comentários Disponiveis</a>
+userinfo_polls:Comentários:
+show_pollist:Sondagens
+search_and:E
+search_or:OU
+search_desc_order:Mais recentes primeiro
+search_asc_order:Mais antigo primeiro
+search_relevance_order:Relevância
+search_logic:Lógica de pesquisa:
+search_sorting:Ordenar por:
+search_attach:Anexos:
+search_attach_all:Com ou sem
+search_attach_with:Com anexos
+post_proceed:Avançar
+post_moderated_forum:Colocou uma mensagem num Forum moderado, o que quer dizer que a sua mensagem não vai ser visivel no forum até que seja aprovada por um dos moderador(es) e/ou administrador(es) do Forum.
+post_moderated_forum_ttl:Notícia moderada do forum.
+buddy_list_bday:Hoje {VAR: r[2]} é {VAR: age}
+email_warning_msg:Se mudar o seu E-mail actual, a sua conta irá ser marcada como não confirmada até que a volte a confirmar novamente via E-mail.
+register_show_im:Mostrar os indicadores IM
+register_show_im_desc:Mostrar ou não os indicadores IM do autor antes das mensagens.
+unread_message:Mensagem não lida
+read_message:Ler Mensagem
+threadt_more:&lt;mais&gt;
+threadt_disabled_ttl:A vista de àrvore foi desabilitada.
+threadt_disabled_desc:O administrador desabilitou a vista em forma de àrvore, por favor use a vista plana.
+threadt_update:A ver o fórum (em vista de árvore) <a href="{TEMPLATE: threadt_update_lnk}">{VAR: frm->name}</a>
+mmod_delete_cofirm_ttl:Confirmação de remoção de Tópico/Mensagem
+spell_alts:Não há alternativas
+insert_uploaded_image:Insira uma imagem dentro da mensagem
+finduser_help:O motor de busca vai adicionar automaticamente uma * mascara a sua pesquisa. ex. Para procurar por todos os utilizadores cujo login comece com um 'a', digite 'a' na caixa de pesquisa.
+back_to_top:Voltar ao Topo
+pm_err_disabled_title:Mensagens privadas foram desabilitadas
+pm_err_disabled_msg:Não pode enviar mensagens privadas até que ative a opção 'Permitir mensagens privadas' no seu perfil.
+err_mod_acc_ttl:Conta não verificada
+err_mod_acc_msg:O administrador escolheu ver todas as contas manualmente antes de as ativar. Até que a sua conta seja validada pelo administrador não vai poder utilizar todas as possibilidades do fórum.
+accounts_pending_approval:Contas á espera de aprovação
+saved:Guardado
+register_err_time_limit:Foi atingido o limite de um registo por cada {GVAR: REG_TIME_LIMIT} segundos. Aguarde {PLURAL: reg_limit_reached|$1 segundo|$1 segundos} e tente registar-se novamente, por favor.
+register_err_avatardimtobig:As dimensões do Avatar <b>({VAR: img_info[0]}x{VAR: img_info[1]})</b> excedem as dimensões permitidas de <b>({GVAR: CUSTOM_AVATAR_MAX_DIM})</b>.
+buddy_offline:{VAR: r[2]} está desconectado
+buddy_online:{VAR: r[2]} está conectado
+sml_no_smilies:Não existem <i>emoticons</i>.
+login_unapproved_account_ttl:Conta Desaprovada
+login_unapproved_account_msg:O administrador do forum escolheu confirmar cada nova conta manualmente antes da activação. A sua conta ainda não foi confirmada, por tal não poderá aceder a algumas utilizades disponíveis para os membros registados até à sua aprovação.
+remove_from_buddy_list:remover da lista de amigos
+iemail_msg_author:<b>Autor:</b> {VAR: obj->alias}
+iemail_msg_subject:<b>Assunto:</b> {VAR: obj->subject}
+iemail_msg_date:<b>Data:</b> {TEMPLATE: dmsg_post_date}
+iemail_msg_reply:Responder
+iemail_msg_quote:Citar
+iemail_msg_view:Ver Tópico/Mensagem
+threadt_sticky:fixo
+threadt_announce:anúncio
+reported_no_messages:Não existem mensagens reportadas.
+poll_no_polls:Não existem sondagens acessíveis.
+no_unread_messages:Não existem mensagens não lidas correspondentes à sua pesquisa.
+thread_mark_all_read:marcar todas as mensagens não lidas do forum como lidas
+thread_mark_all_read_desc:todas as mensagens não lidas deste forum serão marcadas como lidas
+private_no_messages:Não existem mensagens nesta pasta
+register_email_change_subject:Confirmação de alteração de E-mail
+register_email_change_msg:Confirme, por favor, a sua nova conta de e-mail "{VAR: uent->email}" que substitui a sua antiga conta "{VAR: old_email}" visitando a URL abaixo:\n{FULL_ROOT}?t=emailconf&conf_key={VAR: conf_key}\n\nAssim que confirmar o seu novo endereço de e-mail, a sua conta será reactivada.
+iemail_thread_unsub:Remover subscrição desta conversa
+iemail_forum_unsub:Remover subscrição deste forum
+primary_group_prefix:Grupo primário para o forum:
+group_resources:Este grupo controla as permissões dos seguintes sub-forums
+register_admin_newuser_title:Registou-se um novo utilizador e a sua conta aguarda confirmacao
+# Fuzzy
+register_admin_newuser_msg:Um novo utilizador registou-se ({VAR: uent->login}) no fórum, e como a confirmação da conta está ativa, esta conta não ficará ativa até que seja confirmada por si ou outro administrador do fórum. Para rever a conta, clique em: {FULL_ROOT}adm/admuserapr.php\n\nEste é um processo automático, não responda a esta mensagem.\nSe desejar parar de receber as futuras notificações por correio eletrónico de novos registos de utilizadores, pode fazê-lo via Painel de Controlo de Administração, alterando o valor de "Notificação de Nova Conta".
+post_mod_msg_notify_title:Nova mensagem no forum "{VAR: frm->name}" aguardando aprovacao
+post_mod_msg_notify_msg:Uma mensagem nova, intitulada "{VAR: msg_post->subject}" foi publicada agora num fórum moderado por si. Para revê-la, consulte: {FULL_ROOT}?t=modque#{VAR: msg_post->id}\n\nEste é um processo automático. Não responda a esta mensagem.
+thread_printable_pdf:Exportar para PDF
+thread_syndicate:Adicione este forum (XML)
+reg_conf_title:Confirmação do Registo
+reg_conf_email:<b>Confirmação por correio eletrónico</b><br />Foi-lhe enviada uma mensagem contendo uma URL especial a que terá de aceder antes da sua conta ser ativada. Se não receber essa notificação nos próximos minutos, entre na sua conta e garanta que o endereço de correio eletrónico que introduziu está correto. Após ter confirmado a sua conta, terá acesso às funcionalidades do fórum disponíveis aos utilizadores confirmados.
+reg_conf_account:<b>Confirmação de Conta</b><br />Antes da sua conta se tornar activa é necessário que seja aprovada pelo(s) administrador(es), assim que tal acontecer você receberá um e-mail indicando que a mesmo foi activada. Até essa altura você poderá aceder à sua conta, no entanto não poderá aceder às opções do forum somente disponíveis aos utilizadores confirmados.
+forum_banned_user:As suas ações anteriores obtiveram como resultado a sua expulsão permanente deste fórum. Adeus.
+mnav_description:Navegador de mensagens
+mnav_date_limit:Intervalo de datas:
+mnav_forum_limit:Pesquisar apenas em:
+mnav_all_forums:Procurar em todos os fóruns
+mnav_submit:Iniciar pesquisa
+mnav_no_range:Deve introduzir um intervalo de datas válido. Este valor pode ser um ponto decimal (0.12), porém deve ser maior que zero.
+mnav_invalid_unit:Tens que especificar uma unidade de tempo válida.
+mnav_invalid_date:The date range you've specified is larger then the one allowed by the administrator, narrow down date range of your search.
+mnav_no_results:There are no messages matching query.
+mnav_posted_by:Postado por:
+mnav_more:Mais &raquo;&raquo;
+mnav_minute:Minuto(s)
+mnav_hour:Hora(s)
+mnav_day:Dia(s)
+mnav_week:Semana(s)
+mnav_month:Mês (es)
+mnav_title:Navegador de Mensagens
+mnav_update:Consultando as mensagens usando o <a href="{TEMPLATE: mnav_update_lnk}">Navegador de Mensagens</a>
+pm_notify_subject:[{GVAR: FORUM_TITLE}] Notificação de Nova Mensagem Privada
+pm_notify_body_email:Tem uma nova mensagem privada intitulada "{VAR: subject}", de "{VAR: from}", no fórum "{GVAR: FORUM_TITLE}".\nPara ver a mensagem, clique aqui: {FULL_ROOT}?t=pmsg_view&id={VAR: pid}\n\nPara deixar de receber as notificações, desative a opção "Notificação de Mensagens Privadas" no seu perfil.
+register_pm_notification:Notificação de Mensagem Privada:
+register_pm_notification_desc:Se ativado, será notificado sempre que lhe for enviada uma mensagem privada.
+findu_admin_opts_header:Opções de administração
+findu_unban:Desbanir
+findu_ban:Banir
+findu_edit:Editar
+findu_delete:Apagar
+dmsg_reply_to:é uma resposta a
+dmsg_reply_num:mensagem n° {VAR: obj->reply_to}
+merge_topics:Unir Tópicos
+merge_topics_cp:Painel de Controlo de Fusão de Tópicos
+merge_topics_tpl:Selecione tópicos para unir <font class="SmallText">(você tem que selecionar mais que um tópico)</font>
+merge_merge:Fundir os tópicos selecionados
+merge_next:Próximos Tópicos
+merge_prev:Tópicos anteriores
+merge_another:Ir ao <a href="{TEMPLATE: merge_another_lnk}">último tópico fundido</a> ou fundir outro:
+split_cp:Painel de Controlo para Separação de Tópicos
+groups_perms_header:Permissões <span class="small">(para ver o tipo da permissão coloque o ponteiro do rato sobre ela)</span>
+register_err_sig_too_long:A sua assinatura excede o comprimento máximo permitido de {GVAR: FORUM_SIG_ML} caracteres.
+register_sig_limit:{GVAR: FORUM_SIG_ML} caracteres <a href="javascript: alert('A sua assinatura tem '+document.forms['fud_register'].reg_sig.value.length+' caracteres. O comprimento máximo permitido é de {GVAR: FORUM_SIG_ML} caracteres. ');" class="SmallText">Verificar o Tamanho da Assinatura</a>
+adm_account_accepted:A sua conta '{VAR: login}' foi aprovada pelo administrador e já está activa. Agora pode aceder ao Fórum {GVAR: FORUM_TITLE}' como utilizador registado e confirmado.
+adm_account_accepted_s:O seu pedido de conta para o fórum '{GVAR: FORUM_TITLE}' foi aceite.
+adm_account_rejected:A sua conta '{VAR: login}' foi rejeitada pelo administrador. Se quiser saber a razão desta decisão, contacte o administrador no endereço '{GVAR: ADMIN_EMAIL}'.
+adm_account_rejected_s:O seu pedido de conta para o Fórum '{GVAR: FORUM_TITLE}' foi recusado.
+thread_on:em
+userinfo_buddy:Amigo:
+register_email_addr:Endereço de correio electrónico:
+reset_suffix:Se você recebeu esta mensagem por engano, por favor ignore-a. Se você estiver a receber várias cópias desse e-mail, e você não solicitou isso, por favor contacte o administrador do fórum através do e-mail {GVAR: ADMIN_EMAIL}\n\nEsta solicitação teve origem em: {VAR: _SERVER['REMOTE_ADDR']}.
+usrinfo_last_visit:Ultimo Visitado:
+mnav_newer:mais recente que
+mnav_older:mais antigo que
+ip_search_by_ip:Procurar utilizadores por IP
+ip_search_syntax:Sintaxe suportada: 1.2.3.4, 1.2.3, 1.2, 1
+ip_search:Pesquisar
+ip_analyze_usage:Analisar uso de IP
+ip_analyze_usage_descr:Por favor especifique o login exato do utilizador.
+ip_users_using:Utilizadores que usam o endereço de IP '{VAR: ip}'
+ip_all_ips:Todos os IPs usados por '{VAR: user}'
+ip_title:Examinador de IPs
+userinfo_real_name:Nome real:
+register_err_alias_notallowed:Este pseudónimo não é permitido
+post_err_mod_forum_edit_ttl:ERRO
+post_err_mod_forum_edit_msg:Não pode editar mensagens num fórum moderado.
+dmsg_num:mensagem n° {VAR: obj->id}
+postcheck_session_invalid:A sua sessão expirou. Volte a enviar o formulário, por favor. Desculpe o inconveniente.
+delete_message_extra_desc:<b>Opcional</b><br />Especifique uma razão para a eliminação da mensagem, que será enviada ao autor através de uma mensagem privada.
+delete_message_extra_body:Incluir o corpo da mensagem removida que será enviada ao autor.
+delete_msg_removed_ttl:A sua mensagem foi removida pelo pessoal da administração.
+delete_msg_pm_body:Mensagem original
+delete_msg_pm_subject:Assunto: {VAR: data[15]}
+ip_no_whois:Não está disponível informação Whois para <b>{VAR: ip}</b>.
+ip_whois_title:Informação do ISP
+register_theme:Tema:
+pmsg_trash:Esvaziar o Lixo
+uc_new_pm:Novas Mensagens Privadas
+uc_new_topic:Novo tópico
+uc_new_cat_forum:Fóruns Subscritos com Novas Mensagens
+uc_cat_forum:Categoria &raquo; Fórum
+uc_sub_topics:Tópicos Subscritos com Novas Mensagens
+uc_page_title:A ver o painel de controlo pessoal.
+search_options:Opções de Pesquisa
+search_user_filter:Filtrar por utilizador:
+register_none:Não me notificar
+findu_no_conf:utilizador não confirmado
+register_max_sig_len:Comprimento Máximo:
+register_turing:Verificação:
+register_err_turing:A verificação falhou. Tente novamente, por favor.
+modque_cat:Categoria
+modque_forum:Fórum
+idx_compact_forum_row:Fóruns disponíveis:
+mmd_del_title:Apagar tópicos
+mmd_mov_title:Mover tópicos
+mmd_move_threads_to:Fórum de Destino:
+mmd_abort_move:Cancelar
+mmd_move:Mover Tópicos
+pmsg_pdf_btn:Criar um ficheiro PDF
+search_results_hdr:{VAR: total} resultados encontrados
+thread_del_all:Apagar os selecionados
+thread_mov_all:Mover os selecionados
+thread_merge_all:Fundir os selecionados
+thread_loc_all:Bloquear/desbloquear os selecionados
+dmsg_ip:IP:
+err_blockedaccnt_title:ERRO: Sua conta foi filtrada.
+err_blockedaccnt_msg:O acesso ao fórum foi bloqueado à sua conta devido a um dos filtros de utilizadores instalados.
+merge_th_page_list:Seleção de página do tópico
+most_users_online:O recorde de utilizadores em linha foi <b>{VAR: st_obj->most_online}</b> <b>({DATE: st_obj->most_online_time %a, %d %B %Y %H:%M})</b>
+sub_unsub_all_forums:Cancelar inscrição em todos os fóruns
+sub_unsub_all_topics:Cancelar inscrição em todos os tópicos
+unbookmark_all_topics:Remover todos os favoritos
+tabs_own_posts:Mostrar mensagens próprias
+sml_emoticon:Emoticon
+sml_code:Código
+mnav_sub_only:Pesquisar apenas em fóruns em que eu esteja inscrito
+register_topics_per_page:Tópicos por página:
+login_min_time:Este fórum permite uma tentativa de autenticação a cada {VAR: MIN_TIME_BETWEEN_LOGIN} segundos. Por favor espere {FUNC: ($usr_d->last_login + $MIN_TIME_BETWEEN_LOGIN - __request_timestamp__)} segundos antes da próxima tentativa.
+post_not_logged_in:Você não está autenticado. A mensagem será publicada anonimamente.
+post_common_bold:Negrito
+post_common_italics:Itálico
+post_common_underline:Sublinhado
+post_common_align_left:Alinhar à Esquerda
+post_common_align_center:Centralizar
+post_common_align_right:Alinhar à Direita
+post_common_link:Inserir um Link
+post_common_link_popup:Destino do link:
+post_common_email:Insira um endereço de correio electrónico
+post_common_email_popup:Endereço de email:
+post_common_image:Inserir uma imagem
+post_common_image_popup:URL da imagem:
+post_common_nlist:Adicionar lista numerada
+post_common_blist:Adicionar lista com marcadores
+post_common_quote:Adicionar Citação
+post_common_code:Adicionar Código
+rating_delete:Apagar
+post_always_on_top:Fazer com que o tópico apareça sempre no topo da listagem de tópicos.
+topic_rating:{VAR: frm->rating} de {PLURAL: frm->n_rating|$1 voto|$1 votos}
+topic_list_rating:{VAR: r[17]} de {PLURAL: r[21]|$1 voto|$1 votos}
+tabs_notifications:Notificações
+finduser_flag:Bandeira
+post_descr:Descrição do tópico:
+pmsg_on:em
+pmsg_download_dump:Descarregar um arquivo das mensagens
+move_messages:Mover mensagens
+move_msg_btn:Mover mensagens selecionadas
+move_msg_th_expl:Especifique a ID do tópico de destino (pode estar em outros fóruns)
+captcha_img_alt:Verificação por Captcha: você terá que reconhecer o texto nesta imagem.
+captcha_img_help:Não há nenhum zero nem um na imagem.
+powered-by:Potenciado por: FUDforum {GVAR: FORUM_VERSION}.
+copyright:Direitos de autor &copy;2001-2020 <a href="http://fudforum.org/">FUDforum Bulletin Board Software</a>
+code_title:Código:
+code_select_all:Selecionar tudo
+code_show_hide:Mostrar / ocultar
+social_sites:Redes sociais:
+postcheck_min_len_err:A sua mensagem é demasiado curta. O tamanho mínimo permitido é {PLURAL: post_min_len|$1 caractere|$1 caracteres}.
+postcheck_dup_err:Por favor, não crie tópicos duplicados.
+btn_new_topic:Novo tópico
+btn_new_pm:Nova mensagem privada
+btn_post_reply:Responder
+btn_tree_view:Visualização em árvore
+btn_flat_view:Visualização plana
+btn_about:Perfil
+btn_small_pm:MP
+btn_delete:apagar
+btn_edit:editar
+btn_reply:responder
+btn_forward:encaminhar
+btn_quote:citar
+btn_email:Correio eletrónico
+btn_show_posts:mensagens
+btn_homepage:www
+feed_no_data:Não foram encontrados dados coincidentes.
+feed_rdf:Feed RDF
+feed_rss:Feed RSS2
+feed_atom:Feed ATOM
+ip_whois_connect_err:Não foi possível ligar-se ao servidor WHOIS ({VAR: whois_server}): {VAR: errstr}
+custom_filed_required:Este campo é obrigatório.
+pages:Páginas
+page_list_heading:Páginas disponíveis
+page_list_total:{PLURAL: i|$1 página listada|$1 páginas listadas}.
+page_update:Página de navegação
+pm_export_header:Mensagens privadas para {VAR: usr->alias}
+pm_export_footer:Exportado:
+karma:Carma
+karma_track:Gerir reputação do utilizador:
+karma_delete:Eliminar
+rate_author:Classificar autor:
+blog_update:A ler o blogue do fórum
+blog:Blogue
+blog_new_members:Novos membros
+blog_new_posts:Publicação recente
+blog_rated_posts:Melhor classificadas
+blog_viewed_posts:Mais vistas
+blog_comments:{PLURAL: topic->replies|$1 comentário|$1 comentários}

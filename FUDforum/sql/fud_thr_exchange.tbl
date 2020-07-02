@@ -1,0 +1,21 @@
+#   copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_thr_exchange.tbl 4899 2010-01-26 15:26:20Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}thr_exchange;
+
+CREATE TABLE {SQL_TABLE_PREFIX}thr_exchange
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	th		INT NOT NULL DEFAULT 0,
+	frm		INT NOT NULL DEFAULT 0,
+	req_by		INT NOT NULL DEFAULT 0,
+	reason_msg	TEXT
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}thr_exchange_i_f ON {SQL_TABLE_PREFIX}thr_exchange (frm);

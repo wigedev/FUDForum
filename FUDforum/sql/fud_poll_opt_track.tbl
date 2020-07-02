@@ -1,0 +1,24 @@
+#   copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_poll_opt_track.tbl 5337 2011-08-05 17:39:49Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}poll_opt_track;
+
+CREATE TABLE {SQL_TABLE_PREFIX}poll_opt_track
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	poll_id		INT NOT NULL DEFAULT 0,
+	user_id		INT NOT NULL DEFAULT 0,
+	ip_addr		VARCHAR(46),
+	poll_opt	INT NOT NULL DEFAULT 0
+);
+
+CREATE UNIQUE INDEX {SQL_TABLE_PREFIX}poll_opt_track_i_pu ON {SQL_TABLE_PREFIX}poll_opt_track (poll_id, user_id, ip_addr);
+
+# If user_id == 0 (anonymous), look at ip_addr.
+

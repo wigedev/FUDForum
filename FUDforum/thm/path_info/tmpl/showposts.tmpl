@@ -1,0 +1,38 @@
+/**
+* copyright            : (C) 2001-2010 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: showposts.tmpl 4898 2010-01-25 21:30:30Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: showposts.php.t; output: showposts.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: draw_pager.tmpl}
+{REF: is_perms.tmpl}
+{REF: alt_var.tmpl}
+{REF: tabs.tmpl}
+
+{SECTION: post_entry_lnk}
+{ROOT}/m/{VAR: r[3]}/{DEF: _rsid}#msg_{VAR: r[3]}
+{SECTION: END}
+
+{SECTION: post_entry_lnk1}
+{ROOT}/f/{VAR: r[1]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: SHOWPOSTS_PAGE_lnk}
+{ROOT}/u/{VAR: uid}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: SHOWPOSTS_PAGE_lnk1}
+{ROOT}/sp/{VAR: uid}/{VAR: SORT_ORDER_R}/{DEF: _rsid}
+{SECTION: END}

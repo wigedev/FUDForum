@@ -1,0 +1,39 @@
+#   copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+#   email                : forum@prohost.org
+#
+#   $Id: fud_thread.tbl 6201 2018-09-15 18:17:02Z naudefj $
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; version 2 of the License.
+
+DROP TABLE IF EXISTS {SQL_TABLE_PREFIX}thread;
+
+CREATE TABLE {SQL_TABLE_PREFIX}thread
+(
+	id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	forum_id	INT NOT NULL DEFAULT 0,
+	root_msg_id	INT NOT NULL DEFAULT 0,
+	last_post_date 	BIGINT NOT NULL DEFAULT 0,
+	replies		INT NOT NULL DEFAULT 0,
+	views		INT NOT NULL DEFAULT 0,
+	rating		INT NOT NULL DEFAULT 0,
+	n_rating	INT NOT NULL DEFAULT 0,
+	last_post_id	INT NOT NULL DEFAULT 0,
+	moved_to	INT NOT NULL DEFAULT 0,
+	orderexpiry	BIGINT NOT NULL DEFAULT 0,
+	thread_opt	INT NOT NULL DEFAULT 0,
+	tdescr		VARCHAR(200)
+);
+
+CREATE INDEX {SQL_TABLE_PREFIX}thread_i_flm ON {SQL_TABLE_PREFIX}thread (forum_id, moved_to);
+CREATE INDEX {SQL_TABLE_PREFIX}thread_i_t   ON {SQL_TABLE_PREFIX}thread (thread_opt);
+CREATE INDEX {SQL_TABLE_PREFIX}thread_i_rmi ON {SQL_TABLE_PREFIX}thread (root_msg_id);
+CREATE INDEX {SQL_TABLE_PREFIX}thread_i_r   ON {SQL_TABLE_PREFIX}thread (replies);
+CREATE INDEX {SQL_TABLE_PREFIX}thread_i_rt  ON {SQL_TABLE_PREFIX}thread (rating, n_rating);
+
+# 1 locked
+# 2 is_sticky ANNOUNCE
+# 4 is_sticky STICKY
+# 8 important (always on top)
+# ordertype (removed)

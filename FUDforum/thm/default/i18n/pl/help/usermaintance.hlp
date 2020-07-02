@@ -1,0 +1,61 @@
+TOPIC_TITLE: <a name="register">Po co się rejestrować?</a>
+TOPIC_HELP:
+Na większości forów nie będzie możliwe wysyłanie nowych wiadomości czy odpowiadanie na istniejące, jeśli się nie zarejestrujesz. Wyjątkiem są te, na których administrator pozwolił na wysyłanie wiadomości anonimowo. Dzięki rejestracji otrzymujesz dostęp do następujących funkcji:
+<ul>
+	<li>Powiadamianie na ICQ lub pocztą elektroniczną o odpowiedziach na Twoje wiadomości
+	<li>Osobiste podpisy, avatary, znaczniki, itd...
+	<li>Możliwość wysyłania prywatnych wiadomości do innych użytkowników
+	<li>Opcja wybrania strefy czasowej, w której się znajdujesz
+</ul>
+Jeśli nie zaznaczono inaczej, rejestracja na forum jest bezpłatna i wymaga tylko podstawowych informacji o użytkowniku, takich jak adres poczty elektronicznej czy nazwa zakładanego konta.<br />
+W przypadku, gdy uaktywniono blokadę COPPA (Children's Online Privacy Protection Act - Akt o Ochronie Dziecięcej Prywatności w Internecie) i osoba rejestrująca ma mniej niż 13 lat, konieczna będzie zgoda prawnego opiekuna zanim konto zostanie uaktywnione i będzie można za jego pomocą wysyłać wiadomości. Po zakończeniu procesu rejestracji, użytkownik zostanie przekierowany do formularza, który musi wypełnić prawny opiekun i przesłać na podany adres.
+
+TOPIC_TITLE: <a name="cookies">W jaki sposób forum używa ciasteczek?</a>
+TOPIC_HELP:
+W normalnej sytuacji, forum używa ciasteczek aby zapisywać małe porcje informacji, które pozwalają zidentyfikować czy jesteś zalogowany.
+Jeśli z jakichś powodów Twoja przeglądarka nie obsługuje ciasteczek, zostanie wykorzystany system sesji, który nie zapisuje na Twoim komputerze żadnych informacji. Podczas procesu logowania możesz wybrać opcję, aby nie używać ciasteczek tylko sesji. Jest to zalecana opcja, jeśli korzystasz z publicznie dostępnego komputera, gdyż jeśli się nie wylogowałeś, ktoś może dostać się do Twojego konta na forum. W większości wypadków powinieneś zostawić ciasteczka włączone, gdyż znacznie to ułatawia korzystanie z forum - nie musisz się logować za każdym razem, gdy odwiedzasz stronę z forum.
+
+TOPIC_TITLE: <a name="clrcookie">Jak usunąć ciasteczko wysłane przez forum?</a>
+TOPIC_HELP:
+Aby usunąć ciasteczko wysłane przez forum, wybierz opcję wylogowania, która skasuje je automatycznie.
+
+TOPIC_TITLE: <a name="updprofile">Co to jest profil?</a>
+TOPIC_HELP:
+Jako użytkownik forum, masz dostęp do swojego prywatnego profilu, w którym możesz zapisać informacje o sobie, takie jak numery komunikatorów (ICQ, AIM, itd.), podpis czy biografię. Twój profil zachowuje także różne ustawienia związane z samym forum. Możesz je modyfikować za każdym razem po zalogowaniu. Pamiętaj, że większość informacji z Twojego profilu jest dostępna do wglądu innym użytkownikom forum, więc staraj się tam nie umieszczać ważnych informacji, których nie chcesz udostępniać.<br />
+Twój profil ma opcję <b>"Pokaż adres poczty elektronicznej"</b>. Jeśli ustawisz ją na <b>Nie</b> Twój adres zostanie ukryty podczas wyświetlania informacji o Tobie.
+
+TOPIC_TITLE: <a name="sigs">Co to jest podpis?</a>
+TOPIC_HELP:
+Podpis jest tekstem, który może być automatycznie dołączany do końca każdej wiadomości wysłanej przez Ciebie. W profilu masz opcję <b>"Używaj domyślnie podpisu"</b>, która włącza lub wyłącza automatyczne dodawanie podpisu. Oprócz tego możesz zdecydować o dodaniu podpisu, podczas pisania konkretnej wiadomości.<br />
+Oprócz czystego tekstu, podpis może zawierać (jeśli administrator na to zezwolił) odnośniki do ulubionych stron, zdjęcia, itd.
+<br />
+Jeśli nie chcesz widzieć podpisów innych użytkowników, możesz ustawić opcję <b>"Pokazuj podpisy"</b> na <b>Nie</b> w swoim profilu.
+
+TOPIC_TITLE: <a name="rstpasswd">Co zrobić jeśli zapomniałem hasła?</a>
+TOPIC_HELP:
+Jeśli zapomnniałeś hasła, powinieneś skorzystać ze <a href="{ROOT}?t=reset&%_rsid%">strony zerowania hasła</a>, gdzie musisz wpisać swój adres poczty elektronicznej, następnie potwierdź klikając przycisk "Go". Spowoduje to wysłanie do Ciebie listu z adresem strony. Po wejściu pod podany adres zostanie wygenerowane nowe hasło i przesłane na Twój e-mail.
+<br />
+<br />
+<b>Uwaga:</b> Twoje hasła są zapisywane za pomocą jednokierunkowej funkcji mieszającej MD5. Jest to 128-bitowe szyfrowanie na poziomie zabezpieczeń wojskowych. Nie ma możliwości odtworzenia Twojego hasła. Za każdym razem gdy wpisujesz, jest ono szyfrowane a następnie porównywane z zapisaną, zaszyfrowaną wersją. W związku z tym, jeśli zapomnisz hasła nie jest możliwe jego odtworzenie, a tylko ustawienie całkiem nowego.
+
+TOPIC_TITLE: <a name="cstat">Własne oznaczenia - co to jest i jak mogę je stworzyć?</a>
+TOPIC_HELP:
+Własne oznaczenia są to jednolinijkowe teksty pojawiające się pod ikoną avatara i mogą być tylko przyporządkowane przez administratora forum. Jeśli chcesz mieć możliwość używania takich, skontaktuj się z nim.
+
+TOPIC_TITLE: <a name="avatars">Co to jest avatar?</a>
+TOPIC_HELP:
+Avatary są to obrazki, które ukazują się pod nazwą użytkownika przy każdej wiadomości jaką wysyłasz oraz na stronie z informacjami o Tobie. To forum obsługuje 3 rodzaje takich obrazków, ich dostępność jest zależna od tego, co ustawił administrator. Oto one:
+<ul>
+	<li><b>Wbudowany</b> - Są to avatary, które zostały wbudowane w forum. Jedyne co musisz zrobić to wybrać jeden z nich z listy, który ukaże się zaraz tylko po zapisaniu nowych ustawień profilu.
+	<li><b>Załaduj</b> - Jeśli ta opcja została udostępniona, możesz załadować na stronę swój własny obrazek. Po zatwierdzeniu go przez administratora, będzie możliwe jego użycie.
+	<li><b>Podaj adres</b> - Jeśli ta opcja została udostępniaona, możesz podać adres obrazka dostępnego w Internecie. Po zatwierdzeniu go przez administratora, będzie możliwe jego użycie.
+</ul>
+<b>Uwaga:</b> Możesz zmienić swój avatar w każdej chwili, z zastrzeżeniem, że za każdym razem, kiedy wybierzesz możliwość załadowania własnego avatara lub podania jego adresu będziesz musiał poczekać na jego zatwierdzenie.
+
+TOPIC_TITLE: <a name="blist">Co to jest lista znajomych?</a>
+TOPIC_HELP:
+Lista znajomych jest Twoją własną małą listą użytkowników, z którymi chcesz się kontaktować częściej niż z pozostałymi. Umieszczając tam osobę, będziesz mógł zobaczyć kiedy ma urodziny (jeśli podała takie dane) oraz wybierać ją jako odbiorców prywatnych wiadomości.
+
+TOPIC_TITLE: <a name="ignlist">Do czego służy lista ignorowania?</a>
+TOPIC_HELP:
+Lista ignorowania jest bazą danych zawierająca nazwy użytkowników, od których nie chcesz otrzymywać prywatnych wiadomości. Oprócz tego nie będziesz widział wiadomości umieszczanych na forum przez tą osobę. Jeśli chcesz dodać kogoś do tej listy, to przy każdej wiadomości przez nią wysyłanej, znajduje się stosowny odnośnik.

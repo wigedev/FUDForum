@@ -1,0 +1,46 @@
+/**
+* copyright            : (C) 2001-2019 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: header.tmpl 6289 2019-05-25 15:57:23Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{MAIN_SECTION: header // The forum's page header.}<!DOCTYPE html>
+<html lang="{LANG}" dir="{DIR}">
+<head>
+	<meta charset="{CHARSET}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="{IF: !empty($META_DESCR)}{VAR: META_DESCR}{ELSE}{GVAR: FORUM_DESCR}{END}" />
+	<title>{GVAR: FORUM_TITLE}{VAR: TITLE_EXTRA}</title>
+	<link rel="search" type="application/opensearchdescription+xml" title="{GVAR: FORUM_TITLE} Search" href="{BASE}open_search.php" />
+	{VAR: RSS}
+	<link rel="stylesheet" href="{THEME_ROOT}/forum.css" media="screen" title="Default Forum Theme" />
+	<link rel="stylesheet" href="{BASE}js/ui/jquery-ui.css" media="screen" />
+	<script src="{BASE}js/jquery.js"></script>
+	<script async src="{BASE}js/ui/jquery-ui.js"></script>
+	<script src="{BASE}js/lib.js"></script>
+</head>
+<body>
+<div class="content">
+<!-- {INJECTION_POINT: left_block} -->
+<div class="header">
+  {IF: $GLOBALS['FUD_OPT_1'] & 1 && $GLOBALS['FUD_OPT_1'] & 16777216}
+  <div class="headsearch">
+    <form id="headsearch" method="get" action="{ROOT}">{DEF: _hs}
+      <br /><label accesskey="f" title="{MSG: search_forum_search}">{MSG: search_forum_search}:<br />
+      <input type="search" name="srch" value="" size="20" placeholder="{MSG: search_forum_search}" /></label>
+      <input type="hidden" name="t" value="search" />
+      <input type="image" src="{THEME_IMAGE_ROOT}/search.png" alt="{MSG: search}" name="btn_submit">&nbsp;
+    </form>
+  </div>
+  {ENDIF}
+  <a href="{BASE}" title="{MSG: home}">
+    <img src="{THEME_IMAGE_ROOT}/header.gif" alt="" align="left" height="80" />
+    <span class="headtitle">{GVAR: FORUM_TITLE}</span>
+  </a><br />
+  <span class="headdescr">{GVAR: FORUM_DESCR}<br /><br /></span>
+</div>
+{MAIN_SECTION: END}

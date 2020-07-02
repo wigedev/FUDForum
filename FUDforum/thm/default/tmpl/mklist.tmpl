@@ -1,0 +1,141 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: mklist.tmpl 5325 2011-07-15 14:14:17Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: mklist.php.t; output: mklist.php;}
+{REF: security.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+
+{PAGE: MKLIST_PAGE a popup assistant for creating lists using BBcode}
+{TEMPLATE: header_plain}
+<script>
+var opt_count = 0;
+function changeListType(type)
+{
+	document.getElementById('ll').setAttribute('type', type);
+	if (type == '1') {
+		document.getElementById('ll').setAttribute('style', 'list-style-type: decimal');
+	} else if (type == 'a') {
+		document.getElementById('ll').setAttribute('style', 'list-style-type: lower-alpha');
+	} else {
+		document.getElementById('ll').setAttribute('style', 'list-style-type: '+type);
+	}
+}
+
+function addOption()
+{
+	var li;
+	var dl;
+
+	if (document.forms['list'].opt.value.length < 1) {
+		return;
+	}
+
+	if (!document.all || OPERA) {
+		li = document.createElement('li');
+		li.setAttribute('id', 'opt_'+opt_count);
+	} else {
+		li = document.createElement('<li id="opt_'+opt_count+'"></li>');
+	}
+	li.appendChild(document.createTextNode(document.forms['list'].opt.value));
+
+	if (!document.all || OPERA) {
+		dl = document.createElement('a');
+		dl.setAttribute('href', 'javascript://');
+		dl.setAttribute('onclick', 'delOption(\'opt_'+opt_count+'\')');
+	} else {
+		dl = document.createElement('<a href="javascript://" onclick="delOption(\'opt_'+opt_count+'\')"></a>');
+	}
+	dl.appendChild(document.createTextNode('{MSG: mklist_delete}'));
+	
+	li.appendChild(document.createTextNode(' [ '));
+	li.appendChild(dl);
+	li.appendChild(document.createTextNode(' ] '));
+
+	document.getElementById('ll').appendChild(li);
+	document.forms['list'].opt.value = '';
+	document.forms['list'].opt.focus();
+	opt_count++;
+}
+
+function delOption(id)
+{
+	var p = document.getElementById(id).parentNode;
+	p.removeChild(document.getElementById(id));
+}
+
+function updatePostForm()
+{
+	var t = window.opener.document.getElementById('txtb');
+	var txt = '\n[LIST TYPE='+document.getElementById('ll').getAttribute('type')+']\n';
+	for (var i = 0; i < opt_count; i++) {
+		var val = document.getElementById('opt_'+i);
+		if (val) {
+			txt += '[*] '+val.firstChild.nodeValue+'\n';
+		}
+	}
+	txt += '[/LIST]\n';
+
+	if (window.opener.document.selection) { // IE
+		window.opener.document.selection.createRange();	
+		if (t.createTextRange && t.caretPos) {
+			var caretPos = t.caretPos;
+			caretPos.text = txt + caretPos.text;
+		} else {
+			t.value += txt;
+		}
+	} else {
+		var n = t.value.substring(0, t.selectionStart) + txt + t.value.substring(t.selectionStart, t.value.length);
+		t.value = n;
+	}
+
+	t.focus();
+	window.close();
+}
+</script>
+<form id="list">
+<table cellspacing="2" cellpadding="0" width="99%" class="dashed">
+<tr>
+	<td>{MSG: mklist_type}</td>
+	<td>
+		<select name="tp" onchange="changeListType(this.options[this.selectedIndex].value);">
+			<option value="1">{MSG: mklist_numerical}</option>
+			<option value="a">{MSG: mklist_aplha}</option>
+			<option value="square"{IF: $def_list_type == 'square'} selected="selected"{ENDIF}>{MSG: mklist_square}</option>
+			<option value="disc">{MSG: mklist_disc}</option>
+			<option value="circle">{MSG: mklist_circle}</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>{MSG: mklist_option}</td>
+	<td class="nw">
+		<input tabindex="1" type="text" spellcheck="true" name="opt" size="20" />
+		<input tabindex="2" type="button" class="button" name="btn_submit" onclick="addOption();" value="{MSG: mklist_additem}" />
+	</td>
+</tr>
+<tr>
+	<td colspan="2" id="example"><ul id="ll"></ul>
+<script>
+	changeListType('{VAR: def_list_type}');
+</script>	
+	</td>
+</tr>
+<tr>
+	<td colspan="2" class="ar">
+		<input type="button" class="button" name="go" value="{MSG: mklist_apply}" onclick="updatePostForm();" />
+		<input type="button" class="button" name="close" value="{MSG: mklist_close}" onclick="window.close();" />
+	</td>
+</tr>
+</table>
+</form>
+{TEMPLATE: footer_plain}
+{PAGE: END}

@@ -1,0 +1,1173 @@
+# Messages for Traditional Chinese (中文（繁體）‎)
+# Exported from translatewiki.net
+# Author: Anakmalaysia
+# Author: Breawycker
+# Author: Cwlin0416
+# Author: EagerLin
+# Author: Kly
+# Author: LNDDYL
+# Author: Lauhenry
+# Author: Liangent
+# Author: Liuxinyu970226
+# Author: Macofe
+# Author: Mark85296341
+# Author: Naudefj
+# Author: Oapbtommy
+# Author: Simon Shek
+# Author: Wehwei
+
+action:操作
+add_to_buddy_list:加入好友清單
+admin:管理
+admin_control_panel:管理
+administrator:系統管理員
+attachment:附件：
+avatar:頭像：
+average_post_count:{PLURAL: u->posted_msg_count|$1 則訊息}（每日平均 {PLURAL: avg|$1 則訊息}）
+biography:個人簡介：
+birth_date:出生日期：
+by:發文由：
+by_mod:版主
+current_time:目前時間
+custom_avatar_queue:自訂頭像佇列
+date_posted:發佈時間
+date_registered:註冊日期：
+download_counter:下載 {PLURAL: v[3]|$1 次|$1 次}
+pmsg_download_counter:下載 {PLURAL: r->dlcount|$1 次|$1 次}
+email:郵件：
+email_to_friend:傳送電子郵件給朋友
+email_to_friend_desc:透過電子郵件把此頁面的網址傳送給你的朋友
+email_user:向使用者傳送電子郵件
+faq:說明
+first_unread_msg:轉入未讀訊息
+first_unread_msg_desc:轉入本主題第一個未讀訊息
+flat_view:返回至預設瀏覽方式
+forum:論壇：
+forum_icon:論壇圖示
+forum_new_messages:新訊息
+forum_none_messages:只有本論壇的註冊用戶能夠把訊息標為「已讀」或「未讀」
+forum_old_messages:無新訊息
+from:來自：
+gender:性別：
+go:前往
+goto_next_msg:前往下一個訊息
+goto_prev_msg:前往上一個訊息
+home:首頁
+homepage:首頁：
+icq_control_panel:ICQ 線上訊息台
+icq_message_form:ICQ 訊息清單：
+ignore_user:忽略此使用者的所有訊息
+im_aim:AIM：
+im_msnm:MSN：
+im_yahoo:Yahoo 即時通：
+image:照片：
+index_forum:論壇
+index_new_posts:上次瀏覽後的新訊息
+index_no_new_posts:自上次瀏覽後沒有新訊息
+index_url_redirection:重新導向
+interests:興趣：
+last_post:最新訊息
+last_thread_msg:轉入本主題最後一個訊息。
+legend:圖例
+location:地區：
+lock_thread:鎖定本主題
+locked:被鎖定
+locked_with_new_posts:鎖定（且未讀）
+logged_in_list:登入使用者清單
+login:登入
+login_header:登入：
+logout:登出
+mark_all_read:標記所有訊息為已讀
+mark_all_read_desc:標記您所有未讀的訊息為已讀
+members:成員
+calendar:日曆
+cal_goto_date:跳至：
+cal_day_heading:一天的事件
+cal_no_events:本日沒有事件。
+cal_update:瀏覽論壇日曆
+cal_birthday:生日： {VAR: user}
+cal_birthdays:{PLURAL: birthdays|$1 個生日| $1 個生日}
+cal_birthday_age:（{PLURAL: age|$1 歲|$1 歲}）。
+message:訊息
+message_counter:我們的使用者一共發佈了 <b>{PLURAL: post_count|$1|$1}</b> 個訊息，包含在 <b>{PLURAL: thread_count|$1|$1}</b> 個主題裡。
+message_index:訊息索引
+message_index_desc:檢視訊息清單
+minimize_category:減少目錄層次
+minimize_message:最小化訊息
+moderation_queue:版主列表
+moderator:版主
+moderator_of:版主：
+moderator_options:版主功能
+moderators:{PLURAL: modcount|版主|版主}
+more_unread_messages:更多未讀訊息
+more_unread_messages_desc:顯示更多未讀訊息，並且把現在的訊息標為已讀。
+move_thread:轉移
+moved:轉移至別的論壇
+moved_thread_message:這個主題已被轉移至別的論壇。
+na:暫無
+new_posts:新訊息
+new_private_messages:您有<span class="GenTextRed">（{VAR: c}）</span>條未讀悄悄話。
+new_thread:建立一個新的主題
+newest_user:最新註冊的使用者為
+next_page:下一頁
+next_thread:上一個主題：
+no_messages:本論壇沒有任何訊息。成為第一個發佈訊息的人！
+no_msg_body:沒有內容！
+no_new_posts:沒有新訊息
+no_posts:沒有訊息
+no_subscribed_forums:沒有訂閱的論壇
+no_subscribed_threads:沒有訂閱的主題
+no_bookmarked_threads:沒有用書籤標記的主題
+no_unread_locked:本主題已被鎖定。
+no_unread_msg:這個主題沒有未讀訊息。
+no_unread_msg_unreg:只有註冊過的使用者能把訊息標為已讀和未讀。
+num_pages:頁（{VAR: ttl_pg}）：
+num_votes:{VAR: obj->total_votes} {PLURAL: obj->total_votes|票|票}
+occupation:職業：
+off:關閉
+on:開啟
+page_timings:產生此頁面時間共花費：{PLURAL: page_gen_time|$1 秒}
+pm:悄悄話
+poll:調查：
+post_count:訊息數：{VAR: u_pcount}
+post_count_l:訊息數：
+posts:訊息
+posts_c:訊息：
+prev_thread:上一個主題：
+usrinfo_private_message:悄悄話
+profile:控制台
+profile_desc:存取使用者控制台
+rate_thread:主題評價
+rating:評價
+rating_track:管理主題<b>{VAR: thr->subject}</b>評價：
+refresh_list:更新清單
+register:註冊
+registered:註冊時間：
+registered_on:註冊日期：{TEMPLATE: registered_on_date}
+replies:回覆
+report_to_mod:向版主回報違規訊息
+reported_messages:已回報訊息
+reveal_all_posts:由{VAR: user_login}顯示所有訊息
+reveal_post:顯示訊息
+search:搜尋
+sel_todays_posts:今日訊息
+sel_todays_posts_desc:開/關過濾今日訊息（只顯示今日產生的訊息）
+sel_unanswered_posts:未回應訊息
+sel_unanswered_posts_desc:開/關過濾未回應訊息（只顯示未回應訊息）
+sel_unread_messages:未讀訊息
+sel_unread_messages_desc:開/關過濾未讀訊息（只顯示未讀訊息）
+send:傳送
+send_pm_desc:給這位使用者傳送私人訊息
+sender_email:傳送者電子郵件：
+sender_name:傳送者姓名：
+show_posts_by:顯示由：{VAR: u_alias}發佈訊息
+size:大小：
+status:狀態：
+status_line:目前有 <b>{PLURAL: st_obj->online_users_reg|$1 位成員|$1 位成員}</b>，<b>{PLURAL: st_obj->online_users_hidden|$1 位潛水成員|$1 位潛水成員}</b>以及<b>{PLURAL: st_obj->online_users_anon|$1 位訪客|$1 位訪客}</b>正在瀏覽本留言板。
+sticky:置頂：
+stop_ignoring:停止忽略此使用者
+sub_to_thread:訂閱這個主題
+sub_to_thread_desc:接收有關本主題中最新訊息通知
+bookmark_thread:將本主題加入書籤
+bookmark_thread_desc:將本主題添加到書籤列表中
+subject:標題
+subscribe:預定
+subscribe_desc:當本論壇有人發布新的主題時，請通知我。
+subscribed_forums:訂閱論壇
+subscribed_forums_desc:開/關過濾訂閱論壇（只顯示您所訂閱的論壇訊息）
+subscribed_threads:預定論壇主題
+subscribed_threads_desc:開/關過濾訂閱主題（只顯示您所訂閱的主題訊息）
+bookmarked_threads:用書籤標記的主題
+switch_to_thread_view:轉換成以討論串方式瀏覽
+thread:主題：
+thread_announcement:公告：
+thread_first_unread_msg:轉到本主題中的第一個未讀訊息
+thread_thread:主題
+threads:主題
+time:時間
+todays_posts:今日訊息
+todays_posts_desc:顯示所有今天發佈的訊息
+un_ignore_user:停止忽略此使用者的訊息
+unanswered_posts:未回應訊息
+unanswered_posts_desc:顯示所有未回應的訊息
+unlock_thread:解鎖本主題
+unread_msg:有包含您尚未閱讀訊息的主題
+unread_msg_locked:鎖定包含未讀訊息的主題
+unread_posts:未讀訊息
+unread_posts_desc:顯示所有未讀信息
+unsub_from_thread:取消訂閱主題
+unsub_from_thread_desc:取消接收來自於維基媒體基金會的通知
+unbookmark_thread:從書籤刪除
+unbookmark_thread_desc:從您的書籤清單中刪除此主題
+unsubscribe:取消訂閱
+unsubscribe_desc:停止接收有關本論壇中最新主題通知
+updated_on:更新於：
+user:使用者
+user_counter:我們有<b>{VAR: st_obj->user_count}</b>位註冊{PLURAL: st_obj->user_count|使用者}。
+user_info:使用者資訊
+user_info_l:使用者資訊 {VAR: u->alias}
+user_offline:{VAR: obj->login}目前處於離線狀態
+user_online:{VAR: obj->login}目前處於連線狀態
+usrinfo_last_post:最後一則訊息：
+view_results:檢視結果
+views:檢視次數
+vote:{PLURAL: frm->n_rating|$1票|$1票}
+vote_button:投票
+vote_for_thread:投票
+was_moved_msg:<a href="{TEMPLATE: was_moved_msg_lnk}">{VAR: r[2]}</a>已經被版主移至<a href="{TEMPLATE: was_moved_msg_lnk2}">{VAR: r[12]}</a>。
+welcome_message:歡迎！<b>{VAR: usr->alias}</b>，您上一次訪問是在{TEMPLATE: welcome_message_date}
+what_ppl_doing:使用者行為
+reported_del_report:刪除報告
+reported_reason:原因：
+reported_on:日期：
+reported_reported_by:回報由：
+reported_reported_msg:已回報訊息
+modque_pending_approval:等待批准的訊息
+modque_approve:批准
+modque_delete:刪除
+modque_deleteall:刪除使用者的所有內容
+modque_no_message:沒有等待批准的訊息
+pmsg_new_messages:未讀悄悄話
+pmsg_old_messages:已讀悄悄話
+deny_recipt:拒絕接受
+deny_recipt_desc:您在閱讀此訊息之後請勿傳送確認
+restore_to:將還原到：
+move_to:將移動到：
+list_referes_referrals:引用
+list_referes_members:推薦的成員
+list_referes_member:成員
+referals_none:尚未推薦。
+referals_refered_by:論壇成員推薦由：<b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b>
+referals_post_count:訊息數：
+referals_registered_on:註冊時間：
+referals_action:操作
+pmsg_all:全部
+pmsg_none:無
+folder:資料夾：
+pmsg_replied:回覆
+pmsg_forwarded:轉寄
+pmsg_subject:標題
+pmsg_author:作者
+pmsg_time:時間
+pmsg_selected:選擇
+pmsg_delete:刪除
+cur_ppage_pm:悄悄話
+writing_pm:寫悄悄話
+browsing_folder:正在瀏覽<b>{VAR: folders[$folder_id]}</b>資料夾
+inbox:收件箱
+draft:草稿箱
+sent:發件箱
+trash:垃圾箱
+msg_author:作者
+avatar_sel_form:頭像選擇表單
+no_avatars:沒有可用的頭像
+month_1:1月
+month_2:2月
+month_3:3月
+month_4:4月
+month_5:5月
+month_6:6月
+month_7:7月
+month_8:8月
+month_9:9月
+month_10:10月
+month_11:11月
+month_12:12月
+sunday:星期日
+sunday_short:日
+monday:星期一
+monday_short:一
+tuesday:星期二
+tuesday_short:二
+wednesday:星期三
+wednesday_short:三
+thursday:星期四
+thursday_short:四
+friday:星期五
+friday_short:五
+saturday:星期六
+saturday_short:六
+male:男
+female:女
+unspecified:未指定
+register_tree_view:樹狀檢視消息和主題清單
+register_msg_tree_view:條列式主題清單/樹狀訊息清單
+register_tree_msg_view:樹狀主題清單/條列式訊息清單
+register_flat_view:條列式檢視消息和主題清單
+use_forum_default:使用論壇預設值
+finduser_user_info:使用者資訊
+finduser_by_login:依登入：
+finduser_submit:尋找
+finduser_no_such_user:無此使用者
+finduser_user:使用者
+finduser_postcount:訊息數：
+finduser_joindate:加入日期
+finduser_action:操作
+yes:是
+no:否
+register_email:電子郵件
+edit_time_limit:<b>編輯時間限制</b>：{GVAR: EDIT_TIME_LIMIT}分鐘
+no_edit_time_limit:<b>編輯時間限制</b>：不限
+pmuserloc_login:登入：
+pmuserloc_submit:送出
+pmuserloc_user:使用者
+pmuserloc_no_result:沒有結果
+register_builtin:內置
+register_specify_url:指定的 URL
+register_uploaded:上傳頭像
+register_login:登入：
+register_login_desc:您想用於登入、並在此網站顯示的名字。
+register_login_available:可用
+register_login_taken:已使用
+register_password:密碼：
+register_password_desc:用於您帳戶的密碼。密碼內容區分大小寫並至少6個字元長度。
+register_conf_pass:密碼確認：
+register_conf_pass_desc:請重新輸入您的密碼。
+register_email_desc:您的電子郵件地址。您可以在下面的偏好設定中選擇來隱藏。
+register_name:名稱：
+register_name_desc:您的真實姓名。
+register_your_pass:您的密碼：
+register_update:更新
+register_avatar_type:頭像類型：
+register_del_avatar:刪除頭像
+register_avatar:頭像：
+register_sel_avatar:刪除頭像
+register_custom_avatar_rules:自訂頭像在由管理員批准之前不會顯示出。<br><span class="SmallText">頭像不可大於<b> {GVAR: CUSTOM_AVATAR_MAX_DIM} 像素</b>，並且必須採用 <b>jpg</b>、<b>gif</b> 或 <b>png</b> 格式。</span>
+register_custom_avatar_url:自訂頭像 URL：
+register_preview:預覽
+register_custom_avatar_upload:自訂頭像檔案：
+register_register:註冊
+register_required:所需的資訊
+register_required_desc:所有的欄位都是必填的。
+register_optional:附註資訊
+register_optional_desc:由於所有訊息都會被論壇其他成員給看見，因此我們建議您在個人檔案裡不要曝露自己的個人或識別訊息。
+register_location:位置：
+register_occupation:職業：
+register_interests:興趣：
+register_image:圖片：
+register_icq:ICQ：
+register_aim:AIM：
+register_yahoo:Yahoo 即時通：
+register_msnm:MSN：
+register_homepage:首頁：
+register_bday:出生日期：
+register_bday_desc:如果您輸入了出生日期，其他論壇成員會在您的個人資料中見到它。
+register_day:日
+register_month:月
+register_year:年
+register_gender:性別：
+register_bio:個人簡介：
+register_bio_desc:其他的一些個人資料，比如興趣、職業等等。
+register_prefs:偏好設定
+register_sig:簽名：
+register_sig_desc:可選簽名，它將顯示在您的郵件的底部。
+register_reset:重置
+register_def_thread_view:預設主題瀏覽方式：
+register_msg_per_page:每頁訊息數：
+register_show_sig:顯示簽名：
+register_show_sig_desc:使您可以隱藏或顯示其他論壇成員的簽名。
+register_use_sig_default:預設情況下使用簽名：
+register_use_sig_default_desc:自動將您的簽名附加到您發佈的每個消息。
+register_timezone:時區：
+register_ignore_admin:忽略管理訊息：
+register_invisible_mode:潛水模式：
+register_invisible_mode_desc:隱藏您的上線狀態。
+register_show_email:顯示電子郵件地址：
+register_show_email_desc:如果您想要公開顯示電子郵件地址，請選擇此選項。
+register_notification:是否預設打開提醒功能：
+register_notification_desc:如果通知預設為啟用，在發佈文章時仍可選擇是否關閉。
+register_notify_method:選擇通知方法：
+register_notify_method_desc:設定您的首選通知方法或停用通知（例如當您去度假時）。
+register_allow_email_msg:允許電子郵件：
+register_allow_email_msg_desc:允許其他使用者透過此論壇向您傳送電子郵件。
+buddy_status:狀態
+my_buddies:我的好友
+add_buddy:加為好友
+add:新增
+buddy_search:輸入要添加的使用者登錄名。
+member_search:或者使用<a href="javascript://" onclick="javascript: window_open('{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1', 'user_list', 400,250);">用戶查找</a>功能來找人。
+buddy_remove:移除
+post_normal:正常
+post_sticky:置頂
+post_annoncement:公告
+post_size:大小
+post_color:顏色
+post_font:字型
+create_thread:建立主題
+submit_reply:提交回覆
+edit_message:套用訊息變更
+apply_spell_changes:套用拼寫變更
+post_preview:訊息預覽
+post_logedin_user:已登入使用者
+post_logout:登出
+post_passwd:發佈用密碼：
+post_poll:調查：
+post_create_poll:發起調查
+post_poll_delete:刪除
+post_poll_edit:編輯
+post_mod_opt:版主選項：
+post_thread_type:主題類型：
+post_thread_expiry:過期主題：
+post_locked:本主題已鎖定
+post_icons:訊息圖示：
+post_no_icon:沒有圖示
+post_smiley:表情圖示捷徑：
+post_format_tools:格式設置工具：
+post_upload_file:上傳檔案
+post_file_del:刪除
+post_file_name:名稱
+post_file_size:大小
+file_attachments:檔案附件：
+allowed_files:允許的檔副檔名:
+max_file_size:檔案最大大小：
+max_files_per_msg:各訊息最多可用檔案數：
+post_notification:發佈通知
+include_sig:包括簽名
+include_sig_desc:包含您的個人簽名。
+disable_smilies:在此訊息裡停用表情圖示
+spell_check_msg:訊息拼寫檢查
+post_form:發佈用表單
+post_forum:論壇：
+post_title:標題：
+post_body:內容：
+post_options:選項：
+post_preview_btn:預覽訊息
+post_cancel_btn:取消
+ignore_users:忽略的使用者
+add_ignore:增加忽略的使用者
+forum_terms:論壇使用條款
+forum_rules:<p>本論壇免費註冊！我們希望您務必遵守下列政策和規定。如同意請點擊本頁最下面的<b>我同意</b>按鈕。</p><p>論壇管理員和版主將盡力清除非法言論，但疏漏在所難免。因此我們在此鄭重聲明，所有發言都僅代表作者觀點，作者言責自負。論壇所有者和開發者對此不負任何責任。</p><p>點擊“我同意”按鈕即表明您保證不在論壇上發布任何淫穢、色情、反動、暴力等非法言論。</p><p>論壇管理者有權因為任何理由刪除、編輯、移動或者關閉任何發言。</p>
+forum_rules_13:<p>13歲以下用戶必須有父母或監護人允許，才能成為論壇成員。我們歡迎13歲以下用戶加入，不過只有在收到父母或者監護人，透過傳真或電子郵件交給我們簽名授權文件後，才能通過您的申請。 </p><p>如果您想在我們收到授權文件之前開始註冊程序，請點擊下面的“我同意”按鈕，如果您不想繼續註冊，請點擊“不同意”按鈕回到論壇主頁。 </p><p>您可以在這裡下載授權表格，想了解更多的信息請發電子郵件至<a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>。 </p>
+coppa_conf:COPPA確認
+coppa_before:{TEMPLATE: coppa_date}之前
+coppa_after:{TEMPLATE: coppa_date}之後
+coppa_link:根據您的出生日期，請選擇
+coppa:<p>對於13歲以下的用戶，只有管理員有在電子郵件或者傳真收到了對方父母或者監護人的授權表格以後才能完成註冊。</p><p>詳細內容方面可連絡 <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a></p>
+prereg_info:論壇規則
+prereg_agree:同意
+prereg_disagree:不同意
+prereg_update:閱讀論壇規則
+coppa_fax_instructions:給予父母或監護人的說明
+coppa_fax_instructions2:請列印此頁，簽名，並郵寄或傳真給我們。
+coppa_fax_reg_form:註冊表單
+coppa_fax_sign:請簽署以下表單並將其傳送給我們
+coppa_fax_conf:我已檢閱過由孩子所提供的資訊，並已看過網站的隱私方針。我了解論壇裡的個人資料可透過使用密碼來修改。我了解可以向論壇提出將所註冊個人資料給完全移除的請求。
+coppa_fax_permission:若您同意，請在這裡簽名
+coppa_fax_no_permission:如果您想要將帳號刪除，請在此簽名
+coppa_fax_parent_name:家長／監護人的全名：
+coppa_fax_relation:與孩子之間的關係：
+coppa_fax_telephone:電話：
+coppa_fax_email:電子郵件地址：
+coppa_fax_date:日期：
+coppa_fax_questions:若有任何問題，請聯絡<a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>
+coppa_fax_login:登入
+coppa_fax_passwd:密碼
+coppa_fax_remail:電子郵箱
+coppa_fax_name:名稱
+login_not_logedin:您尚未登入，可能是以下原因所導致：
+login_cookie_expired:您的cookie功能已終止，需要登入以便重新開啟cookie功能。
+login_perm_denied:以匿名使用者身份會沒有取用所需資源的權限，您必須透過登入來獲得權限。
+login_want_to_register:想要註冊？
+login_forgot_passwd:忘記密碼
+login_use_cookie:使用 cookie<br><span class="SmallText">如果您是在圖書館、學校、或網咖中使用公共電腦，則建議您取消此選項來獲得較高的安全性。如果您使用此選項，那您會在下一次訪問時會進行自動登錄。</span>
+login_login:登入：
+login_login_btn:登入
+login_name_required:必須輸入登入帳號
+login_passwd_required:必須輸入密碼
+login_invalid_radius:錯誤的帳號或密碼
+reset_confirmation:感謝您的註冊！\n\n要讓您的帳號生效，請前至下列的地址：\n\n{VAR: url}\n\n當您的帳號生效後，您會登入至論壇並重新導向到主頁面。
+reset_reset:您好,\n\n您提交了重新設定密碼的請求。要完成重新設定密碼流程，請前往下列地址：\n\n{VAR: url}\n\n注意：本論壇以單向加密的方式儲存密碼，這代表當密碼一經輸入即被重新編碼，且流程無法返回。\n您每次登錄輸入密碼時，該系統將自動對您所輸入密碼經編碼後的內容，與我們所儲存的編碼內容進行校驗。\n（如果您對此加密方式感興趣，請查閱關於 MD5 加密演算法的相關資料。）
+rpasswd_invalid_passwd:無效的密碼
+rpasswd_passwd_nomatch:密碼不符合
+rpasswd_passwd_length:密碼必須至少 6 個字元
+reset_remind_pass:密碼提示
+reset_reset_conf:將重設您的密碼，並傳送給您。如果尚未確認您的電子郵件地址，確認請求將會重新傳送給您。
+reset_error:在資料庫中找不到電子郵件地址
+reset_update:重設密碼
+rpasswd_change_pass:修改密碼
+rpasswd_login:登入
+rpasswd_cur_pass:目前密碼：
+rpasswd_new_pass:新密碼：
+rpasswd_conf_pass:密碼確認：
+ruser_title:變更登入表單
+ruser_change_user:變更您的論壇登入
+ruser_cur_login:目前登入名：
+ruser_new_login:新的登入名：
+ruser_cur_pass:目前密碼：
+login_passwd:密碼：
+reset_email:電郵：
+reset_reset_button:重設密碼
+rate_this_thread:評價
+report_reporting_about:報告主題：
+report_subject:標題
+report_by:發文由：
+report_posted_on:發佈於：
+report_give_reason:請給予為何回報此訊息的理由：
+report_submit_report:送出回報
+search_entire_msg:整個訊息
+search_subject_only:僅標題
+search_forum:論壇
+search_posted_on:發佈於：
+search_no_results:沒有結果
+search_all_forums:搜尋所有論壇
+search_in_forum:在論壇中的搜尋：
+search_forum_search:論壇搜尋
+move_thread_to:移動主題<b> {VAR: thr->subject} </b>到：
+remail_email_topic:透過電子郵件傳送給朋友本主題
+remail_your_name:您的姓名：
+remail_your_email:您的電郵：
+remail_friends_name:朋友的姓名：
+remail_friends_email:朋友的電郵：
+remail_required:必填
+remail_subject:標題：
+remail_message:訊息：
+remail_send_now:立即傳送電子郵件
+remail_anon_opt:複製此訊息至您所選的電子郵件用戶端，來發送給您的朋友。
+remail_done:完成
+remail_sent_conf:有關 {VAR: data->subject} 主題已成功發送給你朋友的電子郵件 {VAR-HTML: _POST['femail']} 。
+remail_error:發生錯誤
+mklist_type:類型：
+mklist_option:選項：
+mklist_additem:添加項
+mklist_apply:套用
+mklist_delete:刪除
+qbud_nick_name:暱稱
+qbud_add_selected:添加所選
+qbud_selected:選擇
+qbud_no_buddies:沒有可供選擇的連絡人
+mklist_numerical:數字
+mklist_aplha:字母
+mklist_square:方點
+mklist_disc:圓點
+mklist_circle:圓圈
+mklist_close:關閉
+email_to:至：
+email_pg_title:電子郵件
+email_subject:標題：
+email_body:內容：
+email_submit:電郵
+ppost_quote_msg:{VAR: msg_to_list} 寫於 {TEMPLATE: ppost_quote_msg_date}
+ppost_quote:引用：
+ppost_to:至：
+ppost_from_buddy_list:從好友清單中選擇
+ppost_find_User:查找使用者
+ppost_track_msg:跟蹤此訊息
+ppost_track_msg_desc:當此讀取訊息時，請通知我 (透過私人訊息) 。
+ppost_send:傳送
+ppost_save_draft:儲存草稿
+poll_blank_option:您不能添加一個空白的選項。
+poll_del_conf:如果您要刪除此選項，請按確定
+poll_name:調查名稱：
+poll_timelimit:時間限制：
+poll_maxiumvotes:最大的票數：
+poll_create:建立
+poll_update:更新
+poll_disablesmilies:禁用表情符號
+poll_create_poll:建立調查
+poll_update_poll:更新投票
+poll_delete:刪除
+poll_updateoption:更新選項
+poll_addoption:添加選項
+poll_unlimited:無限
+poll_day:天
+poll_days:天
+poll_hour:小時
+poll_hours:小時
+poll_month:月
+poll_year:年
+poll_week:週
+tabs_register:帳號設置
+tabs_subscriptions:訂閱
+tabs_bookmarkes:書籤
+tabs_referrals:引用
+tabs_buddy_list:好友清單
+tabs_ignore_list:忽略清單
+tabs_private_messaging:悄悄話
+single_msg_delete:您將要<span class="ErrorText">刪除</span>的訊息標題為：<b>{VAR: data[3]}</b>
+thread_delete:您將要<span class="ErrorText">刪除</span>標題為 <b>{VAR: data[3]}</b> 的<span class="ErrorText">全部主題</span>
+delete_proceed:<span class="fb">您想要繼續嗎？</span>
+delete_yes:是
+delete_no:否
+error_invalidurl:無效 URL
+error_error:錯誤
+usrinfo_profile:{VAR: u->alias}個人資料
+usrinfo_show_all_posts:顯示所有的訊息{VAR: u->alias}
+actions_update:找尋與你相同的其他人們
+err_info:資訊
+buddy_list_err_cantadd:您不能將自己添加到您的好友清單
+buddy_list_err_dup:此使用者已在您的好友清單
+buddy_list_err_nouser:未找到您試圖添加到好友清單的使用者。
+buddy_list_err_nouser_title:無法添加使用者
+buddy_list_err_ignore:不能添加有把您給忽略的使用者，到您的好友清單裡。
+buddy_list_update:流覽自己的好友清單
+core_err_invinp_title:無效的輸入
+core_err_invinp_err:您有前至到一個無效連結。請通知<a href="mailto:{GVAR: ADMIN_EMAIL}">站長</a>您發生這狀況的原因。
+core_adm_login_msg:管理員可以<a href="{BASE}adm/admloginuser.php">在此</a>登入。
+email_err_unabletoemail_title:錯誤: 無法傳送電子郵件
+email_err_unabletoemail_msg:電子郵件系統已被管理員停用。
+email_error_unabletolocaddr:對不起，系統無法發送電子郵件至 {VAR-HTML: _POST['tx_name']} 因為它無法判斷電子郵件地址
+email_error_body:內文為必須
+email_error_subject:標題為必須
+email_error_namerequired:名稱為必須
+email_error_invaliduser:無效的使用者
+emailconf_err_invkey_title:錯誤
+emailconf_err_invkey_msg:確認密鑰無效。請檢查您的電子郵件，來確認您有輸入正確的 URL。如果您有點擊過連結兩次，您的帳號可能已被確認。請登入到論壇請求另一個密鑰。
+err_inc_criticaltitle:嚴重錯誤
+err_inc_criticalmsg:出現錯誤。很不幸地，縱使是錯誤回報系統本身也會有出錯的時候。
+finduser_update:搜尋使用者
+help_index_update:閱讀<a href="{TEMPLATE: help_index_update_lnk}">使用說明</a>
+iemail_thr_subject:由 {VAR: poster_login} 給 {VAR: thr_subject} 的新回覆
+iemail_thr_bodyemail:要檢視未讀回覆請至 {VAR: goto_url['email']}\n\n如果您不希望再收到此主題的回覆通知，請至：{VAR: unsub_url['email']}
+iemail_frm_subject:由 {VAR: poster_login} 在論壇 {VAR: frm_name} 上發表的新主題 {VAR: thr_subject}
+iemail_frm_bodyemail:要檢視主題請至： \n{VAR: goto_url['email']}\n\n如果您不希望再收到本論壇有關新主題的通知，請至：{VAR: unsub_url['email']}
+iemail_participate:參與討論請前至：
+ignore_list_err_info_title:資訊
+ignore_list_err_dup_msg:此使用者已在您的忽略清單中
+ignore_list_err_nu_title:未發現使用者。
+ignore_list_err_nu_msg:未找到您試圖添加到連絡人清單中的使用者。
+ignore_list_cantign_msg:你不能忽略此使用者
+ignore_list_update:流覽所擁有的忽略清單
+index_update:流覽<a href="{TEMPLATE: index_update_lnk}">論壇一覽表</a>
+list_referers_update:流覽推薦
+login_update:登入表單
+msg_update:流覽主題<a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+pm_err_nopm_title:錯誤：私人訊息已停用
+pm_err_nopm_msg:您不能使用私人郵件系統。它已被管理員禁用。
+pm_update:使用私人訊息
+post_err_lockedthread_title:錯誤：主題已鎖定
+post_err_lockedthread_msg:本主題已被鎖定，不允許發佈。
+err_coppa_title:錯誤：您的帳號尚未確認
+err_coppa_msg:我們沒有收到來自於您的雙親/或合法監護人允許您在網站上發佈訊息的確認內容。如果你遺失了 COPPA 表單，請在<a href="{TEMPLATE: err_coppa_msg_lnk}">此重新檢視</a>。
+err_banned_acct_title:錯誤：您已被禁止。
+err_banned_acct_msg:基於違反論壇方針緣故，您的帳號{IF: $ban_expiry}會在 {DATE: ban_expiry %a, %d %B %Y %H:%M} 以前被臨時禁止{ELSE}已被永久禁止{ENDI}訪問此網站。
+post_err_edttimelimit_title:錯誤
+post_err_edttimelimit_msg:您不能再編輯此訊息
+post_err_noannontopics_msg2:<legend>錯誤：沒有足夠的權限</legend>不允許匿名使用者創建主題。
+post_err_noannonposts_msg2:<legend>錯誤：沒有足夠的權限</legend>不允許匿名使用者回覆。
+post_err_floodtrig_title:錯誤：觸發到發佈灌水文章行為。
+post_err_floodtrig_msg:請{PLURAL: tm| $1 秒| $1 秒}後再次嘗試
+post_err_attach_size:附件檔案太大（超過允許限制的 {VAR: MAX_F_SIZE} 位元組）
+post_err_attach_ext:您嘗試上傳的檔案不符合檔案類型。
+post_err_attach_filelimit:您正在試圖上傳超過所允許的檔案數量。
+post_err_passwd:密碼不正確。
+post_reply_update:在 {VAR: frm->name} 回覆給 <a href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a>
+post_topic_update:在 <a href="{TEMPLATE: post_topic_update_lnk}">{VAR: frm->name}</a> 編寫新主題
+post_error_generic:發生錯誤
+postcheck_max_images_err:各訊息不能超過 {GVAR: MAX_IMAGE_COUNT} 個圖片。請減少圖片數量。
+postcheck_no_links_allowed:在您已發佈超過 {PLURAL: posts_before_links|$1 個訊息|$1 個訊息}前，您無法使用連結。
+postcheck_subj_needed:標題為必須
+postcheck_no_such_user:此論壇沒有名為「{FUNC: char_fix(htmlspecialchars($v))}」的使用者。
+postcheck_ignored:您不能發送私人訊息給「{FUNC: char_fix(htmlspecialchars($v))}」，因為該使用者將您給設為忽略。
+postcheck_no_recepient:收件者遺失，無法傳送訊息。
+postcheck_invalid_email:請輸入一個您朋友的有效電子郵件地址。
+postcheck_email_subject:你無法傳送沒有標題的電子郵件。
+postcheck_email_body:你不能發送一封沒有訊息正文的電子郵件。
+private_msg_notify_subj:讀取通知：{VAR: m->subject}
+private_msg_notify_body:您好，<br>{VAR: usr->login} 已打開標題為「{VAR: m->subject}」的悄悄話。<br />這是一封產生於 {TEMPLATE: private_msg_notify_body_date} 的自動通知。<br />
+referals_update:流覽推薦
+register_err_short_login:您所選擇的登入名稱太短。登入名稱必須至少 2 個字元長度。
+register_err_login_notallowed:不允許的登入名稱。
+register_err_loginunique:論壇的登入名稱必須是唯一的。這個名字已被其他人使用。
+register_err_emailexists:此電子郵件地址已與帳號相關聯。如果您忘記密碼，請使用還原選項，而非重新註冊。
+register_err_shortpasswd:密碼必須至少 6 個字元
+register_err_passwdnomatch:您的密碼不符合，請再試一次。
+register_err_invalidemail:您所指定的電子郵件地址似乎不正確。
+register_err_needname:要成功地完成這個註冊，您必須輸入你的名字。
+register_err_enterpasswd:您必須輸入目前的密碼來完成更改。
+register_err_adminpasswd:您必須輸入您的<b>管理員</b>密碼來完成更改。
+register_err_notyouremail:此電子郵件地址已被別人用來註冊。
+register_err_avatartobig:您要上傳的檔案太大，超過 {GVAR: CUSTOM_AVATAR_MAX_SIZE} 位元組限制。
+register_err_avatarnotallowed:您嘗試上傳的頭像內容不被允許。請檢查所允許的檔案類型。
+register_conf_subject:註冊確認
+register_conf_msg:感謝您的註冊，\n要讓您的帳號生效，請前至下列地址：\n\n{FULL_ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\n當您的帳號生效後，您會登入至論壇並重新導向到主頁面。
+register_welcome_subject:論壇註冊確認
+register_welcome_msg:謝謝註冊，\n\n這是您註冊的詳細資料：\n\n論壇地址：{TEMPLATE: index_update_lnk}\n帳號：{VAR: uent->login}\n密碼：{VAR: _POST['reg_plaintext_passwd']}\n\n請注意密碼區分大小寫！\n要更改您的設定或者個人資料，請點擊：\n{FULL_ROOT}?t=register
+register_err_cantreg_title:錯誤：無法註冊
+regsiter_err_cantreg_msg:無法創建使用者帳戶，請用 <a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a> 聯繫管理員
+register_profile_update:查看自己的個人資料
+register_register_update:註冊頁
+report_err_nosuchmsg_title:錯誤
+report_err_nosuchmsg_msg:無此類訊息
+reset_err_invalidkey_title:錯誤
+reset_err_invalidkey_msg:無效的密碼復原密鑰。這可能是您的電子郵件用戶端已經自動開啟此頁面，使得復原密鑰無效。如果是此情況，您應該會在短時間內收到您新密碼的電子郵件。若未收到此內容的電子郵件，請嘗試重設密碼。
+reset_err_rstconf_title:資訊
+reset_err_rstconf_msg:在接下來的幾分鐘內，您應該會收到有關說明的電子郵件。
+reset_newpass_title:重設密碼
+reset_newpass_msg:您好，\n\n基於您的請求，以下是您的登入訊息：\n\n帳號：{VAR: ui[1]}\n密碼：{VAR: passwd}\n\n注意：您的密碼已經修改為如上所述的內容。\n如果您想修改密碼，請在個人資料控制台中修改：\n{FULL_ROOT}?t=register
+reset_login_notify:您的密碼已透過電子郵件發送給您。您應該會在接下來的幾分鐘之內收到。
+search_update:搜尋訊息
+selmsg_update:瀏覽<a href="{TEMPLATE: selmsg_update_lnk}">今天的文章</a>
+showposts_update:檢視由 <a href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a> 所發佈訊息：
+subscribed_update:瀏覽所擁有的訂閱
+bookmarked_update:瀏覽所擁有的書籤列表
+thread_update:瀏覽論壇<a href="{TEMPLATE: thread_update_lnk}">{VAR: frm->name}</a>
+tree_update:瀏覽主題（樹狀檢視）<a href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+userinfo_update:查看 <a href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}“</ A> 的個人資料
+ERR_login_msg2:<legend>錯誤：您尚未登入</legend>要訪問此頁面，您必須是本論壇的成員。
+ERR_disabled_ttl:停用功能
+ERR_disabled_msg:此功能已被系統管理員給停用。
+ERR_access_ttl:錯誤：沒有足夠的權限
+ERR_access_msg:你沒有適當的權限去執行此操作.
+ERR_registration_disabled_ttl:註冊停用
+ERR_registration_disabled_msg:管理員已停用註冊。請稍後再試。
+ERR_emailconf_ttl:錯誤：您的帳號尚未確認
+ERR_emailconf_msg:您尚未透過電子郵件確認您的帳號。<br><table border="0"><tr><td><ol><li>如果您沒有收到確認的電子郵件，<a href="{TEMPLATE: ERR_emailconf_msg_lnk}">請重新請求</a>。</li><li>如果 {VAR: usr_d->email} 不是您正確的電子郵件地址，<a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">請指定正確地址內容</a>。</li></ol></td></tr></table>
+ERR_user_ttl:錯誤：沒有這樣的使用者
+ERR_user_msg:沒有這樣的使用者
+ERR_systemerr_ttl:錯誤：系統錯誤
+ERR_systemerr_msg:發生系統錯誤。請將其報告給<a href="mailto:{GVAR: ADMIN_EMAIL}">網站管理員</a>。
+email_title:電子郵件表單
+finduser_title:查找使用者
+help_title:說明
+login_title:登入表單
+poll_title:調查編輯器
+register_title:註冊表單
+reset_title:重設密碼
+rpasswd_title:變更密碼表單
+error_title:錯誤的表單
+index_title:歡迎來到論壇
+search_title:搜尋 {VAR-HTML: srch}
+remail_emailsent:電子郵件已傳送
+remail_email:您好：\n\n在 {GVAR: FORUM_TITLE} 論壇上有一個關於「{VAR: data->subject}」的有趣主題可能會是您感興趣的。你可以查看主題在：{FULL_ROOT}?t=rview&amp;th={VAR: data->id}&amp;rid ={DEF: _uid} \n\n您的朋友，\n\n{VAR: usr->alias}
+poll_add_option:添加選項：
+post_opt_html_on:<b>HTML</b>代碼：<b>開放</b>
+post_opt_fud_on:<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>BBcode</b>：<b>開放</b></a>
+post_opt_images_on:<b>圖片功能</b>：<b>開放</b>
+post_opt_smilies_on:<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>表情符號</b>：<b>開放</b></a>
+post_opt_html_off:<b>HTML</b>代碼：<b>關閉</b>
+post_opt_fud_off:<b>BBcode</b>：<b>關閉</b>
+post_opt_images_off:<b>圖片功能</b>：<b>關閉</b>
+post_opt_smilies_off:<b>表情符號</b>：<b>關閉</b>
+post_opt:論壇選項：
+register_change_passwd:變更密碼
+register_change_login:變更登入
+approved_avatar_title:您自訂的頭像已被管理員批准。
+approved_avatar_msg:您的頭像是由由管理員所批准。它會在您所有的訊息裡顯示出。如果你沒看見或是只看到您舊的頭像，那是因為您的瀏覽器有對頁面做出快取。請嘗試重新整理瀏覽器一至兩次。在大多數情況下，這會解決快取所造成的問題。
+unapproved_avatar_title:您的自訂頭像被拒絕。
+unapproved_avatar_msg:管理員未批准您的頭像。最常見的原因是您的頭像太大（容量大小 / 尺寸），或是有包含不適當的內容。如果您想了解您的頭像被拒絕原因的詳細資訊，請與管理員聯繫。
+mvthread_request_move:請求移動
+move_request_reason:你為什麼想要將主題移動？
+mvthread_submit_req:提交申請
+thread_exchange:主題轉換
+move_request_by:所要求的主題移動：
+move_reason:主題移動的理由：
+thr_exch_accept:接受主題
+thr_exch_decline:拒絕主題
+thr_exch_orig_forum:原始論壇：
+thr_exch_dest_forum:目標論壇：
+thr_exch_no_threads:沒有等待批准的主題。
+thr_exch_decl_reason:拒絕主題 <b>{VAR: data->subject}</b> 移動至論壇 <b>{VAR: data->f2_name}</b> 的原因
+thr_exch_submit:提交
+exch_decline_ttl:移動主題 {VAR: data->subject} 至論壇 {VAR: data->f2_name} 被拒絕。
+ppost_original_msg:你所轉發或回覆的訊息
+split_thread:拆分主題
+groupmgr_no_user:沒有登入名稱為「{FUNC: char_fix(htmlspecialchars($gr_member))}」的使用者
+groupmgr_already_exists:使用者「{FUNC: char_fix(htmlspecialchars($gr_member))}」在此群組中已存在。
+groupmgr_yes:是
+groupmgr_no:否
+groupmgr_action:操作
+groupmgr_member:成員
+groupmgr_cancel:取消
+groupmgr_add_member:增加成員
+groupmgr_update_member:更新成員
+groupmgr_edit:編輯
+groupmgr_delete:刪除
+group_mgr_anon:匿名
+group_mgr_reged:所有已註冊的使用者
+show_show:顯示：
+group_mgr:群組管理
+group_mgr_edit_btn:編輯群組
+group_mgr_heading:群組編輯者選擇
+group_mgr_group:群組：
+permission_denied_title:權限被拒絕！
+permission_denied_msg:您的使用者權限不允許您執行目前嘗試的操作。
+p_READ:查看
+p_POST:發佈
+p_REPLY:回覆
+p_EDIT:編輯
+p_DEL:刪除
+p_STICKY:置頂訊息
+p_POLL:建立調查
+p_FILE:附加檔案
+p_VOTE:投票
+p_RATE:評分主題/成員
+p_SPLIT:拆分主題
+p_LOCK:鎖定的主題
+p_MOVE:移動主題
+p_SML:使用表情符號
+p_IMG:使用圖像標記
+p_SEARCH:允許搜尋
+group_mgr_search:查找使用者
+group_mgr_indicator:目前正在編輯：<b>{VAR: grp->name}</b>
+rate_worst:最差
+rate_best:最好
+post_quote_msg:{VAR: msg->login} 寫於 {TEMPLATE: make_report_date}
+post_quote:引用：
+post_quote_selected:引用所選文字
+userinfo_referals:推薦的使用者：
+userinfo_referals_count:{VAR: referals}成員
+pm_no_space_title:空間不夠！
+pm_no_space_msg:您的私人訊息資料夾超過允許存儲大小的 <b>{GVAR: MAX_PMSG_FLDR_SIZE} 位元組</b>。它們目前包含一共 <b> {VAR: fldr_size} 位元組</b>大小的訊息容量。<br><br><span class="ErrorText">請刪除一些舊訊息來清理空間。</span>
+pm_space_indct_msg:私人訊息資料夾是 {VAR: percent_full} %。
+th_expr_never:從不
+th_expr_one_hr:1個小時
+th_expr_three_hr:3個小時
+th_expr_four_hr:4個小時
+th_expr_eight_hr:8個小時
+th_expr_sixteen_hr:16個小時
+th_expr_one_day:1天
+th_expr_two_day:2天
+th_expr_four_day:4天
+th_expr_one_week:1週
+th_expr_two_week:2週
+th_expr_one_month:1 個月
+th_expr_two_month:2 個月
+th_expr_four_month:4 個月
+th_expr_one_year:1 年
+thread_mod_delete:刪除
+action_ip:IP
+action_latest_post:最後一則訊息
+online_today_last_visit:上次訪問
+online_today_update:檢視本論壇今日線上的使用者清單
+logedin_todays_visitors:今天的訪客
+logedin_latest_post:本論壇最新發佈的主題
+register_show_avatar:顯示頭像：
+register_show_avatar_desc:當您檢視他們的訊息之時，允許您隱藏其他使用者的大頭貼。
+drawmsg_view_rest_post:顯示剩餘訊息
+post_re:回覆：
+forumsel_goto_forum:轉至論壇：
+minimsg_thread_view:主題檢視
+split_th_post_by:訊息作者：
+split_th_posted_on:發佈於：
+split_th_subject:標題：
+split_th_new_thread_title:新主題標題:
+split_th_forum:論壇：
+split_th_split_sel:拆分所選的訊息
+split_th_split_unsel:拆分未選的訊息
+split_th_messages:訊息
+split_th_select:選擇
+report_report_post:報告訊息
+quicklogin_login:登入：
+quicklogin_password:密碼：
+quicklogin_use_cookies:是否使用 Cookies 功能？
+quicklogin_login_btn:登入
+quick_reply:快速回覆
+quick_reply_post:發佈快速回覆
+quick_reply_preview:預覽快速回覆
+post_notification_desc:當有人回覆此訊息時，請通知我。
+post_all_ext_allowed:（無限制）
+maximize_category:最多類別
+maximize_message:最小化訊息
+no_view_perm:您沒有適當的權限來查看此主題。
+report_empty_report:您不能發送內容為空的回報。請輸入您的回報原因。
+report_already_reported_title:已回報
+report_already_reported_msg:此訊息已經回報，該回報目前在版主的佇列中。
+register_err_toomanyimages:您試圖在您的簽名中使用超過所允許 {GVAR: FORUM_IMG_CNT_SIG} 個圖片。
+pmsg_next_msg:下一封
+pmsg_prev_msg:上一封
+post_proc_reveal_spoiler:顯示/隱藏內容
+register_jabber:Jabber：
+register_skype:Skype：
+register_twitter:Twitter：
+register_google:Google Chat/IM：
+im_jabber:Jabber：
+im_google:Google Talk：
+im_skype:Skype：
+im_twitter:Twitter：
+forum_contact:聯絡
+forum_home:首頁
+post_cur_attached:目前附加：{VAR: i}{PLURAL: i| 個檔案| 個檔案}
+ignored_anon_post:{GVAR: ANON_NICK} 被忽略
+ignored_user_post:<a href="{TEMPLATE: ignored_user_post_lnk}">{VAR: obj->login}</a>的消息被忽略
+smladd_close_window:關閉視窗
+post_list_smilies:列出所有表情符號
+p_VISIBLE:可見
+reported_in_thread:在：
+help_back_to_top:返回頂端
+help_return_to_index:回到說明索引
+imsg_err_message_title:無效訊息
+imsg_err_message_msg:不存在您要檢視的訊息。
+poll_edit:編輯
+register_err_not_valid_img:指定的 URL 不包含有效的圖像。
+pmsg_recepient:收信人
+register_err_taken_alias:您試圖使用的別名有被其他論壇成員使用。請選擇另一個。
+register_alias:別名：
+register_alias_desc:如果您希望顯示在論壇中登錄名稱以外的其他的暱稱，請在這裡輸入。
+register_allow_pm_msg:允許私人訊息：
+register_allow_pm_msg_desc:允許其他使用者在本論壇中向您發送私人消息。
+postcheck_pm_disabled:您不能發送到私有消息"{VAR-HTML: v}"，因為這個人不會接受私人郵件。
+polllist_vote:投票
+polllist_view_results:檢視結果
+polllist_name:調查名稱
+polllist_date:建立日期
+polllist_owner:建立由
+polllist_votes:總票數
+polllist_action:操作
+polllist_update:<a href="{TEMPLATE: polllist_update_lnk}">查看可用的調查</a>
+userinfo_polls:調查：
+show_pollist:調查
+search_and:與
+search_or:或
+search_desc_order:最新優先
+search_asc_order:最舊優先
+search_relevance_order:相關性
+search_logic:搜尋方式：
+search_sorting:排序按：
+search_attach:附件:
+search_attach_all:有無
+search_attach_with:帶有附件
+post_proceed:繼續
+post_moderated_forum:你已在有管理機制的論壇上發佈了一篇文章。文章在被論壇的版主或管理員給核准之前並不會顯示出。
+post_moderated_forum_ttl:管理機制論壇說明
+buddy_list_bday:今天是 {VAR: r[2]} 的 {VAR: age} 歲生日
+email_warning_msg:如果您更改了您目前的電子郵件地址，在您透過電子郵件完成確認前，您的帳號會標記成未確認。
+register_show_im:顯示 IM 指標：
+register_show_im_desc:是否要在作者自己的訊息旁顯示 IM。
+unread_message:未讀訊息
+read_message:已讀訊息
+threadt_more:&lt;更多&gt;
+threadt_disabled_ttl:樹狀檢視主題清單已被停用。
+threadt_disabled_desc:管理員已停用以樹狀檢視主題清單。請改用平面檢視。
+threadt_update:流覽論壇（樹狀檢視）<a href="{TEMPLATE: threadt_update_lnk}">{VAR: frm->name}</a>
+mmod_delete_cofirm_ttl:確認刪除主題/訊息
+spell_alts:無其它選擇
+insert_uploaded_image:訊息正文中插入圖片
+finduser_help:搜尋引擎會自動添加「*」符號來遮蔽您的查詢，另外請注意<b>搜尋是區分大小寫</b>的。<br>提示：如要搜尋所有登入帳號是「a」開頭的使用者，在搜尋框裡輸入 a 即可。
+back_to_top:返回頂部
+pm_err_disabled_title:私人訊息已停用
+pm_err_disabled_msg:您無法發送私人郵件，除非您在您的個人資料中啟動「允許私人訊息」選項。
+err_mod_acc_ttl:未驗證的帳號
+err_mod_acc_msg:所有帳號在生效前都需讓管理員手動確認。因此直到管理員驗證好您的帳號前，您無法使用您帳號裡的全部功能。
+accounts_pending_approval:等待批准的帳號
+saved:已儲存
+register_err_time_limit:每 {GVAR: REG_TIME_LIMIT} 秒內可註冊人數已達上限。請稍待{PLURAL: reg_limit_reached| $1 秒| $1 秒}後再嘗試註冊。
+register_err_avatardimtobig:頭像尺寸<b>（{VAR: img_info[0]} x {VAR: img_info[1]}）</b>超過所允許的像素大小<b>（{GVAR: CUSTOM_AVATAR_MAX_DIM}）</b>。
+buddy_offline:{VAR: r[2]}目前處於離線
+buddy_online:{VAR: r[2]}目前處於線上
+sml_no_smilies:沒有可用的表情圖示。
+login_unapproved_account_ttl:未經批准的帳號
+login_unapproved_account_msg:在生效之前，需讓論壇管理員手動確認各個新帳號。因您的帳號尚未被確認，您將無法取用一些已確認成員才可使用的功能。
+remove_from_buddy_list:從好友清單中刪除
+iemail_msg_author:<b>作者：</b> {VAR: obj->alias}
+iemail_msg_subject:<b>標題：</b> {VAR: obj->subject}
+iemail_msg_date:<b>日期：</b> {TEMPLATE: dmsg_post_date}
+iemail_msg_reply:回覆
+iemail_msg_quote:引用
+iemail_msg_view:檢視主題/訊息
+threadt_sticky:置頂
+threadt_announce:公告
+reported_no_messages:無回報訊息。
+poll_no_polls:沒有可取用的調查。
+no_unread_messages:沒有符合您查詢條件的未讀訊息。
+thread_mark_all_read:標記所有未讀論壇訊息為已讀
+thread_mark_all_read_desc:在此論壇中的所有未讀訊息將標記成已讀
+private_no_messages:在此資料夾中沒有任何訊息。
+register_email_change_subject:確認變更電子郵件
+register_email_change_msg:請透過前往下方的 URL：{FULL_ROOT}?t=emailconf&conf_key={VAR: conf_key}，來確認您的新電子郵件帳號「{VAR: uent->email}」，將會替換舊有電子郵件帳號「{VAR: old_email}」\n\n一旦您確認好您的新電子郵件地址，您的論壇帳號將會重新啟用。
+iemail_thread_unsub:取消訂閱主題
+iemail_forum_unsub:取消訂閱主題
+primary_group_prefix:論壇主要群組：
+group_resources:這組控制以下論壇的許可權
+register_admin_newuser_title:有已註冊新使用者的帳號在等待確認
+# Fuzzy
+register_admin_newuser_msg:新使用者（{VAR: uent->login}）已註冊，由於帳號確認已啟用，他們的帳號在由您或別的論壇管理員確認之前不會生效。要檢帳號請前至：{GVAR: WWW_ROOT}adm/admuserapr.php\n\n這是一個自動化處理流程。請勿回復此訊息。\n如果要關閉新使用者註冊的電子郵件通知功能，您可以透過管理控制台中更改「新帳號通知」設置。
+post_mod_msg_notify_title:在論壇中的新訊息" {VAR: frm->name} "等待審批
+post_mod_msg_notify_msg:有個標題為" {VAR: msg_post->subject} "的新訊息剛張貼在你管理的論壇上。要檢視此訊息請至：{FULL_ROOT}?t=modque#{VAR: msg_post->id} \n\n這是一個自動化處理流程。請勿回復此訊息。
+thread_printable_pdf:產生可列印的 PDF
+thread_syndicate:聯合本論壇（XML）
+reg_conf_title:註冊確認
+reg_conf_email:<b>電子郵件確認</b><br>一封內容包含特定 URL 位址的電子郵件已發送給您，在您的帳號生效之前，您需要去存取該電子郵件所提供的 URL。如果您在接下來的幾分鐘內未收到該電子郵件，請登入您的帳號來確認您所指定之電子郵件地址是正確的。一旦您確認好您的帳號，您將能夠存取在論壇裡限於已確認註冊使用者所使用的功能。
+reg_conf_account:<b>帳號確認</b><br>您的帳戶在生效之前，會需要透過管理員的核准。在核准後您將收到一封電子郵件，來表示您的帳戶已被確認。在核准之前期間裡您仍可以用您的帳號登入，只是會無法存取某些功能。
+forum_banned_user:您之前不當的行為導致您被論壇給永久封鎖。再會。
+mnav_description:訊息導航
+mnav_date_limit:日期範圍：
+mnav_forum_limit:僅搜尋：
+mnav_all_forums:搜尋所有論壇
+mnav_submit:開始搜尋
+mnav_no_range:您必須輸入一個有效的日期範圍。此值可以包含小數點，（0.12），但它必須大於零。
+mnav_invalid_unit:您必須指定一個有效的時間單位。
+mnav_invalid_date:您指定的日期範圍超過管理員所允許。請嘗試使用較小的日期範圍。
+mnav_no_results:在查詢中無結果相符。
+mnav_posted_by:發佈由：
+mnav_more:更多 &raquo;&raquo;
+mnav_minute:分鐘
+mnav_hour:小時
+mnav_day:天
+mnav_week:週
+mnav_month:月
+mnav_title:訊息導航
+mnav_update:使用<a href="{TEMPLATE: mnav_update_lnk}">訊息導航</a>流覽訊息
+pm_notify_subject:[{GVAR: FORUM_TITLE}]新的私人訊息通知
+pm_notify_body_email:您有標題為「{VAR: subject}」的新私人訊息，來自於「{VAR: from}」的論壇「{GVAR: FORUM_TITLE}」。要查看訊息，請點選此處：{FULL_ROOT}?t=pmsg_view&id={VAR: pid} \n\n要停止收到通知，請在您的個人資料中停用「私人郵件通知」。
+register_pm_notification:私人訊息通知：
+register_pm_notification_desc:如果啟用，只要向您傳送一則私人消息，您將收到通知。
+findu_admin_opts_header:管理員選項
+findu_unban:解禁
+findu_ban:禁止
+findu_edit:編輯
+findu_delete:刪除
+dmsg_reply_to:回覆給
+dmsg_reply_num:訊息 #{VAR: obj->reply_to}
+merge_topics:合併主題
+merge_topics_cp:合併主題控制台
+merge_topics_tpl:選擇主題以合併<span class="SmallText">（您必須選擇多個主題）</span>
+merge_merge:合併所選的主題
+merge_next:上一個主題：
+merge_prev:下一個主題：
+merge_another:前往<a href="{TEMPLATE: merge_another_lnk}">最後一個合併的主題</a>或合併另一個：
+split_cp:主題拆分控制台
+groups_perms_header:權限<span class="small">（移動滑鼠游標覆蓋在權限上，可查看其類型）</span>
+register_err_sig_too_long:您的簽名超過最大允許長度的 {GVAR: FORUM_SIG_ML} 字元。
+register_sig_limit:{GVAR: FORUM_SIG_ML} 字元<a href="javascript: alert('Your Signature is '+document.forms['fud_register'].reg_sig.value.length+' characters long. The maximum allowed signature length is {GVAR: FORUM_SIG_ML} characters.');" class="SmallText">檢查簽名長度</a>
+adm_account_accepted:您的帳號「{VAR: login}」已由管理員批准並現在處於可用狀態。您現在能以已確認註冊的使用者身份來訪問 {GVAR: FORUM_TITLE}' 論壇。
+adm_account_accepted_s:您的帳號申請「{GVAR: FORUM_TITLE}」已被接受。
+adm_account_rejected:您的帳號「{VAR: login}」已被管理員拒絕。如果你想知道此決定的原因，請隨時透過「{GVAR: ADMIN_EMAIL}」聯繫管理員。
+adm_account_rejected_s:您在「{GVAR: FORUM_TITLE}」的帳號申請未被接受。
+thread_on:在
+userinfo_buddy:好友：
+register_email_addr:電子郵件地址：
+reset_suffix:如果在錯誤情況下您有接收到此訊息，請直接忽略它。如果您是在未有提出請求的情況下，收到此電子郵件的多個副本，請透過 {GVAR: ADMIN_EMAIL} 來聯絡論壇管理員\n\n此請求是發自於：{VAR: _SERVER['REMOTE_ADDR']}。
+usrinfo_last_visit:上次訪問：
+mnav_newer:晚於
+mnav_older:早於
+ip_search_by_ip:按 IP 搜尋使用者
+ip_search_syntax:支援語法：1.2.3.4、1.2.3、1.2、1
+ip_search:搜尋
+ip_analyze_usage:分析 IP 使用情況
+ip_analyze_usage_descr:請指明使用者的確切登入內容。
+ip_users_using:使用者使用「{VAR: ip}」 IP 位址
+ip_all_ips:由「{VAR: user}」使用過的所有 IP
+ip_title:IP瀏覽器
+userinfo_real_name:真實姓名：
+register_err_alias_notallowed:不允許此別名
+post_err_mod_forum_edit_ttl:錯誤
+post_err_mod_forum_edit_msg:您不能編輯需透過批准之論壇裡的訊息。
+dmsg_num:訊息 #{VAR: obj->id}
+postcheck_session_invalid:您瀏覽器的 session 已過期，請重新提交該表單。對此造成的不便我們深感抱歉。
+delete_message_extra_desc:<b>可選</b><br>指名刪除訊息的原因，這將會透過私人消息方式發送給作者。
+delete_message_extra_body:包含移除正文的訊息將會發送給作者。
+delete_msg_removed_ttl:您的訊息已被管理員刪除。
+delete_msg_pm_body:原始訊息
+delete_msg_pm_subject:標題：{VAR: data[15]}
+ip_no_whois:用於 <b> {VAR: ip} </b> 的 WHOIS 資訊無效。
+ip_whois_title:ISP 資訊
+register_theme:佈景主題：
+pmsg_trash:清空垃圾箱
+uc_new_pm:新的私人訊息
+uc_new_topic:新主題
+uc_new_cat_forum:帶有新訊息的訂閱論壇
+uc_cat_forum:類別 &raquo; 論壇
+uc_sub_topics:帶有新訊息的訂閱主題
+uc_page_title:檢視個人控制台。
+search_options:搜尋選項
+search_user_filter:按使用者過濾：
+register_none:不要通知我
+findu_no_conf:未確認的使用者
+register_max_sig_len:最大長度：
+register_turing:驗證：
+register_err_turing:驗證失敗，請再重試。
+modque_cat:類別
+modque_forum:論壇
+idx_compact_forum_row:可用論壇：
+mmd_del_title:刪除主題
+mmd_mov_title:移動主題
+mmd_move_threads_to:目標論壇：
+mmd_abort_move:取消
+mmd_move:移動主題
+pmsg_pdf_btn:產生 PDF 歸檔
+search_results_hdr:{VAR: total} 個找到的搜尋結果
+thread_del_all:刪除已選擇的
+thread_mov_all:移動已選擇的
+thread_merge_all:整合已選取的
+thread_loc_all:鎖定/解鎖選定
+dmsg_ip:IP：
+err_blockedaccnt_title:錯誤：您的帳號已被過濾出。
+err_blockedaccnt_msg:您的帳號已被所訪問論壇上安裝之使用者過濾器給封鎖住。
+merge_th_page_list:主題頁選擇
+most_users_online:最多上線人數是於 <b>{DATE: st_obj->most_online_time %a, %d %B %Y %H:%M}</b> 的 <b>{VAR: st_obj->most_online}</b> 位
+sub_unsub_all_forums:取消訂閱所有論壇
+sub_unsub_all_topics:取消訂閱的所有主題
+unbookmark_all_topics:刪除所有書籤
+tabs_own_posts:顯示自己的文章
+sml_emoticon:表情符號
+sml_code:代碼
+mnav_sub_only:只在已訂閱論壇搜尋
+register_topics_per_page:每頁的主題：
+login_min_time:本論壇允許前後兩次登入嘗試的時間間隔是 {VAR: MIN_TIME_BETWEEN_LOGIN} 秒，請等待 {FUNC: ($usr_d->last_login + $MIN_TIME_BETWEEN_LOGIN - __request_timestamp__)} 秒後再嘗試。
+post_not_logged_in:您目前尚未登錄，將以匿名方式來發佈訊息。
+post_common_bold:粗體
+post_common_italics:斜體
+post_common_underline:底線
+post_common_align_left:靠左對齊
+post_common_align_center:居中對齊
+post_common_align_right:右對齊
+post_common_link:插入連結
+post_common_link_popup:連結位置：
+post_common_email:插入電子郵件地址
+post_common_email_popup:電子郵件地址：
+post_common_image:插入圖片
+post_common_image_popup:圖像 URL：
+post_common_nlist:添加編號的清單
+post_common_blist:添加專案符號清單
+post_common_quote:添加引用
+post_common_code:添加代碼
+rating_delete:刪除
+post_always_on_top:讓主題永遠顯示在主題清單頂部
+topic_rating:{VAR: frm->rating}從 {PLURAL: frm->n_rating|   $1  vote| $1 票}
+topic_list_rating:{PLURAL: r[21]|$1 票|$1 票} 裡 {VAR: r[17]} 票
+tabs_notifications:通知
+finduser_flag:國旗
+post_descr:主題說明：
+pmsg_on:在
+pmsg_download_dump:下載訊息轉儲資料
+move_messages:移動訊息
+move_msg_btn:移動選定的郵件
+move_msg_th_expl:目標主題的指定 ID（可用在其它論壇）
+captcha_img_alt:驗證碼：您需要識別出在圖片裡的文字。
+captcha_img_help:圖片裡沒有零或一。
+powered-by:技術支援：FUDforum {GVAR: FORUM_VERSION}。
+copyright:版權所有 © 2001年-2020 年 <a href="http://fudforum.org/">FUDforum 留言板軟體</a>
+code_title:代碼：
+code_select_all:全選
+code_show_hide:顯示/隱藏
+social_sites:社群網站：
+postcheck_min_len_err:您的訊息太短。最小長度是 {PLURAL: post_min_len|$1 個字元| $1 個字元}。
+postcheck_dup_err:請不要創建重複的主題。
+btn_new_topic:新主題
+btn_new_pm:新私訊
+btn_post_reply:傳遞回覆
+btn_tree_view:樹狀檢視
+btn_flat_view:平面檢視
+btn_about:個人資料
+btn_small_pm:私訊
+btn_delete:刪除
+btn_edit:編輯
+btn_reply:答覆
+btn_forward:轉寄
+btn_quote:引用
+btn_email:電子郵件
+btn_show_posts:貼文
+btn_homepage:www
+feed_no_data:找不到符合的資料。
+feed_rdf:RDF源
+feed_rss:RSS2源
+feed_atom:ATOM源
+ip_whois_connect_err:無法連接到WHOIS伺服器（{VAR: whois_server}）：{VAR: errstr}
+custom_filed_required:此項是必需的。
+pages:頁面
+page_list_heading:可用頁面
+page_list_total:{PLURAL: i|$1頁 | $1 頁} 列出。
+page_update:流覽的頁面
+pm_export_header:私人訊息 {VAR: usr->alias}
+pm_export_footer:匯出：
+karma:積分
+karma_track:管理使用者的聲譽：
+karma_delete:刪除
+rate_author:給作者評分：
+blog_update:閱讀論壇部落格
+blog:部落格
+blog_new_members:新成員
+blog_new_posts:最近文章
+blog_rated_posts:最高評分
+blog_viewed_posts:最多閱覽
+blog_comments:{PLURAL: topic->replies|$1 個評論|$1 個評論}

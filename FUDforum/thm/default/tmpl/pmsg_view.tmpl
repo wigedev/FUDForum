@@ -1,0 +1,63 @@
+/**
+* copyright            : (C) 2001-2018 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: pmsg_view.tmpl 6244 2019-02-10 07:07:03Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{PHP_FILE: input: pmsg_view.php.t; output: pmsg_view.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: get_cur_ppage.tmpl}
+{REF: drawpmsg.tmpl}
+{REF: allowed_user_lnk.tmpl}
+{REF: fileio.tmpl}
+{REF: private.tmpl}
+{REF: tabs.tmpl}
+
+{PAGE: PMSG_PAGE form for viewing private messages}
+{TEMPLATE: header}
+{TEMPLATE: usercp}
+{FUNC: tmpl_cur_ppage($m->fldr, $folders, $m->subject)}
+{TEMPLATE-DATA: tabs}
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+<tr>
+	<th colspan="2">{MSG: msg_author}</th>
+	{FUNC: tmpl_drawpmsg($m, $usr, false)}
+</table>
+{TEMPLATE: curtime}
+{TEMPLATE-DATA: page_stats}
+<script>
+	min_max_posts('{THEME_IMAGE_ROOT}', '{MSG: minimize_message}', '{MSG: maximize_message}');
+	format_code('{MSG: code_title}', '{MSG: code_select_all}', '{MSG: code_show_hide}');
+</script>
+{TEMPLATE: footer}
+{PAGE: END}
+
+{SECTION: pm_err_nopm_title}
+{MSG: pm_err_nopm_title}
+{SECTION: END}
+
+{SECTION: pm_err_nopm_msg}
+{MSG: pm_err_nopm_msg}
+{SECTION: END}
+
+{SECTION: pm_update}
+{MSG: pm_update}
+{SECTION: END}
+
+{SECTION: private_msg_notify_subj}
+{MSG: private_msg_notify_subj}
+{SECTION: END}
+
+{SECTION: private_msg_notify_body}
+{MSG: private_msg_notify_body}
+{SECTION: END}

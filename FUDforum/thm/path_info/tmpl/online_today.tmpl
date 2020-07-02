@@ -1,0 +1,41 @@
+/**
+* copyright            : (C) 2001-2017 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: online_today.tmpl 6078 2017-09-25 14:57:31Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; version 2 of the License. 
+**/
+
+{PHP_FILE: input: online_today.php.t; output: online_today.php;}
+{REF: security.tmpl}
+{REF: admincp.tmpl}
+{REF: header.tmpl}
+{REF: footer.tmpl}
+{REF: curtime.tmpl}
+{REF: usercp.tmpl}
+{REF: stats.tmpl}
+{REF: alt_var.tmpl}
+{REF: ulink.tmpl}
+
+{SECTION: online_today_lnk}
+{ROOT}/ot/{FUNC: get_random_value()}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: online_today_last_post_lnk}
+{ROOT}/m/{VAR: r[5]}/{DEF: _rsid}#msg_{VAR: r[5]}
+{SECTION: END}
+
+{SECTION: reg_user_link_lnk}
+{ROOT}/u/{VAR: r[2]}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: online_today_sort_alias_lnk}
+{ROOT}/ot/alias/{IF: $o=='u.alias' && $s=='ASC'}d{ELSE}a{END}/{DEF: _rsid}
+{SECTION: END}
+
+{SECTION: online_today_sort_time_lnk}
+{ROOT}/ot/last_visit/{IF: $o=='u.last_visit' && $s=='ASC'}d{ELSE}a{END}/{DEF: _rsid}
+{SECTION: END}
+

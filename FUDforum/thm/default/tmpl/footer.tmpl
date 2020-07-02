@@ -1,0 +1,38 @@
+/**
+* copyright            : (C) 2001-2011 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: footer.tmpl 5325 2011-07-15 14:14:17Z naudefj $
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; version 2 of the License.
+**/
+
+{MAIN_SECTION: footer // The forum's footer.}
+{IF: !empty($RIGHT_SIDEBAR)}
+</td><td width="200px" align-"right" valign="top" class="sidebar-right">
+	{VAR: RIGHT_SIDEBAR}
+{ENDIF}
+</td></tr></table>
+
+</div>
+<div class="footer ac">
+	<b>.::</b>
+	<a href="mailto:{GVAR: ADMIN_EMAIL}">{MSG: forum_contact}</a>
+	<b>::</b>
+	<a href="{TEMPLATE: footer_lnk}">{MSG: forum_home}</a>
+	<b>::.</b>
+	<p class="SmallText">{MSG: powered-by}<br />{MSG: copyright}</p>
+</div>
+{INJECTION_POINT: right_block}
+</body></html>
+{MAIN_SECTION: END}
+
+{MAIN_SECTION: footer_plain // Yet another footer for plain pages such as popups.}
+</div>
+</body></html>
+{MAIN_SECTION: END}
+
+{SECTION: footer_lnk // Link to forum's Home Page.}
+{ROOT}?t=index&amp;{DEF: _rsid}
+{SECTION: END}
