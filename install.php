@@ -1264,7 +1264,7 @@ switch ($section) {
 		if (count($db_types) > 1) {
 			sel_row('Database Type', 'DBHOST_DBTYPE', implode("\n", $db_types), implode("\n", array_keys($db_types)), 'Type of database to store FUDforum data in.', (isset($_POST['DBHOST_DBTYPE']) ? $_POST['DBHOST_DBTYPE'] : 'mysqli'));
 		} else {
-			echo '<tr class="field"><td valign="top"><b>Database Type</b></td><td><input type="hidden" name="DBHOST_DBTYPE" value="'. key($db_types) .'" />Using '. current($db_types) .'</td></tr>';
+			echo '<tr class="field"><td valign="top"><b>DB Type</b></td><td><input type="hidden" name="DBHOST_DBTYPE" value="'. key($db_types) .'" />Using '. current($db_types) .'</td></tr>';
 		}
 
 		if (isset($_POST['DBHOST'])) {

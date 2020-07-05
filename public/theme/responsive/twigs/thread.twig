@@ -1,0 +1,161 @@
+{% extends layout__file %}
+{% block head %}
+{% endblock %}
+{% block content %}
+                <?php echo $admin_cp; ?>
+                <?php echo draw_forum_path($frm->cat_id, $frm->name); ?>
+                <?php echo $announcements; ?>
+                <?php echo (!$frm_id || ($frm_id && !empty($forum_list_table_data)) ? '
+<table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th colspan="3" class="wa">Forum</th>
+            <th class="nw hide1">Messages</th>
+            <th class="nw hide1">Topics</th>
+            <th class="nw ac hide2">Last message</th>
+        </tr>
+        '.$forum_list_table_data.'
+    </table>
+    ' : ''); ?>
+    <div class="wa">
+        <div class="rel fl" style="left:0;">
+		<span id="ShowLinks">
+<span class="GenText fb">Show:</span>
+<a href="/index.php?t=selmsg&amp;date=today&amp;<?php echo _rsid; ?>&amp;frm_id=<?php echo (isset($frm->forum_id) ? $frm->forum_id.'' : $frm->id.'' )  .'&amp;th='.$th.'"
+        title="Show all messages that were posted today" rel="nofollow">Today&#39;s Messages</a>
+'.(_uid ? '<b>::</b> <a
+                    href="/index.php?t=selmsg&amp;unread=1&amp;'._rsid.'&amp;frm_id='.(isset($frm->forum_id) ? $frm->forum_id.'' : $frm->id.'' )  .'"
+                    title="Show all unread messages" rel="nofollow">Unread Messages</a>&nbsp;' : ''); ?>
+            <?php echo (!$th ? '<b>::</b> <a
+                    href="/index.php?t=selmsg&amp;reply_count=0&amp;'._rsid.'&amp;frm_id='.(isset($frm->forum_id) ? $frm->forum_id.'' : $frm->id.'' )  .'"
+                    title="Show all messages, which have no replies" rel="nofollow">Unanswered Messages</a>&nbsp;' : ''); ?>
+<b>::</b> <a href="/index.php?t=polllist&amp;<?php echo _rsid; ?>" rel="nofollow">Polls</a>
+<b>::</b> <a href="/index.php?t=mnav&amp;<?php echo _rsid; ?>" rel="nofollow">Message Navigator</a>
+</span>
+            <?php echo (_uid ? '
+			<br />
+            '.($frm->subscribed ? '
+            <a href="/index.php?t='.$_GET['t'].'&amp;unsub=1&amp;frm_id='.$frm->id.'&amp;start='.$start.'&amp;'._rsid.'&amp;SQ='.$GLOBALS['sq'].'"
+                    title="Stop receiving notifications about new topics in the forum">Unsubscribe</a>
+            ' : '
+            <a href="/index.php?t='.$_GET['t'].'&amp;sub=1&amp;frm_id='.$frm->id.'&amp;start='.$start.'&amp;'._rsid.'&amp;SQ='.$GLOBALS['sq'].'"
+                    title="Receive notifications when someone creates a new topic in this forum">Subscribe</a>
+            ' ) .'
+            ' : ''); ?>
+            <?php echo ((_uid && ($MOD || $frm->group_cache_opt & 2048)) ? '
+            &nbsp;<a href="/index.php?t=merge_th&amp;frm_id='.$frm->id.'&amp;'._rsid.'">Merge Topics</a>
+            ' : ''); ?>
+        </div>
+        <div class="rel GenText nw vt fr" style="right:0;">
+            <?php echo ($FUD_OPT_2 & 512 ? '<a href="/index.php?t=threadt&amp;frm_id='.$frm->id.'&amp;'._rsid.'"><img
+                    title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic"
+                    src="/theme/responsive/images/tree_view.gif"/></a>&nbsp;' : ''); ?>
+            <a href="/index.php?t=post&amp;frm_id=<?php echo $frm->id; ?>&amp;<?php echo _rsid; ?>"><img
+                        src="/theme/responsive/images/new_thread.gif" alt="Create a new topic"/></a>
+        </div>
+    </div>
+    <br/>
+    <!-- table class="wa" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="al wa"><span id="ShowLinks">
+    <span class="GenText fb">Show:</span>
+    <a href="/index.php?t=selmsg&amp;date=today&amp;<?php echo _rsid; ?>&amp;frm_id=<?php echo (isset($frm->forum_id) ? $frm->forum_id.'' : $frm->id.'' )  .'&amp;th='.$th.'" title="Show all messages that were posted today" rel="nofollow">Today&#39;s Messages</a>
+    '.(_uid ? '<b>::</b> <a href="/index.php?t=selmsg&amp;unread=1&amp;'._rsid.'&amp;frm_id='.(isset($frm->forum_id) ? $frm->forum_id.'' : $frm->id.'' )  .'" title="Show all unread messages" rel="nofollow">Unread Messages</a>&nbsp;' : ''); ?>
+    <?php echo (!$th ? '<b>::</b> <a href="/index.php?t=selmsg&amp;reply_count=0&amp;'._rsid.'&amp;frm_id='.(isset($frm->forum_id) ? $frm->forum_id.'' : $frm->id.'' )  .'" title="Show all messages, which have no replies" rel="nofollow">Unanswered Messages</a>&nbsp;' : ''); ?>
+    <b>::</b> <a href="/index.php?t=polllist&amp;<?php echo _rsid; ?>" rel="nofollow">Polls</a>
+    <b>::</b> <a href="/index.php?t=mnav&amp;<?php echo _rsid; ?>" rel="nofollow">Message Navigator</a>
+    </span><?php echo (_uid ? '<br />'.($frm->subscribed ? '<a href="/index.php?t='.$_GET['t'].'&amp;unsub=1&amp;frm_id='.$frm->id.'&amp;start='.$start.'&amp;'._rsid.'&amp;SQ='.$GLOBALS['sq'].'" title="Stop receiving notifications about new topics in the forum">Unsubscribe</a>' : '<a href="/index.php?t='.$_GET['t'].'&amp;sub=1&amp;frm_id='.$frm->id.'&amp;start='.$start.'&amp;'._rsid.'&amp;SQ='.$GLOBALS['sq'].'" title="Receive notifications when someone creates a new topic in this forum">Subscribe</a>' )  : '' ) .((_uid && ($MOD || $frm->group_cache_opt & 2048)) ? '&nbsp;<a href="/index.php?t=merge_th&amp;frm_id='.$frm->id.'&amp;'._rsid.'">Merge Topics</a>' : ''); ?></td>
+            <td class="GenText nw vb ar"><?php echo ($FUD_OPT_2 & 512 ? '<a href="/index.php?t=threadt&amp;frm_id='.$frm->id.'&amp;'._rsid.'"><img title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic" src="/theme/responsive/images/tree_view.gif" /></a>&nbsp;' : ''); ?><a href="/index.php?t=post&amp;frm_id=<?php echo $frm->id; ?>&amp;<?php echo _rsid; ?>"><img src="/theme/responsive/images/new_thread.gif" alt="Create a new topic" /></a></td>
+        </tr>
+    </table-->
+    <?php echo ($MOD || $mo == 8224 ? '<form method="post" action="/index.php?t=mmd">' : ''); ?>
+    <table border="0" cellspacing="1" cellpadding="2" class="clear pad">
+        <tr>
+            <th class="hide2">&nbsp;</th>
+            <th class="hide2">&nbsp;</th>
+            <th class="wa">Topic</th>
+            <th class="wo hide1">Replies</th>
+            <th class="wo hide1">Views</th>
+            <th class="nw hide2">Last message</th>
+        </tr>
+        <?php echo ($MOD || $mo == 8224 ? '
+<tr>
+        <td colspan="3" class="RowStyleC ar">
+            <input type="submit" class="button small" name="del_sel_all" value="Delete selected"/>
+            <input type="submit" class="button small" name="mov_sel_all" value="Move Selected"/>
+            <input type="submit" class="button small" name="merge_sel_all" value="Merge Selected"/>
+            <input type="submit" class="button small" name="loc_sel_all" value="Lock/Unlock Selected"/>
+            <input type="checkbox" name="toggle" title="Select all/none"
+                    onclick="jQuery(\'input:checkbox\').prop(\'checked\', this.checked);"/>
+        </td>
+        <td colspan="3" class="RowStyleC hide2"></td>
+        </tr>
+        ' : ''); ?>
+        <?php echo $thread_list_table_data; ?>
+        <?php echo ($MOD || $mo == 8224 ? '
+<tr>
+        <td colspan="3" class="RowStyleC ar">
+            <input type="submit" class="button small" name="del_sel_all" value="Delete selected"/>
+            <input type="submit" class="button small" name="mov_sel_all" value="Move Selected"/>
+            <input type="submit" class="button small" name="merge_sel_all" value="Merge Selected"/>
+            <input type="submit" class="button small" name="loc_sel_all" value="Lock/Unlock Selected"/>
+            <input type="checkbox" name="toggle" title="Select all/none"
+                    onclick="jQuery(\'input:checkbox\').prop(\'checked\', this.checked);"/>
+        </td>
+        <td colspan="3" class="RowStyleC hide2"></td>
+        </tr>
+        ' : ''); ?>
+    </table><?php echo ($MOD || $mo == 8224 ? _hs.'</form>' : ''); ?>
+    <table border="0" cellspacing="0" cellpadding="0" class="wa">
+        <tr>
+            <td class="vt"><?php echo $page_pager; ?>&nbsp;</td>
+            <td class="GenText nw vb ar"><?php echo ($FUD_OPT_2 & 512 ? '<a href="/index.php?t=threadt&amp;frm_id='.$frm->
+                id.'&amp;'._rsid.'"><img title="Switch to threaded view of this topic"
+                        alt="Switch to threaded view of this topic" src="/theme/responsive/images/tree_view.gif"/></a>&nbsp;'
+                : ''); ?><a href="/index.php?t=post&amp;frm_id=<?php echo $frm->id; ?>&amp;<?php echo _rsid; ?>"><img
+                            src="/theme/responsive/images/new_thread.gif" alt="Create a new topic"/></a></td>
+        </tr>
+    </table>
+    <?php echo tmpl_create_forum_select((isset($frm->forum_id) ? $frm->forum_id : $frm->id), $usr->users_opt & 1048576); ?>
+    <?php echo (_uid ? '
+	<div class="ar SmallText">[ <a
+        href="/index.php?t=markread&amp;'._rsid.'&amp;id='.$frm->id.'&amp;SQ='.$GLOBALS['sq'].'"
+        title="All unread messages in this forum will be marked read">Mark all unread forum messages
+    read</a> ]'.($FUD_OPT_2 & 1048576 ? '&nbsp;[ <a href="/index.php?t=help_index&amp;section=boardusage#syndicate">Syndicate
+    this forum (XML)</a> ]
+    [ <a href="/feed.php?mode=m&amp;l=1&amp;basic=1&amp;frm='.$frm->id.'&amp;n=10"><img
+            src="/theme/responsive/images/rss.gif" title="Syndicate this forum (XML)"
+            alt="RSS"/></a> ]' : '' ) .(($FUD_OPT_2 & 270532608) == 270532608 ? '&nbsp;[ <a
+        href="/pdf.php?frm='.$frm->id.'&amp;page='.$cur_frm_page.'&amp;'._rsid.'"><img
+            src="/theme/responsive/images/pdf.gif" title="Generate printable PDF" alt="PDF"/></a> ]' : '' )  .'</div>
+    ' : '
+    <div class="ar SmallText">'.(($FUD_OPT_2 & 270532608) == 270532608 ? '&nbsp;[ <a
+                href="/pdf.php?frm='.$frm->id.'&amp;page='.$cur_frm_page.'&amp;'._rsid.'"><img
+                    src="/theme/responsive/images/pdf.gif" title="Generate printable PDF" alt="PDF"/></a> ]' : '' )
+        .($FUD_OPT_2 & 1048576 ? '&nbsp;[ <a href="/index.php?t=help_index&amp;section=boardusage#syndicate">Syndicate
+            this forum (XML)</a> ]
+        [ <a href="/feed.php?mode=m&amp;l=1&amp;basic=1&amp;frm='.$frm->id.'&amp;n=10"><img
+                    src="/theme/responsive/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]' : '' )
+        .'
+    </div>
+    '); ?>
+    <fieldset>
+        <legend>Legend</legend>
+        <img src="/theme/responsive/images/unread.png" alt="New Messages"/>&nbsp;New Messages&nbsp;&nbsp;
+        <img src="/theme/responsive/images/read.png" alt="No New messages"/>&nbsp;No New messages&nbsp;&nbsp;
+        <img src="/theme/responsive/images/unreadlocked.png" alt="Locked (w/ unread messages)"/>&nbsp;Locked (w/ unread
+        messages)&nbsp;&nbsp;
+        <img src="/theme/responsive/images/readlocked.png" alt="Locked"/>&nbsp;Locked&nbsp;&nbsp;
+        <img src="/theme/responsive/images/moved.png" alt="Moved to another forum"/>&nbsp;Moved to another forum
+    </fieldset>
+    <br/>
+    <div class="ac"><span
+                class="curtime"><b>Current Time:</b> <?php echo strftime('%a %b %d %H:%M:%S %Z %Y', __request_timestamp__); ?></span>
+    </div>
+    <?php echo $page_stats; ?>
+    <?php echo (!empty($RIGHT_SIDEBAR) ? '
+</td>
+    <td width="200px" align-"right" valign="top" class="sidebar-right">
+    '.$RIGHT_SIDEBAR.'
+    ' : ''); ?>
+    </td></tr></table>
+{% endblock %}

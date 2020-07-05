@@ -9,7 +9,6 @@
  * Free Software Foundation; version 2 of the License.
  **/
 
-echo '<h1>Hello Hello Hello</h1>';
 if (_uid === '_uid') {
     exit('Sorry, you can not access this page.');
 }
@@ -40,7 +39,7 @@ if ($cat_id) {
             '</a>' .
             $cat_path;
     }
-    $cat_path = '<br />
+    $variables['cat_path'] = $cat_path = '<br />
 <a href="/index.php?t=i&amp;' . _rsid . '">Home</a>
 ' . $cat_path . '&nbsp;&raquo; <b>' . $cidxc[$cat_id][1] . '</b>';
 }
@@ -724,234 +723,14 @@ if ($FUD_OPT_1 & 1073741824 || $FUD_OPT_2 & 16) {
 }
 if ($FUD_OPT_2 & 2 || $is_a) {    // PUBLIC_STATS is enabled or Admin user.
     $page_gen_time = number_format(microtime(true) - __request_timestamp_exact__, 5);
-    $page_stats = $FUD_OPT_2 & 2 ? '<br /><div class="SmallText al">Total time taken to generate the page: ' .
+    $variables['page_stats'] = $FUD_OPT_2 & 2 ? '<br /><div class="SmallText al">Total time taken to generate the page: ' .
         convertPlural($page_gen_time, ['' . $page_gen_time . ' seconds']) .
         '</div>' : '<br /><div class="SmallText al">Total time taken to generate the page: ' .
         convertPlural($page_gen_time, ['' . $page_gen_time . ' seconds']) .
         '</div>';
 } else {
-    $page_stats = '';
+    $variables['page_stats'] = '';
 }
+$variables['RSS'] = $RSS;
+$variables['TITLE_EXTRA'] = $TITLE_EXTRA;
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description"
-        content="<?php echo(!empty($META_DESCR) ? $META_DESCR . '' : $GLOBALS['FORUM_DESCR'] . ''); ?>"/>
-    <title><?php echo $GLOBALS['FORUM_TITLE'] . $TITLE_EXTRA; ?></title>
-    <link rel="search" type="application/opensearchdescription+xml"
-        title="<?php echo $GLOBALS['FORUM_TITLE']; ?> Search" href="/open_search.php"/>
-    <?php echo $RSS; ?>
-    <link rel="stylesheet" href="/theme/responsive/forum.css" media="screen" title="Default Forum Theme"/>
-    <link rel="stylesheet" href="/js/ui/jquery-ui.css" media="screen"/>
-    <script src="/js/jquery.js"></script>
-    <script async src="/js/ui/jquery-ui.js"></script>
-    <script src="/js/lib.js"></script>
-</head>
-<body>
-<!--  -->
-<div class="header">
-    <?php echo($GLOBALS['FUD_OPT_1'] & 1 && $GLOBALS['FUD_OPT_1'] & 16777216 ? '
-  <div class="headsearch">
-    <form id="headsearch" method="get" action="/index.php">' . _hs . '
-      <input type="hidden" name="t" value="search" />
-      <br /><label accesskey="f" title="Forum Search">Forum Search:<br />
-      <input type="search" name="srch" value="" size="20" placeholder="Forum Search" /></label>
-      <input type="image" src="/theme/responsive/images/search.png" title="Search" name="btn_submit">&nbsp;
-    </form>
-  </div>
-  ' : ''); ?>
-    <a href="/" title="Home">
-        <img class="headimg" src="/theme/responsive/images/header.gif" alt="" align="left" height="80"/>
-        <span class="headtitle"><?php echo $GLOBALS['FORUM_TITLE']; ?></span>
-    </a><br/>
-    <span class="headdescr"><?php echo $GLOBALS['FORUM_DESCR']; ?><br/><br/></span>
-</div>
-<div class="content">
-
-    <!-- Table for sidebars. -->
-    <table width="100%">
-        <tr>
-            <td>
-                <div id="UserControlPanel">
-                    <ul>
-                        <?php echo $ucp_private_msg; ?>
-                        <?php echo($FUD_OPT_4 & 16 ? '<li><a href="/index.php?t=blog&amp;' .
-                            _rsid .
-                            '" title="Blog"><img src="/theme/responsive/images/blog.png" alt="" /> Blog</a></li>' : ''); ?>
-                        <?php echo($FUD_OPT_4 & 8 ? '<li><a href="/index.php?t=page&amp;' .
-                            _rsid .
-                            '" title="Pages"><img src="/theme/responsive/images/pages.png" alt="" /> Pages</a></li>' : ''); ?>
-                        <?php echo($FUD_OPT_3 & 134217728 ? '<li><a href="/index.php?t=cal&amp;' .
-                            _rsid .
-                            '" title="Calendar"><img src="/theme/responsive/images/calendar.png" alt="" /> Calendar</a></li>' : ''); ?>
-                        <?php echo($FUD_OPT_1 & 16777216 ? ' <li><a href="/index.php?t=search' .
-                            (isset($frm->forum_id) ? '&amp;forum_limiter=' . (int)$frm->forum_id . '' : '') .
-                            '&amp;' .
-                            _rsid .
-                            '" title="Search"><img src="/theme/responsive/images/top_search.png" alt="" /> Search</a></li>' : ''); ?>
-                        <li><a accesskey="h" href="/index.php?t=help_index&amp;<?php echo _rsid; ?>" title="Help"><img
-                                    src="/theme/responsive/images/top_help.png" alt=""/> Help</a></li>
-                        <?php echo(($FUD_OPT_1 & 8388608 ||
-                            (_uid && $FUD_OPT_1 & 4194304) ||
-                            $usr->users_opt & 1048576) ? '<li><a href="/index.php?t=finduser&amp;btn_submit=Find&amp;' .
-                            _rsid .
-                            '" title="Members"><img src="/theme/responsive/images/top_members.png" alt="" /> Members</a></li>' : ''); ?>
-                        <?php echo (__fud_real_user__ ? '<li><a href="/index.php?t=uc&amp;' .
-                                _rsid .
-                                '" title="Access the user control panel"><img src="/theme/responsive/images/top_profile.png" alt="" /> Control Panel</a></li>' : ($FUD_OPT_1 &
-                            2 ? '<li><a href="/index.php?t=register&amp;' .
-                                _rsid .
-                                '" title="Register"><img src="/theme/responsive/images/top_register.png" alt="" /> Register</a></li>' : '')) .
-                            '
-	' .
-                            (__fud_real_user__ ? '<li><a href="/index.php?t=login&amp;' .
-                                _rsid .
-                                '&amp;logout=1&amp;SQ=' .
-                                $GLOBALS['sq'] .
-                                '" title="Logout"><img src="/theme/responsive/images/top_logout.png" alt="" /> Logout [ ' .
-                                htmlspecialchars($usr->alias, null, null, false) .
-                                ' ]</a></li>' : '<li><a href="/index.php?t=login&amp;' .
-                                _rsid .
-                                '" title="Login"><img src="/theme/responsive/images/top_login.png" alt="" /> Login</a></li>'); ?>
-                        <li><a href="/index.php?t=index&amp;<?php echo _rsid; ?>" title="Home"><img
-                                    src="/theme/responsive/images/top_home.png" alt=""/> Home</a></li>
-                        <?php echo($is_a || ($usr->users_opt & 268435456) ? '<li><a href="/adm/index.php?S=' .
-                            s .
-                            '&amp;SQ=' .
-                            $GLOBALS['sq'] .
-                            '" title="Administration"><img src="/theme/responsive/images/top_admin.png" alt="" /> Administration</a></li>' : ''); ?>
-                    </ul>
-                </div>
-                <?php echo(_uid ? '<span class="GenText">Welcome <b>' .
-                    $usr->alias .
-                    '</b>, your last visit was on ' .
-                    strftime('%a, %d %B %Y %H:%M', $usr->last_visit) .
-                    '</span><br />' : ''); ?>
-                <span id="ShowLinks">
-<span class="GenText fb">Show:</span>
-<a href="/index.php?t=selmsg&amp;date=today&amp;<?php echo _rsid; ?>&amp;frm_id=<?php echo (isset($frm->forum_id) ? $frm->forum_id .
-        '' : $frm->id . '') .
-    '&amp;th=' .
-    $th .
-    '" title="Show all messages that were posted today" rel="nofollow">Today&#39;s Messages</a>
-' .
-    (_uid ? '<b>::</b> <a href="/index.php?t=selmsg&amp;unread=1&amp;' .
-        _rsid .
-        '&amp;frm_id=' .
-        (isset($frm->forum_id) ? $frm->forum_id . '' : $frm->id . '') .
-        '" title="Show all unread messages" rel="nofollow">Unread Messages</a>&nbsp;' : ''); ?>
-<?php echo(!$th ? '<b>::</b> <a href="/index.php?t=selmsg&amp;reply_count=0&amp;' .
-    _rsid .
-    '&amp;frm_id=' .
-    (isset($frm->forum_id) ? $frm->forum_id . '' : $frm->id . '') .
-    '" title="Show all messages, which have no replies" rel="nofollow">Unanswered Messages</a>&nbsp;' : ''); ?>
-<b>::</b> <a href="/index.php?t=polllist&amp;<?php echo _rsid; ?>" rel="nofollow">Polls</a>
-                    <b>::</b> <a href="/index.php?t=mnav&amp;<?php echo _rsid; ?>" rel="nofollow">Message Navigator</a>
-</span><?php echo $admin_cp; ?>
-                <?php echo $cat_path; ?>
-
-                <?php echo $announcements; ?>
-                <?php echo(!$frm_id || ($frm_id && !empty($forum_list_table_data)) ? '
-<table cellspacing="1" cellpadding="2" class="ContentTable">
-<tr>
-	<th colspan="3" class="wa">Forum</th>
-	<th class="nw hide1">Messages</th>
-	<th class="nw hide1">Topics</th>
-	<th class="nw ac hide2">Last message</th>
-</tr>
-	' . $forum_list_table_data . '
-</table>
-' : ''); ?>
-                <?php echo(_uid ? '<div class="SmallText ar">[ <a href="/index.php?t=markread&amp;' .
-                    _rsid .
-                    '&amp;SQ=' .
-                    $GLOBALS['sq'] .
-                    '&amp;cat=' .
-                    $cat_id .
-                    '" title="All your unread messages will be marked as read">Mark all messages read</a> ]
-' .
-                    ($FUD_OPT_2 &
-                    1048576 ? '[ <a href="/feed.php?mode=m&amp;l=1&amp;basic=1"><img src="/theme/responsive/images/rss.gif" title="Syndicate this forum (XML)" alt="Syndicate this forum (XML)"/></a> ]' : '') .
-                    '
-</div>' : ''); ?>
-                <?php echo(__fud_real_user__ ? '' : '<div class="fr">
-<form id="quick_login_form" method="post" action="/index.php?t=login"' .
-                    ($GLOBALS['FUD_OPT_3'] & 256 ? ' autocomplete="off"' : '') .
-                    '>
-' .
-                    _hs .
-                    '
-<table border="0" cellspacing="0" cellpadding="3">
-<tr class="SmallText">
-	<td>
-		<label>Login:<br />
-		<input class="SmallText" type="text" name="quick_login" size="18" /></label>
-	</td>
-	<td>
-		<label>Password:<br />
-		<input class="SmallText" type="password" name="quick_password" size="18" /></label>
-	</td>
-	' .
-                    ($FUD_OPT_1 & 128 ? '<td>
-	&nbsp;<br />
-	<label><input type="checkbox" checked="checked" name="quick_use_cookies" value="1" /> Use Cookies?</label>
-</td>' : '') .
-                    '
-	<td>
-		&nbsp;<br />
-		<input type="submit" class="button" name="quick_login_submit" value="Login" />
-	</td>
-</tr>
-</table>
-</form>
-</div>'); ?>
-                <?php echo($logedin || $forum_info ? '<br />
-<table cellspacing="1" cellpadding="2" class="ContentTable">
-	' . $logedin . '
-	' . $forum_info . '
-</table>' : ''); ?>
-                <br/>
-                <fieldset>
-                    <legend>Legend</legend>
-                    <img src="/theme/responsive/images/new_content.png" alt="New messages since last read"/> New
-                    messages since last read&nbsp;&nbsp;
-                    <img src="/theme/responsive/images/existing_content.png" alt="No new messages since last read"/> No
-                    new messages since last read&nbsp;&nbsp;
-                    <img src="/theme/responsive/images/moved.png" alt="Redirection"/> Redirection
-                </fieldset>
-                <div><br/></div>
-                <br/>
-                <div class="ac"><span class="curtime"><b>Current Time:</b> <?php echo strftime(
-                            '%a %b %d %H:%M:%S %Z %Y',
-                            __request_timestamp__
-                        ); ?></span></div>
-                <?php echo $page_stats; ?>
-                <script>
-                    min_max_cats("/theme/responsive/images", "Minimize Category", "Maximize Category", "<?php echo $usr->sq; ?>", "<?php echo s; ?>");
-                </script>
-                <?php echo(!empty($RIGHT_SIDEBAR) ? '
-</td><td width="200px" align-"right" valign="top" class="sidebar-right">
-	' . $RIGHT_SIDEBAR . '
-' : ''); ?>
-            </td>
-        </tr>
-    </table>
-
-</div>
-<div class="footer ac">
-    <b>.::</b>
-    <a href="mailto:<?php echo $GLOBALS['ADMIN_EMAIL']; ?>">Contact</a>
-    <b>::</b>
-    <a href="/index.php?t=index&amp;<?php echo _rsid; ?>">Home</a>
-    <b>::.</b>
-    <p class="SmallText">Powered by: FUDforum <?php echo $GLOBALS['FORUM_VERSION']; ?>.<br/>Copyright &copy;2001-2020 <a
-            href="http://fudforum.org/">FUDforum Bulletin Board Software</a></p>
-</div>
-
-</body>
-</html>
-
-

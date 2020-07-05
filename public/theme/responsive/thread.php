@@ -767,6 +767,7 @@ if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
 } else {
 	$page_stats = '';
 }
+$variables['ucp_private_msg'] = $ucp_private_msg;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

@@ -1,45 +1,8 @@
 {% extends layout__file %}
 {% block head %}
+    {{ parent() }}
 {% endblock %}
 {% block content %}
-    <table width="100%">
-    <tr>
-    <td>
-    <div id="UserControlPanel">
-        <ul>
-            {{ ucp_private_msg }}
-            <li><a href="/index.php?t=blog" title="Blog"><img src="/theme/responsive/images/blog.png" alt=""/> Blog</a>
-            </li>
-            ?>
-            <li><a href="/index.php?t=page" title="Pages"><img src="/theme/responsive/images/pages.png" alt=""/>
-                    Pages</a></li>
-            <li><a href="/index.php?t=cal" title="Calendar"><img src="/theme/responsive/images/calendar.png" alt=""/>
-                    Calendar</a></li>
-            <li><a href="/index.php?t=search" title="Search"><img src="/theme/responsive/images/top_search.png" alt=""/>
-                    Search</a></li>
-            <li><a accesskey="h" href="/index.php?t=help_index" title="Help"><img
-                            src="/theme/responsive/images/top_help.png" alt=""/> Help</a></li>
-            <li><a href="/index.php?t=finduser&amp;btn_submit=Find" title="Members">
-                    <img src="/theme/responsive/images/top_members.png" alt=""/> Members</a></li>
-            {% if loggedIn == true %}
-                <li><a href="/index.php?t=uc" title="Access the user control panel">
-                        <img src="/theme/responsive/images/top_profile.png" alt=""/> Control Panel</a></li>
-            {% else %}
-                <li><a href="/index.php?t=register" title="Register">
-                        <img src="/theme/responsive/images/top_register.png" alt=""/>Register</a></li>
-            {% endif %}
-            <li><a href="/index.php?t=index" title="Home"><img
-                            src="/theme/responsive/images/top_home.png" alt=""/> Home</a></li>
-        </ul>
-    </div>
-    <span id="ShowLinks">
-<span class="GenText fb">Show:</span>
-<a href="/index.php?t=selmsg&amp;date=today&amp;frm_id={{ forum_id }}&amp;th={{ th }}"
-        title="Show all messages that were posted today" rel="nofollow">Today&#39;s Messages</a>
-<b>::</b> <a href="/index.php?t=polllist" rel="nofollow">Polls</a>
-                    <b>::</b> <a href="/index.php?t=mnav" rel="nofollow">Message Navigator</a>
-</span>
-    {{ announcements }}
     {% if not frm_id or (frm_id and forum_list_table_data) %}
         <table cellspacing="1" cellpadding="2" class="ContentTable">
             <tr>
@@ -48,7 +11,7 @@
                 <th class="nw hide1">Topics</th>
                 <th class="nw ac hide2">Last message</th>
             </tr>
-            {{ forum_list_table_data }}
+            {{ forum_list_table_data|raw }}
         </table>
     {% endif %}
 {% endblock %}

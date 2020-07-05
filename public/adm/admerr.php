@@ -16,7 +16,7 @@ function format_err($err)
 	// Link to view files.
 	$err = preg_replace('#('. $GLOBALS['ERROR_PATH'] .')(.*[\\\/])*(\w+)#i', '<a href="admbrowse.php?view=1&dest=$3&cur=$1$2&'. __adm_rsid .'">$3</a>', $err);
 	// Highlight keywords.
-	$err = preg_replace('/(Query: |Database version: |_GET: |_POST: |\[.+?\] )/', '<span style="color:#396">\1</span>', $err);
+	$err = preg_replace('/(Query: |DB version: |_GET: |_POST: |\[.+?\] )/', '<span style="color:#396">\1</span>', $err);
 
 	return $err;
 }
