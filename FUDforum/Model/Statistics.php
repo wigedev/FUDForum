@@ -26,6 +26,7 @@ class Statistics
             'thread_exchange_count' => $this->getThreadExchangeRequestCount(),
             'account_approval_count' => $this->getAccountApprovalCount(),
             'moderation_count' => $this->getMessageApprovalCount(),
+            'private_message_count' => $this->getPrivateMessageCount(),
         ];
         // If all the values are null return an empty array
         foreach ($counts as $count) {
@@ -84,6 +85,15 @@ class Statistics
             return DB::i()->q_singleval('SELECT count(*) FROM fud30_msg m INNER JOIN fud30_thread t ON m.thread_id=t.id INNER JOIN fud30_forum f ON t.forum_id=f.id INNER JOIN fud30_mod mm ON f.id=mm.forum_id AND mm.user_id='. _uid. ' WHERE m.apr=0 AND f.forum_opt>=2');
         }
         return null;
+    }
+
+    protected function getPrivateMessageCount()
+    {
+        if (__fud_real_user__ && $this->variables['PRIVATE_MESSAGES_ENABLED']) {    // PM_ENABLED
+            return DB::i()->q_singleval('SELECT count(*) FROM fud30_pmsg WHERE duser_id=' . _uid . ' AND fldr=1 AND read_stamp=0');
+        } else {
+            return null;
+        }
     }
 
 

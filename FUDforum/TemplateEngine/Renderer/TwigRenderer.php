@@ -53,6 +53,10 @@ class TwigRenderer extends Renderer
         $variables['PAGES_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 8;
         $variables['CALENDAR_ENABLED'] = $GLOBALS['FUD_OPT_3']  & 134217728;
         $variables['SEARCH_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 16777216;
+        $variables['PRIVATE_MESSAGES_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 1024;
+        $variables['TREE_VIEW_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 512;
+        $variables['SYNDICATION_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 1048576;
+        $variables['PDF_ENABLED'] = (($GLOBALS['FUD_OPT_2'] & 270532608) == 270532608);
         $variables['SHOW_MEMBERS'] = ($GLOBALS['FUD_OPT_1'] & 8388608 || (_uid && $GLOBALS['FUD_OPT_1'] & 4194304) || $variables['usr']->users_opt & 1048576);
         $variables['SHOW_REGISTER'] = $GLOBALS['FUD_OPT_1'] & 2;
         $variables['IS_MANAGER'] = $variables['usr']->users_opt & 268435456;

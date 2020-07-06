@@ -5,9 +5,9 @@
             {% if TREE_VIEW_ENABLED %}
                 <a href="/index.php?t=threadt&amp;frm_id={{ frm.id }}">
                     <img title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic"
-                            src="/theme/responsive/images/tree_view.gif"/></a>&nbsp;
+                            src="/theme/twig/images/tree_view.gif"/></a>&nbsp;
             {% endif %}
-            <a href="/index.php?t=post&amp;frm_id={{ frm.id }}"><img src="/theme/responsive/images/new_thread.gif"
+            <a href="/index.php?t=post&amp;frm_id={{ frm.id }}"><img src="/theme/twig/images/new_thread.gif"
                         alt="Create a new topic"/></a>
         </div>
     {% endif %}
@@ -71,9 +71,9 @@
             {% if TREE_VIEW_ENABLED %}
                 <a href="/index.php?t=threadt&amp;frm_id={{ frm.id }}">
                     <img title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic"
-                            src="/theme/responsive/images/tree_view.gif"/></a>&nbsp;
+                            src="/theme/twig/images/tree_view.gif"/></a>&nbsp;
             {% endif %}
-            <a href="/index.php?t=post&amp;frm_id={{ frm.id }}"><img src="/theme/responsive/images/new_thread.gif"
+            <a href="/index.php?t=post&amp;frm_id={{ frm.id }}"><img src="/theme/twig/images/new_thread.gif"
                         alt="Create a new topic"/></a>
         </div>
     {% endif %}
@@ -86,11 +86,11 @@
                 &nbsp;[ <a href="/index.php?t=help_index&section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
                                                                                                                       [
                 <a href="/feed.php?mode=m&l=1&basic=1&frm={{ frm.id }}&n=10"><img
-                            src="/theme/responsive/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]
+                            src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]
             {% endif %}
             {% if PDF_ENABLED %}
                 [ <a href="/pdf.php?frm={{ frm.id }}&page={{ cur_frm_page }}">
-                <img src="/theme/responsive/images/pdf.gif" title="Generate printable PDF" alt="PDF"/>
+                <img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF"/>
             </a> ]
             {% endif %}
         </div>
@@ -98,14 +98,14 @@
         <div class="ar SmallText">
             {% if PDF_ENABLED %}
                 [ <a href="/pdf.php?frm={{ frm.id }}&page={{ cur_frm_page }}">
-                <img src="/theme/responsive/images/pdf.gif" title="Generate printable PDF" alt="PDF"/>
+                <img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF"/>
             </a> ]
             {% endif %}
             {% if SYNDICATION_ENABLED %}
                 &nbsp;[ <a href="/index.php?t=help_index&section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
                                                                                                                       [
                 <a href="/feed.php?mode=m&l=1&basic=1&frm={{ frm.id }}&n=10"><img
-                            src="/theme/responsive/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]
+                            src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]
             {% endif %}
         </div>
     {% endif %}

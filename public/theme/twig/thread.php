@@ -343,8 +343,8 @@ if ($frm->is_ann) {
 		<a href="/index.php?t=index&amp;cat='.$k.'&amp;'._rsid.'" class="CatLink">'.$i[1].'</a> '.$i[2].'
 	</td>
 	<td class="CatDesc hide1">
-	'.(key($cidxc) ? '<a href="javascript://" onclick=\'nextCat("c'.$k.'")\'><img src="/theme/responsive/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '' )  .'
-	'.($cat ? '<a href="javascript://" onclick=\'prevCat("c'.$k.'")\'><img src="/theme/responsive/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '' )  .'
+	'.(key($cidxc) ? '<a href="javascript://" onclick=\'nextCat("c'.$k.'")\'><img src="/theme/twig/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '' )  .'
+	'.($cat ? '<a href="javascript://" onclick=\'prevCat("c'.$k.'")\'><img src="/theme/twig/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '' )  .'
 </td>
 </tr>';
 			} else {
@@ -356,8 +356,8 @@ if ($frm->is_ann) {
 		<span class="CatLockedName"><a href="/index.php?t=index&amp;cat='.$k.'&amp;'._rsid.'" class="CatLink">'.$i[1].'</a></span> '.$i[2].'
 	</td>
 	<td class="CatDesc hide1">
-	'.(key($cidxc) ? '<a href="javascript://" onclick=\'nextCat("c'.$k.'")\'><img src="/theme/responsive/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '' )  .'
-	'.($cat ? '<a href="javascript://" onclick=\'prevCat("c'.$k.'")\'><img src="/theme/responsive/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '' )  .'
+	'.(key($cidxc) ? '<a href="javascript://" onclick=\'nextCat("c'.$k.'")\'><img src="/theme/twig/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '' )  .'
+	'.($cat ? '<a href="javascript://" onclick=\'prevCat("c'.$k.'")\'><img src="/theme/twig/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '' )  .'
 </td>
 </tr>';
 			}
@@ -384,11 +384,11 @@ if ($frm->is_ann) {
 		}
 
 		if (!_uid) { /* Anon user. */
-			$forum_read_indicator = '<img title="Only registered forum members can track read &amp; unread messages" src="/theme/responsive/images/existing_content.png" alt="Only registered forum members can track read &amp; unread messages" />';
+			$forum_read_indicator = '<img title="Only registered forum members can track read &amp; unread messages" src="/theme/twig/images/existing_content.png" alt="Only registered forum members can track read &amp; unread messages" />';
 		} else if ($r[15] < $r[2] && $usr->last_read < $r[2]) {
-			$forum_read_indicator = '<img title="New messages" src="/theme/responsive/images/new_content.png" alt="New messages" />';
+			$forum_read_indicator = '<img title="New messages" src="/theme/twig/images/new_content.png" alt="New messages" />';
 		} else {
-			$forum_read_indicator = '<img title="No new messages" src="/theme/responsive/images/existing_content.png" alt="No new messages" />';
+			$forum_read_indicator = '<img title="No new messages" src="/theme/twig/images/existing_content.png" alt="No new messages" />';
 		}
 
 		if ($r[9] && ($mods = unserialize($r[9]))) {
@@ -406,11 +406,11 @@ if ($frm->is_ann) {
 
 		$forum_list_table_data .= '<tr style="display: '.(empty($collapse[$cid]) ? 'table-row' : 'none' )  .'" class="row child-c'.$r[5].'">
 	<td class="RowStyleA wo hide2">'.($r[6] ? '<img src="/images/forum_icons/'.$r[6].'" alt="Forum Icon" />' : '&nbsp;' ) .'</td>
-	<td class="RowStyleB ac wo hide2">'.(empty($r[12]) ? $forum_read_indicator : '<img title="Redirection" src="/theme/responsive/images/moved.png" alt="" />' )  .'</td>
+	<td class="RowStyleB ac wo hide2">'.(empty($r[12]) ? $forum_read_indicator : '<img title="Redirection" src="/theme/twig/images/moved.png" alt="" />' )  .'</td>
 	<td class="RowStyleA wa"><a href="'.(empty($r[12]) ? '/index.php?t='.t_thread_view.'&amp;frm_id='.$r[7].'&amp;'._rsid : $r[12] )  .'" class="big">'.$r[10].'</a>'.($r[11] ? '<br />'.$r[11] : '').$moderators.'</td>
 	<td class="RowStyleB ac hide1">'.(empty($r[12]) ? $r[13] : '--' )  .'</td>
 	<td class="RowStyleB ac hide1">'.(empty($r[12]) ? $r[14] : '--' )  .'</td>
-	<td class="RowStyleA ac nw hide2">'.(empty($r[12]) ? ($r[8] ? '<span class="DateText">'.strftime('%a, %d %B %Y', $r[2]).'</span><br />By: '.($r[3] ? '<a href="/index.php?t=usrinfo&amp;id='.$r[3].'&amp;'._rsid.'">'.$r[4].'</a>' : $GLOBALS['ANON_NICK'] ) .' <a href="/index.php?t='.d_thread_view.'&amp;goto='.$r[8].'&amp;'._rsid.'#msg_'.$r[8].'"><img title="'.$r[0].'" src="/theme/responsive/images/goto.gif" alt="'.$r[0].'" /></a>' : 'n/a' )  : '--' )  .'</td>
+	<td class="RowStyleA ac nw hide2">'.(empty($r[12]) ? ($r[8] ? '<span class="DateText">'.strftime('%a, %d %B %Y', $r[2]).'</span><br />By: '.($r[3] ? '<a href="/index.php?t=usrinfo&amp;id='.$r[3].'&amp;'._rsid.'">'.$r[4].'</a>' : $GLOBALS['ANON_NICK'] ) .' <a href="/index.php?t='.d_thread_view.'&amp;goto='.$r[8].'&amp;'._rsid.'#msg_'.$r[8].'"><img title="'.$r[0].'" src="/theme/twig/images/goto.gif" alt="'.$r[0].'" /></a>' : 'n/a' )  : '--' )  .'</td>
 </tr>';
 	}
 	unset($c);
@@ -629,7 +629,7 @@ function draw_forum_path($cid, $fn='', $fid=0, $tn='')
 					continue;
 				}
 				$thread_list_table_data .= '<tr>
-	<td class="RowStyleB wo hide2"><img src="/theme/responsive/images/moved.png" title="This topic has been moved to another forum" alt="" /></td>
+	<td class="RowStyleB wo hide2"><img src="/theme/twig/images/moved.png" title="This topic has been moved to another forum" alt="" /></td>
 	<td class="RowStyleB ac GenText" colspan="5"><a href="/index.php?t='.d_thread_view.'&amp;goto='.$r[15].'&amp;'._rsid.'#msg_'.$r[15].'">'.$r[2].'</a> has been moved to <a href="/index.php?t='.t_thread_view.'&amp;frm_id='.$r[11].'&amp;'._rsid.'">'.$r[12].'</a> by the moderator.</td>
 </tr>';
 				continue;
@@ -649,24 +649,24 @@ function draw_forum_path($cid, $fn='', $fid=0, $tn='')
 					$mini_pager_data .= '&nbsp;<a href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;start='.($i * $ppg).'&amp;'._rsid.'">'.++$i.'</a>';
 				}
 
-				$mini_thread_pager = $mini_pager_data ? '<span class="SmallText">(<img src="/theme/responsive/images/pager.gif" alt="" />'.$mini_pager_data.')</span>' : '';
+				$mini_thread_pager = $mini_pager_data ? '<span class="SmallText">(<img src="/theme/twig/images/pager.gif" alt="" />'.$mini_pager_data.')</span>' : '';
 			} else {
 				$mini_thread_pager = '';
 			}
 
 			$thread_read_status = $first_unread_msg_link = '';
 			if (_uid && $usr->last_read < $r[10] && $r[10] > $r[20]) {
-				$thread_read_status = ($r[18] & 1) ? '<img src="/theme/responsive/images/unreadlocked.png" title="Locked topic with unread messages" alt="" />' : '<img src="/theme/responsive/images/unread.png" title="This topic contains messages you have not yet read" alt="" />';
+				$thread_read_status = ($r[18] & 1) ? '<img src="/theme/twig/images/unreadlocked.png" title="Locked topic with unread messages" alt="" />' : '<img src="/theme/twig/images/unread.png" title="This topic contains messages you have not yet read" alt="" />';
 				/* Do not show 1st unread message link if thread has no replies. */
 				if ($r[16]) {
-					$first_unread_msg_link = '<a href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;unread=1&amp;'._rsid.'"><img src="/theme/responsive/images/newposts.gif" title="Go to the first unread message in this topic" alt="" /></a>&nbsp;';
+					$first_unread_msg_link = '<a href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;unread=1&amp;'._rsid.'"><img src="/theme/twig/images/newposts.gif" title="Go to the first unread message in this topic" alt="" /></a>&nbsp;';
 				}
 			} else if ($r[18] & 1) {
-				$thread_read_status = '<img src="/theme/responsive/images/readlocked.png" title="This topic has been locked" alt="" />';
+				$thread_read_status = '<img src="/theme/twig/images/readlocked.png" title="This topic has been locked" alt="" />';
 			} else if (!_uid) {
-				$thread_read_status = '<img src="/theme/responsive/images/read.png" title="The read &amp; unread messages are only tracked for registered users" alt="" />';
+				$thread_read_status = '<img src="/theme/twig/images/read.png" title="The read &amp; unread messages are only tracked for registered users" alt="" />';
 			} else {
-				$thread_read_status = '<img src="/theme/responsive/images/read.png" title="This topic has no unread messages" alt="" />';
+				$thread_read_status = '<img src="/theme/twig/images/read.png" title="This topic has no unread messages" alt="" />';
 			}
 
 			if ($admin_heading_row) {
@@ -681,10 +681,10 @@ function draw_forum_path($cid, $fn='', $fid=0, $tn='')
 			$thread_list_table_data .= '<tr class="row">
 	<td class="RowStyleB wo hide2">'.$thread_read_status.'</td>
 	<td class="RowStyleB wo ac hide2">'.($r[3] ? '<img src="/images/message_icons/'.$r[3].'" alt="'.$r[3].'" />' : '&nbsp;' ) .'</td>
-	<td class="RowStyleA">'.(($r[18] > 1) ? ($r[18] & 4 ? '<span class="StClr">sticky:&nbsp;</span>' : '<span class="AnClr">Announcement:&nbsp;</span>' )  : '' ) .$first_unread_msg_link.($r[1] ? 'Poll:&nbsp;' : '' ) .($r[0] ? '<img src="/theme/responsive/images/attachment.gif" alt="" />' : '' ) .'<a class="big" href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;start=0&amp;'._rsid.'">'.$r[2].'</a>'.($r[22] ? '<br /><span class="small">'.$r[22].'</span>' : '' )  .' '.((($FUD_OPT_2 & 4096) && $r[17]) ? ($MOD || $mo == 8224 ? '<a href="javascript://" onclick="window_open(\'/index.php?t=ratingtrack&amp;'._rsid.'&amp;th='.$r[13].'\', \'th_rating_track\', 300, 400);">' : '' ) .'<img src="/theme/responsive/images/'.$r[17].'stars.gif" title="'.$r[17].' from '.convertPlural($r[21], array(''.$r[21].' vote',''.$r[21].' votes')).'" alt="" />'.($MOD || $mo == 8224 ? '</a>' : '' ) : '' ) .' '.$mini_thread_pager.' <div class="TopBy">By: '.($r[5] ? '<a href="/index.php?t=usrinfo&amp;id='.$r[6].'&amp;'._rsid.'">'.$r[5].'</a>' : $GLOBALS['ANON_NICK'].'' ) .' on <span class="DateText">'.strftime('%a, %d %B %Y', $r[4]).'</span></div>'.$admin_control_row.'</td>
+	<td class="RowStyleA">'.(($r[18] > 1) ? ($r[18] & 4 ? '<span class="StClr">sticky:&nbsp;</span>' : '<span class="AnClr">Announcement:&nbsp;</span>' )  : '' ) .$first_unread_msg_link.($r[1] ? 'Poll:&nbsp;' : '' ) .($r[0] ? '<img src="/theme/twig/images/attachment.gif" alt="" />' : '' ) .'<a class="big" href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;start=0&amp;'._rsid.'">'.$r[2].'</a>'.($r[22] ? '<br /><span class="small">'.$r[22].'</span>' : '' )  .' '.((($FUD_OPT_2 & 4096) && $r[17]) ? ($MOD || $mo == 8224 ? '<a href="javascript://" onclick="window_open(\'/index.php?t=ratingtrack&amp;'._rsid.'&amp;th='.$r[13].'\', \'th_rating_track\', 300, 400);">' : '' ) .'<img src="/theme/twig/images/'.$r[17].'stars.gif" title="'.$r[17].' from '.convertPlural($r[21], array(''.$r[21].' vote',''.$r[21].' votes')).'" alt="" />'.($MOD || $mo == 8224 ? '</a>' : '' ) : '' ) .' '.$mini_thread_pager.' <div class="TopBy">By: '.($r[5] ? '<a href="/index.php?t=usrinfo&amp;id='.$r[6].'&amp;'._rsid.'">'.$r[5].'</a>' : $GLOBALS['ANON_NICK'].'' ) .' on <span class="DateText">'.strftime('%a, %d %B %Y', $r[4]).'</span></div>'.$admin_control_row.'</td>
 	<td class="RowStyleB ac hide1">'.$r[16].'</td>
 	<td class="RowStyleB ac hide1">'.$r[19].'</td>
-	<td class="RowStyleC nw hide2"><span class="DateText">'.strftime('%a, %d %B %Y %H:%M', $r[10]).'</span><br />By: '.($r[8] ? '<a href="/index.php?t=usrinfo&amp;id='.$r[7].'&amp;'._rsid.'">'.$r[8].'</a>' : $GLOBALS['ANON_NICK'].'' ) .' <a href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;goto='.$r[9].'&amp;'._rsid.'#msg_'.$r[9].'"><img src="/theme/responsive/images/goto.gif" title="Go to the last message in this topic" alt="" /></a></td>
+	<td class="RowStyleC nw hide2"><span class="DateText">'.strftime('%a, %d %B %Y %H:%M', $r[10]).'</span><br />By: '.($r[8] ? '<a href="/index.php?t=usrinfo&amp;id='.$r[7].'&amp;'._rsid.'">'.$r[8].'</a>' : $GLOBALS['ANON_NICK'].'' ) .' <a href="/index.php?t='.d_thread_view.'&amp;th='.$r[13].'&amp;goto='.$r[9].'&amp;'._rsid.'#msg_'.$r[9].'"><img src="/theme/twig/images/goto.gif" title="Go to the last message in this topic" alt="" /></a></td>
 </tr>';
 		} while (($r = db_rowarr($result)));
 	}

@@ -161,12 +161,12 @@ while ($r = db_rowarr($c)) {
 	' .
                 (key($cidxc) ? '<a href="javascript://" onclick=\'nextCat("c' .
                     $k .
-                    '")\'><img src="/theme/responsive/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '') .
+                    '")\'><img src="/theme/twig/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '') .
                 '
 	' .
                 ($cat ? '<a href="javascript://" onclick=\'prevCat("c' .
                     $k .
-                    '")\'><img src="/theme/responsive/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '') .
+                    '")\'><img src="/theme/twig/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '') .
                 '
 </td>
 </tr>';
@@ -194,12 +194,12 @@ while ($r = db_rowarr($c)) {
 	' .
                 (key($cidxc) ? '<a href="javascript://" onclick=\'nextCat("c' .
                     $k .
-                    '")\'><img src="/theme/responsive/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '') .
+                    '")\'><img src="/theme/twig/images/down.png" alt="" border="0" style="vertical-align: top; float: right;" /></a>' : '') .
                 '
 	' .
                 ($cat ? '<a href="javascript://" onclick=\'prevCat("c' .
                     $k .
-                    '")\'><img src="/theme/responsive/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '') .
+                    '")\'><img src="/theme/twig/images/up.png" border="0" alt="" style="vertical-align: top; float: right;" /></a>' : '') .
                 '
 </td>
 </tr>';
@@ -240,12 +240,12 @@ while ($r = db_rowarr($c)) {
     }
 
     if (!_uid) { /* Anon user. */
-        $forum_read_indicator = '<img title="Only registered forum members can track read &amp; unread messages" src="/theme/responsive/images/existing_content.png" alt="Only registered forum members can track read &amp; unread messages" />';
+        $forum_read_indicator = '<img title="Only registered forum members can track read &amp; unread messages" src="/theme/twig/images/existing_content.png" alt="Only registered forum members can track read &amp; unread messages" />';
     } else {
         if ($r[15] < $r[2] && $usr->last_read < $r[2]) {
-            $forum_read_indicator = '<img title="New messages" src="/theme/responsive/images/new_content.png" alt="New messages" />';
+            $forum_read_indicator = '<img title="New messages" src="/theme/twig/images/new_content.png" alt="New messages" />';
         } else {
-            $forum_read_indicator = '<img title="No new messages" src="/theme/responsive/images/existing_content.png" alt="No new messages" />';
+            $forum_read_indicator = '<img title="No new messages" src="/theme/twig/images/existing_content.png" alt="No new messages" />';
         }
     }
 
@@ -275,7 +275,7 @@ while ($r = db_rowarr($c)) {
         ($r[6] ? '<img src="/images/forum_icons/' . $r[6] . '" alt="Forum Icon" />' : '&nbsp;') .
         '</td>
 	<td class="RowStyleB ac wo hide2">' .
-        (empty($r[12]) ? $forum_read_indicator : '<img title="Redirection" src="/theme/responsive/images/moved.png" alt="" />') .
+        (empty($r[12]) ? $forum_read_indicator : '<img title="Redirection" src="/theme/twig/images/moved.png" alt="" />') .
         '</td>
 	<td class="RowStyleA wa"><a href="' .
         (empty($r[12]) ? '/index.php?t=' . t_thread_view . '&amp;frm_id=' . $r[7] . '&amp;' . _rsid : $r[12]) .
@@ -312,7 +312,7 @@ while ($r = db_rowarr($c)) {
             $r[8] .
             '"><img title="' .
             $r[0] .
-            '" src="/theme/responsive/images/goto.gif" alt="' .
+            '" src="/theme/twig/images/goto.gif" alt="' .
             $r[0] .
             '" /></a>' : 'n/a') : '--') .
         '</td>

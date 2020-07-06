@@ -39,7 +39,19 @@
             <td>
                 <div id="UserControlPanel">
                     <ul>
-                        {{ ucp_private_msg }}
+                        {% if fud_real_user and PRIVATE_MESSAGES_ENABLED %}
+                            {% if private_message_count > 0 %}
+                                <li><a href="/index.php?t=pmsg" title="Private Messaging">
+                                        <img src="/theme/responsive/images/top_pm.png" alt="" />
+                                        You have <span class="GenTextRed">{{ private_message_count }}</span>
+                                        unread private messages.</a>
+                                </li>
+                            {% else %}
+                                <li><a href="/index.php?t=pmsg" title="Private Messaging">
+                                        <img src="/theme/responsive/images/top_pm.png" alt="" /> Private Messaging</a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
                         {% if BLOG_ENABLED %}
                             <li><a href="/index.php?t=blog" title="Blog"><img
                                             src="/theme/responsive/images/blog.png" alt=""/> Blog</a></li>
@@ -148,16 +160,8 @@
                             <a href="/index.php?t=merge_th&frm_id=$frm->id">Merge Topics</a>
                         {% endif %}
                     </div>
-                    <!-- TODO: THIS    div class="rel GenText nw vt fr" style="right:0;">
-                        <?php echo ($FUD_OPT_2 & 512 ? '<a href="/index.php?t=threadt&amp;frm_id='.$frm->id.'&amp;'._rsid.'"><img
-                                title="Switch to threaded view of this topic"
-                                alt="Switch to threaded view of this topic"
-                                src="/theme/responsive/images/tree_view.gif"/></a>&nbsp;' : ''); ?>
-                        <a href="/index.php?t=post&amp;frm_id=<?php echo $frm->id; ?>&amp;<?php echo _rsid; ?>"><img
-                                    src="/theme/responsive/images/new_thread.gif" alt="Create a new topic"/></a>
-                    </div -->
                 </div>
-                {{ announcements }}
+                {{ announcements }}<br />
                 {% block content %}{% endblock %}
                 <br/>
                 <fieldset>
