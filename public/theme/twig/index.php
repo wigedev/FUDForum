@@ -39,7 +39,7 @@ if ($cat_id) {
             '</a>' .
             $cat_path;
     }
-    $variables['cat_path'] = $cat_path = '<br />
+    $renderer->cat_path = $cat_path = '<br />
 <a href="/index.php?t=i&amp;' . _rsid . '">Home</a>
 ' . $cat_path . '&nbsp;&raquo; <b>' . $cidxc[$cat_id][1] . '</b>';
 }
@@ -709,15 +709,15 @@ if ($FUD_OPT_1 & 1073741824 || $FUD_OPT_2 & 16) {
 }
 if ($FUD_OPT_2 & 2 || $is_a) {    // PUBLIC_STATS is enabled or Admin user.
     $page_gen_time = number_format(microtime(true) - __request_timestamp_exact__, 5);
-    $variables['page_stats'] = $FUD_OPT_2 & 2 ? '<br /><div class="SmallText al">Total time taken to generate the page: ' .
+    $renderer->page_stats = $FUD_OPT_2 & 2 ? '<br /><div class="SmallText al">Total time taken to generate the page: ' .
         convertPlural($page_gen_time, ['' . $page_gen_time . ' seconds']) .
         '</div>' : '<br /><div class="SmallText al">Total time taken to generate the page: ' .
         convertPlural($page_gen_time, ['' . $page_gen_time . ' seconds']) .
         '</div>';
 } else {
-    $variables['page_stats'] = '';
+    $renderer->page_stats = '';
 }
-$variables['RSS'] = $RSS;
-$variables['TITLE_EXTRA'] = $TITLE_EXTRA;
-$variables['forum_list_table_data'] = $forum_list_table_data;
+$renderer->RSS = $RSS;
+$renderer->TITLE_EXTRA = $TITLE_EXTRA;
+$renderer->forum_list_table_data = $forum_list_table_data;
 ?>

@@ -20,21 +20,21 @@ class TwigRenderer extends Renderer
 
     public function __construct()
     {
-        $this->viewPath = $GLOBALS['WWW_ROOT_DISK'] . 'theme/responsive/twigs';
-        $this->templatePath = $GLOBALS['WWW_ROOT_DISK'] . 'theme/responsive/templates';
+        $this->viewPath = $GLOBALS['WWW_ROOT_DISK'] . 'theme/twig/twigs';
+        $this->templatePath = $GLOBALS['WWW_ROOT_DISK'] . 'theme/twig/templates';
     }
 
-    public function render(string $twigFile, array $variables): void
+    public function render(string $twigFile): void
     {
-        $twig = $this->initTwig($variables);
-        $this->initVariables($variables);
-        $variables['FORUM_TITLE'] = $GLOBALS['FORUM_TITLE'];
-        $variables['layout__file'] = 'default.twig';
-        $variables = array_merge($variables, $this->buildGlobalCopy());
-        echo $twig->render($twigFile . '.twig', $variables);
+        $twig = $this->initTwig();
+        $this->initVariables();
+        $this->variables['FORUM_TITLE'] = $GLOBALS['FORUM_TITLE'];
+        $this->variables['layout__file'] = 'default.twig';
+        $this->variables = array_merge($this->variables, $this->buildGlobalCopy());
+        echo $twig->render($twigFile . '.twig', $this->variables);
     }
 
-    protected function initTwig(array $variables): Environment
+    protected function initTwig(): Environment
     {
         $this->twigLoader = new FilesystemLoader();
         $this->twig = new Environment($this->twigLoader);
@@ -42,35 +42,35 @@ class TwigRenderer extends Renderer
         $this->twig->addExtension(new StringLoaderExtension());
         $this->twigLoader->addPath($this->templatePath);
         $this->twigLoader->addPath($this->viewPath); //TODO: Add namespacing
-        $this->parseFilters($variables);
+        $this->parseFilters();
         return $this->twig;
     }
 
-    protected function initVariables(array &$variables)
+    protected function initVariables()
     {
-        $variables['fud_real_user'] = __fud_real_user__;
-        $variables['BLOG_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 16;
-        $variables['PAGES_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 8;
-        $variables['CALENDAR_ENABLED'] = $GLOBALS['FUD_OPT_3']  & 134217728;
-        $variables['SEARCH_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 16777216;
-        $variables['PRIVATE_MESSAGES_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 1024;
-        $variables['TREE_VIEW_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 512;
-        $variables['SYNDICATION_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 1048576;
-        $variables['PDF_ENABLED'] = (($GLOBALS['FUD_OPT_2'] & 270532608) == 270532608);
-        $variables['SHOW_MEMBERS'] = ($GLOBALS['FUD_OPT_1'] & 8388608 || (_uid && $GLOBALS['FUD_OPT_1'] & 4194304) || $variables['usr']->users_opt & 1048576);
-        $variables['SHOW_REGISTER'] = $GLOBALS['FUD_OPT_1'] & 2;
-        $variables['IS_MANAGER'] = $variables['usr']->users_opt & 268435456;
-        $variables['IS_GROUP_LEADER'] = $variables['usr']->group_leader_list;
-        $variables['SQ'] = $GLOBALS['sq'];
-        $variables['user_alias'] = $variables['usr']->alias;
-        $variables['statistics'] = (new Statistics($variables))->generateStatistics();
+        $this->variables['fud_real_user'] = __fud_real_user__;
+        $this->variables['BLOG_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 16;
+        $this->variables['PAGES_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 8;
+        $this->variables['CALENDAR_ENABLED'] = $GLOBALS['FUD_OPT_3']  & 134217728;
+        $this->variables['SEARCH_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 16777216;
+        $this->variables['PRIVATE_MESSAGES_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 1024;
+        $this->variables['TREE_VIEW_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 512;
+        $this->variables['SYNDICATION_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 1048576;
+        $this->variables['PDF_ENABLED'] = (($GLOBALS['FUD_OPT_2'] & 270532608) == 270532608);
+        $this->variables['SHOW_MEMBERS'] = ($GLOBALS['FUD_OPT_1'] & 8388608 || (_uid && $GLOBALS['FUD_OPT_1'] & 4194304) || $this->variables['usr']->users_opt & 1048576);
+        $this->variables['SHOW_REGISTER'] = $GLOBALS['FUD_OPT_1'] & 2;
+        $this->variables['IS_MANAGER'] = $this->variables['usr']->users_opt & 268435456;
+        $this->variables['IS_GROUP_LEADER'] = $this->variables['usr']->group_leader_list;
+        $this->variables['SQ'] = $GLOBALS['sq'];
+        $this->variables['user_alias'] = $this->variables['usr']->alias;
+        $this->variables['statistics'] = (new Statistics($this->variables))->generateStatistics();
     }
 
-    protected function parseFilters(array $variables)
+    protected function parseFilters()
     {
         $filter_class_name = TwigFilter::class;
-        if (isset($variables['twigFilters']) && is_array($variables['twigFilters'])) {
-            foreach ($variables['twigFilters'] as $filter) {
+        if (isset($this->variables['twigFilters']) && is_array($this->variables['twigFilters'])) {
+            foreach ($this->variables['twigFilters'] as $filter) {
                 if ($filter instanceof $filter_class_name) {
                     $this->twig->addFilter($filter);
                     //var_dump('Added.');

@@ -1280,14 +1280,16 @@ if (isset($_SERVER['REMOTE_ADDR']) && !defined('no_session')) {
 	$variables = [];
 	require($WWW_ROOT_DISK . fud_theme .'language.inc');	// Initialize theme's language helper functions.
 #### Old Template System ###############################################################################################
-require($WWW_ROOT_DISK . fud_theme . $t .'.php');
+//require($WWW_ROOT_DISK . fud_theme . $t .'.php');
 #### New Template System ###############################################################################################
-$variables['IS_ADMIN'] = $is_a;
-$variables['usr'] = $usr;
-if (isset($frm)) {
-    $variables['forum_id'] = (isset($frm->forum_id)) ? $frm->forum_id : null;
-}
 $renderer = new TwigRenderer();
+$renderer->IS_ADMIN = $is_a;
+$renderer->usr = $usr;
+if (isset($frm)) {
+    $renderer->forum_id = (isset($frm->forum_id)) ? $frm->forum_id : null;
+}
+require($WWW_ROOT_DISK . fud_theme . $t .'.php');
+$renderer->RIGHT_SIDEBAR = $RIGHT_SIDEBAR;
 $renderer->render($t, $variables);
 #### End New Template System ###########################################################################################
 
