@@ -1285,11 +1285,12 @@ if (isset($_SERVER['REMOTE_ADDR']) && !defined('no_session')) {
 $renderer = new TwigRenderer();
 $renderer->IS_ADMIN = $is_a;
 $renderer->usr = $usr;
+$renderer->_hs = _hs;
 if (isset($frm)) {
     $renderer->forum_id = (isset($frm->forum_id)) ? $frm->forum_id : null;
 }
 require($WWW_ROOT_DISK . fud_theme . $t .'.php');
-$renderer->RIGHT_SIDEBAR = $RIGHT_SIDEBAR;
+$renderer->RIGHT_SIDEBAR = isset($RIGHT_SIDEBAR) ? $RIGHT_SIDEBAR : null;
 $renderer->render($t, $variables);
 #### End New Template System ###########################################################################################
 

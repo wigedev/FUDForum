@@ -1,0 +1,12 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <a name="top"></a>
+    {% if show_return %}
+        <div class="GenText ac">[ <a href="/index.php?t=help_index&{{ _rsid }}">Return to Help Index</a> ]</div>
+    {% endif %}
+    {{ help_section_data|raw }}
+    <?php echo $help_section_data; ?>
+{% endblock %}

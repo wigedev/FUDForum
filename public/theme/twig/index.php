@@ -720,4 +720,5 @@ if ($FUD_OPT_2 & 2 || $is_a) {    // PUBLIC_STATS is enabled or Admin user.
 $renderer->RSS = $RSS;
 $renderer->TITLE_EXTRA = $TITLE_EXTRA;
 $renderer->forum_list_table_data = $forum_list_table_data;
+$renderer->show_legend = true;
 ?>

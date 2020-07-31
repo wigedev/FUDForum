@@ -712,4 +712,6 @@ $renderer->mo = $mo;
 $renderer->thread_list_table_data = $thread_list_table_data;
 $renderer->cur_frm_page = $cur_frm_page;
 $renderer->page_pager = $page_pager;
+
+$renderer->show_legend = true;
 ?>

@@ -149,10 +149,10 @@
                             </span>
                         {% if _uid is not empty %}
                             {% if forum_subscribed %}
-                                <a href="/index.php?t='.$_GET['t'].'&unsub=1&frm_id='.$frm->id.'&amp;start='.$start.'&amp;SQ={{ SQ }}"
+                                <a href="/index.php?t='.$_GET['t'].'&unsub=1&frm_id={{ frm_id }}&start='.$start.'&amp;SQ={{ SQ }}"
                                         title="Stop receiving notifications about new topics in the forum">Unsubscribe</a>
                             {% else %}
-                                <a href="/index.php?t='.$_GET['t'].'&sub=1&frm_id='.$frm->id.'&start='.$start.'&SQ={{ SQ }}"
+                                <a href="/index.php?t='.$_GET['t'].'&sub=1&frm_id={{ frm_id }}&start='.$start.'&SQ={{ SQ }}"
                                         title="Receive notifications when someone creates a new topic in this forum">Subscribe</a>
                             {% endif %}
                         {% endif %}
@@ -164,18 +164,20 @@
                 {{ announcements }}<br />
                 {% block content %}{% endblock %}
                 <br/>
-                <fieldset>
-                    <legend>Legend</legend>
-                    <img src="/theme/twig/images/unread.png" alt="New Messages"/>&nbsp;New Messages&nbsp;&nbsp;
-                    <img src="/theme/twig/images/read.png" alt="No New messages"/>&nbsp;No New messages&nbsp;&nbsp;
-                    <img src="/theme/twig/images/unreadlocked.png" alt="Locked (w/ unread messages)"/>&nbsp;Locked
-                    (w/ unread
-                    messages)&nbsp;&nbsp;
-                    <img src="/theme/twig/images/readlocked.png" alt="Locked"/>&nbsp;Locked&nbsp;&nbsp;
-                    <img src="/theme/twig/images/moved.png" alt="Moved to another forum"/>&nbsp;Moved to another
-                    forum
-                </fieldset>
-                <br/>
+                {% if show_legend %}
+                    <fieldset>
+                        <legend>Legend</legend>
+                        <img src="/theme/twig/images/unread.png" alt="New Messages"/>&nbsp;New Messages&nbsp;&nbsp;
+                        <img src="/theme/twig/images/read.png" alt="No New messages"/>&nbsp;No New messages&nbsp;&nbsp;
+                        <img src="/theme/twig/images/unreadlocked.png" alt="Locked (w/ unread messages)"/>&nbsp;Locked
+                        (w/ unread
+                        messages)&nbsp;&nbsp;
+                        <img src="/theme/twig/images/readlocked.png" alt="Locked"/>&nbsp;Locked&nbsp;&nbsp;
+                        <img src="/theme/twig/images/moved.png" alt="Moved to another forum"/>&nbsp;Moved to another
+                        forum
+                    </fieldset>
+                    <br/>
+                {% endif %}
                 <div class="ac"><span class="curtime"><b>Current Time:</b> {{ 'now'|date('D M d H:i:s T Y') }}</span>
                 </div>
                 {% if page_stats %}

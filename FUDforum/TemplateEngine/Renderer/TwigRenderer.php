@@ -48,6 +48,8 @@ class TwigRenderer extends Renderer
 
     protected function initVariables()
     {
+        $this->variables['_GET'] = $_GET; // TODO: Remove this
+        $this->variables['_POST'] = $_POST; // TODO: Remove this
         $this->variables['fud_real_user'] = __fud_real_user__;
         $this->variables['BLOG_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 16;
         $this->variables['PAGES_ENABLED'] = $GLOBALS['FUD_OPT_4'] & 8;
@@ -55,12 +57,17 @@ class TwigRenderer extends Renderer
         $this->variables['SEARCH_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 16777216;
         $this->variables['PRIVATE_MESSAGES_ENABLED'] = $GLOBALS['FUD_OPT_1'] & 1024;
         $this->variables['TREE_VIEW_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 512;
+        $this->variables['RATING_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 4096;
+        $this->variables['THREAD_VIEW_DISABLED'] = $GLOBALS['FUD_OPT_3'] & 2;
         $this->variables['SYNDICATION_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 1048576;
-        $this->variables['PDF_ENABLED'] = (($GLOBALS['FUD_OPT_2'] & 270532608) == 270532608);
+        $this->variables['PDF_ENABLED'] = $GLOBALS['FUD_OPT_2'] & 270532608;
+        $this->variables['PDF_ENABLED_MSG'] = $GLOBALS['FUD_OPT_2'] & 2097152;
         $this->variables['SHOW_MEMBERS'] = ($GLOBALS['FUD_OPT_1'] & 8388608 || (_uid && $GLOBALS['FUD_OPT_1'] & 4194304) || $this->variables['usr']->users_opt & 1048576);
         $this->variables['SHOW_REGISTER'] = $GLOBALS['FUD_OPT_1'] & 2;
         $this->variables['IS_MANAGER'] = $this->variables['usr']->users_opt & 268435456;
         $this->variables['IS_GROUP_LEADER'] = $this->variables['usr']->group_leader_list;
+        $this->variables['MSG_SHOW_SIGNATURE'] = $this->variables['usr']->users_opt & 2048;
+        $this->variables['MSG_NOTIFY_POSTER'] = $this->variables['usr']->users_opt & 2;
         $this->variables['SQ'] = $GLOBALS['sq'];
         $this->variables['user_alias'] = $this->variables['usr']->alias;
         $this->variables['statistics'] = (new Statistics($this->variables))->generateStatistics();

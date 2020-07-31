@@ -1,0 +1,196 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="0" cellpadding="0" class="ContentTable">
+        {{ message_data|raw }}
+    </table>
+    {% if quick_reply_enabled %}
+        <form action="/index.php?t=post" method="post" id="post_form" name="post_form" enctype="multipart/form-data" onsubmit="document.forms['post_form'].btn_submit.disabled = true;">
+            <table cellspacing="0" cellpadding="0" class="ContentTable">
+                <tr>
+                    <td class="MsgSpacer">
+                        <table cellspacing="0" cellpadding="0" class="MsgTable">
+                            <tr>
+                                <td class="MsgR1 fb {{ quick_reply_collapsed? 'collapsed' : 'expanded' }}">
+                                    Quick Reply
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="MsgR3" {{ quick_reply_collapsed ? 'style="display:none;"' : '' }}>
+                                <table>
+                                    <tr class="RowStyleA">
+                                        <td class="GenText nw">Formatting Tools:</td>
+                                        <td class="nw">
+                                            <span class="FormattingToolsBG">
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Bold" accesskey="b" href="javascript: insertTag('txtb', '[b]', '[/b]');">
+                                                        <img alt="" src="/theme/twig/images/b_bold.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Italics" accesskey="i" href="javascript: insertTag('txtb', '[i]', '[/i]');">
+                                                        <img alt="" src="/theme/twig/images/b_italic.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Underline" accesskey="u" href="javascript: insertTag('txtb', '[u]', '[/u]');">
+                                                        <img alt="" src="/theme/twig/images/b_underline.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Align Left" href="javascript: insertTag('txtb', '[ALIGN=left]', '[/ALIGN]');">
+                                                        <img alt="" src="/theme/twig/images/b_aleft.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Align Center" href="javascript: insertTag('txtb', '[ALIGN=center]', '[/ALIGN]');">
+                                                        <img alt="" src="/theme/twig/images/b_acenter.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Align Right" href="javascript: insertTag('txtb', '[ALIGN=right]', '[/ALIGN]');">
+                                                        <img alt="" src="/theme/twig/images/b_aright.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Insert a Link" accesskey="w" href="javascript: url_insert('Link location:');">
+                                                        <img alt="" src="/theme/twig/images/b_url.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Insert an E-mail address" accesskey="e" href="javascript: email_insert('E-mail address:');">
+                                                        <img alt="" src="/theme/twig/images/b_email.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Insert an image" accesskey="m" href="javascript: image_insert('Image URL:');">
+                                                        <img alt="" src="/theme/twig/images/b_image.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Add numbered list" accesskey="l" href="javascript: window_open('/index.php?t=mklist&{{ _rsid }}&tp=OL:1', 'listmaker', 350, 350);">
+                                                        <img alt="" src="/theme/twig/images/b_numlist.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Add bulleted list" href="javascript: window_open('/index.php?t=mklist&{{ _rsid }}&tp=UL:square', 'listmaker', 350, 350);">
+                                                        <img alt="" src="/theme/twig/images/b_bulletlist.gif" /></a>
+                                                </span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Add Quote" accesskey="q" href="javascript: insertTag('txtb', '[quote]', '[/quote]');">
+                                                        <img alt="" src="/theme/twig/images/b_quote.gif" /></a></span>
+                                                <span class="FormattingToolsCLR">
+                                                    <a title="Add Code" accesskey="c" href="javascript: insertTag('txtb', '[code]', '[/code]');">
+                                                        <img alt="" src="/theme/twig/images/b_code.gif" /></a></span>
+                                            </span>
+                                            <span class="hide1">
+                                                <select name="fnt_size" onchange="insertTag('txtb', '[size='+document.post_form.fnt_size.options[this.selectedIndex].value+']', '[/size]'); document.post_form.fnt_size.options[0].selected=true">
+                                                    <option value="" selected="selected">Size</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                </select>
+                                                <select name="fnt_color" onchange="insertTag('txtb', '[color='+document.post_form.fnt_color.options[this.selectedIndex].value+']', '[/color]'); document.post_form.fnt_color.options[0].selected=true">
+                                                    <option value="">Color</option>
+                                                    <option value="skyblue" style="color:skyblue">Sky Blue</option>
+                                                    <option value="royalblue" style="color:royalblue">Royal Blue</option>
+                                                    <option value="blue" style="color:blue">Blue</option>
+                                                    <option value="darkblue" style="color:darkblue">Dark Blue</option>
+                                                    <option value="orange" style="color:orange">Orange</option>
+                                                    <option value="orangered" style="color:orangered">Orange Red</option>
+                                                    <option value="crimson" style="color:crimson">Crimson</option>
+                                                    <option value="red" style="color:red">Red</option>
+                                                    <option value="firebrick" style="color:firebrick">Firebrick</option>
+                                                    <option value="darkred" style="color:darkred">Dark Red</option>
+                                                    <option value="green" style="color:green">Green</option>
+                                                    <option value="limegreen" style="color:limegreen">Lime Green</option>
+                                                    <option value="seagreen" style="color:seagreen">Sea Green</option>
+                                                    <option value="deeppink" style="color:deeppink">Deep Pink</option>
+                                                    <option value="tomato" style="color:tomato">Tomato</option>
+                                                    <option value="coral" style="color:coral">Coral</option>
+                                                    <option value="purple" style="color:purple">Purple</option>
+                                                    <option value="indigo" style="color:indigo">Indigo</option>
+                                                    <option value="burlywood" style="color:burlywood">Burly Wood</option>
+                                                    <option value="sandybrown" style="color:sandybrown">Sandy Brown</option>
+                                                    <option value="sienna" style="color:sienna">Sienna</option>
+                                                    <option value="chocolate" style="color:chocolate">Chocolate</option>
+                                                    <option value="teal" style="color:teal">Teal</option>
+                                                    <option value="silver" style="color:silver">Silver</option>
+                                                </select>
+                                                <select name="fnt_face" onchange="insertTag('txtb', '[font='+document.post_form.fnt_face.options[this.selectedIndex].value+']', '[/font]'); document.post_form.fnt_face.options[0].selected=true">
+                                                    <option value="">Font</option>
+                                                    <option value="Arial" style="font-family:Arial">Arial</option>
+                                                    <option value="Times" style="font-family:Times">Times</option>
+                                                    <option value="Courier" style="font-family:Courier">Courier</option>
+                                                    <option value="Century" style="font-family:Century">Century</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <textarea wrap="virtual" id="txtb" cols="" rows="" name="msg_body" style="width:99%; height:100px;"></textarea>
+                                {{ _hs }}
+                                <input type="hidden" name="submitted" value="" />
+                                <input type="hidden" name="msg_subject" value="{{ quick_reply_subject }}" />
+                                <input type="hidden" name="reply_to" value="{{ obj2.last_post_id }}" />
+                                <input type="hidden" name="th_id" value="{{ obj2.thread_id }}" />
+                                <input type="hidden" name="frm_id" value="{{ obj2.forum_id }}" />
+                                <input type="hidden" name="prev_loaded" value="1" />
+                                <input type="hidden" name="msg_show_sig" value="{{ MSG_SHOW_SIGNATURE ? 'Y' : '' }}" />
+                                <input type="hidden" name="msg_poster_notif" value="{{ MSG_NOTIFY_POSTER?'Y': '' }}" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="MsgToolBar" {{ quick_reply_collapsed ? 'style="display:none;"' : '' }}>
+                                <input type="submit" accesskey="r" class="button" value="Preview Quick Reply" tabindex="4" name="preview" />
+                                <input type="submit" accesskey="s" class="button" tabindex="5" name="btn_submit" value="Post Quick Reply" onclick="javascript: document.post_form.submitted.value=1;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    {% endif %}
+    <table border="0" cellspacing="0" cellpadding="0" class="wa">
+        <tr>
+            <td class="vt">{{ page_pager }}</td>
+            <td class="GenText ar vb nw">
+                {% if not THREAD_VIEW_ENABLED %}
+                    <a href="/index.php?t=tree&amp;th={{ th }}&{{ _rsid }}">
+                        <img title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic" src="/theme/twig/images/tree_view.gif" />
+                    </a>&nbsp;
+                {% endif %}
+                <a href="/index.php?t=post&frm_id={{ frm.forum_id }}&{{ _rsid }}">
+                    <img alt="Create a new topic" src="/theme/twig/images/new_thread.gif"/>
+                </a>
+            </td>
+        </tr>
+    </table>
+    {% if prev_thread_link is not empty or next_thread_link is not empty %}
+        <table border="0" cellspacing="1" cellpadding="1" align="right">
+            {{ prev_thread_link }}
+            {{ next_thread_link }}
+        </table>
+    {% endif %}
+    {% if RATING_ENABLED and rating_permission and not frm.cant_rate %}
+        <form id="RateFrm" action="post">
+            <select class="SmallText" onchange="if (this.value) topicVote(this.value, {{ frm.id }}, 's', '{{ usr.sq }}');">
+                <option>Rate Topic</option>
+                <option value="1">1 Worst</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Best</option>
+            </select>
+        </form>
+    {% endif %}
+    {{ tmpl_create_forum_select }}
+    <br/>
+    <div class="wa ac">-=] <a href="javascript://" onclick="chng_focus('page_top');">Back to Top</a> [=-</div>
+    <div class="ar SmallText">
+        {% if SYNDICATION_ENABLED %}
+            [ <a href="/index.php?t=help_index&amp;section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
+            [ <a href="/feed.php?mode=m&th={{ th }}&basic=1"><img src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS" /></a> ]
+        {% endif %}
+        {% if PDF_ENABLED_MSG %}
+            [ <a href="/pdf.php?th={{ th }}&{{ _rsid }}"><img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF" /></a> ]
+        {% endif %}
+    </div>
+{% endblock %}
