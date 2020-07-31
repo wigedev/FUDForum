@@ -19,14 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "TemplateEngine\\": "FUDforum/TemplateEngine/",
-            "Model\\": "FUDforum/Model/"
+            "FUDEngine\\": "FUDforum/FUDEngine/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ModelTests\\": "FUDforum/ModelTests//",
-            "TemplateEngineTests\\": "FUDforum/TemplateEngineTests//"
+            "FUDEngineTests\\": "FUDforum/FUDEngineTests//"
         }
     }
 }

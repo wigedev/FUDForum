@@ -9,8 +9,13 @@
 * Free Software Foundation; version 2 of the License.
 **/
 
-use Model\DB as Database;
-use TemplateEngine\Renderer\TwigRenderer;
+use FUDEngine\DB as Database;
+use FUDEngine\FUDForum;
+use FUDEngine\Lifecycle\Request;
+use FUDEngine\Lifecycle\Response;
+use FUDEngine\Renderer\TwigRenderer;
+use FUDEngine\Utility\Configuration\Globals;
+use FUDEngine\Utility\Configuration\Options;
 
 // TODO: Remove this
 error_reporting(E_ALL);
@@ -20,21 +25,28 @@ ini_set('xdebug.var_display_max_children', 256);
 ini_set('xdebug.var_display_max_data', 1024);
 
 if (function_exists('mb_internal_encoding')) {
-		mb_internal_encoding('utf-8');
-	}
-	require('./GLOBALS.php');
+	mb_internal_encoding('utf-8');
+}
+require('./GLOBALS.php');
 
-	/* Activation check. */
-	if (!($FUD_OPT_1 & 1)) {	// FORUM_ENABLED
-		fud_use('errmsg.inc');
-		exit_forum_disabled();
-	}
+/* Activation check. */
+if (!($FUD_OPT_1 & 1)) {    // FORUM_ENABLED
+	fud_use('errmsg.inc');
+	exit_forum_disabled();
+}
 
 # define('fud_query_stats', 1);
 
 #### Additions by WigeDev ##############################################################################################
 // Load the composer autoloader
 require_once('../vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
+// Set up the FUDEngine
+FUDForum::init(
+	new Request(),
+	new Response(),
+	new Globals($GLOBALS),
+	new Options($FUD_OPT_1, $FUD_OPT_2, $FUD_OPT_3, $FUD_OPT_4)
+);
 
 #### End Additions #####################################################################################################
 
@@ -367,7 +379,9 @@ function ses_anonuser_auth($id, $error)
 		header('Location: /index.php?t=login&'. _rsidl);
 	}
 	exit;
-}function &init_user()
+}
+
+function &init_user()
 {
 	$o1 =& $GLOBALS['FUD_OPT_1'];
 	$o2 =& $GLOBALS['FUD_OPT_2'];
