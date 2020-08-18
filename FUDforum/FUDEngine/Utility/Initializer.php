@@ -2,7 +2,7 @@
 
 namespace FUDEngine\Utility;
 
-use FUDEngine\Utility\Configuration\Globals;
+use FUDEngine\Utility\Configuration\Settings;
 use FUDEngine\Utility\Configuration\Options;
 
 /**
@@ -20,6 +20,6 @@ class Initializer
     public $response;
     /** @var Options */
     public $options;
-    /** @var Globals */
+    /** @var Settings */
     public $globals;
 }

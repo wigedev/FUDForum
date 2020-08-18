@@ -2317,21 +2317,20 @@ $quick_reply_enabled = _uid &&
     ((!($frm->thread_opt & 1) || $perms & 4096));
 $quick_reply_collapsed = $GLOBALS['FUD_OPT_3'] & 16777216;
 $quick_reply_subject = strncmp('Re:', $obj2->subject, strlen('Re:')) ? 'Re:' . ' ' . $obj2->subject : $obj2->subject;
-$renderer->RSS = $RSS;
-$renderer->TITLE_EXTRA = $TITLE_EXTRA;
-$renderer->MOD = $MOD;
-$renderer->page_pager = $page_pager;
+F()->response->RSS = $RSS;
+F()->response->TITLE_EXTRA = $TITLE_EXTRA;
+F()->response->MOD = $MOD;
+F()->response->page_pager = $page_pager;
 
-$renderer->message_data = $message_data;
-$renderer->quick_reply_enabled = $quick_reply_enabled;
-$renderer->quick_reply_collapsed = $quick_reply_collapsed;
-$renderer->quick_reply_subject = $quick_reply_subject;
-$renderer->obj2 = $obj2; // This is information about the post/forum/etc?
-$renderer->th = $th;
-$renderer->frm = $frm;
-$renderer->prev_thread_link = $prev_thread_link;
-$renderer->next_thread_link = $next_thread_link;
-$renderer->rating_permission = $perms & 1024;
-$renderer->tmpl_create_forum_select = tmpl_create_forum_select((isset($frm->forum_id) ? $frm->forum_id : $frm->id),
+F()->response->message_data = $message_data;
+F()->response->quick_reply_enabled = $quick_reply_enabled;
+F()->response->quick_reply_collapsed = $quick_reply_collapsed;
+F()->response->quick_reply_subject = $quick_reply_subject;
+F()->response->obj2 = $obj2; // This is information about the post/forum/etc?
+F()->response->th = $th;
+F()->response->frm = $frm;
+F()->response->prev_thread_link = $prev_thread_link;
+F()->response->next_thread_link = $next_thread_link;
+F()->response->rating_permission = $perms & 1024;
+F()->response->tmpl_create_forum_select = tmpl_create_forum_select((isset($frm->forum_id) ? $frm->forum_id : $frm->id),
     $usr->users_opt & 1048576);
-?>

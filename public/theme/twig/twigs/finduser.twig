@@ -3,5 +3,36 @@
     {{ parent() }}
 {% endblock %}
 {% block content %}
-
+    <form method="get" id="fufrm" action="/index.php"><?php echo _hs; ?>
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th colspan="3">User Information</th>
+            </tr>
+            <tr class="RowStyleA">
+                <td class="GenText">By Login:</td>
+                <td class="GenText">
+                    <input type="text" name="usr_login" tabindex="1" value="{{ usr_login }}" />
+                    <input type="submit" class="button" tabindex="2" name="btn_submit" value="Find" /></td>
+                <td class="RowStyleC SmallText vt">The search engine will automatically add * mask to your query, the <b>search is case-sensitive</b>.<br />ex. to search for all users who&#39;s login begins with an &#39;a&#39;, enter &#39;a&#39; into the search box.
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="t" value="finduser" />
+    </form>
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            {% if options.ENABLE_GEOLOCATION %}
+                <th width="1"><a class="thLnk" href="/index.php?t=finduser&usr_login={{ usr_login }}&{{ _rsid }}&fl={{ fl }}&btn_submit=Find" rel="nofollow">Flag</a></th>
+            {% endif %}
+            <th class="wa">
+                <a class="thLnk" href="/index.php?t=finduser&usr_login=<{{ usr_login }}&us={{ us }}&btn_submit=Find&{{ _rsid }}" rel="nofollow">User</a>
+            </th>
+            <th class="nw hide2"><a href="/index.php?t=finduser&usr_login={{ usr_login }}&{{ _rsid }}&pc={{ pc }}&btn_submit=Find" class="thLnk" rel="nofollow">Message Count</a></th>
+            <th class="nw hide2"><div class="ac"><a href="/index.php?t=finduser&usr_login={{ usr_login }}&{{ _rsid }}&rd={{ rd }}&btn_submit=Find" class="thLnk" rel="nofollow">Join Date</a></div></th>
+            <th class="ac">Action</th>
+            {% if IS_ADMIN %}<th class="nw">Admin Opts.</th>{% endif %}
+        </tr>
+        {{ find_user_data }}
+    </table>
+    {{ pager }}
 {% endblock %}

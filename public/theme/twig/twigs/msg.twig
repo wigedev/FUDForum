@@ -169,7 +169,7 @@
             {{ next_thread_link }}
         </table>
     {% endif %}
-    {% if RATING_ENABLED and rating_permission and not frm.cant_rate %}
+    {% if options.ENABLE_THREAD_RATING and rating_permission and not frm.cant_rate %}
         <form id="RateFrm" action="post">
             <select class="SmallText" onchange="if (this.value) topicVote(this.value, {{ frm.id }}, 's', '{{ usr.sq }}');">
                 <option>Rate Topic</option>
@@ -185,11 +185,11 @@
     <br/>
     <div class="wa ac">-=] <a href="javascript://" onclick="chng_focus('page_top');">Back to Top</a> [=-</div>
     <div class="ar SmallText">
-        {% if SYNDICATION_ENABLED %}
+        {% if options.SHOW_XML_LINK %}
             [ <a href="/index.php?t=help_index&amp;section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
             [ <a href="/feed.php?mode=m&th={{ th }}&basic=1"><img src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS" /></a> ]
         {% endif %}
-        {% if PDF_ENABLED_MSG %}
+        {% if options.SHOW_PDF_LINK %}
             [ <a href="/pdf.php?th={{ th }}&{{ _rsid }}"><img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF" /></a> ]
         {% endif %}
     </div>

@@ -5,7 +5,7 @@ namespace FUDEngine;
 use Exception;
 use FUDEngine\Lifecycle\Request;
 use FUDEngine\Lifecycle\Response;
-use FUDEngine\Utility\Configuration\Globals;
+use FUDEngine\Utility\Configuration\Settings;
 use FUDEngine\Utility\Configuration\Options;
 
 /**
@@ -15,10 +15,10 @@ use FUDEngine\Utility\Configuration\Options;
  *
  * @package FUDEngine
  *
- * @property-read Request request Object containing information about the request
+ * @property-read Request  request Object containing information about the request
  * @property-read Response response Object containing information about the response
- * @property-read Options options Object containg FUD_OPT array values
- * @property-read Globals globals Object containing global values
+ * @property-read Options  options Object containg FUD_OPT array values
+ * @property-read Settings globals Object containing global values
  */
 class FUDForum
 {
@@ -28,7 +28,7 @@ class FUDForum
     /** @var Options Object containing the options arrays */
     protected $options;
 
-    /** @var Globals Object wrapping global configuration options */
+    /** @var Settings Object wrapping global configuration options */
     protected $globals;
 
     public static function i(): FUDForum
@@ -36,7 +36,7 @@ class FUDForum
         return FUDForum::$_instance;
     }
 
-    public static function init(Request $request, Response $response, Globals $globals, Options $options): FUDForum
+    public static function init(Request $request, Response $response, Settings $globals, Options $options): FUDForum
     {
         if (static::$_instance !== null) {
             return static::$_instance;
@@ -45,7 +45,7 @@ class FUDForum
         return static::$_instance;
     }
 
-    private function __construct(Request $request, Response $response, Globals $globals, Options $options)
+    private function __construct(Request $request, Response $response, Settings $globals, Options $options)
     {
         $this->request = $request;
         $this->response = $response;
@@ -60,6 +60,8 @@ class FUDForum
                 return $this->options;
             case 'globals':
                 return $this->globals;
+            case 'renderer':
+                return $this->response->getRenderer();
             default:
                 return null;
         }
@@ -71,18 +73,9 @@ class FUDForum
         return $this;
     }
 
-    public function setGlobals(Globals $globals): self
+    public function setGlobals(Settings $globals): self
     {
         $this->globals = $globals;
         return $this;
-    }
-}
-
-function F(): FUDForum
-{
-    try {
-        return FUDForum::i();
-    } catch (Exception $exception) {
-        exit();
     }
 }

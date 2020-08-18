@@ -118,7 +118,9 @@ function tmpl_create_pager($start, $count, $total, $arg, $suf='', $append=1, $js
 	}
 
 	return !$js_pager ? '<span class="SmallText fb">Pages ('.$ttl_pg.'): ['.$page_pager_data.']</span>' : '<span class="SmallText fb">Pages ('.$ttl_pg.'): ['.$page_pager_data.']</span>';
-}$GLOBALS['__revfs'] = array('&quot;', '&lt;', '&gt;', '&amp;');
+}
+//TODO: What is this for?
+$GLOBALS['__revfs'] = array('&quot;', '&lt;', '&gt;', '&amp;');
 $GLOBALS['__revfd'] = array('"', '<', '>', '&');
 
 function reverse_fmt($data)
@@ -132,7 +134,8 @@ function reverse_fmt($data)
 	}
 
 	return $s ? str_replace($s, $d, $data) : $data;
-}function alt_var($key)
+}
+function alt_var($key)
 {
 	if (!isset($GLOBALS['_ALTERNATOR_'][$key])) {
 		$args = func_get_args(); unset($args[0]);
@@ -144,7 +147,8 @@ function reverse_fmt($data)
 		$k['p'] = 1;
 	}
 	return $k['v'][$k['p']++];
-}function draw_user_link($login, $type, $custom_color='')
+}
+function draw_user_link($login, $type, $custom_color='')
 {
 	if ($custom_color) {
 		return '<span style="color: '.$custom_color.'">'.$login.'</span>';
@@ -359,6 +363,13 @@ if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
 } else {
 	$page_stats = '';
 }
+F()->response->usr_login = urlencode($usr_login);
+F()->response->fl = isset($_GET['fl']) && !($_GET['fl'] % 2) ? '1' : '2';
+F()->response->us = isset($_GET['us']) && !($_GET['us'] % 2) ? '1' : '2';
+F()->response->pc = isset($_GET['pc']) && !($_GET['pc'] % 2) ? '1' : '2';
+F()->response->rd = isset($_GET['rd']) && !($_GET['rd'] % 2) ? '1' : '2';
+F()->response->find_user_data = $find_user_data;
+F()->response->pager = $pager;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

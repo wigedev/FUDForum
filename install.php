@@ -1155,7 +1155,7 @@ switch ($section) {
 			prereq_row('Open_basedir restriction:', 'You will not be able to use PHP to create files outside of the specified directories.', open_basedir, 'red');
 		}
 		if (fud_ini_get('register_globals')) {
-			prereq_row('Register Globals:', 'For performance &amp; security reasons we recommend keeping this option OFF.', 'enabled', 'orange');
+			prereq_row('Register Settings:', 'For performance &amp; security reasons we recommend keeping this option OFF.', 'enabled', 'orange');
 		}
 		prereq_row('MBsting Exension:', 'The Multibyte String extention provides UTF-8 support (required).', 
 			($module_status['mbstring'] ? 'enabled' : 'disabled'), ($module_status['mbstring'] ? 'green' : 'red'));

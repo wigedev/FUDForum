@@ -701,17 +701,16 @@ if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
 } else {
 	$page_stats = '';
 }
-$renderer->RSS = $RSS;
-$renderer->TITLE_EXTRA = $TITLE_EXTRA;
-$renderer->frm_id = $frm_id;
+F()->response->RSS = $RSS;
+F()->response->TITLE_EXTRA = $TITLE_EXTRA;
+F()->response->frm_id = $frm_id;
 
-$renderer->frm = $frm;
-$renderer->forum_list_table_data = $forum_list_table_data;
-$renderer->MOD = $MOD;
-$renderer->mo = $mo;
-$renderer->thread_list_table_data = $thread_list_table_data;
-$renderer->cur_frm_page = $cur_frm_page;
-$renderer->page_pager = $page_pager;
+F()->response->frm = $frm;
+F()->response->forum_list_table_data = $forum_list_table_data;
+F()->response->MOD = $MOD;
+F()->response->mo = $mo;
+F()->response->thread_list_table_data = $thread_list_table_data;
+F()->response->cur_frm_page = $cur_frm_page;
+F()->response->page_pager = $page_pager;
 
-$renderer->show_legend = true;
-?>
+F()->response->show_legend = true;

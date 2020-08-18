@@ -14,7 +14,7 @@ use FUDEngine\FUDForum;
 use FUDEngine\Lifecycle\Request;
 use FUDEngine\Lifecycle\Response;
 use FUDEngine\Renderer\TwigRenderer;
-use FUDEngine\Utility\Configuration\Globals;
+use FUDEngine\Utility\Configuration\Settings;
 use FUDEngine\Utility\Configuration\Options;
 
 // TODO: Remove this
@@ -44,9 +44,20 @@ require_once('../vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 FUDForum::init(
 	new Request(),
 	new Response(),
-	new Globals($GLOBALS),
+	new Settings($GLOBALS),
 	new Options($FUD_OPT_1, $FUD_OPT_2, $FUD_OPT_3, $FUD_OPT_4)
 );
+// create a global function that will access the FUDForum instance
+function F(): FUDForum
+{
+	try {
+		return FUDForum::i();
+	} catch (Exception $exception) {
+		exit();
+	}
+}
+// Set up the renderer - TODO: Move this to a router
+F()->response->setRenderer(new TwigRenderer());
 
 #### End Additions #####################################################################################################
 
@@ -1291,21 +1302,20 @@ if (isset($_SERVER['REMOTE_ADDR']) && !defined('no_session')) {
 			ob_start();	// Start capturing output for POST_TEMPLATE plugins.
 		}
 	}
-	$variables = [];
 	require($WWW_ROOT_DISK . fud_theme .'language.inc');	// Initialize theme's language helper functions.
 #### Old Template System ###############################################################################################
 //require($WWW_ROOT_DISK . fud_theme . $t .'.php');
 #### New Template System ###############################################################################################
-$renderer = new TwigRenderer();
-$renderer->IS_ADMIN = $is_a;
-$renderer->usr = $usr;
-$renderer->_hs = _hs;
+F()->response->IS_ADMIN = $is_a;
+F()->response->usr = $usr;
+F()->response->_hs = _hs;
 if (isset($frm)) {
-    $renderer->forum_id = (isset($frm->forum_id)) ? $frm->forum_id : null;
+    F()->response->forum_id = (isset($frm->forum_id)) ? $frm->forum_id : null;
 }
 require($WWW_ROOT_DISK . fud_theme . $t .'.php');
-$renderer->RIGHT_SIDEBAR = isset($RIGHT_SIDEBAR) ? $RIGHT_SIDEBAR : null;
-$renderer->render($t, $variables);
+F()->response->RIGHT_SIDEBAR = isset($RIGHT_SIDEBAR) ? $RIGHT_SIDEBAR : null;
+F()->response->setTemplate($t);
+F()->response->getRenderer()->render();
 #### End New Template System ###########################################################################################
 
 	if (defined('plugins') && isset($plugin_hooks['POST_TEMPLATE'])) {

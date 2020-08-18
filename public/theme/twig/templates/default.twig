@@ -39,7 +39,7 @@
             <td>
                 <div id="UserControlPanel">
                     <ul>
-                        {% if fud_real_user and PRIVATE_MESSAGES_ENABLED %}
+                        {% if fud_real_user and options.PM_ENABLED %}
                             {% if private_message_count > 0 %}
                                 <li><a href="/index.php?t=pmsg" title="Private Messaging">
                                         <img src="/theme/twig/images/top_pm.png" alt="" />
@@ -52,19 +52,19 @@
                                 </li>
                             {% endif %}
                         {% endif %}
-                        {% if BLOG_ENABLED %}
+                        {% if options.BLOG_ENABLED %}
                             <li><a href="/index.php?t=blog" title="Blog"><img
                                             src="/theme/twig/images/blog.png" alt=""/> Blog</a></li>
                         {% endif %}
-                        {% if PAGES_ENABLED %}
+                        {% if options.PAGES_ENABLED %}
                             <li><a href="/index.php?t=page" title="Pages"><img
                                             src="/theme/twig/images/pages.png" alt=""/> Pages</a></li>
                         {% endif %}
-                        {% if CALENDAR_ENABLED %}
+                        {% if options.CALENDAR_ENABLED %}
                             <li><a href="/index.php?t=cal" title="Calendar">
                                     <img src="/theme/twig/images/calendar.png" alt=""/> Calendar</a></li>
                         {% endif %}
-                        {% if SEARCH_ENABLED %}
+                        {% if options.SEARCH_ENABLED %}
                             <li>
                                 <a href="/index.php?t=search{% if forum_id is not empty %}&amp;forum_limiter={{ forum_id }}{% endif %}"
                                         title="Search"><img src="/theme/twig/images/top_search.png" alt=""/>
@@ -84,7 +84,7 @@
                                     [ {{ user_alias }} ]
                                 </a></li>
                         {% else %}
-                            {% if SHOW_REGISTER %}
+                            {% if options.SHOW_REGISTER %}
                                 <li><a href="/index.php?t=register" title="Register">
                                         <img src="/theme/twig/images/top_register.png" alt=""/> Register</a></li>
                             {% endif %}
