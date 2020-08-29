@@ -707,16 +707,7 @@ if ($FUD_OPT_1 & 1073741824 || $FUD_OPT_2 & 16) {
 </tr>';
     }
 }
-if (F()->options->PUBLIC_STATS || $is_a) {    // PUBLIC_STATS is enabled or Admin user.
-    $page_gen_time = number_format(microtime(true) - __request_timestamp_exact__, 5);
-    F()->response->page_stats = F()->options->PUBLIC_STATS ? '<br /><div class="SmallText al">Total time taken to generate the page: ' .
-        convertPlural($page_gen_time, ['' . $page_gen_time . ' seconds']) .
-        '</div>' : '<br /><div class="SmallText al">Total time taken to generate the page: ' .
-        convertPlural($page_gen_time, ['' . $page_gen_time . ' seconds']) .
-        '</div>';
-} else {
-    F()->response->page_stats = '';
-}
+
 F()->response->RSS = $RSS;
 F()->response->TITLE_EXTRA = $TITLE_EXTRA;
 F()->response->forum_list_table_data = $forum_list_table_data;

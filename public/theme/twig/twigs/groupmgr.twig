@@ -1,0 +1,67 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    {{ admin_cp }}
+    {{ group_selection }}
+    <br/>
+    <div class="ac">Currently Editing: <b>{{ grp.name }}</b><br/>{{ group_resources }}</div>
+    <br/>
+    <form method="post" action="/index.php?t=groupmgr" id="groupmgr">
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            {% if edit %}
+                <tr class="RowStyleA">
+                    <td class="nw fb">Member</td>
+                    <td class="wa al">
+                        {% if showMemberLink %}
+                            <a href="/index.php?t=usrinfo&id={{ mbr.user_id }}&{{ _rsid }}">{{ gr_member }}</a>
+                        {% else %}
+                            {{ gr_member }}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="RowStyleA">
+                    <td class="nw fb">Member</td>
+                    <td class="wa al">
+                        {{ login_error }}
+                        <input tabindex="1" type="text" name="gr_member" value="{{ gr_member }}"/>
+                        {% if memberSearchEnabled %}
+                            &nbsp;&nbsp;&nbsp;[ <a href="javascript://" onclick="window_open('/index.php?t=pmuserloc&{{ _rsid }}&js_redr=groupmgr.gr_member&overwrite=1', 'user_list',400,250);">Find User</a> ]
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endif %}
+            <tr class="RowStyleB">
+                <td colspan="2">
+                    <table cellspacing="1" cellpadding="3" width="100%" class="ContentTable">
+                        {{ perm_sel_hdr }}
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="RowStyleC ar">
+                    {% if edit %}
+                        <input type="submit" tabindex="3" class="button" name="btn_cancel" value="Cancel" />
+                        <input type="submit" tabindex="2" class="button" name="btn_submit" value="Update Member"/>
+                    {% else %}
+                        <input type="submit" tabindex="2" class="button" name="btn_submit" value="Add Member"/>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="group_id" value="{{ group_id }}"/>
+        <input type="hidden" name="edit" value="{{ edit }}"/>{{ _hs }}
+    </form>
+    <br/><br/>
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th>Member</th>
+            <th colspan="{{ count|hdr }}">Permissions <span class="small">(move mouse over the permission to see its type)</span>
+            </th>
+            <th class="ac">Action</th>
+        </tr>
+        {{ group_members_list }}
+    </table>
+{% endblock %}

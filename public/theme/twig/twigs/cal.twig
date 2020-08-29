@@ -1,0 +1,134 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        {% if view === 'y' %}
+            <tr>
+                <th colspan="3">
+                    <h2>
+                        {% if prev_year %}
+                            &nbsp;<a href="/index.php?t=cal&view=y&year={{ prev_year }}" class="control" rel="nofollow">&laquo;</a>
+                        {% endif %}
+                        {{ year }}&nbsp;
+                        {% if next_year %}
+                            <a href="/index.php?t=cal&view=y&year={{ next_year }}" class="control" rel="nofollow">&raquo;</a>
+                        {% endif %}
+                    </h2>
+                </th>
+            </tr>
+            <tr>
+                <td width="33%" class="vt"><h4>'.$months[0].' '.$year.'</h4>'.draw_calendar($year, 1, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[1].' '.$year.'</h4>'.draw_calendar($year, 2, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[2].' '.$year.'</h4>'.draw_calendar($year, 3, 'small', $year, $month, $day).'</td>
+            </tr>
+            <tr>
+                <td width="33%" class="vt"><h4>'.$months[3].' '.$year.'</h4>'.draw_calendar($year, 4, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[4].' '.$year.'</h4>'.draw_calendar($year, 5, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[5].' '.$year.'</h4>'.draw_calendar($year, 6, 'small', $year, $month, $day).'</td>
+            </tr>
+            <tr>
+                <td width="33%" class="vt"><h4>'.$months[6].' '.$year.'</h4>'.draw_calendar($year, 7, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[7].' '.$year.'</h4>'.draw_calendar($year, 8, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[8].' '.$year.'</h4>'.draw_calendar($year, 9, 'small', $year, $month, $day).'</td>
+            </tr>
+            <tr>
+                <td width="33%" class="vt"><h4>'.$months[9].'  '.$year.'</h4>'.draw_calendar($year, 10, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[10].' '.$year.'</h4>'.draw_calendar($year, 11, 'small', $year, $month, $day).'</td>
+                <td width="33%" class="vt"><h4>'.$months[11].' '.$year.'</h4>'.draw_calendar($year, 12, 'small', $year, $month, $day).'</td>
+            </tr>
+        {% elseif view === 'm' %}
+
+        {% elseif view === 'd' %}
+
+        {% endif %}
+        <?php echo ($view == 'y' ? '
+<tr>
+        <th colspan="3">
+            <h2>
+
+                '.($prev_year ? '&nbsp;<a href="/index.php?t=cal&view=y&year={{ prev_year }}" class="control" rel="nofollow">&laquo;</a>
+                &nbsp;'.$year.'&nbsp;
+                '.($next_year ? '<a href="/index.php?t=cal&amp;view=y&amp;year='.$next_year.'" class="control" rel="nofollow">&raquo;</a>' : '' )  .'
+            </h2>
+        </th>
+        </tr>
+        <tr>
+            <td width="33%" class="vt"><h4>'.$months[0].' '.$year.'</h4>'.draw_calendar($year, 1, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[1].' '.$year.'</h4>'.draw_calendar($year, 2, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[2].' '.$year.'</h4>'.draw_calendar($year, 3, 'small', $year, $month, $day).'</td>
+        </tr>
+        <tr>
+            <td width="33%" class="vt"><h4>'.$months[3].' '.$year.'</h4>'.draw_calendar($year, 4, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[4].' '.$year.'</h4>'.draw_calendar($year, 5, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[5].' '.$year.'</h4>'.draw_calendar($year, 6, 'small', $year, $month, $day).'</td>
+        </tr>
+        <tr>
+            <td width="33%" class="vt"><h4>'.$months[6].' '.$year.'</h4>'.draw_calendar($year, 7, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[7].' '.$year.'</h4>'.draw_calendar($year, 8, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[8].' '.$year.'</h4>'.draw_calendar($year, 9, 'small', $year, $month, $day).'</td>
+        </tr>
+        <tr>
+            <td width="33%" class="vt"><h4>'.$months[9].'  '.$year.'</h4>'.draw_calendar($year, 10, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[10].' '.$year.'</h4>'.draw_calendar($year, 11, 'small', $year, $month, $day).'</td>
+            <td width="33%" class="vt"><h4>'.$months[11].' '.$year.'</h4>'.draw_calendar($year, 12, 'small', $year, $month, $day).'</td>
+        </tr>
+        ' : ''); ?>
+
+        <?php echo ($view == 'm' ? '
+<tr>
+        <th width="35%" class="al">
+            '.($prev_month ? '<a href="/index.php?t=cal&amp;view=m&amp;year='.$prev_year.'&amp;month='.$prev_month.'" class="control" rel="nofollow">&laquo;</a>' : '' )  .'
+        </th>
+        <th class="ac">
+            <h2>'.$months[$month-1].' <a href="/index.php?t=cal&amp;view=y&amp;year='.$year.'" class="control" rel="nofollow">'.$year.'</a></h2>
+        </th>
+        <th width="35%" class="ar">
+            '.($next_month ? '<a href="/index.php?t=cal&amp;view=m&amp;year='.$next_year.'&amp;month='.$next_month.'" class="control" rel="nofollow">&raquo;</a>' : '' )  .'
+        </th>
+        </tr>
+        <tr class="ac">
+            <td colspan="3">
+                '.draw_calendar($year, $month, 'large', $year, $month, $day).'
+            </td>
+        </tr>
+        <tr>
+            <td class="ac" colspan="3">
+                <form method="get" action="index.php">
+                    <b>Jump to:</b><input type="hidden" name="t" value="cal" />
+                    <br />'.$select_month_control.' '.$select_year_control.' <input type="submit" name="submit" value="Go" />
+                </form>
+            </td>
+        </tr>
+        ' : ''); ?>
+
+        <?php echo ($view == 'd' ? '
+<tr>
+        <th colspan="2">
+            <h2>
+                '.($prev_day ? '<a href="/index.php?t=cal&amp;view=d&amp;year='.$prev_year.'&amp;month='.$prev_month.'&amp;day='.$prev_day.'" class="control" rel="nofollow">&laquo;</a>' : '' )  .'
+                '.$day.' <a href="/index.php?t=cal&amp;view=m&amp;month='.$month.'&amp;year='.$year.'"class="control" rel="nofollow">'.$months[$month-1].'</a> <a href="/index.php?t=cal&amp;view=y&amp;year='.$year.'" class="control" rel="nofollow">'.$year.'</a>
+                '.($next_day ? '<a href="/index.php?t=cal&amp;view=d&amp;year='.$next_year.'&amp;month='.$next_month.'&amp;day='.$next_day.'" class="control" rel="nofollow">&raquo;</a>' : '' )  .'
+            </h2>
+        </th>
+        </tr>
+        <tr>
+            <td class="RowStyleB vt" width="55%">
+                <h3>Events for day</h3>
+                '.($events_for_day ? '<ul>'.$events_for_day.'</ul>' : '<p>No events for day.</p>' )  .'
+                <br /><br />
+                <form method="get" action="index.php">
+                    Jump to: <input type="hidden" name="t" value="cal" /><input type="hidden" name="view" value="'.$view.'" />
+                    '.$select_month_control.' '.$select_year_control.'
+                    <input type="hidden" name="day" value="'.$day.'" /><input type="submit" name="submit" value="Go" />
+                </form>
+            </td>
+            <td class="ac" width="45%">
+                <h4><a href="/index.php?t=cal&amp;view=m&amp;month='.$month.'&amp;year='.$year.'" class="control">'.$months[$month-1].' '.$year.'</a></h4>
+                '.draw_calendar($year, $month, 'small', $year, $month, $day).'
+            </td>
+        </tr>
+        ' : ''); ?>
+    </table>
+{% endblock %}

@@ -1312,7 +1312,8 @@ F()->response->_hs = _hs;
 if (isset($frm)) {
     F()->response->forum_id = (isset($frm->forum_id)) ? $frm->forum_id : null;
 }
-require($WWW_ROOT_DISK . fud_theme . $t .'.php');
+require($WWW_ROOT_DISK . fud_theme . $t .'.php'); // Bring in the page file
+// TODO: Add in page stats calculations here, remove from individual pages
 F()->response->RIGHT_SIDEBAR = isset($RIGHT_SIDEBAR) ? $RIGHT_SIDEBAR : null;
 F()->response->setTemplate($t);
 F()->response->getRenderer()->render();

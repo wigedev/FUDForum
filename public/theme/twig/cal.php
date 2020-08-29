@@ -237,6 +237,19 @@ if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
 } else {
 	$page_stats = '';
 }
+
+F()->response->view = $view;
+F()->response->prev_year = $prev_year;
+F()->response->year = $year;
+F()->response->next_year = $next_year;
+F()->response->prev_month = $prev_month;
+F()->response->month = $month;
+F()->response->next_month = $next_month;
+F()->response->prev_day = $prev_day;
+F()->response->day = $day;
+F()->response->next_day = $next_day;
+
+// TODO: Draw calendar needs to be implemented. This is still a WIP.
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

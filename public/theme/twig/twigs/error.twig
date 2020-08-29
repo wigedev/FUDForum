@@ -1,0 +1,23 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <div class="ctb">
+        <table cellspacing="1" cellpadding="2" class="DialogTable">
+            <tr>
+                <th>{{ error_title }}</th>
+            </tr>
+            <tr class="RowStyleA">
+                <td class="GenText ac">
+                    {{ error_message }}
+                    <br/><br/>
+                    <form action="/index.php?t=error" id="error_frm" method="post">
+                        {{ _hs }}
+                        <input type="submit" class="button" name="ok" value="OK"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
