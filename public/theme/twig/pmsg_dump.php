@@ -693,22 +693,6 @@ function reverse_fmt($data)
 	}
 	unset($c);
 
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title><?php echo $GLOBALS['FORUM_TITLE'].$TITLE_EXTRA; ?></title>
-	<style>
-		<?php echo file_get_contents($GLOBALS["WWW_ROOT_DISK"] ."theme/". $GLOBALS["usr"]->theme_name ."/forum.css"); ?>
-	</style>
-</head>
-<body>
-	<div class="content">
-		<h1>Private messages for <?php echo $usr->alias; ?></h1>
-		<?php echo $pm_data; ?>
-		<small>Exported: <?php echo strftime('%a %b %d %H:%M:%S %Z %Y', __request_timestamp__); ?></small>
-	</div>
-</body>
-</html>
+F()->response->stylesheet = file_get_contents($GLOBALS["WWW_ROOT_DISK"] ."theme/". $GLOBALS["usr"]->theme_name ."/forum.css");
+F()->response->pmData = $pm_data;
+F()->response->exportDate = strftime('%a %b %d %H:%M:%S %Z %Y', __request_timestamp__);

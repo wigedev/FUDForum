@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css"/>
+</head>
+<body>
+<div class="content">
+    <form action="/index.php?t=poll" method="post" id="poll_submit">
+        <input type="hidden" name="frm_id" value="{{ formId }}"/>
+        <input type="hidden" name="pl_id" value="{{ pollId }}"/>
+        {{ _hs }}
+        <table cellspacing="2" width="99%" cellpadding="0" class="dashed">
+            <tr>
+                <td class="GenText">Poll Name:</td>
+                <td>
+                    <input tabindex="1" type="text" spellcheck="true" name="pl_name" value="{{ pollName }}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="GenText">Time Limit:</td>
+                <td><select tabindex="2" name="pl_expiry_date">{{ pollExpirationDateData }}</select></td>
+            </tr>
+            <tr>
+                <td class="GenText">Maximum Votes:</td>
+                <td><select tabindex="3" name="pl_max_votes">{{ pollMaxVotesData }}</select></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ar">
+                    {% if pollId == false %}
+                        <input tabindex="5" type="submit" class="button" name="pl_submit" value="Create Poll" />
+                    {% else %}
+                        <input tabindex="5" type="submit" class="button" name="pl_submit" value="Update Poll"/>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        <br/>
+        {{ pollEditor }}
+        <br/>
+        <div class="ar">
+            {% if pollId %}
+                <input type="button" tabindex="4" class="button"
+                        onclick="window.opener.document.forms['post_form'].pl_id.value='0'; window.opener.document.forms['post_form'].submit(); window.close();"
+                        value="Create" />
+            {% else %}
+                <input type="button" tabindex="4" class="button"
+                        onclick="window.opener.document.forms['post_form'].pl_id.value={{ pollId }}; window.opener.document.forms['post_form'].submit(); window.close();"
+                        value="Update"/>
+            {% endif %}
+        </div>
+    </form>
+    <script>
+        function check_submission() {
+            let a;
+
+            a = document.forms['poll_submit'].pl_option.value.replace('/[ \n\r]/g', '');
+
+            if (!a.length) {
+                if (document.forms['poll_submit'].pl_add && document.forms['poll_submit'].pl_add.value.length) {
+                    alert("You cannot add a blank option.");
+                    return false;
+                } else if (document.forms['poll_submit'].pl_upd && document.forms['poll_submit'].pl_upd.value.length) {
+                    return confirm("If you want to delete this option, press OK");
+                }
+            }
+            return true;
+        }
+
+        if (document.forms['poll_submit'].pl_option) {
+            document.forms['poll_submit'].pl_option.focus();
+        } else {
+            document.forms['poll_submit'].pl_name.focus();
+        }
+    </script>
+</div>
+</body>
+</html>

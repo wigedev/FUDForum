@@ -1,0 +1,18 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th>Poll Name</th>
+            <th class="nw"><a class="thLnk" href="/index.php?t=polllist&start={{ start }}&oby={{ obyRevVal }}&{{ _rsid }}">Created On</a></th>
+            <th class="nw">Created By</th>
+            <th class="nw ac">Total Votes</th>
+            <th class="nw ac">Action</th>
+        </tr>
+        {{ pollEntries }}
+    </table>
+    <br /><br />
+    {{ pager }}
+{% endblock %}
