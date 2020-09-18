@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css"/>
+</head>
+<body>
+<div class="content">
+    <table cellspacing="1" cellpadding="0" width="100%" class="dashed">
+        <tr>
+            <th>Emoticon</th>
+            <th>Code</th>
+        </tr>
+        {{ smileys ? smileys|raw : 'No emoticons available.' }}
+        <tr>
+            <td colspan="2" class="ac RowStyleC">[<a href="javascript://" onclick="window.close();">close window</a>]
+            </td>
+        </tr>
+    </table>
+    <script>
+        function insertSmiley(txt) {
+            var t = window.opener.document.getElementById('txtb');
+            if (window.opener.document.selection) { // IE
+                window.opener.document.selection.createRange();
+                if (t.createTextRange && t.caretPos) {
+                    var caretPos = t.caretPos;
+                    caretPos.text = txt + caretPos.text;
+                } else {
+                    t.value += txt;
+                }
+            } else {
+                var n = t.value.substring(0, t.selectionStart) + txt + t.value.substring(t.selectionStart, t.value.length);
+                t.value = n;
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    {{ tabs }}
+    <table cellspacing="3" cellpadding="3" border="0" class="wa">
+        <tr>
+            <td class="vt">
+                <table border="0" cellspacing="1" cellpadding="2" class="ucPW">
+                    <tr>
+                        <th colspan="3">Buddy List</th>
+                    </tr>
+                    {{ ucBuddyEnts }}
+                </table>
+            </td>
+            <td class="wa vt">
+                <table cellspacing="1" cellpadding="2" class="ContentTable">
+                    <tr>
+                        <th colspan="3">New Private Messages</th>
+                    </tr>
+                    {{ ucNewPMs }}
+                </table>
+                <br /><br />
+                <table cellspacing="1" cellpadding="2" class="ContentTable">
+                    <tr>
+                        <th colspan="4">Subscribed Forums With New Messages</th>
+                    </tr>
+                    {{ ucSubForum }}
+                </table>
+                <br /><br />
+                <table cellspacing="1" cellpadding="2" class="ContentTable">
+                    <tr>
+                        <th colspan="4">Subscribed Topics With New Messages</th>
+                    </tr>
+                    {{ ucSubTopic }}
+                </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

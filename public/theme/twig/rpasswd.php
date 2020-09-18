@@ -56,7 +56,7 @@ function logaction($user_id, $res, $res_id=0, $action=null)
 
 	$TITLE_EXTRA = ': Change Password Form';
 
-
+F()->response->usr = $usr;
 
 ?>
 <!DOCTYPE html>

@@ -1,0 +1,25 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <div class="ctb">
+        <table class="regConf" cellspacing="2" cellpadding="2">
+            <tr>
+                <th>Registration Confirmation</th>
+            </tr>
+            <tr class="RowStyleA">
+                <td>
+                    {{ msg }}
+                </td>
+            </tr>
+            <tr class="RowStyleC">
+                <td class="ac">
+                    <form method="get" action="/index.php?t=index&{{ _rsid }}">
+                        <input type="submit" name="rc" value="Done" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+{{ tabs }}
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th>
+                Forum members referred by:
+                    <b><a href="/index.php?t=usrinfo&id={{ pUser[0] }}&{{ _rsid }}" class="thLnk">{{ pUser[1] }}</a></b>
+            </th>
+            <th class="ac nw">
+                Message Count
+            </th>
+            <th class="ac nw">
+                Registered on
+            </th>
+            <th class="ac nw">
+                Action
+            </th>
+        </tr>
+        {{ referedEntryData }}
+    </table>
+{% endblock %}

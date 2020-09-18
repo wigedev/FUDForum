@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css"/>
+</head>
+<body>
+<div class="content">
+    <form method="post" action="/index.php?t=ruser">
+        <div class="ac">
+            <table cellspacing="1" cellpadding="2" class="MiniTable" width="100%">
+                {{ ruserError|raw }}
+                <tr>
+                    <th colspan="2">Change Your Forum Login</th>
+                </tr>
+                <tr class="RowStyleB">
+                    <td>Current Login:</td>
+                    <td>{{ usr.login|escape }}</td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td>New Login:</td>
+                    <td>
+                        <input type="text" name="nlogin" value="" required="required" maxlength="{{ options.MAX_LOGIN_SHOW }}"/>
+                    </td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td>Current Password:</td>
+                    <td><input type="password" name="cpasswd" id="passwd" value="" required="required"/></td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td align="right" colspan="2"><input type="submit" class="button" value="Go" name="btn_submit"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {{ _hs|raw }}
+    </form>
+</div>
+</body>
+</html>

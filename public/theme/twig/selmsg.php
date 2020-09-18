@@ -1009,12 +1009,19 @@ if (_uid) {
 		}
 	}
 
-if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
-	$page_gen_time = number_format(microtime(true) - __request_timestamp_exact__, 5);
-	$page_stats = $FUD_OPT_2 & 2 ? '<br /><div class="SmallText al">Total time taken to generate the page: '.convertPlural($page_gen_time, array(''.$page_gen_time.' seconds')).'</div>' : '<br /><div class="SmallText al">Total time taken to generate the page: '.convertPlural($page_gen_time, array(''.$page_gen_time.' seconds')).'</div>';
-} else {
-	$page_stats = '';
-}
+F()->response->dtOpt = $dt_opt;
+	F()->response->getDate = $_GET['date'];
+	F()->response->unOpt = $un_opt;
+	F()->response->frmOpt = $frm_opt;
+	F()->response->thOpt = $th_opt;
+	F()->response->rpOpt = $rp_opt;
+	F()->response->getUnread = $_GET['unread'];
+	F()->response->getSubForumLimit = $_GET['sub_forum_limit'];
+	F()->response->getSubThLimit = $_GET['sub_th_limit'];
+	F()->response->getReplyCount = $_GET['reply_count'];
+	F()->response->adminCP = $admin_cp;
+	F()->response->messageData = $message_data;
+	F()->response->pagePager = $pager;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

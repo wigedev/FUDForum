@@ -1,0 +1,56 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <form id="split_th" action="/index.php?t=split_th" method="post">
+        {{ _hs|raw }}
+        <input type="hidden" name="th" value="{{ th }}" />
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th class="wa" colspan="2">Topic Split Control Panel</th>
+            </tr>
+            <tr class="RowStyleA">
+                <td class="al fb">
+                    New topic title:
+                </td>
+                <td>
+                    <input type="text" spellcheck="true" name="new_title" value="" size="50" />
+                </td>
+            </tr>
+            <tr class="RowStyleA">
+                <td class="al fb">Forum:</td>
+                <td class="al">
+                    <select name="forum">
+                        {{ forumSelect|raw }}
+                    </select>
+                </td>
+            </tr>
+            <tr class="RowStyleC">
+                <td colspan="2" class="ac">
+                    <input type="submit" class="button" name="btn_selected" value="Split selected messages" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="submit" class="button" name="btn_unselected" value="Split unselected messages" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th class="nw">Select</th>
+                <th width="100%">Messages</th>
+            </tr>
+            {{ messageEntry|raw }}
+        </table>
+        <br />
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr class="RowStyleC">
+                <td colspan="2" class="ac">
+                    <input type="submit" class="button" name="btn_selected" value="Split selected messages" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="submit" class="button" name="btn_unselected" value="Split unselected messages" />
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

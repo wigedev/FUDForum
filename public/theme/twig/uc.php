@@ -570,12 +570,19 @@ By: '.($r->alias ? '<a href="/index.php?t=usrinfo&amp;id='.$r->poster_id.'&amp;'
 	}
 	unset($c);
 
+	//TODO: Use this for the stats?
 if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
 	$page_gen_time = number_format(microtime(true) - __request_timestamp_exact__, 5);
 	$page_stats = $FUD_OPT_2 & 2 ? '<br /><div class="SmallText al">Total time taken to generate the page: '.convertPlural($page_gen_time, array(''.$page_gen_time.' seconds')).'</div>' : '<br /><div class="SmallText al">Total time taken to generate the page: '.convertPlural($page_gen_time, array(''.$page_gen_time.' seconds')).'</div>';
 } else {
 	$page_stats = '';
 }
+
+F()->response->tabs = $tabs;
+F()->response->ucBuddyEnts = $uc_buddy_ents;
+F()->response->ucNewPMs = $uc_new_pms;
+F()->response->ucSubForum = $uc_sub_forum;
+F()->response->ucSubTopic = $uc_sub_topic;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

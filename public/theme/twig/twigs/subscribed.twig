@@ -1,0 +1,49 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    {{ tabs|raw }}
+    <form method="post" id="subscribe" action="/index.php?t=subscribed">
+        {{ _hs|raw }}
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th colspan="3">Subscribed Forums<a name="fff"></a></th>
+            </tr>
+            {% if subscribedForumData %}
+                {{ subscribedForumData|raw }}
+                <tr class="RowStyleC">
+                    <td class="ac" colspan="2">
+                        <input type="submit" class="button" name="f_unsub_sel" value="Unsubscribe" />
+                    </td>
+                    <td class="ar">
+                        <input type="submit" class="button" name="f_unsub_all" value="Unsubscribe From All Forums" />
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+                    <td colspan="3">No subscribed forums</td>
+                </tr>
+            {% endif %}
+            <tr>
+                <th colspan="3">Subscribed Topics</th>
+            </tr>
+            {% if subscribedThreadData %}
+                {{ subscribedThreadData|raw }}
+                <tr class="RowStyleC">
+                    <td class="ac" colspan="2">
+                        <input type="submit" class="button" name="t_unsub_sel" value="Unsubscribe" />
+                    </td>
+                    <td class="ar">
+                        <input type="submit" class="button" name="t_unsub_all" value="Unsubscribe From All Topics" />
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+                    <td colspan="3">No subscribed topics</td>
+                </tr>
+            {% endif %}
+        </table>
+    </form>
+    {{ pager|raw }}
+{% endblock %}

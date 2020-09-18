@@ -577,6 +577,8 @@ if ($FUD_OPT_2 & 2 || $is_a) {	// PUBLIC_STATS is enabled or Admin user.
 } else {
 	$page_stats = '';
 }
+
+//TODO: This
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

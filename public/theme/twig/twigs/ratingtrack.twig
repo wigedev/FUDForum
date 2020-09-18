@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css" />
+</head>
+<body>
+<div class="content">
+    <table cellspacing="0" cellpadding="3" class="wa dashed">
+        <tr>
+            <td class="small" colspan="3">
+                Manage ratings for topic <b>{{ thr.subject }}</b>:
+            </td>
+        </tr>
+        <tr>
+            <td class="mvTc">User</td>
+            <td class="mvTc">Rating</td>
+            <td class="mvTc">Action</td>
+        </tr>
+        {{ tableData|raw }}
+        <tr>
+            <td class="ac RowStyleC" colspan="3">
+                [<a href="javascript://" onclick="window.close();">close window</a>]
+            </td>
+        </tr>
+    </table>
+</div>
+</body></html>

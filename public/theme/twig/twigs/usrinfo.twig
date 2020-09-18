@@ -1,0 +1,136 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th colspan="2" class="wa"><?php echo (!($u->users_opt & 32768) && (($u->time_sec + $LOGEDIN_TIMEOUT * 60) > __request_timestamp__) ? '<img src="/theme/twig/images/online.png" alt="'.$obj->login.' is currently online" title="'.$obj->login.' is currently online" />' : '<img src="/theme/twig/images/offline.png" alt="'.$obj->login.' is currently offline" title="'.$obj->login.' is currently offline" />'); ?>&nbsp;<?php echo $u->alias; ?>&#39;s Profile</th>
+        </tr>
+        <tr class="RowStyleA">
+            <td class="nw GenText">Date Registered:</td>
+            <td class="wa DateText"><?php echo strftime('%a, %B %d, %Y', $u->join_date); ?></td>
+        </tr>
+        <tr class="RowStyleB">
+            <td class="vt nw GenText">Message Count:</td>
+            <td class="GenText"><?php echo convertPlural($u->posted_msg_count, array(''. $u->posted_msg_count.' Message',''. $u->posted_msg_count.' Messages')); ?> (<?php echo convertPlural($avg, array(''. $avg.' average message',''. $avg.' average messages')); ?> per day)<br /><a href="/index.php?t=showposts&amp;id=<?php echo $u->id; ?>&amp;<?php echo _rsid; ?>">Show all messages by <?php echo $u->alias; ?></a></td>
+        </tr>
+        <?php echo ($u->users_opt & 32768 ? '' : '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw GenText">Real Name:</td>
+            <td class="GenText">'.$u->name.'</td>
+        </tr>'); ?>
+        <?php echo (($level_name || $moderation || $level_image || $u->custom_status) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw vt GenText">Status:</td>
+            <td class="GenText">
+		<span class="LevelText">
+		'.$level_name.'
+		'.$level_image.'
+		'.($u->custom_status ? $u->custom_status.'<br />' : '' )  .'
+		</span>
+                '.$moderation.'
+            </td>
+        </tr>' : ''); ?>
+        <?php echo (($FUD_OPT_1 & 28 && $u->users_opt & 8388608 && !($u->level_opt & 2)) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="vt nw GenText">Avatar:</td>
+            <td class="GenText">'.$u->avatar_loc.'</td>
+        </tr>' : ''); ?>
+        <?php echo $last_post; ?>
+        <?php echo ($u->last_visit && !($u->users_opt & 32768) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="vt nw GenText">Last Visited:</td>
+            <td class="GenText">
+                <span class="DateText">'.strftime('%a, %d %B %Y %H:%M', $u->last_visit).'</span>
+                '.($u->last_used_ip && $is_a ? '<br />
+                <a href="/index.php?t=ip&amp;ip='.$u->last_used_ip.'&amp;'._rsid.'">'.$u->last_used_ip.'</a>
+                ' : '' )  .'
+            </td>
+        </tr>' : ''); ?>
+        <?php echo $polls; ?>
+        <?php echo (($FUD_OPT_2 & 65536 && $u->user_image && strpos($u->user_image, '://')) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="vt nw GenText">Image:</td>
+            <td class="GenText"><img src="'.$u->user_image.'" alt="" /></td>
+        </tr>' : ''); ?>
+        <?php echo $email_link; ?>
+        <?php echo (($FUD_OPT_1 & 1024 && _uid) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+        <td class="nw GenText">Private Message:</td>
+        <td class="GenText"><a href="/index.php?t=ppost&amp;'._rsid.'&amp;toi='.$u->id.'"><img src="/theme/twig/images/msg_pm.gif" alt="" /></a></td>
+        </tr>' : ''); ?>
+        <?php echo $buddy; ?>
+        <?php echo $referals; ?>
+        <?php echo ($u->home_page ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw GenText">Homepage:</td>
+            <td class="GenText"><a href="'.$u->home_page.'" rel="nofollow">'.$u->home_page.'</a></td>
+        </tr>' : ''); ?>
+        <?php echo $gender; ?>
+        <?php echo ($u->location ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw GenText">Location:</td>
+            <td class="GenText">'.$u->location.'</td>
+        </tr>' : ''); ?>
+        <?php echo ($u->occupation ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw GenText">Occupation:</td>
+            <td class="GenText">'.$u->occupation.'</td>
+        </tr>' : ''); ?>
+        <?php echo ($u->interests ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw GenText">Interests:</td>
+            <td class="GenText">'.$u->interests.'</td>
+        </tr>' : ''); ?>
+        <?php echo ($u->bio ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw GenText">Biography:</td>
+            <td class="GenText">'.$u->bio.'</td>
+        </tr>' : ''); ?>
+        <?php echo $birth_date; ?>
+        <?php echo $custom_fields_disp; ?>
+        <?php echo ($u->icq ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'">
+            <td class="nw vt GenText"><a name="icq_msg">ICQ Message Form:</a></td>
+            <td class="GenText">
+                '.$u->icq.' <img src="http://web.icq.com/whitepages/online?icq='.$u->icq.'&amp;img=5" /><br />
+                <table class="icqCP">
+                    <tr><td colspan="2">
+                            <form action="http://wwp.icq.com/scripts/WWPMsg.dll" method="post">
+                                <b>ICQ Online-Message Panel</b>
+                        </td></tr>
+                    <tr>
+                        <td>
+                            Sender Name:<br />
+                            <input type="text" name="from" value="" size="15" maxlength="40" onfocus="this.select()" />
+                        </td>
+                        <td>
+                            Sender E-mail:<br />
+                            <input type="text" name="fromemail" value="" size="15" maxlength="40" onfocus="this.select()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Subject<br />
+                            <input type="text" spellcheck="true" name="subject" value="" size="32" /><br />
+                            Message<br />
+                            <textarea name="body" rows="3" cols="32" wrap="Virtual"></textarea>
+                            <input type="hidden" name="to" value="'.$u->icq.'" /><br />
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"><input type="submit" class="button" name="Send" value="Send" /></td></tr>
+                    </form>
+                </table>
+            </td>
+        </tr>' : ''); ?>
+        <?php echo ($u->aim ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">AIM Handle:</td><td class="GenText"><a href="aim:goim?screenname='.$u->aim.'&amp;message=Hello+Are+you+there?"><img src="/theme/twig/images/aim.png" title="'.$obj->aim.'" alt="" />'.htmlentities(urldecode($u->aim)).'</a></td></tr>' : ''); ?>
+        <?php echo ($u->yahoo ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">Yahoo Messenger:</td><td class="GenText"><a href="http://edit.yahoo.com/config/send_webmesg?.target='.$u->yahoo.'&amp;.src=pg"><img src="/theme/twig/images/yahoo.png" title="'.$obj->yahoo.'" alt="" />'.htmlentities(urldecode($u->yahoo)).'</a></td></tr>' : ''); ?>
+        <?php echo ($u->msnm ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">MSN Messenger:</td><td class="GenText"><img src="/theme/twig/images/msnm.png" title="'.$obj->msnm.'" alt="" />'.char_fix(htmlspecialchars(urldecode($u->msnm))).'</td></tr>' : ''); ?>
+        <?php echo ($u->jabber ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">Jabber:</td><td class="GenText"><img src="/theme/twig/images/jabber.png" title="'.$obj->jabber.'" alt="" />'.$u->jabber.'</td></tr>' : ''); ?>
+        <?php echo ($u->google ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">Google Talk:</td><td class="GenText"><img src="/theme/twig/images/google.png" title="'.$obj->google.'" alt="" />'.$u->google.'</td></tr>' : ''); ?>
+        <?php echo ($u->skype ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">Skype:</td><td class="GenText"><a href="callto://'.$u->skype.'"><img src="/theme/twig/images/skype.png" title="'.$obj->skype.'" alt="" />'.$u->skype.'</a></td></tr>' : ''); ?>
+        <?php echo ($u->twitter ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">Twitter:</td><td class="GenText"><a href="http://twitter.com/'.$u->twitter.'"><img src="/theme/twig/images/twitter.png" title="'.$obj->twitter.'" alt="" />'.$u->twitter.'</a></td></tr>' : ''); ?>
+        <?php echo ($is_a ? '
+<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td class="nw GenText">Admin Opts.</td>
+        <td>
+            <a href="/adm/admuser.php?usr_id='.$u->id.'&amp;S='.s.'&amp;act=1&amp;SQ='.$GLOBALS['sq'].'">Edit</a> || <a href="/adm/admuser.php?usr_id='.$u->id.'&amp;S='.s.'&amp;act=del&amp;SQ='.$GLOBALS['sq'].'">Delete</a> ||
+            '.($u->users_opt & 65536 ? '
+            <a href="/adm/admuser.php?act=block&amp;usr_id='.$u->id.'&amp;S='.s.'&amp;SQ='.$GLOBALS['sq'].'">UnBan</a>
+            ' : '
+            <a href="/adm/admuser.php?act=block&amp;usr_id='.$u->id.'&amp;S='.s.'&amp;SQ='.$GLOBALS['sq'].'">Ban</a>
+            ' )  .'
+        </td></tr>
+        ' : ''); ?>
+
+        <tr class="RowStyleC"><td class="nw ar GenText" colspan="2"><a href="/index.php?t=showposts&amp;id=<?php echo $u->id; ?>&amp;<?php echo _rsid; ?>">Show all messages by <?php echo $u->alias; ?></a></td></tr>
+    </table>
+{% endblock %}

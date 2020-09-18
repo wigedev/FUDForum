@@ -184,7 +184,10 @@ function is_allowed_user(&$usr, $simple=0)
 	} else {
 		$ucp_private_msg = '';
 	}
-
+F()->response->msg = $msg;
+	F()->response->ANON_NICK = $ANON_NICK;
+	F()->response->reasonError = $reason_error;
+	F()->response->msgId = $msg_id;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
