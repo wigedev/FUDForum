@@ -1,0 +1,261 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <form action="/index.php?t=post" method="post" id="post_form" name="post_form" enctype="multipart/form-data"
+            onsubmit="document.forms['post_form'].btn_submit.disabled = true;">
+        {{ _hs }}
+        <input type="hidden" name="submitted" value="" />
+        <input type="hidden" name="reply_to" value="{{ replyTo }}" />
+        <input type="hidden" name="th_id" value="{{ threadId }}" />
+        <input type="hidden" name="frm_id" value="{{ forumId }}" />
+        <input type="hidden" name="start" value="{{ start }}" />
+        <input type="hidden" name="msg_id" value="{{ messageId }}" />
+        <input type="hidden" name="pl_id" value="{{ pollId }}" />
+        <input type="hidden" name="old_subject" value="{{ oldSubject|escape }}" />
+        <input type="hidden" name="prev_loaded" value="1" />
+        {{ postError }}
+        {{ previewMessage }}
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th colspan="2"><a name="ptop"> </a>Post Form</th>
+            </tr>
+            {% if _uid %}
+                <tr class="RowStyleB">
+                    <td class="GenText nw">Logged in user:</td>
+                    <td class="GenText wa">
+                        {{ usr.alias|escape }}
+                        [<a href="/index.php?t=login&amp;'._rsid.'&amp;logout=1&amp;SQ='.$GLOBALS['sq'].'">logout</a>]
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="RowStyleA">
+                    <td colspan="2" class="GenTextRed fb">
+                        You are not currently logged in, the message will be posted anonymously.
+                    </td>
+                </tr>
+            {% endif %}
+            {% if forum.forum_opt b-and 4 and not is_a %}
+                <tr class="RowStyleB">
+                    <td class="GenText">Posting Password:</td>
+                    <td><input type="password" name="frm_passwd" value="" tabindex="1" />{{ getError('password') }}</td>
+                </tr>
+            {% endif %}
+            <tr class="RowStyleB">
+                <td class="GenText">Forum:</td>
+                <td class="GenText">{{ forum.name }}</td>
+            </tr>
+            <tr class="RowStyleB">
+                <td class="GenText">Title:</td>
+                <td class="GenText">
+                    <input type="text" spellcheck="true" maxlength="100" name="msg_subject" value="{{ messageSubject }}" size="50" tabindex="2" />
+                    {{ getError('msg_subject') }}
+                </td>
+            </tr>
+            {% if not threadId or messageId == thread.root_msg_id %}
+                <tr class="RowStyleB">
+                    <td class="GenText">Topic Description:</td>
+                    <td><input size="60" type="text" name="msg_tdescr" tabindex="3" value="'.$msg_tdescr.'" /></td>
+                </tr>
+            {% endif %}
+            {{ poll }}
+            {{ adminOptions }}
+            {{ postIcons }}
+            {{ postSmileyControl }}
+            {% if frm.forum_opt b-and 16 %}
+                <tr class="RowStyleA">
+                    <td class="GenText nw">Formatting Tools:</td>
+                    <td class="nw">
+                        <span class="FormattingToolsBG">
+                            <span class="FormattingToolsCLR"><a title="Bold" accesskey="b" href="javascript: insertTag('txtb', '[b]', '[/b]');">
+                                    <img alt="" src="/theme/twig/images/b_bold.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Italics" accesskey="i" href="javascript: insertTag('txtb', '[i]', '[/i]');">
+                                    <img alt="" src="/theme/twig/images/b_italic.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Underline" accesskey="u" href="javascript: insertTag('txtb', '[u]', '[/u]');">
+                                    <img alt="" src="/theme/twig/images/b_underline.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Align Left" href="javascript: insertTag('txtb', '[ALIGN=left]', '[/ALIGN]');">
+                                    <img alt="" src="/theme/twig/images/b_aleft.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Align Center" href="javascript: insertTag('txtb', '[ALIGN=center]', '[/ALIGN]');">
+                                    <img alt="" src="/theme/twig/images/b_acenter.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Align Right" href="javascript: insertTag('txtb', '[ALIGN=right]', '[/ALIGN]');">
+                                    <img alt="" src="/theme/twig/images/b_aright.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Insert a Link" accesskey="w" href="javascript: url_insert('Link location:');">
+                                    <img alt="" src="/theme/twig/images/b_url.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Insert an E-mail address" accesskey="e" href="javascript: email_insert('E-mail address:');">
+                                    <img alt="" src="/theme/twig/images/b_email.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Insert an image" accesskey="m" href="javascript: image_insert('Image URL:');">
+                                    <img alt="" src="/theme/twig/images/b_image.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Add numbered list" accesskey="l" href="javascript: window_open('/index.php?t=mklist&{{ _rsid }}&tp=OL:1', 'listmaker', 350, 350);">
+                                    <img alt="" src="/theme/twig/images/b_numlist.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Add bulleted list" href="javascript: window_open('/index.php?t=mklist&{{ _rsid }}&tp=UL:square', 'listmaker', 350, 350);">
+                                    <img alt="" src="/theme/twig/images/b_bulletlist.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Add Quote" accesskey="q" href="javascript: insertTag('txtb', '[quote]', '[/quote]');">
+                                    <img alt="" src="/theme/twig/images/b_quote.gif" /></a>
+                            </span>
+                            <span class="FormattingToolsCLR"><a title="Add Code" accesskey="c" href="javascript: insertTag('txtb', '[code]', '[/code]');">
+                                    <img alt="" src="/theme/twig/images/b_code.gif" /></a>
+                            </span>
+                        </span>
+                        <span class="hide1">
+                            <select name="fnt_size" onchange="insertTag('txtb', '[size='+document.post_form.fnt_size.options[this.selectedIndex].value+']', '[/size]'); document.post_form.fnt_size.options[0].selected=true">
+                                <option value="" selected="selected">Size</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            <select name="fnt_color" onchange="insertTag('txtb', '[color='+document.post_form.fnt_color.options[this.selectedIndex].value+']', '[/color]'); document.post_form.fnt_color.options[0].selected=true">
+                                <option value="">Color</option>
+                                <option value="skyblue" style="color:skyblue">Sky Blue</option>
+                                <option value="royalblue" style="color:royalblue">Royal Blue</option>
+                                <option value="blue" style="color:blue">Blue</option>
+                                <option value="darkblue" style="color:darkblue">Dark Blue</option>
+                                <option value="orange" style="color:orange">Orange</option>
+                                <option value="orangered" style="color:orangered">Orange Red</option>
+                                <option value="crimson" style="color:crimson">Crimson</option>
+                                <option value="red" style="color:red">Red</option>
+                                <option value="firebrick" style="color:firebrick">Firebrick</option>
+                                <option value="darkred" style="color:darkred">Dark Red</option>
+                                <option value="green" style="color:green">Green</option>
+                                <option value="limegreen" style="color:limegreen">Lime Green</option>
+                                <option value="seagreen" style="color:seagreen">Sea Green</option>
+                                <option value="deeppink" style="color:deeppink">Deep Pink</option>
+                                <option value="tomato" style="color:tomato">Tomato</option>
+                                <option value="coral" style="color:coral">Coral</option>
+                                <option value="purple" style="color:purple">Purple</option>
+                                <option value="indigo" style="color:indigo">Indigo</option>
+                                <option value="burlywood" style="color:burlywood">Burly Wood</option>
+                                <option value="sandybrown" style="color:sandybrown">Sandy Brown</option>
+                                <option value="sienna" style="color:sienna">Sienna</option>
+                                <option value="chocolate" style="color:chocolate">Chocolate</option>
+                                <option value="teal" style="color:teal">Teal</option>
+                                <option value="silver" style="color:silver">Silver</option>
+                            </select>
+                            <select name="fnt_face" onchange="insertTag('txtb', '[font='+document.post_form.fnt_face.options[this.selectedIndex].value+']', '[/font]'); document.post_form.fnt_face.options[0].selected=true">
+                                <option value="">Font</option>
+                                <option value="Arial" style="font-family:Arial">Arial</option>
+                                <option value="Times" style="font-family:Times">Times</option>
+                                <option value="Courier" style="font-family:Courier">Courier</option>
+                                <option value="Century" style="font-family:Century">Century</option>
+                            </select>
+                        </span>
+                    </td>
+                </tr>
+            {% endif %}
+            <tr class="RowStyleA">
+                <td class="vt nw GenText">
+                    Body:
+                    <br />
+                    <br />
+                    {{ templatePostOptions(forum.forum_opt, perms) }}
+                </td>
+                <td>
+                    {{ getError('msg_body', 1) }}
+                    <textarea rows="" cols="" tabindex="4" wrap="virtual" id="txtb" name="msg_body" style="width:98%; height:220px;">
+                        {{ messageBody }}
+                    </textarea>
+                </td>
+            </tr>
+
+            {{ fileAttachments }}
+            {% if not _uid and options.USE_ANON_TURING %}
+                <tr class="RowStyleA">
+                    <td>Verification:{{ getError('reg_turning') }}</td>
+                    <td class="vt"><input type="text" name="turing_test" value="" /></td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td colspan="2">
+                        <div style="white-space: pre; font-family: Courier, monospace; color: black; background-color: #C0C0C0;">
+                            {{ turingValue }}
+                            <input type="hidden" name="turing_res" value="{{ turingRes }}" /></div></td>
+                </tr>
+            {% endif %}
+            <tr class="RowStyleB vt">
+                <td class="GenText">Options:</td>
+                <td>
+                    <table border="0" cellspacing="0" cellpadding="1">
+                        {% if _uid %}
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="msg_poster_notif" id="msg_poster_notif" value="Y"{{ msgPosterNotif ? ' checked="checked"' }} />
+                                </td>
+                                <td class="GenText fb">
+                                    <label for="msg_poster_notif">Post Notification</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td class="SmallText">Notify me when someone replies to this message.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="msg_show_sig" id="msg_show_sig" value="Y"{{ msgShowSignature ? ' checked="checked"' }} /></td>
+                                <td class="GenText fb"><label for="msg_show_sig">Include Signature</label></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td class="SmallText">Include your profile signature.</td>
+                            </tr>
+                            {{ modPostOptions|raw }}
+                            {% if showAlwaysOnTop %}
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="thr_always_on_top" id="thr_always_on_top" value="Y"{{ threadAlwaysOnTop ? ' checked="checked"' }} />
+                                    </td>
+                                    <td class="GenText fb">
+                                        <label for="thr_always_on_top">Make the topic always appear at the top of the topic listing</label>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        {% endif %}
+                        {% if perms b-and 16384 %}
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="msg_smiley_disabled" id="msg_smiley_disabled" value="Y"{{ msgSmileyDisabled ? ' checked="checked"' }} />
+                                </td>
+                                <td class="GenText fb">
+                                    <label for="msg_smiley_disabled">Disable smilies in this message</label>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </table>
+                </td>
+            </tr>
+            <tr class="RowStyleA">
+                <td class="GenText ar" colspan="2">
+                    <input type="submit" accesskey="c" class="button" value="Cancel" tabindex="4" name="cancel" />&nbsp;
+                    <input type="submit" accesskey="r" class="button" value="Preview Message" tabindex="5" name="preview" />&nbsp;
+                    {{ spellCheckButton|raw }}
+                    <input type="submit" accesskey="s" class="button" value="{{ submitLabel }}" tabindex="6" name="btn_submit" onclick="document.forms['post_form'].submitted.value=1;" />
+                </td>
+            </tr>
+        </table>
+        {{ miniMsg }}
+    </form>
+{% endblock %}
+{% block endscripts %}
+    <script>
+        quote_selected_text('Quote Selected Text');
+        if (!document.getElementById('preview')) {
+            if (!document.post_form.msg_subject.value.length) {
+                document.post_form.msg_subject.focus();
+            } else {
+                document.post_form.msg_body.focus();
+            }
+        }
+    </script>
+{% endblock %}

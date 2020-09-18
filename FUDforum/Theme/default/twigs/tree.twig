@@ -1,0 +1,140 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <a name="page_top"> </a>
+    {{ forumPath }}
+    {{ forum.tdescr ? ' <span class="small">('.forum.tdescr.')</span>' }}
+    <span id="threadRating">
+        {% if options.ENABLE_THREAD_RATING and forum.rating %}
+            ({{ mod ? '' }}
+            {% if mod %}
+                <a href="javascript://"
+                        onclick="window_open('/index.php?t=ratingtrack&{{ _rsid }}&th={{ forum.id }}', 'th_rating_track', 300, 400);">
+                    <img src="/theme/twig/images/{{ forum.rating }}stars.gif"
+                            title="{{ forum.rating }} from {{ voteCount }}" alt=""/>
+                </a>
+            {% else %}
+                <img src="/theme/twig/images/{{ forum.rating }}stars.gif"
+                        title="{{ forum.rating }} from {{ voteCount }}" alt=""/>
+            {% endif %}
+        {% endif %}
+    </span>
+    <table cellspacing="0" cellpadding="0" border="0" class="wa">
+        <tr>
+            <td class="GenText al">
+		        <span id="ShowLinks">
+                    <span class="GenText fb">Show:</span>
+                    <a href="/index.php?t=selmsg&date=today&{{ _rsid }}&frm_id={{ forum.forum_id }}&th={{ th }}"
+                            title="Show all messages that were posted today" rel="nofollow">Today&#39;s Messages</a>
+                    {% if _uid %}
+                        <b>::</b>
+                        <a href="/index.php?t=selmsg&unread=1&{{ _rsid }}&frm_id={{ forum.forum_id }}"
+                                title="Show all unread messages" rel="nofollow">Unread Messages</a>&nbsp;
+                    {% endif %}
+                    {% if not th %}
+                        <b>::</b>
+                        <a href="/index.php?t=selmsg&reply_count=0&{{ _rsid }}&frm_id={{ forum.forum_id }}"
+                                title="Show all messages, which have no replies" rel="nofollow">Unanswered Messages</a>
+                    {% endif %}
+                    <b>::</b> <a href="/index.php?t=polllist&{{ _rsid }}" rel="nofollow">Polls</a>
+                    <b>::</b> <a href="/index.php?t=mnav&{{ _rsid }}" rel="nofollow">Message Navigator</a>
+                </span>
+                <br/>
+                {% if forum.replies and perms b-and 2048 %}
+                    <a href="/index.php?t=split_th&{{ _rsid }}&th={{ th }}">Split Topic</a>&nbsp;|&nbsp;
+                {% endif %}
+                {% if perms b-and 8192 %}
+                    {% if forum.replies %}
+                        <a href="/index.php?t=movemsg&th={{ th }}">Move messages</a>&nbsp;|&nbsp;
+                    {% endif %}
+                    <a href="javascript://"
+                            onclick="window_open('/index.php?t=mvthread&{{ _rsid }}&th={{ th }}', 'th_move', 300, 400);">Move</a>&nbsp;|&nbsp;
+                {% endif %}
+                {{ lockThread|raw }}
+                {% if options.LOGEDIN_LIST %}
+                    <a href="/index.php?t=remail&th={{ th }}&{{ _rsid }}"
+                            title="Send the URL to this page to your friend(s) via e-mail" rel="nofollow">E-mail to
+                        friend</a>
+                {% endif %}
+                {{ subscribeStatus|raw }}
+                {{ bookmarkStatus|raw }}
+            </td>
+            <td class="vb ar">
+                <a href="/index.php?t=msg&th={{ th }}&{{ _rsid }}#msg_{{ mid }}">
+                    <img alt="Return to the default flat view" title="Return to the default flat view"
+                            src="/theme/twig/images/flat_view.gif"/>
+                </a>&nbsp;
+                <a href="/index.php?t=post&frm_id={{ forum.forum_id }}&{{ _rsid }}">
+                    <img alt="Create a new topic" src="/theme/twig/images/new_thread.gif"/>
+                </a>
+                {% if forum.thread_opt b-and 1 or permissions b-and 4096 %}
+                    &nbsp;<a href="/index.php?t=post&th_id={{ th }}&reply_to={{ mid }}&{{ _rsid }}">
+                    <img alt="Submit Reply" src="/theme/twig/images/post_reply.gif"/>
+                </a>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    <div>
+        <table cellspacing="0" cellpadding="0" id="msgTbl" class="ContentTable">
+            {{ tmplDrawMsg|raw }}
+        </table>
+    </div>
+    <div class="ac GenText">
+        [<a href="javascript://" onclick="chng_focus('tree_view');" title="View the message list">Message index</a>]
+    </div>
+    <a name="tree_view">&nbsp;</a>
+    <table cellspacing="1" cellpadding="2" class="MsgTable">
+        {{ treeData|raw }}
+    </table>
+    {% if not prevThreadLink or not nextThreadLink %}
+        <table border="0" cellspacing="1" cellpadding="1" align="right">
+            {{ prevThreadLink }}
+            {{ nextThreadLink }}
+        </table>
+    {% endif %}
+    {% if options.ENABLE_THREAD_RATING and permissions b-and 1024 and not forum.cant_rate %}
+        <form id="RateFrm" action="post">
+            <select class="SmallText"
+                    onchange="if (this.value) topicVote(this.value, '.$frm->id.', \''.s.'\', \''.$usr->sq.'\');">
+                <option>Rate Topic</option>
+                <option value="1">1 Worst</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Best</option>
+            </select>
+        </form>
+    {% endif %}
+    {{ forumSelect|raw }}
+    <br/>
+    <div class="wa ac">
+        -=] <a href="javascript://" onclick="chng_focus('page_top');">Back to Top</a> [=-
+    </div>
+    <div class="ar SmallText">
+        {% if options.SHOW_XML_LINK %}
+            [ <a href="/index.php?t=help_index&amp;section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
+                                                                                                                [ <a
+                href="/feed.php?mode=m&th={{ th }}&basic=1">
+            <img src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/>
+        </a> ]
+        {% endif %}
+        {% if options.SHOW_PDF_LINK %}
+            [ <a href="/pdf.php?msg={{ mid }}&{{ _rsid }}">
+            <img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF"/></a> ]
+        {% endif %}
+    </div>
+{% endblock %}
+{% block endscripts %}
+    <script defer="defer">
+        var cur_msg = {{ mid }};
+        jQuery('#b' + cur_msg).removeClass().addClass('RowStyleC');
+    </script>
+    {% if getSrch %}
+        <script defer="defer">
+            highlightSearchTerms({{ getSrch|escape }});
+        </script>
+    {% endif %}
+{% endblock %}

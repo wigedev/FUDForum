@@ -19,6 +19,8 @@ class Response implements ResponseInterface
     protected $data;
     /** @var array */
     protected $members;
+    /** @var string */
+    protected $theme;
 
     public function __construct()
     {
@@ -66,6 +68,16 @@ class Response implements ResponseInterface
     public function getTemplate(): string
     {
         return $this->template;
+    }
+
+    public function setTheme(string $theme): void
+    {
+        $this->theme = $theme;
+    }
+
+    public function getTheme(): string
+    {
+        return $this->theme;
     }
 
     public function setData(array $data): void

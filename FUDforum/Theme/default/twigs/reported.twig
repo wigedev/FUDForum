@@ -1,0 +1,12 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="0" cellpadding="0" class="ContentTable">
+        <tr>
+            <th>Reported Messages</th>
+        </tr>
+        {{ reportedMessage }}
+    </table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th class="ac">Member</th>
+            <th class="ac">Referrals</th>
+            <th>Members Referred</th>
+        </tr>
+        {{ referer_entry_data }}
+    </table>
+    {{ page_pager }}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th><a href="/index.php?t=actions&o=alias&s=<?php echo ($o=='u.alias' && $s=='ASC' ? 'd' : 'a'); ?>&{{ _rsid }}" class="thLnk" rel="nofollow">User</a></th>
+            <th>Action</th>
+            {% if IS_ADMIN %}
+                <th><a href="/index.php?t=actions&o=ip&s={{ s }}&{{ _rsid }}" class="thLnk" rel="nofollow">IP</a></th>
+            {% endif %}
+            <th><a href="/index.php?t=actions&o=time&s={{ s }}&{{ _rsid }}" class="thLnk" rel="nofollow">Time</a></th>
+            <th>Last Message</th>
+        </tr>
+        {{ action_data }}
+    </table>
+{% endblock %}

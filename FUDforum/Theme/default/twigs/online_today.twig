@@ -1,0 +1,26 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <div class="GenText ac">
+        [ <a href="/index.php?t=online_today&rand={{ random }}&{{ _rsid }}" rel="nofollow">Refresh List</a> ]
+        [ <a href="/index.php?t=actions&{{ _rsid }}" rel="nofollow">User Activity</a> ]
+    </div>
+    <br/>
+    <table cellspacing="1" cellpadding="2" class="ContentTable">
+        <tr>
+            <th>
+                <a href="/index.php?t=online_today&o=alias&s={{ aliasSortOrder }}&{{ _rsid }}" class="thLnk" rel="nofollow">
+                    User
+                </a>
+            </th>
+            <th>
+                <a href="/index.php?t=online_today&{{ _rsid }}&o=last_visit&s={{ lastVisitSortOrder }}&{{ _rsid }}"
+                        class="thLnk" rel="nofollow">Last Visited</a>
+            </th>
+            <th>Last Message</th>
+        </tr>
+        {{ userEntries }}
+    </table>
+{% endblock %}

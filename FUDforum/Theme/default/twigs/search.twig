@@ -1,0 +1,64 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <form id="search" method="get" action="/index.php">
+        {{ _hs|raw }}
+        <input type="hidden" name="t" value="search"/>
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th>Forum Search</th>
+                <th class="wa">Search Options</th>
+            </tr>
+            <tr class="RowStyleA">
+                <td class="vt nw">
+                    <input spellcheck="true" type="search" name="srch" tabindex="1" value="{{ srch|escape }}"/>
+                    <input type="submit" tabindex="2" class="button" name="btn_submit" value="Search"/><br/>
+                    <span class="SmallText">{{ searchOptions }}</span>
+                </td>
+                <td class="RowStyleB SmallText">
+                    <div class="sr">
+                        Search in forum:<br/>
+                        <select class="SmallText" name="forum_limiter">
+                            <option value="">Search All Forums</option>
+                            {{ forumLimitData|raw }}
+                        </select>
+                    </div>
+                    <div class="sr">
+                        Attachments:<br/>
+                        <select class="SmallText" name="attach">
+                            {{ attachOptions }}
+                        </select>
+                    </div>
+                    <div class="sr">
+                        Search logic:<br/>
+                        <select class="SmallText" name="search_logic">
+                            {{ logicOptions|raw }}
+                        </select>
+                    </div>
+                    <div class="sr">
+                        Sort by:<br/>
+                        <select class="SmallText" name="sort_order">
+                            {{ sortOptions }}
+                        </select>
+                    </div>
+                    <div class="sr">
+                        Filter by user:<br/>
+                        <input class="SmallText" type="text" value="{{ author|escape }}" name="author"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    {{ searchData|raw }}
+    <div class="al">
+        {{ pagePager|raw }}
+    </div>
+{% endblock %}
+{% block endscripts %}
+    <script>
+        document.forms['search'].srch.focus();
+        highlightSearchTerms("{{ srch|escape }}");
+    </script>
+{% endblock %}

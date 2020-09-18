@@ -1,0 +1,30 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <div class="breadcrumbs">
+        <a href="/index.php?t=i&{{ _rsid }}">Home</a> &nbsp;&raquo;
+        {% if page is empty %}
+            Available pages
+        {% elseif page.page_opt b-and 2 %}
+            <a href="/index.php?t=page&{{ _rsid }}">Available pages</a> &nbsp;&raquo; {{ page.title }}
+        {% else %}
+            {{ page.title }}
+        {% endif %}
+    </div>
+    <div class="ContentTable">
+        {% if page.title is not empty %}
+            <h2>{{ page.title }}</h2>
+            <div class="content page-content">
+                {{ page.body }}
+            </div>
+        {% else %}
+            <h2>Available pages</h2>
+            <ul>
+                {{ pageList }}
+            </ul>
+            <i>{{ pluralPageCount }} listed.</i>
+        {% endif %}
+    </div>
+{% endblock %}

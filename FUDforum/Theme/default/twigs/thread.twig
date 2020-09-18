@@ -1,0 +1,112 @@
+{% extends layout__file %}
+{% block content %}
+    {% if frm %}
+        <div class="rel GenText nw vt fr" style="right:0;">
+            {% if TREE_VIEW_ENABLED %}
+                <a href="/index.php?t=threadt&amp;frm_id={{ frm.id }}">
+                    <img title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic"
+                            src="/theme/twig/images/tree_view.gif"/></a>&nbsp;
+            {% endif %}
+            <a href="/index.php?t=post&amp;frm_id={{ frm.id }}"><img src="/theme/twig/images/new_thread.gif"
+                        alt="Create a new topic"/></a>
+        </div>
+    {% endif %}
+    {% if not frm_id or forum_list_table_data is not empty %}
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th colspan="3" class="wa">Forum</th>
+                <th class="nw hide1">Messages</th>
+                <th class="nw hide1">Topics</th>
+                <th class="nw ac hide2">Last message</th>
+            </tr>
+            {{ forum_list_table_data }}
+        </table>
+    {% endif %}
+    {% if MOD or mo == 8824 %}
+        <form method="post" action="/index.php?t=mmd">
+    {% endif %}
+    <table border="0" cellspacing="1" cellpadding="2" class="clear pad">
+        <tr>
+            <th class="hide2">&nbsp;</th>
+            <th class="hide2">&nbsp;</th>
+            <th class="wa">Topic</th>
+            <th class="wo hide1">Replies</th>
+            <th class="wo hide1">Views</th>
+            <th class="nw hide2">Last message</th>
+        </tr>
+        {% if MOD or mo == 8824 %}
+            <tr>
+                <td colspan="3" class="RowStyleC ar">
+                    <input type="submit" class="button small" name="del_sel_all" value="Delete selected"/>
+                    <input type="submit" class="button small" name="mov_sel_all" value="Move Selected"/>
+                    <input type="submit" class="button small" name="merge_sel_all" value="Merge Selected"/>
+                    <input type="submit" class="button small" name="loc_sel_all" value="Lock/Unlock Selected"/>
+                    <input type="checkbox" name="toggle" title="Select all/none"
+                            onclick="jQuery('input:checkbox').prop('checked', this.checked);"/>
+                </td>
+                <td colspan="3" class="RowStyleC hide2"></td>
+            </tr>
+        {% endif %}
+        {{ thread_list_table_data|raw }}
+        {% if MOD or mo == 8824 %}
+            <tr>
+                <td colspan="3" class="RowStyleC ar">
+                    <input type="submit" class="button small" name="del_sel_all" value="Delete selected"/>
+                    <input type="submit" class="button small" name="mov_sel_all" value="Move Selected"/>
+                    <input type="submit" class="button small" name="merge_sel_all" value="Merge Selected"/>
+                    <input type="submit" class="button small" name="loc_sel_all" value="Lock/Unlock Selected"/>
+                    <input type="checkbox" name="toggle" title="Select all/none"
+                            onclick="jQuery('input:checkbox').prop('checked', this.checked);"/>
+                </td>
+                <td colspan="3" class="RowStyleC hide2"></td>
+            </tr>
+        {% endif %}
+    </table>
+    {% if MOD or mo == 8824 %}
+        </form>
+    {% endif %}
+    {{ page_pager|raw }}
+    {% if frm %}
+        <div class="rel GenText nw vt fr" style="right:0;">
+            {% if TREE_VIEW_ENABLED %}
+                <a href="/index.php?t=threadt&amp;frm_id={{ frm.id }}">
+                    <img title="Switch to threaded view of this topic" alt="Switch to threaded view of this topic"
+                            src="/theme/twig/images/tree_view.gif"/></a>&nbsp;
+            {% endif %}
+            <a href="/index.php?t=post&amp;frm_id={{ frm.id }}"><img src="/theme/twig/images/new_thread.gif"
+                        alt="Create a new topic"/></a>
+        </div>
+    {% endif %}
+    {% if _uid %}
+        <div class="ar SmallText">
+            [ <a href="/index.php?t=markread&id={{ frm.id }}SQ={{ SQ }}"
+                    title="All unread messages in this forum will be marked read">Mark all unread forum messages
+                read</a> ]
+            {% if SYNDICATION_ENABLED %}
+                &nbsp;[ <a href="/index.php?t=help_index&section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
+                                                                                                                      [
+                <a href="/feed.php?mode=m&l=1&basic=1&frm={{ frm.id }}&n=10"><img
+                            src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]
+            {% endif %}
+            {% if PDF_ENABLED %}
+                [ <a href="/pdf.php?frm={{ frm.id }}&page={{ cur_frm_page }}">
+                <img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF"/>
+            </a> ]
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="ar SmallText">
+            {% if PDF_ENABLED %}
+                [ <a href="/pdf.php?frm={{ frm.id }}&page={{ cur_frm_page }}">
+                <img src="/theme/twig/images/pdf.gif" title="Generate printable PDF" alt="PDF"/>
+            </a> ]
+            {% endif %}
+            {% if SYNDICATION_ENABLED %}
+                &nbsp;[ <a href="/index.php?t=help_index&section=boardusage#syndicate">Syndicate this forum (XML)</a> ]
+                                                                                                                      [
+                <a href="/feed.php?mode=m&l=1&basic=1&frm={{ frm.id }}&n=10"><img
+                            src="/theme/twig/images/rss.gif" title="Syndicate this forum (XML)" alt="RSS"/></a> ]
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}

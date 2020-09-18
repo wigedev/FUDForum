@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css"/>
+</head>
+<body>
+<div class="content">
+    <form action="/index.php?t=qbud" id="qbud" method="post">
+        {{ _hs }}
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            {% if buddies %}
+                <tr>
+                    <th class="wa">Nick Name</th>
+                    <th class="nw">
+                        Select
+                        <input type="checkbox" name="toggle" title="all/none"
+                                onclick="jQuery('input:checkbox').prop('checked', this.checked);"/>
+                    </th>
+                </tr>
+                {{ buddies }}
+                <tr class="{{ altVar('search_alt','RowStyleA','RowStyleB') }}">
+                    <td colspan="2" class="GenText ar">
+                        <input type="submit" class="button" name="submit" value="Add Selected"/>
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="RowStyleA">
+                    <td class="GenText ac">No buddies to choose from</td>
+                </tr>
+            {% endif %}
+        </table>
+    </form>
+</div>
+</body>
+</html>

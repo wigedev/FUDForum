@@ -1,0 +1,34 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <div class="ctb">
+        <form method="post" action="/index.php?t=reset">
+            <table cellspacing="1" cellpadding="2" class="DialogTable">
+                <tr>
+                    <th colspan="2">Password Reminder</th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="RowStyleA GenText">Your password will be reset and sent to you.
+                        If you have not yet confirmed your e-mail address, the confirmation request will be
+                        re-sent to you.
+                    </td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td class="GenText">E-mail:</td>
+                    <td>
+                        {{ noSuchEmail }}
+                        <input type="email" name="email" value="{{ email|escape }}"/>
+                    </td>
+                </tr>
+                <tr class="RowStyleA">
+                    <td class="nw ar" colspan="2">
+                        <input type="submit" class="button" name="reset_passwd" value="Reset Password"/>
+                    </td>
+                </tr>
+            </table>
+            {{ _hs|raw }}
+        </form>
+    </div>
+{% endblock %}

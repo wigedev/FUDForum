@@ -1,0 +1,12 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <table cellspacing="0" cellpadding="2" class="ContentTable">
+        <tr>
+            <th>Messages pending approval</th>
+        </tr>
+        {{ modqueMessage }}
+    </table>
+{% endblock %}

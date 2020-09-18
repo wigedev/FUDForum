@@ -1,0 +1,76 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <form id="login" method="post"
+            action="/index.php?t=login" {% if options.DISABLE_AUTOCOMPLETE %}autocomplete="off"{% endif %}>
+        <div class="ctb">
+            <table cellspacing="1" cellpadding="2" class="DialogTable">
+                <tr>
+                    <th colspan="3">Login Form</th>
+                </tr>
+                <tr>
+                    <td class="RowStyleA GenText" colspan="3">
+                        {% if resetLoginNotify %}
+                            {{ resetLoginNotify }}
+                        {% else %}
+                            You are not logged in. This could be due to one of several reasons:
+                            <ol>
+                                <li class="GenText">Your cookie has expired, and you need to login to renew your
+                                    cookie.
+                                </li>
+                                <li class="GenText">You do not have permission to access the requested resource as an
+                                    anonymous
+                                    user. You must login to gain permission.
+                                </li>
+                            </ol>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td class="GenText"><label for="Login">Login:</label></td>
+                    <td>{{ loginError }}<input id="Login" type="text" tabindex="1" name="login"/></td>
+                    <td class="nw">{% if options.ALLOW_REGISTRATION %}<a href="/index.php?t=register&{{ _rsid }}">Want
+                            to
+                            register?</a>{% endif %}
+                    </td>
+                </tr>
+                <tr class="RowStyleA">
+                    <td class="GenText"><label for="password">Password:</label></td>
+                    <td>{{ passwordError }}<input id="password" type="password" tabindex="2" name="password"/>
+                    </td>
+                    <td class="nw">{% if options.ALLOW_PASSWORD_RESET %}<a href="/index.php?t=reset&{{ _rsid }}">Forgot
+                            password</a>{% endif %}
+                    </td>
+                </tr>
+                {% if options.SESSION_USE_URL %}
+                    <tr class="RowStyleB">
+                        <td colspan="3" class="al">
+                            <label>
+                                <input type="checkbox" name="use_cookie" value="Y" checked="checked"/>
+                                Use cookies<br/>
+                                <span class="SmallText">If you&#39;re using a public terminal such as a computer in a library,
+                                school, or Internet cafe, it is recommended that you uncheck this option for greater
+                                security. If you leave this option selected then you will be automatically logged-into
+                                the forum the next time you visit.</span>
+                            </label>
+                        </td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td colspan="3" class="RowStyleA ar"><input type="submit" class="button" tabindex="3"
+                                value="Login"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {{ _hs }}
+        <input type="hidden" name="adm" value="{{ adm }}"/>
+    </form>
+{% endblock %}
+{% block endscripts %}
+    <script>
+        document.forms['login'].login.focus();
+    </script>
+{% endblock %}

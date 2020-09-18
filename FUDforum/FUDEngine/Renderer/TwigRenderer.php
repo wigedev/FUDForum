@@ -20,8 +20,8 @@ class TwigRenderer extends Renderer
 
     public function __construct()
     {
-        $this->viewPath = $GLOBALS['WWW_ROOT_DISK'] . 'theme/twig/twigs';
-        $this->templatePath = $GLOBALS['WWW_ROOT_DISK'] . 'theme/twig/templates';
+        $this->viewPath = $GLOBALS['WWW_ROOT'] . 'Theme/twig/twigs';
+        $this->templatePath = $GLOBALS['WWW_ROOT'] . 'Theme/twig/templates';
     }
 
     public function render(): void

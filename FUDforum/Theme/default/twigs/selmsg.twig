@@ -1,0 +1,21 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <a href="/index.php?{{ dtOpt }}" title="Toggle today&#39;s messages filter (will only show messages made today)">
+        Today&#39;s Messages {% if getDate ? '<span class="selmsgInd">(<span class="GenTextRed">on</span>)</span>' : '<span class="selmsgInd">(off)</span>' %}
+    </a>
+    {% if _uid %}
+        &nbsp;| <a href="/index.php?{{ unOpt }}" title="Toggle unread messages filter (will only show unread messages)">Unread Messages {{ getUnread ? '<span class="selmsgInd">(<span class="GenTextRed">on</span>)</span>' : '<span class="selmsgInd">(off)</span>'}}</a>
+        &nbsp;| <a href="/index.php?{{ unOpt }}" title="Toggle unread messages filter (will only show unread messages)">Unread Messages {{ getUnread ? '<span class="selmsgInd">(<span class="GenTextRed">on</span>)</span>' : '<span class="selmsgInd">(off)</span>'}}</a>
+        &nbsp;| <a href="/index.php?{{ frmOpt }}" title="Toggle the subscribed forums filter (will only show messages from the forums you are subscribed to)">Subscribed Forums {{ getSubForumLimit ? '<span class="selmsgInd">(<span class="GenTextRed">on</span>)</span>' : '<span class="selmsgInd">(off)</span>' }}</a>
+        &nbsp;| <a href="/index.php?{{ thOpt }}" title="Toggle the subscribed topics filter (will only show messages from the topics you are subscribed to)">Subscribed Topics {{ getSubThLimit ? '<span class="selmsgInd">(<span class="GenTextRed">on</span>)</span>' : '<span class="selmsgInd">(off)</span>'}}</a>
+    {% endif %}
+    &nbsp;| <a href="/index.php?{{ rm_opt }}" title="Toggle the un-answered messages filter (will show only messages that have no replies)">Unanswered Messages {{ getReplyCount ? '<span class="selmsgInd">(<span class="GenTextRed">on</span>)</span>' : '<span class="selmsgInd">(off)</span>' }}</a>
+    <br />{{ adminCP|raw }}<br />
+    <table cellspacing="0" cellpadding="0" class="ContentTable">
+        {{ messageData }}
+    </table>
+    {{ pagePager }}
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css" />
+</head>
+<body>
+<div class="content">
+    <?php echo $select; ?>
+    <table border="0" cellspacing="1" cellpadding="2">
+        <tr>
+            {{ avatars_data }}
+        </tr>
+    </table>
+</div>
+</body></html>
