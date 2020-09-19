@@ -1,0 +1,46 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+{{ tabs }}
+{{ buddies }}
+    <br /><br />
+    <form id="buddy_add" action="/index.php?t=buddy_list" method="post">
+        {{ _hs|raw }}
+        <div class="ctb">
+            <table cellspacing="1" cellpadding="2" class="MiniTable">
+                <tr>
+                    <th class="nw">Add Buddy</th>
+                </tr>
+                <tr class="RowStyleA">
+                    <td class="GenText nw Smalltext">
+                        Enter the login of the user you wish to add.
+                        {% if member_search_enabled %}
+                            <br />Or use the <a href="javascript://" onclick="javascript: window_open('/index.php?t=pmuserloc&{{ _rsid }}&js_redr=buddy_add.add_login&overwrite=1', 'user_list', 400,250);">Find User</a> feature to find a person.
+                        <br /><br />
+                        <input type="text" tabindex="1" name="add_login" id="add_login" value="" maxlength="100" size="25" />
+                        <input tabindex="2" type="submit" class="button" name="submit" value="Add" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <br />
+{% endblock %}
+{% block endscripts %}
+    <script>
+        document.forms['buddy_add'].add_login.focus();
+    </script>
+
+    <style>
+        .ui-autocomplete-loading { background: white url("/theme/twig/images/ajax-loader.gif") right center no-repeat; }
+    </style>
+    <script>
+        jQuery(function() {
+            jQuery("#add_login").autocomplete({
+                source: "index.php?t=autocomplete&lookup=alias", minLength: 1
+            });
+        });
+    </script>
+{% endblock %}

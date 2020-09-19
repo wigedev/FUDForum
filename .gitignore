@@ -55,3 +55,4 @@ composer.lock
 /public/theme/default/
 /public/theme/responsive/
 /public/theme/README
+/public/theme/_oldtwig/

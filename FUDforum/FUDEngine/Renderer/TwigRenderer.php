@@ -20,8 +20,9 @@ class TwigRenderer extends Renderer
 
     public function __construct()
     {
-        $this->viewPath = $GLOBALS['WWW_ROOT'] . 'Theme/twig/twigs';
-        $this->templatePath = $GLOBALS['WWW_ROOT'] . 'Theme/twig/templates';
+        $templateName = F()->response->getTemplate();
+        $this->viewPath = F()->globals->DATA_DIR . 'Theme/'.$templateName.'/view';
+        $this->templatePath = F()->globals->DATA_DIR . 'Theme/'.$templateName.'/template';
     }
 
     public function render(): void
@@ -29,7 +30,7 @@ class TwigRenderer extends Renderer
         $twigFile = F()->response->getTemplate();
         $twig = $this->initTwig();
         $this->initVariables();
-        $this->variables['FORUM_TITLE'] = $GLOBALS['FORUM_TITLE'];
+        $this->variables['FORUM_TITLE'] = F()->globals->FORUM_TITLE;
         $this->variables['layout__file'] = 'default.twig';
         $this->variables = array_merge($this->variables, $this->buildGlobalCopy());
         echo $twig->render($twigFile . '.twig', $this->variables);
@@ -55,12 +56,13 @@ class TwigRenderer extends Renderer
         $this->variables['options'] = F()->options;
         $this->variables['globals'] = F()->globals;
         $this->variables['fud_real_user'] = __fud_real_user__;
+        //TODO: Use options instead of globals
         $this->variables['SHOW_MEMBERS'] = ($GLOBALS['FUD_OPT_1'] & 8388608 || (_uid && $GLOBALS['FUD_OPT_1'] & 4194304) || $this->variables['usr']->users_opt & 1048576);
         $this->variables['IS_MANAGER'] = $this->variables['usr']->users_opt & 268435456;
         $this->variables['IS_GROUP_LEADER'] = $this->variables['usr']->group_leader_list;
         $this->variables['MSG_SHOW_SIGNATURE'] = $this->variables['usr']->users_opt & 2048;
         $this->variables['MSG_NOTIFY_POSTER'] = $this->variables['usr']->users_opt & 2;
-        $this->variables['SQ'] = $GLOBALS['sq'];
+        $this->variables['SQ'] = F()->globals->sq;
         $this->variables['user_alias'] = $this->variables['usr']->alias;
         $this->variables['statistics'] = (new Statistics($this->variables))->generateStatistics();
     }

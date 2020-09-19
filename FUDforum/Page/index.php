@@ -664,6 +664,7 @@ if ($FUD_OPT_1 & 1073741824 || $FUD_OPT_2 & 16) {
             '
 	</td>
 </tr>';
+        
     }
     if ($FUD_OPT_2 & 16) {
         $forum_info = '<tr>

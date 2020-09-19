@@ -1,0 +1,33 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <form method="post" id="frme" action="/index.php?t=email">
+        <div class="ctb"><table cellspacing="1" cellpadding="2" class="MiniTable">
+                <tr>
+                    <th colspan="2">E-mail</th>
+                </tr>
+                <tr class="RowStyleB">
+                    <td class="GenText nw">To: {{ get_err('tx_name') }}</td>
+                    <td class="RowStyleA wa"><input type="text" name="tx_name" value="{{ tx_name }}" /></td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td class="GenText nw">Subject: {{ get_err('tx_subject') }}</td>
+                    <td class="RowStyleA wa"><input spellcheck="true" type="text" tabindex="1" name="tx_subject" value="{{ tx_subject }}" /></td>
+                </tr>
+                <tr class="RowStyleB">
+                    <td class="GenText nw vt">Body: {{ get_err('tx_body') }}</td>
+                    <td class="RowStyleA wa"><textarea tabindex="2" name="tx_body" cols="40" rows="20">{{ tx_body }}</textarea></td>
+                </tr>
+                <tr class="RowStyleC">
+                    <td class="ar" colspan="2"><input type="submit" class="button" name="btn_submit" tabindex="3" value="E-mail" /></td>
+                </tr>
+            </table>
+        </div>
+        {{ _hs|raw }}
+    </form>
+{% endblock %}
+{% block endscript %}
+    document.forms['frme'].tx_subject.focus();
+{% endblock %}

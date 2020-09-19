@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{{ FORUM_TITLE }} {{ TITLE_EXTRA }}</title>
+    <script src="/js/lib.js"></script>
+    <script async src="/js/jquery.js"></script>
+    <script async src="/js/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/theme/twig/forum.css" />
+</head>
+<body>
+<div class="content">
+    <form action="/index.php?t=mvthread" id="mvthread" method="post">
+        <table cellspacing="0" cellpadding="3" class="wa dashed">
+            <tr>
+                <td class="small">Move topic <b>{{ thr.subject }}</b> to:</td>
+            </tr>
+            {{ tableData }}
+        </table>
+        {{ _hs|raw }}
+        <input type="hidden" name="th" value="{{ th }}" />
+        <input type="hidden" name="thx" value="{{ thx }}" />
+    </form>
+</div>
+</body></html>

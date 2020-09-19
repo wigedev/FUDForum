@@ -1,0 +1,55 @@
+{% extends layout__file %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <form id="mnav" method="get" action="/index.php">
+        {{ _hs|raw }}
+        <input type="hidden" name="t" value="mnav" />
+        <table cellspacing="1" cellpadding="2" class="ContentTable">
+            <tr>
+                <th colspan="4" class="wa">Message Navigator</th>
+            </tr>
+            <tr class="<?php echo alt_var('color_alt','RowStyleA','RowStyleB'); ?>">
+                <td class="GenText nw" width="30%">Date range:</td>
+                <td class="GenText SmallText">
+                    newer than<br /><input tabindex="1" type="number" name="rng" value="{{ rng }}" maxlength="10" size="11" />
+                </td>
+                <td class="GenText SmallText">
+                    older than<br /><input tabindex="2" type="number" name="rng2" value="{{ rng2 }}" maxlength="10" size="11" />
+                </td>
+                <td class="al vb" width="60%">
+                    <select name="u" tabindex="3">{{ mnavTimeUnit }}</select>
+                </td>
+            </tr>
+            <tr class="<?php echo alt_var('color_alt','RowStyleA','RowStyleB'); ?>">
+                <td class="GenText nw">Only search in:</td>
+                <td colspan="3" class="vt">
+                    <select name="forum_limiter" tabindex="4"><option value="">Search all forums</option>
+                        {{ forumLimitData }}
+                    </select>
+                </td>
+            </tr>
+            {% if _uid %}
+                <tr class="{{ altVar }}">
+                    <td class="GenText nw">Search in subscribed forums only</td>
+                    <td colspan="3" class="vt">
+                        <input type="checkbox" name="sub" value="1" {% if subl %}checked="checked"{% endif %} />
+                    </td>
+            {% endif %}
+            <tr class="RowStyleC">
+                <td class="GenText ar" colspan="4">
+                    <input type="submit" tabindex="5" class="button" name="btn_submit" value="Begin Search" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br />
+    {{ mnavData}}
+    <div class="al">{{ mnavPager }}</div>
+{% endblock %}
+{% block endscripts %}
+    <script>
+        document.forms['mnav'].rng.focus();
+    </script>
+{% endblock %}

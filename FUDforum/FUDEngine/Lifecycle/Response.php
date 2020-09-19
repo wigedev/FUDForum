@@ -67,6 +67,9 @@ class Response implements ResponseInterface
 
     public function getTemplate(): string
     {
+        if ($this->template === null) {
+            return 'default';
+        }
         return $this->template;
     }
 

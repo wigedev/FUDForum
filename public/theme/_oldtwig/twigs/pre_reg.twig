@@ -1,0 +1,51 @@
+<form method="post" action="/index.php?t=pre_reg" id="sub">
+    {{ _hs|raw }}
+    <div class="ctb">
+        <table cellspacing="1" cellpadding="2" class="DialogTable">
+            <tr>
+                <th>Forum Rules</th>
+            </tr>
+            <tr class="RowStyleA ac GenText">
+                <td>
+                    {% if coppa %}
+                        <p>All users under the age of 13 must seek permission from their
+                            parent or guardian in order to gain membership to the forums. While we welcome participation
+                            from
+                            members under 13, we require that a parent or guardian fax or mail back a signed permission
+                            form
+                            before we grant membership.</p>
+                        <p>If you would like to start the registration process prior to us
+                            receiving a permission form, press the <b>Agree</b> button below. If you would like to
+                            cancel
+                            the registration, press <b>Disagree</b> to return to the forums index.</p>
+                        <p>A copy of the permission form will be presented after registration. For more information
+                            about
+                            the registration process, please send an e-mail to
+                            <a href="mailto:{{ globals.ADMIN_EMAIL }}">{{ globals.ADMIN_EMAIL }}</a>.
+                        </p>
+                    {% else %}
+                        <p>Registration to this forum is free! We do insist that you abide by the rules and
+                            policies detailed below. If you agree to the terms, please press the <b>Agree</b> button at
+                            the
+                            end of the page.</p>
+                        <p>Although the administrators and moderators of this forum will attempt to keep all
+                            objectionable
+                            messages off this forum, it is impossible for us to review all messages. All messages
+                            express
+                            the views of the author, and neither the owners of forum or the developers will be held
+                            responsible for the content of any message.</p>
+                        <p>By clicking the Agree button, you warrant that you will not post any messages that are
+                            obscene,
+                            vulgar, sexually-oriented, hateful, threatening, or otherwise violate any laws.</p>
+                        <p>The owners of this forum have the right to remove, edit, move or close any topic for any
+                            reason.</p>
+                    {% endif %}
+                    <input type="hidden" name="coppa" value="{{ coppa }}"/>
+                    <input type="submit" class="button" name="agree" value="Agree"/>
+                    <input type="submit" class="button" name="disagree" value="Disagree"/>
+                    <br/><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
